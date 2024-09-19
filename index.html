@@ -27,7 +27,7 @@
 <!----------------------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------BODY------------------------------------------------------------------------------------------------>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
-</body>
+
 
     <!--------------------Bandeau---------------------------------------------------------------------------------------------------------->
     <section class="bandeau">
@@ -35,10 +35,7 @@
         <h2>Réservez le menu qui vous convient</h2>
         <!--description-->
         <p>Découvrez des restaurants d' exception, sélectionnés par nos soins</p>
-        <a href="#">
-            <button type="submit" class="search-button">
-            Explorer nos restaurant</button>
-        </a>
+        <button type="submit" class="search-button">Explorer nos restaurant</button>
     </section>
     
     <!----------------Section fonctionnement ---------------------------------------------------------------------------------------------->    
@@ -57,7 +54,7 @@
         </div>
 
         <!-- deuxième carte-->
-         <div class="fonctionnement-content">
+        <div class="fonctionnement-content">
             <!-- Puce -->
             <span class="puce_num">2</span>
             <!-- Icône liste-->
@@ -65,7 +62,7 @@
             <span class="sr-only">Liste</span>
             <!-- Texte -->
             <p>Composer votre menu</p>
-         </div>
+        </div>
 
         <!-- Troisième carte-->
         <div class="fonctionnement-content">
@@ -82,15 +79,118 @@
     <!----------------Section Restaurants ---------------------------------------------------------------------------------------------->    
     <section class="restaurants">
         <h2>Restaurants</h2>
+        
+        <!-- Lien vers page la palette du goût-->
+        <a href="./pages/palette.html" aria-label="Visiter la page la palette du goût">
+            <!-- Première carte-->
+            <div class="card">
+                <!-- Photo la Palette du gout-->
+                <img src="./images/restaurants/palette.jpg" alt="vue d'un plat dans une assiette ">
+                <!-- badge "Nouveau" -->
+                <span class="badge">Nouveau</span>
+                <!-- Contenu en dessous de la photo-->
+                <div class="card-content">
+                    <!-- Titre et lieu -->
+                    <div class="inscription">
+                        <h3>La palette du goût</h3>
+                        <p>Ménimontant</p>
+                    </div>
+                    <!-- icône coeur-->
+                    <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">coeur</span>
+                </div>
+            </div>
+        </a>
 
-        <!-- Première carte- La palette du goût -->
-         <div class="card"
+        <!-- Lien vers page la note enchantée-->
+        <a href="./pages/note_enchantée.html" aria-label="Visiter la page la note enchantée">
+            <!-- Deuxième carte-->
+            <div class="card">
+                <!-- Photo la note enchantée-->
+                <img src="./images/restaurants/note_enchantée.jpg" alt="vue de dessus d'un plat dans une assiette ">
+                <!-- badge "Nouveau" -->
+                <span class="badge">Nouveau</span>
+                <!-- Contenu en dessous de la photo-->
+                <div class="card-content">
+                    <!-- Titre et lieu -->
+                    <div class="inscription">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <!-- icône coeur-->
+                    <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">coeur</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Lien vers page à la française-->
+        <a href="./pages/la_francaise.html" aria-label="Visiter la  page à la française">
+            <!-- Troisième carte-->
+            <div class="card">
+                <!-- Photo  A la française -->
+                <img src="./images/restaurants/française.jpg" alt="vue en perspective d'un plat dans une assiette ">
+                <!-- Contenu en dessous de la photo-->
+                <div class="card-content">
+                    <!-- Titre et lieu -->
+                    <div class="inscription">
+                        <h3>À la française</h3>
+                        <p>Cité rouge</p>
+                    </div>
+                    <!-- icône coeur-->
+                    <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">coeur</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Lien vers page le délice des sens-->
+        <a href="./pages/délice.html" aria-label="Visiter la  page le délice des sens">
+            <!-- Quatrième carte-->
+            <div class="card">
+                <!-- Photo  le délice des sens -->
+                <img src="./images/restaurants/délice.jpg" alt="vue en perspective d'un plat dans une assiette rectangulaire ">
+                <!-- Contenu en dessous de la photo-->
+                <div class="card-content">
+                    <!-- Titre et lieu -->
+                    <div class="inscription">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <!-- icône coeur-->
+                    <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">coeur</span>
+                </div>
+            </div>
+        </a>
     </section>
-
+</body>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------FOOTER----------------------------------------------------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------------------------------------->
 <footer>
+    <!-- logo-->
+    <img src="./images/logo/ohmyfood.png" alt="logo du site ">
+    <!-- liste liens -->
+    <ul>
+        <!-- Premiere ligne-->
+        <li>
+            <!--lien vers la page proposer un restaurant-->    
+            <a href="#">
+                <!-- Icône ustensiles-->
+                <i class="fas fa-utensils"></i><span class="sr-only">ustensiles</span>
+                <!--Texte-->
+                <p>Proposer un restaurant</p>
+            </a>
+        </li>
+        <!--deuxième ligne-->
+        <li>
+            <!-- liens vers page devenir partenaire-->
+            <a href="#">
+                <!-- Icône poignée de mains-->
+                <i class="fas fa-handshake"></i><span class="sr-only">poignée de mains</span>
+                <!--Texte-->
+                <p>Devenir partenaires</p>
+            </a> 
+        </li>
+        
+    </ul>
 
 </footer>
 </html>
