@@ -12,171 +12,171 @@
 -->
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">    
-    <title>Ohmyfood - Réservez des menus dans des restaurants sélectionnés</title>
-    <meta name="description" content="Ohmyfood est un site mobile-first qui vous permet de découvrir et réserver des menus dans des restaurants d'exception. Profitez de nos sélections et réservez en quelques clics.">
+    <head>
+        <meta charset="UTF-8">    
+        <title>Ohmyfood - Réservez des menus dans des restaurants sélectionnés</title>
+        <meta name="description" content="Ohmyfood est un site mobile-first qui vous permet de découvrir et réserver des menus dans des restaurants d'exception. Profitez de nos sélections et réservez en quelques clics.">
 
-    <!-- Optimisation pour les appareils mobiles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    
-    <!-- Polices Google pour améliorer la typographie  -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Préchargement des styles critiques de Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Favicon pour le site -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Canonical URL pour éviter la duplication de contenu -->
-    <link rel="canonical" href="https://ohmyfood.com">
-</head>
-<body>
+        <!-- Optimisation pour les appareils mobiles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!-- Polices Google pour améliorer la typographie  -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Préchargement des styles critiques de Font Awesome -->
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- Favicon pour le site -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        
+        <!-- Canonical URL pour éviter la duplication de contenu -->
+        <link rel="canonical" href="https://ohmyfood.com">
+    </head>
+    <body>
 
     <!-- En-tête de la page -->
-    <header>
-        <h1 class="sr-only">Ohmyfood - Découvrez des restaurants sélectionnés</h1> <!-- Titre principal pour SEO et accessibilité -->
-        <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
-        <div class="location">
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
-        <span class="sr-only">Localisation</span>
-        <p class="txt">Paris, Belleville</p>
-        </div>
-    </header>
-
-    <main>
-        <!-- Bandeau principal -->
-        <section class="bandeau">
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-        <a href="#" class="search-button">Explorer nos restaurants</a>
-        </section>
-
-        <!-- Fonctionnement du service -->
-        <section class="fonctionnement">
-    <h2>Fonctionnement</h2>
-
-    <!-- Étape 1 : Choisir un restaurant -->
-    <div class="fonctionnement-content">
-        <span class="puce_num">1</span>
-        <i class="fas fa-mobile-alt" aria-hidden="true"></i> 
-        <span class="sr-only">Smartphone</span>
-        <h3>Choisissez un restaurant</h3>
-    </div>
-
-    <!-- Étape 2 : Composer le menu -->
-    <div class="fonctionnement-content">
-        <span class="puce_num">2</span>
-        <i class="fas fa-list" aria-hidden="true"></i>
-        <span class="sr-only">Composer votre menu</span>
-        <h3>Composez votre menu</h3>
-    </div>
-
-    <!-- Étape 3 : Dégustez au restaurant -->
-    <div class="fonctionnement-content">
-        <span class="puce_num">3</span>
-        <i class="fas fa-store" aria-hidden="true"></i>
-        <span class="sr-only">Dégustez au restaurant</span>
-        <h3>Dégustez au restaurant</h3>
-    </div>
-        </section>
-
-        <!-- Section des restaurants -->
-        <section class="restaurants">
-    <h2>Nos restaurants</h2>
-    
-    <!-- Restaurant : La Palette du Goût -->
-    <a href="./pages/palette.html" aria-label="Visiter la page La Palette du Goût">
-        <div class="card">
-            <img src="./images/restaurants/palette.jpg" alt="Assiette de plats variés au restaurant La Palette du Goût">
-            <span class="badge">Nouveau</span>
-            <div class="card-content">
-                <div class="inscription">
-                    <h3>La Palette du Goût</h3>
-                    <p>Ménilmontant</p>
-                </div>
-                <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+        <header>
+            <h1 class="sr-only">Ohmyfood - Découvrez des restaurants sélectionnés</h1> <!-- Titre principal pour SEO et accessibilité -->
+            <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            <div class="location">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+                <span class="sr-only">Localisation</span>
+                <p class="txt">Paris, Belleville</p>
             </div>
-        </div>
-    </a>
+        </header>
 
-    <!-- Restaurant : La Note Enchantée -->
-    <a href="./pages/note_enchantée.html" aria-label="Visiter la page La Note Enchantée">
-        <div class="card">
-            <img src="./images/restaurants/note_enchantée.jpg" alt="Plat vu de dessus au restaurant La Note Enchantée">
-            <span class="badge">Nouveau</span>
-            <div class="card-content">
-                <div class="inscription">
-                    <h3>La Note Enchantée</h3>
-                    <p>Charonne</p>
-                </div>
-                <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+        <main>
+            <!-- Bandeau principal -->
+            <section class="bandeau">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                <a href="#" class="search-button">Explorer nos restaurants</a>
+            </section>
+
+            <!-- Fonctionnement du service -->
+            <section class="fonctionnement">
+                <h2>Fonctionnement</h2>
+
+                    <!-- Étape 1 : Choisir un restaurant -->
+                    <div class="fonctionnement-content">
+                        <span class="puce_num">1</span>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i> 
+                        <span class="sr-only">Smartphone</span>
+                        <h3>Choisissez un restaurant</h3>
+                    </div>
+
+                    <!-- Étape 2 : Composer le menu -->
+                    <div class="fonctionnement-content">
+                        <span class="puce_num">2</span>
+                        <i class="fas fa-list" aria-hidden="true"></i>
+                        <span class="sr-only">Composer votre menu</span>
+                        <h3>Composez votre menu</h3>
+                    </div>
+
+                    <!-- Étape 3 : Dégustez au restaurant -->
+                    <div class="fonctionnement-content">
+                        <span class="puce_num">3</span>
+                        <i class="fas fa-store" aria-hidden="true"></i>
+                        <span class="sr-only">Dégustez au restaurant</span>
+                        <h3>Dégustez au restaurant</h3>
+                    </div>
+            </section>
+
+            <!-- Section des restaurants -->
+            <section class="restaurants">
+                <h2>Nos restaurants</h2>
+                
+                <!-- Restaurant : La Palette du Goût -->
+                <a href="./pages/palette.html" aria-label="Visiter la page La Palette du Goût">
+                    <div class="card">
+                        <img src="./images/restaurants/palette.jpg" alt="Assiette de plats variés au restaurant La Palette du Goût">
+                        <span class="badge">Nouveau</span>
+                        <div class="card-content">
+                            <div class="inscription">
+                                <h3>La Palette du Goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Restaurant : La Note Enchantée -->
+                <a href="./pages/note_enchantée.html" aria-label="Visiter la page La Note Enchantée">
+                    <div class="card">
+                        <img src="./images/restaurants/note_enchantée.jpg" alt="Plat vu de dessus au restaurant La Note Enchantée">
+                        <span class="badge">Nouveau</span>
+                        <div class="card-content">
+                            <div class="inscription">
+                                <h3>La Note Enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Restaurant : À La Française -->
+                <a href="./pages/la_francaise.html" aria-label="Visiter la page À La Française">
+                    <div class="card">
+                        <img src="./images/restaurants/française.jpg" alt="Plat vu en perspective au restaurant À La Française">
+                        <div class="card-content">
+                            <div class="inscription">
+                                <h3>À La Française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Restaurant : Le Délice des Sens -->
+                <a href="./pages/délice.html" aria-label="Visiter la page Le Délice des Sens">
+                    <div class="card">
+                        <img src="./images/restaurants/délice.jpg" alt="Assiette au restaurant Le Délice des Sens à Folie-Méricourt">
+                        <div class="card-content">
+                            <div class="inscription">
+                                <h3>Le Délice des Sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                        </div>
+                    </div>
+                </a>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-card">
+                <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-utensils"></i><span class="sr-only">Proposer un restaurant</span>
+                            <p>Proposer un restaurant</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-handshake"></i><span class="sr-only">Devenir partenaire</span>
+                            <p>Devenir partenaire</p>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Mentions légales</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Contact</p>
+                        </a>
+                    </li>       
+                </ul>
             </div>
-        </div>
-    </a>
+        </footer>
 
-    <!-- Restaurant : À La Française -->
-    <a href="./pages/la_francaise.html" aria-label="Visiter la page À La Française">
-        <div class="card">
-            <img src="./images/restaurants/française.jpg" alt="Plat vu en perspective au restaurant À La Française">
-            <div class="card-content">
-                <div class="inscription">
-                    <h3>À La Française</h3>
-                    <p>Cité Rouge</p>
-                </div>
-                <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-            </div>
-        </div>
-    </a>
-
-    <!-- Restaurant : Le Délice des Sens -->
-    <a href="./pages/délice.html" aria-label="Visiter la page Le Délice des Sens">
-        <div class="card">
-            <img src="./images/restaurants/délice.jpg" alt="Assiette au restaurant Le Délice des Sens à Folie-Méricourt">
-            <div class="card-content">
-                <div class="inscription">
-                    <h3>Le Délice des Sens</h3>
-                    <p>Folie-Méricourt</p>
-                </div>
-                <i class="fas fa-heart" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-            </div>
-        </div>
-    </a>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer>
-        <div class="footer-card">
-        <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
-        <ul>
-        <li>
-            <a href="#">
-                <i class="fas fa-utensils"></i><span class="sr-only">Proposer un restaurant</span>
-                <p>Proposer un restaurant</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-handshake"></i><span class="sr-only">Devenir partenaire</span>
-                <p>Devenir partenaire</p>
-            </a> 
-        </li>
-        <li>
-            <a href="#">
-                <p>Mentions légales</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <p>Contact</p>
-            </a>
-        </li>       
-        </ul>
-        </div>
-    </footer>
-
-</body>
+    </body>
 </html>
