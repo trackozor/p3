@@ -1,0 +1,13 @@
+// main.scss
+
+// Variables globales (couleurs, tailles, etc.)
+@import 'variables';
+
+// Mixins (ex: media queries, fonctions réutilisables)
+@import 'mixins';
+
+// Reset et base typographique
+@import 'layout/base';
+
+// Styles spécifiques au header
+@import 'header';
