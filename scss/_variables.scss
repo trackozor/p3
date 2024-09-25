@@ -51,68 +51,75 @@ $font-title: 'Shrikhand', sans-serif;
 /* ----------------------------------------Espacements----------------------------*/
 
 /* ----------------------------Portrait----------------------*/
-
+/* Espace intérieur */
 $padding-vh-base: 2vh; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
 $padding-vh-x2: 4vh; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
 $padding-vh-x3: 6vh; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
 $padding-vh-d2: 1vh; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
 $padding-vh-d4: 0.5vh; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
 
+/* Marge */
 $margin-vh-base: 2vh; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
 $margin-vh-x2: 4vh; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
 $margin-vh-x3: 6vh; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
 $margin-vh-d2: 1vh; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
 $margin-vh-d4: 0.5vh; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
 
-$gap-vh-base: 2vh;
-$gap-vh-x2: 4vh;
-$gap-vh-x3: 6vh;
-$gap-vh-d2: 1vh;
+/* Espace */
+$gap-vh-base: 2vh; /* Espace de base correspondant à 2% de la hauteur de l'écran */
+$gap-vh-x2: 4vh; /* Espace 2 fois supérieur soit 4% de la hauteur de l'écran*/
+$gap-vh-x3: 6vh; /* Espace 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$gap-vh-d2: 1vh; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
+$gap-vh-d4: 0.5vh; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
 
-// Paysage
-$padding-vw-base: 2vw;
-$padding-vw-x2: 4vw;
-$padding-vw-x3: 6vw;
-$padding-vw-d2: 1vw;
-$padding-vw-d4: 0.5vw;
+/*----------------------------- Paysage -----------------------*/
 
-$margin-vw-base: 2vw;
-$margin-vw-x2: 4vw;
-$margin-vw-x3: 6vw;
-$margin-vw-d2: 1vw;
+/* Espace intérieur */
+$padding-vw-base: 2vw; /* Espace intérieur de base correspondant à 2 % de la largeur de l'écran */
+$padding-vw-x2: 4vw; /* Espace intérieur 2 fois supérieur soit 4 % de la largeur de l'écran */
+$padding-vw-x3: 6vw; /* Espace intérieur 3 fois supérieur soit 6 % de la largeur de l'écran */
+$padding-vw-d2: 1vw; /* Espace intérieur 2 fois inférieur soit 1% de la largeur de l'écran */
+$padding-vw-d4: 0.5vw; /*Espace intérieur 4 fois inférieur soit 0.5% de la largeur de l'écran*/
 
-$gap-vw-base: 2vw;
-$gap-vw-x2: 4vw;
-$gap-vw-x3: 6vw;
-$gap-vw-d2: 1vw;
+/* Marge */
+$margin-vw-base: 2vw; /* Marge de base correspondant à 2 % de la largeur de l'écran*/
+$margin-vw-x2: 4vw; /* Marge 2 fois supérieur soit 4 % de la margeur de l'écran*/
+$margin-vw-x3: 6vw; /* Marge 3 fois supérieur soit 6 % de la largeur de l' écran */
+$margin-vw-d2: 1vw; /* Marge 2 fois inférieur soit  1% de la largeur de l'écran */
+$margin-vw-d4: 0.5vw; /* Marge 4 fois inférieur soit 0.5 % de la largeur de l'écran*/
+
+/* Espace */
+$gap-vw-base: 2vw; /* Espace de base correspondant à 2% de la largeur de l'écran*/
+$gap-vw-x2: 4vw; /* Espace 2 fois supérieur soit 4 % de la largeur de l'écran */
+$gap-vw-x3: 6vw; /* Espace 3 fois supérieur soit 6% de la largeur de l'écran */
+$gap-vw-d2: 1vw; /* Espace 2 fois inférieur soit 1 % de la largeur de l'écran*/
 
 // --------------------------------------- Taille des police----------------------// 
 // Portrait
 
-$font-size-vh-base: 2vh;
-$font-size-vh-title: 3vh;
-$font-size-vh-middle: 1.5vh;
-$font-size-vh-d2: 1vh;
-$font-size-vh-d4: 0.5vh;
-$font-size-vh-x2: 4vh;
-$font-size-vh-x3: 6vw;
+$font-size-vh-base: 2vh; /**/
+$font-size-vh-title: 3vh; /**/
+$font-size-vh-middle: 1.5vh; /**/
+$font-size-vh-d2: 1vh; /**/
+$font-size-vh-d4: 0.5vh; /**/
+$font-size-vh-x2: 4vh; /**/
+$font-size-vh-x3: 6vw; /**/
 
 // Paysage
-$font-size-vw-primary: 2.2vw;   
-$font-size-vw-title: 3.5vw;
-$font-size-vw-middle: 3vw;
-$font-size-vw-d2: 1vw;
-$font-size-vw-d4: 0.5vw;
-$font-size-vw-x2: 4vw;
-
-
+$font-size-vw-primary: 2.2vw; /**/ 
+$font-size-vw-title: 3.5vw; /**/
+$font-size-vw-middle: 3vw; /**/
+$font-size-vw-d2: 1vw; /**/
+$font-size-vw-d4: 0.5vw; /**/
+$font-size-vw-x2: 4vw; /**/
+$font-size-vw-x3: 6vw; /**/
 
 
 //---------------------------------------Mise en évidence ( GRAS )----------------//
 
-$font-weight-bold: 700;
-$font-weight-h-bold: 900;
-$font-weight-l-bold: 100;
+$font-weight-bold: 700; /**/
+$font-weight-h-bold: 900;/**/
+$font-weight-l-bold: 100;/**/
 
 //----------------------------------------Arrondis-----------------------------//
 
