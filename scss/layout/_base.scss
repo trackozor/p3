@@ -1,21 +1,19 @@
 /* _base.scss */
 
 /* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   /* Typographie globale */
   body {
     font-family: $font-primary;
-    color: #333;
+    color: #e21515;
     line-height: 1.6;
+    display: block;
+    justify-items: center;
+    width:10vw;
   }
   
   h1, h2, h3 {
-    font-family: $font-secondary;
+    font-family: $font-title;
     color: $primary-color;
   }
   
