@@ -1,0 +1,19 @@
+/* _header.scss */
+
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

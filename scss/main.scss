@@ -9,5 +9,8 @@
 // Reset et base typographique
 @import 'layout/base';
 
+// Styles des composants
+@import'components/button';
+
 // Styles spécifiques au header
-@import 'header';
+@import 'pages/header';
