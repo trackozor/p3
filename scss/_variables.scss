@@ -61,6 +61,7 @@ $font-title: 'Shrikhand', sans-serif;
 $padding-vh-base: 2vh; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
 $padding-vh-x2: 4vh; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
 $padding-vh-x3: 6vh; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$padding-vh-x4: 8vh; /* Espace intérieur 4 fois supérieur soit 8 % de la hauteur de l'écran */
 $padding-vh-d2: 1vh; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
 $padding-vh-d4: 0.5vh; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
 
@@ -68,6 +69,7 @@ $padding-vh-d4: 0.5vh; /* Espace intérieur 4 fois inférieur soit 0.5 % de la h
 $margin-vh-base: 2vh; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
 $margin-vh-x2: 4vh; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
 $margin-vh-x3: 6vh; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$margin-vh-x4: 8vh; /*Marge 4 fois supérieur soit 8% de la hauteur de l'écran*/
 $margin-vh-d2: 1vh; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
 $margin-vh-d4: 0.5vh; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
 
@@ -75,6 +77,7 @@ $margin-vh-d4: 0.5vh; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'é
 $gap-vh-base: 2vh; /* Espace de base correspondant à 2% de la hauteur de l'écran */
 $gap-vh-x2: 4vh; /* Espace 2 fois supérieur soit 4% de la hauteur de l'écran*/
 $gap-vh-x3: 6vh; /* Espace 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$gap-vh-x4: 8vh; /* Espace 4 fois supérieur soit 8%  de la hauteur de l'écran*/
 $gap-vh-d2: 1vh; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
 $gap-vh-d4: 0.5vh; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
 
@@ -83,6 +86,7 @@ $gap-vh-d4: 0.5vh; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'éc
 $padding-vw-base: 2vw; /* Espace intérieur de base correspondant à 2 % de la largeur de l'écran */
 $padding-vw-x2: 4vw; /* Espace intérieur 2 fois supérieur soit 4 % de la largeur de l'écran */
 $padding-vw-x3: 6vw; /* Espace intérieur 3 fois supérieur soit 6 % de la largeur de l'écran */
+$padding-vw-x4: 8vw; /* Espace intérieur 4 fois supérieur soit 8 % de la largeur de l'écran*/
 $padding-vw-d2: 1vw; /* Espace intérieur 2 fois inférieur soit 1% de la largeur de l'écran */
 $padding-vw-d4: 0.5vw; /*Espace intérieur 4 fois inférieur soit 0.5% de la largeur de l'écran*/
 
@@ -90,6 +94,7 @@ $padding-vw-d4: 0.5vw; /*Espace intérieur 4 fois inférieur soit 0.5% de la lar
 $margin-vw-base: 2vw; /* Marge de base correspondant à 2 % de la largeur de l'écran*/
 $margin-vw-x2: 4vw; /* Marge 2 fois supérieur soit 4 % de la margeur de l'écran*/
 $margin-vw-x3: 6vw; /* Marge 3 fois supérieur soit 6 % de la largeur de l' écran */
+$margin-vw-x4: 8vw; /* Marge  4 fois supérieur soit 8 % de la margeur de l'écran */
 $margin-vw-d2: 1vw; /* Marge 2 fois inférieur soit  1% de la largeur de l'écran */
 $margin-vw-d4: 0.5vw; /* Marge 4 fois inférieur soit 0.5 % de la largeur de l'écran*/
 
@@ -97,8 +102,9 @@ $margin-vw-d4: 0.5vw; /* Marge 4 fois inférieur soit 0.5 % de la largeur de l'�
 $gap-vw-base: 2vw; /* Espace de base correspondant à 2% de la largeur de l'écran*/
 $gap-vw-x2: 4vw; /* Espace 2 fois supérieur soit 4 % de la largeur de l'écran */
 $gap-vw-x3: 6vw; /* Espace 3 fois supérieur soit 6% de la largeur de l'écran */
+$gap-vw-x4: 8vw; /* Espace 4 fois supérieur soit 8 % de la largeur de l'écran */
 $gap-vw-d2: 1vw; /* Espace 2 fois inférieur soit 1 % de la largeur de l'écran*/
-
+$gap-vw-d4
 
 
 /*-------------------------------------------------------------------------------------------------------------------*/

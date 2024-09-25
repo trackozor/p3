@@ -39,13 +39,14 @@
 }
   
   /*------------------ Bouton "Cœur" ----------------------------- */
-  .button--heart {
+  .far fa-heart {
     width: 40px;
     height: 40px;
 
     background-color: transparent;
-    border: 1px solid #9356DC;  /* Bordure violette */
-    color: #9356DC;
+    color: grey;
+    border: grey;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +73,7 @@
     padding: 0;
     border: none;
   
+    /* Effet de survol*/
     &:hover {
       color: #333;
     }
