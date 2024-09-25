@@ -27,7 +27,6 @@ ol li {
   display: flex;
   margin:$margin-vh-base 0;
   align-items: center;
-  gap:$gap-vh-base;
   font-weight: $font-weight-bold;
 
 }
@@ -35,10 +34,33 @@ ol li {
 ol li i {
   color:grey;
   font-size: $font-size-vh-base;
+  width:5%;
 }
-/* Style pour liste non ordonné*/
+
+ol li .li-txt{
+  display: inline-flex;
+  gap:$gap-vh-base;
+  background-color:$primary-background-color;
+  padding:$padding-vh-base $padding-vh-base ;
+  margin: $margin-vh-d2 0;
+  width:100%;
+  border-radius:2vh;
+
+}
+ol li .puce_num {
+   background-color: $button--search-primary-color;
+    border-radius:50%;
+    height: 3vh;
+    width:3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:1.4vh;
+}
+/*Style pour liste non ordonné*/
 ul li {
-  display: flex;/* Utilise flexbox pour aligner les éléments*/
+  display: inline-flex;/* Utilise flexbox pour aligner les éléments*/
   margin:$margin-vh-d2 0; /* marge haute et basse corespondent a*/
   align-items: center;
 }
