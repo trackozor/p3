@@ -1,31 +1,36 @@
 /*_Section-bandeau.scss*/
 
+/*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
-    display: block;
-    text-align: center;
-    align-content: center;
-    margin: $margin-vh-x2 0;
+    display: block; /**/
+    text-align: center; /* Aligne le texte dans l'axe horizontal*/
+    /*align-content: center; /**/
+    margin: $margin-vh-x2 0; /**/
     
 }
 
 /* Titre */
 .bandeau h2{
-    padding:$padding-vh-d4 $padding-vh-d2;
+    padding:$padding-vh-d4 $padding-vh-d2; /**/
 }
 
-/**/
+/* Texte */
 .bandeau p {
-    padding: $padding-vh-d2 $padding-vw-base;
-    margin-bottom: $margin-vh-x2;
-    font-weight: $font-weight-l-bold;;
+    padding: $padding-vh-d2 $padding-vw-base; /**/
+    margin-bottom: $margin-vh-x2; /**/
+    font-weight: $font-weight-l-bold; /**/
 }
 
+/*-------- Conteneur parent liste */
 .fonctionnement {
-    margin: 8vh $margin-vh-d2;
-   
+    margin: 8vh $margin-vh-d2;   
 }
 
-
+.fonctionnement ol {
+    display: block;
+    margin: 0 auto;
+}
+/*----- Icône Store -----*/
 .fonctionnement .fonctionnement-content .fa-store {
     color:$button--search-primary-color;
 }
