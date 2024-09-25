@@ -254,35 +254,38 @@ img {
 /**--------------------------------------------Mobile First Portrait--------------------------------------*/
 /* Bouton principal avec dégradé */
 .button--primary {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  padding: 1vh 2vh;
-  color: white;
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-  border-radius: 2vh;
+  background: linear-gradient(180deg, #FF79DA, #9356DC); /**/
+  padding: 1vh 2vh; /**/
+  color: white; /**/
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /**/
+  border-radius: 2vh; /**/
 }
 .button--primary:hover {
-  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75));
-  box-shadow: 0 6vh 12vh rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /**/
+  box-shadow: 0 6vh 12vh rgba(0, 0, 0, 0.3); /**/
 }
 
+/**/
 .button--primary-txt {
   font-size: 1.5vh;
   font-weight: 100;
   align-content: center;
 }
 
-/* Bouton "Nouveau" */
+/*------------------ Bouton "Nouveau" ----------------------------*/
+/**/
 .button--new {
   background-color: #99E2D0; /* Couleur vert clair */
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.8vh;
   padding: 5px 10px;
+  /*--effet de survol--*/
 }
 .button--new:hover {
   background-color: rgb(192.7099236641, 237.2900763359, 226.2977099237);
 }
 
-/* Bouton "Cœur" */
+/*------------------ Bouton "Cœur" ----------------------------- */
 .button--heart {
   width: 40px;
   height: 40px;
@@ -292,7 +295,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.5rvh;
+  /* Effet de survol*/
+  /*-- Effet " Like"--*/
 }
 .button--heart:hover {
   background-color: #9356DC;
@@ -315,6 +320,7 @@ img {
   color: #333;
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* _loader.scss */
 /* Loader couvrant toute la page */
 #loader {
