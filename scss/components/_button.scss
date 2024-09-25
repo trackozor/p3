@@ -9,13 +9,14 @@
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
     border-radius:$border-radius-vh-base;    
     &:hover {
-    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(180deg, lighten(#FF79DA, 2%), lighten(#9356DC, 10%));
+    box-shadow: 0 6vh 12vh rgba(0, 0, 0, 0.3);
     }
 }
 .button--primary-txt {
   font-size: 1.5vh;
   font-weight: $font-weight-l-bold;
+  align-content: center;
 
 
 }
