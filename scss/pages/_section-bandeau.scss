@@ -3,6 +3,8 @@
 .bandeau  {
     display: block;
     justify-content: center;
-    text-align:center;
     
+}
+.bandeau h2{
+    padding:$padding-vh-d4;
 }
