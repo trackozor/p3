@@ -23,6 +23,8 @@ h2 {
     font-weight: $font-weight-h-bold;
 }
 
+
+
 ol li {
   display: flex;
   margin:6vh 0;
@@ -47,9 +49,9 @@ ol li .li-txt{
   gap:$gap-vh-base;
   background-color:$primary-background-color;
   padding:$padding-vh-base  $padding-vh-x2  ;
-  margin: $margin-vh-d4  0 0 $margin-vh-d4 ;
+  margin: $margin-vh-d4  $margin-vh-d4 ;
   align-items: center;
-  width: 75%;
+  width: 70%;
   border-radius:2.5vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
 

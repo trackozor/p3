@@ -4,7 +4,7 @@
 .bandeau  {
     display: block; /**/
     text-align: center; /* Aligne le texte dans l'axe horizontal*/
-    /*align-content: center; /**/
+    align-content: center; /**/
     margin: $margin-vh-x2 0; /**/
     
 }
@@ -28,7 +28,9 @@
 
 .fonctionnement ol {
     display: block;
+    justify-content: center;
     margin: 0 auto;
+    width: 100%;
 }
 /*----- Icône Store -----*/
 .fonctionnement .fonctionnement-content .fa-store {
