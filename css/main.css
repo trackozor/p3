@@ -1,15 +1,18 @@
 @charset "UTF-8";
 /* _variables.scss */
 /* _base.scss */
-/* Reset CSS */
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------Base mobile first ---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 /* Typographie globale */
 body {
   font-family: "Roboto", sans-serif;
-  color: #e21515;
+  color: #0a0909;
   line-height: 1.6;
   display: block;
   justify-items: center;
-  width: 10vw;
+  width: 95%;
+  height: auto;
 }
 
 h1, h2, h3 {
