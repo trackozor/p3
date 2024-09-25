@@ -4,24 +4,18 @@
 /*----------------------Base mobile first ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
   
-  /* Typographie globale */
-  body {
+/* Typographie globale */
+body {
     font-family: $font-primary;
     color: #0a0909;
-    line-height: 1.6;
-    display: block;
-    justify-items: center;
-    width:95%;
-    height:auto;
-    
-  }
+    line-height: 1.6;    
+}
   
-  h1, h2, h3 {
+h1, h2, h3 {
     font-family: $font-title;
-    color: $primary-color;
-  }
+}
   
+h2 {
+    font-size:2rem;
+}
 
-  img {
-
-  }
