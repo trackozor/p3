@@ -1,5 +1,5 @@
 /* _buttons.scss */
-/**--------------------------------------------Mobile First Portarait--------------------------------------*/
+/**--------------------------------------------Mobile First Portrait--------------------------------------*/
 
   /* Bouton principal avec dégradé */
 .button--primary {
@@ -11,20 +11,24 @@
     &:hover {
     background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    font-size: $font-size-vh-d4;
     }
 }
-.butt
+.button--primary-txt {
+  font-size: 1.5vh;
+  font-weight: $font-weight-l-bold;
+
+
+}
 
   /* Bouton "Nouveau" */
 .button--new {
-    background-color: #99E2D0;  /* Couleur vert clair */
-    color: white;
-    font-size: 0.8rem;
-    padding: 5px 10px;
+  background-color: #99E2D0;  /* Couleur vert clair */
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
 
-    &:hover {
-background-color: lighten(#99E2D0, 10%);
+  &:hover {
+    background-color: lighten(#99E2D0, 10%);
     }
 }
   
