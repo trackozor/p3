@@ -1,0 +1,106 @@
+/* _loader.scss */
+
+/* Loader couvrant toute la page */
+#loader {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
+}
+
+/* Animation pour faire disparaître le loader après 3 secondes */
+@keyframes fadeOutLoader {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1; /* Garde visible pendant 80% du temps */
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* Cache complètement après l'animation */
+    }
+}
+
+/* Carte avec le logo, message et barre de progression */
+.loader-card {
+    background-color:$primary-background-color;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90vh;
+    opacity: 1;
+    animation: shrink 3s ease-in-out forwards; /* Animation de disparition de la carte */
+}
+
+/* Logo du loader */
+.loader-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Message dynamique */
+.loader-message {
+    font-family: $font-primary;
+    font-size: $font-size-vh-x2;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive du message */
+}
+
+/* Barre de progression */
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #9356DC;
+    animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
+}
+
+/* Animation pour la barre de progression */
+@keyframes loadProgressBar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Animation pour faire apparaître le message */
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation pour faire "rétrécir" la carte à la fin */
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9); /* Légère réduction de la taille avant disparition */
+    }
+}

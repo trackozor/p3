@@ -13,12 +13,13 @@ body {
     padding: 0 $padding-vh-base;  
 }
   
-h1, h2, h3 {
+h3 {
     font-family: $font-title;
 }
   
 h2 {
     font-size:$font-size-vh-title;
+    font-weight: $font-weight-h-bold;
 }
 
 ol li {
