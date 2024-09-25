@@ -1,14 +1,14 @@
 /* _header.scss */
 
 header {
-    background-color: $primary-color;
-    color: white;
-    padding: 20px;
+    background-color: $primary-background-color;
+    color: $primary-color;
+    font-size: $font-size-vh-base;
+    font-weight: $font-weight-bold;
   }
   
   header .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: $font-size-vh-base;
   }
   
   header .nav {

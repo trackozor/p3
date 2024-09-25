@@ -2,13 +2,18 @@
 
 //---------------------------------------- Couleurs -------------------------------//
 //Principale
-$primary-color:#0e010100; // noir
-
+$primary-color:#0a0909; // noir
+$secondary-color:#89C8FA; //Bleu clair
+$tertiary-color:#003A68; //Bleu foncé
+//fond
+$primary-background-color:#EAEAEA; //Gris clair
 //Boutons
-$button-primary-color: #9356DC;     // Violet
-$button-secondary-color: #FF79DA;   // Rose
-$button-tertiary-color: #99E2D0;    // Vert
+$button--search-primary-color: #9356DC;     // Violet
+$button--search-secondary-color: #FF79DA;;   // Rose
 
+// Bouton "Nouveau"
+$button--new-first-color:#99E2D0;   // Vert clair
+$button--new-secondary-color:#008766; // Vert foncé
 
 //------------------------------------------Polices--------------------------------//
 
@@ -45,3 +50,9 @@ $font-size-vh-middle: 3vh;
 $font-size-vw-primary:2.2vw;   
 $font-size-vw-title: 3.5vw;
 $font-size-vw-middle: 3vw;
+
+//---------------------------------------Mise en évidence ( GRAS )----------------//
+
+$font-weight-bold: 700;
+$font-weight-h-bold: 900;
+$font-weight-l-bold: 300;

@@ -9,7 +9,8 @@ body {
     font-family: $font-primary;
     color: #0a0909;
     line-height: 1.6; 
-    font-size: $font-size-vh-base;   
+    font-size: $font-size-vh-base; 
+    padding: 0 $padding-vh-base;  
 }
   
 h1, h2, h3 {

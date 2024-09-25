@@ -64,6 +64,7 @@ body {
   color: #0a0909;
   line-height: 1.6;
   font-size: 2.2vh;
+  padding: 0 2vh;
 }
 
 h1, h2, h3 {
@@ -144,14 +145,14 @@ h2 {
 
 /* _header.scss */
 header {
-  background-color: rgba(14, 1, 1, 0);
-  color: white;
-  padding: 20px;
+  background-color: #EAEAEA;
+  color: #0a0909;
+  font-size: 2.2vh;
+  font-weight: 700;
 }
 
 header .logo {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.2vh;
 }
 
 header .nav {
