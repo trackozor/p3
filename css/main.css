@@ -25,12 +25,25 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*---------------------------------------- Couleurs -------------------------------*/
 /*Principale*/
 /*fond*/
-/* Boutons */
-/* Bouton "Nouveau"*/
+/*--------- Boutons-------- */
+/* Violet */
+/* Rose */
+/*--------- Bouton "Nouveau"-------------*/
 /* Vert clair */
 /* Vert foncé */
 /*------------------------------------------Polices--------------------------------*/
 /* ----------------------------------------Espacements----------------------------*/
+/* ----------------------------Portrait----------------------*/
+/* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
+/* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+/* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
+/* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
+/* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
+/* Marge de base correspondant à 2 % de la hauteur de l'écran*/
+/* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+/*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
+/* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
+/* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)

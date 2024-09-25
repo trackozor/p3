@@ -22,19 +22,24 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
    Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.
 --------------------------------------------------------------------------------------------*/
 /*---------------------------------------- Couleurs -------------------------------*/
+
 /*Principale*/
+
 $primary-color:#0a0909; // noir
 $secondary-color:#89C8FA; //Bleu clair
 $tertiary-color:#003A68; //Bleu foncé
 
 /*fond*/
+
 $primary-background-color:#EAEAEA; //Gris clair
 
-/* Boutons */
-$button--search-primary-color: #9356DC;     // Violet
-$button--search-secondary-color: #FF79DA;;   // Rose
+/*--------- Boutons-------- */
 
-/* Bouton "Nouveau"*/
+$button--search-primary-color: #9356DC;     /* Violet */
+$button--search-secondary-color: #FF79DA;   /* Rose */
+
+/*--------- Bouton "Nouveau"-------------*/
+
 $button--new-first-color:#99E2D0;   /* Vert clair */
 $button--new-secondary-color:#008766; /* Vert foncé */
 
@@ -45,18 +50,19 @@ $font-title: 'Shrikhand', sans-serif;
 
 /* ----------------------------------------Espacements----------------------------*/
 
-// Portrait
-$padding-vh-base: 2vh;
-$padding-vh-x2: 4vh;
-$padding-vh-x3: 6vh;
-$padding-vh-d2: 1vh;
-$padding-vh-d4: 0.5vh;
+/* ----------------------------Portrait----------------------*/
 
-$margin-vh-base: 2vh;
-$margin-vh-x2: 4vh;
-$margin-vh-x3: 6vh;
-$margin-vh-d2: 1vh;
-$margin-vh-d4: 0.5vh;
+$padding-vh-base: 2vh; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
+$padding-vh-x2: 4vh; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$padding-vh-x3: 6vh; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$padding-vh-d2: 1vh; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
+$padding-vh-d4: 0.5vh; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
+
+$margin-vh-base: 2vh; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
+$margin-vh-x2: 4vh; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$margin-vh-x3: 6vh; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$margin-vh-d2: 1vh; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
+$margin-vh-d4: 0.5vh; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
 
 $gap-vh-base: 2vh;
 $gap-vh-x2: 4vh;
