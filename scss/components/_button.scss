@@ -26,10 +26,10 @@
   /*------------------ Bouton "Nouveau" ----------------------------*/
 
   /**/
-.button--new {
+.badge {
   background-color: #99E2D0;  /* Couleur vert clair */
   color: white;
-  font-size: 0.8vh;
+  font-size: $font-size-vh-middle;
   padding: 5px 10px;
 
   /*--effet de survol--*/
@@ -39,29 +39,30 @@
 }
   
   /*------------------ Bouton "Cœur" ----------------------------- */
-  .far fa-heart {
+  .icon-favorite {
     width: 40px;
     height: 40px;
 
     background-color: transparent;
-    color: grey;
-    border: grey;
+    color:grey;
     
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rvh;
+    font-size: $font-size-vh-base;
 
+    input {
+      display: none;
+    }
     /* Effet de survol*/
     &:hover {
-      background-color: #9356DC;
-      color: white;
+      color:grey;
     }
   
     /*-- Effet " Like"--*/
     &.liked {
       background-color: #9356DC;
-      color: white;
+      color: $button--search-primary-color;
     }
 }
   
@@ -69,7 +70,7 @@
   .button--back {
     background-color: transparent;
     color: black;
-    font-size: 1.5rem;
+    font-size: $font-size-vh-base;
     padding: 0;
     border: none;
   
