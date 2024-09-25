@@ -8,9 +8,10 @@
 body {
     font-family: $font-primary;
     color: #0a0909;
-    line-height: 1.6; 
     font-size: $font-size-vh-base; 
     padding: 0 $padding-vh-base;  
+    display: block;
+    justify-content: center;
 }
   
 h3 {

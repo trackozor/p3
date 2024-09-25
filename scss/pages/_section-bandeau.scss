@@ -2,9 +2,23 @@
 
 .bandeau  {
     display: block;
-    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: $margin-vh-x2 0;
     
 }
+
+/* Titre */
 .bandeau h2{
-    padding:$padding-vh-d4;
+    padding:$padding-vh-d4 $padding-vh-x2;
+}
+
+/**/
+.bandeau p {
+    padding: $padding-vh-d2 $padding-vw-base;
+    margin-bottom: $margin-vh-base;
+}
+
+.bandeau .button--primary {
+    
 }
