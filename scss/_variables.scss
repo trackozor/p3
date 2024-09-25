@@ -1,19 +1,47 @@
 /* _variables.scss */
 
-// Couleurs des boutons
+//---------------------------------------- Couleurs -------------------------------//
+//Principale
+$primary-color:#0e010100; // noir
+
+//Boutons
 $button-primary-color: #9356DC;     // Violet
 $button-secondary-color: #FF79DA;   // Rose
 $button-tertiary-color: #99E2D0;    // Vert
-$primary-color:#0e010100; // noir
 
-//Polices
+
+//------------------------------------------Polices--------------------------------//
+
 $font-primary: 'Roboto', sans-serif;
 $font-title: 'Shrikhand', cursive;
 
-// Espacements
-$padding-base: 10px;
-$margin-base: 20px;
+// ----------------------------------------Espacements----------------------------//
+// Portrait
+$padding-vh-base: 2vh;
+$padding-vh-x2: 4vh;
+$padding-vh-d2:1vh;
 
-// Taille des police 
-$font-size-vh-primary:20px;   
-$font-size-vh-title: 200px;
+$margin-vh-base: 2vh;
+$margin-vh-x2: 4vh;
+$margin-vh-d2: 1vh;
+
+//paysage
+$padding-vw-base: 2vw;
+$padding-vw-x2: 4vw;
+$padding-vw-d2: 1vw;
+
+$margin-vw-base: 2vw;
+$margin-vw-x2: 4vw;
+$margin-vw-d2: 1vw;
+
+// --------------------------------------- Taille des police----------------------// 
+// Portrait
+
+$font-size-vh-base: 2.2vh;
+$font-size-vh-title: 3.5vh;
+$font-size-vh-middle: 3vh;
+
+// Paysage
+$font-size-vw-primary:2.2vw;   
+$font-size-vw-title: 3.5vw;
+$font-size-vw-middle: 3vw;

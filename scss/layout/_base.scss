@@ -8,7 +8,8 @@
 body {
     font-family: $font-primary;
     color: #0a0909;
-    line-height: 1.6;    
+    line-height: 1.6; 
+    font-size: $font-size-vh-base;   
 }
   
 h1, h2, h3 {
@@ -16,6 +17,6 @@ h1, h2, h3 {
 }
   
 h2 {
-    font-size:2rem;
+    font-size:$font-size-vh-title;
 }
 
