@@ -1,24 +1,16 @@
 /* _buttons.scss */
+/**--------------------------------------------Mobile First Portarait--------------------------------------*/
 
-/* Classe de base pour les boutons */
-.button {
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    cursor: pointer;
-    border: none;
-}
   /* Bouton principal avec dégradé */
 .button--primary {
-    background: linear-gradient(135deg, #FF79DA, #9356DC);
+    background: linear-gradient(180deg, #FF79DA, #9356DC);
+    padding: $padding-vh-d2 $padding-vh-base;
     color: white;
+    font-size: $font-size-vh-base;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
+    border-radius:$border-radius-vh-base;
     &:hover {
-    background: linear-gradient(135deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
+    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
 }

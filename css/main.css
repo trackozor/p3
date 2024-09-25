@@ -63,7 +63,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #0a0909;
   line-height: 1.6;
-  font-size: 2.2vh;
+  font-size: 2vh;
   padding: 0 2vh;
 }
 
@@ -72,36 +72,47 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 3.5vh;
+  font-size: 3vh;
 }
 
 ol li {
   display: flex;
   margin: 2vh 0;
   align-items: center;
+  gap: 2vh;
+}
+
+/* Style pour liste non ordonné*/
+ul li {
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  margin: 1vh 0; /* marge haute et basse corespondent a*/
+  align-items: center;
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement par défaut*/
+  color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
+}
+
+img {
+  max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
+  height: auto; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
+  display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
 }
 
 /* _buttons.scss */
-/* Classe de base pour les boutons */
-.button {
-  border-radius: 50px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
-  cursor: pointer;
-  border: none;
-}
-
+/**--------------------------------------------Mobile First Portarait--------------------------------------*/
 /* Bouton principal avec dégradé */
 .button--primary {
-  background: linear-gradient(135deg, #FF79DA, #9356DC);
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  padding: 1vh 2vh;
   color: white;
+  font-size: 2vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2vh;
 }
 .button--primary:hover {
-  background: linear-gradient(135deg, rgb(255, 172, 232.0820895522), rgb(174, 128.25, 228.75));
+  background: linear-gradient(180deg, rgb(255, 172, 232.0820895522), rgb(174, 128.25, 228.75));
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -153,12 +164,12 @@ ol li {
 header {
   background-color: #EAEAEA;
   color: #0a0909;
-  font-size: 2.2vh;
+  font-size: 2vh;
   font-weight: 700;
 }
 
 header .logo {
-  font-size: 2.2vh;
+  font-size: 2vh;
 }
 
 header .nav {
@@ -168,5 +179,10 @@ header .nav {
 }
 
 /*_Section-bandeau.scss*/
+.bandeau {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
 
 /*# sourceMappingURL=main.css.map */

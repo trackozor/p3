@@ -25,4 +25,24 @@ ol li {
   display: flex;
   margin:$margin-vh-base 0;
   align-items: center;
+  gap:$gap-vh-base;
+}
+
+/* Style pour liste non ordonné*/
+ul li {
+  display: flex;/* Utilise flexbox pour aligner les éléments*/
+  margin:$margin-vh-d2 0; /* marge haute et basse corespondent a*/
+  align-items: center;
+}
+
+a {
+  text-decoration: none;  /* Supprime le soulignement par défaut*/
+  color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
+}
+
+
+img {
+  max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
+  height: auto; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
+  display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
 }
