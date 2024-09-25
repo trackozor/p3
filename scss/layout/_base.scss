@@ -28,8 +28,14 @@ ol li {
   margin:$margin-vh-base 0;
   align-items: center;
   gap:$gap-vh-base;
+  font-weight: $font-weight-bold;
+
 }
 
+ol li i {
+  color:grey;
+  font-size: $font-size-vh-base;
+}
 /* Style pour liste non ordonné*/
 ul li {
   display: flex;/* Utilise flexbox pour aligner les éléments*/

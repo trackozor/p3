@@ -10,24 +10,38 @@
 
 /* Titre */
 .bandeau h2{
-    padding:$padding-vh-d4 $padding-vh-x2;
+    padding:$padding-vh-d4 $padding-vh-d2;
 }
 
 /**/
 .bandeau p {
     padding: $padding-vh-d2 $padding-vw-base;
-    margin-bottom: $margin-vh-base;
+    margin-bottom: $margin-vh-x2;
+    font-weight: $font-weight-l-bold;;
 }
 
 .fonctionnement {
-    margin: $margin-vh-x2 $margin-vh-d2;
+    margin: 8vh $margin-vh-d2;
+
+    
 }
 
 .fonctionnement .puce_num {
-    background-color: $button--search-secondary-color;
+    background-color: $button--search-primary-color;
     border-radius:50%;
     height: 3vh;
     width:3vh;
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:1.4vh
+}
+.fonctionnement ol {
+    display: flex;
+    flex-direction: column;
+}
+.fonctionnement .fonctionnement-content {
+    height: 4vh;
+    margin: $margin-vh-base 0;
 }
