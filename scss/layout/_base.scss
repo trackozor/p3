@@ -36,22 +36,26 @@ ol li i {
   color:grey;
   font-size: $font-size-vh-base;
   width:5%;
+  margin-right: $margin-vh-d4;
+  display: flex;
+  align-items: center;
 }
 
 ol li .li-txt{
   display: flex;
-  position: absolute;
-  
+  position: absolute;  
   gap:$gap-vh-base;
   background-color:$primary-background-color;
-  padding:$padding-vh-base $padding-vh-base ;
-  margin: $margin-vh-d2 0;
-  width:100%;
-  border-radius:2vh;
+  padding:$padding-vh-base  $padding-vh-x2  ;
+  margin: $margin-vh-d4  0 0 $margin-vh-d4 ;
+  align-items: center;
+  width: 70%;
+  border-radius:2.5vh;
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
 
 }
 ol li .puce_num {
-   background-color: $button--search-primary-color;
+    background-color: $button--search-primary-color;
     border-radius:50%;
     height: 3vh;
     width:3vh;

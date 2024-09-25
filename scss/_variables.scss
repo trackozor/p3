@@ -19,36 +19,42 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
    - Tailles d'images
 
    Utilisation :
-   Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.
---------------------------------------------------------------------------------------------*/
-/*---------------------------------------- Couleurs -------------------------------*/
 
-/*Principale*/
 
-$primary-color:#0a0909; // noir
-$secondary-color:#89C8FA; //Bleu clair
-$tertiary-color:#003A68; //Bleu foncé
+   Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.*/
 
-/*fond*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Couleurs ----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
+/*------Principale -----*/
+$primary-color:#0a0909; /* noir */
+$secondary-color:#89C8FA; /* Bleu clair */
+$tertiary-color:#003A68; /*Bleu foncé*/
+
+/*------- fond-----*/
 $primary-background-color:#EAEAEA; //Gris clair
 
 /*--------- Boutons-------- */
-
 $button--search-primary-color: #9356DC;     /* Violet */
 $button--search-secondary-color: #FF79DA;   /* Rose */
 
-/*--------- Bouton "Nouveau"-------------*/
-
+/* Bouton "Nouveau" */
 $button--new-first-color:#99E2D0;   /* Vert clair */
 $button--new-secondary-color:#008766; /* Vert foncé */
 
-/*------------------------------------------Polices--------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------Polices-----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
 $font-primary: 'Roboto', sans-serif;
 $font-title: 'Shrikhand', sans-serif;
 
-/* ----------------------------------------Espacements----------------------------*/
+
+/*------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------Espacements--------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
 /* ----------------------------Portrait----------------------*/
 /* Espace intérieur */
@@ -73,7 +79,6 @@ $gap-vh-d2: 1vh; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
 $gap-vh-d4: 0.5vh; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
 
 /*----------------------------- Paysage -----------------------*/
-
 /* Espace intérieur */
 $padding-vw-base: 2vw; /* Espace intérieur de base correspondant à 2 % de la largeur de l'écran */
 $padding-vw-x2: 4vw; /* Espace intérieur 2 fois supérieur soit 4 % de la largeur de l'écran */
@@ -94,9 +99,13 @@ $gap-vw-x2: 4vw; /* Espace 2 fois supérieur soit 4 % de la largeur de l'écran 
 $gap-vw-x3: 6vw; /* Espace 3 fois supérieur soit 6% de la largeur de l'écran */
 $gap-vw-d2: 1vw; /* Espace 2 fois inférieur soit 1 % de la largeur de l'écran*/
 
-// --------------------------------------- Taille des police----------------------// 
-// Portrait
 
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------- Taille des police---------------------------------------------------------*/ 
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------- Portrait-----------------------------------*/
 $font-size-vh-base: 2vh; /**/
 $font-size-vh-title: 3vh; /**/
 $font-size-vh-middle: 1.5vh; /**/
@@ -105,7 +114,7 @@ $font-size-vh-d4: 0.5vh; /**/
 $font-size-vh-x2: 4vh; /**/
 $font-size-vh-x3: 6vw; /**/
 
-// Paysage
+/*-------------------- Paysage ---------------------------------*/
 $font-size-vw-primary: 2.2vw; /**/ 
 $font-size-vw-title: 3.5vw; /**/
 $font-size-vw-middle: 3vw; /**/
@@ -115,24 +124,29 @@ $font-size-vw-x2: 4vw; /**/
 $font-size-vw-x3: 6vw; /**/
 
 
-//---------------------------------------Mise en évidence ( GRAS )----------------//
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
 $font-weight-bold: 700; /**/
 $font-weight-h-bold: 900;/**/
 $font-weight-l-bold: 100;/**/
 
-//----------------------------------------Arrondis-----------------------------//
 
-// Portrait
+/*------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Arrondis------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
+/*--------------------- Portrait ----------------------------------------------*/
 $border-radius-vh-base: 2vh;
 $border-radius-vh-x2: 4vh;
 $border-radius-vh-d2: 1vh;
 
-// Paysage  
-
+/*--------------------- Paysage ----------------------------------------------*/ 
 $border-radius-vw-base: 2vw;
 $border-radius-vw-x2: 4vw;
 $border-radius-vw-d2: 1vw;
 
-//---------------------------------------------------------------//
+
+
+/*--------------------------------------------------------------------------------------------------*/
