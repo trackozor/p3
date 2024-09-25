@@ -25,9 +25,10 @@ h2 {
 
 ol li {
   display: flex;
-  margin:$margin-vh-base 0;
+  margin:6vh 0;
   align-items: center;
   font-weight: $font-weight-bold;
+  gap:4vh;
 
 }
 
@@ -38,7 +39,9 @@ ol li i {
 }
 
 ol li .li-txt{
-  display: inline-flex;
+  display: flex;
+  position: absolute;
+  
   gap:$gap-vh-base;
   background-color:$primary-background-color;
   padding:$padding-vh-base $padding-vh-base ;
@@ -53,6 +56,8 @@ ol li .puce_num {
     height: 3vh;
     width:3vh;
     display: flex;
+    position: relative;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     color:white;
