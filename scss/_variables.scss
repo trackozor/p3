@@ -1,26 +1,49 @@
-/* _variables.scss */
+/* ------------------------------------------------------- _variables.scss----------------------------------------------------- 
+Fichier : _variables.scss
+   Auteur : Trackozor
+   Date de création : 25 septembre 2024
+   Dernière mise à jour : 
 
-//---------------------------------------- Couleurs -------------------------------//
-//Principale
+   Description :
+Ce fichier contient toutes les variables globales utilisées pour styliser
+le projet. Les variables incluent les couleurs, polices, espacements,
+tailles de texte, bordures, etc. Ces variables permettent de garder une 
+cohérence dans l'apparence du site et facilitent la maintenance du code.
+
+   Sections couvertes :
+   - Couleurs
+   - Polices
+   - Espacements
+   - Tailles des polices
+   - Bordures arrondies
+   - Tailles d'images
+
+   Utilisation :
+   Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.
+--------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Couleurs -------------------------------*/
+/*Principale*/
 $primary-color:#0a0909; // noir
 $secondary-color:#89C8FA; //Bleu clair
 $tertiary-color:#003A68; //Bleu foncé
-//fond
+
+/*fond*/
 $primary-background-color:#EAEAEA; //Gris clair
-//Boutons
+
+/* Boutons */
 $button--search-primary-color: #9356DC;     // Violet
 $button--search-secondary-color: #FF79DA;;   // Rose
 
-// Bouton "Nouveau"
-$button--new-first-color:#99E2D0;   // Vert clair
-$button--new-secondary-color:#008766; // Vert foncé
+/* Bouton "Nouveau"*/
+$button--new-first-color:#99E2D0;   /* Vert clair */
+$button--new-secondary-color:#008766; /* Vert foncé */
 
-//------------------------------------------Polices--------------------------------//
+/*------------------------------------------Polices--------------------------------*/
 
 $font-primary: 'Roboto', sans-serif;
 $font-title: 'Shrikhand', cursive;
 
-// ----------------------------------------Espacements----------------------------//
+/* ----------------------------------------Espacements----------------------------*/
 
 // Portrait
 $padding-vh-base: 2vh;

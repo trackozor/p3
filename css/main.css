@@ -1,5 +1,36 @@
 @charset "UTF-8";
-/* _variables.scss */
+/* ------------------------------------------------------- _variables.scss----------------------------------------------------- 
+Fichier : _variables.scss
+   Auteur : Trackozor
+   Date de création : 25 septembre 2024
+   Dernière mise à jour : 
+
+   Description :
+Ce fichier contient toutes les variables globales utilisées pour styliser
+le projet. Les variables incluent les couleurs, polices, espacements,
+tailles de texte, bordures, etc. Ces variables permettent de garder une 
+cohérence dans l'apparence du site et facilitent la maintenance du code.
+
+   Sections couvertes :
+   - Couleurs
+   - Polices
+   - Espacements
+   - Tailles des polices
+   - Bordures arrondies
+   - Tailles d'images
+
+   Utilisation :
+   Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.
+--------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Couleurs -------------------------------*/
+/*Principale*/
+/*fond*/
+/* Boutons */
+/* Bouton "Nouveau"*/
+/* Vert clair */
+/* Vert foncé */
+/*------------------------------------------Polices--------------------------------*/
+/* ----------------------------------------Espacements----------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
