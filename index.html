@@ -51,44 +51,45 @@
         </header>
 
         <main>
-            <!-- Bandeau principal -->
-            <section class="bandeau">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                    <button class="button--primary">Explorer nos restaurants</button>
-            </section>
+            <section class="section-bandeau">    
+                <!-- Bandeau principal -->
+                <div class="bandeau">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                        <a href="#restaurants-section" class="button--primary">Explorer nos restaurants</a>
+                </div>
 
-            <!-- Fonctionnement du service -->
-            <section class="fonctionnement">
-                <h2>Fonctionnement</h2>
-
-                    <!-- Étape 1 : Choisir un restaurant -->
-                    <div class="fonctionnement-content">
+                <!-- Fonctionnement du service -->
+                <div class="fonctionnement">
+                    <h2>Fonctionnement</h2>
+                    <!-- Liste numérotée pour le fonctionnement -->
+                    <ol>
+                        <!-- Étape 1 : Choisir un restaurant -->
+                        <li class="fonctionnement-content">
                         <span class="puce_num">1</span>
-                        <i class="fas fa-mobile-alt" aria-hidden="true"></i> 
-                        <span class="sr-only">Smartphone</span>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <h3>Choisissez un restaurant</h3>
-                    </div>
+                        </li>
 
-                    <!-- Étape 2 : Composer le menu -->
-                    <div class="fonctionnement-content">
+                        <!-- Étape 2 : Composer le menu -->
+                        <li class="fonctionnement-content">
                         <span class="puce_num">2</span>
                         <i class="fas fa-list" aria-hidden="true"></i>
-                        <span class="sr-only">Composer votre menu</span>
                         <h3>Composez votre menu</h3>
-                    </div>
+                        </li>
 
-                    <!-- Étape 3 : Dégustez au restaurant -->
-                    <div class="fonctionnement-content">
+                        <!-- Étape 3 : Dégustez au restaurant -->
+                        <li class="fonctionnement-content">
                         <span class="puce_num">3</span>
                         <i class="fas fa-store" aria-hidden="true"></i>
-                        <span class="sr-only">Dégustez au restaurant</span>
                         <h3>Dégustez au restaurant</h3>
-                    </div>
-            </section>
+                        </li>
+                    </ol>    
+                </div>
+            </section>      
 
             <!-- Section des restaurants -->
-            <section class="restaurants">
+            <section id="restaurants-section">
                 <h2>Nos restaurants</h2>
                 
                 <!-- Restaurant : La Palette du Goût -->

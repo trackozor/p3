@@ -21,3 +21,8 @@ h2 {
     font-size:$font-size-vh-title;
 }
 
+ol li {
+  display: flex;
+  margin:$margin-vh-base 0;
+  align-items: center;
+}

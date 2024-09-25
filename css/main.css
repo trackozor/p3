@@ -75,6 +75,12 @@ h2 {
   font-size: 3.5vh;
 }
 
+ol li {
+  display: flex;
+  margin: 2vh 0;
+  align-items: center;
+}
+
 /* _buttons.scss */
 /* Classe de base pour les boutons */
 .button {
@@ -160,5 +166,7 @@ header .nav {
   justify-content: space-between;
   align-items: center;
 }
+
+/*_Section-bandeau.scss*/
 
 /*# sourceMappingURL=main.css.map */

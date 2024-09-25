@@ -16,6 +16,7 @@
     background: linear-gradient(135deg, #FF79DA, #9356DC);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
     &:hover {
     background: linear-gradient(135deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
