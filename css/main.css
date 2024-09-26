@@ -418,6 +418,13 @@ img {
 
 .card-content {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  z-index: 2;
+  bottom: 1vh;
+  left: 1vh;
 }
 
 .card .badge {
@@ -426,6 +433,14 @@ img {
   z-index: 1;
   left: 77%;
   bottom: 67%;
+}
+
+.card .card-content .card-title {
+  font-size: 2vh;
+}
+
+.card .card-content .card-title h3 {
+  font-weight: 900;
 }
 
 /* _loader.scss */
