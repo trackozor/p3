@@ -133,32 +133,18 @@
                                 <h3>La Palette du Goût</h3>
                                 <div class="card-txt">Ménimontant</div>
                             </div>
-                            <label class="icon-favorite">
-                            <input type="checkbox" >
-                                <i class="far fa-heart " aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                            </label>
-                        </div>
+                            <div class="icon-favorite">
+                                <input type="checkbox" id="favorite-checkbox-palette"  aria-label="Ajouter aux favoris">
+                                <label for="favorite-checkbox-palette" class="icon-favorite">
+                                    <i class="far fa-heart " aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Restaurant : La Note Enchantée -->
-                <a href="./pages/note_enchantée.html" aria-label="Visiter la page La Note Enchantée">
-                    <div class="card">
-                        <img src="./images/restaurants/note_enchantée.jpg" alt="Plat vu de dessus au restaurant La Note Enchantée">
-                        <span class="badge">Nouveau</span>
-                        <div class="card-content">
-                            <div class="inscription">
-                                <h3>La Note Enchantée</h3>
-                                <p>Charonne</p>
-                            </div>
-                            <label class="icon-favorite">
-                            <input type="checkbox" >
-                                <i class="far fa-heart " aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                            </label>
-                        </div>
-                    </div>
-                </a>
+                
 
                 <!-- Restaurant : À La Française -->
                 <a href="./pages/la_francaise.html" aria-label="Visiter la page À La Française">
@@ -169,10 +155,12 @@
                                 <h3>À La Française</h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <label class="icon-favorite">
-                            <input type="checkbox" >
-                                <i class="far fa-heart " aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                            </label>
+                            <div class="icon-favorite" >
+                                <input type="checkbox" id="favorite-checkbox-enchantée" aria-label="Ajouter aux favoris" >
+                                <label for="favorite-checkbox-enchantée" class="icon-favorite"></label>
+                                        <i class="far fa-heart " aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </a>
