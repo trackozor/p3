@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, #FF79DA, #9356DC);/**/
-    padding: $padding-vh-base $padding-vh-d2;/**/
+    padding: $padding-vh-base $padding-vh-base;/**/
     color: white;/**/
     width:22vh;/**/
     box-shadow: $border-shadows-vh; /**/
@@ -18,9 +18,9 @@
     }
 }
 
-/**/
+/* Texte du bouton*/
 .button--primary-txt {
-  font-size: $font-size-vh-middle;
+  font-size: $font-size-vh-base;
   font-weight: $font-weight-l-bold;
   align-content: center;
 

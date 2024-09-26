@@ -6,7 +6,7 @@
     flex-direction: column; /**/
     text-align: center; /* Aligne le texte dans l'axe horizontal*/
     justify-content: center; /**/
-    margin: $margin-vh-base 0; /**/
+    margin: $margin-vh-base $margin-vh-d2; /**/
     align-items: center;
 }
 
@@ -19,7 +19,7 @@
 /* Texte */
 .bandeau p {
     padding: $padding-vh-d2 $padding-vw-base; /**/
-    margin-bottom: $margin-vh-x2; /**/
+    margin-bottom: $margin-vh-base; /**/
     font-weight: $font-weight-l-bold; /**/
 }
 
