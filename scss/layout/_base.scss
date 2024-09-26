@@ -66,3 +66,26 @@ img {
   }
 
 }
+
+/*----------------------------------------------------------------------------*/
+/*---------------------Desktop------------------------------------------------*/
+
+@media (min-width: 64rem) {
+  
+  /* Typographie globale */
+  body {
+      font-size: $font-size-vw-primary; /* Adapte la taille de la police à la largeur de l'écran */
+      padding: 0 $padding-vw-base; /* Ajuste le padding pour le mode desktop */
+  }
+
+  /* Titres */
+  h2 {
+      font-size: $font-size-vw-title; /* Adapte la taille des titres pour le mode desktop */
+  }
+
+  /* Liste non ordonnée */
+  ul li {
+      margin: $margin-vw-d2 0; /* Ajuste les marges pour le mode desktop */
+  }
+
+}

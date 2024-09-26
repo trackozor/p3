@@ -241,6 +241,23 @@ img {
     margin: 1vw 0; /* Ajuste les marges pour le mode paysage */
   }
 }
+/*----------------------------------------------------------------------------*/
+/*---------------------Desktop------------------------------------------------*/
+@media (min-width: 64rem) {
+  /* Typographie globale */
+  body {
+    font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
+    padding: 0 2vw; /* Ajuste le padding pour le mode desktop */
+  }
+  /* Titres */
+  h2 {
+    font-size: 3vw; /* Adapte la taille des titres pour le mode desktop */
+  }
+  /* Liste non ordonnée */
+  ul li {
+    margin: 1vw 0; /* Ajuste les marges pour le mode desktop */
+  }
+}
 /* _buttons.scss */
 /**--------------------------------------------Mobile First Portrait--------------------------------------*/
 /* Bouton principal avec dégradé */
@@ -488,7 +505,7 @@ ol li i {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 3vh;
+  left: 3.5vh;
   position: absolute;
 }
 
@@ -499,11 +516,10 @@ ol li .li-txt {
   background-color: #EAEAEA;
   padding: 2vh 1vh;
   align-items: center;
-  width: 90%;
+  width: 92.5%;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
   justify-content: center;
-  gap: 3vh;
 }
 
 ol li .puce_num {
@@ -539,31 +555,72 @@ ol li .puce_num {
   }
   /* Conteneur parent liste */
   .fonctionnement {
-    margin: 8vw 1vw; /* Utilisation de vw pour le mode paysage */
+    margin: 2vw 1vw; /* Utilisation de vw pour le mode paysage */
   }
   /* Liste des étapes */
   ol li {
-    margin: 4vw 0; /* Réduction des marges pour le mode paysage */
-    gap: 4vw; /* Ajuster l'espacement en utilisant vw */
+    margin: 2vw 0; /* Réduction des marges pour le mode paysage */
+    gap: 2vh; /* Ajuster l'espacement en utilisant vw */
   }
   /* Icône */
   ol li i {
     font-size: 2vw;
-    width: 5vw; /* Utilisation de vw pour la largeur de l'icône */
     margin: 0 0.5vw;
-    left: 3vw;
+    left: 4vw;
   }
   /* Texte des étapes */
   ol li .li-txt {
     padding: 2vw 4vw; /* Adapter les padding pour landscape */
     margin: 0.5vw 0.5vw;
-    border-radius: 2.5vw; /* Adapter le border-radius pour les proportions en landscape */
+    border-radius: 2vw;
   }
   /* Numéros des étapes */
   ol li .puce_num {
     height: 3vw;
     width: 3vw;
-    font-size: 1.4vw; /* Ajuster la taille de la police pour le mode paysage */
+    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
+  }
+}
+/*--------------------------Desktop--------------------------*/
+@media (min-width: 64rem) {
+  .bandeau {
+    margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+  }
+  /* Titre */
+  .bandeau h2 {
+    padding: 0.5vw 1vw; /* Adapter les espacements pour le mode paysage */
+  }
+  /* Texte */
+  .bandeau p {
+    padding: 1vw 2vw;
+    margin-bottom: 4vw;
+  }
+  /* Conteneur parent liste */
+  .fonctionnement {
+    margin: 2vw 1vw; /* Utilisation de vw pour le mode paysage */
+  }
+  /* Liste des étapes */
+  ol li {
+    margin: 2vw 0; /* Réduction des marges pour le mode paysage */
+    gap: 2vh; /* Ajuster l'espacement en utilisant vw */
+  }
+  /* Icône */
+  ol li i {
+    font-size: 2vw;
+    margin: 0 0.5vw;
+    left: 4vw;
+  }
+  /* Texte des étapes */
+  ol li .li-txt {
+    padding: 2vw 4vw; /* Adapter les padding pour landscape */
+    margin: 0.5vw 0.5vw;
+    border-radius: 2vw;
+  }
+  /* Numéros des étapes */
+  ol li .puce_num {
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
   }
 }
 
