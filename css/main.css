@@ -132,14 +132,24 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------- Portrait ----------------------------------------------*/
-/* Taille des objets générique pour portrait correspondant à 2% de la hauteur de l'écran*/
-/* */
-/* Taille des objets générique pour portrait correspondant à 5% de la hauteur de l'écran*/
-/* Taille des objets générique pour portrait correspondant à 10% de la hauteur de l'écran*/
-/*  Taille des objets génériques pour portrait correspondant à 15% de la hauteur de l'écran*/
-/* Taille de objets génériques pour portrait correspondant à 20 % de la hauteur de l 'écran*/
-/* Taille des obj*/
+/* Taille des objets correspondant à 2% de la hauteur de l'écran*/
+/* Taille des objets correspondant à 4 % de la hauteur de l'écran */
+/* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
+/* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
+/* Taille des objets  correspondant à 10% de la hauteur de l'écran*/
+/*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
+/* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
+/* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
 /*--------------------- Paysage ----------------------------------------------*/
+/* Taille des objects correspondant à 2% de la largeur de l'écran*/
+/* Taille des objects correspondant à 5% de la largeur de l' écran*/
+/* Taille des objects correspondant à 10 % de la largeur de l'écran*/
+/* Taille des objects correspondant à 15 % de la largeur de l'écran*/
+/* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
+/* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------- Position des elements-------------------------------------*/
+/*-------------------------------------------------------------------------------*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -490,7 +500,7 @@ input {
   flex-direction: column;
   border-radius: 2vh;
   box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
-  height: 28vh;
+  height: 30vh;
 }
 
 .card img {
@@ -498,6 +508,7 @@ input {
   border-radius: 2vh 2vh 0 0;
   height: 20vh;
   object-fit: cover;
+  position: relative;
 }
 
 .card-content {
@@ -514,9 +525,9 @@ input {
 .card .badge {
   display: flex;
   position: relative;
-  z-index: 1;
-  left: 75%;
-  bottom: 66%;
+  z-index: 3;
+  left: 70%;
+  bottom: 60%;
 }
 
 .card .card-content .card-title {

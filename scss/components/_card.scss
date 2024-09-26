@@ -25,7 +25,7 @@
     flex-direction: column;
     border-radius: $border-radius-vh-base;
     box-shadow: $border-shadow-vw; 
-    height: 28vh;
+    height: 30vh;
 
 }
 .card img {
@@ -33,6 +33,7 @@
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
     height:20vh;
     object-fit: cover;
+    position: relative;
 }
 
 .card-content {
@@ -49,9 +50,9 @@
 .card .badge {
     display: flex;
     position : relative;
-    z-index: 1;
-    left: 75%;
-    bottom: 66%;;
+    z-index: 3;
+    left: 70%;
+    bottom: 60%;;
 }
 .card .card-content .card-title  {
     font-size: $font-size-vh-base;

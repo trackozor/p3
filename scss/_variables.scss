@@ -166,19 +166,25 @@ $border-shadow-vw: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre pour paysage*/
 /*--------------------------------------------------------------------------------------------------*/
 
 /*--------------------- Portrait ----------------------------------------------*/
-$object-size-vh-base: 2vh; /* Taille des objets générique pour portrait correspondant à 2% de la hauteur de l'écran*/
-$object-size-vh-x2: 4vh;/* */
-$object-size-vh-x3: 6vh;
-$object-size-vh-x2-5: 5vh; /* Taille des objets générique pour portrait correspondant à 5% de la hauteur de l'écran*/
-$object-size-vh-x5: 10vh; /* Taille des objets générique pour portrait correspondant à 10% de la hauteur de l'écran*/
-$object-size-vh-x7-5: 15vh; /*  Taille des objets génériques pour portrait correspondant à 15% de la hauteur de l'écran*/
-$object-size-vh-x10: 20vh;/* Taille de objets génériques pour portrait correspondant à 20 % de la hauteur de l 'écran*/
-$object-size-vh-x12-5: 25vh; /* Taille des obj*/
+$object-size-vh-base: 2vh; /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
+$object-size-vh-x2: 4vh; /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
+$object-size-vh-x3: 6vh; /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
+$object-size-vh-x2-5: 5vh; /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
+$object-size-vh-x5: 10vh; /* Taille des objets  correspondant à 10% de la hauteur de l'écran*/
+$object-size-vh-x7-5: 15vh; /*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
+$object-size-vh-x10: 20vh;/* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
+$object-size-vh-x12-5: 25vh; /* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
 
 /*--------------------- Paysage ----------------------------------------------*/
-$object-size-vw-base: 2vw;
-$object-size-vw-x2-5: 5vw;
-$object-size-vw-x5: 10vw;
-$object-size-vw-x7-5: 15vw;
-$object-size-vw-x10: 20vw;
-$object-size-vw-x12-5: 25vw;
+$object-size-vw-base: 2vw; /* Taille des objects correspondant à 2% de la largeur de l'écran*/
+$object-size-vw-x2-5: 5vw; /* Taille des objects correspondant à 5% de la largeur de l' écran*/
+$object-size-vw-x5: 10vw; /* Taille des objects correspondant à 10 % de la largeur de l'écran*/
+$object-size-vw-x7-5: 15vw; /* Taille des objects correspondant à 15 % de la largeur de l'écran*/ 
+$object-size-vw-x10: 20vw; /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
+$object-size-vw-x12-5: 25vw; /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------- Position des elements-------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
