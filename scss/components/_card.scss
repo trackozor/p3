@@ -26,12 +26,14 @@
     border-radius: $border-radius-vh-base;
     box-shadow: $border-shadow-vw; 
     height: 30vh;
+    position:relative;
+
 
 }
 .card img {
     width: 100%;
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
-    height:20vh;
+    height:25vh;
     object-fit: cover;
     position: relative;
 }
@@ -41,18 +43,15 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    position:relative;
-    z-index: 2;
-    bottom:1vh;
-    left: 1vh;
+    padding: $padding-vh-base $padding-vh-d4;
 
 }
 .card .badge {
     display: flex;
-    position : relative;
+    position : absolute;
     z-index: 3;
-    left: 75%;
-    bottom: 60%;;
+    left: 72%;
+    bottom: 82%;
 }
 .card .card-content .card-title  {
     font-size: $font-size-vh-base;

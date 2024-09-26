@@ -499,12 +499,13 @@ input {
   border-radius: 2vh;
   box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
   height: 30vh;
+  position: relative;
 }
 
 .card img {
   width: 100%;
   border-radius: 2vh 2vh 0 0;
-  height: 20vh;
+  height: 25vh;
   object-fit: cover;
   position: relative;
 }
@@ -514,18 +515,15 @@ input {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  position: relative;
-  z-index: 2;
-  bottom: 1vh;
-  left: 1vh;
+  padding: 2vh 0.5vh;
 }
 
 .card .badge {
   display: flex;
-  position: relative;
+  position: absolute;
   z-index: 3;
-  left: 75%;
-  bottom: 60%;
+  left: 72%;
+  bottom: 82%;
 }
 
 .card .card-content .card-title {
