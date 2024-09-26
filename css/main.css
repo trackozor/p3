@@ -123,6 +123,10 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Arrondis 2 fois supérieur soit 4 % de la largeur de l'écran*/
 /* Arrondis 2 fois inférieur soit 1 % de la largeur de l'écran*/
 /*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------Ombres -----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/* ombre pour portrait*/
+/* ombre pour paysage*/
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
 /* Mixin pour gérer les écrans en mode portrait sur mobile */
@@ -265,6 +269,7 @@ img {
 /**--------------------------------------------Mobile First Portrait--------------------------------------*/
 /* Bouton principal avec dégradé */
 .button--primary {
+  display: block;
   background: linear-gradient(180deg, #FF79DA, #9356DC); /**/
   padding: 1vh 2vh; /**/
   color: white; /**/

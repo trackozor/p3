@@ -1,8 +1,9 @@
 /* _buttons.scss */
 /**--------------------------------------------Mobile First Portrait--------------------------------------*/
 
-  /* Bouton principal avec dégradé */
+/* Bouton principal avec dégradé */
 .button--primary {
+    display: block;
     background: linear-gradient(180deg, #FF79DA, #9356DC);/**/
     padding: $padding-vh-d2 $padding-vh-base;/**/
     color: white;/**/
