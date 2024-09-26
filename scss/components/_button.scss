@@ -3,21 +3,24 @@
 
 /* Bouton principal avec dégradé */
 .button--primary {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(180deg, #FF79DA, #9356DC);/**/
-    padding: $padding-vh-d2 $padding-vh-base;/**/
+    padding: $padding-vh-base $padding-vh-d2;/**/
     color: white;/**/
-    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /**/
-    border-radius:$border-radius-vh-base; /**/   
+    width:22vh;/**/
+    box-shadow: $border-shadows-vh; /**/
+    border-radius:$border-radius-vh-x2; /**/   
     &:hover {
     background: linear-gradient(180deg, lighten(#FF79DA, 2%), lighten(#9356DC, 10%));/**/
-    box-shadow: 0 6vh 12vh rgba(0, 0, 0, 0.3);/**/
+    box-shadow: $border-shadows-vh;/**/
     }
 }
 
 /**/
 .button--primary-txt {
-  font-size: 1.5vh;
+  font-size: $font-size-vh-middle;
   font-weight: $font-weight-l-bold;
   align-content: center;
 

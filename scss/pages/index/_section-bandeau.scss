@@ -2,12 +2,14 @@
 
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
-    display: block; /**/
+    display: flex;
+    flex-direction: column; /**/
     text-align: center; /* Aligne le texte dans l'axe horizontal*/
-    align-content: center; /**/
-    margin: $margin-vh-x2 0; /**/
-    
+    justify-content: center; /**/
+    margin: $margin-vh-base 0; /**/
+    align-items: center;
 }
+
 
 /* Titre */
 .bandeau h2{
@@ -46,7 +48,6 @@ ol li {
     justify-content: center;
     position: relative;
     z-index: 1;
-
 }
 
 ol li i {
