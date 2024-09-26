@@ -16,7 +16,6 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
    - Espacements
    - Tailles des polices
    - Bordures arrondies
-   - Tailles d'images
 
    Utilisation :
 
@@ -112,31 +111,31 @@ $gap-vw-d4: 0.5vw; /* Espace 4 fois inférieur soit 0.5% de la largeur de l'écr
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*-------------------- Portrait-----------------------------------*/
-$font-size-vh-base: 2vh; /**/
-$font-size-vh-title: 3vh; /**/
-$font-size-vh-middle: 1.5vh; /**/
-$font-size-vh-d2: 1vh; /**/
+$font-size-vh-base: 2vh; /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
+$font-size-vh-title: 3vh; /* Taille de police des titres soit 3% de la hauteur de l'écran*/
+$font-size-vh-middle: 1.5vh; /* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
+$font-size-vh-d2: 1vh; /* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
 $font-size-vh-d4: 0.5vh; /**/
-$font-size-vh-x2: 4vh; /**/
-$font-size-vh-x3: 6vw; /**/
+$font-size-vh-x2: 4vh; /* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$font-size-vh-x3: 6vw; /* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
 
 /*-------------------- Paysage ---------------------------------*/
-$font-size-vw-primary: 2.2vw; /**/ 
-$font-size-vw-title: 3.5vw; /**/
-$font-size-vw-middle: 3vw; /**/
-$font-size-vw-d2: 1vw; /**/
+$font-size-vw-primary: 2vw; /* Taille de police de base correspondant à 2 % de la largeur de l'écran*/ 
+$font-size-vw-title: 3vw; /* Taille de police des titres correspondant à 3 % de la largeur de l'écran*/
+$font-size-vw-middle: 1.5vw; /* Taille de police générique correspondant à 1.5 % de la largeur de l'écran*/
+$font-size-vw-d2: 1vw; /* Taille de police 2 fois inférieur soit 1 % de la largeur de l 'écran*/
 $font-size-vw-d4: 0.5vw; /**/
-$font-size-vw-x2: 4vw; /**/
-$font-size-vw-x3: 6vw; /**/
+$font-size-vw-x2: 4vw; /* Taille de police 2 fois supérieur soit 4 % de la largeur de l'écran*/
+$font-size-vw-x3: 6vw; /* Taille de police 3 fois supérieur soit 6 % de la largeur de l'écran*/
 
 
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
 
-$font-weight-bold: 700; /**/
-$font-weight-h-bold: 900;/**/
-$font-weight-l-bold: 100;/**/
+$font-weight-bold: 700; /* Mise en evidence accentué*/
+$font-weight-h-bold: 900;/* Mise en evidence très marqué */
+$font-weight-l-bold: 100;/* Mie en evidence très légère = absence evidence*/
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -144,14 +143,14 @@ $font-weight-l-bold: 100;/**/
 /*------------------------------------------------------------------------------------------------------*/
 
 /*--------------------- Portrait ----------------------------------------------*/
-$border-radius-vh-base: 2vh;
-$border-radius-vh-x2: 4vh;
-$border-radius-vh-d2: 1vh;
+$border-radius-vh-base: 2vh;/* Arrondis de base dont le rayon de courbure correspond à 2 % de la hauteur de l'écran*/
+$border-radius-vh-x2: 4vh; /* Arrondis de courbure 2 fois supérieur soit 4% de la hauteur de l’écran */
+$border-radius-vh-d2: 1vh; /* Arrondis de courbure 2 fois inférieur soit 1 % de la hauteur de l'écran*/
 
 /*--------------------- Paysage ----------------------------------------------*/ 
-$border-radius-vw-base: 2vw;
-$border-radius-vw-x2: 4vw;
-$border-radius-vw-d2: 1vw;
+$border-radius-vw-base: 2vw; /* Arrondis de base dont le rayon de courbure correspond à 2 % de la largeur de l'écran*/
+$border-radius-vw-x2: 4vw; /* Arrondis 2 fois supérieur soit 4 % de la largeur de l'écran*/
+$border-radius-vw-d2: 1vw; /* Arrondis 2 fois inférieur soit 1 % de la largeur de l'écran*/
 
 
 

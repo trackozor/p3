@@ -17,7 +17,6 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
    - Espacements
    - Tailles des polices
    - Bordures arrondies
-   - Tailles d'images
 
    Utilisation :
 
@@ -91,33 +90,44 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* --------------------------------------- Taille des police---------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*-------------------- Portrait-----------------------------------*/
+/* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
+/* Taille de police des titres soit 3% de la hauteur de l'écran*/
+/* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
+/* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
 /**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
+/* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+/* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
 /*-------------------- Paysage ---------------------------------*/
+/* Taille de police de base correspondant à 2 % de la largeur de l'écran*/
+/* Taille de police des titres correspondant à 3 % de la largeur de l'écran*/
+/* Taille de police générique correspondant à 1.5 % de la largeur de l'écran*/
+/* Taille de police 2 fois inférieur soit 1 % de la largeur de l 'écran*/
 /**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
+/* Taille de police 2 fois supérieur soit 4 % de la largeur de l'écran*/
+/* Taille de police 3 fois supérieur soit 6 % de la largeur de l'écran*/
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
-/**/
-/**/
-/**/
+/* Mise en evidence accentué*/
+/* Mise en evidence très marqué */
+/* Mie en evidence très légère = absence evidence*/
 /*------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------Arrondis------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
 /*--------------------- Portrait ----------------------------------------------*/
+/* Arrondis de base dont le rayon de courbure correspond à 2 % de la hauteur de l'écran*/
+/* Arrondis de courbure 2 fois supérieur soit 4% de la hauteur de l’écran */
+/* Arrondis de courbure 2 fois inférieur soit 1 % de la hauteur de l'écran*/
 /*--------------------- Paysage ----------------------------------------------*/
+/* Arrondis de base dont le rayon de courbure correspond à 2 % de la largeur de l'écran*/
+/* Arrondis 2 fois supérieur soit 4 % de la largeur de l'écran*/
+/* Arrondis 2 fois inférieur soit 1 % de la largeur de l'écran*/
 /*--------------------------------------------------------------------------------------------------*/
+/* _mixins.scss */
+/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans en mode portrait sur mobile */
+/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans desktop*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -195,50 +205,6 @@ h2 {
   font-weight: 900;
 }
 
-ol li {
-  display: flex;
-  margin: 6vh 0;
-  align-items: center;
-  font-weight: 700;
-  gap: 4vh;
-}
-
-ol li i {
-  color: grey;
-  font-size: 2vh;
-  width: 5%;
-  margin: 0 0.5vh 0.5vh;
-  display: flex;
-  align-items: center;
-}
-
-ol li .li-txt {
-  display: flex;
-  position: absolute;
-  gap: 2vh;
-  background-color: #EAEAEA;
-  padding: 2vh 4vh;
-  margin: 0.5vh 0.5vh;
-  align-items: center;
-  width: 70%;
-  border-radius: 2.5vh;
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-}
-
-ol li .puce_num {
-  background-color: #9356DC;
-  border-radius: 50%;
-  height: 3vh;
-  width: 3vh;
-  display: flex;
-  position: relative;
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.4vh;
-}
-
 /*Style pour liste non ordonné*/
 ul li {
   display: inline-flex; /* Utilise flexbox pour aligner les éléments*/
@@ -257,6 +223,30 @@ img {
   display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
 }
 
+/* Media query pour le mode paysage (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Typographie globale */
+  body {
+    font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
+    padding: 0 2vw; /* Ajuste le padding pour le mode paysage */
+  }
+  /* Titres */
+  h2 {
+    font-size: 3vw; /* Adapte la taille des titres pour le mode paysage */
+  }
+  /* Liste non ordonnée */
+  ul li {
+    margin: 1vw 0; /* Ajuste les marges pour le mode paysage */
+  }
+  /* Liens */
+  a {
+    color: #89C8FA; /* Vous pouvez modifier la couleur pour rendre les liens plus visibles en paysage si nécessaire */
+  }
+  /* Images */
+  img {
+    max-width: 90%; /* Vous pouvez ajuster la largeur maximale pour le mode paysage si les images deviennent trop grandes */
+  }
+}
 /* _buttons.scss */
 /**--------------------------------------------Mobile First Portrait--------------------------------------*/
 /* Bouton principal avec dégradé */
@@ -484,6 +474,96 @@ header .nav {
 /*----- Icône Store -----*/
 .fonctionnement .fonctionnement-content .fa-store {
   color: #9356DC;
+}
+
+ol li {
+  display: flex;
+  margin: 6vh 0;
+  align-items: center;
+  font-weight: 700;
+  gap: 4vh;
+}
+
+ol li i {
+  color: grey;
+  font-size: 2vh;
+  width: 5%;
+  margin: 0 0.5vh 0.5vh;
+  display: flex;
+  align-items: center;
+}
+
+ol li .li-txt {
+  display: flex;
+  position: absolute;
+  gap: 2vh;
+  background-color: #EAEAEA;
+  padding: 2vh 4vh;
+  margin: 0.5vh 0.5vh;
+  align-items: center;
+  width: 70%;
+  border-radius: 2.5vh;
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
+}
+
+ol li .puce_num {
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 3vh;
+  width: 3vh;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4vh;
+}
+
+/**/
+/* Media query pour le mode paysage (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Conteneur parent bandeau */
+  .bandeau {
+    margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+  }
+  /* Titre */
+  .bandeau h2 {
+    padding: 0.5vw 1vw; /* Adapter les espacements pour le mode paysage */
+  }
+  /* Texte */
+  .bandeau p {
+    padding: 1vw 2vw;
+    margin-bottom: 4vw;
+  }
+  /* Conteneur parent liste */
+  .fonctionnement {
+    margin: 8vw 1vw; /* Utilisation de vw pour le mode paysage */
+  }
+  /* Liste des étapes */
+  ol li {
+    margin: 4vw 0; /* Réduction des marges pour le mode paysage */
+    gap: 4vw; /* Ajuster l'espacement en utilisant vw */
+  }
+  /* Icône */
+  ol li i {
+    font-size: 2vw;
+    width: 5vw; /* Utilisation de vw pour la largeur de l'icône */
+    margin: 0 0.5vw;
+  }
+  /* Texte des étapes */
+  ol li .li-txt {
+    width: 60%; /* Réduire la largeur du texte pour mieux s'adapter au mode paysage */
+    padding: 2vw 4vw; /* Adapter les padding pour landscape */
+    margin: 0.5vw 0.5vw;
+    border-radius: 2.5vw; /* Adapter le border-radius pour les proportions en landscape */
+  }
+  /* Numéros des étapes */
+  ol li .puce_num {
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.4vw; /* Ajuster la taille de la police pour le mode paysage */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

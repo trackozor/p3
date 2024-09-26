@@ -36,3 +36,100 @@
 .fonctionnement .fonctionnement-content .fa-store {
     color:$button--search-primary-color;
 }
+ol li {
+  display: flex;
+  margin:6vh 0;
+  align-items: center;
+  font-weight: $font-weight-bold;
+  gap:4vh;
+
+}
+
+ol li i {
+  color:grey;
+  font-size: $font-size-vh-base;
+  width:5%;
+  margin:00$margin-vh-d4  $margin-vh-d4;
+  display: flex;
+  align-items: center;
+}
+
+ol li .li-txt{
+  display: flex;
+  position: absolute;  
+  gap:$gap-vh-base;
+  background-color:$primary-background-color;
+  padding:$padding-vh-base  $padding-vh-x2;
+  margin: $margin-vh-d4  $margin-vh-d4 ;
+  align-items: center;
+  width: 70%;
+  border-radius:2.5vh;
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
+
+}
+ol li .puce_num {
+    background-color: $button--search-primary-color;
+    border-radius:50%;
+    height: 3vh;
+    width:3vh;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:1.4vh;
+}
+/**/
+
+/* Media query pour le mode paysage (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Conteneur parent bandeau */
+  .bandeau  {
+      margin: $margin-vw-x2 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+  }
+
+  /* Titre */
+  .bandeau h2 {
+      padding: $padding-vw-d4 $padding-vw-d2; /* Adapter les espacements pour le mode paysage */
+  }
+
+  /* Texte */
+  .bandeau p {
+      padding: $padding-vw-d2 $padding-vw-base;
+      margin-bottom: $margin-vw-x2;
+  }
+
+  /* Conteneur parent liste */
+  .fonctionnement {
+      margin: 8vw $margin-vw-d2; /* Utilisation de vw pour le mode paysage */
+  }
+
+  /* Liste des étapes */
+  ol li {
+      margin: 4vw 0; /* Réduction des marges pour le mode paysage */
+      gap: 4vw; /* Ajuster l'espacement en utilisant vw */
+  }
+
+  /* Icône */
+  ol li i {
+      font-size: $font-size-vw-primary;
+      width: 5vw; /* Utilisation de vw pour la largeur de l'icône */
+      margin: 0 $margin-vw-d4;
+  }
+
+  /* Texte des étapes */
+  ol li .li-txt {
+      width: 60%; /* Réduire la largeur du texte pour mieux s'adapter au mode paysage */
+      padding: $padding-vw-base $padding-vw-x2; /* Adapter les padding pour landscape */
+      margin: $margin-vw-d4 $margin-vw-d4;
+      border-radius: 2.5vw; /* Adapter le border-radius pour les proportions en landscape */
+  }
+
+  /* Numéros des étapes */
+  ol li .puce_num {
+      height: 3vw;
+      width: 3vw;
+      font-size: 1.4vw; /* Ajuster la taille de la police pour le mode paysage */
+  }
+}
