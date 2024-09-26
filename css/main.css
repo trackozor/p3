@@ -219,12 +219,14 @@ a {
 
 img {
   max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
-  height: auto; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
+  height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
   display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
 }
 
-/* Media query pour le mode paysage (landscape) */
-@media (max-width: 768px) and (orientation: landscape) {
+/*----------------------------------------------------------------------------*/
+/*------------------------------ Mobile Paysage ------------------------------*/
+/*----------------------------------------------------------------------------*/
+@media (max-width: 63.99rem) and (orientation: landscape) {
   /* Typographie globale */
   body {
     font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
@@ -237,14 +239,6 @@ img {
   /* Liste non ordonnée */
   ul li {
     margin: 1vw 0; /* Ajuste les marges pour le mode paysage */
-  }
-  /* Liens */
-  a {
-    color: #89C8FA; /* Vous pouvez modifier la couleur pour rendre les liens plus visibles en paysage si nécessaire */
-  }
-  /* Images */
-  img {
-    max-width: 90%; /* Vous pouvez ajuster la largeur maximale pour le mode paysage si les images deviennent trop grandes */
   }
 }
 /* _buttons.scss */
@@ -461,14 +455,15 @@ header .nav {
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-  margin: 8vh 1vh;
+  margin: 8vh 0;
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
 
 .fonctionnement ol {
   display: block;
   justify-content: center;
-  margin: 0 auto;
-  width: 100%;
 }
 
 /*----- Icône Store -----*/
@@ -478,32 +473,37 @@ header .nav {
 
 ol li {
   display: flex;
-  margin: 6vh 0;
+  margin: 4vh 0;
   align-items: center;
   font-weight: 700;
-  gap: 4vh;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 ol li i {
   color: grey;
   font-size: 2vh;
-  width: 5%;
-  margin: 0 0.5vh 0.5vh;
+  z-index: 2;
   display: flex;
   align-items: center;
+  justify-content: center;
+  left: 3vh;
+  position: absolute;
 }
 
 ol li .li-txt {
   display: flex;
-  position: absolute;
-  gap: 2vh;
+  position: relative;
+  z-index: 1;
   background-color: #EAEAEA;
-  padding: 2vh 4vh;
-  margin: 0.5vh 0.5vh;
+  padding: 2vh 1vh;
   align-items: center;
-  width: 70%;
-  border-radius: 2.5vh;
+  width: 90%;
+  border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  gap: 3vh;
 }
 
 ol li .puce_num {
@@ -512,8 +512,9 @@ ol li .puce_num {
   height: 3vh;
   width: 3vh;
   display: flex;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  left: 0;
+  z-index: 2;
   justify-content: center;
   align-items: center;
   color: white;
@@ -522,7 +523,7 @@ ol li .puce_num {
 
 /**/
 /* Media query pour le mode paysage (landscape) */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 63.99rem) and (orientation: landscape) {
   /* Conteneur parent bandeau */
   .bandeau {
     margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
@@ -550,10 +551,10 @@ ol li .puce_num {
     font-size: 2vw;
     width: 5vw; /* Utilisation de vw pour la largeur de l'icône */
     margin: 0 0.5vw;
+    left: 3vw;
   }
   /* Texte des étapes */
   ol li .li-txt {
-    width: 60%; /* Réduire la largeur du texte pour mieux s'adapter au mode paysage */
     padding: 2vw 4vw; /* Adapter les padding pour landscape */
     margin: 0.5vw 0.5vw;
     border-radius: 2.5vw; /* Adapter le border-radius pour les proportions en landscape */

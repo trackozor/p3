@@ -40,11 +40,14 @@ a {
 
 img {
   max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
-  height: auto; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
+  height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
   display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
 }
-/* Media query pour le mode paysage (landscape) */
-@media (max-width: 768px) and (orientation: landscape) {
+/*----------------------------------------------------------------------------*/
+/*------------------------------ Mobile Paysage ------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+@media (max-width: 63.99rem) and (orientation: landscape) {
   
   /* Typographie globale */
   body {
@@ -62,13 +65,4 @@ img {
       margin: $margin-vw-d2 0; /* Ajuste les marges pour le mode paysage */
   }
 
-  /* Liens */
-  a {
-      color: $secondary-color; /* Vous pouvez modifier la couleur pour rendre les liens plus visibles en paysage si nécessaire */
-  }
-
-  /* Images */
-  img {
-      max-width: 90%; /* Vous pouvez ajuster la largeur maximale pour le mode paysage si les images deviennent trop grandes */
-  }
 }
