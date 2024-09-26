@@ -13,7 +13,7 @@
     background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color);/**/
     padding: $padding-vh-base $padding-vh-base;/**/
     color: white;/* couleur du texte*/
-    width:22vh;/*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
+    width:$object-size-vh-x12-5;/*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
     box-shadow: $border-shadow-vh; /*ombre*/
     border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
     
@@ -37,37 +37,33 @@
   background-color:$button--new-primary-color;  /* Couleur vert clair */
   color: $button--new-secondary-color;
   font-size: $font-size-vh-middle;
-  padding:$padding-vh-d4;
-  width: 6vh;
+  padding:$padding-vh-d4 $padding-vh-d2;
+  width:$object-size-vh-x3;
 }
   
   /*------------------ Bouton "Cœur" ----------------------------- */
-  .icon-favorite {
-    width: 40px;
-    height: 40px;
-
-    background-color: transparent;
-    color:grey;
+.icon-favorite {
+  background-color: transparent;
+  color:grey;
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $font-size-vh-base;
-
-    input {
-      display: none;
-    }
-    /* Effet de survol*/
-    &:hover {
-      color:grey;
-    }
-  
-    /*-- Effet " Like"--*/
-    &.liked {
-      background-color: #9356DC;
-      color: $button--search-primary-color;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-vh-base;
+  transition: color 0.3s ease;
+  position:relative;
 }
+.icon-favorite:hover {
+  animation: heartBeat 0.3s ease-in-out 3;
+  color: red;
+}
+
+
+input {
+    display: none;
+}
+
+
   
   /* Bouton retour (flèche) */
   .button--back {
@@ -76,11 +72,7 @@
     font-size: $font-size-vh-base;
     padding: 0;
     border: none;
-  
-    /* Effet de survol*/
-    &:hover {
-      color: #333;
-    }
+
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------- Paysage ---------------------------------------------------------------------------------*/
@@ -89,7 +81,7 @@
   
 .button--primary {
   padding: $padding-vw-base $padding-vw-base;/**/
-  width:22vw;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
+  width:$object-size-vw-x12-5;/*longueur du bouton correspondant à 20 % de la largeur de l'écran*/
   box-shadow: $border-shadow-vw; /*ombre*/
   border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
   
@@ -110,7 +102,7 @@ align-content: center;
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 63.991rem) {
 .button--primary {
-  width:22vw;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
+  width:$object-size-vw-x12-5;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
   padding: $padding-vw-base $padding-vw-base;
   box-shadow: $border-shadow-vw; /*ombre*/
   border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Variables globales (couleurs, tailles, etc.) */
 /* ------------------------------------------------------- _variables.scss----------------------------------------------------- 
 Fichier : _variables.scss
    Auteur : Trackozor
@@ -127,11 +128,100 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*--------------------------------------------------------------------------------------------------*/
 /* ombre pour portrait*/
 /* ombre pour paysage*/
+/*--------------------------------------------------------------------------------------------------*/
+/*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------- Portrait ----------------------------------------------*/
+/* Taille des objets générique pour portrait correspondant à 2% de la hauteur de l'écran*/
+/* */
+/* Taille des objets générique pour portrait correspondant à 5% de la hauteur de l'écran*/
+/* Taille des objets générique pour portrait correspondant à 10% de la hauteur de l'écran*/
+/*  Taille des objets génériques pour portrait correspondant à 15% de la hauteur de l'écran*/
+/* Taille de objets génériques pour portrait correspondant à 20 % de la hauteur de l 'écran*/
+/* Taille des obj*/
+/*--------------------- Paysage ----------------------------------------------*/
+/* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
 /* Mixin pour gérer les écrans en mode portrait sur mobile */
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 /* Mixin pour gérer les écrans desktop*/
+/* Styles des animations */
+/* _animations.scss */
+/* @keyframes pour le battement de cœur */
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+/* @keyframes pour le remplissage et la croissance */
+@keyframes likeFill {
+  0% {
+    color: grey;
+    transform: scale(1);
+    background: linear-gradient(to top, #9356DC 0%, transparent 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  100% {
+    color: #9356DC; /* La couleur finale du cœur */
+    transform: scale(1.2);
+    background: none;
+  }
+}
+/* @keyframes pour l'explosion finale */
+@keyframes explode {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animation pour faire disparaître le loader après 3 secondes */
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1; /* Garde visible pendant 80% du temps */
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden; /* Cache complètement après l'animation */
+  }
+}
+/* Animation pour la barre de progression */
+@keyframes loadProgressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Animation pour faire apparaître le message */
+@keyframes fadeInMessage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Animation pour faire "rétrécir" la carte à la fin */
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9); /* Légère réduction de la taille avant disparition */
+  }
+}
+/* Reset et base typographique */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -264,6 +354,7 @@ img {
     margin: 2vw 0; /* Ajuste les marges pour le mode desktop */
   }
 }
+/* Styles des composants */
 /* _buttons.scss */
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- Portrait--------------------------------------*/
@@ -276,7 +367,7 @@ img {
   background: linear-gradient(180deg, #FF79DA, #9356DC); /**/
   padding: 2vh 2vh; /**/
   color: white; /* couleur du texte*/
-  width: 22vh; /*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
+  width: 25vh; /*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /*ombre*/
   border-radius: 4vh; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
   /* Effet de survol*/
@@ -298,32 +389,29 @@ img {
   background-color: #99E2D0; /* Couleur vert clair */
   color: #008766;
   font-size: 1.5vh;
-  padding: 0.5vh;
+  padding: 0.5vh 1vh;
   width: 6vh;
 }
 
 /*------------------ Bouton "Cœur" ----------------------------- */
 .icon-favorite {
-  width: 40px;
-  height: 40px;
   background-color: transparent;
   color: grey;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2vh;
-  /* Effet de survol*/
-  /*-- Effet " Like"--*/
+  transition: color 0.3s ease;
+  position: relative;
 }
-.icon-favorite input {
-  display: none;
-}
+
 .icon-favorite:hover {
-  color: grey;
+  animation: heartBeat 0.3s ease-in-out 3;
+  color: red;
 }
-.icon-favorite.liked {
-  background-color: #9356DC;
-  color: #9356DC;
+
+input {
+  display: none;
 }
 
 /* Bouton retour (flèche) */
@@ -333,10 +421,6 @@ img {
   font-size: 2vh;
   padding: 0;
   border: none;
-  /* Effet de survol*/
-}
-.button--back:hover {
-  color: #333;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -345,7 +429,7 @@ img {
 @media (max-width: 63.99rem) and (orientation: landscape) {
   .button--primary {
     padding: 2vw 2vw; /**/
-    width: 22vw; /*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
+    width: 25vw; /*longueur du bouton correspondant à 20 % de la largeur de l'écran*/
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /*ombre*/
     border-radius: 4vw; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
     /* Effet de survol*/
@@ -364,7 +448,7 @@ img {
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 63.991rem) {
   .button--primary {
-    width: 22vw; /*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
+    width: 25vw; /*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
     padding: 2vw 2vw;
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /*ombre*/
     border-radius: 4vw; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
@@ -431,8 +515,8 @@ img {
   display: flex;
   position: relative;
   z-index: 1;
-  left: 77%;
-  bottom: 67%;
+  left: 75%;
+  bottom: 66%;
 }
 
 .card .card-content .card-title {
@@ -443,6 +527,7 @@ img {
   font-weight: 900;
 }
 
+/* Styles spécifiques au header */
 /* _loader.scss */
 /* Loader couvrant toute la page */
 #loader {
@@ -460,19 +545,6 @@ img {
   animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
 }
 
-/* Animation pour faire disparaître le loader après 3 secondes */
-@keyframes fadeOutLoader {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1; /* Garde visible pendant 80% du temps */
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden; /* Cache complètement après l'animation */
-  }
-}
 /* Carte avec le logo, message et barre de progression */
 .loader-card {
   background-color: #EAEAEA;
@@ -516,33 +588,6 @@ img {
   animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
 }
 
-/* Animation pour la barre de progression */
-@keyframes loadProgressBar {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-/* Animation pour faire apparaître le message */
-@keyframes fadeInMessage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* Animation pour faire "rétrécir" la carte à la fin */
-@keyframes shrink {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9); /* Légère réduction de la taille avant disparition */
-  }
-}
 /* _header.scss */
 header {
   display: flex;

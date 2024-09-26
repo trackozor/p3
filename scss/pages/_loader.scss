@@ -16,20 +16,6 @@
     animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
 }
 
-/* Animation pour faire disparaître le loader après 3 secondes */
-@keyframes fadeOutLoader {
-    0% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1; /* Garde visible pendant 80% du temps */
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden; /* Cache complètement après l'animation */
-    }
-}
-
 /* Carte avec le logo, message et barre de progression */
 .loader-card {
     background-color:$primary-background-color;
@@ -73,32 +59,3 @@
     animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
 }
 
-/* Animation pour la barre de progression */
-@keyframes loadProgressBar {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-/* Animation pour faire apparaître le message */
-@keyframes fadeInMessage {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Animation pour faire "rétrécir" la carte à la fin */
-@keyframes shrink {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.9); /* Légère réduction de la taille avant disparition */
-    }
-}

@@ -1,22 +1,27 @@
 // main.scss
 
-// Variables globales (couleurs, tailles, etc.)
+/* Variables globales (couleurs, tailles, etc.) */
 @import 'variables';
 
-// Mixins (ex: media queries, fonctions réutilisables)
+/* Mixins (ex: media queries, fonctions réutilisables) */
 @import 'mixins';
 
-// Reset et base typographique
+/* Styles des animations */
+@import 'animation';
+
+/* Reset et base typographique */
 @import 'layout/reset';
 @import 'layout/base';
 
-// Styles des composants
+/* Styles des composants */
 @import'components/button';
 @import'components/card';
 
 
-// Styles spécifiques au header
+/* Styles spécifiques au header */
 @import 'pages/loader';
 @import 'pages/header';
+
+
 @import 'pages/index/section-bandeau';
 @import 'pages/index/section-restaurants';

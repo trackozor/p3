@@ -160,3 +160,25 @@ $border-radius-vw-d2: 1vw; /* Arrondis 2 fois inférieur soit 1 % de la largeur 
 
 $border-shadow-vh: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre pour portrait*/
 $border-shadow-vw: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre pour paysage*/
+
+/*--------------------------------------------------------------------------------------------------*/
+/*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+
+/*--------------------- Portrait ----------------------------------------------*/
+$object-size-vh-base: 2vh; /* Taille des objets générique pour portrait correspondant à 2% de la hauteur de l'écran*/
+$object-size-vh-x2: 4vh;/* */
+$object-size-vh-x3: 6vh;
+$object-size-vh-x2-5: 5vh; /* Taille des objets générique pour portrait correspondant à 5% de la hauteur de l'écran*/
+$object-size-vh-x5: 10vh; /* Taille des objets générique pour portrait correspondant à 10% de la hauteur de l'écran*/
+$object-size-vh-x7-5: 15vh; /*  Taille des objets génériques pour portrait correspondant à 15% de la hauteur de l'écran*/
+$object-size-vh-x10: 20vh;/* Taille de objets génériques pour portrait correspondant à 20 % de la hauteur de l 'écran*/
+$object-size-vh-x12-5: 25vh; /* Taille des obj*/
+
+/*--------------------- Paysage ----------------------------------------------*/
+$object-size-vw-base: 2vw;
+$object-size-vw-x2-5: 5vw;
+$object-size-vw-x5: 10vw;
+$object-size-vw-x7-5: 15vw;
+$object-size-vw-x10: 20vw;
+$object-size-vw-x12-5: 25vw;
