@@ -253,9 +253,12 @@ img {
   h2 {
     font-size: 3vw; /* Adapte la taille des titres pour le mode desktop */
   }
+  h3 {
+    font-size: 1.5vw; /* Adapte la taille des sous-titres pour le mode desktop */
+  }
   /* Liste non ordonnée */
   ul li {
-    margin: 1vw 0; /* Ajuste les marges pour le mode desktop */
+    margin: 2vw 0; /* Ajuste les marges pour le mode desktop */
   }
 }
 /* _buttons.scss */
@@ -560,7 +563,7 @@ ol li .puce_num {
   /* Liste des étapes */
   ol li {
     margin: 2vw 0; /* Réduction des marges pour le mode paysage */
-    gap: 2vh; /* Ajuster l'espacement en utilisant vw */
+    gap: 2vw; /* Ajuster l'espacement en utilisant vw */
   }
   /* Icône */
   ol li i {
@@ -570,7 +573,7 @@ ol li .puce_num {
   }
   /* Texte des étapes */
   ol li .li-txt {
-    padding: 2vw 4vw; /* Adapter les padding pour landscape */
+    padding: 2vw 8vw; /* Adapter les padding pour landscape */
     margin: 0.5vw 0.5vw;
     border-radius: 2vw;
   }
@@ -582,7 +585,7 @@ ol li .puce_num {
   }
 }
 /*--------------------------Desktop--------------------------*/
-@media (min-width: 64rem) {
+@media (min-width: 63.9999rem) {
   .bandeau {
     margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
   }
@@ -596,13 +599,8 @@ ol li .puce_num {
     margin-bottom: 4vw;
   }
   /* Conteneur parent liste */
-  .fonctionnement {
-    margin: 2vw 1vw; /* Utilisation de vw pour le mode paysage */
-  }
-  /* Liste des étapes */
-  ol li {
-    margin: 2vw 0; /* Réduction des marges pour le mode paysage */
-    gap: 2vh; /* Ajuster l'espacement en utilisant vw */
+  ol {
+    width: 95%;
   }
   /* Icône */
   ol li i {
@@ -612,15 +610,21 @@ ol li .puce_num {
   }
   /* Texte des étapes */
   ol li .li-txt {
-    padding: 2vw 4vw; /* Adapter les padding pour landscape */
-    margin: 0.5vw 0.5vw;
+    padding: 2vw 2vw; /* Adapter les padding pour landscape */
+    margin: 0.5vw 1vw;
     border-radius: 2vw;
+    font-size: 2vw;
+    width: 27vw;
   }
   /* Numéros des étapes */
   ol li .puce_num {
     height: 3vw;
     width: 3vw;
     font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
+  }
+  .fonctionnement ol {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

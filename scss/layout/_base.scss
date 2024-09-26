@@ -83,9 +83,13 @@ img {
       font-size: $font-size-vw-title; /* Adapte la taille des titres pour le mode desktop */
   }
 
+  h3 {
+    font-size: $font-size-vw-middle; /* Adapte la taille des sous-titres pour le mode desktop */
+  }
+
   /* Liste non ordonnée */
   ul li {
-      margin: $margin-vw-d2 0; /* Ajuste les marges pour le mode desktop */
+      margin: $margin-vw-base 0; /* Ajuste les marges pour le mode desktop */
   }
 
 }

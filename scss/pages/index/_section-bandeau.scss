@@ -117,7 +117,7 @@ ol li .puce_num {
   /* Liste des étapes */
 ol li {
     margin: $margin-vw-base 0; /* Réduction des marges pour le mode paysage */
-    gap: $gap-vh-base; /* Ajuster l'espacement en utilisant vw */
+    gap: $gap-vw-base; /* Ajuster l'espacement en utilisant vw */
 }
 
   /* Icône */
@@ -129,7 +129,7 @@ ol li i {
 
   /* Texte des étapes */
 ol li .li-txt {
-    padding: $padding-vw-base $padding-vw-x2; /* Adapter les padding pour landscape */
+    padding: $padding-vw-base $padding-vw-x4; /* Adapter les padding pour landscape */
     margin: $margin-vw-d4 $margin-vw-d4;
     border-radius: $border-radius-vw-base;
 }
@@ -142,7 +142,7 @@ ol li .puce_num {
 }
 }
 /*--------------------------Desktop--------------------------*/
-@media (min-width: 64rem){ 
+@media (min-width: 63.9999rem){ 
     
 .bandeau  {
     margin: $margin-vw-x2 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
@@ -160,14 +160,9 @@ ol li .puce_num {
 }
 
   /* Conteneur parent liste */
-.fonctionnement {
-    margin: $margin-vw-base $margin-vw-d2; /* Utilisation de vw pour le mode paysage */
-}
 
-  /* Liste des étapes */
-ol li {
-    margin: $margin-vw-base 0; /* Réduction des marges pour le mode paysage */
-    gap: $gap-vh-base; /* Ajuster l'espacement en utilisant vw */
+ol {
+    width: 95%;
 }
 
   /* Icône */
@@ -179,9 +174,11 @@ ol li i {
 
   /* Texte des étapes */
 ol li .li-txt {
-    padding: $padding-vw-base $padding-vw-x2; /* Adapter les padding pour landscape */
-    margin: $margin-vw-d4 $margin-vw-d4;
+    padding: $padding-vw-base $padding-vw-base; /* Adapter les padding pour landscape */
+    margin: $margin-vw-d4 $margin-vw-d2;
     border-radius: $border-radius-vw-base;
+    font-size: $font-size-vw-primary;
+    width: 27vw;
 }
 
   /* Numéros des étapes */
@@ -189,5 +186,10 @@ ol li .puce_num {
     height: 3vw;
     width: 3vw;
     font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
+}
+
+.fonctionnement ol  {
+    display: flex;  
+    justify-content: space-between; 
 }
 }
