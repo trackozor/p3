@@ -12,4 +12,10 @@
 .card-location {
     display: flex;
     justify-content: center;
+    gap: 2vh;
+    background-color: $primary-background-color;
+    width: 20vh;
+    padding: $padding-vh-d2 $padding-vh-base;
+    
 }
+

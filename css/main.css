@@ -399,6 +399,10 @@ img {
 .card-location {
   display: flex;
   justify-content: center;
+  gap: 2vh;
+  background-color: #EAEAEA;
+  width: 20vh;
+  padding: 1vh 2vh;
 }
 
 /* _loader.scss */
@@ -503,19 +507,8 @@ img {
 }
 /* _header.scss */
 header {
-  background-color: #EAEAEA;
-  color: #0a0909;
-  font-size: 2vh;
-  font-weight: 700;
-}
-
-header .logo {
-  font-size: 2vh;
-}
-
-header .nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
