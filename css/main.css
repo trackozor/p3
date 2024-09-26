@@ -386,6 +386,21 @@ img {
     align-content: center;
   }
 }
+/*_card.scss */
+.card-logo {
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 2vh 0;
+}
+
+.card-location {
+  display: flex;
+  justify-content: center;
+}
+
 /* _loader.scss */
 /* Loader couvrant toute la page */
 #loader {

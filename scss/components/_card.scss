@@ -1,0 +1,15 @@
+/*_card.scss */
+
+.card-logo {
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: $margin-vh-base 0;
+}
+
+.card-location {
+    display: flex;
+    justify-content: center;
+}
