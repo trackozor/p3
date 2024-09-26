@@ -19,3 +19,29 @@
     
 }
 
+/*----------- Cartes restaurants -----------*/
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius-vh-base;
+    box-shadow: $border-shadow-vw; 
+    height: 28vh;
+
+}
+.card img {
+    width: 100%;
+    border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
+    height:20vh;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+}
+.card .badge {
+    display: flex;
+    position : relative;
+    z-index: 1;
+    left: 77%;
+    bottom: 67%;;
+}

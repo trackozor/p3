@@ -294,16 +294,12 @@ img {
 }
 
 /*------------------ Bouton "Nouveau" ----------------------------*/
-/**/
 .badge {
   background-color: #99E2D0; /* Couleur vert clair */
-  color: white;
+  color: #008766;
   font-size: 1.5vh;
-  padding: 5px 10px;
-  /*--effet de survol--*/
-}
-.badge:hover {
-  background-color: rgb(192.7099236641, 237.2900763359, 226.2977099237);
+  padding: 0.5vh;
+  width: 6vh;
 }
 
 /*------------------ Bouton "Cœur" ----------------------------- */
@@ -402,6 +398,34 @@ img {
   background-color: #EAEAEA;
   width: 20vh;
   padding: 2vh 2vh;
+}
+
+/*----------- Cartes restaurants -----------*/
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2vh;
+  box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
+  height: 28vh;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 2vh 2vh 0 0;
+  height: 20vh;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+}
+
+.card .badge {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  left: 77%;
+  bottom: 67%;
 }
 
 /* _loader.scss */

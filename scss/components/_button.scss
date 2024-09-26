@@ -14,13 +14,13 @@
     padding: $padding-vh-base $padding-vh-base;/**/
     color: white;/* couleur du texte*/
     width:22vh;/*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
-    box-shadow: $border-shadows-vh; /*ombre*/
+    box-shadow: $border-shadow-vh; /*ombre*/
     border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
     
     /* Effet de survol*/
     &:hover {
     background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-    box-shadow: $border-shadows-vh;/* Ombre*/
+    box-shadow: $border-shadow-vh;/* Ombre*/
     }
 }
 
@@ -33,17 +33,12 @@
 
   /*------------------ Bouton "Nouveau" ----------------------------*/
 
-  /**/
 .badge {
-  background-color: #99E2D0;  /* Couleur vert clair */
-  color: white;
+  background-color:$button--new-primary-color;  /* Couleur vert clair */
+  color: $button--new-secondary-color;
   font-size: $font-size-vh-middle;
-  padding: 5px 10px;
-
-  /*--effet de survol--*/
-  &:hover {
-    background-color: lighten(#99E2D0, 10%);
-    }
+  padding:$padding-vh-d4;
+  width: 6vh;
 }
   
   /*------------------ Bouton "Cœur" ----------------------------- */
@@ -95,13 +90,13 @@
 .button--primary {
   padding: $padding-vw-base $padding-vw-base;/**/
   width:22vw;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
-  box-shadow: $border-shadows-vw; /*ombre*/
+  box-shadow: $border-shadow-vw; /*ombre*/
   border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
   
   /* Effet de survol*/
   &:hover {
   background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-  box-shadow: $border-shadows-vw;/* Ombre*/
+  box-shadow: $border-shadow-vw;/* Ombre*/
   }
 }
 
@@ -117,13 +112,13 @@ align-content: center;
 .button--primary {
   width:22vw;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
   padding: $padding-vw-base $padding-vw-base;
-  box-shadow: $border-shadows-vw; /*ombre*/
+  box-shadow: $border-shadow-vw; /*ombre*/
   border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
   
   /* Effet de survol*/
   &:hover {
   background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-  box-shadow: $border-shadows-vw;/* Ombre*/
+  box-shadow: $border-shadow-vw;/* Ombre*/
   }
 
   /* Texte du bouton*/
