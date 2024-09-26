@@ -146,7 +146,7 @@ ol li .puce_num {
 @media (min-width: 63.991rem)  { 
     
 .bandeau  {
-    margin: $margin-vw-x2 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+    margin: $margin-vw-x2 $margin-vw-x4; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
 }
 
   /* Titre */
@@ -161,13 +161,17 @@ ol li .puce_num {
 }
 
   /* Conteneur parent liste */
+.fonctionnement h2 {
+    padding-left: $padding-vw-x2;
 
+
+}
 
   /* Icône */
 ol li i {
     font-size: $font-size-vw-base;
     margin: 0 $margin-vw-d4;
-    left: 3vw;
+    left: 1.5vw;
 }
 
   /* Texte des étapes */
@@ -176,19 +180,21 @@ ol li .li-txt {
     margin: $margin-vw-d4 $margin-vw-d4;
     border-radius: $border-radius-vw-base;
     font-size: $font-size-vw-base;
-    width: 22.5vw;
+    width: 19vw;
+    
 }
 
   /* Numéros des étapes */
 ol li .puce_num {
-    height: 3vw;
-    width: 3vw;
+    height: 2vw;
+    width: 2vw;
     font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
-    left: -0.2vw;
+    left: -0.5vw;
 }
 
 .fonctionnement ol  {
     display: flex;  
-    justify-content: space-between; 
+    justify-content: space-between; ;
+    margin: 0  5vw;
 }
 }

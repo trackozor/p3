@@ -251,7 +251,6 @@ img {
   /* Typographie globale */
   body {
     font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
-    padding: 0 2vw; /* Ajuste le padding pour le mode desktop */
   }
   /* Titres */
   h2 {
@@ -402,7 +401,7 @@ img {
   gap: 2vh;
   background-color: #EAEAEA;
   width: 20vh;
-  padding: 1vh 2vh;
+  padding: 2vh 2vh;
 }
 
 /* _loader.scss */
@@ -510,6 +509,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-location {
+  display: flex;
+  width: 100%;
+  border-top: 0.5vh solid lightgrey;
+  border-bottom: 0.5vh solid lightgrey;
 }
 
 /*_Section-bandeau.scss*/
@@ -649,7 +655,7 @@ ol li .puce_num {
 /*--------------------------Desktop--------------------------*/
 @media (min-width: 63.991rem) {
   .bandeau {
-    margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+    margin: 4vw 8vw; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
   }
   /* Titre */
   .bandeau h2 {
@@ -661,11 +667,14 @@ ol li .puce_num {
     margin-bottom: 4vw;
   }
   /* Conteneur parent liste */
+  .fonctionnement h2 {
+    padding-left: 4vw;
+  }
   /* Icône */
   ol li i {
     font-size: 2vw;
     margin: 0 0.5vw;
-    left: 3vw;
+    left: 1.5vw;
   }
   /* Texte des étapes */
   ol li .li-txt {
@@ -673,18 +682,19 @@ ol li .puce_num {
     margin: 0.5vw 0.5vw;
     border-radius: 2vw;
     font-size: 2vw;
-    width: 22.5vw;
+    width: 19vw;
   }
   /* Numéros des étapes */
   ol li .puce_num {
-    height: 3vw;
-    width: 3vw;
+    height: 2vw;
+    width: 2vw;
     font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
-    left: -0.2vw;
+    left: -0.5vw;
   }
   .fonctionnement ol {
     display: flex;
     justify-content: space-between;
+    margin: 0 5vw;
   }
 }
 
