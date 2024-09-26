@@ -3,13 +3,13 @@
 
 /* Mixin pour gérer les écrans en mode portrait sur mobile */
 @mixin mobile-portrait {
-    @media (max-width: 63.99rem) and (orientation: portrait) {
+    @media (max-width: 63.9rem) and (orientation: portrait) {
     @content;
     }
 }
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 @mixin mobile-landscape {
-    @media (max-width: 63.99rem) and (orientation: landscape) {
+    @media (max-width: 63.9rem) and (orientation: landscape) {
     @content;
     }
 }
@@ -17,7 +17,7 @@
 /* Mixin pour gérer les écrans desktop*/
 
 @mixin desktop {
-    @media (min-width: 64rem) {
+    @media (min-width: 63.91rem) {
     @content;
     }
 }

@@ -243,7 +243,7 @@ img {
 }
 /*----------------------------------------------------------------------------*/
 /*---------------------Desktop------------------------------------------------*/
-@media (min-width: 64rem) {
+@media (min-width: 63.991rem) {
   /* Typographie globale */
   body {
     font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
@@ -585,7 +585,7 @@ ol li .puce_num {
   }
 }
 /*--------------------------Desktop--------------------------*/
-@media (min-width: 63.9999rem) {
+@media (min-width: 63.991rem) {
   .bandeau {
     margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
   }
@@ -599,22 +599,19 @@ ol li .puce_num {
     margin-bottom: 4vw;
   }
   /* Conteneur parent liste */
-  ol {
-    width: 95%;
-  }
   /* Icône */
   ol li i {
     font-size: 2vw;
     margin: 0 0.5vw;
-    left: 4vw;
+    left: 3vw;
   }
   /* Texte des étapes */
   ol li .li-txt {
-    padding: 2vw 2vw; /* Adapter les padding pour landscape */
-    margin: 0.5vw 1vw;
+    padding: 2vw 4vw; /* Adapter les padding pour landscape */
+    margin: 0.5vw 0.5vw;
     border-radius: 2vw;
     font-size: 2vw;
-    width: 27vw;
+    width: 23vw;
   }
   /* Numéros des étapes */
   ol li .puce_num {
