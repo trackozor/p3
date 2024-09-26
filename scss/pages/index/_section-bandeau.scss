@@ -175,7 +175,7 @@ ol li .li-txt {
     margin: $margin-vw-d4 $margin-vw-d4;
     border-radius: $border-radius-vw-base;
     font-size: $font-size-vw-primary;
-    width: 23vw;
+    width: 22.5vw;
 }
 
   /* Numéros des étapes */
@@ -183,6 +183,7 @@ ol li .puce_num {
     height: 3vw;
     width: 3vw;
     font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
+    left: -0.2vw;
 }
 
 .fonctionnement ol  {
