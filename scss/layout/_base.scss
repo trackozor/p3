@@ -6,22 +6,22 @@
   
 /* Typographie globale */
 body {
-    font-family: $font-primary;
-    color: #0a0909;
-    font-size: $font-size-vh-base; 
-    padding: 0 $padding-vh-base;  
-    display: block;
-    justify-content: center;
+  font-family: $font-primary;
+  color: #0a0909;
+  font-size: $font-size-vh-base; 
+  padding: 0 $padding-vh-base;  
+  display: block;
+  justify-content: center;
     
-    @include mobile-landscape {
-      font-size: $font-size-vw-base; 
-      padding: 0 $padding-vw-base;
-    }
+  @include mobile-landscape {
+    font-size: $font-size-vw-base; 
+    padding: 0 $padding-vw-base;
+  }
 
-    @include desktop {
-      font-size: $font-size-vw-base; 
-      padding: 0 $padding-vw-base;
-    }
+  @include desktop {
+  font-size: $font-size-vw-base; 
+    padding: 0 $padding-vw-base;
+  }
 }
   
 h3 {
@@ -29,19 +29,17 @@ h3 {
 }
   
 h2 {
-    font-size:$font-size-vh-title;
-    font-weight: $font-weight-h-bold;
+  font-size:$font-size-vh-title;
+  font-weight: $font-weight-h-bold;
 
-    @include mobile-landscape {
-      font-size: $font-size-vw-title;
-    }
+  @include mobile-landscape {
+    font-size: $font-size-vw-title;
+  }
 
-    @include desktop {
-      font-size: $font-size-vw-title;
-    }
+  @include desktop {
+    font-size: $font-size-vw-title;
+  }
 }
-
-
 
 /*Style pour liste non ordonné*/
 ul li {
