@@ -484,6 +484,7 @@ img {
   transition: color 0.3s ease;
   position: relative;
   padding: 1vh;
+  cursor: url(/images/logo/like-cursor.png), auto;
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   .icon-favorite {

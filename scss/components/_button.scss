@@ -91,6 +91,7 @@
   transition: color 0.3s ease;
   position:relative;
   padding:$padding-vh-d2;
+  cursor: url(/images/logo/like-cursor.png), auto;
 
 
   @include mobile-landscape {
