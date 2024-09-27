@@ -12,10 +12,10 @@
     align-items: center;
     background-color: white;
     margin: $margin-vh-base 0;
-   
-     /*-----mixin ------*/
+
+    /*-----mixin ------*/
     @include mobile-landscape { 
-        height:3vw;
+        height:1.5vw;
     }
     @include desktop {
         height:3vw;
@@ -65,6 +65,7 @@
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
         box-shadow: $border-shadow-vw; /* ombre*/
+        margin: 0 $margin-vw-base;
         
     }
 
@@ -79,9 +80,10 @@
     object-position: center bottom ;
 
     @include mobile-landscape {
-        width: 100%;
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
-        height:70%;/* L 'image prend 70% de la hauteur de la carte*/
+        object-fit: cover;
+
+        
         
     }
 }
@@ -91,7 +93,7 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: $padding-vh-base $padding-vh-d4;
+    padding: $padding-vh-d2;
 
     @include mobile-landscape {
         padding: $padding-vw-x2 $padding-vw-base;
@@ -100,8 +102,10 @@
 }
 .card .card-title  {
     font-size: $font-size-vh-base;
+    gap:$gap-vh-d2;
     @include mobile-landscape {
         font-size:$font-size-vw-base;
+        gap:$gap-vw-d2;
     }
 }
 

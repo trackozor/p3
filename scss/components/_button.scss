@@ -52,10 +52,11 @@
     font-size: $font-size-vh-title;
     transition: color 0.3s ease;
     position:relative;
-    padding-right: $padding-vh-base;
+    padding:$padding-vh-d2;
+
 
     @include mobile-landscape {
-      padding-right: $padding-vw-base;
+      padding-right: $padding-vw-d2;
       font-size: $font-size-vw-title;
       }
 }
@@ -83,51 +84,3 @@ input {
     border: none;
 
 }
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------- Paysage ---------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media (max-width:63.99rem) and (orientation: landscape) {
-  
-.button--primary {
-  padding: $padding-vw-base $padding-vw-base;/**/
-  width:$object-size-vw-x12-5;/*longueur du bouton correspondant à 20 % de la largeur de l'écran*/
-  box-shadow: $border-shadow-vw; /*ombre*/
-  border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
-  
-  /* Effet de survol*/
-  &:hover {
-  background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-  box-shadow: $border-shadow-vw;/* Ombre*/
-  }
-}
-
-/* Texte du bouton*/
-.button--primary-txt {
-font-size: $font-size-vw-base;
-font-weight: $font-weight-l-bold;
-align-content: center;
-}
-}
-/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media (min-width: 63.991rem) {
-.button--primary {
-  width:$object-size-vw-x12-5;/*longueur du bouton correspondant à 22 % de la largeur de l'écran*/
-  padding: $padding-vw-base $padding-vw-base;
-  box-shadow: $border-shadow-vw; /*ombre*/
-  border-radius:$border-radius-vw-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
-  
-  /* Effet de survol*/
-  &:hover {
-  background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-  box-shadow: $border-shadow-vw;/* Ombre*/
-  }
-
-  /* Texte du bouton*/
-.button--primary-txt {
-  font-size: $font-size-vw-base;
-  font-weight: $font-weight-l-bold;
-  align-content: center;
-
-  }
-}
-} 

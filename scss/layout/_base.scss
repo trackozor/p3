@@ -1,25 +1,27 @@
 /* _base.scss */
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*----------------------Base mobile first ---------------------------------------------------------------*/
+/*-------------------------------------Base mobile  ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
   
 /* Typographie globale */
 body {
-  font-family: $font-primary;
-  color: #0a0909;
-  font-size: $font-size-vh-base; 
-  padding: 0 $padding-vh-base;  
+  font-family: $font-primary;/* Style police par défaut */
+  color: #0a0909;/* Couleur de la police par défaut*/
+  font-size: $font-size-vh-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
+  padding: 0 $padding-vh-base;  /* Esapace intérieur gauche et droite correspondant à 2% de la hauteur de l'écran*/
   display: block;
   justify-content: center;
     
+  /*- Portrait -*/
   @include mobile-landscape {
     font-size: $font-size-vw-base; 
     padding: 0 $padding-vw-base;
   }
-
+  
+  /*- Desktop -*/
   @include desktop {
-  font-size: $font-size-vw-base; 
+    font-size: $font-size-vw-base; 
     padding: 0 $padding-vw-base;
   }
 }
@@ -29,24 +31,18 @@ h3 {
 }
   
 h2 {
-  font-size:$font-size-vh-title;
-  font-weight: $font-weight-h-bold;
+    font-size:$font-size-vh-title;
+    font-weight: $font-weight-h-bold;
 
-  @include mobile-landscape {
-    font-size: $font-size-vw-title;
-  }
+    @include mobile-landscape {
+      font-size: $font-size-vw-title;
+    }
 
-  @include desktop {
-    font-size: $font-size-vw-title;
-  }
+    @include desktop {
+      font-size: $font-size-vw-title;
+    }
 }
 
-/*Style pour liste non ordonné*/
-ul li {
-  display: inline-flex;/* Utilise flexbox pour aligner les éléments*/
-  margin:$margin-vh-d2 0; /* marge haute et basse corespondent a*/
-  align-items: center;
-}
 
 a {
   text-decoration: none;  /* Supprime le soulignement par défaut*/
@@ -54,5 +50,9 @@ a {
 }
 
 
-
+img {
+  max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
+  height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
+  display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
+}
 
