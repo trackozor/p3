@@ -841,8 +841,8 @@ header {
 /* Auteur              : Trackozor                                                                        */
 /* Date de création    : 25/09/24                                                                         */
 /* Dernière modification: 27/09/24                                                                        */
-/* Description         :                                                                                  */
-/*     Styles pour la section bandeau et la liste de fonctionnement                                        */
+/* Description         :  _section-                                                                       */
+/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
 /*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
 /*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
 /*--------------------------------------------------------------------------------------------------------*/
@@ -890,7 +890,7 @@ header {
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-  margin: 4vh 0;
+  margin: 8vh 0;
   display: block;
   align-items: center;
   justify-content: center;
@@ -898,12 +898,11 @@ header {
 
 .fonctionnement ol {
   display: block;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
 }
 
 /*----- Icône Store -----*/
-.fa-store {
+.fonctionnement .fonctionnement-content .fa-store {
   color: #9356DC;
 }
 
@@ -912,7 +911,7 @@ ol li {
   margin: 4vh 0;
   align-items: center;
   font-weight: 700;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -920,8 +919,12 @@ ol li {
 ol li i {
   color: grey;
   font-size: 2vh;
+  z-index: 2;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  left: 6vh;
+  position: absolute;
 }
 
 ol li .li-txt {
@@ -929,13 +932,12 @@ ol li .li-txt {
   position: relative;
   z-index: 1;
   background-color: #EAEAEA;
-  padding: 2vh 1vh;
+  padding: 2vh 4vh;
   align-items: center;
-  width: 95%;
+  width: 92.5%;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
   justify-content: center;
-  gap: 4vh;
 }
 
 ol li .puce_num {
@@ -951,6 +953,60 @@ ol li .puce_num {
   align-items: center;
   color: white;
   font-size: 1.4vh;
+}
+
+/**/
+/*--------------------------Desktop--------------------------*/
+@media (min-width: 63.991rem) {
+  .bandeau {
+    margin: 4vw 8vw; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+  }
+  /* Titre */
+  .bandeau h2 {
+    padding: 0.5vw 1vw; /* Adapter les espacements pour le mode paysage */
+  }
+  /* Texte */
+  .bandeau p {
+    padding: 1vw 2vw;
+    margin-bottom: 4vw;
+  }
+  /* Conteneur parent liste */
+  .fonctionnement h2 {
+    padding-left: 4vw;
+  }
+  /* Icône */
+  ol li i {
+    font-size: 2vw;
+    margin: 0 0.5vw;
+    left: 1.5vw;
+  }
+  /* Texte des étapes */
+  ol li .li-txt {
+    padding: 2vw 4vw; /* Adapter les padding pour landscape */
+    margin: 0.5vw 0.5vw;
+    border-radius: 2vw;
+    font-size: 2vw;
+    width: 19vw;
+  }
+  /* Numéros des étapes */
+  ol li .puce_num {
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
+    left: -0.5vw;
+  }
+  .fonctionnement ol {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5vw;
+  }
+}
+/*_section-restaurant.scss*/
+#section-restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 0;
 }
 
 /*# sourceMappingURL=main.css.map */
