@@ -187,4 +187,7 @@ $object-size-vw-x12-5: 25vw; /* Taille des objects correspondant à 25 % de la l
 /*----------------------------- Affichage badge------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
 
-$badge-active-palette: fl
+$badge-palette: flex; /* Gère l affichage du badge flex= affiché, none= masqué*/
+$badge-enchantee: flex; /* Gère l affichage du badge flex= affiché, none= masqué*/
+$badge-delices: none; /* Gère l affichage du badge flex= affiché, none= masqué*/
+$badge-francaise: none /* Gère l affichage du badge flex= affiché, none= masqué*/

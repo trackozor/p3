@@ -64,14 +64,30 @@
 
 /**--------------------------- Ajustemement personnalisé des images ----------------------------------*/
 
-/* Restaurant palette*/
+/* Restaurant  La palette du goût */
 #palette img {
     display: flex; /* Utilse flexbox pour aligner les éléments*/
     position: relative;
     object-position: 50% 60%;   
 }
+
+/* Restaurant  la note enchantée*/
 #enchantee  img {
     display: flex;
     position: relative;
     object-position: 50% 60%;   
+}
+
+/*------------------------------- Affichage Badges --------------------------------*/
+
+#palette .badge {
+    display: $badge-palette;
+}
+
+#enchantee .badge {
+    display: $badge-enchantee;
+}
+
+#delice .badge {
+    display: $badge-delices;
 }

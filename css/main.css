@@ -150,6 +150,9 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
+/* Gère l affichage du badge flex= affiché, none= masqué*/
+/* Gère l affichage du badge flex= affiché, none= masqué*/
+/* Gère l affichage du badge flex= affiché, none= masqué*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -539,17 +542,31 @@ input {
 }
 
 /**--------------------------- Ajustemement personnalisé des images ----------------------------------*/
-/* Restaurant palette*/
+/* Restaurant  La palette du goût */
 #palette img {
   display: flex; /* Utilse flexbox pour aligner les éléments*/
   position: relative;
   object-position: 50% 60%;
 }
 
+/* Restaurant  la note enchantée*/
 #enchantee img {
   display: flex;
   position: relative;
   object-position: 50% 60%;
+}
+
+/*------------------------------- Affichage Badges --------------------------------*/
+#palette .badge {
+  display: flex;
+}
+
+#enchantee .badge {
+  display: flex;
+}
+
+#delice .badge {
+  display: none;
 }
 
 /* Styles spécifiques au header */
