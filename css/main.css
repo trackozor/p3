@@ -140,6 +140,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
 /* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
 /* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
+/* Taille des objets correspondant à 30 % de la hauteur de l'écran*/
 /*--------------------- Paysage ----------------------------------------------*/
 /* Taille des objects correspondant à 2% de la largeur de l'écran*/
 /* Taille des objects correspondant à 5% de la largeur de l' écran*/
@@ -147,6 +148,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects correspondant à 15 % de la largeur de l'écran*/
 /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
+/* Taille des objects correspondant à 30 % de la largeur de l'écran*/
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -492,28 +494,31 @@ input {
 
 /*----------------- Carte localisation avec icône et ville ------------------*/
 .card-location {
-  display: flex;
-  justify-content: center;
-  gap: 2vh;
-  background-color: #EAEAEA;
-  width: 20vh;
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  justify-content: center; /**/
+  gap: 2vh; /* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
+  background-color: #EAEAEA; /* Couleur de fond*/
+  width: 20vw; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
   padding: 2vh 2vh;
 }
 
-/*----------- Cartes restaurants -----------*/
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------- Cartes restaurants -----------------------------*/
+/*---------------------------------------------------------------------------------*/
+/* Conteneur parent*/
 .card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 2vh;
-  box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
-  height: 30vh;
+  display: flex; /* Utilse flexbox pour aligner les éléments*/
+  flex-direction: column; /* Aligne les éléments en colonne */
+  border-radius: 2vh; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
+  box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
+  height: 30vh; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
   position: relative;
 }
 
 .card img {
   width: 100%;
   border-radius: 2vh 2vh 0 0;
-  height: 20vh;
+  height: 70%; /* L 'image prend 70% de la hauteur de la carte*/
   object-fit: cover;
   position: relative;
   object-position: center bottom;

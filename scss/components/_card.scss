@@ -11,22 +11,25 @@
 /*----------------- Carte localisation avec icône et ville ------------------*/
 
 .card-location {
-    display: flex;
-    justify-content: center;
-    gap: 2vh;
-    background-color: $primary-background-color;
-    width: 20vh;
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
+    justify-content: center;/**/
+    gap:$gap-vh-base;/* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
+    background-color: $primary-background-color; /* Couleur de fond*/
+    width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
     padding: $padding-vh-base $padding-vh-base;
     
 }
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------- Cartes restaurants -----------------------------*/
+/*---------------------------------------------------------------------------------*/
 
-/*----------- Cartes restaurants -----------*/
+/* Conteneur parent*/
 .card {
-    display: flex;
-    flex-direction: column;
-    border-radius: $border-radius-vh-base;
-    box-shadow: $border-shadow-vw; 
-    height: 30vh;
+    display: flex; /* Utilse flexbox pour aligner les éléments*/
+    flex-direction: column; /* Aligne les éléments en colonne */
+    border-radius: $border-radius-vh-base; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
+    box-shadow: $border-shadow-vw; /* ombre*/
+    height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
 
 
@@ -34,10 +37,10 @@
 .card img {
     width: 100%;
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
-    height:20vh;
+    height:70%;/* L 'image prend 70% de la hauteur de la carte*/
     object-fit: cover;
     position: relative;
-    object-position: center bottom;
+    object-position: center bottom ;
 }
 
 .card-content {
