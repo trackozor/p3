@@ -12,6 +12,11 @@ body {
     padding: 0 $padding-vh-base;  
     display: block;
     justify-content: center;
+
+  @include mobile-landscape {
+    font-size: $font-size-vw-base;
+    padding: 0 $padding-vw-base;
+  }
 }
   
 h3 {
@@ -21,6 +26,10 @@ h3 {
 h2 {
     font-size:$font-size-vh-title;
     font-weight: $font-weight-h-bold;
+    
+    @include mobile-landscape {
+
+  }
 }
 
 
@@ -37,35 +46,6 @@ a {
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
 }
 
-
-img {
-  max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
-  height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
-  display: block; /* Évite les espaces indésirables sous les images (par défaut inline)*/
-}
-/*----------------------------------------------------------------------------*/
-/*------------------------------ Mobile Paysage ------------------------------*/
-/*----------------------------------------------------------------------------*/
-
-@media (max-width: 63.99rem) and (orientation: landscape) {
-  
-  /* Typographie globale */
-  body {
-      font-size: $font-size-vw-base; /* Adapte la taille de la police à la largeur de l'écran */
-      padding: 0 $padding-vw-base; /* Ajuste le padding pour le mode paysage */
-  }
-
-  /* Titres */
-  h2 {
-      font-size: $font-size-vw-title; /* Adapte la taille des titres pour le mode paysage */
-  }
-
-  /* Liste non ordonnée */
-  ul li {
-      margin: $margin-vw-d2 0; /* Ajuste les marges pour le mode paysage */
-  }
-
-}
 
 /*----------------------------------------------------------------------------*/
 /*---------------------Desktop------------------------------------------------*/

@@ -57,12 +57,15 @@
     display: flex; /* Utilse flexbox pour aligner les éléments*/
     flex-direction: column; /* Aligne les éléments en colonne */
     border-radius: $border-radius-vh-base; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
-    box-shadow: $border-shadow-vw; /* ombre*/
+    box-shadow: $border-shadow-vh; /* ombre*/
     height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
 
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+        height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
+        box-shadow: $border-shadow-vw; /* ombre*/
+        
     }
 
 
@@ -74,6 +77,13 @@
     object-fit: cover;
     position: relative;
     object-position: center bottom ;
+
+    @include mobile-landscape {
+        width: 100%;
+        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
+        height:70%;/* L 'image prend 70% de la hauteur de la carte*/
+        
+    }
 }
 
 .card-content {
@@ -83,9 +93,16 @@
     align-content: center;
     padding: $padding-vh-base $padding-vh-d4;
 
+    @include mobile-landscape {
+        padding: $padding-vw-x2 $padding-vw-base;
+    }
+
 }
 .card .card-title  {
     font-size: $font-size-vh-base;
+    @include mobile-landscape {
+        font-size:$font-size-vw-base;
+    }
 }
 
 .card h3 {
@@ -94,6 +111,10 @@
 
 .card-txt {
     padding: $padding-vh-d4 0;
+
+    @include mobile-landscape {
+        padding: $padding-vw-d4 0;
+    }
 }
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------Badge--------------------------------------------- */
@@ -105,7 +126,8 @@
     z-index: 3;
     left: 72%;
     bottom: 82%;
-}
+    }
+
 
 /*------------ Affichage Badges ----------------*/
 

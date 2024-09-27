@@ -53,6 +53,11 @@
     transition: color 0.3s ease;
     position:relative;
     padding-right: $padding-vh-base;
+
+    @include mobile-landscape {
+      padding-right: $padding-vw-base;
+      font-size: $font-size-vw-title;
+      }
 }
 .icon-favorite:hover {
   animation: heartBeat 0.3s ease-in-out 3;
