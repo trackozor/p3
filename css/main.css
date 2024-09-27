@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : main.scss                                                                        */
+/* Auteur              : Trackozor                                                                        */
+/* Date de création    : 25/09/24                                                                         */
+/* Dernière modification: 27/09/24                                                                        */
+/* Description         : Fichier SCSS qui importe et organise les styles des variables globales,           */
+/*                       mixins, animations, composants et sections spécifiques.                           */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
 /* Variables globales (couleurs, tailles, etc.) */
 /* ------------------------------------------------------- _variables.scss----------------------------------------------------- 
 Fichier : _variables.scss
@@ -288,7 +302,20 @@ table {
   border-spacing: 0;
 }
 
-/* _base.scss */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _base.scss                                                                        */
+/* Auteur              : Trackozor                                                   */
+/* Date de création    : 25/09/24                                                                */
+/* Dernière modification: 27/09/24                                               */
+/* Description         : Fichier contenant les styles de base, typographie globale et gestion des           */
+/*                       responsive (mobile et desktop)                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Base mobile  ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
@@ -298,48 +325,52 @@ body {
   color: #0a0909; /* Couleur de la police par défaut*/
   font-size: 2vh; /* Taille de police de base correspondant à 2 % de la hauteur*/
   padding: 0 2vh; /* Esapace intérieur gauche et droite correspondant à 2% de la hauteur de l'écran*/
-  display: block;
-  justify-content: center;
+  display: block; /* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
+  justify-content: center; /*centre horizontalement depuis le centre*/
   /*- Portrait -*/
   /*- Desktop -*/
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   body {
-    font-size: 2vw;
-    padding: 0 2vw;
+    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    padding: 0 2vw; /*Esapace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 @media (min-width: 63.91rem) {
   body {
-    font-size: 2vw;
-    padding: 0 2vw;
+    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    padding: 0 2vw; /*Esapace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 
 h3 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand", sans-serif; /*Style de police pour les titres*/
 }
 
 h2 {
-  font-size: 3vh;
-  font-weight: 900;
+  font-size: 3vh; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
+  font-weight: 900; /* Accentuation caractère majeure soit valeur=900 */
+  /*- Portrait -*/
+  /*- Desktop -*/
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   h2 {
-    font-size: 3vw;
+    font-size: 3vw; /* Taille de police pour les titres correspondant à 3% de la largeur de l'écran*/
   }
 }
 @media (min-width: 63.91rem) {
   h2 {
-    font-size: 3vw;
+    font-size: 3vw; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
   }
 }
 
+/*  Liens  */
 a {
   text-decoration: none; /* Supprime le soulignement par défaut*/
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
 }
 
+/*  Images  */
 img {
   max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
   height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
@@ -677,7 +708,22 @@ header {
   border-bottom: 0.5vh solid lightgrey;
 }
 
-/*_Section-bandeau.scss*/
+/* Nom du fichier      : _section-bandeau.scss                                                             */
+/* Auteur              : Trackozor                                                                        */
+/* Date de création    : 25/09/24                                                                         */
+/* Dernière modification: 27/09/24                                                                        */
+/* Description         :  _section-                                                                       */
+/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
+/*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
+/*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau {
   display: flex;
