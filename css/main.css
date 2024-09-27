@@ -307,6 +307,12 @@ body {
     padding: 0 2vw;
   }
 }
+@media (min-width: 63.91rem) {
+  body {
+    font-size: 2vw;
+    padding: 0 2vw;
+  }
+}
 
 h3 {
   font-family: "Shrikhand", sans-serif;
@@ -316,6 +322,17 @@ h2 {
   font-size: 3vh;
   font-weight: 900;
 }
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  h2 {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  h2 {
+    font-size: 3vw;
+  }
+}
+
 /*Style pour liste non ordonné*/
 ul li {
   display: inline-flex; /* Utilise flexbox pour aligner les éléments*/
@@ -328,25 +345,6 @@ a {
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
 }
 
-/*----------------------------------------------------------------------------*/
-/*---------------------Desktop------------------------------------------------*/
-@media (min-width: 63.991rem) {
-  /* Typographie globale */
-  body {
-    font-size: 2vw; /* Adapte la taille de la police à la largeur de l'écran */
-  }
-  /* Titres */
-  h2 {
-    font-size: 3vw; /* Adapte la taille des titres pour le mode desktop */
-  }
-  h3 {
-    font-size: 1.5vw; /* Adapte la taille des sous-titres pour le mode desktop */
-  }
-  /* Liste non ordonnée */
-  ul li {
-    margin: 2vw 0; /* Ajuste les marges pour le mode desktop */
-  }
-}
 /* Styles des composants */
 /* _buttons.scss */
 /*--------------------------------------------------------------------------------------------------------*/

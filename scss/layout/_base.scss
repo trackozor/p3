@@ -12,11 +12,16 @@ body {
     padding: 0 $padding-vh-base;  
     display: block;
     justify-content: center;
+    
+    @include mobile-landscape {
+      font-size: $font-size-vw-base; 
+      padding: 0 $padding-vw-base;
+    }
 
-  @include mobile-landscape {
-    font-size: $font-size-vw-base;
-    padding: 0 $padding-vw-base;
-  }
+    @include desktop {
+      font-size: $font-size-vw-base; 
+      padding: 0 $padding-vw-base;
+    }
 }
   
 h3 {
@@ -26,10 +31,14 @@ h3 {
 h2 {
     font-size:$font-size-vh-title;
     font-weight: $font-weight-h-bold;
-    
-    @include mobile-landscape {
 
-  }
+    @include mobile-landscape {
+      font-size: $font-size-vw-title;
+    }
+
+    @include desktop {
+      font-size: $font-size-vw-title;
+    }
 }
 
 
@@ -47,29 +56,5 @@ a {
 }
 
 
-/*----------------------------------------------------------------------------*/
-/*---------------------Desktop------------------------------------------------*/
 
-@media (min-width: 63.991rem) {
-  
-  /* Typographie globale */
-  body {
-      font-size: $font-size-vw-base; /* Adapte la taille de la police à la largeur de l'écran */
-      
-  }
 
-  /* Titres */
-  h2 {
-      font-size: $font-size-vw-title; /* Adapte la taille des titres pour le mode desktop */
-  }
-
-  h3 {
-    font-size: $font-size-vw-middle; /* Adapte la taille des sous-titres pour le mode desktop */
-  }
-
-  /* Liste non ordonnée */
-  ul li {
-      margin: $margin-vw-base 0; /* Ajuste les marges pour le mode desktop */
-  }
-
-}
