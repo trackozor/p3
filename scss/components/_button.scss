@@ -43,25 +43,28 @@
   
   /*------------------ Bouton "Cœur" ----------------------------- */
 .icon-favorite {
-  background-color: transparent;
-  color:grey;
-    
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: $font-size-vh-title;
-  transition: color 0.3s ease;
-  position:relative;
-  padding-right: $padding-vh-base;
+    background-color: transparent;
+    color:grey;
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-vh-title;
+    transition: color 0.3s ease;
+    position:relative;
+    padding-right: $padding-vh-base;
 }
 .icon-favorite:hover {
   animation: heartBeat 0.3s ease-in-out 3;
   color: $button--search-secondary-color;
 }
 
+.icon-favorite:checked {
+    animation: likeFill 0.5s ease-in-out forwards;
+}
 
 input {
-    display: none;
+    display:none;
 }
 
 

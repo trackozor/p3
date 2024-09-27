@@ -1,4 +1,9 @@
 /*_card.scss */
+
+/* import mixin*/
+@import '../mixins';
+
+
 /**/
 .card-logo {
     height: 3vh;
@@ -7,7 +12,17 @@
     align-items: center;
     background-color: white;
     margin: $margin-vh-base 0;
+   
+     /*-----mixin ------*/
+    @include mobile-landscape { 
+        height:3vw;
+    }
+    @include desktop {
+        height:3vw;
+    }
+    
 }
+
 /*----------------- Carte localisation avec icône et ville ------------------*/
 
 .card-location {
@@ -15,10 +30,24 @@
     justify-content: center;/**/
     gap:$gap-vh-base;/* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
     background-color: $primary-background-color; /* Couleur de fond*/
-    width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
+    width: $object-size-vh-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
     padding: $padding-vh-base $padding-vh-base;
     
+    @include mobile-landscape {
+        gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
+        width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
+        padding: $padding-vw-base $padding-vw-base; /* espace intérieur correspondant à 2 % de la largeur de l'écran*/ 
+    }
+    
+    @include desktop {
+        gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
+        width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
+        padding: $padding-vw-base $padding-vw-base; /* espace intérieur correspondant à 2%de l'écran*/
+    }
 }
+
+
+
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
 /*---------------------------------------------------------------------------------*/
@@ -31,6 +60,10 @@
     box-shadow: $border-shadow-vw; /* ombre*/
     height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
+
+    @include mobile-landscape {
+        border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+    }
 
 
 }
@@ -59,6 +92,9 @@
     font-weight: $font-weight-h-bold;
 }
 
+.card-txt {
+    padding: $padding-vh-d4 0;
+}
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------Badge--------------------------------------------- */
 /* ------------------------------------------------------------------------------------------*/

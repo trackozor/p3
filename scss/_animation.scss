@@ -10,20 +10,16 @@
     }
 }
 
-/* @keyframes pour le remplissage et la croissance */
+/* @keyframes pour le remplissage de l'arrière-plan et la croissance */
 @keyframes likeFill {
     0% {
-        color: grey;
-        transform: scale(1);
-        background: linear-gradient(to top, #9356DC 0%, transparent 100%);
-        -webkit-background-clip: text;
-        color: transparent;
-        }
+      background: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
+      transform: scale(1); /* Taille normale au départ */
+    }
     100% {
-        color: #9356DC; /* La couleur finale du cœur */
-        transform: scale(1.2);
-        background: none;
-        }
+      background: #9356DC; /* Couleur finale pleine du cœur */
+      transform: scale(1.2); /* Légère croissance */
+    }
 }
 
 /* @keyframes pour l'explosion finale */

@@ -155,6 +155,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
+/* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -172,19 +173,15 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
     transform: scale(1.2);
   }
 }
-/* @keyframes pour le remplissage et la croissance */
+/* @keyframes pour le remplissage de l'arrière-plan et la croissance */
 @keyframes likeFill {
   0% {
-    color: grey;
-    transform: scale(1);
-    background: linear-gradient(to top, #9356DC 0%, transparent 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+    background: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
+    transform: scale(1); /* Taille normale au départ */
   }
   100% {
-    color: #9356DC; /* La couleur finale du cœur */
-    transform: scale(1.2);
-    background: none;
+    background: #9356DC; /* Couleur finale pleine du cœur */
+    transform: scale(1.2); /* Légère croissance */
   }
 }
 /* @keyframes pour l'explosion finale */
@@ -426,6 +423,10 @@ img {
   color: #FF79DA;
 }
 
+.icon-favorite:checked {
+  animation: likeFill 0.5s ease-in-out forwards;
+}
+
 input {
   display: none;
 }
@@ -482,6 +483,12 @@ input {
   }
 }
 /*_card.scss */
+/* import mixin*/
+/* _mixins.scss */
+/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans en mode portrait sur mobile */
+/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans desktop*/
 /**/
 .card-logo {
   height: 3vh;
@@ -490,6 +497,17 @@ input {
   align-items: center;
   background-color: white;
   margin: 2vh 0;
+  /*-----mixin ------*/
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .card-logo {
+    height: 3vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-logo {
+    height: 3vw;
+  }
 }
 
 /*----------------- Carte localisation avec icône et ville ------------------*/
@@ -498,8 +516,22 @@ input {
   justify-content: center; /**/
   gap: 2vh; /* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
   background-color: #EAEAEA; /* Couleur de fond*/
-  width: 20vw; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
+  width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
   padding: 2vh 2vh;
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .card-location {
+    gap: 2vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
+    width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
+    padding: 2vw 2vw; /* espace intérieur correspondant à 2 % de la largeur de l'écran*/
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-location {
+    gap: 2vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
+    width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
+    padding: 2vw 2vw; /* espace intérieur correspondant à 2%de l'écran*/
+  }
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -513,6 +545,11 @@ input {
   box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
   height: 30vh; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
   position: relative;
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .card {
+    border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+  }
 }
 
 .card img {
@@ -538,6 +575,10 @@ input {
 
 .card h3 {
   font-weight: 900;
+}
+
+.card-txt {
+  padding: 0.5vh 0;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -647,6 +688,12 @@ input {
 }
 
 /* _header.scss */
+/**/
+/* _mixins.scss */
+/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans en mode portrait sur mobile */
+/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans desktop*/
 header {
   display: flex;
   flex-direction: column;

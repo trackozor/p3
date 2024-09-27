@@ -1,5 +1,8 @@
 /* _header.scss */
 
+/**/
+@import '../mixins';
+
 header {
     display: flex;
     flex-direction: column;
@@ -10,5 +13,12 @@ header {
   width: 100%;
   border-top: 0.5vh solid lightgrey;
   border-bottom: 0.5vh solid lightgrey;
-}
+
+    }
+    @mixin mobile-landscape {
+  .card-location{
+    border-top: 0.5vw solid lightgrey;
+    border-bottom: 0.5vw solid lightgrey;
+  }
   
+}
