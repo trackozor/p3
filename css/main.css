@@ -475,9 +475,9 @@ img {
 
 /*------------------ Bouton "Cœur" ----------------------------- */
 .icon-favorite {
-  background-color: transparent;
-  color: grey;
-  display: flex;
+  background-color: transparent; /* Couleur de fond transparente */
+  color: grey; /* couleur principale */
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center;
   justify-content: center;
   position: relative;
@@ -621,6 +621,14 @@ input {
     margin: 0 2vw;
   }
 }
+@media (min-width: 63.91rem) {
+  .card {
+    border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+    height: 40vw; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
+    margin: 0 1vw;
+  }
+}
 
 .card img {
   width: 100%;
@@ -631,6 +639,12 @@ input {
   object-position: center bottom;
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
+  .card img {
+    border-radius: 2vw 2vw 0 0;
+    object-fit: cover;
+  }
+}
+@media (min-width: 63.91rem) {
   .card img {
     border-radius: 2vw 2vw 0 0;
     object-fit: cover;
@@ -876,7 +890,7 @@ header {
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-  margin: 8vh 0;
+  margin: 4vh 0;
   display: block;
   align-items: center;
   justify-content: center;
@@ -884,11 +898,12 @@ header {
 
 .fonctionnement ol {
   display: block;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*----- Icône Store -----*/
-.fonctionnement .fonctionnement-content .fa-store {
+.fa-store {
   color: #9356DC;
 }
 
@@ -897,7 +912,7 @@ ol li {
   margin: 4vh 0;
   align-items: center;
   font-weight: 700;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   z-index: 1;
 }
@@ -905,12 +920,8 @@ ol li {
 ol li i {
   color: grey;
   font-size: 2vh;
-  z-index: 2;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 3.5vh;
-  position: absolute;
+  justify-content: space-between;
 }
 
 ol li .li-txt {
@@ -920,10 +931,11 @@ ol li .li-txt {
   background-color: #EAEAEA;
   padding: 2vh 1vh;
   align-items: center;
-  width: 92.5%;
+  width: 95%;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
   justify-content: center;
+  gap: 4vh;
 }
 
 ol li .puce_num {
@@ -939,52 +951,6 @@ ol li .puce_num {
   align-items: center;
   color: white;
   font-size: 1.4vh;
-}
-
-/*--------------------------Desktop--------------------------*/
-@media (min-width: 63.991rem) {
-  .bandeau {
-    margin: 4vw 8vw; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
-  }
-  /* Titre */
-  .bandeau h2 {
-    padding: 0.5vw 1vw; /* Adapter les espacements pour le mode paysage */
-  }
-  /* Texte */
-  .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 4vw;
-  }
-  /* Conteneur parent liste */
-  .fonctionnement h2 {
-    padding-left: 4vw;
-  }
-  /* Icône */
-  ol li i {
-    font-size: 2vw;
-    margin: 0 0.5vw;
-    left: 1.5vw;
-  }
-  /* Texte des étapes */
-  ol li .li-txt {
-    padding: 2vw 4vw; /* Adapter les padding pour landscape */
-    margin: 0.5vw 0.5vw;
-    border-radius: 2vw;
-    font-size: 2vw;
-    width: 19vw;
-  }
-  /* Numéros des étapes */
-  ol li .puce_num {
-    height: 2vw;
-    width: 2vw;
-    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
-    left: -0.5vw;
-  }
-  .fonctionnement ol {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 5vw;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

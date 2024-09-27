@@ -69,8 +69,6 @@
     }
 }
 
-
-
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
 /*---------------------------------------------------------------------------------*/
@@ -93,6 +91,14 @@
     }
 
 
+    @include desktop {
+        border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+        height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
+        box-shadow: $border-shadow-vw; /* ombre*/
+        margin: 0 $margin-vw-d2;
+        
+    }
+ 
 }
 .card img {
     width: 100%;
@@ -104,10 +110,11 @@
 
     @include mobile-landscape {
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
-        object-fit: cover;
-
-        
-        
+        object-fit: cover; 
+    }
+    @include desktop {
+        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
+        object-fit: cover; 
     }
 }
 

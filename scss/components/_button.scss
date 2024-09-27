@@ -82,9 +82,9 @@
   
   /*------------------ Bouton "Cœur" ----------------------------- */
 .icon-favorite {
-  background-color: transparent;
-  color:grey;  
-  display: flex;
+  background-color: transparent;/* Couleur de fond transparente */
+  color:grey; /* couleur principale */
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center;
   justify-content: center;
   position:relative;

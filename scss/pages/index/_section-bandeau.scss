@@ -49,7 +49,7 @@
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-    margin: 8vh 0; 
+    margin: $margin-vh-x2 0; 
     display: block;
     align-items:  center; 
     justify-content: center; 
@@ -57,11 +57,12 @@
 
 .fonctionnement ol {
     display: block;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
 }
 /*----- Icône Store -----*/
-.fonctionnement .fonctionnement-content .fa-store {
+.fa-store {
     color:$button--search-primary-color;
 }
 ol li {
@@ -69,7 +70,7 @@ ol li {
     margin:$margin-vh-x2 0;
     align-items: center;
     font-weight: $font-weight-bold;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     z-index: 1;
 }
@@ -77,12 +78,9 @@ ol li {
 ol li i {
     color:grey;
     font-size: $font-size-vh-base;
-    z-index: 2;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    left:3.5vh;
-    position:absolute ;
+    justify-content: space-between;
+    
 }
 
 ol li .li-txt{
@@ -92,11 +90,11 @@ ol li .li-txt{
     background-color:$primary-background-color;
     padding:$padding-vh-base  $padding-vh-d2;
     align-items: center;
-    width:92.5%;
+    width:95%;
     border-radius:$border-radius-vh-base;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
     justify-content: center;
-    
+    gap:4vh;    
 
 }
 ol li .puce_num {
@@ -113,62 +111,4 @@ ol li .puce_num {
     color:white;
     font-size:1.4vh;
 
-}
-
-
-/*--------------------------Desktop--------------------------*/
-@media (min-width: 63.991rem)  { 
-    
-.bandeau  {
-    margin: $margin-vw-x2 $margin-vw-x4; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
-}
-
-  /* Titre */
-.bandeau h2 {
-      padding: $padding-vw-d4 $padding-vw-d2; /* Adapter les espacements pour le mode paysage */
-}
-
-  /* Texte */
-.bandeau p {
-    padding: $padding-vw-d2 $padding-vw-base;
-    margin-bottom: $margin-vw-x2;
-}
-
-  /* Conteneur parent liste */
-.fonctionnement h2 {
-    padding-left: $padding-vw-x2;
-
-
-}
-
-  /* Icône */
-ol li i {
-    font-size: $font-size-vw-base;
-    margin: 0 $margin-vw-d4;
-    left: 1.5vw;
-}
-
-  /* Texte des étapes */
-ol li .li-txt {
-    padding: $padding-vw-base $padding-vw-x2; /* Adapter les padding pour landscape */
-    margin: $margin-vw-d4 $margin-vw-d4;
-    border-radius: $border-radius-vw-base;
-    font-size: $font-size-vw-base;
-    width: 19vw;
-    
-}
-
-  /* Numéros des étapes */
-ol li .puce_num {
-    height: 2vw;
-    width: 2vw;
-    font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
-    left: -0.5vw;
-}
-
-.fonctionnement ol  {
-    display: flex;  
-    justify-content: space-between; ;
-    margin: 0  5vw;
-}
 }
