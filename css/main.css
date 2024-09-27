@@ -160,6 +160,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects correspondant à 2% de la largeur de l'écran*/
 /* Taille des objects correspondant à 3% de la largeur de l'écran*/
 /* Taille des objects correspondant à 5% de la largeur de l' écran*/
+/* Taille des objects correspondant à 6% de la largeur de l'écran */
 /* Taille des objects correspondant à 10 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 15 % de la largeur de l'écran*/
 /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
@@ -193,11 +194,11 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* @keyframes pour le remplissage de l'arrière-plan et la croissance */
 @keyframes likeFill {
   0% {
-    background: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
+    color: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
     transform: scale(1); /* Taille normale au départ */
   }
   100% {
-    background: #9356DC; /* Couleur finale pleine du cœur */
+    color: #9356DC; /* Couleur finale pleine du cœur */
     transform: scale(1.2); /* Légère croissance */
   }
 }
@@ -402,6 +403,7 @@ img {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /*ombre*/
   border-radius: 4vh; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
   /* Landscape */
+  /* Desktop */
   /* Effet de survol*/
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
@@ -409,7 +411,15 @@ img {
     border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
     width: 25vw; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    padding: 2vw;
+    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+  }
+}
+@media (min-width: 63.91rem) {
+  .button--primary {
+    border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
+    width: 25vw; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
+    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
   }
 }
 .button--primary:hover {
@@ -419,18 +429,48 @@ img {
 
 /* Texte du bouton*/
 .button--primary-txt {
-  font-size: 2vh; /**/
-  font-weight: 100;
-  align-content: center;
+  font-size: 2vh; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
+  font-weight: 100; /* Accentuation police valeur=100*/
+  /* Landscape */
+  /* Desktop */
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .button--primary-txt {
+    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+  }
+}
+@media (min-width: 63.91rem) {
+  .button--primary-txt {
+    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+  }
 }
 
 /*------------------ Bouton "Nouveau" ----------------------------*/
 .badge {
   background-color: #99E2D0; /* Couleur vert clair */
-  color: #008766;
-  font-size: 1.5vh;
-  padding: 1vh 2vh;
-  width: 6vh;
+  color: #008766; /* couleur vert foncé*/
+  font-size: 2vh; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
+  padding: 1vh 2vh; /* espace intérieur haut/bas et gauche/droite correspondant respectivement à 1%  et 2 %de la hauteur de l'écran*/
+  width: 6vh; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la hauteur de l'écran*/
+  font-weight: 900; /* Accentuation police valeur=900 */
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  justify-content: center; /* centre les éléments a partir d centre du conteneur parent*/
+  /* Landscape */
+  /* Desktop */
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .badge {
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    width: 6vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .badge {
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    width: 6vw;
+  }
 }
 
 /*------------------ Bouton "Cœur" ----------------------------- */
@@ -452,13 +492,24 @@ img {
   }
 }
 
-.icon-favorite:hover {
+.icon-favorite .fa-full {
+  display: none;
+  z-index: 2;
+  position: relative;
+}
+
+.icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
   color: #FF79DA;
 }
 
-.icon-favorite:checked {
+.icon-favorite:active .fa-full {
+  display: flex;
   animation: likeFill 0.5s ease-in-out forwards;
+  color: rgb(197, 27, 146);
+}
+.icon-favorite:active .fa-empty {
+  display: none;
 }
 
 input {

@@ -22,7 +22,15 @@
     border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
     width: $object-size-vw-x12-5; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
     box-shadow: $border-shadow-vw; /* ombre*/
-    padding: $padding-vw-base;
+    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+  }
+
+  /* Desktop */
+  @include desktop {
+    border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
+    width: $object-size-vw-x12-5; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
+    box-shadow: $border-shadow-vw; /* ombre*/
+    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
   }
   /* Effet de survol*/
   &:hover {
@@ -33,19 +41,43 @@
 
 /* Texte du bouton*/
 .button--primary-txt {
-  font-size: $font-size-vh-base;/**/
-  font-weight: $font-weight-l-bold;
-  align-content: center;
+  font-size: $font-size-vh-base; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
+  font-weight: $font-weight-l-bold; /* Accentuation police valeur=100*/
+
+  /* Landscape */
+  @include mobile-landscape {
+    font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+  }
+
+  /* Desktop */
+  @include desktop {
+    font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+  }
 }
 
   /*------------------ Bouton "Nouveau" ----------------------------*/
-
 .badge {
   background-color:$button--new-primary-color;  /* Couleur vert clair */
-  color: $button--new-secondary-color;
-  font-size: $font-size-vh-middle;
-  padding:$padding-vh-d2 $padding-vh-base;
-  width:$object-size-vh-x3;
+  color: $button--new-secondary-color; /* couleur vert foncé*/
+  font-size: $font-size-vh-base; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
+  padding:$padding-vh-d2 $padding-vh-base; /* espace intérieur haut/bas et gauche/droite correspondant respectivement à 1%  et 2 %de la hauteur de l'écran*/
+  width:$object-size-vh-x3; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la hauteur de l'écran*/
+  font-weight: $font-weight-h-bold;/* Accentuation police valeur=900 */
+  display: flex;/* Utilise flexbox pour aligner les éléments */
+  justify-content: center;/* centre les éléments a partir d centre du conteneur parent*/
+
+  /* Landscape */
+  @include mobile-landscape {
+    font-size: $font-size-vw-base;
+    padding: $padding-vw-d2 $padding-vw-base;
+    width: $object-size-vw-x3;
+  }
+  /* Desktop */
+  @include desktop {
+    font-size: $font-size-vw-base;
+    padding: $padding-vw-d2 $padding-vw-base;
+    width: $object-size-vw-x3;
+  }
 }
   
   /*------------------ Bouton "Cœur" ----------------------------- */
@@ -66,14 +98,28 @@
     font-size: $font-size-vw-title;
   }
 }
-.icon-favorite:hover {
+.icon-favorite .fa-full {
+  display: none;
+  z-index: 2;
+  position:relative;
+}
+
+.icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
   color: $button--search-secondary-color;
 }
 
-.icon-favorite:checked {
+.icon-favorite:active {  
+  .fa-full  {
+    display: flex;
     animation: likeFill 0.5s ease-in-out forwards;
+    color:rgb(197, 27, 146);
+  }
+  .fa-empty {
+    display: none;
+  }
 }
+
 
 input {
     display:none;
