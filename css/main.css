@@ -491,6 +491,12 @@ img {
     font-size: 3vw;
   }
 }
+@media (min-width: 63.91rem) {
+  .icon-favorite {
+    padding-right: 1vw;
+    font-size: 3vw;
+  }
+}
 
 .icon-favorite .fa-full {
   display: none;
@@ -505,7 +511,7 @@ img {
 
 .icon-favorite:active .fa-full {
   display: flex;
-  animation: likeFill 0.5s ease-in-out forwards;
+  animation: likeFill 0.5s ease-in-out backwards;
   color: rgb(197, 27, 146);
 }
 .icon-favorite:active .fa-empty {

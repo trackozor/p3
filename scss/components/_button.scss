@@ -97,6 +97,11 @@
     padding-right: $padding-vw-d2;
     font-size: $font-size-vw-title;
   }
+
+  @include desktop {
+    padding-right: $padding-vw-d2;
+    font-size: $font-size-vw-title;
+  }
 }
 .icon-favorite .fa-full {
   display: none;
@@ -109,17 +114,16 @@
   color: $button--search-secondary-color;
 }
 
-.icon-favorite:active {  
-  .fa-full  {
+.icon-favorite:active{
+    .fa-full{
     display: flex;
-    animation: likeFill 0.5s ease-in-out forwards;
+    animation: likeFill 0.5s ease-in-out backwards ;
     color:rgb(197, 27, 146);
-  }
-  .fa-empty {
-    display: none;
+    }
+    .fa-empty {
+    display:none;
   }
 }
-
 
 input {
     display:none;
