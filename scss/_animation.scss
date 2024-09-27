@@ -13,11 +13,11 @@
 /* @keyframes pour le remplissage de l'arrière-plan et la croissance */
 @keyframes likeFill {
     0% {
-        color: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
-        transform: scale(1); /* Taille normale au départ */
+        color: radial-gradient(circle , #f7efef 0%, transparent 100%); /* Dégradé partant du bas */
+        transform: scale(0.2); /* Taille normale au départ */
     }
     100% {
-        color: #9356DC; /* Couleur finale pleine du cœur */
+        color: #f70a16; /* Couleur finale pleine du cœur */
         transform: scale(1.2); /* Légère croissance */
     }
 }

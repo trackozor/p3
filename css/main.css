@@ -194,11 +194,11 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* @keyframes pour le remplissage de l'arrière-plan et la croissance */
 @keyframes likeFill {
   0% {
-    color: linear-gradient(to top, #9356DC 0%, transparent 100%); /* Dégradé partant du bas */
-    transform: scale(1); /* Taille normale au départ */
+    color: radial-gradient(circle, #f7efef 0%, transparent 100%); /* Dégradé partant du bas */
+    transform: scale(0.2); /* Taille normale au départ */
   }
   100% {
-    color: #9356DC; /* Couleur finale pleine du cœur */
+    color: #f70a16; /* Couleur finale pleine du cœur */
     transform: scale(1.2); /* Légère croissance */
   }
 }
@@ -460,16 +460,16 @@ img {
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   .badge {
-    font-size: 2vw;
-    padding: 1vw 2vw;
-    width: 6vw;
+    font-size: 2vw; /* Taille de police de base correspondant à 2% de la largeur de l'écran */
+    padding: 1vw 2vw; /* Espace intérieur haut/bas et gauche/droite correspondant respectivement à 1% et 2% de la largueur de l'écran*/
+    width: 6vw; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la largeur de l'écran*/
   }
 }
 @media (min-width: 63.91rem) {
   .badge {
-    font-size: 2vw;
-    padding: 1vw 2vw;
-    width: 6vw;
+    font-size: 2vw; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
+    padding: 1vw 2vw; /*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
+    width: 6vw; /* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
   }
 }
 
@@ -480,11 +480,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3vh;
-  transition: color 0.3s ease;
   position: relative;
   padding: 1vh;
-  cursor: url(/images/logo/like-cursor.png), auto;
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   .icon-favorite {
@@ -512,8 +509,8 @@ img {
 
 .icon-favorite:active .fa-full {
   display: flex;
-  animation: likeFill 0.5s ease-in-out backwards;
-  color: rgb(197, 27, 146);
+  animation: likeFill 2s ease-in-out forwards;
+  color: #FF79DA;
 }
 .icon-favorite:active .fa-empty {
   display: none;

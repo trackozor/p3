@@ -68,15 +68,15 @@
 
   /* Landscape */
   @include mobile-landscape {
-    font-size: $font-size-vw-base;
-    padding: $padding-vw-d2 $padding-vw-base;
-    width: $object-size-vw-x3;
+    font-size: $font-size-vw-base;/* Taille de police de base correspondant à 2% de la largeur de l'écran */
+    padding: $padding-vw-d2 $padding-vw-base;/* Espace intérieur haut/bas et gauche/droite correspondant respectivement à 1% et 2% de la largueur de l'écran*/
+    width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la largeur de l'écran*/
   }
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-base;
-    padding: $padding-vw-d2 $padding-vw-base;
-    width: $object-size-vw-x3;
+    font-size: $font-size-vw-base; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
+    padding: $padding-vw-d2 $padding-vw-base;/*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
+    width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
   }
 }
   
@@ -87,11 +87,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: $font-size-vh-title;
-  transition: color 0.3s ease;
   position:relative;
   padding:$padding-vh-d2;
-  cursor: url(/images/logo/like-cursor.png), auto;
 
 
   @include mobile-landscape {
@@ -104,6 +101,7 @@
     font-size: $font-size-vw-title;
   }
 }
+
 .icon-favorite .fa-full {
   display: none;
   z-index: 2;
@@ -118,8 +116,8 @@
 .icon-favorite:active{
     .fa-full{
     display: flex;
-    animation: likeFill 0.5s ease-in-out backwards ;
-    color:rgb(197, 27, 146);
+    animation: likeFill 2s ease-in-out forwards  ;
+    color:$button--search-secondary-color;
     }
     .fa-empty {
     display:none;
