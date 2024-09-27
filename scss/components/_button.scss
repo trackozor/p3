@@ -7,26 +7,33 @@
 
 /* Bouton principal avec dégradé */
 .button--primary {
-    display: flex;/* Utilise flexbox pour aligner les éléments*/
-    align-items: center; /* Aligne les éléments dans la hauteur*/
-    justify-content: center; /* Aligne les éléments dans la largeur*/
-    background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color);/**/
-    padding: $padding-vh-base $padding-vh-base;/**/
-    color: white;/* couleur du texte*/
-    width:$object-size-vh-x12-5;/*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
-    box-shadow: $border-shadow-vh; /*ombre*/
-    border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-    
-    /* Effet de survol*/
-    &:hover {
-    background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-    box-shadow: $border-shadow-vh;/* Ombre*/
-    }
+  display: flex;/* Utilise flexbox pour aligner les éléments*/
+  align-items: center; /* Aligne les éléments dans la hauteur*/
+  justify-content: center; /* Aligne les éléments dans la largeur*/
+  background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color);/* dégradé de couleur*/
+  padding: $padding-vh-base ;/* Espace intérieur correspondant à 2% de la hauteur de l'écran */
+  color: white;/* couleur du texte*/
+  width:$object-size-vh-x12-5;/*longueur du bouton correspondant à 25 % de la hauteur de l'écran*/
+  box-shadow: $border-shadow-vh; /*ombre*/
+  border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+
+  /* Landscape */
+  @include mobile-landscape {
+    border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
+    width: $object-size-vw-x12-5; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
+    box-shadow: $border-shadow-vw; /* ombre*/
+    padding: $padding-vw-base;
+  }
+  /* Effet de survol*/
+  &:hover {
+  background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
+  box-shadow: $border-shadow-vh;/* Ombre*/
+  }
 }
 
 /* Texte du bouton*/
 .button--primary-txt {
-  font-size: $font-size-vh-base;
+  font-size: $font-size-vh-base;/**/
   font-weight: $font-weight-l-bold;
   align-content: center;
 }
@@ -43,22 +50,21 @@
   
   /*------------------ Bouton "Cœur" ----------------------------- */
 .icon-favorite {
-    background-color: transparent;
-    color:grey;
-      
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $font-size-vh-title;
-    transition: color 0.3s ease;
-    position:relative;
-    padding:$padding-vh-d2;
+  background-color: transparent;
+  color:grey;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-vh-title;
+  transition: color 0.3s ease;
+  position:relative;
+  padding:$padding-vh-d2;
 
 
-    @include mobile-landscape {
-      padding-right: $padding-vw-d2;
-      font-size: $font-size-vw-title;
-    }
+  @include mobile-landscape {
+    padding-right: $padding-vw-d2;
+    font-size: $font-size-vw-title;
+  }
 }
 .icon-favorite:hover {
   animation: heartBeat 0.3s ease-in-out 3;

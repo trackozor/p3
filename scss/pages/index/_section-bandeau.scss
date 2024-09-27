@@ -2,8 +2,8 @@
 /* Auteur              : Trackozor                                                                        */
 /* Date de création    : 25/09/24                                                                         */
 /* Dernière modification: 27/09/24                                                                        */
-/* Description         :  _section-                                                                       */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
+/* Description         :                                                                                  */
+/*     Styles pour la section bandeau et la liste de fonctionnement                                        */
 /*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
 /*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
 /*--------------------------------------------------------------------------------------------------------*/
@@ -21,13 +21,14 @@
 
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
-    display: flex;
-    flex-direction: column; /**/
+    display: flex;/* Utilise flexbox pour aligner les éléments*/
+    flex-direction: column; /* alignement en colonne*/
     text-align: center; /* Aligne le texte dans l'axe horizontal*/
-    justify-content: center; /**/
-    margin: $margin-vh-base $margin-vh-d2; /**/
-    align-items: center;
+    justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
+    margin: $margin-vh-base $margin-vh-d2; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
+    align-items: center; /* Aligne les éléments dans la hauteur*/
 
+    /*  Landscape  */
     @include mobile-landscape {
       margin: $margin-vw-base $margin-vw-d2;
     }
@@ -113,58 +114,8 @@ ol li .puce_num {
     font-size:1.4vh;
 
 }
-/**/
 
-/* Media query pour le mode paysage (landscape) */
-@media (max-width: 63.99rem) and (orientation: landscape) {
-  /* Conteneur parent bandeau */
-.bandeau  {
-    margin: $margin-vw-x2 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
-}
 
-  /* Titre */
-.bandeau h2 {
-      padding: $padding-vw-d4 $padding-vw-d2; /* Adapter les espacements pour le mode paysage */
-}
-
-  /* Texte */
-.bandeau p {
-    padding: $padding-vw-d2 $padding-vw-base;
-    margin-bottom: $margin-vw-x2;
-}
-
-  /* Conteneur parent liste */
-.fonctionnement {
-    margin: $margin-vw-base $margin-vw-d2; /* Utilisation de vw pour le mode paysage */
-}
-
-  /* Liste des étapes */
-ol li {
-    margin: $margin-vw-base 0; /* Réduction des marges pour le mode paysage */
-    gap: $gap-vw-base; /* Ajuster l'espacement en utilisant vw */
-}
-
-  /* Icône */
-ol li i {
-    font-size: $font-size-vw-base;
-    margin: 0 $margin-vw-d4;
-    left: 4vw;
-}
-
-  /* Texte des étapes */
-ol li .li-txt {
-    padding: $padding-vw-base $padding-vw-x4; /* Adapter les padding pour landscape */
-    margin: $margin-vw-d4 $margin-vw-d4;
-    border-radius: $border-radius-vw-base;
-}
-
-  /* Numéros des étapes */
-ol li .puce_num {
-    height: 3vw;
-    width: 3vw;
-    font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
-}
-}
 /*--------------------------Desktop--------------------------*/
 @media (min-width: 63.991rem)  { 
     

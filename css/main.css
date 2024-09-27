@@ -395,13 +395,22 @@ img {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
   justify-content: center; /* Aligne les éléments dans la largeur*/
-  background: linear-gradient(180deg, #FF79DA, #9356DC); /**/
-  padding: 2vh 2vh; /**/
+  background: linear-gradient(180deg, #FF79DA, #9356DC); /* dégradé de couleur*/
+  padding: 2vh; /* Espace intérieur correspondant à 2% de la hauteur de l'écran */
   color: white; /* couleur du texte*/
-  width: 25vh; /*longueur du bouton correspondant à 22 % de la hauteur de l'écran*/
+  width: 25vh; /*longueur du bouton correspondant à 25 % de la hauteur de l'écran*/
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /*ombre*/
   border-radius: 4vh; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+  /* Landscape */
   /* Effet de survol*/
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .button--primary {
+    border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
+    width: 25vw; /* hauteur x12.5 valeur de base correspondant à 25 %de la largeur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
+    padding: 2vw;
+  }
 }
 .button--primary:hover {
   background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /*couleur dégradé*/
@@ -410,7 +419,7 @@ img {
 
 /* Texte du bouton*/
 .button--primary-txt {
-  font-size: 2vh;
+  font-size: 2vh; /**/
   font-weight: 100;
   align-content: center;
 }
@@ -763,8 +772,8 @@ header {
 /* Auteur              : Trackozor                                                                        */
 /* Date de création    : 25/09/24                                                                         */
 /* Dernière modification: 27/09/24                                                                        */
-/* Description         :  _section-                                                                       */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
+/* Description         :                                                                                  */
+/*     Styles pour la section bandeau et la liste de fonctionnement                                        */
 /*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
 /*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
 /*--------------------------------------------------------------------------------------------------------*/
@@ -784,12 +793,13 @@ header {
 /* Chemin du fichier */
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau {
-  display: flex;
-  flex-direction: column; /**/
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  flex-direction: column; /* alignement en colonne*/
   text-align: center; /* Aligne le texte dans l'axe horizontal*/
-  justify-content: center; /**/
-  margin: 2vh 1vh; /**/
-  align-items: center;
+  justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
+  margin: 2vh 1vh; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
+  align-items: center; /* Aligne les éléments dans la hauteur*/
+  /*  Landscape  */
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   .bandeau {
@@ -876,50 +886,6 @@ ol li .puce_num {
   font-size: 1.4vh;
 }
 
-/**/
-/* Media query pour le mode paysage (landscape) */
-@media (max-width: 63.99rem) and (orientation: landscape) {
-  /* Conteneur parent bandeau */
-  .bandeau {
-    margin: 4vw 0; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
-  }
-  /* Titre */
-  .bandeau h2 {
-    padding: 0.5vw 1vw; /* Adapter les espacements pour le mode paysage */
-  }
-  /* Texte */
-  .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 4vw;
-  }
-  /* Conteneur parent liste */
-  .fonctionnement {
-    margin: 2vw 1vw; /* Utilisation de vw pour le mode paysage */
-  }
-  /* Liste des étapes */
-  ol li {
-    margin: 2vw 0; /* Réduction des marges pour le mode paysage */
-    gap: 2vw; /* Ajuster l'espacement en utilisant vw */
-  }
-  /* Icône */
-  ol li i {
-    font-size: 2vw;
-    margin: 0 0.5vw;
-    left: 4vw;
-  }
-  /* Texte des étapes */
-  ol li .li-txt {
-    padding: 2vw 8vw; /* Adapter les padding pour landscape */
-    margin: 0.5vw 0.5vw;
-    border-radius: 2vw;
-  }
-  /* Numéros des étapes */
-  ol li .puce_num {
-    height: 3vw;
-    width: 3vw;
-    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
-  }
-}
 /*--------------------------Desktop--------------------------*/
 @media (min-width: 63.991rem) {
   .bandeau {
