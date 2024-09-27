@@ -147,6 +147,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------- Portrait ----------------------------------------------*/
 /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
+/* Taille des objets correspondant à 3% de la hauteur de l'écran*/
 /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
 /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
 /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
@@ -157,12 +158,14 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objets correspondant à 30 % de la hauteur de l'écran*/
 /*--------------------- Paysage ----------------------------------------------*/
 /* Taille des objects correspondant à 2% de la largeur de l'écran*/
+/* Taille des objects correspondant à 3% de la largeur de l'écran*/
 /* Taille des objects correspondant à 5% de la largeur de l' écran*/
 /* Taille des objects correspondant à 10 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 15 % de la largeur de l'écran*/
 /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
 /* Taille des objects correspondant à 30 % de la largeur de l'écran*/
+/* Taille des objects correspondant à 40 % de la largeur de l'écran*/
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -382,6 +385,11 @@ img {
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- Portrait--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
+/* _mixins.scss */
+/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans en mode portrait sur mobile */
+/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans desktop*/
 /* Bouton principal avec dégradé */
 .button--primary {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
@@ -457,14 +465,29 @@ input {
   border: none;
 }
 
-/*_card.scss */
+/* Nom du fichier      : _card.scss                                                                       */
+/* Auteur              : Trackozor                                                                        */
+/* Date de création    : 25/09/24                                                                         */
+/* Dernière modification: 27/09/24                                                                        */
+/* Description         : Style pour de bases réutilisables pour les boutons                              */
+/*                                                                                                       */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
 /* import mixin*/
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
 /* Mixin pour gérer les écrans en mode portrait sur mobile */
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 /* Mixin pour gérer les écrans desktop*/
-/**/
+/*---------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------Carte Logo-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
 .card-logo {
   height: 3vh;
   display: flex;
@@ -472,20 +495,25 @@ input {
   align-items: center;
   background-color: white;
   margin: 2vh 0;
-  /*-----mixin ------*/
+  /* landscape  */
+  /*  Desktop  */
 }
 @media (max-width: 63.9rem) and (orientation: landscape) {
   .card-logo {
-    height: 1.5vw;
+    height: 3vw;
+    margin: 2vw 0;
   }
 }
 @media (min-width: 63.91rem) {
   .card-logo {
     height: 3vw;
+    margin: 2vw 0;
   }
 }
 
-/*----------------- Carte localisation avec icône et ville ------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------- Carte localisation avec icône et ville ---------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
 .card-location {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   justify-content: center; /**/
@@ -505,7 +533,7 @@ input {
   .card-location {
     gap: 2vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
     width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
-    padding: 2vw 2vw; /* espace intérieur correspondant à 2%de l'écran*/
+    padding: 1vw 1vw; /* espace intérieur correspondant à 2%de l'écran*/
   }
 }
 
@@ -688,24 +716,47 @@ input {
   animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
 }
 
-/* _header.scss */
-/**/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _header.scss                                                                     */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/2024                                                                        */
+/* Dernière modification: 27/09/2024                                                                       */
+/* Description         : Styles pour le header                                                            */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Import mixin */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
 /* Mixin pour gérer les écrans en mode portrait sur mobile */
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 /* Mixin pour gérer les écrans desktop*/
+/*-- Conteneur principle----*/
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  flex-direction: column; /* Alignement en colonne */
+  align-items: center; /* Aligne les éléments verticalement*/
 }
 
+/*-- Card pour la localisation ----*/
 .card-location {
-  display: flex;
-  width: 100%;
-  border-top: 0.5vh solid lightgrey;
-  border-bottom: 0.5vh solid lightgrey;
+  width: 100%; /* la carte prend toute la largeur de son parent*/
+  border-top: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */
+  border-bottom: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */
+  /*  Landscape  */
+  /*  Desktop  */
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .card-location {
+    border-top: 0.5vw solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */
+    border-bottom: 0.5vw solid lightgrey;
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-location {
+    border: none; /* absence de bordure*/
+  }
 }
 
 /* Nom du fichier      : _section-bandeau.scss                                                             */
@@ -719,11 +770,18 @@ header {
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
-/* Framework utilisé   : SCSS                                                              */
+/* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Révisions :                                                                                             */
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
+/* ----- Import mixin-----------------------*/
+/* _mixins.scss */
+/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans en mode portrait sur mobile */
+/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans desktop*/
+/* Chemin du fichier */
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau {
   display: flex;
@@ -732,6 +790,11 @@ header {
   justify-content: center; /**/
   margin: 2vh 1vh; /**/
   align-items: center;
+}
+@media (max-width: 63.9rem) and (orientation: landscape) {
+  .bandeau {
+    margin: 2vw 1vw;
+  }
 }
 
 /* Titre */

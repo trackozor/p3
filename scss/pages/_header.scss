@@ -1,24 +1,40 @@
-/* _header.scss */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _header.scss                                                                     */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/2024                                                                        */
+/* Dernière modification: 27/09/2024                                                                       */
+/* Description         : Styles pour le header                                                            */
 
-/**/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Import mixin */
 @import '../mixins';
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;;
-  }  
-.card-location {
-  display: flex;
-  width: 100%;
-  border-top: 0.5vh solid lightgrey;
-  border-bottom: 0.5vh solid lightgrey;
 
-    }
-    @mixin mobile-landscape {
-  .card-location{
-    border-top: 0.5vw solid lightgrey;
-    border-bottom: 0.5vw solid lightgrey;
+/*-- Conteneur principle----*/
+header {
+  display: flex;/* Utilise flexbox pour aligner les éléments*/
+  flex-direction: column; /* Alignement en colonne */
+  align-items: center; /* Aligne les éléments verticalement*/
+}  
+
+/*-- Card pour la localisation ----*/
+.card-location {
+  width: 100%; /* la carte prend toute la largeur de son parent*/
+  border-top: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */ 
+  border-bottom: 0.5vh solid lightgrey;/* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */ 
+
+  /*  Landscape  */  
+  @include mobile-landscape {
+    border-top: 0.5vw solid lightgrey;/* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */ 
+    border-bottom: 0.5vw solid lightgrey/* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */ 
   }
   
+  /*  Desktop  */
+  @include desktop {
+    border:none;/* absence de bordure*/
+  }
 }

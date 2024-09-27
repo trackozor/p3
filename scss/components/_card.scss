@@ -1,29 +1,52 @@
-/*_card.scss */
+
+/* Nom du fichier      : _card.scss                                                                       */
+/* Auteur              : Trackozor                                                                        */
+/* Date de création    : 25/09/24                                                                         */
+/* Dernière modification: 27/09/24                                                                        */
+/* Description         : Style pour de bases réutilisables pour les boutons                              */
+/*                                                                                                       */
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : SCSS                                                                              */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+
 
 /* import mixin*/
 @import '../mixins';
 
+/*---------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------Carte Logo-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
 
-/**/
 .card-logo {
-    height: 3vh;
+    height:$object-size-vh-middle;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     margin: $margin-vh-base 0;
 
-    /*-----mixin ------*/
+    /* landscape  */
     @include mobile-landscape { 
-        height:1.5vw;
+        height:$object-size-vw-middle;
+        margin: $margin-vw-base 0;
     }
+
+    /*  Desktop  */
     @include desktop {
-        height:3vw;
-    }
-    
+        height:$object-size-vw-middle;
+        margin: $margin-vw-base 0;
+    }   
 }
 
-/*----------------- Carte localisation avec icône et ville ------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------- Carte localisation avec icône et ville ---------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
 
 .card-location {
     display: flex; /* Utilise flexbox pour aligner les éléments*/
@@ -42,7 +65,7 @@
     @include desktop {
         gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
         width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
-        padding: $padding-vw-base $padding-vw-base; /* espace intérieur correspondant à 2%de l'écran*/
+        padding: $padding-vw-d2 $padding-vw-d2; /* espace intérieur correspondant à 2%de l'écran*/
     }
 }
 

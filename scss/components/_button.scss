@@ -3,7 +3,7 @@
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- Portrait--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-
+@import '../mixins';
 
 /* Bouton principal avec dégradé */
 .button--primary {
@@ -58,7 +58,7 @@
     @include mobile-landscape {
       padding-right: $padding-vw-d2;
       font-size: $font-size-vw-title;
-      }
+    }
 }
 .icon-favorite:hover {
   animation: heartBeat 0.3s ease-in-out 3;

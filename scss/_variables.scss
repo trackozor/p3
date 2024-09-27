@@ -167,6 +167,7 @@ $border-shadow-vw: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre pour paysage*/
 
 /*--------------------- Portrait ----------------------------------------------*/
 $object-size-vh-base: 2vh; /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
+$object-size-vh-middle: 3vh; /* Taille des objets correspondant à 3% de la hauteur de l'écran*/
 $object-size-vh-x2: 4vh; /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
 $object-size-vh-x3: 6vh; /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
 $object-size-vh-x2-5: 5vh; /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
@@ -178,13 +179,14 @@ $object-size-vh-x15: 30vh; /* Taille des objets correspondant à 30 % de la haut
 
 /*--------------------- Paysage ----------------------------------------------*/
 $object-size-vw-base: 2vw; /* Taille des objects correspondant à 2% de la largeur de l'écran*/
+$object-size-vw-middle: 3vw;/* Taille des objects correspondant à 3% de la largeur de l'écran*/
 $object-size-vw-x2-5: 5vw; /* Taille des objects correspondant à 5% de la largeur de l' écran*/
 $object-size-vw-x5: 10vw; /* Taille des objects correspondant à 10 % de la largeur de l'écran*/
 $object-size-vw-x7-5: 15vw; /* Taille des objects correspondant à 15 % de la largeur de l'écran*/ 
 $object-size-vw-x10: 20vw; /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
 $object-size-vw-x12-5: 25vw; /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
 $object-size-vw-x15: 30vw; /* Taille des objects correspondant à 30 % de la largeur de l'écran*/
-$object-size-vw-x20: 40vw;
+$object-size-vw-x20: 40vw; /* Taille des objects correspondant à 40 % de la largeur de l'écran*/
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/

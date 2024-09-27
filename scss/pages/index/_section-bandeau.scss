@@ -10,12 +10,14 @@
 
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
-/* Framework utilisé   : SCSS                                                              */
+/* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Révisions :                                                                                             */
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
 
+/* ----- Import mixin-----------------------*/
+@import '../../mixins.scss'; /* Chemin du fichier */
 
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
@@ -25,6 +27,10 @@
     justify-content: center; /**/
     margin: $margin-vh-base $margin-vh-d2; /**/
     align-items: center;
+
+    @include mobile-landscape {
+      margin: $margin-vw-base $margin-vw-d2;
+    }
 }
 
 
