@@ -148,11 +148,11 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
 /*---------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage badge------------------------------------------------------*/
+/*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
-/* Gère l affichage du badge flex= affiché, none= masqué*/
-/* Gère l affichage du badge flex= affiché, none= masqué*/
-/* Gère l affichage du badge flex= affiché, none= masqué*/
+/* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
+/* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
+/* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -480,6 +480,7 @@ input {
   }
 }
 /*_card.scss */
+/**/
 .card-logo {
   height: 3vh;
   display: flex;
@@ -489,6 +490,7 @@ input {
   margin: 2vh 0;
 }
 
+/*----------------- Carte localisation avec icône et ville ------------------*/
 .card-location {
   display: flex;
   justify-content: center;
@@ -525,6 +527,17 @@ input {
   padding: 2vh 0.5vh;
 }
 
+.card .card-title {
+  font-size: 2vh;
+}
+
+.card h3 {
+  font-weight: 900;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ---------------------------------------Badge--------------------------------------------- */
+/* ------------------------------------------------------------------------------------------*/
 .card .badge {
   display: flex;
   position: absolute;
@@ -533,15 +546,26 @@ input {
   bottom: 82%;
 }
 
-.card .card-content .card-title {
-  font-size: 2vh;
+/*------------ Affichage Badges ----------------*/
+#palette .badge {
+  display: flex;
 }
 
-.card .card-content .card-title h3 {
-  font-weight: 900;
+#enchantee .badge {
+  display: flex;
 }
 
-/**--------------------------- Ajustemement personnalisé des images ----------------------------------*/
+#delice .badge {
+  display: none;
+}
+
+#francaise .badge {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
 /* Restaurant  La palette du goût */
 #palette img {
   display: flex; /* Utilse flexbox pour aligner les éléments*/
@@ -554,19 +578,6 @@ input {
   display: flex;
   position: relative;
   object-position: 50% 60%;
-}
-
-/*------------------------------- Affichage Badges --------------------------------*/
-#palette .badge {
-  display: flex;
-}
-
-#enchantee .badge {
-  display: flex;
-}
-
-#delice .badge {
-  display: none;
 }
 
 /* Styles spécifiques au header */

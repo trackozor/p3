@@ -184,10 +184,10 @@ $object-size-vw-x10: 20vw; /* Taille des objects  correspondant à 20 % de la la
 $object-size-vw-x12-5: 25vw; /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
 
 /*---------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage badge------------------------------------------------------*/
+/*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
 
-$badge-palette: flex; /* Gère l affichage du badge flex= affiché, none= masqué*/
-$badge-enchantee: flex; /* Gère l affichage du badge flex= affiché, none= masqué*/
-$badge-delices: none; /* Gère l affichage du badge flex= affiché, none= masqué*/
-$badge-francaise: none /* Gère l affichage du badge flex= affiché, none= masqué*/
+$badge-palette: flex; /* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
+$badge-enchantee: flex; /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
+$badge-delices: none; /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
+$badge-francaise: none /* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
