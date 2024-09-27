@@ -33,9 +33,10 @@
 .card img {
     width: 100%;
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
-    height:25vh;
+    height:20vh;
     object-fit: cover;
     position: relative;
+    object-position: center bottom;
 }
 
 .card-content {
@@ -61,3 +62,16 @@
     font-weight: $font-weight-h-bold;
 }
 
+/**--------------------------- Ajustemement personnalisé des images ----------------------------------*/
+
+/* Restaurant palette*/
+#palette img {
+    display: flex; /* Utilse flexbox pour aligner les éléments*/
+    position: relative;
+    object-position: 50% 60%;   
+}
+#enchantee  img {
+    display: flex;
+    position: relative;
+    object-position: 50% 60%;   
+}

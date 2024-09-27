@@ -147,6 +147,9 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects correspondant à 15 % de la largeur de l'écran*/
 /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
+/*---------------------------------------------------------------------------------------------------*/
+/*----------------------------- Affichage badge------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -505,9 +508,10 @@ input {
 .card img {
   width: 100%;
   border-radius: 2vh 2vh 0 0;
-  height: 25vh;
+  height: 20vh;
   object-fit: cover;
   position: relative;
+  object-position: center bottom;
 }
 
 .card-content {
@@ -532,6 +536,20 @@ input {
 
 .card .card-content .card-title h3 {
   font-weight: 900;
+}
+
+/**--------------------------- Ajustemement personnalisé des images ----------------------------------*/
+/* Restaurant palette*/
+#palette img {
+  display: flex; /* Utilse flexbox pour aligner les éléments*/
+  position: relative;
+  object-position: 50% 60%;
+}
+
+#enchantee img {
+  display: flex;
+  position: relative;
+  object-position: 50% 60%;
 }
 
 /* Styles spécifiques au header */
