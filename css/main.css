@@ -558,7 +558,7 @@ input {
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 2vh 0;
+  margin: 1vh 0;
   /* landscape  */
   /*  Desktop  */
 }
@@ -580,8 +580,8 @@ input {
 /*---------------------------------------------------------------------------------------------------------*/
 .card-location {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
-  justify-content: center; /**/
-  gap: 2vh; /* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
+  justify-content: center; /*aligne les éléments depuis le centre*/
+  gap: 0.5vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
   background-color: #EAEAEA; /* Couleur de fond*/
   width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
   padding: 2vh 2vh;
@@ -599,6 +599,11 @@ input {
     width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
     padding: 1vw 1vw; /* espace intérieur correspondant à 2%de l'écran*/
   }
+}
+
+.card-location i {
+  font-size: 2vh;
+  color: black;
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -890,10 +895,17 @@ header {
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-  margin: 8vh 0;
+  margin: 1vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 /*----- Icône Store -----*/
@@ -903,17 +915,17 @@ header {
 
 ol li {
   display: flex;
-  margin: 4vh 0;
+  margin: 2vh 0;
   align-items: center;
   font-weight: 700;
   position: relative;
   z-index: 1;
 }
 
-ol li i {
+i {
   color: grey;
   font-size: 2vh;
-  margin-left: 2vh;
+  margin-right: 2vh;
 }
 
 ol li .li-txt {
@@ -921,11 +933,11 @@ ol li .li-txt {
   position: relative;
   z-index: 1;
   background-color: #EAEAEA;
-  padding: 2vh 4vh;
+  padding: 2vh 2vh 2vh 4vh;
   left: 1vh;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 95%;
 }
 
 ol li .puce_num {
@@ -941,10 +953,6 @@ ol li .puce_num {
   align-items: center;
   color: white;
   font-size: 1.4vh;
-}
-
-ol h3 {
-  margin: 0 6vh;
 }
 
 /**/

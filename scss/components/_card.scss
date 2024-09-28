@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    margin: $margin-vh-base 0;
+    margin: $margin-vh-d2 0;
 
     /* landscape  */
     @include mobile-landscape { 
@@ -50,8 +50,8 @@
 
 .card-location {
     display: flex; /* Utilise flexbox pour aligner les éléments*/
-    justify-content: center;/**/
-    gap:$gap-vh-base;/* Espace entre les elements correspondant à 2% de la hauteur de l'écran*/
+    justify-content: center;/*aligne les éléments depuis le centre*/
+    gap:$gap-vh-d4;/* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
     background-color: $primary-background-color; /* Couleur de fond*/
     width: $object-size-vh-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
     padding: $padding-vh-base $padding-vh-base;
@@ -69,6 +69,14 @@
     }
 }
 
+.card-location i {
+    font-size: $font-size-vh-base;
+    color: black
+}
+
+.carte-location address {
+    
+}
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
 /*---------------------------------------------------------------------------------*/
