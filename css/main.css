@@ -891,14 +891,9 @@ header {
 /*-------- Conteneur parent liste */
 .fonctionnement {
   margin: 8vh 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.fonctionnement ol {
-  display: block;
-  justify-content: center;
 }
 
 /*----- Icône Store -----*/
@@ -911,7 +906,6 @@ ol li {
   margin: 4vh 0;
   align-items: center;
   font-weight: 700;
-  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -919,12 +913,7 @@ ol li {
 ol li i {
   color: grey;
   font-size: 2vh;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 6vh;
-  position: absolute;
+  margin-left: 2vh;
 }
 
 ol li .li-txt {
@@ -933,11 +922,10 @@ ol li .li-txt {
   z-index: 1;
   background-color: #EAEAEA;
   padding: 2vh 4vh;
-  align-items: center;
-  width: 92.5%;
+  left: 1vh;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-  justify-content: center;
+  width: 100%;
 }
 
 ol li .puce_num {
@@ -953,6 +941,10 @@ ol li .puce_num {
   align-items: center;
   color: white;
   font-size: 1.4vh;
+}
+
+ol h3 {
+  margin: 0 6vh;
 }
 
 /**/

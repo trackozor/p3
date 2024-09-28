@@ -50,16 +50,14 @@
 /*-------- Conteneur parent liste */
 .fonctionnement {
     margin: 8vh 0; 
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items:  center; 
-    justify-content: center; 
 }
 
-.fonctionnement ol {
-    display: block;
-    justify-content: center;
 
-}
+
+
 /*----- Icône Store -----*/
 .fonctionnement .fonctionnement-content .fa-store {
     color:$button--search-primary-color;
@@ -69,7 +67,6 @@ ol li {
     margin:$margin-vh-x2 0;
     align-items: center;
     font-weight: $font-weight-bold;
-    justify-content: center;
     position: relative;
     z-index: 1;
 }
@@ -77,12 +74,8 @@ ol li {
 ol li i {
     color:grey;
     font-size: $font-size-vh-base;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left:6vh;
-    position:absolute ;
+    margin-left: 2vh;
+   
 }
 
 ol li .li-txt{
@@ -91,11 +84,10 @@ ol li .li-txt{
     z-index: 1;
     background-color:$primary-background-color;
     padding:$padding-vh-base  $padding-vh-x2;
-    align-items: center;
-    width:92.5%;
+    left:1vh;
     border-radius:$border-radius-vh-base;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-    justify-content: center;
+    width: 100%;
     
 
 }
@@ -113,6 +105,9 @@ ol li .puce_num {
     color:white;
     font-size:1.4vh;
 
+}
+ol h3 {
+  margin: 0 6vh;
 }
 /**/
 
