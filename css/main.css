@@ -553,25 +553,25 @@ input {
 /*-----------------------------------------------Carte Logo-----------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
 .card-logo {
-  height: 3vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  margin: 1vh 0;
+  height: 3vh; /* Défini la hauteur de la carte correspondant à 1.5 % de la hauteur de l'écran */
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  background-color: white; /* Couleur de fond de la carte logo*/
+  margin: 1vh 0; /* Définit les marges verticales de la carte */
   /* landscape  */
   /*  Desktop  */
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .card-logo {
-    height: 3vw;
-    margin: 2vw 0;
+    height: 3vw; /* Ajuste la hauteur correspondant à 1.5% de  la largeur de l'écran */
+    margin: 2vw 0; /* Ajuste les marges hautes/basses correspondant à 2% de la largeur de l'écran */
   }
 }
 @media (min-width: 63.91rem) {
   .card-logo {
-    height: 3vw;
-    margin: 2vw 0;
+    height: 3vw; /* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
+    margin: 2vw 0; /* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
   }
 }
 
@@ -584,7 +584,7 @@ input {
   gap: 0.5vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
   background-color: #EAEAEA; /* Couleur de fond*/
   width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
-  padding: 2vh 2vh;
+  padding: 2vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .card-location {
@@ -602,7 +602,7 @@ input {
 }
 
 .card-location i {
-  font-size: 2vh;
+  font-size: 2vh; /*Taille correspondant à 2 % de la hauteur de l 'écran*/
   color: black;
   margin-right: 1vh;
 }

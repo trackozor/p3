@@ -24,23 +24,23 @@
 /*---------------------------------------------------------------------------------------------------------*/
 
 .card-logo {
-    height:$object-size-vh-middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    margin: $margin-vh-d2 0;
+    height:$object-size-vh-middle;/* Défini la hauteur de la carte correspondant à 1.5 % de la hauteur de l'écran */
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
+    justify-content: center;/* Centre le contenu horizontalement */
+    align-items: center;/* Centre le contenu verticalement */
+    background-color: white;/* Couleur de fond de la carte logo*/
+    margin: $margin-vh-d2 0; /* Définit les marges verticales de la carte */
 
     /* landscape  */
     @include mobile-landscape { 
-        height:$object-size-vw-middle;
-        margin: $margin-vw-base 0;
+        height:$object-size-vw-middle;/* Ajuste la hauteur correspondant à 1.5% de  la largeur de l'écran */
+        margin: $margin-vw-base 0;/* Ajuste les marges hautes/basses correspondant à 2% de la largeur de l'écran */
     }
 
     /*  Desktop  */
     @include desktop {
-        height:$object-size-vw-middle;
-        margin: $margin-vw-base 0;
+        height:$object-size-vw-middle;/* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
+        margin: $margin-vw-base 0;/* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
     }   
 }
 
@@ -54,7 +54,7 @@
     gap:$gap-vh-d4;/* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
     background-color: $primary-background-color; /* Couleur de fond*/
     width: $object-size-vh-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
-    padding: $padding-vh-base $padding-vh-base;
+    padding: $padding-vh-base ; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
     
     @include mobile-landscape {
         gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
@@ -70,7 +70,7 @@
 }
 
 .card-location i {
-    font-size: $font-size-vh-base;
+    font-size: $font-size-vh-base;/*Taille correspondant à 2 % de la hauteur de l 'écran*/
     color: black;
     margin-right: $margin-vh-d2;
 }
