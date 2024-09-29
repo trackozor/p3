@@ -70,15 +70,27 @@
 }
 
 .card-location i {
-    font-size: $font-size-vh-base;
+    font-size: $font-size-vh-x2;
     color: black;
     margin-right: $margin-vh-d2;
+
+    @include mobile-landscape {
+        font-size: $font-size-vw-x2;
+        margin-right: $margin-vw-base;
+    }
+    
+    @include desktop {
+        font-size: $font-size-vw-x2;
+        margin-right: $margin-vw-base;
+    }
 }
 
 .carte-location address {
     font-size: $font-size-vh-base;
     color: black;
 }
+
+
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
 /*---------------------------------------------------------------------------------*/
@@ -151,6 +163,14 @@
 
 .card h3 {
     font-weight: $font-weight-h-bold;
+
+    @include mobile-landscape {
+        font-weight: $font-weight-h-bold;
+    }
+    
+    @include desktop {
+        font-weight: $font-weight-h-bold;
+    }
 }
 
 .card-txt {
@@ -159,6 +179,10 @@
     @include mobile-landscape {
         padding: $padding-vw-d4 0;
     }
+
+    @include desktop {
+        padding: $padding-vw-d4 0;
+    }   
 }
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------Badge--------------------------------------------- */
