@@ -48,6 +48,7 @@
 /*------------------------------- Carte localisation avec icône et ville ---------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
 
+/* Conteneur */
 .card-location {
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     justify-content: center;/*aligne les éléments depuis le centre*/
@@ -55,13 +56,15 @@
     background-color: $primary-background-color; /* Couleur de fond*/
     width: $object-size-vh-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
     padding: $padding-vh-base ; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
-    
+
+    /* landscape */
     @include mobile-landscape {
         gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
         width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
         padding: $padding-vw-base $padding-vw-base; /* espace intérieur correspondant à 2 % de la largeur de l'écran*/ 
     }
     
+    /* Desktop */
     @include desktop {
         gap:$gap-vw-base; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
         width: $object-size-vw-x10; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
@@ -69,12 +72,14 @@
     }
 }
 
+/* Icône localisation*/
 .card-location i {
     font-size: $font-size-vh-base;/*Taille correspondant à 2 % de la hauteur de l 'écran*/
-    color: black;
-    margin-right: $margin-vh-d2;
+    color: black;/* Couleur icône */
+    margin-right: $margin-vh-d2;/* marge droite correspond à 1% de la hauteur de l'écran*/
 }
 
+/* Adresse localisation*/
 .carte-location address {
     font-size: $font-size-vh-base;
     color: black;
@@ -93,6 +98,7 @@
     position:relative;
     margin:$margin-vh-base;
 
+    /* landscape  */
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
@@ -101,33 +107,39 @@
         
     }
 
-
+    /* desktop */
     @include desktop {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
         box-shadow: $border-shadow-vw; /* ombre*/
-        margin: 0 $margin-vw-d2;
+        margin: 0 $margin-vw-d2; /* Marge gauche/droite correspondant à 1% de la hauteur de l'écran*/
         
     }
 }
-.card img {
-    width: 100%;
-    border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;
-    height:70%;/* L 'image prend 70% de la hauteur de la carte*/
-    object-fit: cover;
-    position: relative;
-    object-position: center bottom ;
 
+/* Image */
+.card img {
+    width: 100%;/* Prend toute la largeur du conteneur */
+    border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+    height:70%;/* L 'image prend 70% de la hauteur de la carte*/
+    object-fit: cover;/* l image est coupe pour s'adapter au conteneur */
+    position: relative;
+    object-position: center bottom ;/* Place l'image centrée en bas*/
+
+    /* landscape */    
     @include mobile-landscape {
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
         object-fit: cover; 
     }
+    
+    /* desktop */
     @include desktop {
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
         object-fit: cover; 
     }
 }
 
+/* Zone de texte */
 .card-content {
     display: flex;
     justify-content: space-between;
