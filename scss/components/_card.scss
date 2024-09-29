@@ -217,7 +217,7 @@ footer {
     justify-content:flex-start;
     align-items:center;
     background-color: black;
-    padding: $padding-vh-d2;
+    padding: $padding-vh-base;
     color:white;
     margin: 2vh;
 }
@@ -225,8 +225,22 @@ footer {
 .fa-handshake, .fa-utensils {
     margin-right:2vh;
     margin-left:0;
+    color:white
 }
 
+.fa-handshake {
+    transform:scaleX(1)rotate(325deg);
+    font-size: 1.5vh;
+}
 .footer-card li {
     margin-top:1vh;
+}
+
+.footer-card img {
+    background-color:white;
+    width: 30%;
+    filter:invert(100%);
+    margin:1vh 0;
+    padding-bottom: 1vh;
+
 }
