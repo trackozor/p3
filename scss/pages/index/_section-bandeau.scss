@@ -126,31 +126,66 @@ ol li .puce_num {
     
 .bandeau  {
     margin: $margin-vw-x2 $margin-vw-x4; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
+    
+    @include mobile-landscape {
+        margin: $margin-vw-x2 $margin-vw-x4;
+    }
+
+    @include desktop {
+        margin: $margin-vw-x2 $margin-vw-x4;
+    }
 }
 
   /* Titre */
 .bandeau h2 {
-      padding: $padding-vw-d4 $padding-vw-d2; /* Adapter les espacements pour le mode paysage */
+        padding: $padding-vw-d4 $padding-vw-d2;
+        
+        @include mobile-landscape {
+            padding: $padding-vw-d4 $padding-vw-d2;
+        }
+
+        @include desktop {
+            padding: $padding-vw-d4 $padding-vw-d2;
+        }
 }
 
   /* Texte */
 .bandeau p {
     padding: $padding-vw-d2 $padding-vw-base;
     margin-bottom: $margin-vw-x2;
+
+    @include mobile-landscape {
+        padding: $padding-vw-d2 $padding-vw-base;
+        margin-bottom: $margin-vw-x2;
+    }
+
+    @include desktop {
+        padding: $padding-vw-d2 $padding-vw-base;
+        margin-bottom: $margin-vw-x2;
+    }
 }
 
   /* Conteneur parent liste */
 .fonctionnement h2 {
     padding-left: $padding-vw-x2;
 
-
+    @include mobile-landscape {
+        padding-left: $padding-vw-x2;
+    }
 }
 
   /* Icône */
 ol li i {
-    font-size: $font-size-vw-base;
+    font-size: $font-size-vh-base;
     margin: 0 $margin-vw-d4;
     left: 1.5vw;
+
+    @include mobile-landscape {
+        font-size: $font-size-vw-base;
+        margin: 0 $margin-vw-d4;
+        left: 1.5vw;
+    }
+    
 }
 
   /* Texte des étapes */
@@ -160,6 +195,14 @@ ol li .li-txt {
     border-radius: $border-radius-vw-base;
     font-size: $font-size-vw-base;
     width: 19vw;
+
+    @include mobile-landscape {
+        padding: $padding-vw-base $padding-vw-x2;
+        margin: $margin-vw-base $margin-vw-base;
+        border-radius: $border-radius-vw-base;
+        font-size: $font-size-vw-base;
+        width: 19vw;
+    }
     
 }
 
@@ -169,11 +212,24 @@ ol li .puce_num {
     width: 2vw;
     font-size: $font-size-vw-middle; /* Ajuster la taille de la police pour le mode paysage */
     left: -0.5vw;
+
+    @include mobile-landscape {
+        height: 2vw;
+        width: 2vw;
+        font-size: $font-size-vw-middle;
+        left: -0.5vw;
+    }
 }
 
 .fonctionnement ol  {
     display: flex;  
     justify-content: space-between; ;
     margin: 0  5vw;
+
+    @include mobile-landscape {
+        display: flex;
+        justify-content: space-between;
+        margin: 0  5vw;
+    }
 }
 }
