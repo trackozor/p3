@@ -602,21 +602,9 @@ input {
 }
 
 .card-location i {
-  font-size: 4vh;
+  font-size: 2vh;
   color: black;
   margin-right: 1vh;
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .card-location i {
-    font-size: 4vw;
-    margin-right: 2vw;
-  }
-}
-@media (min-width: 63.91rem) {
-  .card-location i {
-    font-size: 4vw;
-    margin-right: 2vw;
-  }
 }
 
 .carte-location address {
@@ -635,7 +623,7 @@ input {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   height: 30vh; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
   position: relative;
-  margin: 2vh 0;
+  margin: 2vh;
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .card {
@@ -666,7 +654,6 @@ input {
   .card img {
     border-radius: 2vw 2vw 0 0;
     object-fit: cover;
-    transforme: scale(0.8);
   }
 }
 @media (min-width: 63.91rem) {
@@ -703,26 +690,11 @@ input {
 .card h3 {
   font-weight: 900;
 }
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .card h3 {
-    font-weight: 900;
-  }
-}
-@media (min-width: 63.91rem) {
-  .card h3 {
-    font-weight: 900;
-  }
-}
 
 .card-txt {
   padding: 0.5vh 0;
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .card-txt {
-    padding: 0.5vw 0;
-  }
-}
-@media (min-width: 63.91rem) {
   .card-txt {
     padding: 0.5vw 0;
   }
@@ -771,6 +743,28 @@ input {
   display: flex;
   position: relative;
   object-position: 50% 60%;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/*----------------------------------------- Footer Carte----------- ----------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  padding: 1vh;
+  color: white;
+  margin: 2vh;
+}
+
+.fa-handshake, .fa-utensils {
+  margin-right: 2vh;
+  margin-left: 0;
+}
+
+.footer-card li {
+  margin-top: 1vh;
 }
 
 /* Styles spécifiques au header */
