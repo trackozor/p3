@@ -623,6 +623,7 @@ input {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   height: 30vh; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
   position: relative;
+  margin: 2vh 0;
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .card {
@@ -732,7 +733,7 @@ input {
 /* ---------------------------------------------------------------------------------------------------*/
 /* Restaurant  La palette du goût */
 #palette img {
-  display: flex; /* Utilse flexbox pour aligner les éléments*/
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
   position: relative;
   object-position: 50% 60%;
 }
@@ -933,7 +934,7 @@ ol li {
 }
 
 .li-txt h3 {
-  padding-right: 5vh;
+  margin-right: 4vh;
 }
 
 i {
@@ -1018,11 +1019,11 @@ ol li .puce_num {
   }
 }
 /*_section-restaurant.scss*/
-#section-restaurant {
+section-restaurant {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4vh 0;
+  margin: 4vh 0;
 }
 
 /*# sourceMappingURL=main.css.map */

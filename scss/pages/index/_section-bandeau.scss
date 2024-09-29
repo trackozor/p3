@@ -30,7 +30,7 @@
 
     /*  Landscape  */
     @include mobile-landscape {
-      margin: $margin-vw-base $margin-vw-d2;
+    margin: $margin-vw-base $margin-vw-d2;
     }
 }
 
@@ -80,7 +80,7 @@ ol li {
     justify-content: space-around;
 }
 .li-txt h3 {
-    padding-right: 5vh;
+    margin-right: $margin-vh-x2;
 }
 
 i {

@@ -1,8 +1,8 @@
 /*_section-restaurant.scss*/
 
-#section-restaurant {
+section-restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $margin-vh-x2 0;
+    margin: $margin-vh-x2 0;
 }

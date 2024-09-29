@@ -91,6 +91,7 @@
     box-shadow: $border-shadow-vh; /* ombre*/
     height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
+    margin:$margin-vh-base 0;
 
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
@@ -108,7 +109,6 @@
         margin: 0 $margin-vw-d2;
         
     }
- 
 }
 .card img {
     width: 100%;
@@ -196,7 +196,7 @@
 
 /* Restaurant  La palette du goût */
 #palette img {
-    display: flex; /* Utilse flexbox pour aligner les éléments*/
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
     position: relative;
     object-position: 50% 60%;   
 }
