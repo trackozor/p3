@@ -139,7 +139,7 @@ ol li .puce_num {
   /* Titre */
 .bandeau h2 {
         padding: $padding-vw-d4 $padding-vw-d2;
-        
+
         @include mobile-landscape {
             padding: $padding-vw-d4 $padding-vw-d2;
         }
@@ -167,7 +167,7 @@ ol li .puce_num {
 
   /* Conteneur parent liste */
 .fonctionnement h2 {
-    padding-left: $padding-vw-x2;
+    padding: $padding-vw-x2;
 
     @include mobile-landscape {
         padding-left: $padding-vw-x2;
@@ -177,7 +177,7 @@ ol li .puce_num {
   /* Icône */
 ol li i {
     font-size: $font-size-vh-base;
-    margin: 0 $margin-vw-d4;
+    margin: 0 ;
     left: 1.5vw;
 
     @include mobile-landscape {
@@ -190,18 +190,18 @@ ol li i {
 
   /* Texte des étapes */
 ol li .li-txt {
-    padding: $padding-vw-base $padding-vw-x2; /* Adapter les padding pour landscape */
-    margin: $margin-vw-d4 $margin-vw-d4;
+    padding: $padding-vw-base 0 0 $padding-vw-base; /* Adapter les padding pour landscape */
+    margin-right:20vh;
     border-radius: $border-radius-vw-base;
     font-size: $font-size-vw-base;
-    width: 19vw;
+    width:auto;
 
+    
     @include mobile-landscape {
         padding: $padding-vw-base $padding-vw-x2;
         margin: $margin-vw-base $margin-vw-base;
         border-radius: $border-radius-vw-base;
         font-size: $font-size-vw-base;
-        width: 19vw;
     }
     
 }
@@ -221,15 +221,4 @@ ol li .puce_num {
     }
 }
 
-.fonctionnement ol  {
-    display: flex;  
-    justify-content: space-between; ;
-    margin: 0  5vw;
-
-    @include mobile-landscape {
-        display: flex;
-        justify-content: space-between;
-        margin: 0  5vw;
-    }
-}
 }

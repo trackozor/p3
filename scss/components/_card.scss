@@ -96,7 +96,7 @@
     box-shadow: $border-shadow-vh; /* ombre*/
     height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
-    margin:$margin-vh-base;
+    margin:$margin-vh-d2;
 
     /* landscape  */
     @include mobile-landscape {
@@ -128,20 +128,20 @@
 
     /* landscape */    
     @include mobile-landscape {
-        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
-        object-fit: cover; 
+        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
+        object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
     }
     
     /* desktop */
     @include desktop {
-        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;
-        object-fit: cover; 
+        border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+        object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
     }
 }
 
 /* Zone de texte */
 .card-content {
-    display: flex;
+    display: flex;/* Utilise flexbox pour aligner le éléments*/
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -154,13 +154,19 @@
 }
 .card .card-title  {
     font-size: $font-size-vh-base;
-    gap:$gap-vh-d2;
+    gap:$gap-vh-d4;
+
+
     @include mobile-landscape {
         font-size:$font-size-vw-base;
         gap:$gap-vw-d2;
     }
 }
-
+.card i {
+    font-size: $font-size-vh-title;
+    margin-bottom:2vh;
+    
+}
 .card h3 {
     font-weight: $font-weight-h-bold;
 }
@@ -180,8 +186,9 @@
     display: flex;
     position : absolute;
     z-index: 3;
-    left: 72%;
-    bottom: 82%;
+    right: 3%;
+    top:3%;
+    
     }
 
 

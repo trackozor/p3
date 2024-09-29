@@ -59,7 +59,7 @@
 .badge {
   background-color:$button--new-primary-color;  /* Couleur vert clair */
   color: $button--new-secondary-color; /* couleur vert foncé*/
-  font-size: $font-size-vh-base; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
+  font-size: $font-size-vh-middle; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
   padding:$padding-vh-d2 $padding-vh-base; /* espace intérieur haut/bas et gauche/droite correspondant respectivement à 1%  et 2 %de la hauteur de l'écran*/
   width:$object-size-vh-x3; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la hauteur de l'écran*/
   font-weight: $font-weight-h-bold;/* Accentuation police valeur=900 */
