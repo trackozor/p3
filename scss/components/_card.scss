@@ -71,11 +71,13 @@
 
 .card-location i {
     font-size: $font-size-vh-base;
-    color: black
+    color: black;
+    margin-right: $margin-vh-d2;
 }
 
 .carte-location address {
-    
+    font-size: $font-size-vh-base;
+    color: black;
 }
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/

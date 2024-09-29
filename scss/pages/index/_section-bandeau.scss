@@ -52,48 +52,53 @@
     margin: 1vh 0; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position:relative;
 }
 
 
 ol {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width:100%
+  align-items: center;
+  width: 100%;
 }
 
 /*----- Icône Store -----*/
-.fonctionnement .fonctionnement-content .fa-store {
+ .fa-store {
     color:$button--search-primary-color;
 }
 ol li {
     display: flex;
-    margin:$margin-vh-base 0;
+    margin:$margin-vh-base $margin-vh-d2;
     align-items: center;
     font-weight: $font-weight-bold;
     position: relative;
     z-index: 1;
+    width: 100%;
+}
+.li-txt h3 {
+    margin:0 $margin-vh-base;
 }
 
 i {
     color:grey;
     font-size: $font-size-vh-base;
-    margin-right: 2vh;
+    margin: 0 $margin-vh-base;
    
 }
 
-ol li .li-txt{
+.li-txt{
     display: flex;
     position: relative;  
     z-index: 1;
     background-color:$primary-background-color;
-    padding:$padding-vh-base  $padding-vh-base $padding-vh-base $padding-vh-x2;
     left:1vh;
     border-radius:$border-radius-vh-base;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-    width:95%
-    
+    width:60vh;
+    justify-content: center;
+    height:5vh;
+    align-items: center;
 
 }
 ol li .puce_num {
