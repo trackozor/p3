@@ -327,7 +327,6 @@ table {
 body {
   font-family: "Roboto", sans-serif; /* Style police par défaut */
   font-size: 2vh; /* Taille de police de base correspondant à 2 % de la hauteur*/
-  padding: 0 2vh; /* Esapace intérieur gauche et droite correspondant à 2% de la hauteur de l'écran*/
   display: block; /* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   justify-content: center; /*centre horizontalement depuis le centre*/
   background-color: white; /* Couleur de fond de base*/
@@ -337,13 +336,13 @@ body {
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
-    padding: 0 2vw; /*Esapace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
+    padding: 0 2vw; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 @media (min-width: 63.91rem) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
-    padding: 0 2vw; /*Esapace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
+    padding: 0 2vw; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 
@@ -386,11 +385,6 @@ img {
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- Portrait--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/* _mixins.scss */
-/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
-/* Mixin pour gérer les écrans en mode portrait sur mobile */
-/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
-/* Mixin pour gérer les écrans desktop*/
 /* Bouton principal avec dégradé */
 .button--primary {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
@@ -543,12 +537,6 @@ input {
 /* Révisions :                                                                                             */
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
-/* import mixin*/
-/* _mixins.scss */
-/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
-/* Mixin pour gérer les écrans en mode portrait sur mobile */
-/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
-/* Mixin pour gérer les écrans desktop*/
 /*---------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------Carte Logo-----------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
@@ -637,7 +625,8 @@ input {
     border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
     height: 40vw; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    margin: 0 2vw;
+    margin: 0.5vw 4vw;
+    height: auto;
   }
 }
 @media (min-width: 63.91rem) {
@@ -664,6 +653,8 @@ input {
   .card img {
     border-radius: 2vw 2vw 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
     object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
+    width: 100%;
+    height: 40vw;
   }
 }
 @media (min-width: 63.91rem) {
@@ -753,6 +744,12 @@ input {
   position: relative;
   object-position: 50% 60%;
 }
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  #palette img {
+    object-position: 50% 60%;
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
+  }
+}
 
 /* Restaurant  la note enchantée*/
 #enchantee img {
@@ -760,18 +757,18 @@ input {
   position: relative;
   object-position: 50% 60%;
 }
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  #enchantee img {
+    object-position: 50% 60%;
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
+  }
+}
 
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------- ----------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
-footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: black;
+.footer-card {
   padding: 2vh;
-  color: white;
-  margin: 2vh;
 }
 
 .fa-handshake, .fa-utensils {
@@ -868,17 +865,12 @@ footer {
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-/* Import mixin */
-/* _mixins.scss */
-/* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
-/* Mixin pour gérer les écrans en mode portrait sur mobile */
-/* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
-/* Mixin pour gérer les écrans desktop*/
 /*-- Conteneur principle----*/
 header {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Aligne les éléments verticalement*/
+  width: 100%;
 }
 
 /*-- Card pour la localisation ----*/
@@ -899,6 +891,31 @@ header {
   .card-location {
     border: none; /* absence de bordure*/
   }
+}
+
+/* Styles spécifique header*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _footer.scss                                                                      */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 27/09/24                                                                         */
+/* Description         : Fichier contenant les styles pour le footer et gestion des           */
+/*                       responsive (mobile et desktop)                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+footer {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin: 2vh 0;
+  padding: 0;
+  width: 100vh;
 }
 
 /* Nom du fichier      : _section-bandeau.scss                                                             */
@@ -930,7 +947,7 @@ header {
   flex-direction: column; /* alignement en colonne*/
   text-align: center; /* Aligne le texte dans l'axe horizontal*/
   justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
-  margin: 2vh 1vh; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
+  margin: 2vh 4vh; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
   /*  Landscape  */
 }
@@ -954,11 +971,13 @@ header {
 
 /*-------- Conteneur parent liste */
 .fonctionnement {
-  margin: 1vh 0;
+  margin: 10vh 0;
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: center;
+  gap: 3vh;
+  margin: 10vh 3vh;
 }
 
 ol {
@@ -999,7 +1018,7 @@ i {
   display: flex;
   position: relative;
   z-index: 1;
-  background-color: #EAEAEA;
+  background-color: "#D3D3D3";
   left: 1vh;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
@@ -1026,123 +1045,14 @@ ol li .puce_num {
 
 /**/
 /*--------------------------Desktop--------------------------*/
-@media (min-width: 63.991rem) {
-  .bandeau {
-    margin: 4vw 8vw; /* Utilisation de vw au lieu de vh pour adapter aux écrans plus larges */
-  }
-  /* Titre */
-  /* Texte */
-  /* Conteneur parent liste */
-  /* Icône */
-  /* Texte des étapes */
-  /* Numéros des étapes */
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .bandeau {
-    margin: 4vw 8vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 63.91rem) {
-  .bandeau {
-    margin: 4vw 8vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  .bandeau h2 {
-    padding: 0.5vw 1vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .bandeau h2 {
-    padding: 0.5vw 1vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 63.91rem) {
-  .bandeau h2 {
-    padding: 0.5vw 1vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 4vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 4vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 63.91rem) {
-  .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 4vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  .fonctionnement h2 {
-    padding: 4vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .fonctionnement h2 {
-    padding-left: 4vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  ol li i {
-    font-size: 2vh;
-    margin: 0;
-    left: 1.5vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  ol li i {
-    font-size: 2vw;
-    margin: 0 0.5vw;
-    left: 1.5vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  ol li .li-txt {
-    padding: 2vw 0 0 2vw; /* Adapter les padding pour landscape */
-    margin-right: 20vh;
-    border-radius: 2vw;
-    font-size: 2vw;
-    width: auto;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  ol li .li-txt {
-    padding: 2vw 4vw;
-    margin: 2vw 2vw;
-    border-radius: 2vw;
-    font-size: 2vw;
-  }
-}
-@media (min-width: 63.991rem) {
-  ol li .puce_num {
-    height: 2vw;
-    width: 2vw;
-    font-size: 1.5vw; /* Ajuster la taille de la police pour le mode paysage */
-    left: -0.5vw;
-  }
-}
-@media (min-width: 63.991rem) and (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  ol li .puce_num {
-    height: 2vw;
-    width: 2vw;
-    font-size: 1.5vw;
-    left: -0.5vw;
-  }
-}
 /*_section-restaurant.scss*/
 section-restaurant {
   display: flex;
   flex-direction: column;
-  margin: 1vh 0;
-  width: 100%;
+  margin: 1vh 8vh;
+  width: 90%;
+  display: block;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

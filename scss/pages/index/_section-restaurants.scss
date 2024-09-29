@@ -3,6 +3,8 @@
 section-restaurant {
     display: flex;
     flex-direction: column;
-    margin: $margin-vh-d2 0;
-    width:100%;
+    margin: $margin-vh-d2  $margin-vh-x4;
+    width:90%;
+    display: block;
+    align-items: center;
 }

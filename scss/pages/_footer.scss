@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _footer.scss                                                                      */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 27/09/24                                                                         */
+/* Description         : Fichier contenant les styles pour le footer et gestion des           */
+/*                       responsive (mobile et desktop)                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Révisions :                                                                                             */
+/* - [Date] : [Modifications apportées]                                                                    */
+/*--------------------------------------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+
+    align-items:center;
+    background-color: black;
+    color:white;
+    margin: 2vh 0;
+    padding: 0;
+    width: 100vh;
+}

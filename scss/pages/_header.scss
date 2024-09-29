@@ -9,16 +9,12 @@
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-
-/* Import mixin */
-@import '../mixins';
-
-
 /*-- Conteneur principle----*/
 header {
   display: flex;/* Utilise flexbox pour aligner les éléments*/
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Aligne les éléments verticalement*/
+  width: 100%;
 }  
 
 /*-- Card pour la localisation ----*/

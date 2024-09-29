@@ -15,10 +15,6 @@
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
 
-
-/* import mixin*/
-@import '../mixins';
-
 /*---------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------Carte Logo-----------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
@@ -96,14 +92,16 @@
     box-shadow: $border-shadow-vh; /* ombre*/
     height: $object-size-vh-x15; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
     position:relative;
-    margin:$margin-vh-d2;
+    margin:$margin-vh-d2 ;
+    
 
     /* landscape  */
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
         box-shadow: $border-shadow-vw; /* ombre*/
-        margin: 0 $margin-vw-base;
+        margin: $margin-vw-d4 $margin-vw-x2;
+        height: auto;
         
     }
 
@@ -130,6 +128,9 @@
     @include mobile-landscape {
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
         object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
+        width:100%;
+        height: 40vw;
+        
     }
     
     /* desktop */
@@ -217,30 +218,34 @@
 #palette img {
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     position: relative;
-    object-position: 50% 60%;   
+    object-position: 50% 60%;
+    
+    @include mobile-landscape {
+        object-position: 50% 60%;
+        display: flex; /* Utilise flexbox pour aligner les éléments*/
+    }
 }
 
 /* Restaurant  la note enchantée*/
 #enchantee  img {
     display: flex;
     position: relative;
-    object-position: 50% 60%;   
+    object-position: 50% 60%; 
+    
+    @include mobile-landscape {
+        object-position: 50% 60%;
+        display: flex; /* Utilise flexbox pour aligner les éléments*/
+    }  
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------- ----------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 
-footer {
-    display: flex;
-    justify-content:flex-start;
-    align-items:center;
-    background-color: black;
-    padding: $padding-vh-base;
-    color:white;
-    margin: 2vh;
-}
 
+.footer-card {
+    padding:2vh;
+}
 .fa-handshake, .fa-utensils {
     margin-right:2vh;
     margin-left:0;
