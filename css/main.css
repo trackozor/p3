@@ -905,6 +905,7 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: center;
 }
 
 ol {
@@ -927,6 +928,7 @@ ol li {
   position: relative;
   z-index: 1;
   width: 100%;
+  justify-content: space-around;
 }
 
 .li-txt h3 {
@@ -947,8 +949,8 @@ i {
   left: 1vh;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-  width: 60vh;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   height: 5vh;
   align-items: center;
 }
