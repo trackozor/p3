@@ -913,6 +913,7 @@ ol {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  justify-content: center;
 }
 
 /*----- Icône Store -----*/
@@ -932,7 +933,7 @@ ol li {
 }
 
 .li-txt h3 {
-  margin: 0 2vh;
+  padding-right: 5vh;
 }
 
 i {
