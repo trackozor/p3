@@ -1,10 +1,10 @@
 /*_section-restaurant.scss*/
 
-section-restaurant {
+#section-restaurants{
     display: flex;
     flex-direction: column;
-    margin: $margin-vh-d2  $margin-vh-x4;
-    width:90%;
+    width: 100%;
     display: block;
     align-items: center;
+    padding-left: 2vh
 }

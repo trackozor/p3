@@ -168,12 +168,14 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects correspondant à 30 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 40 % de la largeur de l'écran*/
 /*---------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage badge- dans les cartes-----------------------------------------------------*/
+/*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
 /* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------- Affichage conditionnel du loader   -----------------------------------*/
 /* Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -330,6 +332,7 @@ body {
   display: block; /* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   justify-content: center; /*centre horizontalement depuis le centre*/
   background-color: white; /* Couleur de fond de base*/
+  align-items: center;
   /*- Portrait -*/
   /*- Desktop -*/
 }
@@ -472,10 +475,8 @@ img {
   background-color: transparent; /* Couleur de fond transparente */
   color: grey; /* couleur principale */
   display: flex; /* Utilise flexbox pour aligner les éléments*/
-  align-items: center;
-  justify-content: center;
   position: relative;
-  padding: 1vh;
+  right: 10%;
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .icon-favorite {
@@ -492,7 +493,7 @@ img {
 
 .icon-favorite .fa-full {
   display: none;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
@@ -618,9 +619,11 @@ input {
   flex-direction: column; /* Aligne les éléments en colonne */
   border-radius: 2vh; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
-  height: 30vh; /* hauteur x15 valeur de base  correspondant à 30 % de la hauteur de l'écran*/
   position: relative;
   margin: 1vh;
+  height: 30vh;
+  overflow: hidden;
+  width: 90%;
   /* landscape  */
   /* desktop */
 }
@@ -644,12 +647,11 @@ input {
 
 /* Image */
 .card img {
-  width: 100%; /* Prend toute la largeur du conteneur */
+  width: 100%;
   border-radius: 2vh 2vh 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-  height: 70%; /* L 'image prend 70% de la hauteur de la carte*/
+  height: 20vh; /* L 'image prend 70% de la hauteur de la carte*/
   object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
   position: relative;
-  object-position: center bottom; /* Place l'image centrée en bas*/
   /* landscape */
   /* desktop */
 }
@@ -669,19 +671,6 @@ input {
 }
 
 /* Zone de texte */
-.card-content {
-  display: flex; /* Utilise flexbox pour aligner le éléments*/
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  padding: 1vh;
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .card-content {
-    padding: 4vw 2vw;
-  }
-}
-
 .card .card-title {
   font-size: 2vh;
   gap: 0.5vh;
@@ -718,8 +707,8 @@ input {
   display: flex;
   position: absolute;
   z-index: 3;
-  right: 3%;
-  top: 3%;
+  right: 5%;
+  top: 5%;
 }
 
 /*------------ Affichage Badges ----------------*/
@@ -742,32 +731,6 @@ input {
 /* ---------------------------------------------------------------------------------------------------*/
 /*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
-/* Restaurant  La palette du goût */
-#palette img {
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  position: relative;
-  object-position: 50% 60%;
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  #palette img {
-    object-position: 50% 60%;
-    display: flex; /* Utilise flexbox pour aligner les éléments*/
-  }
-}
-
-/* Restaurant  la note enchantée*/
-#enchantee img {
-  display: flex;
-  position: relative;
-  object-position: 50% 60%;
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  #enchantee img {
-    object-position: 50% 60%;
-    display: flex; /* Utilise flexbox pour aligner les éléments*/
-  }
-}
-
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------- ----------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
@@ -895,6 +858,10 @@ header {
   .card-location {
     border: none; /* absence de bordure*/
   }
+}
+
+#loader {
+  display: none;
 }
 
 /* Styles spécifique header*/
@@ -1050,13 +1017,13 @@ ol li .puce_num {
 /**/
 /*--------------------------Desktop--------------------------*/
 /*_section-restaurant.scss*/
-section-restaurant {
+#section-restaurants {
   display: flex;
   flex-direction: column;
-  margin: 1vh 8vh;
-  width: 90%;
+  width: 100%;
   display: block;
   align-items: center;
+  padding-left: 2vh;
 }
 
 /*# sourceMappingURL=main.css.map */

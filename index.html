@@ -1,15 +1,4 @@
-<!-- *********************************************************************************************************************** -->
-<!-- *    Projet      : Ohmyfood                                                                                           * -->
-<!-- *    Fichier     : index.html                                                                                         * -->
-<!-- *    Auteur      : Trackozor                                                                                          * -->
-<!-- *    Date        :  19 septembre 2024                                                                                 * -->
-<!-- *    Description : Page principale du site Ohmyfood.                                                                  * --> 
-<!-- *      - Contient un header avec le logo, la localisation, et un bouton permettant d'explorer les restaurants.        * -->
-<!-- *      - Présente également des informations sur le fonctionnement du service.                                        * -->
-<!-- *      - Accède aux menus des différents restaurants                                                                  * -->
-<!-- *    Version     : 2.0                                                                                                * -->
-<!-- *   Révision    : 19/09/24 : intégration HTML                                                                         * -->
-<!-- *********************************************************************************************************************** -->
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -40,7 +29,7 @@
 <!-- *********************************************   LOADER      **************************************************************** -->
 <!-- **************************************************************************************************************************** -->
 
-        <div id="loader">
+        <div id="loader" class="loader-active">
             <div class="loader-card">
                 <img src="../images/logo/ohmyfood@2x.svg" alt="Logo" class="loader-logo">
                 <p class="loader-message" id="loader-message">Et encore du temps de gagner</p>
@@ -49,7 +38,7 @@
                 <div class="progress-bar">chargement</div>
                 </div>
             </div>             
-        </div>
+        </div> 
 
 <!-- **************************************************************************************************************************** -->
 <!-- *********************************************      HEADER    *************************************************************** -->
@@ -122,97 +111,99 @@
             <!-- Section des restaurants -->
             <section id="section-restaurants">
                 <h2>Restaurants</h2>
-                
+
                 <!-- Restaurant : La Palette du Goût -->
-                <a href="./html/palette.html" aria-label="Visiter la page La Palette du Goût">
-                    <div id="palette" class="card">
-                        <img src="./images/restaurants/palette.jpg" alt="Assiette de plats variés au restaurant La Palette du Goût">
-                        <span class="badge">Nouveau</span>
-                        <div class="card-content">
+                <div id="palette" class="card">
+                    <div class="card-content"> 
+                        <a href="./html/palette.html" aria-label="Visiter la page La Palette du Goût">                            
+                            <img src="./images/restaurants/palette.jpg" alt="Assiette au restaurant La Palette du Goût">
+                            <span class="badge">Nouveau</span>                        
                             <div class="card-title">
                                 <h3>La Palette du Goût</h3>
                                 <div class="card-txt">Ménimontant</div>
-                            </div>
-                            <div class="icon-favorite">
-                                <input type="checkbox" id="favorite-checkbox-palette"  aria-label="Ajouter aux favoris">
-                                <label for="favorite-checkbox-palette" class="icon-favorite">
-                                    <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                    <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                </label>
-                            </div>
+                            </div>                            
+                        </a>                         
+                    <!-- Icône coeur  -->
+                        <div class="icon-favorite">
+                            <input type="checkbox" id="favorite-checkbox-palette"  aria-label="Ajouter La Palette du Goût aux favoris">
+                            <label for="favorite-checkbox-palette" class="icon-favorite">
+                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            </label>
                         </div>
                     </div>
-                </a>
-
+                </div>
 
 
                 <!-- Restaurant : La Note Enchantée -->
-                <a href="./pages/note_enchantée.html" aria-label="Visiter la page La note Enchantée">
-                    <div id="enchantee" class="card">
-                        <img src="./images/restaurants/note_enchantée.jpg" alt="Vue de dessus d'une assiette">
-                        <span class="badge">Nouveau</span>
-                        <div class="card-content">
+                <div id="enchantee" class="card">
+                    <div class="card-content"> 
+                        <a href="./html/note_enchantée.html" aria-label="Visiter la page La note_enchantée">                            
+                            <img src="./images/restaurants/note_enchantée.jpg" alt="Assiette au restaurant La Note enchantée">
+                            <span class="badge">Nouveau</span>                        
                             <div class="card-title">
-                                <h3>La note enchantée</h3>
+                                <h3>La Note Enchantée</h3>
                                 <div class="card-txt">Charonne</div>
-                            </div>
-                            <div class="icon-favorite" >
-                                <input type="checkbox" id="favorite-checkbox-enchantee" aria-label="Ajouter aux favoris" >
-                                <label for="favorite-checkbox-enchantee" class="icon-favorite">
-                                        <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                        <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                </label>
-                            </div>
+                            </div>                            
+                        </a>                         
+                    <!-- Icône coeur  -->
+                        <div class="icon-favorite">
+                            <input type="checkbox" id="favorite-checkbox-enchantée"  aria-label="Ajouter La Note enchantée aux favoris">
+                            <label for="favorite-checkbox-palette" class="icon-favorite">
+                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            </label>
                         </div>
                     </div>
-                </a>
+                </div>
 
 
 
-                <!-- Restaurant : À La Française -->
-                <a href="./pages/la_francaise.html" aria-label="Visiter la page À La Française">
-                    <div id="francaise" class="card">
-                        <img src="./images/restaurants/française.jpg" alt="Plat vu en perspective au restaurant À La Française">
-                        <span  class="badge">Nouveau</span>
-                        <div class="card-content">
+                <div id="francaise" class="card">
+                    <div class="card-content"> 
+                        <a href="./html/la_francaise.html" aria-label="Visiter la page A la française">                            
+                            <img src="./images/restaurants/française.jpg" alt="Assiette au restaurant A la française">
+                            <span class="badge">Nouveau</span>                        
                             <div class="card-title">
-                                <h3>À La Française</h3>
-                                <div class="card-txt">Cité Rouge</div>
-                            </div>
-                            <div class="icon-favorite" >
-                                <input type="checkbox" id="favorite-checkbox-francaise" aria-label="Ajouter aux favoris" >
-                                <label for="favorite-checkbox-francaise" class="icon-favorite">
-                                        <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                        <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                </label>
-                            </div>
+                                <h3>A la Française</h3>
+                                <div class="card-txt">Croix Rouge</div>
+                            </div>                            
+                        </a>                         
+                    <!-- Icône coeur  -->
+                        <div class="icon-favorite">
+                            <input type="checkbox" id="favorite-checkbox-francaise"  aria-label="Ajouter A la Française aux favoris">
+                            <label for="favorite-checkbox-palette" class="icon-favorite">
+                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            </label>
                         </div>
                     </div>
-                </a>
+                </div>
 
 
 
                 <!-- Restaurant : Le Délice des Sens -->
-                <a href="./pages/délice.html" aria-label="Visiter la page Le Délice des Sens">
-                    <div id="delice" class="card">
-                        <img src="./images/restaurants/délice.jpg" alt="Assiette au restaurant Le Délice des Sens à Folie-Méricourt">
-                        <span class="badge">Nouveau</span>
-                        <div class="card-content">
+                <div id="delice" class="card">
+                    <div class="card-content"> 
+                        <a href="./html/délice.html" aria-label="Visiter la page La Palette du Goût">                            
+                            <img src="./images/restaurants/délice.jpg" alt="Assiette au restaurant Le délice des sens">
+                            <span class="badge">Nouveau</span>                        
                             <div class="card-title">
-                                <h3>Le Délice des Sens</h3>
+                                <h3>Le délice des sens</h3>
                                 <div class="card-txt">Folie-Méricourt</div>
-                            </div>
-                            <div class="icon-favorite">
-                                <input type="checkbox" id="favorite-checkbox-delice" aria-label="Ajouter aux favoris">
-                                <label for="favorite-checkbox-delice" class="icon-favorite">
-                                    <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                    <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                </label>
                             </div>                            
+                        </a>                         
+                    <!-- Icône coeur  -->
+                        <div class="icon-favorite">
+                            <input type="checkbox" id="favorite-checkbox-délice"  aria-label="Ajouter La Palette du Goût aux favoris">
+                            <label for="favorite-checkbox-palette" class="icon-favorite">
+                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            </label>
                         </div>
                     </div>
-                </a>
-            </section>
+                </div>
+            </section>            
         </main>
 
 <!-- **************************************************************************************************************************** -->

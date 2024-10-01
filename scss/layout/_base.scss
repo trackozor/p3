@@ -25,6 +25,7 @@ body {
   display: block;/* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   justify-content: center; /*centre horizontalement depuis le centre*/
   background-color: white;/* Couleur de fond de base*/
+  align-items: center;
     
   /*- Portrait -*/
   @include mobile-landscape {

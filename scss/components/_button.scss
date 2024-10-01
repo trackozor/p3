@@ -85,10 +85,9 @@
   background-color: transparent;/* Couleur de fond transparente */
   color:grey; /* couleur principale */
   display: flex; /* Utilise flexbox pour aligner les éléments*/
-  align-items: center;
-  justify-content: center;
   position:relative;
-  padding:$padding-vh-d2;
+  right: 10%;
+ 
 
 
   @include mobile-landscape {
@@ -104,7 +103,7 @@
 
 .icon-favorite .fa-full {
   display: none;
-  z-index: 2;
+  z-index: 3;
   position:relative;
 }
 
