@@ -1,20 +1,19 @@
 /* Nom du fichier      : _section-bandeau.scss                                                             */
-/* Auteur              : Trackozor                                                                        */
-/* Date de création    : 25/09/24                                                                         */
-/* Dernière modification: 27/09/24                                                                        */
-/* Description         :  _section-                                                                       */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/24                                                                          */
+/* Dernière modification: 27/09/24                                                                         */
+/* Description         :  _section-                                                                        */
+/*    Styles pour la section bandeau et la liste de fonctionnement                                         */
 /*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
 /*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
-/*--------------------------------------------------------------------------------------------------------*/
-
-/*--------------------------------------------------------------------------------------------------------*/
-/* Version             : 1.0                                                                               */
-/* Framework utilisé   : SCSS                                                                              */
-/*--------------------------------------------------------------------------------------------------------*/
-/* Révisions :                                                                                             */
-/* - [Date] : [Modifications apportées]                                                                    */
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------------------------- */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                               */
+/* -------------------------------------------------------------------------------------------------------- */
 
 /* ----- Import mixin-----------------------*/
 @import '../../mixins.scss'; /* Chemin du fichier */
@@ -28,16 +27,15 @@
     margin: $margin-vh-base $margin-vh-x2; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
     align-items: center; /* Aligne les éléments dans la hauteur*/
 
-    /*  Landscape  */
-    @include mobile-landscape {
-    margin: $margin-vw-base $margin-vw-d2;
-    }
+
 }
 
 
 /* Titre */
 .bandeau h2{
     padding:$padding-vh-d4 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
+
+
 }
 
 /* Texte */
@@ -45,6 +43,7 @@
     padding: $padding-vh-d2 $padding-vw-base; /**/
     margin-bottom: $margin-vh-base; /**/
     font-weight: $font-weight-l-bold; /**/
+
 }
 
 /*-------- Conteneur parent liste */
@@ -56,6 +55,7 @@
     justify-content: center;
     gap:3vh;
     margin: 10vh 3vh;
+
 
 }
 

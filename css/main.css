@@ -402,13 +402,11 @@ body {
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
-    padding: 0 2vw; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 @media (min-width: 63.91rem) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
-    padding: 0 2vw; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
 
@@ -957,21 +955,21 @@ footer {
 }
 
 /* Nom du fichier      : _section-bandeau.scss                                                             */
-/* Auteur              : Trackozor                                                                        */
-/* Date de création    : 25/09/24                                                                         */
-/* Dernière modification: 27/09/24                                                                        */
-/* Description         :  _section-                                                                       */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                        */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/24                                                                          */
+/* Dernière modification: 27/09/24                                                                         */
+/* Description         :  _section-                                                                        */
+/*    Styles pour la section bandeau et la liste de fonctionnement                                         */
 /*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)              */
 /*     et la gestion de l'affichage flex pour les étapes avec icônes.                                      */
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/* Version             : 1.0                                                                               */
-/* Framework utilisé   : SCSS                                                                              */
-/*--------------------------------------------------------------------------------------------------------*/
-/* Révisions :                                                                                             */
-/* - [Date] : [Modifications apportées]                                                                    */
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------------------------- */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                               */
+/* -------------------------------------------------------------------------------------------------------- */
 /* ----- Import mixin-----------------------*/
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
@@ -987,12 +985,6 @@ footer {
   justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
   margin: 2vh 4vh; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
-  /*  Landscape  */
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .bandeau {
-    margin: 2vw 1vw;
-  }
 }
 
 /* Titre */

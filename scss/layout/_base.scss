@@ -31,13 +31,12 @@ body {
   /*- Portrait -*/
   @include mobile-landscape {
     font-size: $font-size-vw-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/ 
-    padding: 0 $padding-vw-base; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
+
   }
   
   /*- Desktop -*/
   @include desktop {
     font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
-    padding: 0 $padding-vw-base; /*Espace intérieur gauche et droite correspondant à 2% de la largeur de l'écran*/
   }
 }
   
