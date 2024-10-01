@@ -96,7 +96,6 @@ i {
     display: flex;
     position: relative;  
     z-index: 1;
-    background-color:'#D3D3D3';
     left:1vh;
     border-radius:$border-radius-vh-base;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
@@ -118,9 +117,8 @@ ol li .puce_num {
     align-items: center;
     color:white;
     font-size:1.4vh;
+    animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
 
 }
 
-/**/
 
-/*--------------------------Desktop--------------------------*/

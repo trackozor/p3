@@ -1,23 +1,23 @@
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _footer.scss                                                                      */
 /* Auteur              : Trackozor                                                                         */
-/* Date de création    : 25/09/24                                                                           */
+/* Date de création    : 25/09/24                                                                          */
 /* Dernière modification: 27/09/24                                                                         */
-/* Description         : Fichier contenant les styles pour le footer et gestion des           */
+/* Description         : Fichier contenant les styles pour le footer et gestion des                        */
 /*                       responsive (mobile et desktop)                                                    */
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------- */
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------- */
 /* Révisions :                                                                                             */
-/* - [Date] : [Modifications apportées]                                                                    */
-/*--------------------------------------------------------------------------------------------------------*/
+/*                                                                                                         */
+/*-------------------------------------------------------------------------------------------------------- */
 
 footer {
-    display: flex;
-    align-items:center;
-    background-color: black;
-    color:white;
-    padding: 0;
-    width: 100%;
+    display: flex;/* Utilse flexbox pour aligner les éléments */
+    align-items:center;/* Alignement horizontale a partir de l'axe centrale */
+    background-color: black; /* Couleur de fond*/
+    color:white; /* Couleur du texte et des icônes*/
+    padding: 0 $padding-vh-d2;/* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
+    width: 100%; /* Prend toute la largeur disponible */
 }

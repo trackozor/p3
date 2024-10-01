@@ -104,8 +104,8 @@
     position:relative;
     z-index: 1;
     width: 95%;
-    margin: 1vh auto;
-    height: 30vh;
+    margin: $margin-vh-d2 auto;/* Marge haut/bas correspondant à 1% de la hauteur de l'écran */
+    height: $object-size-vh-x15; /* Hauteur 15x valeur de base soit 30% de la hauteur de l'écran*/
 
 
     /* landscape  */
@@ -118,14 +118,6 @@
         
     }
 
-    /* desktop */
-    @include desktop {
-        border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
-        height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
-        box-shadow: $border-shadow-vw; /* ombre*/
-        margin: 0 $margin-vw-d2; /* Marge gauche/droite correspondant à 1% de la hauteur de l'écran*/
-        
-    }
 }
 
 /* Image */
@@ -136,10 +128,6 @@
     object-fit: cover;
     object-position: center 60%;
 
-
-   
-    
-    
 
     /* landscape */    
     @include mobile-landscape {

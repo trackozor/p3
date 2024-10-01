@@ -7,3 +7,25 @@
     width: 95%;
     margin: 0 auto;
 }
+.card {
+    opacity: 0; /* Les cartes commencent invisibles */
+    transform: translateX(100%); /* Les cartes commencent hors de l'écran (à droite) */
+    animation: slideIn 0.5s ease-out forwards; /* Animation qui fait glisser et apparaître les cartes */
+}
+
+/* Animation pour chaque carte avec des délais différents */
+#palette.card {
+    animation-delay: 0.2s; /* La première carte commence après 0.2s */
+}
+
+#enchantee.card {
+    animation-delay: 0.4s; /* La deuxième carte commence après 0.4s */
+}
+
+#francaise.card {
+    animation-delay: 0.6s; /* La troisième carte commence après 0.6s */
+}
+
+#delice.card  {
+    animation-delay: 0.8s; /* La quatrième carte commence après 0.8s */
+}

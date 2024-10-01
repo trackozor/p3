@@ -92,7 +92,11 @@
   position:relative;
 }
 .fa-full, .fa-empty {
-  font-size: 3vh;
+  font-size: $font-size-vh-title;
+
+  @include mobile-landscape {
+    font-size: $font-size-vw-title;
+  }
 }
 .icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
@@ -123,5 +127,10 @@ input {
     font-size: $font-size-vh-base;
     padding: 0;
     border: none;
+
+    /* Landscape */
+    @include mobile-landscape {
+      font-size: $font-size-vw-base;
+    }
 
 }
