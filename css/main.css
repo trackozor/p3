@@ -641,7 +641,7 @@ input {
 .card img {
   width: 100%;
   border-radius: 2vh 2vh 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-  height: 23vh; /* L 'image prend 70% de la hauteur de la carte*/
+  height: 20vh; /* L 'image prend 70% de la hauteur de la carte*/
   object-fit: cover;
   object-position: center 60%;
   /* landscape */
@@ -681,11 +681,12 @@ input {
   position: absolute;
   z-index: 2;
   left: 75%;
-  bottom: 10%;
+  bottom: 15%;
 }
 
 .card h3 {
   font-weight: 900;
+  margin-top: 2vh;
 }
 
 .card-txt {
@@ -890,7 +891,7 @@ footer {
   background-color: black;
   color: white;
   padding: 0;
-  width: 95%;
+  width: 100%;
 }
 
 /* Nom du fichier      : _section-bandeau.scss                                                             */
