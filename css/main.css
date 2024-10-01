@@ -919,7 +919,7 @@ footer {
   color: white;
   margin: 2vh 0;
   padding: 0;
-  width: 100vh;
+  width: 100%;
 }
 
 /* Nom du fichier      : _section-bandeau.scss                                                             */
@@ -1015,7 +1015,7 @@ ol li {
 i {
   color: grey;
   font-size: 2vh;
-  margin: 0 2vh;
+  margin-right: 2vh;
 }
 
 .li-txt {
