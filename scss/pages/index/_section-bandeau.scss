@@ -37,7 +37,7 @@
 
 /* Titre */
 .bandeau h2{
-    padding:$padding-vh-d4 $padding-vh-d2; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
+    padding:$padding-vh-d4 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
 }
 
 /* Texte */
@@ -83,13 +83,13 @@ ol li {
     justify-content: space-around;
 }
 .li-txt h3 {
-    margin-right: $margin-vh-x2;
+    margin-right: $margin-vh-d2;
 }
 
 i {
     color:grey;
     font-size: $font-size-vh-base;
-    margin-right:  $margin-vh-base;  
+    margin: 0  $margin-vh-base 0  $margin-vh-x2;  
 }
 
 .li-txt{
@@ -101,7 +101,6 @@ i {
     border-radius:$border-radius-vh-base;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
     width:100%;
-    justify-content:space-around;
     height:5vh;
     align-items: center;
 

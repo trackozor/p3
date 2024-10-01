@@ -102,14 +102,10 @@
     border-radius: $border-radius-vh-base; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
     box-shadow: $border-shadow-vh; /* ombre*/
     position:relative;
-    margin:$margin-vh-d2;
-    height: 30vh; 
+    height: 25%; 
     overflow: hidden;
-    width: 90%;
-    
-
-
-    
+    width: 95%;
+    margin: 0 auto;
 
     /* landscape  */
     @include mobile-landscape {
@@ -135,7 +131,7 @@
 .card  img {
     width: 100%;
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-    height:20vh;/* L 'image prend 70% de la hauteur de la carte*/
+    height:23vh;/* L 'image prend 70% de la hauteur de la carte*/
     object-fit: cover;/* l image est coupe pour s'adapter au conteneur */
     position: relative;
     

@@ -23,9 +23,10 @@ body {
   font-family: $font-primary;/* Style police par défaut */
   font-size: $font-size-vh-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
   display: block;/* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
-  justify-content: center; /*centre horizontalement depuis le centre*/
   background-color: white;/* Couleur de fond de base*/
   align-items: center;
+  margin: 0 auto;
+  justify-content: center;
     
   /*- Portrait -*/
   @include mobile-landscape {
