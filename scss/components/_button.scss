@@ -84,20 +84,6 @@
 .icon-favorite {
   background-color: transparent;/* Couleur de fond transparente */
   color:grey; /* couleur principale */
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  position:relative;
- 
-
-
-  @include mobile-landscape {
-    padding-right: $padding-vw-d2;
-    font-size: $font-size-vw-title;
-  }
-
-  @include desktop {
-    padding-right: $padding-vw-d2;
-    font-size: $font-size-vw-title;
-  }
 }
 
 .icon-favorite .fa-full {
@@ -105,7 +91,9 @@
   z-index: 3;
   position:relative;
 }
-
+.fa-full, .fa-empty {
+  font-size: 3vh;
+}
 .icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
   color: $button--search-secondary-color;

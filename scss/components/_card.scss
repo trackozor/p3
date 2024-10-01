@@ -102,10 +102,12 @@
     border-radius: $border-radius-vh-base; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
     box-shadow: $border-shadow-vh; /* ombre*/
     position:relative;
-    height: 25%; 
+    z-index: 1;
     overflow: hidden;
     width: 95%;
-    margin: 0 auto;
+    margin: 1vh auto;
+    height: 30vh;
+
 
     /* landscape  */
     @include mobile-landscape {
@@ -131,7 +133,7 @@
 .card  img {
     width: 100%;
     border-radius: $border-radius-vh-base   $border-radius-vh-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-    height:23vh;/* L 'image prend 70% de la hauteur de la carte*/
+    height:20vh;/* L 'image prend 70% de la hauteur de la carte*/
     object-fit: cover;/* l image est coupe pour s'adapter au conteneur */
     position: relative;
     
@@ -153,10 +155,12 @@
 }
 
 /* Zone de texte */
-
 .card .card-title  {
     font-size: $font-size-vh-base;
     gap:$gap-vh-d4;
+    margin: 2vh;
+    display:flex-start;
+
 
 
     @include mobile-landscape {
@@ -164,10 +168,13 @@
         gap:$gap-vw-d2;
     }
 }
-.card i {
-    font-size: $font-size-vh-title;
-    margin-bottom:2vh;
-    
+.card .icon-favorite{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 75%;
+    bottom: 15%;
+
 }
 .card h3 {
     font-weight: $font-weight-h-bold;

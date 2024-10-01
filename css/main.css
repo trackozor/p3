@@ -477,26 +477,16 @@ img {
 .icon-favorite {
   background-color: transparent; /* Couleur de fond transparente */
   color: grey; /* couleur principale */
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  position: relative;
-}
-@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
-  .icon-favorite {
-    padding-right: 1vw;
-    font-size: 3vw;
-  }
-}
-@media (min-width: 63.91rem) {
-  .icon-favorite {
-    padding-right: 1vw;
-    font-size: 3vw;
-  }
 }
 
 .icon-favorite .fa-full {
   display: none;
   z-index: 3;
   position: relative;
+}
+
+.fa-full, .fa-empty {
+  font-size: 3vh;
 }
 
 .icon-favorite .fa-empty:hover {
@@ -622,10 +612,11 @@ input {
   border-radius: 2vh; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   position: relative;
-  height: 25%;
+  z-index: 1;
   overflow: hidden;
   width: 95%;
-  margin: 0 auto;
+  margin: 1vh auto;
+  height: 30vh;
   /* landscape  */
   /* desktop */
 }
@@ -651,7 +642,7 @@ input {
 .card img {
   width: 100%;
   border-radius: 2vh 2vh 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-  height: 23vh; /* L 'image prend 70% de la hauteur de la carte*/
+  height: 20vh; /* L 'image prend 70% de la hauteur de la carte*/
   object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
   position: relative;
   /* landscape */
@@ -676,6 +667,8 @@ input {
 .card .card-title {
   font-size: 2vh;
   gap: 0.5vh;
+  margin: 2vh;
+  display: flex-start;
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .card .card-title {
@@ -684,9 +677,12 @@ input {
   }
 }
 
-.card i {
-  font-size: 3vh;
-  margin-bottom: 2vh;
+.card .icon-favorite {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 75%;
+  bottom: 15%;
 }
 
 .card h3 {
