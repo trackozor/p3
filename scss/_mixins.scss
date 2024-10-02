@@ -4,10 +4,16 @@
 
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 @mixin mobile-landscape {
-    @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+    @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
     @content;
     }
 
+}
+
+@mixin tablette {
+    @media (min-width: 48rem) and (max-width: 63.9rem) {
+    @content;
+    }
 }
 /* Mixin pour gérer les écrans desktop*/
 @mixin desktop {

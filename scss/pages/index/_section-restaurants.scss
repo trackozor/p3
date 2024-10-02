@@ -13,7 +13,8 @@
     @include desktop {
         flex-direction:row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 100% ;
     }
 }
 
@@ -22,6 +23,12 @@
 
     @include mobile-landscape {
         margin: 1vw;
+    }
+
+    @include desktop {
+        width:95%; 
+        margin: 2% 5%;
+        
     }
 }
 
