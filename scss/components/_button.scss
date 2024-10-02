@@ -95,6 +95,11 @@
   @include mobile-landscape {
     font-size: $font-size-vw-title;
   }
+
+  /* Desktop */
+  @include desktop {
+    font-size: $font-size-vw-base;
+  }
 }
 .icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;

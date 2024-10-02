@@ -542,10 +542,16 @@ img {
 
 .fa-full, .fa-empty {
   font-size: 3vh;
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
   .fa-full, .fa-empty {
     font-size: 3vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .fa-full, .fa-empty {
+    font-size: 2vw;
   }
 }
 
