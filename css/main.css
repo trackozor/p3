@@ -605,7 +605,6 @@ input {
 .card-logo {
   height: 3vh; /* Défini la hauteur de la carte correspondant à 1.5 % de la hauteur de l'écran */
   display: flex; /* Utilise flexbox pour aligner les éléments*/
-  justify-content: center; /* Centre le contenu horizontalement */
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /* Couleur de fond de la carte logo*/
   margin: 1vh 0; /* Définit les marges verticales de la carte */
@@ -636,10 +635,12 @@ input {
 .card-location {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   justify-content: center; /*aligne les éléments depuis le centre*/
-  gap: 0.5vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
+  align-items: center;
+  gap: 1vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
   background-color: #EAEAEA; /* Couleur de fond*/
   width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
-  padding: 2vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+  padding: 2vh;
+  margin-right: 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
   /* landscape */
   /* Desktop */
 }
@@ -648,6 +649,7 @@ input {
     gap: 2vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
     width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
     padding: 2vw 2vw; /* espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    margin-right: 4vw;
   }
 }
 @media (min-width: 63.91rem) {

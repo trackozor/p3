@@ -15,7 +15,6 @@
 }
 
 /* Mixin pour gérer les écrans desktop*/
-
 @mixin desktop {
     @media (min-width: 63.91rem) {
     @content;
