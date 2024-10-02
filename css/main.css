@@ -531,6 +531,7 @@ img {
 .icon-favorite {
   background-color: transparent; /* Couleur de fond transparente */
   color: grey; /* couleur principale */
+  cursor: url("/images/logo/like.png"), auto;
 }
 
 .icon-favorite .fa-full {
@@ -785,7 +786,7 @@ input {
 @media (min-width: 63.91rem) {
   .card .icon-favorite {
     left: 85%;
-    bottom: 15%;
+    bottom: 10%;
   }
 }
 
