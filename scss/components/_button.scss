@@ -71,8 +71,8 @@
   }
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-base; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
-    padding: $padding-vw-d2 $padding-vw-base;/*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
+    font-size: $font-size-vw-d2; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
+    padding: $padding-vw-d4 ;/*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
     width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
   }
 }

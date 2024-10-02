@@ -37,7 +37,7 @@ body {
   
   /*- Desktop -*/
   @include desktop {
-    font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
+    font-size: $font-size-vw-d2; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
   }
 }
   
@@ -58,7 +58,7 @@ h2 {
 
     /*- Desktop -*/
     @include desktop {
-      font-size: $font-size-vw-title; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
+      font-size: $font-size-vw-base; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
     }
 }
 

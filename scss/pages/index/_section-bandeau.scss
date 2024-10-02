@@ -15,8 +15,6 @@
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 
-/* ----- Import mixin-----------------------*/
-@import '../../mixins.scss'; /* Chemin du fichier */
 
 /*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
@@ -30,7 +28,7 @@
 
     /*  Landscape  */
     @include mobile-landscape {
-    margin: $margin-vw-base $margin-vw-x2;
+        margin: $margin-vw-base $margin-vw-x2;
     }
 
 }
@@ -42,7 +40,7 @@
 
     /*  Landscape  */
     @include mobile-landscape {
-    padding: $padding-vw-d4 0;
+        padding: $padding-vw-d4 0;
     }
 
 }
@@ -55,8 +53,8 @@
 
     /*  Landscape  */
     @include mobile-landscape {
-    padding: $padding-vw-d2 $padding-vw-base;
-    margin-bottom: $margin-vw-base;
+        padding: $padding-vw-d2 $padding-vw-base;
+        margin-bottom: $margin-vw-base;
     }
 
 }
@@ -73,8 +71,8 @@
 
     /*  Landscape  */
     @include mobile-landscape {
-    margin: 10vw 3vw;
-    gap: 3vw;
+        margin: 10vw 3vw;
+        gap: 3vw;
     }
 }
 
@@ -98,7 +96,7 @@ ol {
     @include desktop {
         flex-direction: row;
         align-items: center;
-        gap: $gap-vw-base;
+        gap: 5vw;
         justify-content: space-around;
     }
 }
@@ -119,22 +117,27 @@ ol li {
 
     /*  Landscape  */
     @include mobile-landscape {
-    margin:$margin-vw-base $margin-vw-d2;
-    align-items: center;
-    font-weight: $font-weight-bold;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    justify-content: space-around;
+        margin:$margin-vw-base $margin-vw-d2;
+        align-items: center;
+        font-weight: $font-weight-bold;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        justify-content: space-around;
     }
 }
 .li-txt h3 {
-    margin-right: $margin-vh-d2;
-    font-size: 2vh;
+        margin-right: $margin-vh-d2;
+        font-size: 2vh;
 
     /*  Landscape  */
     @include mobile-landscape {
-    margin-right: $margin-vw-d2;
+        margin-right: $margin-vw-d2;
+    }
+
+    @include desktop {
+        font-size: 1vw;
+        width: auto;
     }
 }
 
@@ -170,6 +173,8 @@ i {
     height:5vw;
     align-items: center;
     }
+
+
 
 }
 ol li .puce_num {
