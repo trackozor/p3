@@ -27,6 +27,10 @@
     margin: $margin-vh-base $margin-vh-x2; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
     align-items: center; /* Aligne les éléments dans la hauteur*/
 
+    /*  Landscape  */
+    @include mobile-landscape {
+    margin: $margin-vw-base $margin-vw-x2;
+    }
 
 }
 
@@ -35,6 +39,10 @@
 .bandeau h2{
     padding:$padding-vh-d4 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
 
+    /*  Landscape  */
+    @include mobile-landscape {
+    padding: $padding-vw-d4 0;
+    }
 
 }
 
@@ -43,6 +51,12 @@
     padding: $padding-vh-d2 $padding-vw-base; /**/
     margin-bottom: $margin-vh-base; /**/
     font-weight: $font-weight-l-bold; /**/
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    padding: $padding-vw-d2 $padding-vw-base;
+    margin-bottom: $margin-vw-base;
+    }
 
 }
 
@@ -55,6 +69,12 @@
     justify-content: center;
     gap:3vh;
     margin: 10vh 3vh;
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    margin: 10vw 0;
+    gap: 3vw;
+    }
 
 
 }
@@ -81,15 +101,37 @@ ol li {
     z-index: 1;
     width: 100%;
     justify-content: space-around;
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    margin:$margin-vw-base $margin-vw-d2;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    justify-content: space-around;
+    }
 }
 .li-txt h3 {
     margin-right: $margin-vh-d2;
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    margin-right: $margin-vw-d2;
+    }
 }
 
 i {
     color:grey;
     font-size: $font-size-vh-base;
-    margin: 0  $margin-vh-base 0  $margin-vh-x2;  
+    margin: 0  $margin-vh-base 0  $margin-vh-x2; 
+    
+    /*  Landscape  */
+    @include mobile-landscape {
+    font-size: $font-size-vw-base;
+    margin: 0  $margin-vw-base 0  $margin-vw-x2;
+    }
 }
 
 .li-txt{
@@ -102,6 +144,16 @@ i {
     width:100%;
     height:5vh;
     align-items: center;
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    left:1vw;
+    border-radius:$border-radius-vw-base;
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
+    width:100%;
+    height:5vw;
+    align-items: center;
+    }
 
 }
 ol li .puce_num {
@@ -118,6 +170,15 @@ ol li .puce_num {
     color:white;
     font-size:1.4vh;
     animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
+
+    /*  Landscape  */
+    @include mobile-landscape {
+    border-radius:50%;
+    height: 3vw;
+    width:3vw;
+    font-size:1.4vw;
+    
+    }
 
 }
 

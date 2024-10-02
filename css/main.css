@@ -1001,11 +1001,23 @@ footer {
   justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
   margin: 2vh 4vh; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .bandeau {
+    margin: 2vw 4vw;
+  }
 }
 
 /* Titre */
 .bandeau h2 {
   padding: 0.5vh 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .bandeau h2 {
+    padding: 0.5vw 0;
+  }
 }
 
 /* Texte */
@@ -1013,6 +1025,13 @@ footer {
   padding: 1vh 2vw; /**/
   margin-bottom: 2vh; /**/
   font-weight: 100; /**/
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .bandeau p {
+    padding: 1vw 2vw;
+    margin-bottom: 2vw;
+  }
 }
 
 /*-------- Conteneur parent liste */
@@ -1024,6 +1043,13 @@ footer {
   justify-content: center;
   gap: 3vh;
   margin: 10vh 3vh;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .fonctionnement {
+    margin: 10vw 0;
+    gap: 3vw;
+  }
 }
 
 ol {
@@ -1048,16 +1074,41 @@ ol li {
   z-index: 1;
   width: 100%;
   justify-content: space-around;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  ol li {
+    margin: 2vw 1vw;
+    align-items: center;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 
 .li-txt h3 {
   margin-right: 1vh;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .li-txt h3 {
+    margin-right: 1vw;
+  }
 }
 
 i {
   color: grey;
   font-size: 2vh;
   margin: 0 2vh 0 4vh;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  i {
+    font-size: 2vw;
+    margin: 0 2vw 0 4vw;
+  }
 }
 
 .li-txt {
@@ -1070,6 +1121,17 @@ i {
   width: 100%;
   height: 5vh;
   align-items: center;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .li-txt {
+    left: 1vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 5vw;
+    align-items: center;
+  }
 }
 
 ol li .puce_num {
@@ -1086,6 +1148,15 @@ ol li .puce_num {
   color: white;
   font-size: 1.4vh;
   animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  ol li .puce_num {
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.4vw;
+  }
 }
 
 /*_section-restaurant.scss*/
