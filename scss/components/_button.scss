@@ -13,7 +13,6 @@
   background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color);/* dégradé de couleur*/
   padding: $padding-vh-base ;/* Espace intérieur correspondant à 2% de la hauteur de l'écran */
   color: white;/* couleur du texte*/
-  width:40%;/*longueur du bouton correspondant à 25 % de la hauteur de l'écran*/
   box-shadow: $border-shadow-vh; /*ombre*/
   border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
 
