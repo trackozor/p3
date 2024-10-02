@@ -1,121 +1,159 @@
 /* _animations.scss */
 
-/* @keyframes pour le battement de cœur */
+/* Animation battement de cœur pour les éléments de type like (ex : icônes) */
 @keyframes heartBeat {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1); /* Taille normale au début et à la fin */
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.2); /* Grossissement temporaire au milieu */
     }
 }
 
-/* @keyframes pour le remplissage de l'arrière-plan et la croissance */
+/* Animation pour remplir l'arrière-plan avec une couleur et faire croître l'élément */
 @keyframes likeFill {
     0% {
-        color: radial-gradient(circle , #f7efef 0%, transparent 100%); /* Dégradé partant du bas */
-        transform: scale(0.2); /* Taille normale au départ */
+        color: white; /* Couleur initiale blanche */
+        transform: scale(0.8); /* Taille initiale légèrement réduite */
+    }
+    25% {
+        color: #f7efef; /* Étape intermédiaire : dégradé léger vers une couleur pastel */
+        transform: scale(0.9); /* L'élément grandit légèrement */
+    }
+    50% {
+        color: #f5a4b8; /* Étape intermédiaire : couleur pastel un peu plus foncée */
+        transform: scale(1); /* Taille normale */
+    }
+    75% {
+        color: #f28aa1; /* Couleur presque finale */
+        transform: scale(1.1); /* Taille un peu plus grande */
     }
     100% {
-        color: #f70a16; /* Couleur finale pleine du cœur */
-        transform: scale(1.2); /* Légère croissance */
+        color: $font-primary; /* Couleur finale : variable CSS de la couleur primaire */
+        transform: scale(1.2); /* L'élément grandit légèrement à la fin */
     }
 }
 
-/* @keyframes pour l'explosion finale */
+
+
+/* Animation éclatement (icone grossit puis retourne à sa taille normale) */
 @keyframes explode {
     0% {
-        transform: scale(1.2);
+        transform: scale(1.2); /* Point de départ : taille légèrement agrandie */
+    }
+    50% {
+        transform: scale(1.5); /* L'icône s'agrandit encore plus */
     }
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Retour à la taille normale */
     }
 }
 
-/* Animation pour faire disparaître le loader après 3 secondes */
+/* Animation pour faire disparaître un loader après 3 secondes */
 @keyframes fadeOutLoader {
     0% {
-        opacity: 1;
+        opacity: 1; /* Loader complètement visible */
     }
     80% {
-        opacity: 1; /* Garde visible pendant 80% du temps */
+        opacity: 1; /* Reste visible pendant 80% de l'animation */
     }
     100% {
-        opacity: 0;
-        visibility: hidden; /* Cache complètement après l'animation */
+        opacity: 0; /* Finit par disparaître */
+        visibility: hidden; /* Cache complètement l'élément après disparition */
     }
 }
 
-/* Animation pour la barre de progression */
+/* Animation pour une barre de progression qui se remplit */
 @keyframes loadProgressBar {
     0% {
-        width: 0%;
+        width: 0%; /* La barre commence vide */
     }
     100% {
-        width: 100%;
+        width: 100%; /* La barre est remplie à 100% à la fin de l'animation */
     }
 }
 
-/* Animation pour faire apparaître le message */
+/* Animation pour faire apparaître un message de manière fluide */
 @keyframes fadeInMessage {
     0% {
-        opacity: 0;
+        opacity: 0; /* Le message est invisible */
     }
     100% {
-        opacity: 1;
+        opacity: 1; /* Le message devient complètement visible */
     }
 }
 
-/* Animation pour faire "rétrécir" la carte à la fin */
+/* Animation pour rétrécir un élément (ex : carte) avant de le masquer */
 @keyframes shrink {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* Taille normale */
     }
     100% {
-        transform: scale(0.9); /* Légère réduction de la taille avant disparition */
+        transform: scale(0.9); /* Légèrement rétréci à la fin */
+        opacity: 0; /* L'élément disparaît */
     }
 }
 
-/* Définition de l'animation */
+/* Animation pour faire glisser un élément de droite à gauche (ex : carte) */
 @keyframes slideIn {
     from {
-        opacity: 0; /* La carte est invisible au début */
+        opacity: 0; /* L'élément est invisible au début */
         transform: translateX(100%); /* Commence hors de l'écran à droite */
     }
     to {
-        opacity: 1; /* La carte devient visible */
+        opacity: 1; /* L'élément devient visible */
         transform: translateX(0); /* Se déplace à sa position finale */
     }
 }
 
+/* Animation de pulsation pour un élément, par exemple pour les puces */
 @keyframes pulse {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1); /* Taille normale au début et à la fin */
     }
     50% {
-        transform: scale(1.3); /* La puce s'agrandit temporairement */
+        transform: scale(1.3); /* L'élément grossit temporairement au milieu */
     }
 }
 
-/* Animation de l'icône */
+/* Animation pour changer la couleur d'une icône */
+@keyframes iconColor {
+    0%, 100% {
+        color: grey; /* Couleur grise au début et à la fin */
+    }
+    50% {
+        color: #6a1b9a; /* Couleur temporaire au milieu de l'animation */
+    }
+}
+
+/* Animation de fond avec une vague qui change la couleur du texte */
+@keyframes wave {
+    0% {
+        background-position: 0% 0;
+        background-color: #f5f5f5; /* Couleur initiale du fond */
+    }
+    50% {
+        background-position: 100% 0; /* La vague atteint l'autre côté */
+        background-color: #e1bee7; /* Le fond prend une nouvelle couleur */
+    }
+    100% {
+        background-position: 0% 0; /* Retour à la position initiale */
+        background-color: #f5f5f5; /* Retour à la couleur initiale */
+    }
+}
+
+/* Application des animations aux éléments spécifiques */
+
+/* Animation de l'icône avec changement de couleur */
 .step .icon {
     margin-right: 15px;
     font-size: 20px;
     color: grey;
     animation: iconColor 2s infinite ease-in-out;
-    animation-delay: 0.5s; /* L'icône change de couleur après la puce */
+    animation-delay: 0.5s; /* L'icône change de couleur après un délai */
 }
 
-@keyframes iconColor {
-    0%, 100% {
-        color: grey;
-    }
-    50% {
-        color: #6a1b9a; /* La couleur change temporairement */
-    }
-}
-
-/* Animation du fond de texte */
+/* Animation de fond pour les éléments de texte */
 .step .text {
     flex: 1;
     font-size: 16px;
@@ -126,16 +164,14 @@
     animation-delay: 1s; /* Le fond du texte change après l'icône */
 }
 
-@keyframes wave {
-    0% {
-        background-position: 0% 0;
-    }
-    50% {
-        background-position: 100% 0;
-        background-color: #e1bee7; /* Changement de couleur de fond */
-    }
-    100% {
-        background-position: 0% 0;
-        background-color: #f5f5f5;
-    }
+/* Animation de la puce pour la faire pulser */
+.puce_num {
+    background-color: $button--search-primary-color;
+    border-radius: 50%;
+    height: 3vh;
+    width: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1.5s ease-in-out infinite; /* La puce pulse en continu */
 }

@@ -109,12 +109,22 @@
 .icon-favorite:active{
     .fa-full{
     display: flex;
-    animation: likeFill 2s ease-in-out forwards  ;
+    animation: likeFill 1s ease-in-out forwards  ;
     color:$button--search-secondary-color;
     }
     .fa-empty {
     display:none;
   }
+}
+
+.icon-favorite:after {
+    .fa-full {
+      color: $font-primary;
+      display: flex;
+    }
+    .fa-empty {
+      display: none;
+    }
 }
 
 input {
