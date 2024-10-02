@@ -3,9 +3,22 @@
 #section-restaurants{
     display: flex;
     flex-direction: column;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+
+    @include mobile-landscape {
+        margin: 0 auto
+    }
 }
+
+#section-restaurants h2 {
+    margin:1vh;
+
+    @include mobile-landscape {
+        margin: 1vw;
+    }
+}
+
 .card {
     opacity: 0; /* Les cartes commencent invisibles */
     transform: translateX(100%); /* Les cartes commencent hors de l'écran (à droite) */
