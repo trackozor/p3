@@ -24,8 +24,9 @@
     flex-direction: column; /* alignement en colonne*/
     text-align: center; /* Aligne le texte dans l'axe horizontal*/
     justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
-    margin: $margin-vh-base $margin-vh-x2; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
+    margin: $margin-vh-base auto; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
     align-items: center; /* Aligne les éléments dans la hauteur*/
+    width: 90%;
 
     /*  Landscape  */
     @include mobile-landscape {

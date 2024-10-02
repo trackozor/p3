@@ -27,6 +27,7 @@ body {
   align-items: center;
   margin: 0 auto;
   justify-content: center;
+  width: 100%;
     
   /*- Portrait -*/
   @include mobile-landscape {
