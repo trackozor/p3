@@ -84,12 +84,23 @@
     font-size: $font-size-vh-base;/*Taille correspondant à 2 % de la hauteur de l 'écran*/
     color: black;/* Couleur icône */
     margin-right: $margin-vh-d2;/* marge droite correspond à 1% de la hauteur de l'écran*/
+
+    /* landscape  */
+    @include mobile-landscape { 
+        font-size: $font-size-vw-base;/* Taille correspondant à 2 % de la largeur de l'écran*/
+        margin-right: $margin-vw-d2;/* marge droite correspondant à 1% de la largeur de l'écran*/
+    }
 }
 
 /* Adresse localisation*/
 .carte-location address {
     font-size: $font-size-vh-base;
     color: black;
+
+    /* landscape  */
+    @include mobile-landscape { 
+        font-size: $font-size-vw-base;
+    }
 }
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
@@ -113,8 +124,8 @@
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
         box-shadow: $border-shadow-vw; /* ombre*/
-        margin: $margin-vw-d4 $margin-vw-x2;
-        height: auto;
+        margin: $margin-vw-d4 auto;
+        height: $object-size-vw-x15;
         
     }
 

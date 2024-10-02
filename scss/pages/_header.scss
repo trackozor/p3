@@ -4,7 +4,6 @@
 /* Date de création    : 25/09/2024                                                                        */
 /* Dernière modification: 27/09/2024                                                                       */
 /* Description         : Styles pour le header                                                            */
-
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
@@ -14,7 +13,7 @@ header {
   display: flex;/* Utilise flexbox pour aligner les éléments*/
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Aligne les éléments verticalement*/
-  width: 100%;
+  width: 100%;/* Prend toute la largeur disponible*/
 }  
 
 /*-- Card pour la localisation ----*/
@@ -35,6 +34,7 @@ header {
   }
 }
 
+/*Affichage conditionnel loader */
 #loader{
   display: $loader-active;
 

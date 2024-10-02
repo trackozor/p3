@@ -663,12 +663,25 @@ input {
   font-size: 2vh; /*Taille correspondant à 2 % de la hauteur de l 'écran*/
   color: black; /* Couleur icône */
   margin-right: 1vh; /* marge droite correspond à 1% de la hauteur de l'écran*/
+  /* landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .card-location i {
+    font-size: 2vw; /* Taille correspondant à 2 % de la largeur de l'écran*/
+    margin-right: 1vw; /* marge droite correspondant à 1% de la largeur de l'écran*/
+  }
 }
 
 /* Adresse localisation*/
 .carte-location address {
   font-size: 2vh;
   color: black;
+  /* landscape  */
+}
+@media (min-width: 20rem) and (max-width: 63.9rem) and (orientation: landscape) {
+  .carte-location address {
+    font-size: 2vw;
+  }
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -692,8 +705,8 @@ input {
     border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
     height: 40vw; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    margin: 0.5vw 4vw;
-    height: auto;
+    margin: 0.5vw auto;
+    height: 30vw;
   }
 }
 
@@ -903,7 +916,7 @@ header {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Aligne les éléments verticalement*/
-  width: 100%;
+  width: 100%; /* Prend toute la largeur disponible*/
 }
 
 /*-- Card pour la localisation ----*/
@@ -926,6 +939,7 @@ header {
   }
 }
 
+/*Affichage conditionnel loader */
 #loader {
   display: none;
 }
