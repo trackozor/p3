@@ -9,6 +9,12 @@
     @include mobile-landscape {
         margin: 0 auto
     }
+
+    @include desktop {
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 #section-restaurants h2 {

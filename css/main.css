@@ -1227,6 +1227,13 @@ ol li .puce_num {
     margin: 0 auto;
   }
 }
+@media (min-width: 63.91rem) {
+  #section-restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 
 #section-restaurants h2 {
   margin: 1vh;
