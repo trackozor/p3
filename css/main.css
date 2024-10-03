@@ -417,7 +417,7 @@ table {
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------Base mobile  ---------------------------------------------------------------*/
+/*-------------------------------------Base ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Typographie globale */
 body {
@@ -425,7 +425,7 @@ body {
   font-size: 2vh; /* Taille de police de base correspondant à 2 % de la hauteur*/
   display: block; /* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   background-color: white; /* Couleur de fond de base*/
-  justify-content: center;
+  justify-content: center; /* aligne horizontalement depuis la xe centrale les éléments*/
   /*- Mobile paysage-*/
   /*- Tablette -*/
   /*- Desktop -*/
@@ -446,7 +446,9 @@ body {
   }
 }
 
-/*  Titres cartes */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Titres ---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 h3 {
   font-family: "Shrikhand", sans-serif; /*Style de police pour les titres*/
 }
@@ -469,13 +471,17 @@ h2 {
   }
 }
 
-/*  Liens  */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------liens ---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 a {
   text-decoration: none; /* Supprime le soulignement par défaut*/
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
 }
 
-/*  Images  */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Images ---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 img {
   max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
   height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/
@@ -485,9 +491,9 @@ img {
 /* Styles des composants */
 /* _buttons.scss */
 /*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------- Portrait--------------------------------------*/
+/*------------------------------------------- explorer nos restaurants--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/* Bouton principal avec dégradé */
+/*---------------------------- Bouton principal avec dégradé ----------------------------- */
 .button--primary {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
@@ -520,7 +526,7 @@ img {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre*/
 }
 
-/* Texte du bouton*/
+/* ------------------------- Texte du bouton ----------------------------------------*/
 .button--primary-txt {
   font-size: 2vh; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
   font-weight: 100; /* Accentuation police valeur=100*/
@@ -538,7 +544,9 @@ img {
   }
 }
 
-/*------------------ Bouton "Nouveau" ----------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Badge Nouveau ------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .badge {
   background-color: #99E2D0; /* Couleur vert clair */
   color: #008766; /* couleur vert foncé*/
@@ -566,7 +574,9 @@ img {
   }
 }
 
-/*------------------ Bouton "Cœur" ----------------------------- */
+/*---------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Bouton Coeur -------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .icon-favorite {
   background-color: transparent; /* Couleur de fond transparente */
   color: grey; /* couleur principale */
@@ -581,17 +591,6 @@ img {
 
 .fa-full, .fa-empty {
   font-size: 3vh;
-  /* Desktop */
-}
-@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
-  .fa-full, .fa-empty {
-    font-size: 3vw;
-  }
-}
-@media (min-width: 63.91rem) {
-  .fa-full, .fa-empty {
-    font-size: 2vw;
-  }
 }
 
 .icon-favorite .fa-empty:hover {
@@ -620,7 +619,9 @@ input {
   display: none;
 }
 
-/* Bouton retour (flèche) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Flèche retour -----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .button--back {
   background-color: transparent;
   color: black;
@@ -770,9 +771,10 @@ input {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   position: relative;
   z-index: 1;
-  width: 95%;
-  margin: 1vh auto; /* Marge haut/bas correspondant à 1% de la hauteur de l'écran */
+  width: 100%;
   height: 30vh; /* Hauteur 15x valeur de base soit 30% de la hauteur de l'écran*/
+  margin: 0.5vh auto;
+  justify-content: center;
   /* landscape  */
   /* Desktop */
 }
@@ -790,6 +792,8 @@ input {
     border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
     height: 40vw; /* hauteur x30 valeur de base correspondant à 60 % de la largeur de l'écran */
     height: 50vw;
+    margin: 0.5vw auto;
+    width: 100%;
   }
 }
 @media (min-width: 63.91rem) {
@@ -844,6 +848,7 @@ input {
   font-size: 2vh;
   gap: 0.5vh;
   margin: 2vh;
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card .card-title {
@@ -857,6 +862,13 @@ input {
     font-size: 2vw;
     gap: 1vw;
     margin: 2vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .card .card-title {
+    font-size: 1vw;
+    gap: 1vw;
+    margin: 1vw;
   }
 }
 
@@ -878,7 +890,7 @@ input {
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card .icon-favorite {
     left: 85%;
-    bottom: 10%;
+    bottom: 7.5%;
   }
 }
 @media (min-width: 63.91rem) {
@@ -891,6 +903,26 @@ input {
 .card h3 {
   font-weight: 900;
   margin-top: 2vh;
+  /* landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card h3 {
+    font-size: 2vw;
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .card h3 {
+    font-size: 2vw;
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 63.91rem) {
+  .card h3 {
+    font-size: 1vw;
+    margin-top: 3vh;
+  }
 }
 
 .card-txt {
@@ -1075,30 +1107,7 @@ header {
   display: none;
 }
 
-/* Styles spécifique header*/
-/*-------------------------------------------------------------------------------------------------------- */
-/* Nom du fichier      : _footer.scss                                                                      */
-/* Auteur              : Trackozor                                                                         */
-/* Date de création    : 25/09/24                                                                          */
-/* Dernière modification: 27/09/24                                                                         */
-/* Description         : Fichier contenant les styles pour le footer et gestion des                        */
-/*                       responsive (mobile et desktop)                                                    */
-/*-------------------------------------------------------------------------------------------------------- */
-/* Version             : 1.0                                                                               */
-/* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
-/*-------------------------------------------------------------------------------------------------------- */
-/* Révisions :                                                                                             */
-/*                                                                                                         */
-/*-------------------------------------------------------------------------------------------------------- */
-footer {
-  display: flex; /* Utilse flexbox pour aligner les éléments */
-  align-items: center; /* Alignement horizontale a partir de l'axe centrale */
-  background-color: black; /* Couleur de fond*/
-  color: white; /* Couleur du texte et des icônes*/
-  padding: 0 1vh; /* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
-  width: 100%; /* Prend toute la largeur disponible */
-}
-
+/* Styles spécifique pages*/
 /* Nom du fichier      : _section-bandeau.scss                                                              */
 /* Auteur              : Trackozor                                                                          */
 /* Date de création    : 25/09/24                                                                           */
@@ -1248,7 +1257,7 @@ ol li {
 }
 @media (min-width: 63.91rem) {
   .li-txt h3 {
-    font-size: 1vw;
+    font-size: 1.5vw;
     width: auto;
   }
 }
@@ -1277,6 +1286,7 @@ i {
   height: 5vh;
   align-items: center;
   /*  Landscape  */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .li-txt {
@@ -1285,6 +1295,16 @@ i {
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 5vw;
+    align-items: center;
+  }
+}
+@media (min-width: 63.91rem) {
+  .li-txt {
+    left: 1vw;
+    border-radius: 2vh;
+    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 5vh;
     align-items: center;
   }
 }
@@ -1318,8 +1338,9 @@ ol li .puce_num {
 #section-restaurants {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   justify-content: center;
+  margin: 0 auto;
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   #section-restaurants {
@@ -1371,6 +1392,30 @@ ol li .puce_num {
 
 #delice.card {
   animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
+}
+
+/* Style spécifique footer*/
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _footer.scss                                                                      */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/24                                                                          */
+/* Dernière modification: 27/09/24                                                                         */
+/* Description         : Fichier contenant les styles pour le footer et gestion des                        */
+/*                       responsive (mobile et desktop)                                                    */
+/*-------------------------------------------------------------------------------------------------------- */
+/* Version             : 1.0                                                                               */
+/* Framework utilisé   : [SCSS, SASS, etc.]                                                                */
+/*-------------------------------------------------------------------------------------------------------- */
+/* Révisions :                                                                                             */
+/*                                                                                                         */
+/*-------------------------------------------------------------------------------------------------------- */
+footer {
+  display: flex; /* Utilse flexbox pour aligner les éléments */
+  align-items: center; /* Alignement horizontale a partir de l'axe centrale */
+  background-color: black; /* Couleur de fond*/
+  color: white; /* Couleur du texte et des icônes*/
+  padding: 0 1vh; /* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
+  width: 100%; /* Prend toute la largeur disponible */
 }
 
 /*# sourceMappingURL=main.css.map */

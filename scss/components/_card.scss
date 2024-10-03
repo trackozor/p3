@@ -135,9 +135,11 @@
     box-shadow: $border-shadow-vh; /* ombre*/
     position:relative;
     z-index: 1;
-    width: 95%;
-    margin: $margin-vh-d2 auto;/* Marge haut/bas correspondant à 1% de la hauteur de l'écran */
+    width: 100%;
     height: $object-size-vh-x15; /* Hauteur 15x valeur de base soit 30% de la hauteur de l'écran*/
+    margin: $margin-vh-d4 auto;
+    justify-content: center;
+ 
 
 
     /* landscape  */
@@ -146,13 +148,15 @@
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
         box-shadow: $border-shadow-vw; /* ombre*/
         margin: $margin-vw-d4 auto;
-        height: 50vw        
+        height: 50vw;        
     }
 
     @include tablette {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
         height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 % de la largeur de l'écran */
-        height:50vw
+        height:50vw;
+        margin: $margin-vw-d4 auto;
+        width: 100%;
     }
 
     /* Desktop */
@@ -189,7 +193,7 @@
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
         object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
         width:100%;
-        height: 40vw;
+        height:40vw;
     }
     
     /* desktop */
@@ -217,7 +221,14 @@
     @include tablette {
         font-size:$font-size-vw-base;
         gap:$gap-vw-d2;
-        margin: $margin-vw-base;
+        margin: $margin-vw-base;    
+    }
+
+    /* Desktop */   
+    @include desktop {
+        font-size:$font-size-vw-d2;
+        gap:$gap-vw-d2;
+        margin: $margin-vw-d2;
     }
 }
 .card .icon-favorite{
@@ -235,7 +246,7 @@
 
     @include tablette {
         left: 85%;
-        bottom: 10%;
+        bottom: 7.5%;
     }
 
     /* Desktop */
@@ -247,6 +258,23 @@
 .card h3 {
     font-weight: $font-weight-h-bold;
     margin-top: 2vh;
+
+    /* landscape */
+    @include mobile-landscape {
+        font-size: $font-size-vw-base;
+        margin-top: 3vh;
+    }
+    
+    @include tablette {
+        font-size: $font-size-vw-base;
+        margin-top: 3vh;
+    }
+    
+    /* Desktop */
+    @include desktop {
+        font-size: $font-size-vw-d2;
+        margin-top: 3vh;
+    }
 }
 
 .card-txt {

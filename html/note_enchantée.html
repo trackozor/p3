@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mon site mobile first</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- CSS compilé -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">    
+        <title>Menu - La Note Enchantée</title>
+        <meta name="description" content="Découvrez les plats gourmands de La Note Enchantée sur Ohmyfood. Entrées, plats et desserts raffinés à réserver en ligne. Commandez maintenant !">
 
-</head>
+        <!-- Optimisation pour les appareils mobiles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        
+        <!-- Polices Google pour améliorer la typographie  -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Préchargement des styles critiques de Font Awesome -->
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+    </head>
+    <body>
+        <!-- ********************************************************************************************************--> 
+        <!-- **************************         Header        ******************************************************* -->
+        <!-- *********************************************************************************************************--> 
+
+        <header>
+            <div class="card-logo-alt">
+                <a href="../index.html" aria-label="retour sur la page accueil">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                    <span class="sr-only">Fleche de retour sur page accueil</span>
+                </a> 
+                <h1 class="sr-only">La Note Enchantée, découvrez notre menu et commander en ligne</h1> <!-- Titre principal pour SEO et accessibilité -->
+                <img src="/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            </div>    
+        </header>
+
+        <!-- Section Principale -->
+        <main>
+            <img src="../images/restaurants/note_enchantée.jpg" alt="Assiette de plats variés au restaurant La Note Enchantée">
+            <section class="menu">
+                <h2>La Note Enchantée</h2>
+
+                <!-- Entrées -->
+                <div class="entrées">
+                    <h3>Entrées</h3>
+                    <i class="icon-favorite" aria-hidden="true"></i>
+                    <span class="sr-only">Favoris</span>
+                    <ul>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Fricassée d'escargots</p>
+                                <p class="dish-description">Au piment d'Espelette</p>
+                                <span class="price">25€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Foie gras de canard mi-cuit</p>
+                                <p class="dish-description">Et ses copeaux de truffe noire</p>
+                                <span class="price">35€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Œuf au plat</p>
+                                <p class="dish-description">Assaisonné à la truffe sur lit de caviar</p>
+                                <span class="price">76€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
+
+                <!-- Plats -->
+                <div class="plats">
+                    <h3>Plats</h3>
+                    <ul>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Filet de bœuf aux herbes</p>
+                                <p class="dish-description">Accompagné de sa ribambelle de légumes</p>
+                                <span class="price">40€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Parmentier de queue de bœuf</p>
+                                <p class="dish-description">À la truffe noire sur sa purée de panais</p>
+                                <span class="price">35€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Filet de turbot</p>
+                                <p class="dish-description">Aux agrumes</p>
+                                <span class="price">44€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desserts -->
+                <div class="desserts">
+                    <h3>Desserts</h3>
+                    <ul>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Paris-Brest</p>
+                                <p class="dish-description">Revisité</p>
+                                <span class="price">18€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Macaron au chocolat d'exception</p>
+                                <p class="dish-description">Et glace à la vanille de Madagascar</p>
+                                <span class="price">22€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <p class="dish-name">Mousse au chocolat</p>
+                                <p class="dish-description">Au piment d'Espelette et à la truffe noire</p>
+                                <span class="price">23€</span>
+                                <div class="validation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-card">
+                <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-utensils"></i><span class="sr-only">Proposer un restaurant</span>
+                            <p>Proposer un restaurant</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-handshake"></i><span class="sr-only">Devenir partenaire</span>
+                            <p>Devenir partenaire</p>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Mentions légales</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Contact</p>
+                        </a>
+                    </li>       
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

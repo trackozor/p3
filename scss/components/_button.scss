@@ -1,11 +1,11 @@
 /* _buttons.scss */
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------- Portrait--------------------------------------*/
+/*------------------------------------------- explorer nos restaurants--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 
-/* Bouton principal avec dégradé */
+/*---------------------------- Bouton principal avec dégradé ----------------------------- */
 .button--primary {
   display: flex;/* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Aligne les éléments dans la hauteur*/
@@ -31,12 +31,12 @@
   }
   /* Effet de survol*/
   &:hover {
-  background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-  box-shadow: $border-shadow-vh;/* Ombre*/
+    background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
+    box-shadow: $border-shadow-vh;/* Ombre*/
   }
 }
 
-/* Texte du bouton*/
+/* ------------------------- Texte du bouton ----------------------------------------*/
 .button--primary-txt {
   font-size: $font-size-vh-base; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
   font-weight: $font-weight-l-bold; /* Accentuation police valeur=100*/
@@ -52,7 +52,11 @@
   }
 }
 
-  /*------------------ Bouton "Nouveau" ----------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Badge Nouveau ------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
 .badge {
   background-color:$button--new-primary-color;  /* Couleur vert clair */
   color: $button--new-secondary-color; /* couleur vert foncé*/
@@ -76,8 +80,11 @@
     width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
   }
 }
-  
-  /*------------------ Bouton "Cœur" ----------------------------- */
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Bouton Coeur -------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
 .icon-favorite {
   background-color: transparent;/* Couleur de fond transparente */
   color:grey; /* couleur principale */
@@ -92,14 +99,6 @@
 .fa-full, .fa-empty {
   font-size: $font-size-vh-title;
 
-  @include mobile-landscape {
-    font-size: $font-size-vw-title;
-  }
-
-  /* Desktop */
-  @include desktop {
-    font-size: $font-size-vw-base;
-  }
 }
 .icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
@@ -133,7 +132,10 @@ input {
 
 
   
-  /* Bouton retour (flèche) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------Flèche retour -----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
   .button--back {
     background-color: transparent;
     color: black;
