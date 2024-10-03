@@ -24,17 +24,17 @@ body {
   font-size: $font-size-vh-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
   display: block;/* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   background-color: white;/* Couleur de fond de base*/
-  align-items: center;
-  margin: 0 auto;
   justify-content: center;
 
     
-  /*- Portrait -*/
+  /*- Mobile paysage-*/
   @include mobile-landscape {
     font-size: $font-size-vw-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/ 
 
   }
 
+  
+  /*- Tablette -*/
   @include tablette {
     font-size: $font-size-vw-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/
   }
@@ -46,11 +46,13 @@ body {
 }
   
 
+/*  Titres cartes */
 h3 {
     font-family: $font-title; /*Style de police pour les titres*/
 }
 
 
+/*  Description cartes */
 h2 {
     font-size:$font-size-vh-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
     font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 */

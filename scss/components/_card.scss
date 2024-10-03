@@ -63,7 +63,7 @@
     background-color: $primary-background-color; /* Couleur de fond*/
     width: $object-size-vh-x10; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
     padding: $padding-vh-base ;
-    margin-right: 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+    margin-right: $margin-vh-x2; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
 
     /* landscape */
     @include mobile-landscape {
@@ -149,6 +149,12 @@
         height: 50vw        
     }
 
+    @include tablette {
+        border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
+        height: $object-size-vw-x20; /* hauteur x30 valeur de base correspondant à 60 % de la largeur de l'écran */
+        height:50vw
+    }
+
     /* Desktop */
     @include desktop {
         border-radius: $border-radius-vw-base; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
@@ -183,7 +189,7 @@
         border-radius: $border-radius-vw-base   $border-radius-vw-base 0 0;/* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
         object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
         width:100%;
-        height: 30vw;
+        height: 40vw;
     }
     
     /* desktop */
@@ -200,13 +206,18 @@
 .card .card-title  {
     font-size: $font-size-vh-base;
     gap:$gap-vh-d4;
-    margin: 1vh;
-    display:flex-start;
+    margin: $margin-vh-base;
 
     @include mobile-landscape {
         font-size:$font-size-vw-base;
         gap:$gap-vw-d2;
-        margin: 1vw;
+        margin: $margin-vw-base;
+    }
+
+    @include tablette {
+        font-size:$font-size-vw-base;
+        gap:$gap-vw-d2;
+        margin: $margin-vw-base;
     }
 }
 .card .icon-favorite{

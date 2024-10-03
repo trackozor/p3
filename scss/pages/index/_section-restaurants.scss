@@ -19,15 +19,15 @@
 }
 
 #section-restaurants h2 {
-    margin:1vh;
+    margin:$margin-vh-base;
 
     @include mobile-landscape {
-        margin: 1vw;
+        margin: $margin-vw-base
     }
 
     @include desktop {
         width:95%; 
-        margin: 2% 5%;
+        margin: $margin-vw-base $margin-vw-x2;
         
     }
 }
