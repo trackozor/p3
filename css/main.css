@@ -703,8 +703,9 @@ input {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 8vh;
   height: 5vh;
+  justify-content: center;
+  position: relative;
 }
 
 .card-logo-alt img {
@@ -712,7 +713,9 @@ input {
 }
 
 .card-logo-alt i {
-  margin-left: 1vh;
+  position: absolute;
+  left: -5%;
+  top: 35%;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -1013,50 +1016,16 @@ input {
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
-.menu {
-  background-color: #f9f9f9;
-  border-radius: 3vh 3vh 0 0;
-  padding: 4vh 0;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  bottom: 10vh;
-  justify-content: center;
-}
-
-.menu h3 {
-  margin: 3vh 0vh 2vh 1vh;
-  border-bottom: #99E2D0 0.5vh solid;
-  width: 5vh;
-  padding-bottom: 1vh;
-}
-
 .card-menu {
   background-color: white;
   border-radius: 2vh;
-  height: 7vh;
+  height: 9vh;
   display: flex;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   justify-content: space-between;
   margin: 1vh;
   align-items: center;
   cursor: url("/images/logo/valid.png"), auto;
-}
-
-.menu-image {
-  height: 35vh;
-  width: 100%;
-  object-position: 50% 90%;
-  object-fit: cover;
-}
-
-.menu .title {
-  display: flex;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 3vh;
-  padding-left: 1vh;
-  justify-content: space-between;
 }
 
 .dish-name {
@@ -1074,7 +1043,6 @@ input {
 .dish-content {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
 }
 
@@ -1493,6 +1461,48 @@ i {
 
 #delice.card {
   animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
+}
+
+.menu {
+  background-color: #f9f9f9;
+  border-radius: 3vh 3vh 0 0;
+  padding-top: 4vh;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  bottom: 10vh;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+.menu-image {
+  height: 35vh;
+  width: 100%;
+  object-position: 50% 85%;
+  object-fit: cover;
+}
+
+.menu .title {
+  display: flex;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 3vh;
+  padding-left: 1vh;
+  justify-content: space-between;
+}
+
+.menu h3 {
+  margin: 3vh 0vh 2vh 1vh;
+  border-bottom: #99E2D0 0.5vh solid;
+  width: 5vh;
+  padding-bottom: 1vh;
 }
 
 /* Style spécifique footer*/

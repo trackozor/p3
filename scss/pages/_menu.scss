@@ -1,1 +1,41 @@
+.menu {
+    background-color:#f9f9f9 ;
+    border-radius: 3vh 3vh 0 0;
+    padding-top: 4vh;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height:auto;
+    bottom: 10vh;
+    justify-content: center;
+    margin:0  auto;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding:0;
+}
+.menu-image {
+    height:35vh;
+    width: 100%;
+    object-position: 50% 85%;
+    object-fit: cover;
+    
+}
+.menu .title {
+    display: flex;
+    font-family: $font-title;
+    font-size: $font-size-vh-title;
+    padding-left:1vh;
+    justify-content: space-between;
+    
+    
+}
 
+.menu h3 {
+    margin:3vh 0vh 2vh 1vh;
+    border-bottom: $button--new-primary-color  0.5vh solid ;
+    width: 5vh;
+    padding-bottom: 1vh; 
+}

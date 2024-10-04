@@ -49,18 +49,21 @@
     display:flex;
     align-items: center;
     width: 100%;
-    gap: 8vh;
     height: 5vh;
+    justify-content: center;
+    position: relative;
     
 }
 
 .card-logo-alt img {
-    height: 3vh; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
+    height: 3vh; /* Hauteur correspondant à 3 % de la hauteur de l'écran */    
     
 }
 
 .card-logo-alt i {
-    margin-left: 1vh;
+    position: absolute;
+    left: -5%;
+    top:35%
     
 }
 
@@ -347,51 +350,20 @@
 /*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 
-.menu {
-    background-color:#f9f9f9 ;
-    border-radius: 3vh 3vh 0 0;
-    padding: 4vh 0; 
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height:auto;
-    bottom: 10vh;
-    justify-content: center;
-}
-.menu h3 {
-    margin:3vh 0vh 2vh 1vh;
-    border-bottom: $button--new-primary-color  0.5vh solid ;
-    width: 5vh;
-    padding-bottom: 1vh; 
-}
 .card-menu {
     background-color: white;
     border-radius: 2vh;
-    height:7vh;
+    height:9vh;
     display:flex;
     box-shadow: $border-shadow-vh; /* ombre*/
     justify-content: space-between;
     margin:1vh;
     align-items:center;
     cursor: url('/images/logo/valid.png'), auto;
+
+
 }
 
-.menu-image {
-    height:35vh;
-    width: 100%;
-    object-position: 50% 90%;
-    object-fit: cover;
-    
-}
-.menu .title {
-    display: flex;
-    font-family: $font-title;
-    font-size: $font-size-vh-title;
-    padding-left:1vh;
-    justify-content: space-between;
-    
-    
-}
 
 .dish-name {
     font-size: $font-size-vh-base;
@@ -408,7 +380,6 @@
 .dish-content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
     
 }
