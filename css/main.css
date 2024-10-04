@@ -802,7 +802,7 @@ input {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 90%;
   height: 30vh; /* Hauteur 15x valeur de base soit 30% de la hauteur de l'écran*/
   margin: 0.5vh auto;
   justify-content: center;
@@ -876,6 +876,28 @@ input {
 
 .card h3 {
   font-family: "roboto-bold", sans-serif;
+  font-weight: 900;
+  margin-top: 2vh;
+  /* landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card h3 {
+    font-size: 2vw;
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .card h3 {
+    font-size: 2vw;
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 63.91rem) {
+  .card h3 {
+    font-size: 1vw;
+    margin-top: 3vh;
+  }
 }
 
 /* Zone de texte */
@@ -935,31 +957,6 @@ input {
   }
 }
 
-.card h3 {
-  font-weight: 900;
-  margin-top: 2vh;
-  /* landscape */
-  /* Desktop */
-}
-@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
-  .card h3 {
-    font-size: 2vw;
-    margin-top: 3vh;
-  }
-}
-@media (min-width: 48rem) and (max-width: 63.9rem) {
-  .card h3 {
-    font-size: 2vw;
-    margin-top: 3vh;
-  }
-}
-@media (min-width: 63.91rem) {
-  .card h3 {
-    font-size: 1vw;
-    margin-top: 3vh;
-  }
-}
-
 .card-txt {
   padding: 0.5vh 0;
 }
@@ -1012,12 +1009,14 @@ input {
 /*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 .menu {
-  background-color: yellow;
+  background-color: #EAEAEA;
   border-radius: 3vh 3vh 0 0;
   padding: 4vh 0.5vh;
   position: relative;
   z-index: 1;
   width: 100%;
+  height: auto;
+  bottom: 10vh;
 }
 
 .card-menu {
@@ -1026,12 +1025,19 @@ input {
 }
 
 .menu h2 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
   font-size: 3vh;
-  font-style: italic;
-  letter-spacing: 0;
-  font-weight: 900;
-  font-stretch: extra-expanded;
+}
+
+.menu-image {
+  height: 35vh;
+  width: 100%;
+  object-position: 50% 90%;
+  object-fit: cover;
+}
+
+.menu .title {
+  display: flex;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/

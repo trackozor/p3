@@ -36,14 +36,21 @@
         <!-- Section Principale -->
         <main>
             <img src="../images/restaurants/note_enchantée.jpg" alt="Assiette de plats variés au restaurant La Note Enchantée" class="menu-image">
+        
             <section class="menu">
-                <h2>La Note Enchantée</h2>
-
+                <div class="title">
+                    <h2>La Note Enchantée</h2>
+                    <div class="icon-favorite">
+                            <input type="checkbox" id="favorite-checkbox-palette"  aria-label="Ajouter La Palette du Goût aux favoris">
+                            <label for="favorite-checkbox-palette" class="icon-favorite">
+                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            </label>
+                        </div>
+                </div>                
                 <!-- Entrées -->
                 <div class="entrées">
                     <h3>Entrées</h3>
-                    <i class="icon-favorite" aria-hidden="true"></i>
-                    <span class="sr-only">Favoris</span>
                     <ul>
                         <li>
                             <div class="card-menu">
