@@ -442,17 +442,13 @@ body {
 }
 @media (min-width: 63.91rem) {
   body {
-    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    font-size: 1vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
   }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Titres ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-h3 {
-  font-family: "Shrikhand", sans-serif; /*Style de police pour les titres*/
-}
-
 /*  Description cartes */
 h2 {
   font-size: 3vh; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
@@ -467,7 +463,7 @@ h2 {
 }
 @media (min-width: 63.91rem) {
   h2 {
-    font-size: 3vw; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
+    font-size: 2vw; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
   }
 }
 
@@ -634,6 +630,25 @@ input {
   .button--back {
     font-size: 2vw;
   }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------icône validation-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+.validation-icon {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.validation-icon i {
+  color: white;
+  background-color: #99E2D0;
+  padding: 2vh;
+  border-radius: 0 2vh 2vh 0;
+  justify-content: center;
+  font-size: 3vh;
 }
 
 /* Nom du fichier      : _card.scss                                                                       */
@@ -859,6 +874,10 @@ input {
   }
 }
 
+.card h3 {
+  font-family: "roboto-bold", sans-serif;
+}
+
 /* Zone de texte */
 .card .card-title {
   font-size: 2vh;
@@ -990,16 +1009,29 @@ input {
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
-/*----------------------------------------- carte menu conteneur----------------------------------------------*/
+/*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 .menu {
-  background-color: #EAEAEA;
-  border-radius: 2vh 2vh 0;
+  background-color: yellow;
+  border-radius: 3vh 3vh 0 0;
+  padding: 4vh 0.5vh;
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
-.menu-item ul li {
-  display: flex;
+.card-menu {
+  background-color: red;
+  border-radius: 2vh;
+}
+
+.menu h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 3vh;
+  font-style: italic;
+  letter-spacing: 0;
+  font-weight: 900;
+  font-stretch: extra-expanded;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/

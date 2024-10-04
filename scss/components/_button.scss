@@ -149,3 +149,24 @@ input {
     }
 
 }
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------icône validation-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+.validation-icon {
+
+  height:7vh;
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+.validation-icon i {
+  color: white;
+  background-color: $button--new-primary-color;
+  padding: 2vh;
+  border-radius: 0 2vh  2vh 0;
+  justify-content: center;
+  font-size: 3vh;
+  
+}
