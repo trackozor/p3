@@ -6,18 +6,21 @@
     z-index: 1;
     width: 100%;
     height:auto;
-    bottom: 10vh;
+    bottom: 2vh;
     justify-content: space-between;
     margin:0  auto;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .menu-image {
     height:35vh;
     width: 100%;
-    object-position: 50% 85%;
+    object-position: 50% 75%;
     object-fit: cover;
     
+
 }
 .menu .title {
     display: flex;

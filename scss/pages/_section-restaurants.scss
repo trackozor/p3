@@ -55,3 +55,14 @@
 #delice.card  {
     animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
 }
+
+/* ---------------------------------------------------------------------------------------------------*/
+/*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
+#francaise .menu-image-francaise {
+    object-position: center 98%;
+}
+
+#delice  img {
+    object-position: center 90%;
+}

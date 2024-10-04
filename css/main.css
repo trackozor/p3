@@ -1003,17 +1003,6 @@ input {
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
-/*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
-/* ---------------------------------------------------------------------------------------------------*/
-#francaise img {
-  object-position: center 98%;
-}
-
-#delice img {
-  object-position: center 90%;
-}
-
-/* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 .card-menu {
@@ -1468,6 +1457,17 @@ i {
   animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
 }
 
+/* ---------------------------------------------------------------------------------------------------*/
+/*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
+#francaise .menu-image-francaise {
+  object-position: center 98%;
+}
+
+#delice img {
+  object-position: center 90%;
+}
+
 .menu {
   background-color: #f9f9f9;
   border-radius: 3vh 3vh 0 0;
@@ -1476,15 +1476,17 @@ i {
   z-index: 1;
   width: 100%;
   height: auto;
-  bottom: 10vh;
+  bottom: 2vh;
   justify-content: space-between;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-image {
   height: 35vh;
   width: 100%;
-  object-position: 50% 85%;
+  object-position: 50% 75%;
   object-fit: cover;
 }
 
