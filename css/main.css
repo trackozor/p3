@@ -1460,7 +1460,7 @@ i {
 /* ---------------------------------------------------------------------------------------------------*/
 /*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
-#francaise .menu-image-francaise {
+#francaise img {
   object-position: center 98%;
 }
 
@@ -1503,6 +1503,17 @@ i {
   border-bottom: #99E2D0 0.5vh solid;
   width: 5vh;
   padding-bottom: 1vh;
+}
+
+.menu .button--primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .button--primary {
+  width: 20vh;
+  margin: 2vh auto;
 }
 
 /* Style spécifique footer*/
