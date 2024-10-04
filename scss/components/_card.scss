@@ -359,8 +359,12 @@
 }
 
 .card-menu {
-    background-color: red;
+    
     border-radius: 2vh;
+    height:7vh;
+    display:flex;
+    box-shadow: $border-shadow-vh; /* ombre*/
+    justify-content: space-between;
 }
 .menu h2  {
     font-family: $font-title;
@@ -376,9 +380,18 @@
 }
 .menu .title {
     display: flex;
+    justify-content: center;
+    gap:2vh;
+}
+.menu .dish-name {
+    font-size: $font-size-vh-base;
+    font-weight: $font-weight-h-bold;
+    margin:1vh;
 }
 
-
+.menu .dish-content {
+    display: flex;
+}
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/

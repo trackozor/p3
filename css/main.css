@@ -1020,8 +1020,11 @@ input {
 }
 
 .card-menu {
-  background-color: red;
   border-radius: 2vh;
+  height: 7vh;
+  display: flex;
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
+  justify-content: space-between;
 }
 
 .menu h2 {
@@ -1037,6 +1040,18 @@ input {
 }
 
 .menu .title {
+  display: flex;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.menu .dish-name {
+  font-size: 2vh;
+  font-weight: 900;
+  margin: 1vh;
+}
+
+.menu .dish-content {
   display: flex;
 }
 
