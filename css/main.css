@@ -998,9 +998,8 @@ input {
   width: 100%;
 }
 
-.menu-item {
+.menu-item ul li {
   display: flex;
-  flex-direction: column;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -1412,12 +1411,6 @@ i {
 
 #delice.card {
   animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
-}
-
-main img {
-  width: 100%;
-  z-index: 1;
-  position: relative;
 }
 
 /* Style spécifique footer*/
