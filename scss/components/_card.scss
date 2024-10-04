@@ -356,14 +356,17 @@
     height:9vh;
     display:flex;
     box-shadow: $border-shadow-vh; /* ombre*/
-    justify-content: space-between;
     margin:1vh;
     align-items:center;
     cursor: url('/images/logo/valid.png'), auto;
+    justify-content: space-between;
+    width: 95%;
 
 
 }
-
+.menu-item{
+    width: 100%;
+}
 
 .dish-name {
     font-size: $font-size-vh-base;
@@ -375,20 +378,19 @@
     font-size: $font-size-vh-base;
     word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
     padding: 0 1vh;
+    
 
 }
 .dish-content {
     display: flex;
+    width:100%;
     justify-content: space-between;
-    align-items: center;
-    
 }
 
 .dish-content .price {
     font-size: $font-size-vh-base; /* Ajuste la taille pour qu'elle corresponde au texte */
     font-weight: $font-weight-h-bold; /* Assure la cohérence du style */
-    margin-left: auto; /* Pousse le prix vers la droite */
-
+    padding-right: 1vh;
 }
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/

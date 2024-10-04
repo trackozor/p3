@@ -7,15 +7,11 @@
     width: 100%;
     height:auto;
     bottom: 10vh;
-    justify-content: center;
+    justify-content: space-between;
     margin:0  auto;
 }
-.menu ul {
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    padding:0;
-}
+
+
 .menu-image {
     height:35vh;
     width: 100%;

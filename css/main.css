@@ -1022,10 +1022,15 @@ input {
   height: 9vh;
   display: flex;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
-  justify-content: space-between;
   margin: 1vh;
   align-items: center;
   cursor: url("/images/logo/valid.png"), auto;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.menu-item {
+  width: 100%;
 }
 
 .dish-name {
@@ -1042,14 +1047,14 @@ input {
 
 .dish-content {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
 }
 
 .dish-content .price {
   font-size: 2vh; /* Ajuste la taille pour qu'elle corresponde au texte */
   font-weight: 900; /* Assure la cohérence du style */
-  margin-left: auto; /* Pousse le prix vers la droite */
+  padding-right: 1vh;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -1472,15 +1477,8 @@ i {
   width: 100%;
   height: auto;
   bottom: 10vh;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
-}
-
-.menu ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
 }
 
 .menu-image {
