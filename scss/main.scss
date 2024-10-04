@@ -15,13 +15,13 @@
 
 
 /* Variables globales (couleurs, tailles, etc.) */
-@import 'utilities/variables';
+@import 'util/variables';
 
 /* Mixins (ex: media queries, fonctions réutilisables) */
-@import 'utilities/mixins';
+@import 'util/mixins';
 
 /* Styles des animations */
-@import 'utilities/animation';
+@import 'util/animation';
 
 /* Reset et base typographique */
 @import 'layout/reset';
@@ -38,6 +38,7 @@
 /* Styles spécifique pages*/
 @import 'pages/section-bandeau';
 @import 'pages/section-restaurants';
+@import 'pages/menu';
 
 /* Style spécifique footer*/
 @import 'layout/footer';

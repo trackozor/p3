@@ -990,7 +990,21 @@ input {
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
-/*----------------------------------------- Footer Carte----------- ----------------------------------*/
+/*----------------------------------------- carte menu conteneur----------------------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
+.menu {
+  background-color: #EAEAEA;
+  border-radius: 2vh 2vh 0;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 .footer-card {
   padding: 2vh;
@@ -1189,7 +1203,7 @@ header {
   }
 }
 
-/*-------- Conteneur parent liste */
+/*-------- Conteneur parent liste ----------------- */
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -1198,7 +1212,7 @@ header {
   gap: 3vh;
   margin: 10vh auto;
   width: 90%;
-  /*  Landscape  */
+  /*--  Landscape --*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .fonctionnement {
@@ -1207,13 +1221,15 @@ header {
   }
 }
 
+/*-------------- Liste --------------------------------*/
 ol {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 95%;
   justify-content: center;
-  /*  Landscape  */
+  /*--  Landscape  --*/
+  /*-- Desktop  --*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol {
@@ -1233,11 +1249,7 @@ ol {
   }
 }
 
-/*----- Icône Store -----*/
-.fa-store {
-  color: #9356DC;
-}
-
+/*--------------- Liste : Lignes -------------------------*/
 ol li {
   display: flex;
   margin: 2vh 1vh;
@@ -1247,7 +1259,7 @@ ol li {
   z-index: 1;
   width: 100%;
   justify-content: space-around;
-  /*  Landscape  */
+  /*--  Landscape  --*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol li {
@@ -1261,46 +1273,19 @@ ol li {
   }
 }
 
-.li-txt h3 {
-  margin-right: 1vh;
-  font-size: 2vh;
-  /*  Landscape  */
-}
-@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
-  .li-txt h3 {
-    margin-right: 1vw;
-  }
-}
-@media (min-width: 63.91rem) {
-  .li-txt h3 {
-    font-size: 1.5vw;
-    width: auto;
-  }
-}
-
-i {
-  color: grey;
-  font-size: 2vh;
-  margin: 0 2vh 0 4vh;
-  /*  Landscape  */
-}
-@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
-  i {
-    font-size: 2vw;
-    margin: 0 2vw 0 4vw;
-  }
-}
-
+/*---------------- Liste Texte ---------------*/
 .li-txt {
   display: flex;
   position: relative;
   z-index: 1;
-  left: 1vh;
+  left: 2vh;
   border-radius: 2vh;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 5vh;
   align-items: center;
+  margin-right: 1vh;
+  font-size: 2vh;
   /*  Landscape  */
   /* Desktop */
 }
@@ -1348,6 +1333,25 @@ ol li .puce_num {
     width: 3vw;
     font-size: 1.4vw;
   }
+}
+
+/*--------------- Liste : Icône -------------------------*/
+i {
+  color: grey;
+  font-size: 2vh;
+  margin: 0 2vh 0 4vh;
+  /*  Landscape  */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  i {
+    font-size: 2vw;
+    margin: 0 2vw 0 4vw;
+  }
+}
+
+/*------------------ Icône Store -----------------------*/
+.fa-store {
+  color: #9356DC;
 }
 
 /*_section-restaurant.scss*/
@@ -1408,6 +1412,12 @@ ol li .puce_num {
 
 #delice.card {
   animation-delay: 1.5s; /* La quatrième carte commence après 0.8s */
+}
+
+main img {
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 /* Style spécifique footer*/
