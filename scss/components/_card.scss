@@ -348,27 +348,32 @@
 /* ---------------------------------------------------------------------------------------------------*/
 
 .menu {
-    background-color:$primary-background-color ;
+    background-color:#f9f9f9 ;
     border-radius: 3vh 3vh 0 0;
-    padding: 4vh 0.5vh; 
+    padding: 4vh 0; 
     position: relative;
     z-index: 1;
     width: 100%;
     height:auto;
     bottom: 10vh;
+    justify-content: center;
 }
-
+.menu h3 {
+    margin:3vh 0vh 2vh 1vh;
+    border-bottom: $button--new-primary-color  0.5vh solid ;
+    width: 5vh;
+    padding-bottom: 1vh; 
+}
 .card-menu {
-    
+    background-color: white;
     border-radius: 2vh;
     height:7vh;
     display:flex;
     box-shadow: $border-shadow-vh; /* ombre*/
     justify-content: space-between;
-}
-.menu h2  {
-    font-family: $font-title;
-    font-size: $font-size-vh-title;
+    margin:1vh;
+    align-items:center;
+    cursor: url('/images/logo/valid.png'), auto;
 }
 
 .menu-image {
@@ -380,17 +385,39 @@
 }
 .menu .title {
     display: flex;
-    justify-content: center;
-    gap:2vh;
-}
-.menu .dish-name {
-    font-size: $font-size-vh-base;
-    font-weight: $font-weight-h-bold;
-    margin:1vh;
+    font-family: $font-title;
+    font-size: $font-size-vh-title;
+    padding-left:1vh;
+    justify-content: space-between;
+    
+    
 }
 
-.menu .dish-content {
+.dish-name {
+    font-size: $font-size-vh-base;
+    font-weight: $font-weight-h-bold;
+    padding-left: 1vh;
+}
+
+.dish-description {
+    font-size: $font-size-vh-base;
+    word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
+    padding: 0 1vh;
+
+}
+.dish-content {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.dish-content .price {
+    font-size: $font-size-vh-base; /* Ajuste la taille pour qu'elle corresponde au texte */
+    font-weight: $font-weight-h-bold; /* Assure la cohérence du style */
+    margin-left: auto; /* Pousse le prix vers la droite */
+
 }
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/

@@ -45,6 +45,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Bleu clair */
 /*Bleu foncé*/
 /*------- fond-----*/
+/*Gris clair*/
 /*--------- Boutons-------- */
 /* Violet */
 /* Rose */
@@ -636,10 +637,14 @@ input {
 /*-------------------------------------icône validation-----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 .validation-icon {
-  height: 7vh;
-  display: flex;
+  height: 8vh;
+  display: none;
   align-items: center;
-  justify-content: flex-end;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  left: 5%;
+  justify-content: center;
 }
 
 .validation-icon i {
@@ -719,7 +724,7 @@ input {
   justify-content: center; /*aligne les éléments depuis le centre*/
   align-items: center;
   gap: 1vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
-  background-color: #EAEAEA; /* Couleur de fond*/
+  background-color: #f9f9f9; /* Couleur de fond*/
   width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
   padding: 2vh;
   margin-right: 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
@@ -1009,27 +1014,34 @@ input {
 /*----------------------------------------- carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 .menu {
-  background-color: #EAEAEA;
+  background-color: #f9f9f9;
   border-radius: 3vh 3vh 0 0;
-  padding: 4vh 0.5vh;
+  padding: 4vh 0;
   position: relative;
   z-index: 1;
   width: 100%;
   height: auto;
   bottom: 10vh;
+  justify-content: center;
+}
+
+.menu h3 {
+  margin: 3vh 0vh 2vh 1vh;
+  border-bottom: #99E2D0 0.5vh solid;
+  width: 5vh;
+  padding-bottom: 1vh;
 }
 
 .card-menu {
+  background-color: white;
   border-radius: 2vh;
   height: 7vh;
   display: flex;
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
   justify-content: space-between;
-}
-
-.menu h2 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 3vh;
+  margin: 1vh;
+  align-items: center;
+  cursor: url("/images/logo/valid.png"), auto;
 }
 
 .menu-image {
@@ -1041,18 +1053,35 @@ input {
 
 .menu .title {
   display: flex;
-  justify-content: center;
-  gap: 2vh;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 3vh;
+  padding-left: 1vh;
+  justify-content: space-between;
 }
 
-.menu .dish-name {
+.dish-name {
   font-size: 2vh;
   font-weight: 900;
-  margin: 1vh;
+  padding-left: 1vh;
 }
 
-.menu .dish-content {
+.dish-description {
+  font-size: 2vh;
+  word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
+  padding: 0 1vh;
+}
+
+.dish-content {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.dish-content .price {
+  font-size: 2vh; /* Ajuste la taille pour qu'elle corresponde au texte */
+  font-weight: 900; /* Assure la cohérence du style */
+  margin-left: auto; /* Pousse le prix vers la droite */
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -1105,7 +1134,7 @@ input {
 
 /* Carte avec le logo, message et barre de progression */
 .loader-card {
-  background-color: #EAEAEA;
+  background-color: #f9f9f9;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
