@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <!-- Métadonnées du document -->
         <meta charset="UTF-8">    
-        <title>Menu -À la Française </title>
+        <title>Menu - À la Française</title>
         <meta name="description" content="Découvrez les plats gourmands de À la française sur Ohmyfood. Entrées, plats et desserts raffinés à réserver en ligne. Commandez maintenant !">
 
         <!-- Optimisation pour les appareils mobiles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Lien vers le fichier CSS principal -->
         <link rel="stylesheet" href="/css/main.css">
         
         <!-- Polices Google pour améliorer la typographie  -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         
-        <!-- Préchargement des styles critiques de Font Awesome -->
+        <!-- Préchargement des styles critiques de Font Awesome pour optimiser le chargement -->
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
@@ -23,35 +26,45 @@
         <!-- *********************************************************************************************************--> 
 
         <header>
+            <!-- Logo avec lien de retour à la page d'accueil -->
             <div class="card-logo-alt">
                 <a href="../index.html" aria-label="retour sur la page accueil">
                     <i class="fas fa-arrow-left" aria-hidden="true"></i>
                     <span class="sr-only">Fleche de retour sur page accueil</span>
                 </a> 
-                <h1 class="sr-only">La Note Enchantée, découvrez notre menu et commander en ligne</h1> <!-- Titre principal pour SEO et accessibilité -->
+                <!-- Titre principal caché pour l'accessibilité et le SEO -->
+                <h1 class="sr-only">La Note Enchantée, découvrez notre menu et commander en ligne</h1>
                 <img src="/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
             </div>    
         </header>
 
-        <!-- Section Principale -->
+        <!-- ********************************************************************************************************--> 
+        <!-- **************************         Section principale       ******************************************** -->
+        <!-- *********************************************************************************************************-->
         <main>
+            <!-- Image principale du restaurant -->
             <img src="../images/restaurants/française.jpg" alt="Assiette de plats variés au restaurant À la française">
         
+            <!-- Section du menu -->
             <section class="menu">
+                <!-- Titre du restaurant et bouton favoris -->
                 <div class="title">
                     <h2>À la française</h2>
                     <div class="icon-favorite">
-                            <input type="checkbox" id="favorite-checkbox-française"  aria-label="Ajouter À la française aux favoris">
-                            <label for="favorite-checkbox-française" class="icon-favorite">
-                                <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                                <i class="fas fa-heart  fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                            </label>
-                        </div>
+                        <!-- Bouton pour ajouter aux favoris avec icône -->
+                        <input type="checkbox" id="favorite-checkbox-française" aria-label="Ajouter À la française aux favoris">
+                        <label for="favorite-checkbox-française" class="icon-favorite">
+                            <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                            <i class="fas fa-heart fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+                        </label>
+                    </div>
                 </div>                
-                <!-- Entrées -->
+
+                <!-- Section des Entrées -->
                 <div class="entrées">
                     <h3>ENTRÉES</h3>
                     <ul>
+                        <!-- Carte du plat 1 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
@@ -61,13 +74,15 @@
                                         <span class="price">25€</span>
                                     </div>
                                 </div>
-                                    
+                                <!-- Icône de validation pour le plat -->
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
+
+                        <!-- Carte du plat 2 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
@@ -77,51 +92,54 @@
                                         <span class="price">35€</span>
                                     </div>
                                 </div>
-                                    
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
-                        <li>
 
-                        <div class="card-menu">
-                            <div class="menu-item">
-                                <p class="dish-name">Soupe à l'oignon</p>
-                                <div class="dish-content">
-                                    <p class="dish-description">Revisitée</p>
-                                    <span class="price">20€</span>
+                        <!-- Carte du plat 3 -->
+                        <li>
+                            <div class="card-menu">
+                                <div class="menu-item">
+                                    <p class="dish-name">Soupe à l'oignon</p>
+                                    <div class="dish-content">
+                                        <p class="dish-description">Revisitée</p>
+                                        <span class="price">20€</span>
+                                    </div>
                                 </div>
-                            </div>                                   
-                            <div class="validation-icon">
-                                <i class="far fa-check-circle" aria-hidden="true"></i>
-                                <span class="sr-only">Validé</span>
+                                <div class="validation-icon">
+                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <span class="sr-only">Validé</span>
+                                </div>
                             </div>
-                        </div>                            </li>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Plats -->
+                <!-- Section des Plats -->
                 <div class="plats">
                     <h3>PLATS</h3>
                     <ul>
+                        <!-- Carte du plat 1 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Coquilles Saint-Jacques</p>
                                     <div class="dish-content">
-                                        <p class="dish-description">Accompagnées d' une purée de panais</p>
+                                        <p class="dish-description">Accompagnées d'une purée de panais</p>
                                         <span class="price">40€</span>
                                     </div>
                                 </div>
-                                    
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
+
+                        <!-- Carte du plat 2 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
@@ -131,35 +149,37 @@
                                         <span class="price">35€</span>
                                     </div>
                                 </div>
-                                    
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
-                        <li>
 
-                        <div class="card-menu">
-                            <div class="menu-item">
-                                <p class="dish-name">Pigeonneau d'Ille-et-Vilaine</p>
-                                <div class="dish-content">
-                                    <p class="dish-description">Sur son lit de gnocchis aux légumes</p>
-                                    <span class="price">44€</span>
+                        <!-- Carte du plat 3 -->
+                        <li>
+                            <div class="card-menu">
+                                <div class="menu-item">
+                                    <p class="dish-name">Pigeonneau d'Ille-et-Vilaine</p>
+                                    <div class="dish-content">
+                                        <p class="dish-description">Sur son lit de gnocchis aux légumes</p>
+                                        <span class="price">44€</span>
+                                    </div>
                                 </div>
-                            </div>                                   
-                            <div class="validation-icon">
-                                <i class="far fa-check-circle" aria-hidden="true"></i>
-                                <span class="sr-only">Validé</span>
+                                <div class="validation-icon">
+                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <span class="sr-only">Validé</span>
+                                </div>
                             </div>
-                        </div>                            </li>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Desserts -->
+                <!-- Section des Desserts -->
                 <div class="desserts">
                     <h3>DESSERTS</h3>
                     <ul>
+                        <!-- Carte du dessert 1 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
@@ -169,13 +189,14 @@
                                         <span class="price">18€</span>
                                     </div>
                                 </div>
-                                    
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
+
+                        <!-- Carte du dessert 2 -->
                         <li>
                             <div class="card-menu">
                                 <div class="menu-item">
@@ -185,54 +206,67 @@
                                         <span class="price">22€</span>
                                     </div>
                                 </div>
-                                    
                                 <div class="validation-icon">
                                     <i class="far fa-check-circle" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
                             </div>
                         </li>
-                        <li>
 
-                        <div class="card-menu">
-                            <div class="menu-item">
-                                <p class="dish-name">Millefeuille croustillant</p>
-                                <div class="dish-content">
-                                    <p class="dish-description">Myrtille et pâte d'amande</p>
-                                    <span class="price">23€</span>
+                        <!-- Carte du dessert 3 -->
+                        <li>
+                            <div class="card-menu">
+                                <div class="menu-item">
+                                    <p class="dish-name">Millefeuille croustillant</p>
+                                    <div class="dish-content">
+                                        <p class="dish-description">Myrtille et pâte d'amande</p>
+                                        <span class="price">23€</span>
+                                    </div>
                                 </div>
-                            </div>                                   
-                            <div class="validation-icon">
-                                <i class="far fa-check-circle" aria-hidden="true"></i>
-                                <span class="sr-only">Validé</span>
+                                <div class="validation-icon">
+                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <span class="sr-only">Validé</span>
+                                </div>
                             </div>
-                        </div>                            </li>
+                        </li>
                     </ul>
                 </div>
+
+                <!-- Bouton de commande -->
                 <a class="button--primary"><span class="button--primary-txt">Commander</span></a>
             </section>
         </main>
 
-        <!-- Footer -->
+        <!-- ********************************************************************************************************--> 
+        <!-- **************************         Footer        ******************************************************* -->
+        <!-- *********************************************************************************************************-->
         <footer>
             <div class="footer-card">
+                <!-- Logo Ohmyfood -->
                 <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood">
                 <ul>
+                    <!-- Proposer un restaurant -->
                     <li>
                         <a href="#">
                             <i class="fas fa-utensils"></i><span>Proposer un restaurant</span>
                         </a>
                     </li>
+
+                    <!-- Devenir partenaire -->
                     <li>
                         <a href="#">
                             <i class="far fa-handshake"></i><span>Devenir partenaire</span>
                         </a> 
                     </li>
+
+                    <!-- Mentions légales -->
                     <li>
                         <a href="#">
                             <p>Mentions légales</p>
                         </a>
                     </li>
+
+                    <!-- Contact -->
                     <li>
                         <a href="#">
                             <p>Contact</p>
