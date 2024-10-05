@@ -508,25 +508,73 @@
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: 2vh; /* Padding dans le footer */
+    padding: $padding-vh-base; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+
+    /* landscape */
+    @include mobile-landscape {
+        padding: $padding-vw-base; /* Padding vertical pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        padding: $padding-vw-base; /* Padding vertical pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        padding: $padding-vw-base; /* Padding vertical pour desktop */
+    }
 }
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-    margin-right: 2vh; /* Espace à droite des icônes */
+    margin-right: $margin-vh-base; /* Espace à droite des icônes */
     margin-left: 0; /* Pas d'espace à gauche */
     color: white; /* Couleur blanche pour les icônes */
+
+    /* landscape */
+    @include mobile-landscape {
+        margin-right: $margin-vw-base; /* Padding horizontal pour mobile paysage */
+        margin-left: 0; /* Pas d'espace à gauche */
+        font-size: 1.5vw; /* Taille de l'icône pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        margin-right: $margin-vw-d2; /* Padding horizontal pour tablette */
+        margin-left: 0; /* Pas d'espace à gauche */
+        font-size: 1.5vw; /* Taille de l'icône pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        margin-right: $margin-vw-d2; /* Padding horizontal pour desktop */
+        margin-left: 0; /* Pas d'espace à gauche*/
+        font-size: 1vw; /* Taille de l'icône pour desktop */
+    }
 }
 
 /*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
     transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
-    font-size: 1.5vh; /* Taille de l'icône */
+
 }
 
 /*-- Liste dans le footer --*/
 .footer-card li {
-    margin-top: 1vh; /* Marge supérieure pour les éléments de la liste */
+    margin-top: $margin-vh-d2; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+
+    /* landscape */
+    @include mobile-landscape {
+        margin-top: $margin-vw-d2; /* Marge supérieur pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        margin-top: $margin-vw-d2; /* Marge supérieur pour tablette */
+    }
+    
+    
 }
 
 /*-- logo dans le footer --*/
@@ -534,6 +582,25 @@
     background-color: white; /* Fond blanc pour l'image */
     width: 30%; /* L'image occupe 30% de la largeur du footer */
     filter: invert(100%); /* Inversion des couleurs pour l'image */
-    margin: 1vh 0; /* Marges verticale pour l'image */
-    padding-bottom: 1vh; /* Padding inférieur pour l'image */
+    margin: $margin-vh-d2 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+    padding-bottom: $padding-vh-d2; /* Padding inférieur correspondant à 1% de la hauteur */
+
+    /* landscape */
+    @include mobile-landscape {
+        width: 30%; /* L'image occupe 30% de la largeur du footer pour mobile paysage */
+        margin: $margin-vw-d2 0; /* Marge verticale pour mobile paysage */
+        padding-bottom: $padding-vw-d2; /* Padding inférieur pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        width: 30%; /* L'image occupe 30% de la largeur  */
+        margin: $margin-vw-d2 0; /* Marge verticale pour tablette */
+        padding-bottom: $padding-vw-d2; /* Padding inférieur pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        width: 30%; /* L'image occupe 30% de la largeur  */
+    }
 }

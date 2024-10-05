@@ -1232,7 +1232,25 @@ input {
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
-  padding: 2vh; /* Padding dans le footer */
+  padding: 2vh; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .footer-card {
+    padding: 2vw; /* Padding vertical pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .footer-card {
+    padding: 2vw; /* Padding vertical pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .footer-card {
+    padding: 2vw; /* Padding vertical pour desktop */
+  }
 }
 
 /*-- Icônes dans le footer --*/
@@ -1240,17 +1258,52 @@ input {
   margin-right: 2vh; /* Espace à droite des icônes */
   margin-left: 0; /* Pas d'espace à gauche */
   color: white; /* Couleur blanche pour les icônes */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .fa-handshake, .fa-utensils {
+    margin-right: 2vw; /* Padding horizontal pour mobile paysage */
+    margin-left: 0; /* Pas d'espace à gauche */
+    font-size: 1.5vw; /* Taille de l'icône pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .fa-handshake, .fa-utensils {
+    margin-right: 1vw; /* Padding horizontal pour tablette */
+    margin-left: 0; /* Pas d'espace à gauche */
+    font-size: 1.5vw; /* Taille de l'icône pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .fa-handshake, .fa-utensils {
+    margin-right: 1vw; /* Padding horizontal pour desktop */
+    margin-left: 0; /* Pas d'espace à gauche*/
+    font-size: 1vw; /* Taille de l'icône pour desktop */
+  }
 }
 
 /*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
   transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
-  font-size: 1.5vh; /* Taille de l'icône */
 }
 
 /*-- Liste dans le footer --*/
 .footer-card li {
-  margin-top: 1vh; /* Marge supérieure pour les éléments de la liste */
+  margin-top: 1vh; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+  /* landscape */
+  /* tablette */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .footer-card li {
+    margin-top: 1vw; /* Marge supérieur pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .footer-card li {
+    margin-top: 1vw; /* Marge supérieur pour tablette */
+  }
 }
 
 /*-- logo dans le footer --*/
@@ -1258,8 +1311,30 @@ input {
   background-color: white; /* Fond blanc pour l'image */
   width: 30%; /* L'image occupe 30% de la largeur du footer */
   filter: invert(100%); /* Inversion des couleurs pour l'image */
-  margin: 1vh 0; /* Marges verticale pour l'image */
-  padding-bottom: 1vh; /* Padding inférieur pour l'image */
+  margin: 1vh 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+  padding-bottom: 1vh; /* Padding inférieur correspondant à 1% de la hauteur */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .footer-card img {
+    width: 30%; /* L'image occupe 30% de la largeur du footer pour mobile paysage */
+    margin: 1vw 0; /* Marge verticale pour mobile paysage */
+    padding-bottom: 1vw; /* Padding inférieur pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .footer-card img {
+    width: 30%; /* L'image occupe 30% de la largeur  */
+    margin: 1vw 0; /* Marge verticale pour tablette */
+    padding-bottom: 1vw; /* Padding inférieur pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .footer-card img {
+    width: 30%; /* L'image occupe 30% de la largeur  */
+  }
 }
 
 /* Styles spécifiques au header */
