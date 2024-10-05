@@ -14,29 +14,22 @@
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Variables globales (couleurs, tailles, etc.) */
-/* ------------------------------------------------------- _variables.scss----------------------------------------------------- 
-Fichier : _variables.scss
-   Auteur : Trackozor
-   Date de création : 25 septembre 2024
-   Dernière mise à jour : 
-
-   Description :
-Ce fichier contient toutes les variables globales utilisées pour styliser
-le projet. Les variables incluent les couleurs, polices, espacements,
-tailles de texte, bordures, etc. Ces variables permettent de garder une 
-cohérence dans l'apparence du site et facilitent la maintenance du code.
-
-   Sections couvertes :
-   - Couleurs
-   - Polices
-   - Espacements
-   - Tailles des polices
-   - Bordures arrondies
-
-   Utilisation :
-
-
-   Importer ce fichier dans les fichiers SCSS où les variables seront utilisées pour assurer une mise en page cohérente et adaptable.*/
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _variables.scss                                                              */
+/* Auteur              : Trackozor                                                                          */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 06/10/24                                                                          */
+/* Description         : listes de toutes les variables utilisées                                           */
+/*                        Comprend: Taille , couleur, affichage conditionnel                                */
+/*                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------  */
+/*--------------------------------------------------------------------------------------------------------  */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                                                                          */
+/* -------------------------------------------------------------------------------------------------------- */
 /*-------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------- Couleurs ----------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
@@ -194,8 +187,25 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
 /* Mixin pour gérer les écrans desktop*/
 /* Styles des animations */
-/* _animations.scss */
-/* Animation battement de cœur pour les éléments de type like (ex : icônes) */
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _animations.scss                                                              */
+/* Auteur              : Trackozor                                                                          */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 06/10/24                                                                          */
+/* Description         : Styles pour les animations                                                            */
+/*                                                                                                          */
+/*                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------  */
+/*--------------------------------------------------------------------------------------------------------  */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                                                                          */
+/* -------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------- Animation battement de cœur (like) ------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes heartBeat {
   0%, 100% {
     transform: scale(1); /* Taille normale au début et à la fin */
@@ -204,112 +214,132 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
     transform: scale(1.2); /* Grossissement temporaire au milieu */
   }
 }
-/* Animation pour remplir l'arrière-plan avec une couleur et faire croître l'élément */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Animation remplissage "like" avec changement de couleur -----------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes likeFill {
   0% {
     color: white; /* Couleur initiale blanche */
-    transform: scale(0.8); /* Taille initiale légèrement réduite */
+    transform: scale(0.8); /* Taille initiale réduite */
   }
   25% {
-    color: #f7efef; /* Étape intermédiaire : dégradé léger vers une couleur pastel */
+    color: #f7efef; /* Dégradé vers une couleur pastel */
     transform: scale(0.9); /* L'élément grandit légèrement */
   }
   50% {
-    color: #f5a4b8; /* Étape intermédiaire : couleur pastel un peu plus foncée */
+    color: #f5a4b8; /* Couleur pastel plus foncée */
     transform: scale(1); /* Taille normale */
   }
   75% {
     color: #f28aa1; /* Couleur presque finale */
-    transform: scale(1.1); /* Taille un peu plus grande */
+    transform: scale(1.1); /* Taille légèrement plus grande */
   }
   100% {
-    color: "Roboto", sans-serif; /* Couleur finale : variable CSS de la couleur primaire */
+    color: "Roboto", sans-serif; /* Couleur finale */
     transform: scale(1.2); /* L'élément grandit légèrement à la fin */
   }
 }
-/* Animation éclatement (icône grossit puis retourne à sa taille normale) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Animation éclatement (ex: icône qui grossit et rétrécit) ------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes explode {
   0% {
-    transform: scale(1.2); /* Point de départ : taille légèrement agrandie */
+    transform: scale(1.2); /* Taille légèrement agrandie au début */
   }
   50% {
-    transform: scale(1.5); /* L'icône s'agrandit encore plus */
+    transform: scale(1.5); /* L'icône s'agrandit encore */
   }
   100% {
     transform: scale(1); /* Retour à la taille normale */
   }
 }
-/* Animation pour faire disparaître un loader après 3 secondes */
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Animation disparition d'un loader après 3 secondes -----------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes fadeOutLoader {
   0% {
-    opacity: 1; /* Loader complètement visible */
+    opacity: 1; /* Loader visible au début */
   }
   80% {
-    opacity: 1; /* Reste visible pendant 80% de l'animation */
+    opacity: 1; /* Reste visible jusqu'à 80% de l'animation */
   }
   100% {
-    opacity: 0; /* Finit par disparaître */
-    visibility: hidden; /* Cache complètement l'élément après disparition */
+    opacity: 0; /* Disparaît progressivement */
+    visibility: hidden; /* Devient complètement invisible */
   }
 }
-/* Animation pour une barre de progression qui se remplit */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------- Animation barre de progression ------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes loadProgressBar {
   0% {
-    width: 0%; /* La barre commence vide */
+    width: 0%; /* Barre vide au départ */
   }
   100% {
-    width: 100%; /* La barre est remplie à 100% à la fin de l'animation */
+    width: 100%; /* Barre remplie à la fin de l'animation */
   }
 }
-/* Animation pour faire apparaître un message de manière fluide */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Animation apparition progressive d'un message ---------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes fadeInMessage {
   0% {
-    opacity: 0; /* Le message est invisible */
+    opacity: 0; /* Le message est invisible au début */
   }
   100% {
     opacity: 1; /* Le message devient complètement visible */
   }
 }
-/* Animation pour rétrécir un élément (ex : carte) avant de le masquer */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------- Animation rétrécissement et disparition d'un élément ------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes shrink {
   0% {
     transform: scale(1); /* Taille normale */
   }
   100% {
-    transform: scale(0.9); /* Légèrement rétréci à la fin */
-    opacity: 0; /* L'élément disparaît */
+    transform: scale(0.9); /* Rétrécit légèrement */
+    opacity: 0; /* L'élément disparaît progressivement */
   }
 }
-/* Animation pour faire glisser un élément de droite à gauche (ex : carte) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Animation glissement de droite à gauche (ex: carte) ----------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes slideIn {
   from {
-    opacity: 0; /* L'élément est invisible au début */
-    transform: translateX(100%); /* Commence hors de l'écran à droite */
+    opacity: 0; /* L'élément est invisible au départ */
+    transform: translateX(100%); /* Hors écran à droite */
   }
   to {
     opacity: 1; /* L'élément devient visible */
-    transform: translateX(0); /* Se déplace à sa position finale */
+    transform: translateX(0); /* Glisse jusqu'à sa position finale */
   }
 }
-/* Animation de pulsation pour un élément, par exemple pour les puces */
+/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------- Animation de pulsation d'un élément (ex: puces) ----------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes pulse {
   0%, 100% {
     transform: scale(1); /* Taille normale au début et à la fin */
   }
   50% {
-    transform: scale(1.3); /* L'élément grossit temporairement au milieu */
+    transform: scale(1.3); /* Grossissement temporaire */
   }
 }
-/* Animation pour changer la couleur d'une icône */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------- Animation changement de couleur d'une icône ---------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes iconColor {
   0%, 100% {
-    color: grey; /* Couleur grise au début et à la fin */
+    color: grey; /* Couleur initiale et finale grise */
   }
   50% {
     color: #6a1b9a; /* Couleur temporaire au milieu de l'animation */
   }
 }
-/* Animation de fond avec une vague qui change la couleur du texte */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------- Animation vague avec changement de couleur du fond ---------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes wave {
   0% {
     background-position: 0% 0;
@@ -317,21 +347,23 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
   }
   50% {
     background-position: 100% 0; /* La vague atteint l'autre côté */
-    background-color: #e1bee7; /* Le fond prend une nouvelle couleur */
+    background-color: #e1bee7; /* Changement temporaire de couleur */
   }
   100% {
     background-position: 0% 0; /* Retour à la position initiale */
     background-color: #f5f5f5; /* Retour à la couleur initiale */
   }
 }
-/* Application des animations aux éléments spécifiques */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Animations appliquées aux éléments ---------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 /* Animation de l'icône avec changement de couleur */
 .step .icon {
   margin-right: 15px;
   font-size: 20px;
   color: grey;
   animation: iconColor 2s infinite ease-in-out;
-  animation-delay: 0.5s; /* L'icône change de couleur après un délai */
+  animation-delay: 0.5s; /* Délai avant que l'animation ne démarre */
 }
 
 /* Animation de fond pour les éléments de texte */
@@ -496,67 +528,82 @@ img {
 }
 
 /* Styles des composants */
-/* _buttons.scss */
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _button.scss                                                              */
+/* Auteur              : Trackozor                                                                          */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 06/10/24                                                                          */
+/* Description         : Styles pour les buttons                                                            */
+/*                                                                                                          */
+/*                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------  */
+/*--------------------------------------------------------------------------------------------------------  */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                                                                          */
+/* -------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- explorer nos restaurants--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /*---------------------------- Bouton principal avec dégradé ----------------------------- */
 .button--primary {
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  align-items: center; /* Aligne les éléments dans la hauteur*/
-  justify-content: center; /* Aligne les éléments dans la largeur*/
-  background: linear-gradient(180deg, #FF79DA, #9356DC); /* dégradé de couleur*/
-  padding: 2vh; /* Espace intérieur correspondant à 2% de la hauteur de l'écran */
-  color: white; /* couleur du texte*/
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /*ombre*/
-  border-radius: 4vh; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Aligne les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  background: linear-gradient(180deg, #FF79DA, #9356DC); /* Dégradé de couleur */
+  padding: 2vh; /* Padding correspondant à 2% de la hauteur de l'écran */
+  color: white; /* Couleur du texte en blanc */
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  border-radius: 4vh; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
   /* Landscape */
   /* Tablette */
   /* Desktop */
-  /* Effet de survol*/
+  /* Effet de survol */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .button--primary {
-    border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    border-radius: 4vw; /* Bord arrondis ajusté à 4% de la largeur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile en paysage */
+    padding: 2vw; /* Padding ajusté à 2% de la largeur de l'écran */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .button--primary {
-    border-radius: 4vh; /*bord arrondis correspondant à un rayon de courbure de 4 % de la hauteur de l'écran*/
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    border-radius: 4vh; /* Bord arrondis à 4% de la hauteur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour tablette */
+    padding: 2vw; /* Padding ajusté pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .button--primary {
-    border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    padding: 1vw 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
-    margin-top: 2vw;
+    border-radius: 4vw; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
+    padding: 1vw 4vh; /* Padding ajusté pour desktop */
+    margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
   }
 }
 .button--primary:hover {
-  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /*couleur dégradé*/
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre*/
+  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /* Effet de survol avec éclaircissement du dégradé */
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre inchangée */
 }
 
-/* ------------------------- Texte du bouton ----------------------------------------*/
+/* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
-  font-size: 2vh; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
-  font-weight: 100; /* Accentuation police valeur=100*/
+  font-size: 2vh; /* Taille de police à 2% de la hauteur de l'écran */
+  font-weight: 100; /* Style de police en gras (bold) */
   /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .button--primary-txt {
-    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: 2vw; /* Ajustement de la taille de police pour mobile en paysage */
   }
 }
 @media (min-width: 63.91rem) {
   .button--primary-txt {
-    font-size: 1.5vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: 1.5vw; /* Ajustement de la taille de police pour desktop */
   }
 }
 
@@ -564,29 +611,29 @@ img {
 /*-------------------------------------Badge Nouveau ------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 .badge {
-  background-color: #99E2D0; /* Couleur vert clair */
-  color: #008766; /* couleur vert foncé*/
-  font-size: 1.5vh; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
-  padding: 1vh 2vh; /* espace intérieur haut/bas et gauche/droite correspondant respectivement à 1%  et 2 %de la hauteur de l'écran*/
-  width: 6vh; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la hauteur de l'écran*/
-  font-weight: 900; /* Accentuation police valeur=900 */
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  justify-content: center; /* centre les éléments a partir d centre du conteneur parent*/
+  background-color: #99E2D0; /* Couleur de fond vert clair */
+  color: #008766; /* Couleur du texte en vert foncé */
+  font-size: 1.5vh; /* Taille de la police à 2% de la hauteur de l'écran */
+  padding: 1vh 2vh; /* Padding vertical et horizontal */
+  width: 6vh; /* Taille du badge à 6% de la hauteur de l'écran */
+  font-weight: 900; /* Style de police très gras (900) */
+  display: flex; /* Utilisation de flexbox pour l'alignement */
+  justify-content: center; /* Centrage horizontal du texte */
   /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .badge {
-    font-size: 2vw; /* Taille de police de base correspondant à 2% de la largeur de l'écran */
-    padding: 1vw 2vw; /* Espace intérieur haut/bas et gauche/droite correspondant respectivement à 1% et 2% de la largueur de l'écran*/
-    width: 6vw; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la largeur de l'écran*/
+    font-size: 2vw; /* Ajustement de la taille de police pour mobile en paysage */
+    padding: 1vw 2vw; /* Padding ajusté pour mobile paysage */
+    width: 6vw; /* Largeur ajustée pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   .badge {
-    font-size: 1vw; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
-    padding: 0.5vw; /*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
-    width: 6vw; /* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
+    font-size: 1vw; /* Taille de la police ajustée pour desktop */
+    padding: 0.5vw; /* Padding ajusté pour desktop */
+    width: 6vw; /* Largeur ajustée pour desktop */
   }
 }
 
@@ -594,115 +641,121 @@ img {
 /*-------------------------------------Bouton Coeur -------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 .icon-favorite {
-  background-color: transparent; /* Couleur de fond transparente */
-  color: grey; /* couleur principale */
-  cursor: url("/images/logo/like.png"), auto;
+  background-color: transparent; /* Fond transparent */
+  color: grey; /* Couleur principale en gris */
+  cursor: url("/images/logo/like.png"), auto; /* Curseur personnalisé */
 }
 
 .icon-favorite .fa-full {
-  display: none;
-  z-index: 3;
+  display: none; /* Caché par défaut */
+  z-index: 3; /* Superposition au-dessus des autres éléments */
   position: relative;
 }
 
+/* Style des icônes */
 .fa-full, .fa-empty {
-  font-size: 3vh;
+  font-size: 3vh; /* Taille de police pour les icônes */
   /* Landscape */
   /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .fa-full, .fa-empty {
-    font-size: 3vw;
+    font-size: 3vw; /* Ajustement de la taille de police pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .fa-full, .fa-empty {
-    font-size: 3vw;
+    font-size: 3vw; /* Ajustement de la taille de police pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .fa-full, .fa-empty {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajustement de la taille de police pour desktop */
   }
 }
 
+/* Animation au survol du bouton favori */
 .icon-favorite .fa-empty:hover {
-  animation: heartBeat 0.3s ease-in-out 3;
-  color: #FF79DA;
+  animation: heartBeat 0.3s ease-in-out 3; /* Animation de battement de coeur */
+  color: #FF79DA; /* Changement de couleur au survol */
 }
 
+/* Action lors du clic (actif) */
 .icon-favorite:active .fa-full {
-  display: flex;
-  animation: likeFill 1s ease-in-out forwards;
-  color: #FF79DA;
+  display: flex; /* Affiche l'icône pleine */
+  animation: likeFill 1s ease-in-out forwards; /* Animation de remplissage */
+  color: #FF79DA; /* Changement de couleur */
 }
 .icon-favorite:active .fa-empty {
-  display: none;
+  display: none; /* Cache l'icône vide */
 }
 
+/* État après le clic */
 .icon-favorite:after .fa-full {
-  color: "Roboto", sans-serif;
-  display: flex;
+  color: "Roboto", sans-serif; /* Change la couleur de l'icône pleine */
+  display: flex; /* Affiche l'icône pleine */
 }
 .icon-favorite:after .fa-empty {
-  display: none;
+  display: none; /* Cache l'icône vide */
 }
 
+/* Cache l'input */
 input {
-  display: none;
+  display: none; /* Input masqué */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Flèche retour -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 .button--back {
-  background-color: transparent;
-  color: black;
-  font-size: 2vh;
-  padding: 0;
-  border: none;
+  background-color: transparent; /* Fond transparent */
+  color: black; /* Couleur du texte en noir */
+  font-size: 2vh; /* Taille de la police */
+  padding: 0; /* Pas de padding */
+  border: none; /* Pas de bordure */
   /* Landscape */
   /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .button--back {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajustement de la taille de police pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .button--back {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajustement de la taille de police pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .button--back {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajustement de la taille de police pour desktop */
   }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------icône validation-----------------------------------------------------*/
+/*-------------------------------------icône validation -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 .validation-icon {
-  height: 8vh;
-  display: none;
-  align-items: center;
+  height: 8vh; /* Hauteur de l'icône */
+  display: none; /* Masqué par défaut */
+  align-items: center; /* Alignement vertical */
   position: relative;
   padding: 0;
   margin: 0;
-  left: 5%;
-  justify-content: center;
+  left: 5%; /* Décalage vers la gauche */
+  justify-content: center; /* Centrage horizontal */
 }
 
+/* Style de l'icône à l'intérieur */
 .validation-icon i {
-  color: white;
-  background-color: #99E2D0;
-  padding: 2vh;
-  border-radius: 0 2vh 2vh 0;
-  justify-content: center;
-  font-size: 3vh;
+  color: white; /* Couleur du texte en blanc */
+  background-color: #99E2D0; /* Couleur de fond verte */
+  padding: 2vh; /* Padding de l'icône */
+  border-radius: 0 2vh 2vh 0; /* Bord arrondi */
+  justify-content: center; /* Centrage du contenu */
+  font-size: 3vh; /* Taille de l'icône */
 }
 
 /* Nom du fichier      : _card.scss                                                                       */
@@ -1411,118 +1464,64 @@ input {
 }
 
 /* Styles spécifiques au header */
-/* _loader.scss */
-/* Loader couvrant toute la page */
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(180deg, rgb(255, 172, 232.0820895522), rgb(174, 128.25, 228.75));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  opacity: 1;
-  animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
-}
-
-/* Carte avec le logo, message et barre de progression */
-.loader-card {
-  background-color: #f9f9f9;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  animation: shrink 3s ease-in-out forwards; /* Animation de disparition de la carte */
-}
-
-/* Logo du loader */
-.loader-logo {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-/* Message dynamique */
-.loader-message {
-  font-family: "Roboto", sans-serif;
-  font-size: 4vh;
-  color: #333;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive du message */
-}
-
-/* Barre de progression */
-.progress-bar-container {
-  background-color: #ddd;
-  border-radius: 5px;
-  width: 100%;
-  height: 10px;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0;
-  background-color: #9356DC;
-  animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
-}
-
 /*--------------------------------------------------------------------------------------------------------*/
 /* Nom du fichier      : _header.scss                                                                     */
 /* Auteur              : Trackozor                                                                         */
 /* Date de création    : 25/09/2024                                                                        */
 /* Dernière modification: 27/09/2024                                                                       */
-/* Description         : Styles pour le header                                                            */
+/* Description         : Styles pour le header                                                             */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-/*-- Conteneur principle----*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------- Conteneur Principal --------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 header {
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  flex-direction: column; /* Alignement en colonne */
-  align-items: center; /* Aligne les éléments verticalement*/
-  width: 100%; /* Prend toute la largeur disponible*/
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  flex-direction: column; /* Aligne les éléments verticalement en colonne */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  width: 100%; /* Le header prend toute la largeur disponible */
 }
 
-/*-- Card pour la localisation ----*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Carte pour la localisation --------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .card-location {
-  width: 100%; /* la carte prend toute la largeur de son parent*/
-  border-top: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */
-  border-bottom: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */
-  /*  Landscape  */
-  /*  Desktop  */
+  width: 100%; /* La carte prend toute la largeur du parent */
+  border-top: 0.5vh solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
+  border-bottom: 0.5vh solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
+  /* Landscape */
+  /* Tablette */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location {
-    border-top: 0.5vw solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */
-    border-bottom: 0.5vw solid lightgrey;
+    border-top: 0.5vw solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour mobile paysage */
+    border-bottom: 0.5vw solid lightgrey; /* Bordure inférieure ajustée pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .card-location {
+    border-top: 0.5vw solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour tablette */
+    border-bottom: 0.5vw solid lightgrey; /* Bordure inférieure ajustée pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card-location {
-    border: none; /* absence de bordure*/
+    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
   }
 }
 
-/*Affichage conditionnel loader */
-#loader {
-  display: none;
-}
-
 /* Styles spécifique pages*/
+/*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _section-bandeau.scss                                                              */
 /* Auteur              : Trackozor                                                                          */
 /* Date de création    : 25/09/24                                                                           */
 /* Dernière modification: 27/09/24                                                                          */
-/* Description         :  _section-                                                                         */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                          */
-/*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)               */
-/*     et la gestion de l'affichage flex pour les étapes avec icônes.                                       */
+/* Description         : Styles pour la section bandeau et la liste de fonctionnement,                      */
+/*                       avec ajustements pour les différents breakpoints (mobile landscape, desktop)       */
+/*                       et gestion de l'affichage flex pour les étapes avec icônes.                        */
 /*--------------------------------------------------------------------------------------------------------  */
 /*--------------------------------------------------------------------------------------------------------  */
 /*  Version             : 1.0                                                                               */
@@ -1531,269 +1530,281 @@ header {
 /*  Révisions :                                                                                             */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/*---- Conteneur parent  bandeau-----------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------- Conteneur parent bandeau -------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .bandeau {
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  flex-direction: column; /* alignement en colonne*/
-  text-align: center; /* Aligne le texte dans l'axe horizontal*/
-  justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
-  margin: 2vh auto; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
-  align-items: center; /* Aligne les éléments dans la hauteur*/
-  width: 90%;
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  flex-direction: column; /* Alignement des éléments en colonne */
+  text-align: center; /* Aligne le texte au centre horizontalement */
+  justify-content: center; /* Centre le contenu sur l'axe horizontal */
+  margin: 2vh auto; /* Marge verticale et horizontale égale à 2% et 1% de la hauteur de l'écran */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  width: 90%; /* Le conteneur prend 90% de la largeur disponible */
   /*  Landscape  */
-  /*Tablette*/
+  /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau {
-    margin: 2vw 4vw;
+    margin: 2vw 4vw; /* Ajustement des marges pour mobile en mode paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .bandeau {
-    gap: 0.5vw;
+    gap: 0.5vw; /* Ajoute un espace entre les éléments pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .bandeau {
-    margin: 2vh 5vw;
-    width: 90%;
+    margin: 2vh 5vw; /* Ajustement des marges pour desktop */
+    width: 90%; /* Largeur du conteneur sur desktop */
   }
 }
 
-/* Titre */
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Titre ---------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
-  padding: 0.5vh 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
+  padding: 0.5vh 0; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   /*  Landscape  */
-  /*-- tablette --*/
+  /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau h2 {
-    padding: 0.5vw 0;
+    padding: 0.5vw 0; /* Ajustement du padding pour mobile en mode paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .bandeau h2 {
-    padding: 0.5vh 0;
+    padding: 0.5vh 0; /* Padding ajusté pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .bandeau h2 {
-    padding: 0.5vh 2vw;
-    margin-bottom: 2vh;
-    font-weight: 100;
+    padding: 0.5vh 2vw; /* Ajustement du padding pour desktop */
+    margin-bottom: 2vh; /* Marge en bas pour desktop */
+    font-weight: 100; /* Gras du texte pour desktop */
   }
 }
 
-/* Texte */
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------- Texte ----------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
-  padding: 1vh 2vw; /**/
-  margin-bottom: 2vh; /**/
-  font-weight: 100; /**/
+  padding: 1vh 2vw; /* Padding haut/bas et gauche/droite */
+  margin-bottom: 2vh; /* Marge en bas du paragraphe */
+  font-weight: 100; /* Gras du texte */
   /*  Landscape  */
-  /*-- tablette --*/
+  /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau p {
-    padding: 1vw 2vw;
-    margin-bottom: 2vw;
+    padding: 1vw 2vw; /* Ajustement du padding pour mobile paysage */
+    margin-bottom: 2vw; /* Ajustement de la marge pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .bandeau p {
-    padding: 1vh 2vw;
-    margin-bottom: 2vw;
+    padding: 1vh 2vw; /* Ajustement du padding pour tablette */
+    margin-bottom: 2vw; /* Ajustement de la marge pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .bandeau p {
-    padding: 1vh 2vw;
-    margin-bottom: 2vh;
+    padding: 1vh 2vw; /* Ajustement du padding pour desktop */
+    margin-bottom: 2vh; /* Marge en bas pour desktop */
   }
 }
 
-/*-------- Conteneur parent liste ----------------- */
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Conteneur parent liste --------------------------------------------------- */
+/*----------------------------------------------------------------------------------------------------------*/
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  gap: 3vh;
-  margin: 10vh auto;
-  width: 90%;
-  /*--  Landscape --*/
-  /*-- Tablette --*/
-  /*-- Desktop  --*/
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  flex-direction: column; /* Alignement en colonne */
+  position: relative; /* Position relative pour gérer les éléments internes */
+  justify-content: center; /* Centre les éléments sur l'axe horizontal */
+  gap: 3vh; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
+  margin: 10vh auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+  width: 90%; /* Largeur de 90% du conteneur */
+  /* Landscape */
+  /* Tablette */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .fonctionnement {
-    margin: 10vw 3vw;
-    gap: 3vw;
+    margin: 10vw 3vw; /* Marge ajustée pour mobile paysage */
+    gap: 3vw; /* Espacement ajusté pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .fonctionnement {
-    gap: 1vw;
-    justify-content: space-around;
+    gap: 1vw; /* Espacement réduit pour tablette */
+    justify-content: space-around; /* Espace autour des éléments pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .fonctionnement {
-    gap: 2vw;
-    justify-content: space-around;
+    gap: 2vw; /* Espacement ajusté pour desktop */
+    justify-content: space-around; /* Espace autour des éléments pour desktop */
   }
 }
 
-/*-------------- Liste --------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*-------------------------------- Liste -------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 ol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-  justify-content: center;
-  /*--  Landscape  --*/
-  /*-- Desktop  --*/
+  display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
+  flex-direction: column; /* Alignement en colonne */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  width: 95%; /* Largeur de 95% pour le conteneur */
+  justify-content: center; /* Centre les éléments horizontalement */
+  /* Landscape */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    justify-content: center;
+    flex-direction: column; /* Colonne pour mobile paysage */
+    width: 95%; /* Largeur ajustée */
+    justify-content: center; /* Centre les éléments pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   ol {
-    flex-direction: row;
-    align-items: center;
-    gap: 5vw;
-    justify-content: space-around;
+    flex-direction: row; /* Alignement en ligne pour desktop */
+    gap: 5vw; /* Espace entre les éléments de la liste pour desktop */
+    justify-content: space-around; /* Espace autour des éléments pour desktop */
   }
 }
 
-/*--------------- Liste : Lignes -------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Liste : Lignes ------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 ol li {
-  display: flex;
-  margin: 2vh 1vh;
-  align-items: center;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  justify-content: space-around;
-  /*--  Landscape  --*/
-  /*-- Desktop  --*/
+  display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
+  margin: 2vh 1vh; /* Marge autour des éléments */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  font-weight: 700; /* Gras du texte */
+  position: relative; /* Position relative pour gérer des éléments internes */
+  z-index: 1; /* Superposition sur l'axe Z */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  justify-content: space-around; /* Espace autour des éléments de la liste */
+  /* Landscape */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol li {
-    margin: 2vw 1vw;
+    margin: 2vw 1vw; /* Ajustement des marges pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   ol li {
-    margin: 2vw 1vw;
+    margin: 2vw 1vw; /* Ajustement des marges pour desktop */
   }
 }
 
-/*---------------- Liste Texte ---------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*---------------------------------- Liste Texte -----------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .li-txt {
-  display: flex;
-  position: relative;
-  z-index: 1;
-  left: 2vh;
-  border-radius: 2vh;
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 5vh;
-  align-items: center;
-  margin-right: 1vh;
-  font-size: 2vh;
-  /*  Landscape  */
+  display: flex; /* Utilise flexbox pour aligner le texte */
+  position: relative; /* Position relative pour gérer des éléments internes */
+  z-index: 1; /* Superposition sur l'axe Z */
+  left: 2vh; /* Décalage du texte vers la droite */
+  border-radius: 2vh; /* Bord arrondi pour le conteneur du texte */
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
+  width: 100%; /* Largeur du texte à 100% du conteneur */
+  height: 5vh; /* Hauteur du conteneur du texte */
+  align-items: center; /* Centre le texte sur l'axe vertical */
+  margin-right: 1vh; /* Marge à droite du texte */
+  font-size: 2vh; /* Taille de la police */
+  /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .li-txt {
-    left: 1vw;
-    border-radius: 2vw;
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 5vw;
-    align-items: center;
+    left: 1vw; /* Décalage du texte pour mobile paysage */
+    border-radius: 2vw; /* Bord arrondi pour mobile paysage */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile paysage */
+    height: 5vw; /* Hauteur du conteneur ajustée pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   .li-txt {
-    left: 1vw;
-    border-radius: 2vh;
-    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 4vw;
-    align-items: center;
-    font-size: 1.2vw;
+    left: 1vw; /* Décalage du texte pour desktop */
+    border-radius: 2vh; /* Bord arrondi pour desktop */
+    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
+    height: 4vw; /* Hauteur du conteneur ajustée pour desktop */
+    font-size: 1.2vw; /* Taille de la police pour desktop */
   }
 }
 
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Icône numérotée pour la liste ----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 ol li .puce_num {
-  background-color: #9356DC;
-  border-radius: 50%;
-  height: 3vh;
-  width: 3vh;
-  display: flex;
-  position: absolute;
-  left: 0;
-  z-index: 2;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.4vh;
-  animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
-  /*  Landscape  */
+  background-color: #9356DC; /* Couleur de fond de l'icône numérotée */
+  border-radius: 50%; /* Forme arrondie */
+  height: 3vh; /* Hauteur de l'icône numérotée */
+  width: 3vh; /* Largeur de l'icône numérotée */
+  display: flex; /* Utilise flexbox pour centrer le numéro */
+  position: absolute; /* Positionnement absolu à l'intérieur de la liste */
+  left: 0; /* Place l'icône sur le bord gauche */
+  z-index: 2; /* Superposition de l'icône au-dessus du texte */
+  justify-content: center; /* Centre le contenu de l'icône */
+  align-items: center; /* Centre verticalement le contenu de l'icône */
+  color: white; /* Couleur blanche pour le numéro */
+  font-size: 1.4vh; /* Taille de la police du numéro */
+  animation: pulse 1.5s ease-in-out 2; /* Animation de pulsation pour l'icône numérotée */
+  /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol li .puce_num {
-    border-radius: 50%;
-    height: 3vw;
-    width: 3vw;
-    font-size: 1.4vw;
+    height: 3vw; /* Hauteur ajustée pour mobile paysage */
+    width: 3vw; /* Largeur ajustée pour mobile paysage */
+    font-size: 1.4vw; /* Taille de la police ajustée pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   ol li .puce_num {
-    border-radius: 50%;
-    height: 1.5vw;
-    width: 1.5vw;
-    font-size: 1vw;
+    height: 1.5vw; /* Hauteur ajustée pour desktop */
+    width: 1.5vw; /* Largeur ajustée pour desktop */
+    font-size: 1vw; /* Taille de la police ajustée pour desktop */
   }
 }
 
-/*--------------- Liste : Icône -------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*--------------------------------- Icône de la liste -------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 i {
-  color: grey;
-  font-size: 2vh;
-  margin: 0 2vh 0 4vh;
-  /*  Landscape  */
+  color: grey; /* Couleur grise pour les icônes */
+  font-size: 2vh; /* Taille de la police pour les icônes */
+  margin: 0 2vh 0 4vh; /* Marges autour de l'icône */
+  /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   i {
-    font-size: 2vw;
-    margin: 0 2vw 0 4vw;
+    font-size: 2vw; /* Taille de la police ajustée pour mobile paysage */
+    margin: 0 2vw 0 4vw; /* Marges ajustées pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   i {
-    font-size: 2vh;
-    margin: 0 2vw 0 2vw;
+    font-size: 2vh; /* Taille de la police ajustée pour desktop */
+    margin: 0 2vw 0 2vw; /* Marges ajustées pour desktop */
   }
 }
 
-/*------------------ Icône Store -----------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------- Icône Store --------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .fa-store {
-  color: #9356DC;
+  color: #9356DC; /* Couleur de l'icône store */
 }
 
 /*_section-restaurant.scss*/
@@ -2079,33 +2090,97 @@ i {
 /* Révisions :                                                                                             */
 /*                                                                                                         */
 /*-------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Footer Principal ------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 footer {
-  display: flex; /* Utilse flexbox pour aligner les éléments */
-  align-items: center; /* Alignement horizontale a partir de l'axe centrale */
-  background-color: black; /* Couleur de fond*/
-  color: white; /* Couleur du texte et des icônes*/
-  padding: 0 1vh; /* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
-  width: 100%; /* Prend toute la largeur disponible */
+  display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+  align-items: center; /* Aligne verticalement les éléments au centre du footer */
+  background-color: black; /* Définit la couleur de fond du footer */
+  color: white; /* Définit la couleur du texte et des icônes à blanc */
+  padding: 0 1vh; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
+  width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
   /* Landscape */
   /* Tablettes */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   footer {
-    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+    padding: 0 1vw; /* Ajuste le padding horizontal pour mobile en mode paysage, équivalent à 1% de la largeur de l'écran */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   footer {
-    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+    padding: 0 1vw; /* Ajuste le padding horizontal pour les tablettes, équivalent à 1% de la largeur de l'écran */
   }
 }
 @media (min-width: 63.91rem) {
   footer {
-    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
-    justify-content: center;
-    margin-right: 20%;
+    padding: 0 1vw; /* Ajuste le padding horizontal pour desktop, équivalent à 1% de la largeur de l'écran */
+    justify-content: center; /* Centre les éléments à l'intérieur du footer sur les écrans desktop */
+    margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
   }
+}
+
+/* Style spécifique loader */
+/* _loader.scss */
+/* Loader couvrant toute la page */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgb(255, 172, 232.0820895522), rgb(174, 128.25, 228.75));
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
+}
+
+/* Carte avec le logo, message et barre de progression */
+.loader-card {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: shrink 3s ease-in-out forwards; /* Animation de disparition de la carte */
+}
+
+/* Logo du loader */
+.loader-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Message dynamique */
+.loader-message {
+  font-family: "Roboto", sans-serif;
+  font-size: 4vh;
+  color: #333;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive du message */
+}
+
+/* Barre de progression */
+.progress-bar-container {
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #9356DC;
+  animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
 }
 
 /*# sourceMappingURL=main.css.map */

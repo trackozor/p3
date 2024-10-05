@@ -3,39 +3,46 @@
 /* Auteur              : Trackozor                                                                         */
 /* Date de création    : 25/09/2024                                                                        */
 /* Dernière modification: 27/09/2024                                                                       */
-/* Description         : Styles pour le header                                                            */
+/* Description         : Styles pour le header                                                             */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-/*-- Conteneur principle----*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------- Conteneur Principal --------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 header {
-  display: flex;/* Utilise flexbox pour aligner les éléments*/
-  flex-direction: column; /* Alignement en colonne */
-  align-items: center; /* Aligne les éléments verticalement*/
-  width: 100%;/* Prend toute la largeur disponible*/
-}  
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  flex-direction: column; /* Aligne les éléments verticalement en colonne */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  width: 100%; /* Le header prend toute la largeur disponible */
+}
 
-/*-- Card pour la localisation ----*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Carte pour la localisation --------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .card-location {
-  width: 100%; /* la carte prend toute la largeur de son parent*/
-  border-top: 0.5vh solid lightgrey; /* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */ 
-  border-bottom: 0.5vh solid lightgrey;/* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */ 
+  width: 100%; /* La carte prend toute la largeur du parent */
+  border-top: $font-size-vh-d4 solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
+  border-bottom: $font-size-vh-d4 solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
 
-  /*  Landscape  */  
+  /* Landscape */
   @include mobile-landscape {
-    border-top: 0.5vw solid lightgrey;/* bordure haute grise d'épaisseur correspondant à 0.5% de la hauteur de l'écran */ 
-    border-bottom: 0.5vw solid lightgrey/* bordure haute grise d'épaisseur correspondant à 0.5% de la largeur de l'écran */ 
+    border-top: $font-size-vw-d4 solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour mobile paysage */
+    border-bottom: $font-size-vw-d4 solid lightgrey; /* Bordure inférieure ajustée pour mobile paysage */
   }
   
-  /*  Desktop  */
+  /* Tablette */
+  @include tablette {
+    border-top: $font-size-vw-d4 solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour tablette */
+    border-bottom: $font-size-vw-d4 solid lightgrey; /* Bordure inférieure ajustée pour tablette */
+  }
+
+  /* Desktop */
   @include desktop {
-    border:none;/* absence de bordure*/
+    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
   }
 }
 
-/*Affichage conditionnel loader */
-#loader{
-  display: $loader-active;
 
-}

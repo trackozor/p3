@@ -32,7 +32,6 @@
 @import'components/card';
 
 /* Styles spécifiques au header */
-@import 'layout/loader';
 @import 'layout/header';
 
 /* Styles spécifique pages*/
@@ -42,3 +41,6 @@
 
 /* Style spécifique footer*/
 @import 'layout/footer';
+
+/* Style spécifique loader */
+@import 'layout/loader';
