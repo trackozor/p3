@@ -168,6 +168,7 @@ cohérence dans l'apparence du site et facilitent la maintenance du code.
 /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
 /* Taille des objects correspondant à 30 % de la largeur de l'écran*/
 /* Taille des objects correspondant à 40 % de la largeur de l'écran*/
+/* Taille des objects correspondant à 50 % de la largeur de l'écran*/
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -699,381 +700,412 @@ input {
 /*-----------------------------------------------Carte Logo alt-----------------------------------------------*/
 /*--------------------------------------------Avec fleche retour---------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
+/*-- Conteneur principal de la carte avec alternative et flèche retour --*/
 .card-logo-alt {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 5vh;
-  justify-content: center;
-  position: relative;
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Aligne les éléments verticalement */
+  width: 100%; /* Prend toute la largeur disponible */
+  height: 5vh; /* Hauteur correspond à 5% de la hauteur de l'écran */
+  justify-content: center; /* Centre les éléments horizontalement */
+  position: relative; /* Permet de positionner des éléments enfants relativement au conteneur */
 }
 
+/*-- Image dans la carte alt --*/
 .card-logo-alt img {
   height: 3vh; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
 }
 
+/*-- Icône de flèche retour --*/
 .card-logo-alt i {
-  position: absolute;
-  left: -5%;
-  top: 35%;
+  position: absolute; /* Positionne l'icône de manière absolue dans la carte */
+  left: -5%; /* Place l'icône à gauche, hors de la carte */
+  top: 35%; /* Place l'icône à 35% du haut du conteneur */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------- Carte localisation avec icône et ville ---------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
-/* Conteneur */
+/*-- Conteneur de la carte localisation --*/
 .card-location {
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  justify-content: center; /*aligne les éléments depuis le centre*/
-  align-items: center;
-  gap: 1vh; /* Espace entre les elements correspondant à 0.5 % de la hauteur de l'écran*/
-  background-color: #f9f9f9; /* Couleur de fond*/
-  width: 20vh; /* hauteur x10 valeur de base soit 20 % de la hauteur de l'écran*/
-  padding: 2vh;
-  margin-right: 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  gap: 1vh; /* Espace entre les éléments de la carte */
+  background-color: #f9f9f9; /* Couleur de fond */
+  width: 20vh; /* Définit la largeur de la carte */
+  padding: 2vh; /* Espace intérieur de la carte */
+  margin-right: 4vh; /* Espace à droite de la carte */
   /* landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location {
-    gap: 2vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
-    width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
-    padding: 2vw 2vw; /* espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    gap: 2vw; /* Ajuste l'espace entre les éléments pour mobile en mode paysage */
+    width: 20vw; /* Ajuste la largeur de la carte pour mobile en mode paysage */
+    padding: 2vw 2vw; /* Ajuste les marges intérieures */
     margin-right: 4vw;
   }
 }
 @media (min-width: 63.91rem) {
   .card-location {
-    gap: 1vw; /* Espace entre les elements correspondant à 2% de la largeur de l'écran*/
-    width: 20vw; /* hauteur x10 valeur de base soit 20 % de la largeur de l'écran*/
-    padding: 1vw 1vw; /* espace intérieur correspondant à 2%de l'écran*/
+    gap: 1vw; /* Ajuste l'espace entre les éléments pour desktop */
+    width: 20vw; /* Ajuste la largeur de la carte pour desktop */
+    padding: 1vw 1vw; /* Ajuste les marges intérieures pour desktop */
   }
 }
 
-/* Icône localisation*/
+/*-- Icône localisation dans la carte localisation --*/
 .card-location i {
-  font-size: 2vh; /*Taille correspondant à 2 % de la hauteur de l 'écran*/
-  color: black; /* Couleur icône */
-  margin-right: 1vh; /* marge droite correspond à 1% de la hauteur de l'écran*/
+  font-size: 2vh; /* Taille de l'icône en fonction de la hauteur de l'écran */
+  color: black; /* Couleur de l'icône */
+  margin-right: 1vh; /* Espace à droite de l'icône */
   /* landscape  */
+  /* Tablette */
+  /* Desktop  */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location i {
-    font-size: 2vw; /* Taille correspondant à 2 % de la largeur de l'écran*/
-    margin-right: 1vw; /* marge droite correspondant à 1% de la largeur de l'écran*/
+    font-size: 2vw; /* Ajuste la taille de l'icône pour le mobile paysage */
+    margin-right: 1vw; /* Ajuste l'espace à droite pour le mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card-location i {
-    font-size: 2vw; /* Taille correspondant à 2 % de la largeur de l'écran*/
-    margin-right: 1vw; /* marge droite correspondant à 1% de la largeur de l'écran*/
+    font-size: 2vw; /* Ajuste la taille de l'icône pour tablette */
+    margin-right: 1vw; /* Ajuste l'espace à droite pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card-location i {
-    font-size: 2vw; /* Taille correspondant à 2 % de la largeur de l'écran*/
-    margin-right: 0.5vw; /* marge droite correspondant à 1% de la largeur de l'écran*/
+    font-size: 2vw; /* Ajuste la taille de l'icône pour desktop */
+    margin-right: 0.5vw; /* Ajuste l'espace à droite pour desktop */
   }
 }
 
-/* Adresse localisation*/
+/*-- Adresse dans la carte localisation --*/
 .carte-location address {
-  font-size: 2vh;
-  color: black;
+  font-size: 2vh; /* Taille du texte pour l'adresse */
+  color: black; /* Couleur du texte */
   /* landscape  */
+  /* Tablette */
   /* Desktop  */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .carte-location address {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajuste la taille du texte pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .carte-location address {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajuste la taille du texte pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .carte-location address {
-    font-size: 2vw;
+    font-size: 2vw; /* Ajuste la taille du texte pour desktop */
   }
 }
 
 /*---------------------------------------------------------------------------------*/
 /*-------------------------------- Cartes restaurants -----------------------------*/
 /*---------------------------------------------------------------------------------*/
-/* Conteneur parent*/
+/*-- Conteneur parent de la carte restaurant --*/
 .card {
-  display: flex; /* Utilse flexbox pour aligner les éléments*/
+  display: flex; /* Utilise flexbox pour aligner les éléments */
   flex-direction: column; /* Aligne les éléments en colonne */
-  border-radius: 2vh; /* bord arrondis correspondant à un rayon de courbure de 2 % de la hauteur de l'écran*/
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
-  position: relative;
-  z-index: 1;
-  width: 90%;
-  height: 30vh; /* Hauteur 15x valeur de base soit 30% de la hauteur de l'écran*/
-  margin: 0.5vh auto;
-  justify-content: center;
+  border-radius: 2vh; /* Bord arrondis pour la carte */
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre portée */
+  position: relative; /* Permet de positionner des éléments enfants */
+  z-index: 1; /* Définit la position sur l'axe Z */
+  width: 90%; /* Largeur de la carte */
+  height: 30vh; /* Hauteur de la carte */
+  margin: 0.5vh auto; /* Marges et centrage horizontal */
+  justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
   /* landscape  */
+  /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card {
-    border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
-    height: 40vw; /* hauteur x30 valeur de base correspondant à 60 %de la largeur de l'écran */
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    margin: 0.5vw auto;
-    height: 50vw;
+    border-radius: 2vw; /* Bord arrondis pour mobile paysage */
+    height: 40vw; /* Hauteur de la carte pour mobile paysage */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile paysage */
+    margin: 0.5vw auto; /* Marges pour mobile paysage */
+    height: 50vw; /* Ajuste la hauteur en pourcentage de la largeur */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card {
-    border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
-    height: 40vw; /* hauteur x30 valeur de base correspondant à 60 % de la largeur de l'écran */
-    height: 50vw;
-    margin: 0.5vw auto;
-    width: 100%;
+    border-radius: 2vw; /* Bord arrondis pour tablette */
+    height: 40vw; /* Hauteur pour tablette */
+    height: 50vw; /* Ajuste la hauteur en fonction de la largeur de la tablette */
+    margin: 0.5vw auto; /* Marges pour tablette */
+    width: 100%; /* Largeur à 100% pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card {
-    border-radius: 2vw; /*bord arrondis correspondant à un rayon de courbure de 2 % de la largeur de l'écran*/
-    height: 40vw; /* hauteur x30 valeur de base correspondant à 60 % de la largeur de l'écran */
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    margin: 0.5vw auto;
-    width: 40vw;
-    height: 25vw;
+    border-radius: 2vw; /* Bord arrondis pour desktop */
+    height: 40vw; /* Hauteur pour desktop */
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
+    margin: 0.5vw auto; /* Marges pour desktop */
+    width: 40vw; /* Largeur de la carte pour desktop */
+    height: 25vw; /* Ajuste la hauteur en fonction de la largeur pour desktop */
   }
 }
 
-/* Image */
+/*-- Image dans la carte restaurant --*/
 .card img {
-  width: 100%;
-  border-radius: 2vh 2vh 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-  height: 20vh; /* L 'image prend 70% de la hauteur de la carte*/
-  object-fit: cover;
-  object-position: center 60%;
+  width: 100%; /* Largeur de l'image à 100% du conteneur */
+  border-radius: 2vh 2vh 0 0; /* Arrondis des coins supérieurs */
+  height: 20vh; /* Hauteur de l'image */
+  object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
+  object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
   /* landscape */
   /* tablette */
   /* desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card img {
-    border-radius: 2vw 2vw 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
-    object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
-    width: 100%;
-    height: 40vw;
+    border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour mobile paysage */
+    object-fit: cover; /* L'image est ajustée pour couvrir le conteneur */
+    width: 100%; /* Largeur de l'image à 100% du conteneur */
+    height: 40vw; /* Ajuste la hauteur en fonction de la largeur pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card img {
-    border-radius: 2vw 2vw 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la largeur de l'écran*/
-    object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
-    width: 100%;
-    height: 40vw;
+    border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour tablette */
+    object-fit: cover; /* L'image est ajustée pour couvrir le conteneur */
+    width: 100%; /* Largeur de l'image à 100% du conteneur */
+    height: 40vw; /* Ajuste la hauteur pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card img {
-    border-radius: 2vw 2vw 0 0; /* Arrondis haut gauche et haut droit  avec un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
-    object-fit: cover; /* l image est coupe pour s'adapter au conteneur */
-    width: 100%;
-    height: 19vw;
+    border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour desktop */
+    object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+    width: 100%; /* Largeur de l'image à 100% du conteneur */
+    height: 19vw; /* Ajuste la hauteur en fonction de la largeur pour desktop */
   }
 }
 
+/*-- Titre de la carte restaurant --*/
 .card h3 {
-  font-family: "roboto-bold", sans-serif;
-  font-weight: 900;
-  margin-top: 2vh;
+  font-family: "roboto-bold", sans-serif; /* Police du titre */
+  font-weight: 900; /* Gras du texte */
+  margin-top: 2vh; /* Marge supérieure */
   /* landscape */
+  /* tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card h3 {
-    font-size: 2vw;
-    margin-top: 3vh;
+    font-size: 2vw; /* Ajuste la taille du texte pour mobile paysage */
+    margin-top: 3vh; /* Marge supérieure pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card h3 {
-    font-size: 2vw;
-    margin-top: 3vh;
+    font-size: 2vw; /* Ajuste la taille du texte pour tablette */
+    margin-top: 3vh; /* Marge supérieure pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card h3 {
-    font-size: 1vw;
-    margin-top: 3vh;
+    font-size: 1vw; /* Ajuste la taille du texte pour desktop */
+    margin-top: 3vh; /* Marge supérieure pour desktop */
   }
 }
 
-/* Zone de texte */
+/*-- Zone de texte dans la carte restaurant --*/
 .card .card-title {
-  font-size: 2vh;
-  gap: 0.5vh;
-  margin: 2vh;
-  /* Desktop */
-}
-@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
-  .card .card-title {
-    font-size: 2vw;
-    gap: 1vw;
-    margin: 2vw;
-  }
-}
-@media (min-width: 48rem) and (max-width: 63.9rem) {
-  .card .card-title {
-    font-size: 2vw;
-    gap: 1vw;
-    margin: 2vw;
-  }
-}
-@media (min-width: 63.91rem) {
-  .card .card-title {
-    font-size: 1vw;
-    gap: 1vw;
-    margin: 1vw;
-  }
-}
-
-.card .icon-favorite {
-  display: block;
-  position: absolute;
-  z-index: 2;
-  left: 75%;
-  bottom: 15%;
+  font-size: 2vh; /* Taille du texte */
+  gap: 0.5vh; /* Espace entre les éléments */
+  margin: 2vh; /* Marges autour du texte */
   /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card .card-title {
+    font-size: 2vw; /* Ajuste la taille du texte pour mobile paysage */
+    gap: 1vw; /* Espace pour mobile paysage */
+    margin: 2vw; /* Marges pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .card .card-title {
+    font-size: 2vw; /* Ajuste la taille du texte pour tablette */
+    gap: 1vw; /* Espace pour tablette */
+    margin: 2vw; /* Marges pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .card .card-title {
+    font-size: 1vw; /* Ajuste la taille du texte pour desktop */
+    gap: 1vw; /* Espace pour desktop */
+    margin: 1vw; /* Marges pour desktop */
+  }
+}
+
+/*-- Icône favorite dans la carte restaurant --*/
+.card .icon-favorite {
+  display: block; /* Affiche l'icône favorite */
+  position: absolute; /* Position absolue pour l'icône */
+  z-index: 2; /* Au-dessus du contenu principal */
+  left: 75%; /* Position horizontale de l'icône */
+  bottom: 15%; /* Position verticale de l'icône */
+  /* landscape */
+  /* tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card .icon-favorite {
-    left: 85%;
-    bottom: 10%;
+    left: 85%; /* Ajuste la position gauche pour mobile paysage */
+    bottom: 10%; /* Ajuste la position verticale pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card .icon-favorite {
-    left: 85%;
-    bottom: 7.5%;
+    left: 85%; /* Ajuste la position gauche pour tablette */
+    bottom: 7.5%; /* Ajuste la position verticale pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card .icon-favorite {
-    left: 85%;
-    bottom: 10%;
+    left: 85%; /* Ajuste la position gauche pour desktop */
+    bottom: 10%; /* Ajuste la position verticale pour desktop */
   }
 }
 
+/*-- Texte dans la carte restaurant --*/
 .card-txt {
-  padding: 0.5vh 0;
+  padding: 0.5vh 0; /* Ajoute du padding autour du texte */
+  /* landscape */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-txt {
-    padding: 0.5vw 0;
+    padding: 0.5vw 0; /* Ajoute du padding pour mobile paysage */
   }
 }
 
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------Badge--------------------------------------------- */
 /* ------------------------------------------------------------------------------------------*/
+/*-- Badge dans la carte restaurant --*/
 .card .badge {
-  display: flex;
-  position: absolute;
-  z-index: 3;
-  right: 5%;
-  top: 5%;
+  display: flex; /* Utilise flexbox pour les badges */
+  position: absolute; /* Position absolue pour le badge */
+  z-index: 3; /* Superposition au-dessus du contenu */
+  right: 5%; /* Position droite du badge */
+  top: 5%; /* Position haute du badge */
 }
 
-/*------------ Affichage Badges ----------------*/
+/*------------ Affichage des différents badges ----------------*/
+/* Palette Badge */
 #palette .badge {
-  display: flex;
+  display: flex; /* Affiche le badge palette */
 }
 
+/* Enchantee Badge */
 #enchantee .badge {
-  display: flex;
+  display: flex; /* Affiche le badge enchantee */
 }
 
+/* Delice Badge */
 #delice .badge {
-  display: none;
+  display: none; /* Affiche le badge delices */
 }
 
+/* Française Badge */
 #francaise .badge {
-  display: none;
+  display: none; /* Affiche le badge française */
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
-/*----------------------------------------- carte menu ----------------------------------------------*/
+/*----------------------------------------- Carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
+/*-- Conteneur de la carte menu --*/
 .card-menu {
-  background-color: white;
-  border-radius: 2vh;
-  height: 9vh;
-  display: flex;
-  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre*/
-  margin: 1vh;
-  align-items: center;
-  cursor: url("/images/logo/valid.png"), auto;
-  justify-content: space-between;
-  width: 95%;
+  background-color: white; /* Couleur de fond de la carte menu */
+  border-radius: 2vh; /* Bord arrondis */
+  height: 9vh; /* Hauteur de la carte menu */
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre portée */
+  margin: 1vh; /* Marges autour de la carte */
+  align-items: center; /* Centre verticalement les éléments */
+  cursor: url("/images/logo/valid.png"), auto; /* Changement du curseur pour valider */
+  justify-content: space-between; /* Espace entre les éléments */
+  width: 95%; /* Largeur de la carte menu */
 }
 
+/*-- Item du menu --*/
 .menu-item {
-  width: 100%;
+  width: 100%; /* L'élément du menu prend toute la largeur disponible */
 }
 
+/*-- Nom du plat dans la carte menu --*/
 .dish-name {
-  font-size: 2vh;
-  font-weight: 900;
-  padding-left: 1vh;
+  font-size: 2vh; /* Taille du texte pour le nom du plat */
+  font-weight: 900; /* Style gras pour le nom du plat */
+  padding-left: 1vh; /* Espace à gauche du texte */
 }
 
+/*-- Description du plat dans la carte menu --*/
 .dish-description {
-  font-size: 2vh;
+  font-size: 2vh; /* Taille du texte pour la description du plat */
   word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
-  padding: 0 1vh;
+  padding: 0 1vh; /* Padding horizontal */
 }
 
+/*-- Contenu du plat (nom et prix) --*/
 .dish-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  width: 100%; /* Largeur du contenu du plat */
+  justify-content: space-between; /* Espace entre le nom du plat et le prix */
 }
 
+/*-- Prix du plat dans la carte menu --*/
 .dish-content .price {
-  font-size: 2vh; /* Ajuste la taille pour qu'elle corresponde au texte */
-  font-weight: 900; /* Assure la cohérence du style */
-  padding-right: 1vh;
+  font-size: 2vh; /* Taille du texte pour le prix */
+  font-weight: 900; /* Style gras pour le prix */
+  padding-right: 1vh; /* Espace à droite du texte */
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
+/*-- Conteneur principal --*/
 .footer-card {
-  padding: 2vh;
+  padding: 2vh; /* Padding dans le footer */
 }
 
+/*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-  margin-right: 2vh;
-  margin-left: 0;
-  color: white;
+  margin-right: 2vh; /* Espace à droite des icônes */
+  margin-left: 0; /* Pas d'espace à gauche */
+  color: white; /* Couleur blanche pour les icônes */
 }
 
+/*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
-  transform: scaleX(1) rotate(325deg);
-  font-size: 1.5vh;
+  transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
+  font-size: 1.5vh; /* Taille de l'icône */
 }
 
+/*-- Liste dans le footer --*/
 .footer-card li {
-  margin-top: 1vh;
+  margin-top: 1vh; /* Marge supérieure pour les éléments de la liste */
 }
 
+/*-- logo dans le footer --*/
 .footer-card img {
-  background-color: white;
-  width: 30%;
-  filter: invert(100%);
-  margin: 1vh 0;
-  padding-bottom: 1vh;
+  background-color: white; /* Fond blanc pour l'image */
+  width: 30%; /* L'image occupe 30% de la largeur du footer */
+  filter: invert(100%); /* Inversion des couleurs pour l'image */
+  margin: 1vh 0; /* Marges verticale pour l'image */
+  padding-bottom: 1vh; /* Padding inférieur pour l'image */
 }
 
 /* Styles spécifiques au header */
