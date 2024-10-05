@@ -23,11 +23,23 @@
     padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
   }
 
+  /* Tablette */
+  @include tablette {
+    border-radius: $border-radius-vh-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la hauteur de l'écran*/
+    box-shadow: $border-shadow-vw; /* ombre*/
+    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+  }
+  
+
+  
   /* Desktop */
   @include desktop {
     border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
     box-shadow: $border-shadow-vw; /* ombre*/
-    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+    padding: $padding-vw-d2 $padding-vh-x2; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+
+    margin-top: 2vw;
+
   }
   /* Effet de survol*/
   &:hover {
@@ -48,7 +60,7 @@
 
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: $font-size-vw-middle; /* Taille de police correspondant à 2% de la largeur de l'écran*/
   }
 }
 

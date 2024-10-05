@@ -452,7 +452,7 @@ body {
 }
 @media (min-width: 63.91rem) {
   body {
-    font-size: 1vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    font-size: 1.5vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
   }
 }
 
@@ -510,6 +510,7 @@ img {
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /*ombre*/
   border-radius: 4vh; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
   /* Landscape */
+  /* Tablette */
   /* Desktop */
   /* Effet de survol*/
 }
@@ -520,11 +521,19 @@ img {
     padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
   }
 }
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .button--primary {
+    border-radius: 4vh; /*bord arrondis correspondant à un rayon de courbure de 4 % de la hauteur de l'écran*/
+    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
+    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+  }
+}
 @media (min-width: 63.91rem) {
   .button--primary {
     border-radius: 4vw; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre*/
-    padding: 2vw; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+    padding: 1vw 4vh; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
+    margin-top: 2vw;
   }
 }
 .button--primary:hover {
@@ -546,7 +555,7 @@ img {
 }
 @media (min-width: 63.91rem) {
   .button--primary-txt {
-    font-size: 2vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: 1.5vw; /* Taille de police correspondant à 2% de la largeur de l'écran*/
   }
 }
 
@@ -742,22 +751,65 @@ input {
 .card-logo-alt {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
-  width: 100%; /* Prend toute la largeur disponible */
+  width: 90%; /* Prend toute la largeur disponible */
   height: 5vh; /* Hauteur correspond à 5% de la hauteur de l'écran */
   justify-content: center; /* Centre les éléments horizontalement */
   position: relative; /* Permet de positionner des éléments enfants relativement au conteneur */
+  /* landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card-logo-alt {
+    height: 5vw; /* Hauteur correspondant à 5% de la largeur de l'écran */
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-logo-alt {
+    height: 5vw; /* Hauteur correspondant à 5% de la largeur de l'écran */
+  }
 }
 
 /*-- Image dans la carte alt --*/
 .card-logo-alt img {
   height: 3vh; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
+  /* landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card-logo-alt img {
+    height: 3vw; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-logo-alt img {
+    height: 2vw; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+  }
 }
 
 /*-- Icône de flèche retour --*/
 .card-logo-alt i {
   position: absolute; /* Positionne l'icône de manière absolue dans la carte */
-  left: -5%; /* Place l'icône à gauche, hors de la carte */
+  left: -12%; /* Place l'icône à gauche, hors de la carte */
   top: 35%; /* Place l'icône à 35% du haut du conteneur */
+  /* landscape */
+  /* Desktop */
+  /* Faire pointer la souris sur l'icône de la carte */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card-logo-alt i {
+    left: -10%; /* Ajuste la position de l'icône pour mobile en mode paysage */
+    top: 35%; /* Ajuste la position de l'icône pour mobile en mode paysage */
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-logo-alt i {
+    left: -7%; /* Ajuste la position de l'icône pour desktop */
+    top: 35%; /* Ajuste la position de l'icône pour desktop */
+    font-size: 1.5vw;
+  }
+}
+.card-logo-alt i:hover {
+  cursor: pointer;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -769,7 +821,7 @@ input {
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
   gap: 1vh; /* Espace entre les éléments de la carte */
-  background-color: #f9f9f9; /* Couleur de fond */
+  background-color: #e0e0e0; /* Couleur de fond */
   width: 20vh; /* Définit la largeur de la carte */
   padding: 2vh; /* Espace intérieur de la carte */
   margin-right: 4vh; /* Espace à droite de la carte */
@@ -1249,7 +1301,11 @@ input {
 }
 @media (min-width: 63.91rem) {
   .footer-card {
-    padding: 2vw; /* Padding vertical pour desktop */
+    padding: 0.5vw; /* Padding vertical pour desktop */
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 4vw; /**marge haute correspondant à 4 % de la largeur de l' écran */
+    gap: 4vw; /* espace correspondant à 4% de la largeur de l'écran*/
   }
 }
 
@@ -1294,6 +1350,7 @@ input {
   margin-top: 1vh; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
   /* landscape */
   /* tablette */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .footer-card li {
@@ -1303,6 +1360,19 @@ input {
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .footer-card li {
     margin-top: 1vw; /* Marge supérieur pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .footer-card li {
+    margin-top: 1vw; /* Marge supérieur pour desktop */
+  }
+}
+
+/*-- listes --*/
+@media (min-width: 63.91rem) {
+  .footer-card ul {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    gap: 2vw; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran*/
   }
 }
 
@@ -1327,13 +1397,15 @@ input {
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .footer-card img {
     width: 30%; /* L'image occupe 30% de la largeur  */
-    margin: 1vw 0; /* Marge verticale pour tablette */
+    margin: 0.5vw 0; /* Marge verticale pour tablette */
     padding-bottom: 1vw; /* Padding inférieur pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .footer-card img {
-    width: 30%; /* L'image occupe 30% de la largeur  */
+    width: 10%; /* L'image occupe 30% de la largeur  */
+    margin: 0; /* Marge verticale pour desktop */
+    padding-top: 1vw; /* Padding inférieur pour desktop */
   }
 }
 
@@ -1468,11 +1540,17 @@ header {
   align-items: center; /* Aligne les éléments dans la hauteur*/
   width: 90%;
   /*  Landscape  */
+  /*Tablette*/
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau {
     margin: 2vw 4vw;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .bandeau {
+    gap: 0.5vw;
   }
 }
 @media (min-width: 63.91rem) {
@@ -1486,10 +1564,24 @@ header {
 .bandeau h2 {
   padding: 0.5vh 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
   /*  Landscape  */
+  /*-- tablette --*/
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau h2 {
     padding: 0.5vw 0;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .bandeau h2 {
+    padding: 0.5vh 0;
+  }
+}
+@media (min-width: 63.91rem) {
+  .bandeau h2 {
+    padding: 0.5vh 2vw;
+    margin-bottom: 2vh;
+    font-weight: 100;
   }
 }
 
@@ -1499,11 +1591,25 @@ header {
   margin-bottom: 2vh; /**/
   font-weight: 100; /**/
   /*  Landscape  */
+  /*-- tablette --*/
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau p {
     padding: 1vw 2vw;
     margin-bottom: 2vw;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .bandeau p {
+    padding: 1vh 2vw;
+    margin-bottom: 2vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .bandeau p {
+    padding: 1vh 2vw;
+    margin-bottom: 2vh;
   }
 }
 
@@ -1517,11 +1623,25 @@ header {
   margin: 10vh auto;
   width: 90%;
   /*--  Landscape --*/
+  /*-- Tablette --*/
+  /*-- Desktop  --*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .fonctionnement {
     margin: 10vw 3vw;
     gap: 3vw;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .fonctionnement {
+    gap: 1vw;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 63.91rem) {
+  .fonctionnement {
+    gap: 2vw;
+    justify-content: space-around;
   }
 }
 
@@ -1564,16 +1684,16 @@ ol li {
   width: 100%;
   justify-content: space-around;
   /*--  Landscape  --*/
+  /*-- Desktop  --*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol li {
     margin: 2vw 1vw;
-    align-items: center;
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    justify-content: space-around;
+  }
+}
+@media (min-width: 63.91rem) {
+  ol li {
+    margin: 2vw 1vw;
   }
 }
 
@@ -1609,8 +1729,9 @@ ol li {
     border-radius: 2vh;
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 5vh;
+    height: 4vw;
     align-items: center;
+    font-size: 1.2vw;
   }
 }
 
@@ -1629,6 +1750,7 @@ ol li .puce_num {
   font-size: 1.4vh;
   animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
   /*  Landscape  */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   ol li .puce_num {
@@ -1638,6 +1760,14 @@ ol li .puce_num {
     font-size: 1.4vw;
   }
 }
+@media (min-width: 63.91rem) {
+  ol li .puce_num {
+    border-radius: 50%;
+    height: 1.5vw;
+    width: 1.5vw;
+    font-size: 1vw;
+  }
+}
 
 /*--------------- Liste : Icône -------------------------*/
 i {
@@ -1645,11 +1775,18 @@ i {
   font-size: 2vh;
   margin: 0 2vh 0 4vh;
   /*  Landscape  */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   i {
     font-size: 2vw;
     margin: 0 2vw 0 4vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  i {
+    font-size: 2vh;
+    margin: 0 2vw 0 2vw;
   }
 }
 
@@ -1743,6 +1880,16 @@ i {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu {
+    width: 80%;
+  }
+}
 
 .menu-image {
   height: 35vh;
@@ -1799,6 +1946,26 @@ footer {
   color: white; /* Couleur du texte et des icônes*/
   padding: 0 1vh; /* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
   width: 100%; /* Prend toute la largeur disponible */
+  /* Landscape */
+  /* Tablettes */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  footer {
+    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  footer {
+    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+  }
+}
+@media (min-width: 63.91rem) {
+  footer {
+    padding: 0 1vw; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+    justify-content: center;
+    margin-right: 20%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

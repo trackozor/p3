@@ -48,23 +48,63 @@
 .card-logo-alt {
     display:flex;/* Utilise flexbox pour aligner les éléments */
     align-items: center;/* Aligne les éléments verticalement */
-    width: 100%;/* Prend toute la largeur disponible */
+    width: 90%;/* Prend toute la largeur disponible */
     height: $object-size-vh-x2-5;/* Hauteur correspond à 5% de la hauteur de l'écran */
     justify-content: center;/* Centre les éléments horizontalement */
     position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
     
+    /* landscape */
+    @include mobile-landscape {
+        height:$object-size-vw-x2-5; /* Hauteur correspondant à 5% de la largeur de l'écran */
+    }
+    
+    /* Desktop */   
+    @include desktop {
+        height:$object-size-vw-x2-5; /* Hauteur correspondant à 5% de la largeur de l'écran */
+    }
 }
+
+
 
 /*-- Image dans la carte alt --*/
 .card-logo-alt img {
-    height: $object-size-vh-middle; /* Hauteur correspondant à 3 % de la hauteur de l'écran */    
+    height: $object-size-vh-middle; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
+    
+    /* landscape */
+    @include mobile-landscape {
+        height:$object-size-vw-middle; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        height:$object-size-vw-base; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+    }
 }
 
 /*-- Icône de flèche retour --*/
 .card-logo-alt i {
     position: absolute; /* Positionne l'icône de manière absolue dans la carte */
-    left: -5%; /* Place l'icône à gauche, hors de la carte */
+    left:-12%; /* Place l'icône à gauche, hors de la carte */
     top: 35%; /* Place l'icône à 35% du haut du conteneur */
+
+    /* landscape */
+    @include mobile-landscape {
+        left:-10%; /* Ajuste la position de l'icône pour mobile en mode paysage */
+        top: 35%; /* Ajuste la position de l'icône pour mobile en mode paysage */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        left:-7%; /* Ajuste la position de l'icône pour desktop */
+        top: 35%; /* Ajuste la position de l'icône pour desktop */
+        font-size: 1.5vw;
+    }
+    
+    /* Faire pointer la souris sur l'icône de la carte */
+    &:hover {
+        cursor: pointer;
+    }
+
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -77,7 +117,7 @@
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     gap:$gap-vh-d2;/* Espace entre les éléments de la carte */
-    background-color: $primary-background-color; /* Couleur de fond */
+    background-color:#e0e0e0; /* Couleur de fond */
     width: $object-size-vh-x10; /* Définit la largeur de la carte */
     padding: $padding-vh-base ; /* Espace intérieur de la carte */
     margin-right: $margin-vh-x2; /* Espace à droite de la carte */
@@ -522,7 +562,11 @@
     
     /* Desktop */
     @include desktop {
-        padding: $padding-vw-base; /* Padding vertical pour desktop */
+        padding: $padding-vw-d4; /* Padding vertical pour desktop */
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: $margin-vw-x2;/**marge haute correspondant à 4 % de la largeur de l' écran */
+        gap: $gap-vw-x2;/* espace correspondant à 4% de la largeur de l'écran*/
     }
 }
 
@@ -536,21 +580,21 @@
     @include mobile-landscape {
         margin-right: $margin-vw-base; /* Padding horizontal pour mobile paysage */
         margin-left: 0; /* Pas d'espace à gauche */
-        font-size: 1.5vw; /* Taille de l'icône pour mobile paysage */
+        font-size: $font-size-vw-middle; /* Taille de l'icône pour mobile paysage */
     }
     
     /* tablette */
     @include tablette {
         margin-right: $margin-vw-d2; /* Padding horizontal pour tablette */
         margin-left: 0; /* Pas d'espace à gauche */
-        font-size: 1.5vw; /* Taille de l'icône pour tablette */
+        font-size: $font-size-vw-middle; /* Taille de l'icône pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         margin-right: $margin-vw-d2; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: 1vw; /* Taille de l'icône pour desktop */
+        font-size: $font-size-vw-d2; /* Taille de l'icône pour desktop */
     }
 }
 
@@ -574,9 +618,20 @@
         margin-top: $margin-vw-d2; /* Marge supérieur pour tablette */
     }
     
+    /* Desktop */
+    @include desktop {
+        margin-top: $margin-vw-d2; /* Marge supérieur pour desktop */
+    
+    }
     
 }
-
+/*-- listes --*/
+.footer-card ul {
+    @include desktop {
+        display: flex; /* Utilise flexbox pour aligner les éléments */
+        gap:$gap-vw-base; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran*/
+    }
+}
 /*-- logo dans le footer --*/
 .footer-card img {
     background-color: white; /* Fond blanc pour l'image */
@@ -595,12 +650,14 @@
     /* tablette */
     @include tablette {
         width: 30%; /* L'image occupe 30% de la largeur  */
-        margin: $margin-vw-d2 0; /* Marge verticale pour tablette */
+        margin: $margin-vw-d4 0; /* Marge verticale pour tablette */
         padding-bottom: $padding-vw-d2; /* Padding inférieur pour tablette */
     }
     
     /* Desktop */
     @include desktop {
-        width: 30%; /* L'image occupe 30% de la largeur  */
+        width: 10%; /* L'image occupe 30% de la largeur  */
+        margin:0; /* Marge verticale pour desktop */
+        padding-top: $padding-vw-d2; /* Padding inférieur pour desktop */
     }
 }

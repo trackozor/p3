@@ -20,5 +20,22 @@ footer {
     color:white; /* Couleur du texte et des icônes*/
     padding: 0 $padding-vh-d2;/* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
     width: 100%; /* Prend toute la largeur disponible */
-    
+
+
+    /* Landscape */
+    @include mobile-landscape {
+        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+    }
+
+    /* Tablettes */
+    @include tablette {
+        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+    }
+
+    /* Desktop */
+    @include desktop {
+        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+        justify-content: center;
+        margin-right: 20%;
+    }
 }

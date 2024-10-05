@@ -41,7 +41,7 @@ body {
   
   /*- Desktop -*/
   @include desktop {
-    font-size: $font-size-vw-d2; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
+    font-size: $font-size-vw-middle; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
   }
 }
   
