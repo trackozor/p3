@@ -1,6 +1,24 @@
-/* _animations.scss */
 
-/* Animation battement de cœur pour les éléments de type like (ex : icônes) */
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _animations.scss                                                              */
+/* Auteur              : Trackozor                                                                          */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 06/10/24                                                                          */
+/* Description         : Styles pour les animations                                                            */
+/*                                                                                                          */
+/*                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------  */
+
+/*--------------------------------------------------------------------------------------------------------  */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                                                                          */
+/* -------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------- Animation battement de cœur (like) ------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes heartBeat {
     0%, 100% {
         transform: scale(1); /* Taille normale au début et à la fin */
@@ -10,123 +28,141 @@
     }
 }
 
-/* Animation pour remplir l'arrière-plan avec une couleur et faire croître l'élément */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Animation remplissage "like" avec changement de couleur -----------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes likeFill {
     0% {
         color: white; /* Couleur initiale blanche */
-        transform: scale(0.8); /* Taille initiale légèrement réduite */
+        transform: scale(0.8); /* Taille initiale réduite */
     }
     25% {
-        color: #f7efef; /* Étape intermédiaire : dégradé léger vers une couleur pastel */
+        color: #f7efef; /* Dégradé vers une couleur pastel */
         transform: scale(0.9); /* L'élément grandit légèrement */
     }
     50% {
-        color: #f5a4b8; /* Étape intermédiaire : couleur pastel un peu plus foncée */
+        color: #f5a4b8; /* Couleur pastel plus foncée */
         transform: scale(1); /* Taille normale */
     }
     75% {
         color: #f28aa1; /* Couleur presque finale */
-        transform: scale(1.1); /* Taille un peu plus grande */
+        transform: scale(1.1); /* Taille légèrement plus grande */
     }
     100% {
-        color: $font-primary; /* Couleur finale : variable CSS de la couleur primaire */
+        color: $font-primary; /* Couleur finale */
         transform: scale(1.2); /* L'élément grandit légèrement à la fin */
     }
 }
 
-
-
-/* Animation éclatement (icône grossit puis retourne à sa taille normale) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Animation éclatement (ex: icône qui grossit et rétrécit) ------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes explode {
     0% {
-        transform: scale(1.2); /* Point de départ : taille légèrement agrandie */
+        transform: scale(1.2); /* Taille légèrement agrandie au début */
     }
     50% {
-        transform: scale(1.5); /* L'icône s'agrandit encore plus */
+        transform: scale(1.5); /* L'icône s'agrandit encore */
     }
     100% {
         transform: scale(1); /* Retour à la taille normale */
     }
 }
 
-/* Animation pour faire disparaître un loader après 3 secondes */
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Animation disparition d'un loader après 3 secondes -----------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes fadeOutLoader {
     0% {
-        opacity: 1; /* Loader complètement visible */
+        opacity: 1; /* Loader visible au début */
     }
     80% {
-        opacity: 1; /* Reste visible pendant 80% de l'animation */
+        opacity: 1; /* Reste visible jusqu'à 80% de l'animation */
     }
     100% {
-        opacity: 0; /* Finit par disparaître */
-        visibility: hidden; /* Cache complètement l'élément après disparition */
+        opacity: 0; /* Disparaît progressivement */
+        visibility: hidden; /* Devient complètement invisible */
     }
 }
 
-/* Animation pour une barre de progression qui se remplit */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------- Animation barre de progression ------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes loadProgressBar {
     0% {
-        width: 0%; /* La barre commence vide */
+        width: 0%; /* Barre vide au départ */
     }
     100% {
-        width: 100%; /* La barre est remplie à 100% à la fin de l'animation */
+        width: 100%; /* Barre remplie à la fin de l'animation */
     }
 }
 
-/* Animation pour faire apparaître un message de manière fluide */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Animation apparition progressive d'un message ---------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes fadeInMessage {
     0% {
-        opacity: 0; /* Le message est invisible */
+        opacity: 0; /* Le message est invisible au début */
     }
     100% {
         opacity: 1; /* Le message devient complètement visible */
     }
 }
 
-/* Animation pour rétrécir un élément (ex : carte) avant de le masquer */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------- Animation rétrécissement et disparition d'un élément ------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes shrink {
     0% {
         transform: scale(1); /* Taille normale */
     }
     100% {
-        transform: scale(0.9); /* Légèrement rétréci à la fin */
-        opacity: 0; /* L'élément disparaît */
+        transform: scale(0.9); /* Rétrécit légèrement */
+        opacity: 0; /* L'élément disparaît progressivement */
     }
 }
 
-/* Animation pour faire glisser un élément de droite à gauche (ex : carte) */
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Animation glissement de droite à gauche (ex: carte) ----------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes slideIn {
     from {
-        opacity: 0; /* L'élément est invisible au début */
-        transform: translateX(100%); /* Commence hors de l'écran à droite */
+        opacity: 0; /* L'élément est invisible au départ */
+        transform: translateX(100%); /* Hors écran à droite */
     }
     to {
         opacity: 1; /* L'élément devient visible */
-        transform: translateX(0); /* Se déplace à sa position finale */
+        transform: translateX(0); /* Glisse jusqu'à sa position finale */
     }
 }
 
-/* Animation de pulsation pour un élément, par exemple pour les puces */
+/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------- Animation de pulsation d'un élément (ex: puces) ----------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes pulse {
     0%, 100% {
         transform: scale(1); /* Taille normale au début et à la fin */
     }
     50% {
-        transform: scale(1.3); /* L'élément grossit temporairement au milieu */
+        transform: scale(1.3); /* Grossissement temporaire */
     }
 }
 
-/* Animation pour changer la couleur d'une icône */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------- Animation changement de couleur d'une icône ---------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes iconColor {
     0%, 100% {
-        color: grey; /* Couleur grise au début et à la fin */
+        color: grey; /* Couleur initiale et finale grise */
     }
     50% {
         color: #6a1b9a; /* Couleur temporaire au milieu de l'animation */
     }
 }
 
-/* Animation de fond avec une vague qui change la couleur du texte */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------- Animation vague avec changement de couleur du fond ---------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 @keyframes wave {
     0% {
         background-position: 0% 0;
@@ -134,7 +170,7 @@
     }
     50% {
         background-position: 100% 0; /* La vague atteint l'autre côté */
-        background-color: #e1bee7; /* Le fond prend une nouvelle couleur */
+        background-color: #e1bee7; /* Changement temporaire de couleur */
     }
     100% {
         background-position: 0% 0; /* Retour à la position initiale */
@@ -142,7 +178,9 @@
     }
 }
 
-/* Application des animations aux éléments spécifiques */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Animations appliquées aux éléments ---------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* Animation de l'icône avec changement de couleur */
 .step .icon {
@@ -150,7 +188,7 @@
     font-size: 20px;
     color: grey;
     animation: iconColor 2s infinite ease-in-out;
-    animation-delay: 0.5s; /* L'icône change de couleur après un délai */
+    animation-delay: 0.5s; /* Délai avant que l'animation ne démarre */
 }
 
 /* Animation de fond pour les éléments de texte */

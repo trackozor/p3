@@ -1,95 +1,109 @@
-/* _buttons.scss */
+
+/*-------------------------------------------------------------------------------------------------------- */
+/* Nom du fichier      : _button.scss                                                              */
+/* Auteur              : Trackozor                                                                          */
+/* Date de création    : 25/09/24                                                                           */
+/* Dernière modification: 06/10/24                                                                          */
+/* Description         : Styles pour les buttons                                                            */
+/*                                                                                                          */
+/*                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------  */
+
+/*--------------------------------------------------------------------------------------------------------  */
+/*  Version             : 1.0                                                                               */
+/*  Framework utilisé   : SCSS                                                                              */
+/* -------------------------------------------------------------------------------------------------------  */
+/*  Révisions :                                                                                             */
+/*                                                                                                          */
+/* -------------------------------------------------------------------------------------------------------- */
+
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- explorer nos restaurants--------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-
 /*---------------------------- Bouton principal avec dégradé ----------------------------- */
 .button--primary {
-  display: flex;/* Utilise flexbox pour aligner les éléments*/
-  align-items: center; /* Aligne les éléments dans la hauteur*/
-  justify-content: center; /* Aligne les éléments dans la largeur*/
-  background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color);/* dégradé de couleur*/
-  padding: $padding-vh-base ;/* Espace intérieur correspondant à 2% de la hauteur de l'écran */
-  color: white;/* couleur du texte*/
-  box-shadow: $border-shadow-vh; /*ombre*/
-  border-radius:$border-radius-vh-x2; /*arrondis correspond à un rayon de courbure correspondant à 2 % de la hauteur de l'écran*/
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Aligne les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color); /* Dégradé de couleur */
+  padding: $padding-vh-base; /* Padding correspondant à 2% de la hauteur de l'écran */
+  color: white; /* Couleur du texte en blanc */
+  box-shadow: $border-shadow-vh; /* Ajoute une ombre */
+  border-radius: $border-radius-vh-x2; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
 
   /* Landscape */
   @include mobile-landscape {
-    border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
-    box-shadow: $border-shadow-vw; /* ombre*/
-    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    border-radius: $border-radius-vw-x2; /* Bord arrondis ajusté à 4% de la largeur de l'écran */
+    box-shadow: $border-shadow-vw; /* Ombre pour mobile en paysage */
+    padding: $padding-vw-base; /* Padding ajusté à 2% de la largeur de l'écran */
   }
 
   /* Tablette */
   @include tablette {
-    border-radius: $border-radius-vh-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la hauteur de l'écran*/
-    box-shadow: $border-shadow-vw; /* ombre*/
-    padding: $padding-vw-base; /* Espace intérieur correspondant à 2 % de la largeur de l'écran*/
+    border-radius: $border-radius-vh-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
+    box-shadow: $border-shadow-vw; /* Ombre pour tablette */
+    padding: $padding-vw-base; /* Padding ajusté pour tablette */
   }
-  
 
-  
   /* Desktop */
   @include desktop {
-    border-radius: $border-radius-vw-x2; /*bord arrondis correspondant à un rayon de courbure de 4 % de la largeur de l'écran*/
-    box-shadow: $border-shadow-vw; /* ombre*/
-    padding: $padding-vw-d2 $padding-vh-x2; /* Espace intérieur correspondant à 2 % de la largeur de l'écran */
-
-    margin-top: 2vw;
-
+    border-radius: $border-radius-vw-x2; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $border-shadow-vw; /* Ombre pour desktop */
+    padding: $padding-vw-d2 $padding-vh-x2; /* Padding ajusté pour desktop */
+    margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
   }
-  /* Effet de survol*/
+
+  /* Effet de survol */
   &:hover {
-    background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%));/*couleur dégradé*/
-    box-shadow: $border-shadow-vh;/* Ombre*/
+    background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%)); /* Effet de survol avec éclaircissement du dégradé */
+    box-shadow: $border-shadow-vh; /* Ombre inchangée */
   }
 }
 
-/* ------------------------- Texte du bouton ----------------------------------------*/
+/* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
-  font-size: $font-size-vh-base; /* Taille de police correspondant à 2% de la hauteur de l'écran*/
-  font-weight: $font-weight-l-bold; /* Accentuation police valeur=100*/
+  font-size: $font-size-vh-base; /* Taille de police à 2% de la hauteur de l'écran */
+  font-weight: $font-weight-l-bold; /* Style de police en gras (bold) */
 
   /* Landscape */
   @include mobile-landscape {
-    font-size: $font-size-vw-base; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile en paysage */
   }
 
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-middle; /* Taille de police correspondant à 2% de la largeur de l'écran*/
+    font-size: $font-size-vw-middle; /* Ajustement de la taille de police pour desktop */
   }
 }
-
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Badge Nouveau ------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 .badge {
-  background-color:$button--new-primary-color;  /* Couleur vert clair */
-  color: $button--new-secondary-color; /* couleur vert foncé*/
-  font-size: $font-size-vh-middle; /* Taille de la police correspondant à 2 % de la hauteur de l'écran*/
-  padding:$padding-vh-d2 $padding-vh-base; /* espace intérieur haut/bas et gauche/droite correspondant respectivement à 1%  et 2 %de la hauteur de l'écran*/
-  width:$object-size-vh-x3; /* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la hauteur de l'écran*/
-  font-weight: $font-weight-h-bold;/* Accentuation police valeur=900 */
-  display: flex;/* Utilise flexbox pour aligner les éléments */
-  justify-content: center;/* centre les éléments a partir d centre du conteneur parent*/
+  background-color: $button--new-primary-color; /* Couleur de fond vert clair */
+  color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
+  font-size: $font-size-vh-middle; /* Taille de la police à 2% de la hauteur de l'écran */
+  padding: $padding-vh-d2 $padding-vh-base; /* Padding vertical et horizontal */
+  width: $object-size-vh-x3; /* Taille du badge à 6% de la hauteur de l'écran */
+  font-weight: $font-weight-h-bold; /* Style de police très gras (900) */
+  display: flex; /* Utilisation de flexbox pour l'alignement */
+  justify-content: center; /* Centrage horizontal du texte */
 
   /* Landscape */
   @include mobile-landscape {
-    font-size: $font-size-vw-base;/* Taille de police de base correspondant à 2% de la largeur de l'écran */
-    padding: $padding-vw-d2 $padding-vw-base;/* Espace intérieur haut/bas et gauche/droite correspondant respectivement à 1% et 2% de la largueur de l'écran*/
-    width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base soit 6% de la largeur de l'écran*/
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile en paysage */
+    padding: $padding-vw-d2 $padding-vw-base; /* Padding ajusté pour mobile paysage */
+    width: $object-size-vw-x3; /* Largeur ajustée pour mobile paysage */
   }
+
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-d2; /* Taille de police de base correspondant à 2% de la largeur de l'écran*/
-    padding: $padding-vw-d4 ;/*espace intérieur haut/bas et gauche/droite correspondant respectivement à 1 % et 2 % de la largeur de l'écran*/
-    width: $object-size-vw-x3;/* Taille d'objet 3 fois supérieur à la valeur de base correspondant à 6% de la larguer de l'écran  */
+    font-size: $font-size-vw-d2; /* Taille de la police ajustée pour desktop */
+    padding: $padding-vw-d4; /* Padding ajusté pour desktop */
+    width: $object-size-vw-x3; /* Largeur ajustée pour desktop */
   }
 }
 
@@ -98,116 +112,119 @@
 /*--------------------------------------------------------------------------------------------------------*/
 
 .icon-favorite {
-  background-color: transparent;/* Couleur de fond transparente */
-  color:grey; /* couleur principale */
-  cursor:url('/images/logo/like.png'), auto;
+  background-color: transparent; /* Fond transparent */
+  color: grey; /* Couleur principale en gris */
+  cursor: url('/images/logo/like.png'), auto; /* Curseur personnalisé */
 }
 
 .icon-favorite .fa-full {
-  display: none;
-  z-index: 3;
-  position:relative;
+  display: none; /* Caché par défaut */
+  z-index: 3; /* Superposition au-dessus des autres éléments */
+  position: relative;
 }
+
+/* Style des icônes */
 .fa-full, .fa-empty {
-  font-size: $font-size-vh-title;
+  font-size: $font-size-vh-title; /* Taille de police pour les icônes */
 
   /* Landscape */
   @include mobile-landscape {
-    font-size: $font-size-vw-title;
+    font-size: $font-size-vw-title; /* Ajustement de la taille de police pour mobile paysage */
   }
 
   /* Tablette */
   @include tablette {
-    font-size: $font-size-vw-title;
+    font-size: $font-size-vw-title; /* Ajustement de la taille de police pour tablette */
   }
 
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-base;
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
   }
-
 }
+
+/* Animation au survol du bouton favori */
 .icon-favorite .fa-empty:hover {
-  animation: heartBeat 0.3s ease-in-out 3;
-  color: $button--search-secondary-color;
+  animation: heartBeat 0.3s ease-in-out 3; /* Animation de battement de coeur */
+  color: $button--search-secondary-color; /* Changement de couleur au survol */
 }
 
-.icon-favorite:active{
-    .fa-full{
-    display: flex;
-    animation: likeFill 1s ease-in-out forwards  ;
-    color:$button--search-secondary-color;
-    }
-    .fa-empty {
-    display:none;
+/* Action lors du clic (actif) */
+.icon-favorite:active {
+  .fa-full {
+    display: flex; /* Affiche l'icône pleine */
+    animation: likeFill 1s ease-in-out forwards; /* Animation de remplissage */
+    color: $button--search-secondary-color; /* Changement de couleur */
+  }
+  .fa-empty {
+    display: none; /* Cache l'icône vide */
   }
 }
 
+/* Etat après le clic */
 .icon-favorite:after {
-    .fa-full {
-      color: $font-primary;
-      display: flex;
-    }
-    .fa-empty {
-      display: none;
-    }
+  .fa-full {
+    color: $font-primary; /* Change la couleur de l'icône pleine */
+    display: flex; /* Affiche l'icône pleine */
+  }
+  .fa-empty {
+    display: none; /* Cache l'icône vide */
+  }
 }
 
+/* Cache l'input */
 input {
-    display:none;
+  display: none; /* Input masqué */
 }
 
-
-  
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Flèche retour -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-  .button--back {
-    background-color: transparent;
-    color: black;
-    font-size: $font-size-vh-base;
-    padding: 0;
-    border: none;
+.button--back {
+  background-color: transparent; /* Fond transparent */
+  color: black; /* Couleur du texte en noir */
+  font-size: $font-size-vh-base; /* Taille de la police */
+  padding: 0; /* Pas de padding */
+  border: none; /* Pas de bordure */
 
-    /* Landscape */
-    @include mobile-landscape {
-      font-size: $font-size-vw-base;
-    }
-    /* Tablette */
-    @include tablette {
-      font-size: $font-size-vw-base;
-    }
-    /* Desktop */
-    @include desktop {
-      font-size: $font-size-vw-base;
-    }
+  /* Landscape */
+  @include mobile-landscape {
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile paysage */
+  }
 
+  /* Tablette */
+  @include tablette {
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour tablette */
+  }
+
+  /* Desktop */
+  @include desktop {
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
+  }
 }
+
 /*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------icône validation-----------------------------------------------------*/
+/*-------------------------------------icône validation -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 .validation-icon {
-
-  height:8vh;
-  
-  display: none;
-  align-items: center;
+  height: 8vh; /* Hauteur de l'icône */
+  display: none; /* Masqué par défaut */
+  align-items: center; /* Alignement vertical */
   position: relative;
   padding: 0; 
-  margin:0;
-  left: 5%;
-  justify-content: center;
-
+  margin: 0;
+  left: 5%; /* Décalage vers la gauche */
+  justify-content: center; /* Centrage horizontal */
 }
 
+/* Style de l'icône à l'intérieur */
 .validation-icon i {
-  color: white;
-  background-color: $button--new-primary-color;
-  padding: 2vh;
-  border-radius: 0 2vh  2vh 0;
-  justify-content: center;
-  font-size: 3vh;
-  
+  color: white; /* Couleur du texte en blanc */
+  background-color: $button--new-primary-color; /* Couleur de fond verte */
+  padding: 2vh; /* Padding de l'icône */
+  border-radius: 0 2vh 2vh 0; /* Bord arrondi */
+  justify-content: center; /* Centrage du contenu */
+  font-size: 3vh; /* Taille de l'icône */
 }
