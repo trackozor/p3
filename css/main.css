@@ -1888,6 +1888,9 @@ i {
 @media (min-width: 63.91rem) {
   .menu {
     width: 80%;
+    border-radius: 3vw 3vw 0 0;
+    padding-top: 4vw;
+    bottom: 2vw;
   }
 }
 
@@ -1896,6 +1899,23 @@ i {
   width: 100%;
   object-position: 50% 75%;
   object-fit: cover;
+  /* Landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu-image {
+    height: 30vh;
+    width: 100%;
+    object-position: 50% 75%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu-image {
+    height: 30vw;
+    width: 100%;
+    object-position: 50% 60%;
+  }
 }
 
 .menu .title {
@@ -1904,6 +1924,20 @@ i {
   font-size: 3vh;
   padding-left: 1vh;
   justify-content: space-between;
+  /* Landscape */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu .title {
+    font-size: 3vw;
+    padding-left: 1vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu .title {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .menu h3 {

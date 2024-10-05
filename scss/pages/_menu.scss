@@ -17,8 +17,11 @@
     }
     
     @include desktop {
-      
         width: 80% ;
+        border-radius: 3vw 3vw 0 0;
+        padding-top: 4vw;
+        bottom: 2vw;
+        
     }
 }
 
@@ -29,6 +32,21 @@
     object-position: 50% 75%;
     object-fit: cover;
     
+    /* Landscape */
+    @include mobile-landscape {
+        height: 30vh;
+        width: 100%;
+        object-position: 50% 75%;
+        object-fit: cover;
+    }
+    
+    /* Desktop */
+    @include desktop {
+        height: 30vw;
+        width: 100%;
+        object-position: 50% 60%;
+    }
+    
 
 }
 .menu .title {
@@ -38,6 +56,17 @@
     padding-left:1vh;
     justify-content: space-between;
     
+    /* Landscape */
+    @include mobile-landscape {
+        font-size: $font-size-vw-title;
+        padding-left: 1vw;
+    }
+    
+    /* Desktop */
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
     
 }
 
