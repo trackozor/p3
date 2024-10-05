@@ -443,6 +443,7 @@ body {
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    justify-content: center; /* aligne horizontalement depuis la xe centrale les éléments*/
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
@@ -1147,7 +1148,7 @@ input {
   .card-menu {
     height: 10vw; /* Hauteur pour mobile paysage */
     margin: 1vw; /* Marges pour mobile paysage */
-    width: 95%; /* Largeur pour mobile paysage */
+    width: 98%; /* Largeur pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
@@ -1866,129 +1867,201 @@ i {
   object-position: center 90%;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _menu.scss                                                                       */
+/* Auteur              : Trackozor                                                                        */
+/* Date de création    : 25/09/24                                                                         */
+/* Dernière modification: 27/09/24                                                                        */
+/* Description         : Style pour les menus avec des images et des ajustements spécifiques               */
+/*                                                                                                       */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Conteneur Principal du Menu -------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 .menu {
-  background-color: #f9f9f9;
-  border-radius: 3vh 3vh 0 0;
-  padding-top: 4vh;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  bottom: 2vh;
-  justify-content: space-between;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  background-color: #f9f9f9; /* Couleur de fond grise claire */
+  border-radius: 3vh 3vh 0 0; /* Bord arrondi en haut */
+  padding-top: 4vh; /* Padding en haut de la carte menu */
+  position: relative; /* Positionnement relatif pour gérer les éléments internes */
+  z-index: 1; /* Superposition des éléments */
+  width: 100%; /* Prend toute la largeur du conteneur parent */
+  height: auto; /* Hauteur automatique en fonction du contenu */
+  bottom: 2vh; /* Positionnement du bas du conteneur */
+  justify-content: space-between; /* Espace entre les éléments internes */
+  margin: 0 auto; /* Centrage horizontal */
+  display: flex; /* Utilisation de flexbox pour aligner les éléments */
+  flex-direction: column; /* Alignement vertical des éléments */
+  /* Landscape */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .menu {
-    margin: 0 auto;
+    margin: 0 auto; /* Centrage pour mobile en mode paysage */
+    padding-top: 6vw; /* Padding en haut de la carte menu */
   }
 }
 @media (min-width: 63.91rem) {
   .menu {
-    width: 80%;
-    border-radius: 3vw 3vw 0 0;
-    padding-top: 4vw;
-    bottom: 2vw;
+    width: 80%; /* Largeur à 80% pour desktop */
+    border-radius: 3vw 3vw 0 0; /* Bord arrondi adapté à la largeur de l'écran */
+    padding-top: 4vw; /* Padding en haut ajusté pour desktop */
+    bottom: 2vw; /* Positionnement du bas ajusté pour desktop */
   }
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Images Menu Palette --------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Image principale pour "Palette du goût et note enchantée" */
 .menu-image {
-  height: 35vh;
-  width: 100%;
-  object-position: 50% 75%;
-  object-fit: cover;
+  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
+  object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
   /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .menu-image {
-    height: 30vh;
-    width: 100%;
-    object-position: 50% 75%;
-    object-fit: cover;
+    height: 30vw; /* Hauteur pour mobile paysage */
+    width: 100%; /* Largeur à 100% */
+    object-position: 50% 75%; /* Positionnement de l'image pour mobile paysage */
+    object-fit: cover; /* Ajustement de l'image pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   .menu-image {
-    height: 30vw;
-    width: 100%;
-    object-position: 50% 60%;
+    height: 25vw; /* Hauteur de l'image ajustée pour desktop */
+    width: 100%; /* Largeur à 100% pour desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------- Images Menu Alt - Délice des Sens --------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Image pour le menu alternatif "Au délice des sens" */
 .menu-image-alt {
-  height: 25vh;
-  width: 100%;
-  object-position: 50% 95%;
-  object-fit: cover;
+  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  width: 100%; /* Largeur à 100% */
+  object-position: 50% 95%; /* Positionnement bas de l'image */
+  object-fit: cover; /* L'image couvre tout le conteneur */
   /* Landscape */
   /* Tablette */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .menu-image-alt {
-    height: 20vh;
-    width: 100%;
-    object-position: 50% 95%;
-    object-fit: cover;
+    height: 40vw; /* Hauteur réduite pour mobile paysage */
+    width: 100%; /* Largeur à 100% */
+    object-position: 50% 90%; /* Positionnement de l'image pour mobile paysage */
+    object-fit: cover; /* Ajustement de l'image pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .menu-image-alt {
-    height: 40vw;
-    width: 100%;
-    object-position: 50% 85%;
-    object-fit: cover;
+    height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    width: 100%; /* Largeur à 100% pour tablette */
+    object-position: 50% 85%; /* Positionnement de l'image pour tablette */
+    object-fit: cover; /* Ajustement de l'image pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .menu-image-alt {
-    height: 40vw;
-    width: 100%;
-    object-position: 50% 85%;
+    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+    width: 100%; /* Largeur à 100% pour desktop */
+    object-position: 50% 85%; /* Positionnement de l'image pour desktop */
   }
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------- Images Menu Alt 2 - À la française ------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Image pour le menu alternatif 2 "À la française" */
+.menu-image-alt2 {
+  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  width: 100%; /* Largeur à 100% */
+  object-position: 50% 85%; /* Positionnement bas de l'image */
+  object-fit: cover; /* L'image couvre tout le conteneur */
+  /* Landscape */
+  /* Tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu-image-alt2 {
+    height: 40vw; /* Hauteur ajustée pour mobile paysage */
+    width: 100%; /* Largeur à 100% */
+    object-position: 50% 95%; /* Positionnement bas de l'image pour mobile paysage */
+    object-fit: cover; /* Ajustement de l'image pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .menu-image-alt2 {
+    height: 40vw; /* Hauteur ajustée pour tablette */
+    width: 100%; /* Largeur à 100% pour tablette */
+    object-position: 50% 85%; /* Positionnement bas de l'image pour tablette */
+    object-fit: cover; /* Ajustement de l'image pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu-image-alt2 {
+    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+    width: 100%; /* Largeur à 100% pour desktop */
+    object-position: 50% 85%; /* Positionnement bas de l'image pour desktop */
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Titre Menu -----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Conteneur pour le titre du menu */
 .menu .title {
-  display: flex;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 3vh;
-  padding-left: 1vh;
-  justify-content: space-between;
+  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
+  font-size: 3vh; /* Taille de la police adaptée à la hauteur de l'écran */
+  padding-left: 1vh; /* Padding à gauche du titre */
+  justify-content: space-between; /* Espacement entre les éléments */
   /* Landscape */
   /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .menu .title {
-    font-size: 3vw;
-    padding-left: 1vw;
+    font-size: 3vw; /* Taille de la police adaptée à la largeur de l'écran pour mobile paysage */
+    padding-left: 1vw; /* Padding à gauche pour mobile paysage */
   }
 }
 @media (min-width: 63.91rem) {
   .menu .title {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Flexbox pour desktop également */
+    justify-content: center; /* Centrage du contenu pour desktop */
   }
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Sous-titres H3 dans le menu ------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Style des sous-titres h3 dans le menu */
 .menu h3 {
-  margin: 3vh 0vh 2vh 1vh;
-  border-bottom: #99E2D0 0.5vh solid;
-  width: 5vh;
-  padding-bottom: 1vh;
+  margin: 3vh 0vh 2vh 1vh; /* Marges autour du sous-titre */
+  border-bottom: #99E2D0 0.5vh solid; /* Bordure en bas du sous-titre */
+  width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
+  padding-bottom: 1vh; /* Padding en bas du sous-titre */
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------- Boutons Primaires dans le Menu ----------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Style du conteneur pour les boutons principaux */
 .menu .button--primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Utilise flexbox pour aligner les boutons */
+  align-items: center; /* Centre verticalement les boutons */
+  justify-content: center; /* Centre horizontalement les boutons */
 }
 
+/* Style des boutons principaux */
 .menu .button--primary {
-  width: 20vh;
-  margin: 2vh auto;
+  width: 20vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
+  margin: 2vh auto; /* Marge automatique pour centrer horizontalement et 2vh en haut/bas */
 }
 
 /* Style spécifique footer*/

@@ -1,12 +1,13 @@
+/*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _section-bandeau.scss                                                              */
 /* Auteur              : Trackozor                                                                          */
 /* Date de création    : 25/09/24                                                                           */
 /* Dernière modification: 27/09/24                                                                          */
-/* Description         :  _section-                                                                         */
-/*    Styles pour la section bandeau et la liste de fonctionnement                                          */
-/*     comprenant les ajustements pour les différents breakpoints (mobile landscape, desktop)               */
-/*     et la gestion de l'affichage flex pour les étapes avec icônes.                                       */
+/* Description         : Styles pour la section bandeau et la liste de fonctionnement,                      */
+/*                       avec ajustements pour les différents breakpoints (mobile landscape, desktop)       */
+/*                       et gestion de l'affichage flex pour les étapes avec icônes.                        */
 /*--------------------------------------------------------------------------------------------------------  */
+
 /*--------------------------------------------------------------------------------------------------------  */
 /*  Version             : 1.0                                                                               */
 /*  Framework utilisé   : SCSS                                                                              */
@@ -15,257 +16,259 @@
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------- Conteneur parent bandeau -------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 
-/*---- Conteneur parent  bandeau-----------*/
 .bandeau  {
-    display: flex;/* Utilise flexbox pour aligner les éléments*/
-    flex-direction: column; /* alignement en colonne*/
-    text-align: center; /* Aligne le texte dans l'axe horizontal*/
-    justify-content: center; /*centre dans l'axe horizontale aà partir du centre*/
-    margin: $margin-vh-base auto; /* Marge verticale et horizontale respectivement égale à 2% et 1% de la hauteur de l'écran*/
-    align-items: center; /* Aligne les éléments dans la hauteur*/
-    width: 90%;
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    flex-direction: column; /* Alignement des éléments en colonne */
+    text-align: center; /* Aligne le texte au centre horizontalement */
+    justify-content: center; /* Centre le contenu sur l'axe horizontal */
+    margin: $margin-vh-base auto; /* Marge verticale et horizontale égale à 2% et 1% de la hauteur de l'écran */
+    align-items: center; /* Centre les éléments sur l'axe vertical */
+    width: 90%; /* Le conteneur prend 90% de la largeur disponible */
 
     /*  Landscape  */
     @include mobile-landscape {
-        margin: $margin-vw-base $margin-vw-x2;
+        margin: $margin-vw-base $margin-vw-x2; /* Ajustement des marges pour mobile en mode paysage */
     }
 
-    /*Tablette*/
+    /* Tablette */
     @include tablette {
-        gap: $gap-vw-d4;
+        gap: $gap-vw-d4; /* Ajoute un espace entre les éléments pour tablette */
     }
 
     /* Desktop */
     @include desktop {
-        margin: $margin-vh-base 5vw;
-        width: 90%;
+        margin: $margin-vh-base 5vw; /* Ajustement des marges pour desktop */
+        width: 90%; /* Largeur du conteneur sur desktop */
     }
 }
 
-
-/* Titre */
-.bandeau h2{
-    padding:$padding-vh-d4 0; /*Espace intérieur haut et bas et gauche et droit correspondant respectivement à 0.5 % et 1% de la hauteur de l'écran */
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Titre ---------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+.bandeau h2 {
+    padding: $padding-vh-d4 0; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
 
     /*  Landscape  */
     @include mobile-landscape {
-        padding: $padding-vw-d4 0;
+        padding: $padding-vw-d4 0; /* Ajustement du padding pour mobile en mode paysage */
     }
 
-    /*-- tablette --*/
+    /* Tablette */
     @include tablette {
-        padding: $padding-vh-d4 0;
+        padding: $padding-vh-d4 0; /* Padding ajusté pour tablette */
     }
 
     /* Desktop */
     @include desktop {
-        padding: $padding-vh-d4 $padding-vw-base;
-        margin-bottom: $margin-vh-base;
-        font-weight: $font-weight-l-bold;
+        padding: $padding-vh-d4 $padding-vw-base; /* Ajustement du padding pour desktop */
+        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop */
+        font-weight: $font-weight-l-bold; /* Gras du texte pour desktop */
     }
-
 }
 
-/* Texte */
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------- Texte ----------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
-    padding: $padding-vh-d2 $padding-vw-base; /**/
-    margin-bottom: $margin-vh-base; /**/
-    font-weight: $font-weight-l-bold; /**/
+    padding: $padding-vh-d2 $padding-vw-base; /* Padding haut/bas et gauche/droite */
+    margin-bottom: $margin-vh-base; /* Marge en bas du paragraphe */
+    font-weight: $font-weight-l-bold; /* Gras du texte */
 
     /*  Landscape  */
     @include mobile-landscape {
-        padding: $padding-vw-d2 $padding-vw-base;
-        margin-bottom: $margin-vw-base;
+        padding: $padding-vw-d2 $padding-vw-base; /* Ajustement du padding pour mobile paysage */
+        margin-bottom: $margin-vw-base; /* Ajustement de la marge pour mobile paysage */
     }
 
-    /*-- tablette --*/
+    /* Tablette */
     @include tablette {
-        padding: $padding-vh-d2 $padding-vw-base;
-        margin-bottom: $margin-vw-base;
+        padding: $padding-vh-d2 $padding-vw-base; /* Ajustement du padding pour tablette */
+        margin-bottom: $margin-vw-base; /* Ajustement de la marge pour tablette */
     }
 
     /* Desktop */
     @include desktop {
-        padding: $padding-vh-d2 $padding-vw-base;
-        margin-bottom: $margin-vh-base;
-        
+        padding: $padding-vh-d2 $padding-vw-base; /* Ajustement du padding pour desktop */
+        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop */
     }
-
 }
 
-/*-------- Conteneur parent liste ----------------- */
-.fonctionnement { 
-    display: flex;
-    flex-direction: column;
-    position:relative;
-    justify-content: center;
-    gap:3vh;
-    margin: 10vh auto;
-    width: 90%;
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------ Conteneur parent liste --------------------------------------------------- */
+/*----------------------------------------------------------------------------------------------------------*/
 
-    /*--  Landscape --*/
+.fonctionnement {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    flex-direction: column; /* Alignement en colonne */
+    position: relative; /* Position relative pour gérer les éléments internes */
+    justify-content: center; /* Centre les éléments sur l'axe horizontal */
+    gap: 3vh; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
+    margin: 10vh auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+    width: 90%; /* Largeur de 90% du conteneur */
+
+    /* Landscape */
     @include mobile-landscape {
-        margin: 10vw 3vw;
-        gap: 3vw;
+        margin: 10vw 3vw; /* Marge ajustée pour mobile paysage */
+        gap: 3vw; /* Espacement ajusté pour mobile paysage */
     }
-    
-    /*-- Tablette --*/
-    @include tablette {
-        gap: 1vw;
-        justify-content: space-around;
-    }
-    
 
-    /*-- Desktop  --*/
+    /* Tablette */
+    @include tablette {
+        gap: 1vw; /* Espacement réduit pour tablette */
+        justify-content: space-around; /* Espace autour des éléments pour tablette */
+    }
+
+    /* Desktop */
     @include desktop {
-        
-        gap: 2vw;
-        justify-content: space-around;
+        gap: 2vw; /* Espacement ajusté pour desktop */
+        justify-content: space-around; /* Espace autour des éléments pour desktop */
     }
 }
 
-/*-------------- Liste --------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*-------------------------------- Liste -------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
 ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    justify-content: center;
+    display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
+    flex-direction: column; /* Alignement en colonne */
+    align-items: center; /* Centre les éléments sur l'axe vertical */
+    width: 95%; /* Largeur de 95% pour le conteneur */
+    justify-content: center; /* Centre les éléments horizontalement */
 
-    /*--  Landscape  --*/
+    /* Landscape */
     @include mobile-landscape {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
-        justify-content: center;
+        flex-direction: column; /* Colonne pour mobile paysage */
+        width: 95%; /* Largeur ajustée */
+        justify-content: center; /* Centre les éléments pour mobile paysage */
     }
-    
 
-    /*-- Desktop  --*/
+    /* Desktop */
     @include desktop {
-        flex-direction: row;
-        align-items: center;
-        gap: 5vw;
-        justify-content: space-around;
+        flex-direction: row; /* Alignement en ligne pour desktop */
+        gap: 5vw; /* Espace entre les éléments de la liste pour desktop */
+        justify-content: space-around; /* Espace autour des éléments pour desktop */
     }
 }
 
-/*--------------- Liste : Lignes -------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Liste : Lignes ------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
 ol li {
-    display: flex;
-    margin:$margin-vh-base $margin-vh-d2;
-    align-items: center;
-    font-weight: $font-weight-bold;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    justify-content: space-around;
+    display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
+    margin: $margin-vh-base $margin-vh-d2; /* Marge autour des éléments */
+    align-items: center; /* Centre les éléments sur l'axe vertical */
+    font-weight: $font-weight-bold; /* Gras du texte */
+    position: relative; /* Position relative pour gérer des éléments internes */
+    z-index: 1; /* Superposition sur l'axe Z */
+    width: 100%; /* Prend toute la largeur du conteneur */
+    justify-content: space-around; /* Espace autour des éléments de la liste */
 
-    /*--  Landscape  --*/
+    /* Landscape */
     @include mobile-landscape {
-        margin:$margin-vw-base $margin-vw-d2;
-    }
-    
-    /*-- Desktop  --*/
-    @include desktop {
-        margin:$margin-vw-base $margin-vw-d2;
-
-    }
-}
-
-/*---------------- Liste Texte ---------------*/
-.li-txt{
-    display: flex;
-    position: relative;  
-    z-index: 1;
-    left:2vh;
-    border-radius:$border-radius-vh-base;
-    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-    width:100%;
-    height:5vh;
-    align-items: center;
-    margin-right: $margin-vh-d2;
-    font-size: 2vh;
-
-    /*  Landscape  */
-    @include mobile-landscape {
-    left:1vw;
-    border-radius:$border-radius-vw-base;
-    box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2);
-    width:100%;
-    height:5vw;
-    align-items: center;
+        margin: $margin-vw-base $margin-vw-d2; /* Ajustement des marges pour mobile paysage */
     }
 
     /* Desktop */
     @include desktop {
-    left:1vw;
-    border-radius:$border-radius-vh-base;
-    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2);
-    width:100%;
-    height:4vw;
-    align-items: center;
-    font-size: 1.2vw;
+        margin: $margin-vw-base $margin-vw-d2; /* Ajustement des marges pour desktop */
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*---------------------------------- Liste Texte -----------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
+.li-txt {
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    position: relative; /* Position relative pour gérer des éléments internes */
+    z-index: 1; /* Superposition sur l'axe Z */
+    left: 2vh; /* Décalage du texte vers la droite */
+    border-radius: $border-radius-vh-base; /* Bord arrondi pour le conteneur du texte */
+    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
+    width: 100%; /* Largeur du texte à 100% du conteneur */
+    height: 5vh; /* Hauteur du conteneur du texte */
+    align-items: center; /* Centre le texte sur l'axe vertical */
+    margin-right: $margin-vh-d2; /* Marge à droite du texte */
+    font-size: 2vh; /* Taille de la police */
+
+    /* Landscape */
+    @include mobile-landscape {
+        left: 1vw; /* Décalage du texte pour mobile paysage */
+        border-radius: $border-radius-vw-base; /* Bord arrondi pour mobile paysage */
+        box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile paysage */
+        height: 5vw; /* Hauteur du conteneur ajustée pour mobile paysage */
     }
 
+    /* Desktop */
+    @include desktop {
+        left: 1vw; /* Décalage du texte pour desktop */
+        border-radius: $border-radius-vh-base; /* Bord arrondi pour desktop */
+        box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
+        height: 4vw; /* Hauteur du conteneur ajustée pour desktop */
+        font-size: 1.2vw; /* Taille de la police pour desktop */
+    }
 }
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------- Icône numérotée pour la liste ----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
 ol li .puce_num {
-    background-color: $button--search-primary-color;
-    border-radius:50%;
-    height: 3vh;
-    width:3vh;
-    display: flex;
-    position: absolute;
-    left: 0;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-size:1.4vh;
-    animation: pulse 1.5s ease-in-out 2; /* L'animation dure 1.5s et se répète */
+    background-color: $button--search-primary-color; /* Couleur de fond de l'icône numérotée */
+    border-radius: 50%; /* Forme arrondie */
+    height: 3vh; /* Hauteur de l'icône numérotée */
+    width: 3vh; /* Largeur de l'icône numérotée */
+    display: flex; /* Utilise flexbox pour centrer le numéro */
+    position: absolute; /* Positionnement absolu à l'intérieur de la liste */
+    left: 0; /* Place l'icône sur le bord gauche */
+    z-index: 2; /* Superposition de l'icône au-dessus du texte */
+    justify-content: center; /* Centre le contenu de l'icône */
+    align-items: center; /* Centre verticalement le contenu de l'icône */
+    color: white; /* Couleur blanche pour le numéro */
+    font-size: 1.4vh; /* Taille de la police du numéro */
+    animation: pulse 1.5s ease-in-out 2; /* Animation de pulsation pour l'icône numérotée */
 
-    /*  Landscape  */
+    /* Landscape */
     @include mobile-landscape {
-    border-radius:50%;
-    height: 3vw;
-    width:3vw;
-    font-size:1.4vw;
+        height: 3vw; /* Hauteur ajustée pour mobile paysage */
+        width: 3vw; /* Largeur ajustée pour mobile paysage */
+        font-size: 1.4vw; /* Taille de la police ajustée pour mobile paysage */
     }
-    
+
     /* Desktop */
     @include desktop {
-    border-radius:50%;
-    height: 1.5vw;
-    width:1.5vw;
-    font-size:1vw;
+        height: 1.5vw; /* Hauteur ajustée pour desktop */
+        width: 1.5vw; /* Largeur ajustée pour desktop */
+        font-size: 1vw; /* Taille de la police ajustée pour desktop */
     }
-
 }
-/*--------------- Liste : Icône -------------------------*/
+
+/* Icône pour les éléments */
 i {
-    color:grey;
-    font-size: $font-size-vh-base;
-    margin: 0  $margin-vh-base 0  $margin-vh-x2; 
-    
-    /*  Landscape  */
+    color: grey; /* Couleur grise pour les icônes */
+    font-size: $font-size-vh-base; /* Taille de la police pour les icônes */
+    margin: 0 $margin-vh-base 0 $margin-vh-x2; /* Marges autour de l'icône */
+
+    /* Landscape */
     @include mobile-landscape {
-    font-size: $font-size-vw-base;
-    margin: 0  $margin-vw-base 0  $margin-vw-x2;
+        font-size: $font-size-vw-base; /* Taille de la police ajustée pour mobile paysage */
+        margin: 0 $margin-vw-base 0 $margin-vw-x2; /* Marges ajustées pour mobile paysage */
     }
-    
+
     /* Desktop */
     @include desktop {
-    font-size: $font-size-vh-base;
-    margin: 0  $margin-vw-base 0  $margin-vw-base;
+        font-size: $font-size-vh-base; /* Taille de la police ajustée pour desktop */
+        margin: 0 $margin-vw-base 0 $margin-vw-base; /* Marges ajustées pour desktop */
     }
 }
 
 /*------------------ Icône Store -----------------------*/
 .fa-store {
-    color:$button--search-primary-color;
+    color: $button--search-primary-color; /* Couleur de l'icône store */
 }
-
-
-

@@ -13,29 +13,32 @@
 /*                                                                                                         */
 /*-------------------------------------------------------------------------------------------------------- */
 
-footer {
-    display: flex;/* Utilse flexbox pour aligner les éléments */
-    align-items:center;/* Alignement horizontale a partir de l'axe centrale */
-    background-color: black; /* Couleur de fond*/
-    color:white; /* Couleur du texte et des icônes*/
-    padding: 0 $padding-vh-d2;/* Espace intérieur gauche/droite correspondant à 1% de la hauteur de l 'écran */
-    width: 100%; /* Prend toute la largeur disponible */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Footer Principal ------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
+footer {
+    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Aligne verticalement les éléments au centre du footer */
+    background-color: black; /* Définit la couleur de fond du footer */
+    color: white; /* Définit la couleur du texte et des icônes à blanc */
+    padding: 0 $padding-vh-d2; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
+    width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
 
     /* Landscape */
     @include mobile-landscape {
-        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour mobile en mode paysage, équivalent à 1% de la largeur de l'écran */
     }
 
     /* Tablettes */
     @include tablette {
-        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
+        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour les tablettes, équivalent à 1% de la largeur de l'écran */
     }
 
     /* Desktop */
     @include desktop {
-        padding: 0 $padding-vw-d2; /* Espace intérieur gauche/droite correspondant à 1% de la largeur de l'écran */
-        justify-content: center;
-        margin-right: 20%;
+        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour desktop, équivalent à 1% de la largeur de l'écran */
+        justify-content: center; /* Centre les éléments à l'intérieur du footer sur les écrans desktop */
+        margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
     }
 }
