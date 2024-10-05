@@ -99,6 +99,21 @@
 .fa-full, .fa-empty {
   font-size: $font-size-vh-title;
 
+  /* Landscape */
+  @include mobile-landscape {
+    font-size: $font-size-vw-title;
+  }
+
+  /* Tablette */
+  @include tablette {
+    font-size: $font-size-vw-title;
+  }
+
+  /* Desktop */
+  @include desktop {
+    font-size: $font-size-vw-base;
+  }
+
 }
 .icon-favorite .fa-empty:hover {
   animation: heartBeat 0.3s ease-in-out 3;
@@ -145,6 +160,14 @@ input {
 
     /* Landscape */
     @include mobile-landscape {
+      font-size: $font-size-vw-base;
+    }
+    /* Tablette */
+    @include tablette {
+      font-size: $font-size-vw-base;
+    }
+    /* Desktop */
+    @include desktop {
       font-size: $font-size-vw-base;
     }
 

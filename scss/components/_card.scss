@@ -169,7 +169,7 @@
         height: $object-size-vw-x20; /* Hauteur de la carte pour mobile paysage */
         box-shadow: $border-shadow-vw; /* Ombre pour mobile paysage */
         margin: $margin-vw-d4 auto; /* Marges pour mobile paysage */
-        height: $object-size-vh-x25; /* hauteur correspondant à 50 % de la hauteur de l'écran  */
+        height: auto; /* Ajustement de la hauteur automatique  */
     }
 
     /* Tablette */
@@ -288,19 +288,19 @@
     /* landscape */
     @include mobile-landscape {
         left: 85%; /* Ajuste la position gauche pour mobile paysage */
-        bottom: 10%; /* Ajuste la position verticale pour mobile paysage */
+        bottom: 8%; /* Ajuste la position verticale pour mobile paysage */
     }
 
     /* tablette */
     @include tablette {
         left: 85%; /* Ajuste la position gauche pour tablette */
-        bottom:15%; /* Ajuste la position verticale pour tablette */
+        bottom:7%; /* Ajuste la position verticale pour tablette */
     }
 
     /* Desktop */
     @include desktop {
         left: 85%; /* Ajuste la position gauche pour desktop */
-        bottom: 10%; /* Ajuste la position verticale pour desktop */
+        bottom: 9%; /* Ajuste la position verticale pour desktop */
     }
 }
 
@@ -367,33 +367,107 @@
 .card-menu {
     background-color: white; /* Couleur de fond de la carte menu */
     border-radius: 2vh; /* Bord arrondis */
-    height: 9vh; /* Hauteur de la carte menu */
+    height: $object-size-vh-x5; /* Hauteur correspondant à 10 % de la hauteur de l'écran */
     display: flex; /* Utilise flexbox pour aligner les éléments */
     box-shadow: $border-shadow-vh; /* Ombre portée */
-    margin: 1vh; /* Marges autour de la carte */
+    margin: $margin-vh-d2; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
     align-items: center; /* Centre verticalement les éléments */
     cursor: url('/images/logo/valid.png'), auto; /* Changement du curseur pour valider */
     justify-content: space-between; /* Espace entre les éléments */
     width: 95%; /* Largeur de la carte menu */
+
+    /* landscape */
+    @include mobile-landscape {
+        height: $object-size-vw-x5; /* Hauteur pour mobile paysage */
+        margin: $margin-vw-d2; /* Marges pour mobile paysage */
+        width: 95%; /* Largeur pour mobile paysage */
+    }
+
+    /* tablette */
+    @include tablette {
+        height: $object-size-vw-x5; /* Hauteur pour tablette */
+        margin: $margin-vw-d2; /* Marges pour tablette */
+        width: 95%; /* Largeur pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        height: $object-size-vw-x5; /* Hauteur pour desktop */
+        margin: $margin-vw-d2; /* Marges pour desktop */
+        width: 95%; /* Largeur pour desktop */
+    }
 }
 
 /*-- Item du menu --*/
 .menu-item {
     width: 100%; /* L'élément du menu prend toute la largeur disponible */
+
+    /* landscape */
+    @include mobile-landscape {
+        width: 100%; /* Largeur de l'élément du menu pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        width: 100%; /* Largeur de l'élément du menu pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        width: 100%; /* Largeur de l'élément du menu pour desktop */
+    }
 }
+
+
 
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     font-size: $font-size-vh-base; /* Taille du texte pour le nom du plat */
     font-weight: $font-weight-h-bold; /* Style gras pour le nom du plat */
-    padding-left: 1vh; /* Espace à gauche du texte */
+    padding: $padding-vh-d2; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+
+    /* landscape */
+    @include mobile-landscape {
+        font-size: $font-size-vw-base; /* Taille du texte pour le nom du plat pour mobile paysage */
+        padding: $padding-vw-d2; /* Padding horizontal pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        font-size: $font-size-vw-base; /* Taille du texte pour le nom du plat pour tablette */
+        padding: $padding-vw-d2; /* Padding horizontal pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        font-size: $font-size-vw-base; /* Taille du texte pour le nom du plat pour desktop */
+        padding: $padding-vw-d2; /* Padding horizontal pour desktop */
+    }
 }
 
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
     font-size: $font-size-vh-base; /* Taille du texte pour la description du plat */
     word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
-    padding: 0 1vh; /* Padding horizontal */
+    padding: 0 $padding-vh-d2; /* Espace intérieur correspondant à 1% de la hauteur de l'écran */
+
+    /* landscape */
+    @include mobile-landscape {
+        font-size: $font-size-vw-base; /* Taille du texte pour la description du plat pour mobile paysage */
+        padding: 0 $padding-vw-d2; /* Padding horizontal pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        font-size: $font-size-vw-base; /* Taille du texte pour la description du plat pour tablette */
+        padding: 0 $padding-vw-d2; /* Padding horizontal pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        font-size: $font-size-vw-base; /* Taille du texte pour la description du plat pour desktop */
+        padding: 0 $padding-vw-d2; /* Padding horizontal pour desktop */
+    }
 }
 
 /*-- Contenu du plat (nom et prix) --*/
@@ -407,7 +481,25 @@
 .dish-content .price {
     font-size: $font-size-vh-base; /* Taille du texte pour le prix */
     font-weight: $font-weight-h-bold; /* Style gras pour le prix */
-    padding-right: 1vh; /* Espace à droite du texte */
+    padding-right: $padding-vh-d2; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+
+    /* landscape */
+    @include mobile-landscape {
+        font-size: $font-size-vw-base; /* Taille du texte pour le prix pour mobile paysage */
+        padding-right: $padding-vw-d2; /* Padding horizontal pour mobile paysage */
+    }
+    
+    /* tablette */
+    @include tablette {
+        font-size: $font-size-vw-base; /* Taille du texte pour le prix pour tablette */
+        padding-right: $padding-vw-d2; /* Padding horizontal pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        font-size: $font-size-vw-base; /* Taille du texte pour le prix pour desktop */
+        padding-right: $padding-vw-d2; /* Padding horizontal pour desktop */
+    }
 }
 
 /* ---------------------------------------------------------------------------------------------------*/

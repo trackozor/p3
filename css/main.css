@@ -597,6 +597,24 @@ img {
 
 .fa-full, .fa-empty {
   font-size: 3vh;
+  /* Landscape */
+  /* Tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .fa-full, .fa-empty {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .fa-full, .fa-empty {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 63.91rem) {
+  .fa-full, .fa-empty {
+    font-size: 2vw;
+  }
 }
 
 .icon-favorite .fa-empty:hover {
@@ -635,8 +653,20 @@ input {
   padding: 0;
   border: none;
   /* Landscape */
+  /* Tablette */
+  /* Desktop */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .button--back {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .button--back {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 63.91rem) {
   .button--back {
     font-size: 2vw;
   }
@@ -839,7 +869,7 @@ input {
     height: 40vw; /* Hauteur de la carte pour mobile paysage */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile paysage */
     margin: 0.5vw auto; /* Marges pour mobile paysage */
-    height: 50vh; /* hauteur correspondant à 50 % de la hauteur de l'écran  */
+    height: auto; /* Ajustement de la hauteur automatique  */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
@@ -970,19 +1000,19 @@ input {
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card .icon-favorite {
     left: 85%; /* Ajuste la position gauche pour mobile paysage */
-    bottom: 10%; /* Ajuste la position verticale pour mobile paysage */
+    bottom: 8%; /* Ajuste la position verticale pour mobile paysage */
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9rem) {
   .card .icon-favorite {
     left: 85%; /* Ajuste la position gauche pour tablette */
-    bottom: 15%; /* Ajuste la position verticale pour tablette */
+    bottom: 7%; /* Ajuste la position verticale pour tablette */
   }
 }
 @media (min-width: 63.91rem) {
   .card .icon-favorite {
     left: 85%; /* Ajuste la position gauche pour desktop */
-    bottom: 10%; /* Ajuste la position verticale pour desktop */
+    bottom: 9%; /* Ajuste la position verticale pour desktop */
   }
 }
 
@@ -1049,33 +1079,117 @@ input {
 .card-menu {
   background-color: white; /* Couleur de fond de la carte menu */
   border-radius: 2vh; /* Bord arrondis */
-  height: 9vh; /* Hauteur de la carte menu */
+  height: 10vh; /* Hauteur correspondant à 10 % de la hauteur de l'écran */
   display: flex; /* Utilise flexbox pour aligner les éléments */
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre portée */
-  margin: 1vh; /* Marges autour de la carte */
+  margin: 1vh; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
   align-items: center; /* Centre verticalement les éléments */
   cursor: url("/images/logo/valid.png"), auto; /* Changement du curseur pour valider */
   justify-content: space-between; /* Espace entre les éléments */
   width: 95%; /* Largeur de la carte menu */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .card-menu {
+    height: 10vw; /* Hauteur pour mobile paysage */
+    margin: 1vw; /* Marges pour mobile paysage */
+    width: 95%; /* Largeur pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .card-menu {
+    height: 10vw; /* Hauteur pour tablette */
+    margin: 1vw; /* Marges pour tablette */
+    width: 95%; /* Largeur pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .card-menu {
+    height: 10vw; /* Hauteur pour desktop */
+    margin: 1vw; /* Marges pour desktop */
+    width: 95%; /* Largeur pour desktop */
+  }
 }
 
 /*-- Item du menu --*/
 .menu-item {
   width: 100%; /* L'élément du menu prend toute la largeur disponible */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu-item {
+    width: 100%; /* Largeur de l'élément du menu pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .menu-item {
+    width: 100%; /* Largeur de l'élément du menu pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu-item {
+    width: 100%; /* Largeur de l'élément du menu pour desktop */
+  }
 }
 
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
   font-size: 2vh; /* Taille du texte pour le nom du plat */
   font-weight: 900; /* Style gras pour le nom du plat */
-  padding-left: 1vh; /* Espace à gauche du texte */
+  padding: 1vh; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .dish-name {
+    font-size: 2vw; /* Taille du texte pour le nom du plat pour mobile paysage */
+    padding: 1vw; /* Padding horizontal pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .dish-name {
+    font-size: 2vw; /* Taille du texte pour le nom du plat pour tablette */
+    padding: 1vw; /* Padding horizontal pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .dish-name {
+    font-size: 2vw; /* Taille du texte pour le nom du plat pour desktop */
+    padding: 1vw; /* Padding horizontal pour desktop */
+  }
 }
 
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
   font-size: 2vh; /* Taille du texte pour la description du plat */
   word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
-  padding: 0 1vh; /* Padding horizontal */
+  padding: 0 1vh; /* Espace intérieur correspondant à 1% de la hauteur de l'écran */
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .dish-description {
+    font-size: 2vw; /* Taille du texte pour la description du plat pour mobile paysage */
+    padding: 0 1vw; /* Padding horizontal pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .dish-description {
+    font-size: 2vw; /* Taille du texte pour la description du plat pour tablette */
+    padding: 0 1vw; /* Padding horizontal pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .dish-description {
+    font-size: 2vw; /* Taille du texte pour la description du plat pour desktop */
+    padding: 0 1vw; /* Padding horizontal pour desktop */
+  }
 }
 
 /*-- Contenu du plat (nom et prix) --*/
@@ -1089,7 +1203,28 @@ input {
 .dish-content .price {
   font-size: 2vh; /* Taille du texte pour le prix */
   font-weight: 900; /* Style gras pour le prix */
-  padding-right: 1vh; /* Espace à droite du texte */
+  padding-right: 1vh; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+  /* landscape */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .dish-content .price {
+    font-size: 2vw; /* Taille du texte pour le prix pour mobile paysage */
+    padding-right: 1vw; /* Padding horizontal pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .dish-content .price {
+    font-size: 2vw; /* Taille du texte pour le prix pour tablette */
+    padding-right: 1vw; /* Padding horizontal pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .dish-content .price {
+    font-size: 2vw; /* Taille du texte pour le prix pour desktop */
+    padding-right: 1vw; /* Padding horizontal pour desktop */
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
