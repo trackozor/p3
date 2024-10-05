@@ -1918,6 +1918,39 @@ i {
   }
 }
 
+.menu-image-alt {
+  height: 25vh;
+  width: 100%;
+  object-position: 50% 95%;
+  object-fit: cover;
+  /* Landscape */
+  /* Tablette */
+  /* Desktop */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .menu-image-alt {
+    height: 20vh;
+    width: 100%;
+    object-position: 50% 95%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .menu-image-alt {
+    height: 40vw;
+    width: 100%;
+    object-position: 50% 85%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 63.91rem) {
+  .menu-image-alt {
+    height: 40vw;
+    width: 100%;
+    object-position: 50% 85%;
+  }
+}
+
 .menu .title {
   display: flex;
   font-family: "Shrikhand", sans-serif;

@@ -46,8 +46,36 @@
         width: 100%;
         object-position: 50% 60%;
     }
-    
+}
 
+
+.menu-image-alt {
+    height: 25vh;
+    width: 100%;
+    object-position: 50% 95%;
+    object-fit: cover;
+
+    /* Landscape */
+    @include mobile-landscape {
+        height: 20vh;
+        width: 100%;
+        object-position: 50% 95%;
+        object-fit: cover;
+    }
+    
+    /* Tablette */
+    @include tablette {
+        height: 40vw;
+        width: 100%;
+        object-position: 50% 85%;
+        object-fit: cover;
+    }
+    /* Desktop */
+    @include desktop {
+        height: 40vw;
+        width: 100%;
+        object-position: 50% 85%;
+    }
 }
 .menu .title {
     display: flex;
