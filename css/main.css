@@ -2168,10 +2168,8 @@ footer {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Loader couvrant toute la page */
 /* Loader principal, centré */
-#loader {
+.loader-active {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: black;
@@ -2179,35 +2177,9 @@ footer {
   flex-direction: column;
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
+  align-content: center;
   z-index: 5;
   animation: fadeOutLoader 5s ease-in-out forwards;
-}
-
-/* Horloge positionnée à gauche du loader-card */
-.loader-clock {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  width: 100px; /* Ajuste la taille de l'horloge */
-}
-
-/* Aiguille des heures */
-.hour-hand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: 50% 100%; /* Point d'origine pour la rotation */
-  animation: rotateHour 3600s linear infinite; /* Rotation lente des heures */
-}
-
-/* Aiguille des minutes */
-.minute-hand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: 50% 100%; /* Point d'origine pour la rotation */
-  animation: rotateMinute 60s linear infinite; /* Rotation plus rapide des minutes */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -2222,11 +2194,14 @@ footer {
   animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
   flex-direction: column;
   display: flex;
-  width: 55vh;
+  width: 50%;
+  height: 60vh;
+  align-items: center;
+  z-index: 7;
   position: absolute;
   left: 1%;
-  top: 15%;
-  height: 60vh;
+  top: 10%;
+  padding: 2vh;
   /*--- Landscape ---*/
   /*--- Tablette ---*/
   /*--- Desktop ---*/
@@ -2293,23 +2268,25 @@ footer {
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------- Horloge Animée -------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/* Horloge positionnée à gauche du loader-card */
-.loader-clock {
+.loader1 {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  width: 100px; /* Ajuste la taille de l'horloge */
+  z-index: 6;
+  height: 40%;
+  width: 60%;
+  padding: 0;
+  bottom: 75%;
+  align-items: center;
+  right: 40%;
 }
 
-.loader1 {
+.loader2 {
   position: absolute;
   z-index: 6;
   height: 60%;
   width: 80%;
   padding: 0;
-  top: 7%;
-  left: 30%;
+  bottom: 7%;
+  left: 0;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
