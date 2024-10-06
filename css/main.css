@@ -2168,13 +2168,12 @@ footer {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Loader couvrant toute la page */
 #loader {
-  position: fixed; /* Position fixe pour couvrir toute la page */
-  width: 100%; /* Largeur à 100% de la page */
-  height: 100%; /* Hauteur à 100% de la page */
+  position: fixed;
   background: linear-gradient(180deg, rgb(255, 172, 232.0820895522), rgb(174, 128.25, 228.75)); /* Dégradé de fond */
   display: flex; /* Active le flexbox pour centrer les éléments */
-  align-items: center; /* Centre les éléments verticalement */
-  justify-content: center; /* Centre les éléments horizontalement */
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   z-index: 5; /* Priorité d'affichage élevée */
   opacity: 1; /* Complètement visible au départ */
   animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader après 5s */
@@ -2214,11 +2213,15 @@ footer {
 /* Carte contenant le logo, horloge, sablier et barre de progression */
 .loader-card {
   background-color: white; /* Couleur de fond personnalisée */
-  padding: 4vh; /* Padding interne adapté à l'écran */
+  padding: 4vh 0; /* Padding interne adapté à l'écran */
   border-radius: 2vh; /* Bords arrondis */
   box-shadow: 0 4vh 6vw rgba(0, 0, 0, 0.2); /* Ombre légère */
   text-align: center; /* Centre le texte */
   animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
+  flex-direction: column;
+  display: flex;
+  width: 56%;
+  align-items: center;
   /*--- Landscape ---*/
   /*--- Tablette ---*/
   /*--- Desktop ---*/
@@ -2246,7 +2249,7 @@ footer {
     height: 30vw; /* Hauteur pour desktop */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
     margin: 2vw auto; /* Marges pour*/
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2288,8 +2291,8 @@ footer {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Horloge animée */
 .loader-clock {
-  width: 50px; /* Largeur de l'horloge */
-  margin-bottom: 20px; /* Marge inférieure */
+  width: 10%; /* Largeur de l'horloge */
+  margin: 1vh 0; /* Marge inférieure */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -2301,6 +2304,27 @@ footer {
   margin-bottom: 10px; /* Marge inférieure */
   animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards; /* Combine rotation et rétrécissement */
   animation-delay: 0s, 1s; /* Le rétrécissement démarre après 2 secondes */
+  /*--- Landscape ---*/
+  /*--- Tablette ---*/
+  /*--- Desktop ---*/
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .loader-sablier {
+    width: 20%; /* Largeur du sablier pour mobile paysage */
+    margin-bottom: 10px; /* Marge inférieure pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.9rem) {
+  .loader-sablier {
+    width: 20%; /* Largeur du sablier pour tablette */
+    margin-bottom: 1vw; /* Marge inférieure pour tablette */
+  }
+}
+@media (min-width: 63.91rem) {
+  .loader-sablier {
+    width: 15%; /* Largeur du sablier pour desktop */
+    margin-bottom: 1vw; /* Marge inférieure pour desktop */
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -2308,11 +2332,19 @@ footer {
 /*--------------------------------------------------------------------------------------------------------*/
 /*--- Message dynamique affiché dans le loader */
 .loader-message {
-  font-family: "Roboto", sans-serif; /* Police personnalisée */
+  font-family: "Shrikhand", sans-serif; /* Police personnalisée */
   font-size: 4vh; /* Taille de la police adaptée à l'écran */
-  color: #333; /* Couleur du texte en gris foncé */
+  color: #860ee7; /* Couleur du texte en gris foncé */
   margin-bottom: 20px; /* Marge inférieure de 20px */
   opacity: 0; /* Initialement invisible */
+  animation: fadeInMessage 1.5s ease-in-out 0.5s forwards; /* Apparition progressive avec un délai d'1 seconde */
+}
+
+.loader-message1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 4vh; /* Taille de la police adaptée à l'écran */
+  color: #860ee7; /* Couleur du texte en gris foncé */
+  opacity: 0;
   animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive avec un délai d'1 seconde */
 }
 
@@ -2332,7 +2364,7 @@ footer {
 
 /*--- Barre de progression ---*/
 .progress-bar {
-  height: 100%; /* Hauteur complète à l'intérieur du conteneur */
+  height: 5vh; /* Hauteur complète à l'intérieur du conteneur */
   width: 0; /* Commence vide */
   background-color: #9356DC; /* Couleur de la barre de progression */
   animation: loadProgressBar 3s ease-in-out forwards; /* Remplit la barre en 3 secondes */
@@ -2346,6 +2378,7 @@ footer {
   color: white;
   font-size: 2vh;
   animation: textAppear 1.5s ease-in-out forwards;
+  height: 2vh;
 }
 
 /*# sourceMappingURL=main.css.map */

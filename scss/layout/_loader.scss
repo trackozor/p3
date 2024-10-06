@@ -12,13 +12,12 @@
 
 /* Loader couvrant toute la page */
 #loader {
-    position: fixed; /* Position fixe pour couvrir toute la page */
-    width: 100%; /* Largeur à 100% de la page */
-    height: 100%; /* Hauteur à 100% de la page */
+    position: fixed;
     background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%)); /* Dégradé de fond */
     display: flex; /* Active le flexbox pour centrer les éléments */
-    align-items: center; /* Centre les éléments verticalement */
-    justify-content: center; /* Centre les éléments horizontalement */
+    flex-direction: column;
+    width: 100%;
+    height:100%;
     z-index: 5; /* Priorité d'affichage élevée */
     opacity: 1; /* Complètement visible au départ */
     animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader après 5s */
@@ -57,11 +56,15 @@
 /* Carte contenant le logo, horloge, sablier et barre de progression */
 .loader-card {
     background-color: white; /* Couleur de fond personnalisée */
-    padding: $padding-vh-x2; /* Padding interne adapté à l'écran */
+    padding: $padding-vh-x2 0; /* Padding interne adapté à l'écran */
     border-radius: $border-radius-vh-base; /* Bords arrondis */
     box-shadow: 0 $font-size-vh-x2 $font-size-vh-x3 rgba(0, 0, 0, 0.2); /* Ombre légère */
     text-align: center; /* Centre le texte */
     animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
+    flex-direction: column;
+    display: flex;
+    width: 56%;
+    align-items: center;
 
     /*--- Landscape ---*/
     @include mobile-landscape {
@@ -86,7 +89,7 @@
         height:30vw; /* Hauteur pour desktop */
         box-shadow: $border-shadow-vw; /* Ombre pour desktop */
         margin: $margin-vw-base auto; /* Marges pour*/
-        width: 60%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -130,8 +133,8 @@
 
 /* Horloge animée */
 .loader-clock {
-    width: 50px; /* Largeur de l'horloge */
-    margin-bottom: 20px; /* Marge inférieure */
+    width: 10%; /* Largeur de l'horloge */
+    margin: $margin-vh-d2 0; /* Marge inférieure */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -144,6 +147,25 @@
     margin-bottom: 10px; /* Marge inférieure */
     animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards; /* Combine rotation et rétrécissement */
     animation-delay: 0s, 1s; /* Le rétrécissement démarre après 2 secondes */
+
+    /*--- Landscape ---*/
+    @include mobile-landscape {
+        width: 20%; /* Largeur du sablier pour mobile paysage */
+        margin-bottom: 10px; /* Marge inférieure pour mobile paysage */
+    }
+    
+    /*--- Tablette ---*/
+    @include tablette {
+        width: 20%; /* Largeur du sablier pour tablette */
+        margin-bottom: $margin-vw-d2; /* Marge inférieure pour tablette */
+    }
+    
+    /*--- Desktop ---*/
+    @include desktop {
+        width: 15%; /* Largeur du sablier pour desktop */
+        margin-bottom: $margin-vw-d2; /* Marge inférieure pour desktop */
+    }
+    
 }
 
 
@@ -153,11 +175,19 @@
 
 /*--- Message dynamique affiché dans le loader */
 .loader-message {
-    font-family: $font-primary; /* Police personnalisée */
+    font-family: $font-title; /* Police personnalisée */
     font-size: $font-size-vh-x2; /* Taille de la police adaptée à l'écran */
-    color: #333; /* Couleur du texte en gris foncé */
+    color: #860ee7; /* Couleur du texte en gris foncé */
     margin-bottom: 20px; /* Marge inférieure de 20px */
     opacity: 0; /* Initialement invisible */
+    animation: fadeInMessage 1.5s ease-in-out 0.5s forwards; /* Apparition progressive avec un délai d'1 seconde */
+}
+
+.loader-message1 {
+    font-family: $font-title;
+     font-size: $font-size-vh-x2; /* Taille de la police adaptée à l'écran */
+    color: #860ee7; /* Couleur du texte en gris foncé */
+    opacity: 0;
     animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive avec un délai d'1 seconde */
 }
 
@@ -178,7 +208,7 @@
 
 /*--- Barre de progression ---*/
 .progress-bar {
-    height: 100%; /* Hauteur complète à l'intérieur du conteneur */
+    height: 5vh; /* Hauteur complète à l'intérieur du conteneur */
     width: 0; /* Commence vide */
     background-color: #9356DC; /* Couleur de la barre de progression */
     animation: loadProgressBar 3s ease-in-out forwards; /* Remplit la barre en 3 secondes */
@@ -192,6 +222,7 @@
     color: white;
     font-size: $font-size-vh-base;
     animation: textAppear 1.5s ease-in-out forwards;
+    height: 2vh;
 }
 
 
