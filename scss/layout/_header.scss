@@ -17,6 +17,15 @@ header {
   flex-direction: column; /* Aligne les éléments verticalement en colonne */
   align-items: center; /* Centre les éléments sur l'axe vertical */
   width: 100%; /* Le header prend toute la largeur disponible */
+  justify-content: center;
+
+  /* Landscape */
+  @include mobile-landscape {
+    flex-direction: column; /* Colonne pour mobile paysage */
+    width: 100%; /* Largeur ajustée */
+    justify-content: center; /* Centre les éléments pour mobile paysage */
+    align-items: center;
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -26,23 +35,38 @@ header {
   width: 100%; /* La carte prend toute la largeur du parent */
   border-top: $font-size-vh-d4 solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
   border-bottom: $font-size-vh-d4 solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
+  display:flex;
+  margin: 0 auto;
+  align-items: center;
 
   /* Landscape */
   @include mobile-landscape {
     border-top: $font-size-vw-d4 solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour mobile paysage */
     border-bottom: $font-size-vw-d4 solid lightgrey; /* Bordure inférieure ajustée pour mobile paysage */
+    align-items: center;
   }
   
   /* Tablette */
   @include tablette {
     border-top: $font-size-vw-d4 solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour tablette */
     border-bottom: $font-size-vw-d4 solid lightgrey; /* Bordure inférieure ajustée pour tablette */
+    align-items: center;
   }
 
   /* Desktop */
   @include desktop {
     border: none; /* Suppression des bordures sur les grands écrans (desktop) */
+    align-items: center;
+    width:100%;
+  }
+
+  /* Desktop portrait */
+  @include desktop-portrait {
+    border: none; /* Suppression des bordures sur les écrans en mode paysage sur desktop (portrait) */
+    align-items: center;
+    width:100%;
   }
 }
+
 
 

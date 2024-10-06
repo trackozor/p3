@@ -11,13 +11,29 @@
 }
 
 @mixin tablette {
-    @media (min-width: 48rem) and (max-width: 63.9rem) {
+    @media (min-width: 48rem) and (max-width: 63.999rem) {
     @content;
     }
 }
+
+/* Mixin pour gérer les écrans tablette en mode paysage */
+@mixin tablette-landscape {
+    @media (min-height: 48rem) and (max-height: 63.999rem) and (orientation: portrait) {
+    @content;
+    }
+}
+
+/* Mixin pour gérer les écrans tablette en mode portrait */
 /* Mixin pour gérer les écrans desktop*/
 @mixin desktop {
-    @media (min-width: 63.91rem) {
+    @media (min-width: 64rem)  {
+    @content;
+    }
+}
+
+/* Mixin pour gérer les écrans desktop en mode portrait */
+@mixin desktop-portrait {
+    @media (min-height: 64rem) and (orientation: portrait) {
     @content;
     }
 }

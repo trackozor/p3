@@ -24,6 +24,7 @@ footer {
     color: white; /* Définit la couleur du texte et des icônes à blanc */
     padding: 0 $padding-vh-d2; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
+    margin-top:2vh;
 
     /* Landscape */
     @include mobile-landscape {
@@ -40,5 +41,10 @@ footer {
         padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour desktop, équivalent à 1% de la largeur de l'écran */
         justify-content: center; /* Centre les éléments à l'intérieur du footer sur les écrans desktop */
         margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
+    }
+
+    @include desktop-portrait {
+        margin-top: 5vh; /* Ajoute une marge supplémentaire sur les écrans de petite taille pour centrer le footer */
+        
     }
 }

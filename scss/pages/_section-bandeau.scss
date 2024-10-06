@@ -41,8 +41,14 @@
 
     /* Desktop */
     @include desktop {
-        margin: $margin-vh-base 5vw; /* Ajustement des marges pour desktop */
+        margin: $margin-vw-base 5vw; /* Ajustement des marges pour desktop */
         width: 90%; /* Largeur du conteneur sur desktop */
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        margin: $margin-vh-base 5vw; /* Ajustement des marges pour desktop portrait */
+        width: 90%; /* Largeur du conteneur sur desktop portrait */
     }
 }
 
@@ -64,9 +70,15 @@
 
     /* Desktop */
     @include desktop {
-        padding: $padding-vh-d4 $padding-vw-base; /* Ajustement du padding pour desktop */
-        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop */
+        padding: $padding-vw-d4 $padding-vw-base; /* Ajustement du padding pour desktop */
+        margin-bottom: $margin-vw-base; /* Marge en bas pour desktop */
         font-weight: $font-weight-l-bold; /* Gras du texte pour desktop */
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        padding: $padding-vh-d4 $padding-vh-base; /* Ajustement du padding pour desktop portrait */
+        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop portrait */
     }
 }
 

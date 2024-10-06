@@ -24,6 +24,7 @@
     align-items: center;/* Centre le contenu verticalement */
     background-color: white;/* Couleur de fond de la carte logo*/
     margin: $margin-vh-d2 0; /* Définit les marges verticales de la carte */
+    justify-content: center;
 
     /* landscape  */
     @include mobile-landscape { 
@@ -35,7 +36,19 @@
     @include desktop {
         height:$object-size-vw-middle;/* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
         margin: $margin-vw-base 0;/* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
-    }   
+    }
+    
+    /* Desktop portrait */
+    @include desktop-portrait {
+        height:$object-size-vh-middle;/* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
+        margin: $margin-vh-d2 0;/* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
+    }
+}
+
+.card-logo img {
+    display: flex;
+    align-items: center;
+    padding-left: 4vh;
 }
 
 
@@ -119,8 +132,7 @@
     gap:$gap-vh-d2;/* Espace entre les éléments de la carte */
     background-color:#e0e0e0; /* Couleur de fond */
     width: $object-size-vh-x10; /* Définit la largeur de la carte */
-    padding: $padding-vh-base ; /* Espace intérieur de la carte */
-    margin-right: $margin-vh-x2; /* Espace à droite de la carte */
+    padding: $padding-vh-base 0 ; /* Espace intérieur de la carte */
 
     /* landscape */
     @include mobile-landscape {
@@ -133,8 +145,18 @@
     /* Desktop */
     @include desktop {
         gap:$gap-vw-d2; /* Ajuste l'espace entre les éléments pour desktop */
-        width: $object-size-vw-x10; /* Ajuste la largeur de la carte pour desktop */
-        padding: $padding-vw-d2 $padding-vw-d2; /* Ajuste les marges intérieures pour desktop */
+        width: 100%;
+        padding: $padding-vw-d2 0; /* Ajuste les marges intérieures pour desktop */
+        display: flex;
+        
+    
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        gap:$gap-vh-d2; /* Ajuste l'espace entre les éléments pour desktop */
+        width: $object-size-vh-x10; /* Ajuste la largeur de la carte pour desktop */
+        padding: $padding-vh-d2 $padding-vh-d2; /* Ajuste les marges intérieures pour desktop */
     }
 }
 
@@ -142,7 +164,7 @@
 .card-location i {
     font-size: $font-size-vh-base;/* Taille de l'icône en fonction de la hauteur de l'écran */
     color: black;/* Couleur de l'icône */
-    margin-right: $margin-vh-d2;/* Espace à droite de l'icône */
+    margin-right: $margin-vh-d4;/* Espace à droite de l'icône */
 
 
     /* landscape  */
@@ -162,12 +184,20 @@
         font-size: $font-size-vw-base;/* Ajuste la taille de l'icône pour desktop */
         margin-right: $margin-vw-d4;/* Ajuste l'espace à droite pour desktop */
     }
+
+    /* Desktop portrait*/
+    @include desktop-portrait {
+        font-size: $font-size-vh-base;/* Ajuste la taille de l'icône pour desktop */
+        margin-right: $margin-vh-d4;/* Ajuste l'espace à droite pour desktop */
+    }
 }
 
 /*-- Adresse dans la carte localisation --*/
 .carte-location address {
     font-size: $font-size-vh-base; /* Taille du texte pour l'adresse */
     color: black; /* Couleur du texte */
+    display: flex;
+    align-items: center;
 
     /* landscape  */
     @include mobile-landscape { 
@@ -229,6 +259,12 @@
         width: $object-size-vw-x20; /* Largeur de la carte correspondant à 40 % de la largeur de l'écran  */
         height: $object-size-vw-x12-5; /* Ajuste la hauteur correspondant à 25% de la largeur de l'écran  */
     }
+
+    /* desktop portrait */
+    @include desktop-portrait {
+        border-radius: $border-radius-vw-base; /* Bord arrondis pour desktop */
+        height: $object-size-vw-x15; /* Hauteur pour desktop portrait */
+    }
 }
 
 /*-- Image dans la carte restaurant --*/
@@ -262,6 +298,14 @@
         width: 100%; /* Largeur de l'image à 100% du conteneur */
         height: $object-size-vw-x10; /* Hauteur correspondant à 20% de la largeur de l'écran*/
     }
+
+    /* desktop portrait */
+    @include desktop-portrait {
+        border-radius: $border-radius-vw-base $border-radius-vw-base 0 0; /* Arrondis des coins supérieurs pour desktop portrait */
+        object-fit: cover; /* L'image est ajustée pour couvrir le conteneur */
+        width: 100%; /* Largeur de l'image à 100% du conteneur */
+        height: 22vw; /* Hauteur correspondant à 20% de la hauteur de l'écran*/
+    }
 }
 
 /*-- Titre de la carte restaurant --*/
@@ -286,6 +330,12 @@
     @include desktop {
         font-size: $font-size-vw-d2; /* Ajuste la taille du texte pour desktop */
         margin-top: $margin-vw-d2; /* Marge supérieure correspondant à 1% de la largeur de l'écran */
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        font-size: $font-size-vw-base; /* Ajuste la taille du texte pour desktop portrait */
+        margin-top: $margin-vw-d2; /* Marge supérieure correspondant à 1% de la hauteur de l'écran */
     }
 }
 
@@ -315,6 +365,13 @@
         gap: $gap-vw-d2; /* Espace pour desktop */
         margin: $margin-vw-d2; /* Marges pour desktop */
     }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        font-size: $font-size-vh-d2; /* Ajuste la taille du texte pour desktop portrait */
+        gap: $gap-vw-d2; /* Espace pour desktop portrait */
+        margin: $margin-vh-d2; /* Marges pour desktop portrait */
+    }
 }
 
 /*-- Icône favorite dans la carte restaurant --*/
@@ -342,6 +399,14 @@
         left: 85%; /* Ajuste la position gauche pour desktop */
         bottom: 9%; /* Ajuste la position verticale pour desktop */
     }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        left: 85%; /* Ajuste la position gauche pour desktop portrait */
+        bottom: 10%; /* Ajuste la position verticale pour desktop portrait */
+    }
+
+
 }
 
 /*-- Texte dans la carte restaurant --*/
@@ -361,6 +426,11 @@
     /* Desktop */
     @include desktop {
         padding: $padding-vw-d4 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+        padding: $padding-vh-d4 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
     }
 }
 

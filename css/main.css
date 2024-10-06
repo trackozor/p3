@@ -185,7 +185,10 @@
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
 /* Mixin pour gérer les écrans en mode paysage sur mobile et tablette*/
+/* Mixin pour gérer les écrans tablette en mode paysage */
+/* Mixin pour gérer les écrans tablette en mode portrait */
 /* Mixin pour gérer les écrans desktop*/
+/* Mixin pour gérer les écrans desktop en mode portrait */
 /* Styles des animations */
 /*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _animations.scss                                                              */
@@ -501,6 +504,8 @@ body {
   display: block; /* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   background-color: white; /* Couleur de fond de base*/
   justify-content: center; /* aligne horizontalement depuis la xe centrale les éléments*/
+  align-items: center;
+  display: block;
   /*- Mobile paysage-*/
   /*- Tablette -*/
   /*- Desktop -*/
@@ -511,14 +516,25 @@ body {
     justify-content: center; /* aligne horizontalement depuis la xe centrale les éléments*/
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  body {
+    font-size: 2vh; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+  }
+}
+@media (min-height: 48rem) and (max-height: 63.999rem) and (orientation: portrait) {
   body {
     font-size: 2vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   body {
     font-size: 1.5vw; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  body {
+    font-size: 1.5vh; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    align-items: center;
   }
 }
 
@@ -530,16 +546,34 @@ h2 {
   font-size: 3vh; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
   font-weight: 900; /* Accentuation caractère majeure soit valeur=900 */
   /*- Portrait -*/
+  /*- Tablette -*/
+  /*- Tablette paysage -*/
   /*- Desktop -*/
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   h2 {
     font-size: 3vw; /* Taille de police pour les titres correspondant à 3% de la largeur de l'écran*/
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  h2 {
+    font-size: 3vh; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
+  }
+}
+@media (min-height: 48rem) and (max-height: 63.999rem) and (orientation: portrait) {
+  h2 {
+    font-size: 3vw; /* Taille de police pour les titres correspondant à 3% de la largeur de l'écran*/
+  }
+}
+@media (min-width: 64rem) {
   h2 {
     font-size: 2vw; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  h2 {
+    font-size: 2vh; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
   }
 }
 
@@ -593,6 +627,7 @@ img {
   /* Landscape */
   /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
   /* Effet de survol */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
@@ -602,19 +637,27 @@ img {
     padding: 2vw; /* Padding ajusté à 2% de la largeur de l'écran */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .button--primary {
-    border-radius: 4vh; /* Bord arrondis à 4% de la hauteur de l'écran */
+    border-radius: 4vw; /* Bord arrondis à 4% de la hauteur de l'écran */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour tablette */
     padding: 2vw; /* Padding ajusté pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .button--primary {
     border-radius: 4vw; /* Bord arrondis à 4% de la largeur de l'écran */
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
     padding: 1vw 4vh; /* Padding ajusté pour desktop */
     margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .button--primary {
+    border-radius: 4vh; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour desktop portrait */
+    padding: 1vh 4vh; /* Padding ajusté pour desktop portrait */
+    margin-top: 2vh; /* Ajout d'une marge supérieure sur desktop portrait */
   }
 }
 .button--primary:hover {
@@ -628,15 +671,21 @@ img {
   font-weight: 100; /* Style de police en gras (bold) */
   /* Landscape */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .button--primary-txt {
     font-size: 2vw; /* Ajustement de la taille de police pour mobile en paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .button--primary-txt {
     font-size: 1.5vw; /* Ajustement de la taille de police pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .button--primary-txt {
+    font-size: 1.5vh; /* Ajustement de la taille de police pour desktop portrait */
   }
 }
 
@@ -653,7 +702,9 @@ img {
   display: flex; /* Utilisation de flexbox pour l'alignement */
   justify-content: center; /* Centrage horizontal du texte */
   /* Landscape */
+  /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .badge {
@@ -662,11 +713,25 @@ img {
     width: 6vw; /* Largeur ajustée pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .badge {
+    font-size: 2vw; /* Ajustement de la taille de police pour tablette */
+    padding: 1vw 2vw; /* Padding ajusté pour tablette */
+    width: 6vw; /* Largeur ajustée pour tablette */
+  }
+}
+@media (min-width: 64rem) {
   .badge {
     font-size: 1vw; /* Taille de la police ajustée pour desktop */
     padding: 0.5vw; /* Padding ajusté pour desktop */
     width: 6vw; /* Largeur ajustée pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .badge {
+    font-size: 1vh; /* Taille de la police ajustée pour desktop portrait */
+    padding: 0.5vh; /* Padding ajusté pour desktop portrait */
+    width: 6vh; /* Largeur ajustée pour desktop portrait */
   }
 }
 
@@ -691,20 +756,26 @@ img {
   /* Landscape */
   /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .fa-full, .fa-empty {
     font-size: 3vw; /* Ajustement de la taille de police pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .fa-full, .fa-empty {
     font-size: 3vw; /* Ajustement de la taille de police pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .fa-full, .fa-empty {
     font-size: 2vw; /* Ajustement de la taille de police pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .fa-full, .fa-empty {
+    font-size: 2vh; /* Ajustement de la taille de police pour desktop portrait */
   }
 }
 
@@ -756,12 +827,12 @@ input {
     font-size: 2vw; /* Ajustement de la taille de police pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .button--back {
     font-size: 2vw; /* Ajustement de la taille de police pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .button--back {
     font-size: 2vw; /* Ajustement de la taille de police pour desktop */
   }
@@ -814,8 +885,10 @@ input {
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /* Couleur de fond de la carte logo*/
   margin: 1vh 0; /* Définit les marges verticales de la carte */
+  justify-content: center;
   /* landscape  */
   /*  Desktop  */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-logo {
@@ -823,11 +896,23 @@ input {
     margin: 2vw 0; /* Ajuste les marges hautes/basses correspondant à 2% de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-logo {
     height: 3vw; /* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
     margin: 2vw 0; /* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
   }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card-logo {
+    height: 3vh; /* Ajuste la hauteur correspondant à 1.5% de la largeur de l'écran*/
+    margin: 1vh 0; /* Ajuste les marges hautes/basses correspondant à 2 % de la largeur de l'écran */
+  }
+}
+
+.card-logo img {
+  display: flex;
+  align-items: center;
+  padding-left: 4vh;
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -850,7 +935,7 @@ input {
     height: 5vw; /* Hauteur correspondant à 5% de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-logo-alt {
     height: 5vw; /* Hauteur correspondant à 5% de la largeur de l'écran */
   }
@@ -867,7 +952,7 @@ input {
     height: 3vw; /* Hauteur correspondant à 3 % de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-logo-alt img {
     height: 2vw; /* Hauteur correspondant à 3 % de la largeur de l'écran */
   }
@@ -888,7 +973,7 @@ input {
     top: 35%; /* Ajuste la position de l'icône pour mobile en mode paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-logo-alt i {
     left: -7%; /* Ajuste la position de l'icône pour desktop */
     top: 35%; /* Ajuste la position de l'icône pour desktop */
@@ -910,10 +995,10 @@ input {
   gap: 1vh; /* Espace entre les éléments de la carte */
   background-color: #e0e0e0; /* Couleur de fond */
   width: 20vh; /* Définit la largeur de la carte */
-  padding: 2vh; /* Espace intérieur de la carte */
-  margin-right: 4vh; /* Espace à droite de la carte */
+  padding: 2vh 0; /* Espace intérieur de la carte */
   /* landscape */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location {
@@ -923,11 +1008,19 @@ input {
     margin-right: 4vw;
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-location {
     gap: 1vw; /* Ajuste l'espace entre les éléments pour desktop */
-    width: 20vw; /* Ajuste la largeur de la carte pour desktop */
-    padding: 1vw 1vw; /* Ajuste les marges intérieures pour desktop */
+    width: 100%;
+    padding: 1vw 0; /* Ajuste les marges intérieures pour desktop */
+    display: flex;
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card-location {
+    gap: 1vh; /* Ajuste l'espace entre les éléments pour desktop */
+    width: 20vh; /* Ajuste la largeur de la carte pour desktop */
+    padding: 1vh 1vh; /* Ajuste les marges intérieures pour desktop */
   }
 }
 
@@ -935,10 +1028,11 @@ input {
 .card-location i {
   font-size: 2vh; /* Taille de l'icône en fonction de la hauteur de l'écran */
   color: black; /* Couleur de l'icône */
-  margin-right: 1vh; /* Espace à droite de l'icône */
+  margin-right: 0.5vh; /* Espace à droite de l'icône */
   /* landscape  */
   /* Tablette */
   /* Desktop  */
+  /* Desktop portrait*/
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location i {
@@ -946,16 +1040,22 @@ input {
     margin-right: 1vw; /* Ajuste l'espace à droite pour le mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card-location i {
     font-size: 2vw; /* Ajuste la taille de l'icône pour tablette */
     margin-right: 1vw; /* Ajuste l'espace à droite pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-location i {
     font-size: 2vw; /* Ajuste la taille de l'icône pour desktop */
     margin-right: 0.5vw; /* Ajuste l'espace à droite pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card-location i {
+    font-size: 2vh; /* Ajuste la taille de l'icône pour desktop */
+    margin-right: 0.5vh; /* Ajuste l'espace à droite pour desktop */
   }
 }
 
@@ -963,6 +1063,8 @@ input {
 .carte-location address {
   font-size: 2vh; /* Taille du texte pour l'adresse */
   color: black; /* Couleur du texte */
+  display: flex;
+  align-items: center;
   /* landscape  */
   /* Tablette */
   /* Desktop  */
@@ -972,12 +1074,12 @@ input {
     font-size: 2vw; /* Ajuste la taille du texte pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .carte-location address {
     font-size: 2vw; /* Ajuste la taille du texte pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .carte-location address {
     font-size: 2vw; /* Ajuste la taille du texte pour desktop */
   }
@@ -1001,6 +1103,7 @@ input {
   /* landscape  */
   /* Tablette */
   /* Desktop */
+  /* desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card {
@@ -1011,7 +1114,7 @@ input {
     height: auto; /* Ajustement de la hauteur automatique  */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card {
     border-radius: 2vw; /* Bord arrondis pour tablette */
     height: 50vw; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
@@ -1019,7 +1122,7 @@ input {
     width: 100%; /* Largeur à 100% pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card {
     border-radius: 2vw; /* Bord arrondis pour desktop */
     height: 40vw; /* Hauteur pour desktop */
@@ -1027,6 +1130,12 @@ input {
     margin: 0.5vw auto; /* Marges pour desktop */
     width: 40vw; /* Largeur de la carte correspondant à 40 % de la largeur de l'écran  */
     height: 25vw; /* Ajuste la hauteur correspondant à 25% de la largeur de l'écran  */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card {
+    border-radius: 2vw; /* Bord arrondis pour desktop */
+    height: 30vw; /* Hauteur pour desktop portrait */
   }
 }
 
@@ -1040,6 +1149,7 @@ input {
   /* landscape */
   /* tablette */
   /* desktop */
+  /* desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card img {
@@ -1049,7 +1159,7 @@ input {
     height: 40vw; /* hauteur correspondant à 40% de la largeur de l'écran*/
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card img {
     border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour tablette */
     object-fit: cover; /* L'image est ajustée pour couvrir le conteneur */
@@ -1057,12 +1167,20 @@ input {
     height: 40vw; /* hauteur correspondant à 40% de la largeur de l'écran*/
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card img {
     border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour desktop */
     object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
     width: 100%; /* Largeur de l'image à 100% du conteneur */
     height: 20vw; /* Hauteur correspondant à 20% de la largeur de l'écran*/
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card img {
+    border-radius: 2vw 2vw 0 0; /* Arrondis des coins supérieurs pour desktop portrait */
+    object-fit: cover; /* L'image est ajustée pour couvrir le conteneur */
+    width: 100%; /* Largeur de l'image à 100% du conteneur */
+    height: 22vw; /* Hauteur correspondant à 20% de la hauteur de l'écran*/
   }
 }
 
@@ -1074,6 +1192,7 @@ input {
   /* landscape */
   /* tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card h3 {
@@ -1081,16 +1200,22 @@ input {
     margin-top: 3vh; /* Marge supérieure  correspondant à 3% de la hauteur de l'écran */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card h3 {
     font-size: 2vw; /* Ajuste la taille du texte pour tablette */
     margin-top: 3vw; /* Marge supérieure correspondant à 3% de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card h3 {
     font-size: 1vw; /* Ajuste la taille du texte pour desktop */
     margin-top: 1vw; /* Marge supérieure correspondant à 1% de la largeur de l'écran */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card h3 {
+    font-size: 2vw; /* Ajuste la taille du texte pour desktop portrait */
+    margin-top: 1vw; /* Marge supérieure correspondant à 1% de la hauteur de l'écran */
   }
 }
 
@@ -1102,6 +1227,7 @@ input {
   /* landscape */
   /* tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card .card-title {
@@ -1110,18 +1236,25 @@ input {
     margin: 2vw; /* Marges pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card .card-title {
     font-size: 2vw; /* Ajuste la taille du texte pour tablette */
     gap: 1vw; /* Espace pour tablette */
     margin: 2vw; /* Marges pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card .card-title {
     font-size: 1vw; /* Ajuste la taille du texte pour desktop */
     gap: 1vw; /* Espace pour desktop */
     margin: 1vw; /* Marges pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card .card-title {
+    font-size: 1vh; /* Ajuste la taille du texte pour desktop portrait */
+    gap: 1vw; /* Espace pour desktop portrait */
+    margin: 1vh; /* Marges pour desktop portrait */
   }
 }
 
@@ -1135,6 +1268,7 @@ input {
   /* landscape */
   /* tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card .icon-favorite {
@@ -1142,16 +1276,22 @@ input {
     bottom: 8%; /* Ajuste la position verticale pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card .icon-favorite {
     left: 85%; /* Ajuste la position gauche pour tablette */
     bottom: 7%; /* Ajuste la position verticale pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card .icon-favorite {
     left: 85%; /* Ajuste la position gauche pour desktop */
     bottom: 9%; /* Ajuste la position verticale pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card .icon-favorite {
+    left: 85%; /* Ajuste la position gauche pour desktop portrait */
+    bottom: 10%; /* Ajuste la position verticale pour desktop portrait */
   }
 }
 
@@ -1161,20 +1301,26 @@ input {
   /* landscape */
   /* tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-txt {
     padding: 0.5vw 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card-txt {
     padding: 0.5vw 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-txt {
     padding: 0.5vw 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card-txt {
+    padding: 0.5vh 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
   }
 }
 
@@ -1237,14 +1383,14 @@ input {
     width: 98%; /* Largeur pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card-menu {
     height: 10vw; /* Hauteur pour tablette */
     margin: 1vw; /* Marges pour tablette */
     width: 95%; /* Largeur pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-menu {
     height: 10vw; /* Hauteur pour desktop */
     margin: 1vw; /* Marges pour desktop */
@@ -1264,12 +1410,12 @@ input {
     width: 100%; /* Largeur de l'élément du menu pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .menu-item {
     width: 100%; /* Largeur de l'élément du menu pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu-item {
     width: 100%; /* Largeur de l'élément du menu pour desktop */
   }
@@ -1290,13 +1436,13 @@ input {
     padding: 1vw; /* Padding horizontal pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .dish-name {
     font-size: 2vw; /* Taille du texte pour le nom du plat pour tablette */
     padding: 1vw; /* Padding horizontal pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .dish-name {
     font-size: 2vw; /* Taille du texte pour le nom du plat pour desktop */
     padding: 1vw; /* Padding horizontal pour desktop */
@@ -1318,13 +1464,13 @@ input {
     padding: 0 1vw; /* Padding horizontal pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .dish-description {
     font-size: 2vw; /* Taille du texte pour la description du plat pour tablette */
     padding: 0 1vw; /* Padding horizontal pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .dish-description {
     font-size: 2vw; /* Taille du texte pour la description du plat pour desktop */
     padding: 0 1vw; /* Padding horizontal pour desktop */
@@ -1353,13 +1499,13 @@ input {
     padding-right: 1vw; /* Padding horizontal pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .dish-content .price {
     font-size: 2vw; /* Taille du texte pour le prix pour tablette */
     padding-right: 1vw; /* Padding horizontal pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .dish-content .price {
     font-size: 2vw; /* Taille du texte pour le prix pour desktop */
     padding-right: 1vw; /* Padding horizontal pour desktop */
@@ -1381,12 +1527,12 @@ input {
     padding: 2vw; /* Padding vertical pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .footer-card {
     padding: 2vw; /* Padding vertical pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .footer-card {
     padding: 0.5vw; /* Padding vertical pour desktop */
     display: flex;
@@ -1412,14 +1558,14 @@ input {
     font-size: 1.5vw; /* Taille de l'icône pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .fa-handshake, .fa-utensils {
     margin-right: 1vw; /* Padding horizontal pour tablette */
     margin-left: 0; /* Pas d'espace à gauche */
     font-size: 1.5vw; /* Taille de l'icône pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .fa-handshake, .fa-utensils {
     margin-right: 1vw; /* Padding horizontal pour desktop */
     margin-left: 0; /* Pas d'espace à gauche*/
@@ -1444,19 +1590,19 @@ input {
     margin-top: 1vw; /* Marge supérieur pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .footer-card li {
     margin-top: 1vw; /* Marge supérieur pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .footer-card li {
     margin-top: 1vw; /* Marge supérieur pour desktop */
   }
 }
 
 /*-- listes --*/
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .footer-card ul {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     gap: 2vw; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran*/
@@ -1481,14 +1627,14 @@ input {
     padding-bottom: 1vw; /* Padding inférieur pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .footer-card img {
     width: 30%; /* L'image occupe 30% de la largeur  */
     margin: 0.5vw 0; /* Marge verticale pour tablette */
     padding-bottom: 1vw; /* Padding inférieur pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .footer-card img {
     width: 10%; /* L'image occupe 30% de la largeur  */
     margin: 0; /* Marge verticale pour desktop */
@@ -1515,6 +1661,16 @@ header {
   flex-direction: column; /* Aligne les éléments verticalement en colonne */
   align-items: center; /* Centre les éléments sur l'axe vertical */
   width: 100%; /* Le header prend toute la largeur disponible */
+  justify-content: center;
+  /* Landscape */
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  header {
+    flex-direction: column; /* Colonne pour mobile paysage */
+    width: 100%; /* Largeur ajustée */
+    justify-content: center; /* Centre les éléments pour mobile paysage */
+    align-items: center;
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -1524,25 +1680,40 @@ header {
   width: 100%; /* La carte prend toute la largeur du parent */
   border-top: 0.5vh solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
   border-bottom: 0.5vh solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
   /* Landscape */
   /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .card-location {
     border-top: 0.5vw solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour mobile paysage */
     border-bottom: 0.5vw solid lightgrey; /* Bordure inférieure ajustée pour mobile paysage */
+    align-items: center;
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .card-location {
     border-top: 0.5vw solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour tablette */
     border-bottom: 0.5vw solid lightgrey; /* Bordure inférieure ajustée pour tablette */
+    align-items: center;
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .card-location {
     border: none; /* Suppression des bordures sur les grands écrans (desktop) */
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .card-location {
+    border: none; /* Suppression des bordures sur les écrans en mode paysage sur desktop (portrait) */
+    align-items: center;
+    width: 100%;
   }
 }
 
@@ -1577,21 +1748,28 @@ header {
   /*  Landscape  */
   /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau {
     margin: 2vw 4vw; /* Ajustement des marges pour mobile en mode paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .bandeau {
     gap: 0.5vw; /* Ajoute un espace entre les éléments pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .bandeau {
-    margin: 2vh 5vw; /* Ajustement des marges pour desktop */
+    margin: 2vw 5vw; /* Ajustement des marges pour desktop */
     width: 90%; /* Largeur du conteneur sur desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .bandeau {
+    margin: 2vh 5vw; /* Ajustement des marges pour desktop portrait */
+    width: 90%; /* Largeur du conteneur sur desktop portrait */
   }
 }
 
@@ -1603,22 +1781,29 @@ header {
   /*  Landscape  */
   /* Tablette */
   /* Desktop */
+  /* Desktop portrait */
 }
 @media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
   .bandeau h2 {
     padding: 0.5vw 0; /* Ajustement du padding pour mobile en mode paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .bandeau h2 {
     padding: 0.5vh 0; /* Padding ajusté pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .bandeau h2 {
-    padding: 0.5vh 2vw; /* Ajustement du padding pour desktop */
-    margin-bottom: 2vh; /* Marge en bas pour desktop */
+    padding: 0.5vw 2vw; /* Ajustement du padding pour desktop */
+    margin-bottom: 2vw; /* Marge en bas pour desktop */
     font-weight: 100; /* Gras du texte pour desktop */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  .bandeau h2 {
+    padding: 0.5vh 2vh; /* Ajustement du padding pour desktop portrait */
+    margin-bottom: 2vh; /* Marge en bas pour desktop portrait */
   }
 }
 
@@ -1639,13 +1824,13 @@ header {
     margin-bottom: 2vw; /* Ajustement de la marge pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .bandeau p {
     padding: 1vh 2vw; /* Ajustement du padding pour tablette */
     margin-bottom: 2vw; /* Ajustement de la marge pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .bandeau p {
     padding: 1vh 2vw; /* Ajustement du padding pour desktop */
     margin-bottom: 2vh; /* Marge en bas pour desktop */
@@ -1673,13 +1858,13 @@ header {
     gap: 3vw; /* Espacement ajusté pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .fonctionnement {
     gap: 1vw; /* Espacement réduit pour tablette */
     justify-content: space-around; /* Espace autour des éléments pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .fonctionnement {
     gap: 2vw; /* Espacement ajusté pour desktop */
     justify-content: space-around; /* Espace autour des éléments pour desktop */
@@ -1705,7 +1890,7 @@ ol {
     justify-content: center; /* Centre les éléments pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   ol {
     flex-direction: row; /* Alignement en ligne pour desktop */
     gap: 5vw; /* Espace entre les éléments de la liste pour desktop */
@@ -1733,7 +1918,7 @@ ol li {
     margin: 2vw 1vw; /* Ajustement des marges pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   ol li {
     margin: 2vw 1vw; /* Ajustement des marges pour desktop */
   }
@@ -1765,7 +1950,7 @@ ol li {
     height: 5vw; /* Hauteur du conteneur ajustée pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .li-txt {
     left: 1vw; /* Décalage du texte pour desktop */
     border-radius: 2vh; /* Bord arrondi pour desktop */
@@ -1802,7 +1987,7 @@ ol li .puce_num {
     font-size: 1.4vw; /* Taille de la police ajustée pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   ol li .puce_num {
     height: 1.5vw; /* Hauteur ajustée pour desktop */
     width: 1.5vw; /* Largeur ajustée pour desktop */
@@ -1826,7 +2011,7 @@ i {
     margin: 0 2vw 0 4vw; /* Marges ajustées pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   i {
     font-size: 2vh; /* Taille de la police ajustée pour desktop */
     margin: 0 2vw 0 2vw; /* Marges ajustées pour desktop */
@@ -1853,7 +2038,7 @@ i {
     margin: 0 auto;
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   #section-restaurants {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1870,7 +2055,7 @@ i {
     margin: 2vw;
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   #section-restaurants h2 {
     width: 95%;
     margin: 2vw 4vw;
@@ -1944,7 +2129,7 @@ i {
     padding-top: 6vw; /* Padding en haut de la carte menu */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu {
     width: 80%; /* Largeur à 80% pour desktop */
     border-radius: 3vw 3vw 0 0; /* Bord arrondi adapté à la largeur de l'écran */
@@ -1973,7 +2158,7 @@ i {
     object-fit: cover; /* Ajustement de l'image pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu-image {
     height: 25vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
@@ -2002,7 +2187,7 @@ i {
     object-fit: cover; /* Ajustement de l'image pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .menu-image-alt {
     height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
@@ -2010,7 +2195,7 @@ i {
     object-fit: cover; /* Ajustement de l'image pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu-image-alt {
     height: 35vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
@@ -2039,7 +2224,7 @@ i {
     object-fit: cover; /* Ajustement de l'image pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .menu-image-alt2 {
     height: 40vw; /* Hauteur ajustée pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
@@ -2047,7 +2232,7 @@ i {
     object-fit: cover; /* Ajustement de l'image pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu-image-alt2 {
     height: 35vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
@@ -2074,7 +2259,7 @@ i {
     padding-left: 1vw; /* Padding à gauche pour mobile paysage */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .menu .title {
     display: flex; /* Flexbox pour desktop également */
     justify-content: center; /* Centrage du contenu pour desktop */
@@ -2133,6 +2318,7 @@ footer {
   color: white; /* Définit la couleur du texte et des icônes à blanc */
   padding: 0 1vh; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
   width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
+  margin-top: 2vh;
   /* Landscape */
   /* Tablettes */
   /* Desktop */
@@ -2142,16 +2328,21 @@ footer {
     padding: 0 1vw; /* Ajuste le padding horizontal pour mobile en mode paysage, équivalent à 1% de la largeur de l'écran */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   footer {
     padding: 0 1vw; /* Ajuste le padding horizontal pour les tablettes, équivalent à 1% de la largeur de l'écran */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   footer {
     padding: 0 1vw; /* Ajuste le padding horizontal pour desktop, équivalent à 1% de la largeur de l'écran */
     justify-content: center; /* Centre les éléments à l'intérieur du footer sur les écrans desktop */
     margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
+  }
+}
+@media (min-height: 64rem) and (orientation: portrait) {
+  footer {
+    margin-top: 5vh; /* Ajoute une marge supplémentaire sur les écrans de petite taille pour centrer le footer */
   }
 }
 
@@ -2167,7 +2358,6 @@ footer {
 /*-------------------------------------------- Loader Principal ------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Loader couvrant toute la page */
-/* Loader principal, centré */
 .loader-active {
   position: fixed;
   width: 100%;
@@ -2194,12 +2384,12 @@ footer {
   animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
   flex-direction: column;
   display: flex;
-  width: 50%;
-  height: 60vh;
+  width: 90%;
+  height: 60%;
   align-items: center;
   z-index: 7;
   position: absolute;
-  left: 1%;
+  left: 0;
   top: 10%;
   padding: 2vh;
   /*--- Landscape ---*/
@@ -2215,23 +2405,26 @@ footer {
     height: auto; /* Ajustement de la hauteur automatique  */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .loader-card {
     border-radius: 2vw; /* Bord arrondis pour tablette */
     height: 50vw; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
     margin: 2vw auto; /* Marges pour tablette */
-    width: 100%; /* Largeur à 100% pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .loader-card {
     box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
     margin: 0 auto; /* Marges pour*/
-    width: 90%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    width: 50%;
+    height: 70%;
+    left: 20%;
+    top: 15%;
   }
 }
 
@@ -2252,13 +2445,13 @@ footer {
     margin-bottom: 2vw; /* Marge inférieure pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .loader-logo {
     width: 30%; /* Largeur du logo pour tablette */
     margin-bottom: 2vw; /* Marge inférieure pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .loader-logo {
     width: 20%; /* Largeur du logo pour desktop */
     margin-bottom: 2vw; /* Marge inférieure pour desktop */
@@ -2276,17 +2469,35 @@ footer {
   padding: 0;
   bottom: 75%;
   align-items: center;
-  right: 40%;
+  right: 42.5%;
+  /*Desktop*/
+}
+@media (min-width: 64rem) {
+  .loader1 {
+    height: 100%;
+    width: 100%;
+    right: 18%;
+    bottom: 15%;
+  }
 }
 
 .loader2 {
   position: absolute;
   z-index: 6;
-  height: 60%;
-  width: 80%;
+  height: 40%;
+  width: 60%;
   padding: 0;
-  bottom: 7%;
-  left: 0;
+  top: 30%;
+  right: 42%;
+  /*Desktop*/
+}
+@media (min-width: 64rem) {
+  .loader2 {
+    height: 100%;
+    width: 100%;
+    left: 40%;
+    top: -15%;
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -2308,15 +2519,15 @@ footer {
     margin-bottom: 10px; /* Marge inférieure pour mobile paysage */
   }
 }
-@media (min-width: 48rem) and (max-width: 63.9rem) {
+@media (min-width: 48rem) and (max-width: 63.999rem) {
   .loader-sablier {
     width: 20%; /* Largeur du sablier pour tablette */
     margin-bottom: 1vw; /* Marge inférieure pour tablette */
   }
 }
-@media (min-width: 63.91rem) {
+@media (min-width: 64rem) {
   .loader-sablier {
-    width: 15%; /* Largeur du sablier pour desktop */
+    width: 20%; /* Largeur du sablier pour desktop */
     margin-bottom: 1vw; /* Marge inférieure pour desktop */
   }
 }
@@ -2354,6 +2565,24 @@ footer {
   overflow: hidden; /* Cache le contenu qui dépasse les bords */
   margin-top: 2vh; /* Marge supérieure */
   position: relative; /* Position relative pour positionner le pourcentage */
+  /*--- Landscape ---*/
+  /*--- Tablette ---*/
+  /*--- Desktop ---*/
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .progress-bar-container {
+    height: 4vh; /* Hauteur de la barre de progression pour mobile paysage */
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .progress-bar-container {
+    height: 4vh; /* Hauteur de la barre de progression pour tablette */
+  }
+}
+@media (min-width: 64rem) {
+  .progress-bar-container {
+    height: 6vw; /* Hauteur de la barre de progression pour desktop */
+  }
 }
 
 /*--- Barre de progression ---*/
@@ -2373,6 +2602,26 @@ footer {
   font-size: 2vh;
   animation: textAppear 1.5s ease-in-out forwards;
   height: 2vh;
+  /*--- Landscape ---*/
+  /*--- Tablette ---*/
+  /*--- Desktop ---*/
+}
+@media (min-width: 20rem) and (max-width: 47.9rem) and (orientation: landscape) {
+  .progress-text {
+    font-size: 2vh; /* Taille de la police adaptée à l'écran pour mobile paysage */
+    height: 2vh;
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .progress-text {
+    font-size: 2vh; /* Taille de la police adaptée à l'écran pour tablette */
+    height: 2vh;
+  }
+}
+@media (min-width: 64rem) {
+  .progress-text {
+    font-size: 2vw; /* Taille de la police adaptée à l'écran pour desktop */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

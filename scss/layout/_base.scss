@@ -25,24 +25,33 @@ body {
   display: block;/* Définit l'élément comme un bloc, prenant toute la largeur disponible*/
   background-color: white;/* Couleur de fond de base*/
   justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
+  align-items: center;
+  display: block;
 
     
   /*- Mobile paysage-*/
   @include mobile-landscape {
     font-size: $font-size-vw-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/ 
     justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
-
   }
 
-  
   /*- Tablette -*/
   @include tablette {
+    font-size: $font-size-vh-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/
+  }
+
+  @include tablette-landscape {
     font-size: $font-size-vw-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/
   }
   
   /*- Desktop -*/
   @include desktop {
     font-size: $font-size-vw-middle; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
+  }
+
+  @include desktop-portrait {
+    font-size: $font-size-vh-middle; /* Taille de police correspondant à 2% de la largeur d l'écran*/
+    align-items: center;
   }
 }
   
@@ -64,9 +73,24 @@ h2 {
       font-size: $font-size-vw-title; /* Taille de police pour les titres correspondant à 3% de la largeur de l'écran*/
     }
 
+    /*- Tablette -*/
+    @include tablette {
+      font-size: $font-size-vh-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
+    }
+    
+    /*- Tablette paysage -*/
+    @include tablette-landscape {
+      font-size: $font-size-vw-title; /* Taille de police pour les titres correspondant à 3% de la largeur de l'écran*/
+    }
+
     /*- Desktop -*/
     @include desktop {
       font-size: $font-size-vw-base; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
+    }
+
+    /* Desktop portrait */
+    @include desktop-portrait {
+      font-size: $font-size-vh-base; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
     }
 }
 

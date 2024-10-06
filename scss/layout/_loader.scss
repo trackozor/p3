@@ -11,7 +11,6 @@
 /*--------------------------------------------------------------------------------------------------------*/
 
 /* Loader couvrant toute la page */
-/* Loader principal, centré */
 .loader-active {
     position: fixed;
     width: 100%;
@@ -24,6 +23,8 @@
     align-content: center;
     z-index: 5;
     animation: fadeOutLoader 5s ease-in-out forwards;
+
+
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -39,15 +40,16 @@
     animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
     flex-direction: column;
     display: flex;
-    width:50%;
-    height:60vh;
+    width:90%;
+    height:60%;
     align-items: center;
     z-index: 7;
-
     position: absolute;
-    left: 1%;
+    left: 0;
     top:10%;
     padding: 2vh;
+
+
     /*--- Landscape ---*/
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /* Bord arrondis pour mobile paysage */
@@ -62,7 +64,7 @@
         border-radius: $border-radius-vw-base; /* Bord arrondis pour tablette */
         height: $object-size-vw-x25; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
         margin: $margin-vw-base auto; /* Marges pour tablette */
-        width: 100%; /* Largeur à 100% pour tablette */
+
     }
     
     /*--- Desktop ---*/
@@ -70,12 +72,15 @@
 
         box-shadow: $border-shadow-vw; /* Ombre pour desktop */
         margin: 0 auto; /* Marges pour*/
-        width: 90%;
+        height: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
         align-content: center;
-        
+        width: 50%;
+        height:70%;
+        left:20%;
+        top:15%;
         
     }
 }
@@ -126,17 +131,34 @@
     padding:0;
     bottom:75%;
     align-items: center;
-    right:40%;
+    right:42.5%;
+
+    /*Desktop*/
+    @include desktop {
+        height:100%;
+        width: 100%;
+        right:18%;
+        bottom:15%;
+
+    }
 }
 
 .loader2  {
     position: absolute;
     z-index: 6;
-    height:60%;
-    width:80%;
+    height:40%;
+    width:60%;
     padding:0;
-    bottom:7%;
-    left:0
+    top:30%;
+    right:42%;
+
+    /*Desktop*/
+    @include desktop {
+        height:100%;
+        width: 100%;
+        left:40%;
+        top:-15%;
+    }
 }
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------- Sablier Dynamique -----------------------------------------*/
@@ -163,7 +185,7 @@
     
     /*--- Desktop ---*/
     @include desktop {
-        width: 15%; /* Largeur du sablier pour desktop */
+        width: 20%; /* Largeur du sablier pour desktop */
         margin-bottom: $margin-vw-d2; /* Marge inférieure pour desktop */
     }
     
@@ -205,6 +227,21 @@
     overflow: hidden; /* Cache le contenu qui dépasse les bords */
     margin-top: $margin-vh-base; /* Marge supérieure */
     position: relative; /* Position relative pour positionner le pourcentage */
+
+    /*--- Landscape ---*/
+    @include mobile-landscape {
+        height: $object-size-vh-x2; /* Hauteur de la barre de progression pour mobile paysage */
+    }
+    
+    /*--- Tablette ---*/
+    @include tablette {
+        height: $object-size-vh-x2; /* Hauteur de la barre de progression pour tablette */
+    }
+    
+    /*--- Desktop ---*/
+    @include desktop {
+        height: 6vw; /* Hauteur de la barre de progression pour desktop */
+    }
 }
 
 /*--- Barre de progression ---*/
@@ -213,6 +250,8 @@
     width: 0; /* Commence vide */
     background-color: #9356DC; /* Couleur de la barre de progression */
     animation: loadProgressBar 3s ease-in-out forwards; /* Remplit la barre en 3 secondes */
+
+    
 }
 
 /*--- Texte du pourcentage ---*/
@@ -224,6 +263,24 @@
     font-size: $font-size-vh-base;
     animation: textAppear 1.5s ease-in-out forwards;
     height: 2vh;
+
+    /*--- Landscape ---*/
+    @include mobile-landscape {
+        font-size: $font-size-vh-base; /* Taille de la police adaptée à l'écran pour mobile paysage */
+        height: 2vh;
+    }
+    
+    /*--- Tablette ---*/
+    @include tablette {
+        font-size: $font-size-vh-base; /* Taille de la police adaptée à l'écran pour tablette */
+        height: 2vh;
+    }
+    
+    /*--- Desktop ---*/
+    @include desktop {
+        font-size: $font-size-vw-base; /* Taille de la police adaptée à l'écran pour desktop */
+        
+    }
 }
 
 

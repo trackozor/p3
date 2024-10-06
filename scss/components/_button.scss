@@ -42,7 +42,7 @@
 
   /* Tablette */
   @include tablette {
-    border-radius: $border-radius-vh-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
+    border-radius: $border-radius-vw-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
     box-shadow: $border-shadow-vw; /* Ombre pour tablette */
     padding: $padding-vw-base; /* Padding ajusté pour tablette */
   }
@@ -53,6 +53,14 @@
     box-shadow: $border-shadow-vw; /* Ombre pour desktop */
     padding: $padding-vw-d2 $padding-vh-x2; /* Padding ajusté pour desktop */
     margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
+  }
+
+  /* Desktop portrait */
+  @include desktop-portrait {
+    border-radius: $border-radius-vh-x2; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $border-shadow-vh; /* Ombre pour desktop portrait */
+    padding: $padding-vh-d2 $padding-vh-x2; /* Padding ajusté pour desktop portrait */
+    margin-top: 2vh; /* Ajout d'une marge supérieure sur desktop portrait */
   }
 
   /* Effet de survol */
@@ -75,6 +83,11 @@
   /* Desktop */
   @include desktop {
     font-size: $font-size-vw-middle; /* Ajustement de la taille de police pour desktop */
+  }
+
+  /* Desktop portrait */
+  @include desktop-portrait {
+    font-size: $font-size-vh-middle; /* Ajustement de la taille de police pour desktop portrait */
   }
 }
 
@@ -99,11 +112,24 @@
     width: $object-size-vw-x3; /* Largeur ajustée pour mobile paysage */
   }
 
+  /* Tablette */
+  @include tablette {
+    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour tablette */
+    padding: $padding-vw-d2 $padding-vw-base; /* Padding ajusté pour tablette */
+    width: $object-size-vw-x3; /* Largeur ajustée pour tablette */
+  }
   /* Desktop */
   @include desktop {
     font-size: $font-size-vw-d2; /* Taille de la police ajustée pour desktop */
     padding: $padding-vw-d4; /* Padding ajusté pour desktop */
     width: $object-size-vw-x3; /* Largeur ajustée pour desktop */
+  }
+  
+  /* Desktop portrait */
+  @include desktop-portrait {
+    font-size: $font-size-vh-d2; /* Taille de la police ajustée pour desktop portrait */
+    padding: $padding-vh-d4; /* Padding ajusté pour desktop portrait */
+    width: $object-size-vh-x3; /* Largeur ajustée pour desktop portrait */
   }
 }
 
@@ -140,6 +166,11 @@
   /* Desktop */
   @include desktop {
     font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
+  }
+
+  /* Desktop portrait */
+  @include desktop-portrait {
+    font-size: $font-size-vh-base; /* Ajustement de la taille de police pour desktop portrait */
   }
 }
 
