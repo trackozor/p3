@@ -1,61 +1,197 @@
-/* _loader.scss */
+/*--------------------------------------------------------------------------------------------------------*/
+/* Nom du fichier      : _loader.scss                                                                      */
+/* Auteur              : Trackozor                                                                         */
+/* Date de création    : 25/09/2024                                                                        */
+/* Dernière modification: 27/09/2024                                                                       */
+/* Description         : Styles pour le loader couvrant toute la page avec animation et éléments dynamiques */
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Loader Principal ------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* Loader couvrant toute la page */
 #loader {
-    position: fixed;
-    width:100%;
-    height:100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%));
-    display: $loader-active;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 1;
-    animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader */
+    position: fixed; /* Position fixe pour couvrir toute la page */
+    width: 100%; /* Largeur à 100% de la page */
+    height: 100%; /* Hauteur à 100% de la page */
+    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%)); /* Dégradé de fond */
+    display: flex; /* Active le flexbox pour centrer les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    z-index: 5; /* Priorité d'affichage élevée */
+    opacity: 1; /* Complètement visible au départ */
+    animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader après 5s */
+
+    /* Landscape*/
+    @include mobile-landscape {
+        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour mobile paysage */
+        height: $object-size-vh-x20; /* Hauteur de la carte pour mobile paysage */
+        box-shadow: $border-shadow-vh; /* Ombre pour mobile paysage */
+        margin: $margin-vh-d4 auto; /* Marges pour mobile paysage */
+        height: auto; /* Ajustement de la hauteur automatique  */
+    }
+
+    /*--- Tablette ---*/
+    @include tablette {
+        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour tablette */
+        height: $object-size-vw-x25; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
+        margin: $margin-vw-d4 auto; /* Marges pour tablette */
+        width: 100%; /* Largeur à 100% pour tablette */
+    }
+
+    /*--- Desktop ---*/
+    @include desktop {
+        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour desktop */
+        height: $object-size-vw-x20; /* Hauteur de la carte pour desktop */
+        box-shadow: $border-shadow-vw; /* Ombre pour desktop */
+        height: 100%; /* Ajustement de la hauteur automatique  */
+
+    }
 }
 
-/* Carte avec le logo, message et barre de progression */
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Carte du Loader -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Carte contenant le logo, horloge, sablier et barre de progression */
 .loader-card {
-    background-color:$primary-background-color;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    animation: shrink 3s ease-in-out forwards; /* Animation de disparition de la carte */
+    background-color: white; /* Couleur de fond personnalisée */
+    padding: $padding-vh-x2; /* Padding interne adapté à l'écran */
+    border-radius: $border-radius-vh-base; /* Bords arrondis */
+    box-shadow: 0 $font-size-vh-x2 $font-size-vh-x3 rgba(0, 0, 0, 0.2); /* Ombre légère */
+    text-align: center; /* Centre le texte */
+    animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
+
+    /*--- Landscape ---*/
+    @include mobile-landscape {
+        border-radius: $border-radius-vw-base; /* Bord arrondis pour mobile paysage */
+        height: $object-size-vw-x20; /* Hauteur de la carte pour mobile paysage */
+        box-shadow: $border-shadow-vw; /* Ombre pour mobile paysage */
+        margin: $margin-vw-d4 auto; /* Marges pour mobile paysage */
+        height: auto; /* Ajustement de la hauteur automatique  */
+    }
+    
+    /*--- Tablette ---*/
+    @include tablette {
+        border-radius: $border-radius-vw-base; /* Bord arrondis pour tablette */
+        height: $object-size-vw-x25; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
+        margin: $margin-vw-base auto; /* Marges pour tablette */
+        width: 100%; /* Largeur à 100% pour tablette */
+    }
+    
+    /*--- Desktop ---*/
+    @include desktop {
+        border-radius: $border-radius-vw-base; /* Bord arrondis pour desktop */
+        height:30vw; /* Hauteur pour desktop */
+        box-shadow: $border-shadow-vw; /* Ombre pour desktop */
+        margin: $margin-vw-base auto; /* Marges pour*/
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
 }
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------- Logo du Loader -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* Logo du loader */
 .loader-logo {
-    width: 100px;
-    margin-bottom: 20px;
+    width:30%; /* Largeur du logo */
+    margin-bottom: 2vh; /* Marge inférieure de 20px */
+
+    /*--- Landscape ---*/
+    @include mobile-landscape {
+        width: 30%; /* Largeur du logo pour mobile paysage */
+        margin-bottom: 2vw; /* Marge inférieure pour mobile paysage */
+    }
+    
+    /*--- Tablette ---*/
+    @include tablette {
+        width: 30%; /* Largeur du logo pour tablette */
+        margin-bottom: 2vw; /* Marge inférieure pour tablette */
+    }
+    
+    /*--- Desktop ---*/
+    @include desktop {
+        width: 20%; /* Largeur du logo pour desktop */
+        margin-bottom: 2vw; /* Marge inférieure pour desktop */
+
+    }
+    
 }
 
-/* Message dynamique */
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------- Horloge Animée -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Horloge animée */
+.loader-clock {
+    width: 50px; /* Largeur de l'horloge */
+    margin-bottom: 20px; /* Marge inférieure */
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Sablier Dynamique -----------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Sablier dynamique placé au-dessus de la barre de progression */
+.loader-sablier {
+    width: 20%; /* Largeur du sablier */
+    margin-bottom: 10px; /* Marge inférieure */
+    animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards; /* Combine rotation et rétrécissement */
+    animation-delay: 0s, 1s; /* Le rétrécissement démarre après 2 secondes */
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Message Dynamique -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--- Message dynamique affiché dans le loader */
 .loader-message {
-    font-family: $font-primary;
-    font-size: $font-size-vh-x2;
-    color: #333;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive du message */
+    font-family: $font-primary; /* Police personnalisée */
+    font-size: $font-size-vh-x2; /* Taille de la police adaptée à l'écran */
+    color: #333; /* Couleur du texte en gris foncé */
+    margin-bottom: 20px; /* Marge inférieure de 20px */
+    opacity: 0; /* Initialement invisible */
+    animation: fadeInMessage 1.5s ease-in-out 1s forwards; /* Apparition progressive avec un délai d'1 seconde */
 }
 
-/* Barre de progression */
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Barre de Progression ----------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--- Conteneur de la barre de progression ---*/
 .progress-bar-container {
-    background-color: #ddd;
-    border-radius: 5px;
-    width: 100%;
-    height: 10px;
-    overflow: hidden;
-    margin-top: 20px;
+    background-color: #ddd; /* Fond gris clair pour le conteneur */
+    border-radius: $border-radius-vh-base; /* Bords arrondis */
+    width: 100%; /* Largeur complète */
+    height: $object-size-vh-x2; /* Hauteur de la barre de progression */
+    overflow: hidden; /* Cache le contenu qui dépasse les bords */
+    margin-top: $margin-vh-base; /* Marge supérieure */
+    position: relative; /* Position relative pour positionner le pourcentage */
 }
 
+/*--- Barre de progression ---*/
 .progress-bar {
-    height: 100%;
-    width: 0;
-    background-color: #9356DC;
-    animation: loadProgressBar 3s ease-in-out forwards; /* Animation pour remplir la barre */
+    height: 100%; /* Hauteur complète à l'intérieur du conteneur */
+    width: 0; /* Commence vide */
+    background-color: #9356DC; /* Couleur de la barre de progression */
+    animation: loadProgressBar 3s ease-in-out forwards; /* Remplit la barre en 3 secondes */
 }
+
+/*--- Texte du pourcentage ---*/
+.progress-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: $font-size-vh-base;
+    animation: textAppear 1.5s ease-in-out forwards;
+}
+
 

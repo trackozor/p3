@@ -86,6 +86,30 @@
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Animations et Keyframes -------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Rotation du logo */
+@keyframes logoSpin {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+}
+
+/* Rotation de l'horloge */
+@keyframes rotateClock {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } /* Rotation complète de l'horloge */
+}
+
+/* Sablier dynamique */
+@keyframes sandFlow {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0.5); } /* Le sablier se vide à moitié */
+    100% { transform: scaleY(1); } /* Le sablier se remplit à nouveau */
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------- Animation barre de progression ------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 @keyframes loadProgressBar {

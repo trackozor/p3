@@ -28,17 +28,44 @@
 <!-- **************************************************************************************************************************** -->
 <!-- *********************************************   LOADER      **************************************************************** -->
 <!-- **************************************************************************************************************************** -->
+<div id="loader" class="loader-active" aria-label="Chargement en cours">
+    <!-- Horloge à gauche du conteneur (sans aiguilles) -->
+    <div class="loader-clock loader-clock-left">
+        <img src="../images/clock-without-hands.svg" alt="Horloge sans aiguilles">
+        <!-- Aiguille des heures -->
+        <img src="../images/hour-hand.svg" alt="Aiguille des heures" class="hour-hand">
+        <!-- Aiguille des minutes -->
+        <img src="../images/minute-hand.svg" alt="Aiguille des minutes" class="minute-hand">
+    </div>
 
-        <div id="loader" class="loader-active">
-            <div class="loader-card">
-                <img src="../images/logo/ohmyfood@2x.svg" alt="Logo" class="loader-logo">
-                <p class="loader-message" id="loader-message">Et encore du temps de gagner</p>
-                <p class="loader-message" id="loader-message1"> Merci et a bientôt</p>
-                <div class="progress-bar-container">
-                <div class="progress-bar">chargement</div>
-                </div>
-            </div>             
-        </div> 
+    <div class="loader-card">
+        <!-- Logo animé -->
+        <img src="../images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" class="loader-logo">
+
+        <!-- Message dynamique -->
+        <p class="loader-message">Profitez de vos instants ....</p>
+        <p class="loader-message1">Nous nous occupons du reste</p>
+
+        <!-- Sablier dynamique -->
+        <img src="../images/loader/sablier.jpg" alt="Sablier" class="loader-sablier">
+
+        <!-- Barre de progression avec pourcentage -->
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <span class="progress-text" id="progress-percentage">0%</span>
+            </div>
+        </div>
+    </div>             
+
+    <!-- Horloge à droite du conteneur (sans aiguilles) -->
+    <div class="loader-clock loader-clock-right">
+        <img src="../images/clock-without-hands.svg" alt="Horloge sans aiguilles">
+        <!-- Aiguille des heures -->
+        <img src="../images/hour-hand.svg" alt="Aiguille des heures" class="hour-hand">
+        <!-- Aiguille des minutes -->
+        <img src="../images/minute-hand.svg" alt="Aiguille des minutes" class="minute-hand">
+    </div>
+</div>
 
 <!-- **************************************************************************************************************************** -->
 <!-- *********************************************      HEADER    *************************************************************** -->
