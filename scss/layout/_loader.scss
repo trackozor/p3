@@ -11,43 +11,50 @@
 /*--------------------------------------------------------------------------------------------------------*/
 
 /* Loader couvrant toute la page */
+/* Loader principal, centré */
 #loader {
     position: fixed;
-    background: linear-gradient(180deg, lighten(#FF79DA, 10%), lighten(#9356DC, 10%)); /* Dégradé de fond */
-    display: flex; /* Active le flexbox pour centrer les éléments */
-    flex-direction: column;
+    top: 0;
+    left: 0;
     width: 100%;
-    height:100%;
-    z-index: 5; /* Priorité d'affichage élevée */
-    opacity: 1; /* Complètement visible au départ */
-    animation: fadeOutLoader 5s ease-in-out forwards; /* Animation pour faire disparaître le loader après 5s */
-
-    /* Landscape*/
-    @include mobile-landscape {
-        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour mobile paysage */
-        height: $object-size-vh-x20; /* Hauteur de la carte pour mobile paysage */
-        box-shadow: $border-shadow-vh; /* Ombre pour mobile paysage */
-        margin: $margin-vh-d4 auto; /* Marges pour mobile paysage */
-        height: auto; /* Ajustement de la hauteur automatique  */
-    }
-
-    /*--- Tablette ---*/
-    @include tablette {
-        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour tablette */
-        height: $object-size-vw-x25; /* Ajuste la hauteur correspondant à 50 % de la largeur de l'écran*/
-        margin: $margin-vw-d4 auto; /* Marges pour tablette */
-        width: 100%; /* Largeur à 100% pour tablette */
-    }
-
-    /*--- Desktop ---*/
-    @include desktop {
-        background-color: lighten(#FF79DA, 10%); /* Couleur de fond personnalisée pour desktop */
-        height: $object-size-vw-x20; /* Hauteur de la carte pour desktop */
-        box-shadow: $border-shadow-vw; /* Ombre pour desktop */
-        height: 100%; /* Ajustement de la hauteur automatique  */
-
-    }
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    z-index: 5;
+    animation: fadeOutLoader 5s ease-in-out forwards;
 }
+
+/* Horloge positionnée à gauche du loader-card */
+.loader-clock {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Ajuste la taille de l'horloge */
+}
+
+/* Aiguille des heures */
+.hour-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%; /* Point d'origine pour la rotation */
+    animation: rotateHour 3600s linear infinite; /* Rotation lente des heures */
+}
+
+/* Aiguille des minutes */
+.minute-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%; /* Point d'origine pour la rotation */
+    animation: rotateMinute 60s linear infinite; /* Rotation plus rapide des minutes */
+}
+
+
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------- Carte du Loader -------------------------------------------*/
@@ -56,16 +63,17 @@
 /* Carte contenant le logo, horloge, sablier et barre de progression */
 .loader-card {
     background-color: white; /* Couleur de fond personnalisée */
-    padding: $padding-vh-x2 0; /* Padding interne adapté à l'écran */
     border-radius: $border-radius-vh-base; /* Bords arrondis */
     box-shadow: 0 $font-size-vh-x2 $font-size-vh-x3 rgba(0, 0, 0, 0.2); /* Ombre légère */
     text-align: center; /* Centre le texte */
     animation: shrink 5s ease-in-out forwards; /* Animation de rétrécissement pour la disparition de la carte */
     flex-direction: column;
     display: flex;
-    width: 56%;
-    align-items: center;
-
+    width: 55vh;
+    position: absolute;
+    left: 1%;
+    top:15%;
+    height:60vh;
     /*--- Landscape ---*/
     @include mobile-landscape {
         border-radius: $border-radius-vw-base; /* Bord arrondis pour mobile paysage */
@@ -85,14 +93,15 @@
     
     /*--- Desktop ---*/
     @include desktop {
-        border-radius: $border-radius-vw-base; /* Bord arrondis pour desktop */
-        height:30vw; /* Hauteur pour desktop */
+
         box-shadow: $border-shadow-vw; /* Ombre pour desktop */
-        margin: $margin-vw-base auto; /* Marges pour*/
+        margin: 0 auto; /* Marges pour*/
         width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-content: center;
+        
         
     }
 }
@@ -127,16 +136,31 @@
     
 }
 
+
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------- Horloge Animée -------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-/* Horloge animée */
+
+/* Horloge positionnée à gauche du loader-card */
 .loader-clock {
-    width: 10%; /* Largeur de l'horloge */
-    margin: $margin-vh-d2 0; /* Marge inférieure */
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Ajuste la taille de l'horloge */
 }
 
+.loader1  {
+    position: absolute;
+    z-index: 6;
+    height:60%;
+    width:80%;
+    padding:0;
+    top:7%;
+    left:30%
+
+}
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------- Sablier Dynamique -----------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
