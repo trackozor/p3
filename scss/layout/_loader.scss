@@ -14,14 +14,13 @@
 .loader-active {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height:100%;
     background: black;
-    display: flex;
+    display: $loader-active;
     flex-direction: column;
-    justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    align-content: center;
-    z-index: 5;
+    justify-content: space-around;
+    z-index: 6;
     animation: fadeOutLoader 5s ease-in-out forwards;
 
 
@@ -41,23 +40,16 @@
     flex-direction: column;
     display: flex;
     width:90%;
-    height:60%;
     align-items: center;
-    z-index: 7;
-    position: absolute;
-    left: 0;
-    top:10%;
-    padding: 2vh;
+    align-content:space-around;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    position:absolute;
+
+    
 
 
-    /*--- Landscape ---*/
-    @include mobile-landscape {
-        border-radius: $border-radius-vw-base; /* Bord arrondis pour mobile paysage */
-        height: $object-size-vw-x20; /* Hauteur de la carte pour mobile paysage */
-        box-shadow: $border-shadow-vw; /* Ombre pour mobile paysage */
-        margin: $margin-vw-d4 auto; /* Marges pour mobile paysage */
-        height: auto; /* Ajustement de la hauteur automatique  */
-    }
+   
     
     /*--- Tablette ---*/
     @include tablette {
@@ -78,7 +70,6 @@
         align-items: center;
         align-content: center;
         width: 50%;
-        height:70%;
         left:20%;
         top:15%;
         
@@ -91,14 +82,10 @@
 
 /* Logo du loader */
 .loader-logo {
-    width:30%; /* Largeur du logo */
-    margin-bottom: 2vh; /* Marge inférieure de 20px */
+    width:50%; /* Largeur du logo */
+    margin:1vh 0; /* Marge inférieure de 20px */
 
-    /*--- Landscape ---*/
-    @include mobile-landscape {
-        width: 30%; /* Largeur du logo pour mobile paysage */
-        margin-bottom: 2vw; /* Marge inférieure pour mobile paysage */
-    }
+   
     
     /*--- Tablette ---*/
     @include tablette {
@@ -123,43 +110,6 @@
 
 
 
-.loader1  {
-    position: absolute;
-    z-index: 6;
-    height:40%;
-    width: 60%;
-    padding:0;
-    bottom:75%;
-    align-items: center;
-    right:42.5%;
-
-    /*Desktop*/
-    @include desktop {
-        height:100%;
-        width: 100%;
-        right:18%;
-        bottom:15%;
-
-    }
-}
-
-.loader2  {
-    position: absolute;
-    z-index: 6;
-    height:40%;
-    width:60%;
-    padding:0;
-    top:30%;
-    right:42%;
-
-    /*Desktop*/
-    @include desktop {
-        height:100%;
-        width: 100%;
-        left:40%;
-        top:-15%;
-    }
-}
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------- Sablier Dynamique -----------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
@@ -171,11 +121,7 @@
     animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards; /* Combine rotation et rétrécissement */
     animation-delay: 0s, 1s; /* Le rétrécissement démarre après 2 secondes */
 
-    /*--- Landscape ---*/
-    @include mobile-landscape {
-        width: 20%; /* Largeur du sablier pour mobile paysage */
-        margin-bottom: 10px; /* Marge inférieure pour mobile paysage */
-    }
+    
     
     /*--- Tablette ---*/
     @include tablette {
@@ -228,10 +174,7 @@
     margin-top: $margin-vh-base; /* Marge supérieure */
     position: relative; /* Position relative pour positionner le pourcentage */
 
-    /*--- Landscape ---*/
-    @include mobile-landscape {
-        height: $object-size-vh-x2; /* Hauteur de la barre de progression pour mobile paysage */
-    }
+  
     
     /*--- Tablette ---*/
     @include tablette {
@@ -264,11 +207,7 @@
     animation: textAppear 1.5s ease-in-out forwards;
     height: 2vh;
 
-    /*--- Landscape ---*/
-    @include mobile-landscape {
-        font-size: $font-size-vh-base; /* Taille de la police adaptée à l'écran pour mobile paysage */
-        height: 2vh;
-    }
+    
     
     /*--- Tablette ---*/
     @include tablette {

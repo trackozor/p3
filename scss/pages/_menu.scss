@@ -51,13 +51,6 @@
     object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
 
-    /* Landscape */
-    @include mobile-landscape {
-        height: 30vw; /* Hauteur pour mobile paysage */
-        width: 100%; /* Largeur à 100% */
-        object-position: 50% 75%; /* Positionnement de l'image pour mobile paysage */
-        object-fit: cover; /* Ajustement de l'image pour mobile paysage */
-    }
     
     /* Desktop */
     @include desktop {
@@ -77,14 +70,7 @@
     width: 100%; /* Largeur à 100% */
     object-position: 50% 95%; /* Positionnement bas de l'image */
     object-fit: cover; /* L'image couvre tout le conteneur */
-
-    /* Landscape */
-    @include mobile-landscape {
-        height: 40vw; /* Hauteur réduite pour mobile paysage */
-        width: 100%; /* Largeur à 100% */
-        object-position: 50% 90%; /* Positionnement de l'image pour mobile paysage */
-        object-fit: cover; /* Ajustement de l'image pour mobile paysage */
-    }
+  
     
     /* Tablette */
     @include tablette {
@@ -113,13 +99,6 @@
     object-position: 50% 85%; /* Positionnement bas de l'image */
     object-fit: cover; /* L'image couvre tout le conteneur */
 
-    /* Landscape */
-    @include mobile-landscape {
-        height: 40vw; /* Hauteur ajustée pour mobile paysage */
-        width: 100%; /* Largeur à 100% */
-        object-position: 50% 95%; /* Positionnement bas de l'image pour mobile paysage */
-        object-fit: cover; /* Ajustement de l'image pour mobile paysage */
-    }
     
     /* Tablette */
     @include tablette {
@@ -149,11 +128,7 @@
     padding-left: 1vh; /* Padding à gauche du titre */
     justify-content: space-between; /* Espacement entre les éléments */
 
-    /* Landscape */
-    @include mobile-landscape {
-        font-size: $font-size-vw-title; /* Taille de la police adaptée à la largeur de l'écran pour mobile paysage */
-        padding-left: 1vw; /* Padding à gauche pour mobile paysage */
-    }
+ 
     
     /* Desktop */
     @include desktop {

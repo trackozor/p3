@@ -33,12 +33,7 @@
   box-shadow: $border-shadow-vh; /* Ajoute une ombre */
   border-radius: $border-radius-vh-x2; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
 
-  /* Landscape */
-  @include mobile-landscape {
-    border-radius: $border-radius-vw-x2; /* Bord arrondis ajusté à 4% de la largeur de l'écran */
-    box-shadow: $border-shadow-vw; /* Ombre pour mobile en paysage */
-    padding: $padding-vw-base; /* Padding ajusté à 2% de la largeur de l'écran */
-  }
+
 
   /* Tablette */
   @include tablette {
@@ -55,13 +50,7 @@
     margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
   }
 
-  /* Desktop portrait */
-  @include desktop-portrait {
-    border-radius: $border-radius-vh-x2; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $border-shadow-vh; /* Ombre pour desktop portrait */
-    padding: $padding-vh-d2 $padding-vh-x2; /* Padding ajusté pour desktop portrait */
-    margin-top: 2vh; /* Ajout d'une marge supérieure sur desktop portrait */
-  }
+
 
   /* Effet de survol */
   &:hover {
@@ -75,20 +64,13 @@
   font-size: $font-size-vh-base; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: $font-weight-l-bold; /* Style de police en gras (bold) */
 
-  /* Landscape */
-  @include mobile-landscape {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile en paysage */
-  }
-
+  
   /* Desktop */
   @include desktop {
     font-size: $font-size-vw-middle; /* Ajustement de la taille de police pour desktop */
   }
 
-  /* Desktop portrait */
-  @include desktop-portrait {
-    font-size: $font-size-vh-middle; /* Ajustement de la taille de police pour desktop portrait */
-  }
+
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -105,12 +87,7 @@
   display: flex; /* Utilisation de flexbox pour l'alignement */
   justify-content: center; /* Centrage horizontal du texte */
 
-  /* Landscape */
-  @include mobile-landscape {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile en paysage */
-    padding: $padding-vw-d2 $padding-vw-base; /* Padding ajusté pour mobile paysage */
-    width: $object-size-vw-x3; /* Largeur ajustée pour mobile paysage */
-  }
+ 
 
   /* Tablette */
   @include tablette {
@@ -125,12 +102,7 @@
     width: $object-size-vw-x3; /* Largeur ajustée pour desktop */
   }
   
-  /* Desktop portrait */
-  @include desktop-portrait {
-    font-size: $font-size-vh-d2; /* Taille de la police ajustée pour desktop portrait */
-    padding: $padding-vh-d4; /* Padding ajusté pour desktop portrait */
-    width: $object-size-vh-x3; /* Largeur ajustée pour desktop portrait */
-  }
+  
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -153,10 +125,7 @@
 .fa-full, .fa-empty {
   font-size: $font-size-vh-title; /* Taille de police pour les icônes */
 
-  /* Landscape */
-  @include mobile-landscape {
-    font-size: $font-size-vw-title; /* Ajustement de la taille de police pour mobile paysage */
-  }
+  
 
   /* Tablette */
   @include tablette {
@@ -168,10 +137,7 @@
     font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
   }
 
-  /* Desktop portrait */
-  @include desktop-portrait {
-    font-size: $font-size-vh-base; /* Ajustement de la taille de police pour desktop portrait */
-  }
+
 }
 
 /* Animation au survol du bouton favori */
@@ -217,12 +183,7 @@ input {
   color: black; /* Couleur du texte en noir */
   font-size: $font-size-vh-base; /* Taille de la police */
   padding: 0; /* Pas de padding */
-  border: none; /* Pas de bordure */
-
-  /* Landscape */
-  @include mobile-landscape {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour mobile paysage */
-  }
+  border: none; /* Pas de bordure */ 
 
   /* Tablette */
   @include tablette {

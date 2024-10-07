@@ -38,13 +38,6 @@ header {
   display:flex;
   margin: 0 auto;
   align-items: center;
-
-  /* Landscape */
-  @include mobile-landscape {
-    border-top: $font-size-vw-d4 solid lightgrey; /* Bordure supérieure ajustée à 0.5% de la largeur de l'écran pour mobile paysage */
-    border-bottom: $font-size-vw-d4 solid lightgrey; /* Bordure inférieure ajustée pour mobile paysage */
-    align-items: center;
-  }
   
   /* Tablette */
   @include tablette {
@@ -60,12 +53,7 @@ header {
     width:100%;
   }
 
-  /* Desktop portrait */
-  @include desktop-portrait {
-    border: none; /* Suppression des bordures sur les écrans en mode paysage sur desktop (portrait) */
-    align-items: center;
-    width:100%;
-  }
+  
 }
 
 

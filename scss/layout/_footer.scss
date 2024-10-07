@@ -26,10 +26,6 @@ footer {
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
     margin-top:2vh;
 
-    /* Landscape */
-    @include mobile-landscape {
-        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour mobile en mode paysage, équivalent à 1% de la largeur de l'écran */
-    }
 
     /* Tablettes */
     @include tablette {
@@ -43,8 +39,4 @@ footer {
         margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
     }
 
-    @include desktop-portrait {
-        margin-top: 5vh; /* Ajoute une marge supplémentaire sur les écrans de petite taille pour centrer le footer */
-        
-    }
 }

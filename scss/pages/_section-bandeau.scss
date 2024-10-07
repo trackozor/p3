@@ -29,11 +29,6 @@
     align-items: center; /* Centre les éléments sur l'axe vertical */
     width: 90%; /* Le conteneur prend 90% de la largeur disponible */
 
-    /*  Landscape  */
-    @include mobile-landscape {
-        margin: $margin-vw-base $margin-vw-x2; /* Ajustement des marges pour mobile en mode paysage */
-    }
-
     /* Tablette */
     @include tablette {
         gap: $gap-vw-d4; /* Ajoute un espace entre les éléments pour tablette */
@@ -44,12 +39,6 @@
         margin: $margin-vw-base 5vw; /* Ajustement des marges pour desktop */
         width: 90%; /* Largeur du conteneur sur desktop */
     }
-
-    /* Desktop portrait */
-    @include desktop-portrait {
-        margin: $margin-vh-base 5vw; /* Ajustement des marges pour desktop portrait */
-        width: 90%; /* Largeur du conteneur sur desktop portrait */
-    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -57,11 +46,6 @@
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
     padding: $padding-vh-d4 0; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
-
-    /*  Landscape  */
-    @include mobile-landscape {
-        padding: $padding-vw-d4 0; /* Ajustement du padding pour mobile en mode paysage */
-    }
 
     /* Tablette */
     @include tablette {
@@ -74,12 +58,6 @@
         margin-bottom: $margin-vw-base; /* Marge en bas pour desktop */
         font-weight: $font-weight-l-bold; /* Gras du texte pour desktop */
     }
-
-    /* Desktop portrait */
-    @include desktop-portrait {
-        padding: $padding-vh-d4 $padding-vh-base; /* Ajustement du padding pour desktop portrait */
-        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop portrait */
-    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -90,11 +68,6 @@
     margin-bottom: $margin-vh-base; /* Marge en bas du paragraphe */
     font-weight: $font-weight-l-bold; /* Gras du texte */
 
-    /*  Landscape  */
-    @include mobile-landscape {
-        padding: $padding-vw-d2 $padding-vw-base; /* Ajustement du padding pour mobile paysage */
-        margin-bottom: $margin-vw-base; /* Ajustement de la marge pour mobile paysage */
-    }
 
     /* Tablette */
     @include tablette {
@@ -119,14 +92,8 @@
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
     gap: 3vh; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-    margin: 10vh auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+    margin: 4vh auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
     width: 90%; /* Largeur de 90% du conteneur */
-
-    /* Landscape */
-    @include mobile-landscape {
-        margin: 10vw 3vw; /* Marge ajustée pour mobile paysage */
-        gap: 3vw; /* Espacement ajusté pour mobile paysage */
-    }
 
     /* Tablette */
     @include tablette {
@@ -152,12 +119,6 @@ ol {
     width: 95%; /* Largeur de 95% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
 
-    /* Landscape */
-    @include mobile-landscape {
-        flex-direction: column; /* Colonne pour mobile paysage */
-        width: 95%; /* Largeur ajustée */
-        justify-content: center; /* Centre les éléments pour mobile paysage */
-    }
 
     /* Desktop */
     @include desktop {
@@ -181,10 +142,6 @@ ol li {
     width: 100%; /* Prend toute la largeur du conteneur */
     justify-content: space-around; /* Espace autour des éléments de la liste */
 
-    /* Landscape */
-    @include mobile-landscape {
-        margin: $margin-vw-base $margin-vw-d2; /* Ajustement des marges pour mobile paysage */
-    }
 
     /* Desktop */
     @include desktop {
@@ -209,13 +166,6 @@ ol li {
     margin-right: $margin-vh-d2; /* Marge à droite du texte */
     font-size: 2vh; /* Taille de la police */
 
-    /* Landscape */
-    @include mobile-landscape {
-        left: 1vw; /* Décalage du texte pour mobile paysage */
-        border-radius: $border-radius-vw-base; /* Bord arrondi pour mobile paysage */
-        box-shadow: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* Ombre pour mobile paysage */
-        height: 5vw; /* Hauteur du conteneur ajustée pour mobile paysage */
-    }
 
     /* Desktop */
     @include desktop {
@@ -246,12 +196,6 @@ ol li .puce_num {
     font-size: 1.4vh; /* Taille de la police du numéro */
     animation: pulse 1.5s ease-in-out 2; /* Animation de pulsation pour l'icône numérotée */
 
-    /* Landscape */
-    @include mobile-landscape {
-        height: 3vw; /* Hauteur ajustée pour mobile paysage */
-        width: 3vw; /* Largeur ajustée pour mobile paysage */
-        font-size: 1.4vw; /* Taille de la police ajustée pour mobile paysage */
-    }
 
     /* Desktop */
     @include desktop {
@@ -271,10 +215,6 @@ i {
     margin: 0 $margin-vh-base 0 $margin-vh-x2; /* Marges autour de l'icône */
 
     /* Landscape */
-    @include mobile-landscape {
-        font-size: $font-size-vw-base; /* Taille de la police ajustée pour mobile paysage */
-        margin: 0 $margin-vw-base 0 $margin-vw-x2; /* Marges ajustées pour mobile paysage */
-    }
 
     /* Desktop */
     @include desktop {
