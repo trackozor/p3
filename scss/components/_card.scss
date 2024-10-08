@@ -54,9 +54,9 @@
 .card-logo-alt {
     display:flex;/* Utilise flexbox pour aligner les éléments */
     align-items: center;/* Aligne les éléments verticalement */
-    height: $object-size-x2-5;/* Hauteur correspond à 5% de la hauteur de l'écran */
     justify-content: center;/* Centre les éléments horizontalement */
     position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
+    padding: 2% 0;
 
     /* Desktop */   
     @include desktop {
@@ -77,8 +77,8 @@
 /*-- Icône de flèche retour --*/
 .card-logo-alt i {
     position: absolute; /* Positionne l'icône de manière absolue dans la carte */
-    left:-12%; /* Place l'icône à gauche, hors de la carte */
-    top: 35%; /* Place l'icône à 35% du haut du conteneur */
+    left:1%; /* Place l'icône à gauche, hors de la carte */
+    top: 25%; /* Place l'icône à 35% du haut du conteneur */
 
     /* Desktop */
     @include desktop {
@@ -358,10 +358,9 @@
 .card-menu {
     background-color: white; /* Couleur de fond de la carte menu */
     border-radius: 2vh; /* Bord arrondis */
-    height: $object-size-x5; /* Hauteur correspondant à 10 % de la hauteur de l'écran */
     display: flex; /* Utilise flexbox pour aligner les éléments */
     box-shadow: $border-shadow; /* Ombre portée */
-    margin: $margin-d2 5%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
+    margin: $margin-d2 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Espace entre les éléments */
 
@@ -388,17 +387,19 @@
 
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
-    font-size: $font-size-base; /* Taille du texte pour le nom du plat */
+    font-size: 0.9rem; /* Taille du texte pour le nom du plat */
     font-weight: $font-weight-h-bold; /* Style gras pour le nom du plat */
-    padding: $padding-d2; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+    padding: $padding-base; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
 
 }
 
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
     width: 100%;
-    font-size: 0.7rem; /* Taille du texte pour la description du plat */
+    font-size: 0.9rem; /* Taille du texte pour la description du plat */
     word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
+    padding-left: 2%;
+    margin-bottom: 2%;
     
     /* tablette */
     @include tablette {
@@ -422,7 +423,7 @@
 
 /*-- Prix du plat dans la carte menu --*/
 .dish-content .price {
-    font-size: $font-size-base; /* Taille du texte pour le prix */
+    font-size: 0.7rem; /* Taille du texte pour le prix */
     font-weight: $font-weight-h-bold; /* Style gras pour le prix */
     padding-right: $padding-d2; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
 
@@ -439,7 +440,13 @@
         padding-right: $padding-d2; /* Padding horizontal pour desktop */
     }
 }
+.title h2{
+    margin-right: 10%;
 
+}
+.menu h3 {
+    padding-left: 1%;
+}
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
@@ -447,7 +454,7 @@
 /*-- Conteneur principal --*/
 .footer-card {
     padding: $padding-base; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
-    font-size: 1rem;
+    font-size: 0.8rem;
 
     /* tablette */
     @include tablette {
@@ -491,6 +498,7 @@
     margin-right: $margin-base; /* Espace à droite des icônes */
     margin-left: 0; /* Pas d'espace à gauche */
     color: white; /* Couleur blanche pour les icônes */
+    font-size: 0.7rem;
 
     /* tablette */
     @include tablette {
