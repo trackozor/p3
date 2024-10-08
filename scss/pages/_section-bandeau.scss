@@ -94,7 +94,7 @@
     /*-- large desktop --*/
     @include large-desktop {
         padding: 5%;
-        margin:2%;
+        margin:0;
     }
 }
 .fonctionnement h2 {
@@ -110,6 +110,12 @@
     @include desktop {
         font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
         margin:1% 0;
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
+        margin:0;
     }
 }
 /*----------------------------------------------------------------------------------------------------------*/
@@ -129,6 +135,13 @@ ol {
         flex-direction: row; /* Alignement en ligne pour desktop */
         gap: 2rem; /* Espace entre les éléments de la liste pour desktop */
         justify-content: space-around; /* Espace autour des éléments pour desktop */
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        flex-direction: row; /* Alignement en ligne pour large desktop */
+        gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
+        justify-content: space-around; /* Espace autour des éléments pour large desktop */
     }
 }
 
@@ -157,6 +170,12 @@ ol li {
     /* Desktop */
     @include desktop {
         margin: $margin-base $margin-d2; /* Ajustement des marges pour desktop */
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        margin: $margin-base $margin-d4; /* Ajustement des marges pour large desktop */
+        gap:1%;
     }
 }
 
@@ -194,6 +213,14 @@ ol li {
         height: 4vw; /* Hauteur du conteneur ajustée pour desktop */
         font-size: 1rem; /* Taille de la police pour desktop */
     }
+
+    /* Large desktop */
+    @include large-desktop {
+        left: 1vw; /* Décalage du texte pour large desktop */
+        border-radius: $border-radius-base; /* Bord arrondi pour large desktop */
+        box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour large desktop */
+        font-size: 1rem; /* Taille de la police pour large desktop */
+    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -221,6 +248,13 @@ ol li .puce_num {
         height: 1.5rem;
         width:1.5rem /* Décalage de l'icône numérotée pour desktop */
     }
+    
+    /* Large desktop */
+    @include large-desktop {
+        height: 1.5rem;
+        width: 1.5rem; /* Décalage de l'icône numérotée pour large desktop */
+        left:2%
+    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -242,6 +276,12 @@ i {
     @include desktop {
         font-size: $font-size-base; /* Taille de la police ajustée pour desktop */
         margin: 0 $margin-base 0 $margin-base; /* Marges ajustées pour desktop */
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        font-size: $font-size-base; /* Taille de la police ajustée pour large desktop */
+        margin: 0 $margin-base 0 $margin-base; /* Marges ajustées pour large desktop */
     }
 }
 /*----------------------------------------------------------------------------------------------------------*/

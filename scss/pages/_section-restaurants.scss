@@ -19,6 +19,15 @@
         padding-top: 0;
         
     }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 0;
+        width: 100%;
+    }
 }
 
 #section-restaurants h2 {

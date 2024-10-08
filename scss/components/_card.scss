@@ -31,8 +31,17 @@
 .card-logo img {
     display: flex;
     align-items: center;
-    width:40%
+    width:40%;
     
+    /*-- large desktop --*/
+    @include large-desktop {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-left:2rem;
+    }
 }
 
 
@@ -120,7 +129,7 @@
 
     /*-- Large desktop --*/
     @include large-desktop {
-        gap:2%; /* Ajuste l'espace entre les éléments pour desktop */
+        gap:0.2rem; /* Ajuste l'espace entre les éléments pour desktop */
         width: 100%;
         padding: 0; /* Ajuste les marges intérieures pour desktop */
         display: flex;
@@ -151,9 +160,9 @@
     
     /* Large desktop */
     @include large-desktop {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         align-items: center;
-        padding-top: 1.2rem; /* Ajuste la taille de l'icône pour desktop */
+        padding-top: 2.2rem; /* Ajuste la taille de l'icône pour desktop */
     }
     
 
@@ -442,17 +451,34 @@
 
     /* Desktop */
     @include desktop {
-         /* Padding vertical pour desktop */
         display: flex;
         flex-direction: row-reverse; /* Alignement horizontal des éléments */
-        justify-content: flex-start; /* Espace entre les éléments pour qu'ils ne se chevauchent pas */
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
         font-size: 0.8rem;
         margin-top: 5%;
         margin-bottom: 2%;
+        justify-content: flex-start;
+        margin-left: 30%;
+        padding-right: 0;
     }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: row-reverse; /* Alignement horizontal des éléments */
+        align-items: center; /* Aligne les éléments verticalement */
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        height: auto;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        justify-content: flex-start;
+        margin-left: 35%;
+        padding:1rem 0;
+    }   
 }
 
 /*-- Icônes dans le footer --*/
@@ -470,9 +496,16 @@
     
     /* Desktop */
     @include desktop {
-        margin-right: $margin-d2; /* Padding horizontal pour desktop */
+        margin-right: 0.7rem; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: 0.9rem; /* Taille de l'icône pour desktop */
+        font-size: 0.7rem; /* Taille de l'icône pour desktop */
+    }
+    
+    /*-- large desktop --*/
+    @include large-desktop {
+        margin-right: 0.6rem; /* Padding horizontal pour desktop */
+        margin-left: 0; /* Pas d'espace à gauche*/
+        font-size: 0.7rem; /* Taille de l'icône pour desktop */
     }
 }
 /*-- Icône poignée de mains dans le footer --*/
@@ -497,8 +530,16 @@
         display: flex;
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+        justify-content: flex-end;
+    }        
 
-    }
+    /*-- large desktop --*/
+    @include large-desktop {
+        margin-top: 0.2rem; /* Marge supérieur pour desktop */
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+    }             
 
 }
 /*-- listes --*/
@@ -511,7 +552,18 @@
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
     align-items: center;
-    margin-left: 20vh;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        display: flex; /* Utilise flexbox pour aligner les éléments */
+        justify-content: flex-end;
+        gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+        flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+        list-style: none; /* Retire les puces de la liste */
+        padding: 0;
+        align-items: center;
+        margin-left: 50%;
     }
 
 }
@@ -531,6 +583,13 @@
     
     /* Desktop */
     @include desktop {
+        width: 10%; /* L'image occupe 30% de la largeur  */
+        margin:0 5% ; /* Marge verticale pour desktop */
+        padding-top: $padding-d2; /* Padding inférieur pour desktop */
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
         width: 10%; /* L'image occupe 30% de la largeur  */
         margin:0 5% ; /* Marge verticale pour desktop */
         padding-top: $padding-d2; /* Padding inférieur pour desktop */

@@ -47,7 +47,15 @@
     border-radius: $border-radius-x2; /* Bord arrondis à 4% de la largeur de l'écran */
     box-shadow: $border-shadow; /* Ombre pour desktop */
     padding: $padding-d2 $padding-x2; /* Padding ajusté pour desktop */
-    margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
+    margin-top: 2%; /* Ajout d'une marge supérieure sur desktop */
+  }
+
+  /* Large desktop*/
+  @include large-desktop {
+    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $border-shadow; /* Ombre pour large desktop */
+    padding: $padding-base $padding-x2; /* Padding ajusté pour large desktop */
+    margin-top: 2%; /* Ajout d'une marge supérieure sur large desktop */
   }
 
 
@@ -68,6 +76,11 @@
   /* Desktop */
   @include desktop {
     font-size: $font-size-base; /* Ajustement de la taille de police pour desktop */
+  }
+
+  /* large desktop */
+  @include large-desktop {
+    font-size: 1.5rem /* Ajustement de la taille de police pour large desktop */
   }
 
 
