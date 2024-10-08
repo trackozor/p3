@@ -95,7 +95,7 @@
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     gap:$gap-x2;/* Espace entre les éléments de la carte */
-    background-color:#e0e0e0; /* Couleur de fond */
+    background-color:$primary-background-color; /* Couleur de fond */
     padding: $padding-base 0 ; /* Espace intérieur de la carte */
 
     /* Tablette */
@@ -109,10 +109,22 @@
 
     /* Desktop */
     @include desktop {
-        gap:$gap-d2; /* Ajuste l'espace entre les éléments pour desktop */
+        gap:0.5%; /* Ajuste l'espace entre les éléments pour desktop */
         width: 100%;
-        padding: $padding-d2 0; /* Ajuste les marges intérieures pour desktop */
+        padding: 0; /* Ajuste les marges intérieures pour desktop */
         display: flex;
+        align-items: center;
+        
+    
+    }
+
+    /*-- Large desktop --*/
+    @include large-desktop {
+        gap:2%; /* Ajuste l'espace entre les éléments pour desktop */
+        width: 100%;
+        padding: 0; /* Ajuste les marges intérieures pour desktop */
+        display: flex;
+        align-items: center;
         
     
     }
@@ -129,6 +141,19 @@
         font-size: 1rem; /* Ajuste la taille de l'icône pour tablette */
         align-items: center;
         padding-top: 0.6rem;
+    }
+    /* Desktop */
+    @include desktop {
+        font-size: 1rem;
+        align-items: center;
+        padding-top: 0.9rem; /* Ajuste la taille de l'icône pour desktop */
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        font-size: 1.1rem;
+        align-items: center;
+        padding-top: 1.2rem; /* Ajuste la taille de l'icône pour desktop */
     }
     
 
@@ -204,7 +229,7 @@
     /*-- Desktop --*/
     @include desktop {
         font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
-        margin-top: $margin-base; /* Ajuste la marge haute pour desktop */
+        margin-top: $margin-x2; /* Ajuste la marge haute pour desktop */
     }
 }
 
@@ -227,7 +252,7 @@
     @include desktop {
         font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
         gap: $gap-d2; /* Espace pour desktop */
-        margin: $margin-d2; /* Marges pour desktop */
+        margin: 2%; /* Marges pour desktop */
     }
 }
 
@@ -260,6 +285,7 @@
     /* Desktop */
     @include desktop {
         padding: $padding-d4 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+        margin-bottom: 2%;
     }
 }
 

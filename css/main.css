@@ -462,7 +462,7 @@ body {
 }
 @media (min-width: 1440px) {
   body {
-    max-width: 1440px;
+    max-width: 1024px;
     font-size: 1.5rem;
   }
 }
@@ -781,10 +781,11 @@ input {
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
   gap: 4%; /* Espace entre les éléments de la carte */
-  background-color: #e0e0e0; /* Couleur de fond */
+  background-color: #f9f9f9; /* Couleur de fond */
   padding: 2% 0; /* Espace intérieur de la carte */
   /* Tablette */
   /* Desktop */
+  /*-- Large desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card-location {
@@ -797,10 +798,20 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-location {
-    gap: 1%; /* Ajuste l'espace entre les éléments pour desktop */
+    gap: 0.5%; /* Ajuste l'espace entre les éléments pour desktop */
     width: 100%;
-    padding: 1% 0; /* Ajuste les marges intérieures pour desktop */
+    padding: 0; /* Ajuste les marges intérieures pour desktop */
     display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1440px) {
+  .card-location {
+    gap: 2%; /* Ajuste l'espace entre les éléments pour desktop */
+    width: 100%;
+    padding: 0; /* Ajuste les marges intérieures pour desktop */
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -809,12 +820,28 @@ input {
   font-size: 1rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
   color: black; /* Couleur de l'icône */
   /* Tablette */
+  /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card-location i {
     font-size: 1rem; /* Ajuste la taille de l'icône pour tablette */
     align-items: center;
     padding-top: 0.6rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-location i {
+    font-size: 1rem;
+    align-items: center;
+    padding-top: 0.9rem; /* Ajuste la taille de l'icône pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .card-location i {
+    font-size: 1.1rem;
+    align-items: center;
+    padding-top: 1.2rem; /* Ajuste la taille de l'icône pour desktop */
   }
 }
 
@@ -889,7 +916,7 @@ input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card h3 {
     font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
-    margin-top: 2%; /* Ajuste la marge haute pour desktop */
+    margin-top: 4%; /* Ajuste la marge haute pour desktop */
   }
 }
 
@@ -912,7 +939,7 @@ input {
   .card .card-title {
     font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
     gap: 1%; /* Espace pour desktop */
-    margin: 1%; /* Marges pour desktop */
+    margin: 2%; /* Marges pour desktop */
   }
 }
 
@@ -948,6 +975,7 @@ input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-txt {
     padding: 0.5% 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+    margin-bottom: 2%;
   }
 }
 
@@ -1250,6 +1278,7 @@ header {
     border: none; /* Suppression des bordures sur les grands écrans (desktop) */
     align-items: center;
     width: 100%;
+    padding: 4% 0;
   }
 }
 @media (min-width: 1440px) {
