@@ -51,59 +51,32 @@ $font-title: 'Shrikhand', sans-serif;
 
 /* ----------------------------Portrait----------------------*/
 /* Espace intérieur */
-$padding-vh-base: 2vh; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
-$padding-vh-middle: 3vh; /* Espace intérieur de base correspondant  à 3 % de la hauteur de l' écran */
-$padding-vh-x2: 4vh; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$padding-vh-x3: 6vh; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$padding-vh-x4: 8vh; /* Espace intérieur 4 fois supérieur soit 8 % de la hauteur de l'écran */
-$padding-vh-d2: 1vh; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
-$padding-vh-d4: 0.5vh; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
+$padding-base: 2%; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
+$padding-middle: 3%; /* Espace intérieur de base correspondant  à 3 % de la hauteur de l' écran */
+$padding-x2: 4%; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$padding-x3: 6%; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$padding-x4: 8%; /* Espace intérieur 4 fois supérieur soit 8 % de la hauteur de l'écran */
+$padding-d2: 1%; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
+$padding-d4: 0.5%; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
 
 /* Marge */
-$margin-vh-base: 2vh; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
-$margin-vh-middle: 3vh; /* Marge de base correspondant  à 3 % de la hauteur de l' écran */
-$margin-vh-x2: 4vh; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$margin-vh-x3: 6vh; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$margin-vh-x4: 8vh; /*Marge 4 fois supérieur soit 8% de la hauteur de l'écran*/
-$margin-vh-d2: 1vh; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
-$margin-vh-d4: 0.5vh; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
+$margin-base: 2%; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
+$margin-middle: 3%; /* Marge de base correspondant  à 3 % de la hauteur de l' écran */
+$margin-x2: 4%; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$margin-x3: 6%; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$margin-x4: 8%; /*Marge 4 fois supérieur soit 8% de la hauteur de l'écran*/
+$margin-d2: 1%; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
+$margin-d4: 0.5%; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
 
 /* Espace */
-$gap-vh-base: 2vh; /* Espace de base correspondant à 2% de la hauteur de l'écran */
-$gap-vh-middle: 3vh; /* Espace de base correspondant  à 3 % de la hauteur de l' écran */
-$gap-vh-x2: 4vh; /* Espace 2 fois supérieur soit 4% de la hauteur de l'écran*/
-$gap-vh-x3: 6vh; /* Espace 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$gap-vh-x4: 8vh; /* Espace 4 fois supérieur soit 8%  de la hauteur de l'écran*/
-$gap-vh-d2: 1vh; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
-$gap-vh-d4: 0.5vh; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
+$gap-base: 2%; /* Espace de base correspondant à 2% de la hauteur de l'écran */
+$gap-middle: 3%; /* Espace de base correspondant  à 3 % de la hauteur de l' écran */
+$gap-x2: 4%; /* Espace 2 fois supérieur soit 4% de la hauteur de l'écran*/
+$gap-x3: 6%; /* Espace 3 fois supérieur soit 6% de la hauteur de l'écran*/
+$gap-x4: 8%; /* Espace 4 fois supérieur soit 8%  de la hauteur de l'écran*/
+$gap-d2: 1%; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
+$gap-d4: 0.5%; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
 
-/*----------------------------- Paysage -----------------------*/
-/* Espace intérieur */
-$padding-vw-base: 2vw; /* Espace intérieur de base correspondant à 2 % de la largeur de l'écran */
-$padding-vw-middle: 3vw; /* Espace intérieur de base correspondant  à 3 % de la largeur de l' écran */
-$padding-vw-x2: 4vw; /* Espace intérieur 2 fois supérieur soit 4 % de la largeur de l'écran */
-$padding-vw-x3: 6vw; /* Espace intérieur 3 fois supérieur soit 6 % de la largeur de l'écran */
-$padding-vw-x4: 8vw; /* Espace intérieur 4 fois supérieur soit 8 % de la largeur de l'écran*/
-$padding-vw-d2: 1vw; /* Espace intérieur 2 fois inférieur soit 1% de la largeur de l'écran */
-$padding-vw-d4: 0.5vw; /*Espace intérieur 4 fois inférieur soit 0.5% de la largeur de l'écran*/
-
-/* Marge */
-$margin-vw-base: 2vw; /* Marge de base correspondant à 2 % de la largeur de l'écran*/
-$margin-vw-middle: 3vw; /* Marge de base correspondant  à 3 % de la largeur de l' écran */
-$margin-vw-x2: 4vw; /* Marge 2 fois supérieur soit 4 % de la margeur de l'écran*/
-$margin-vw-x3: 6vw; /* Marge 3 fois supérieur soit 6 % de la largeur de l' écran */
-$margin-vw-x4: 8vw; /* Marge  4 fois supérieur soit 8 % de la margeur de l'écran */
-$margin-vw-d2: 1vw; /* Marge 2 fois inférieur soit  1% de la largeur de l'écran */
-$margin-vw-d4: 0.5vw; /* Marge 4 fois inférieur soit 0.5 % de la largeur de l'écran*/
-
-/* Espace */
-$gap-vw-base: 2vw; /* Espace de base correspondant à 2% de la largeur de l'écran*/
-$gap-vw-middle: 3vw; /* Espace de base correspondant  à 3 % de la largeur de l' écran */
-$gap-vw-x2: 4vw; /* Espace 2 fois supérieur soit 4 % de la largeur de l'écran */
-$gap-vw-x3: 6vw; /* Espace 3 fois supérieur soit 6% de la largeur de l'écran */
-$gap-vw-x4: 8vw; /* Espace 4 fois supérieur soit 8 % de la largeur de l'écran */
-$gap-vw-d2: 1vw; /* Espace 2 fois inférieur soit 1 % de la largeur de l'écran*/
-$gap-vw-d4: 0.5vw; /* Espace 4 fois inférieur soit 0.5% de la largeur de l'écran*/
 
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -111,22 +84,13 @@ $gap-vw-d4: 0.5vw; /* Espace 4 fois inférieur soit 0.5% de la largeur de l'écr
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*-------------------- Portrait-----------------------------------*/
-$font-size-vh-base: 2vh; /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
-$font-size-vh-title: 3vh; /* Taille de police des titres soit 3% de la hauteur de l'écran*/
-$font-size-vh-middle: 1.5vh; /* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
-$font-size-vh-d2: 1vh; /* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
-$font-size-vh-d4: 0.5vh; /**/
-$font-size-vh-x2: 4vh; /* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$font-size-vh-x3: 6vw; /* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
-
-/*-------------------- Paysage ---------------------------------*/
-$font-size-vw-base: 2vw; /* Taille de police de base correspondant à 2 % de la largeur de l'écran*/ 
-$font-size-vw-title: 3vw; /* Taille de police des titres correspondant à 3 % de la largeur de l'écran*/
-$font-size-vw-middle: 1.5vw; /* Taille de police générique correspondant à 1.5 % de la largeur de l'écran*/
-$font-size-vw-d2: 1vw; /* Taille de police 2 fois inférieur soit 1 % de la largeur de l 'écran*/
-$font-size-vw-d4: 0.5vw; /**/
-$font-size-vw-x2: 4vw; /* Taille de police 2 fois supérieur soit 4 % de la largeur de l'écran*/
-$font-size-vw-x3: 6vw; /* Taille de police 3 fois supérieur soit 6 % de la largeur de l'écran*/
+$font-size-base: 1rem; /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
+$font-size-title: 1.2rem; /* Taille de police des titres soit 3% de la hauteur de l'écran*/
+$font-size-middle: 0.7rem; /* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
+$font-size-d2: 0.5rem; /* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
+$font-size-d4: 0.25rem; /**/
+$font-size-x2: 2rem; /* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+$font-size-x3: 3rem; /* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -143,54 +107,34 @@ $font-weight-l-bold: 100;/* Mie en evidence très légère = absence evidence*/
 /*------------------------------------------------------------------------------------------------------*/
 
 /*--------------------- Portrait ----------------------------------------------*/
-$border-radius-vh-base: 2vh;/* Arrondis de base dont le rayon de courbure correspond à 2 % de la hauteur de l'écran*/
-$border-radius-vh-x2: 4vh; /* Arrondis de courbure 2 fois supérieur soit 4% de la hauteur de l’écran */
-$border-radius-vh-d2: 1vh; /* Arrondis de courbure 2 fois inférieur soit 1 % de la hauteur de l'écran*/
-
-/*--------------------- Paysage ----------------------------------------------*/ 
-$border-radius-vw-base: 2vw; /* Arrondis de base dont le rayon de courbure correspond à 2 % de la largeur de l'écran*/
-$border-radius-vw-x2: 4vw; /* Arrondis 2 fois supérieur soit 4 % de la largeur de l'écran*/
-$border-radius-vw-d2: 1vw; /* Arrondis 2 fois inférieur soit 1 % de la largeur de l'écran*/
-
-
+$border-radius-base: 1rem;/* Arrondis de base dont le rayon de courbure correspond à 2 % de la hauteur de l'écran*/
+$border-radius-x2: 2rem; /* Arrondis de courbure 2 fois supérieur soit 4% de la hauteur de l’écran */
+$border-radius-d2: 0.5rem; /* Arrondis de courbure 2 fois inférieur soit 1 % de la hauteur de l'écran*/
 
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------------------------Ombres -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
+$border-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* ombre pour portrait*/
 
-$border-shadow-vh: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* ombre pour portrait*/
-$border-shadow-vw: 0 0.5vw 0.6vw rgba(0, 0, 0, 0.2); /* ombre pour paysage*/
 
 /*--------------------------------------------------------------------------------------------------*/
 /*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
 /*--------------------------------------------------------------------------------------------------*/
 
 /*--------------------- Portrait ----------------------------------------------*/
-$object-size-vh-base: 2vh; /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
-$object-size-vh-middle: 3vh; /* Taille des objets correspondant à 3% de la hauteur de l'écran*/
-$object-size-vh-x2: 4vh; /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
-$object-size-vh-x3: 6vh; /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
-$object-size-vh-x2-5: 5vh; /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
-$object-size-vh-x5: 10vh; /* Taille des objets  correspondant à 10% de la hauteur de l'écran*/
-$object-size-vh-x7-5: 15vh; /*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
-$object-size-vh-x10: 20vh;/* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
-$object-size-vh-x12-5: 25vh; /* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
-$object-size-vh-x15: 30vh; /* Taille des objets correspondant à 30 % de la hauteur de l'écran*/
-$object-size-vh-x20: 40vh; /* Taille des objects correspondant à 40 % de la hauteur de l'écran*/
-$object-size-vh-x25: 50vh; /* Taille des objects correspondant à 50 % de la hauteur de l'écran*/
+$object-size-base: 2%; /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
+$object-size-middle: 3%; /* Taille des objets correspondant à 3% de la hauteur de l'écran*/
+$object-size-x2: 4%; /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
+$object-size-x3: 6%; /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
+$object-size-x2-5: 5%; /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
+$object-size-x5: 10%; /* Taille des objets  correspondant à 10% de la hauteur de l'écran*/
+$object-size-x7-5: 15%; /*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
+$object-size-x10: 20%;/* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
+$object-size-x12-5: 25%; /* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
+$object-size-x15: 30%; /* Taille des objets correspondant à 30 % de la hauteur de l'écran*/
+$object-size-x20: 40%; /* Taille des objects correspondant à 40 % de la hauteur de l'écran*/
+$object-size-x25: 50%; /* Taille des objects correspondant à 50 % de la hauteur de l'écran*/
 
-/*--------------------- Paysage ----------------------------------------------*/
-$object-size-vw-base: 2vw; /* Taille des objects correspondant à 2% de la largeur de l'écran*/
-$object-size-vw-middle: 3vw;/* Taille des objects correspondant à 3% de la largeur de l'écran*/
-$object-size-vw-x2-5: 5vw; /* Taille des objects correspondant à 5% de la largeur de l' écran*/
-$object-size-vw-x3: 6vw; /* Taille des objects correspondant à 6% de la largeur de l'écran */
-$object-size-vw-x5: 10vw; /* Taille des objects correspondant à 10 % de la largeur de l'écran*/
-$object-size-vw-x7-5: 15vw; /* Taille des objects correspondant à 15 % de la largeur de l'écran*/ 
-$object-size-vw-x10: 20vw; /* Taille des objects  correspondant à 20 % de la largeur de l'écran*/
-$object-size-vw-x12-5: 25vw; /* Taille des objects correspondant à 25 % de la largeur de l 'écran*/
-$object-size-vw-x15: 30vw; /* Taille des objects correspondant à 30 % de la largeur de l'écran*/
-$object-size-vw-x20: 40vw; /* Taille des objects correspondant à 40 % de la largeur de l'écran*/
-$object-size-vw-x25: 50vw; /* Taille des objects correspondant à 50 % de la largeur de l'écran*/
 
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
@@ -205,4 +149,4 @@ $badge-francaise: none; /* Gère l affichage du badge dans la carte flex= affich
 /*----------------------------- Affichage conditionnel du loader   -----------------------------------*/
 /*----------------------------------------------------------------------------------------------------*/
 
-$loader-active: flex;/* Gère l'affichage du loader  block =affiché none = masqué */
+$loader-active: none;/* Gère l'affichage du loader  block =affiché none = masqué */

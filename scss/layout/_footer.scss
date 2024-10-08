@@ -22,21 +22,9 @@ footer {
     align-items: center; /* Aligne verticalement les éléments au centre du footer */
     background-color: black; /* Définit la couleur de fond du footer */
     color: white; /* Définit la couleur du texte et des icônes à blanc */
-    padding: 0 $padding-vh-d2; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
+    padding: 0 $padding-d2; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
     margin-top:2vh;
 
-
-    /* Tablettes */
-    @include tablette {
-        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour les tablettes, équivalent à 1% de la largeur de l'écran */
-    }
-
-    /* Desktop */
-    @include desktop {
-        padding: 0 $padding-vw-d2; /* Ajuste le padding horizontal pour desktop, équivalent à 1% de la largeur de l'écran */
-        justify-content: center; /* Centre les éléments à l'intérieur du footer sur les écrans desktop */
-        margin-right: 20%; /* Ajoute une marge à droite, décalant légèrement le footer pour une meilleure présentation sur grand écran */
-    }
 
 }

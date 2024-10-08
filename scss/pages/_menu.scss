@@ -10,26 +10,22 @@
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Conteneur Principal du Menu -------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-
+main  {
+    width: 100%;
+}
 .menu {
     background-color: #f9f9f9; /* Couleur de fond grise claire */
     border-radius: 3vh 3vh 0 0; /* Bord arrondi en haut */
     padding-top: 4vh; /* Padding en haut de la carte menu */
     position: relative; /* Positionnement relatif pour gérer les éléments internes */
     z-index: 1; /* Superposition des éléments */
-    width: 100%; /* Prend toute la largeur du conteneur parent */
     height: auto; /* Hauteur automatique en fonction du contenu */
     bottom: 2vh; /* Positionnement du bas du conteneur */
     justify-content: space-between; /* Espace entre les éléments internes */
     margin: 0 auto; /* Centrage horizontal */
     display: flex; /* Utilisation de flexbox pour aligner les éléments */
     flex-direction: column; /* Alignement vertical des éléments */
-
-    /* Landscape */
-    @include mobile-landscape {
-        margin: 0 auto; /* Centrage pour mobile en mode paysage */
-         padding-top: 6vw; /* Padding en haut de la carte menu */
-    }
+    width: 100%;
     
     /* Desktop */
     @include desktop {
@@ -48,10 +44,9 @@
 .menu-image {
     height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
-    object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
+    object-position: 50% 65%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
 
-    
     /* Desktop */
     @include desktop {
         height: 25vw; /* Hauteur de l'image ajustée pour desktop */
@@ -70,8 +65,7 @@
     width: 100%; /* Largeur à 100% */
     object-position: 50% 95%; /* Positionnement bas de l'image */
     object-fit: cover; /* L'image couvre tout le conteneur */
-  
-    
+
     /* Tablette */
     @include tablette {
         height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
@@ -124,11 +118,9 @@
 .menu .title {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
-    font-size: $font-size-vh-title; /* Taille de la police adaptée à la hauteur de l'écran */
-    padding-left: 1vh; /* Padding à gauche du titre */
-    justify-content: space-between; /* Espacement entre les éléments */
-
- 
+    font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
+    gap: 20%; /* Padding à gauche du titre */
+    justify-content: center; /* Espacement entre les éléments */
     
     /* Desktop */
     @include desktop {
@@ -143,14 +135,14 @@
 
 /* Style des sous-titres h3 dans le menu */
 .menu h3 {
-    margin: 3vh 0vh 2vh 1vh; /* Marges autour du sous-titre */
+    margin: 3% 0 2% 2%; /* Marges autour du sous-titre */
     border-bottom: $button--new-primary-color 0.5vh solid; /* Bordure en bas du sous-titre */
     width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
     padding-bottom: 1vh; /* Padding en bas du sous-titre */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------- Boutons Primaires dans le Menu ----------------------------------*/
+/*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 /* Style du conteneur pour les boutons principaux */

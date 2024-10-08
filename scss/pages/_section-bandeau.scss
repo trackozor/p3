@@ -25,38 +25,29 @@
     flex-direction: column; /* Alignement des éléments en colonne */
     text-align: center; /* Aligne le texte au centre horizontalement */
     justify-content: center; /* Centre le contenu sur l'axe horizontal */
-    margin: $margin-vh-base auto; /* Marge verticale et horizontale égale à 2% et 1% de la hauteur de l'écran */
     align-items: center; /* Centre les éléments sur l'axe vertical */
-    width: 90%; /* Le conteneur prend 90% de la largeur disponible */
-
-    /* Tablette */
-    @include tablette {
-        gap: $gap-vw-d4; /* Ajoute un espace entre les éléments pour tablette */
-    }
-
-    /* Desktop */
-    @include desktop {
-        margin: $margin-vw-base 5vw; /* Ajustement des marges pour desktop */
-        width: 90%; /* Largeur du conteneur sur desktop */
-    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
 /*------------------------------------ Titre ---------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
-    padding: $padding-vh-d4 0; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
+    padding:2% 10%;
+    margin-top: 10%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
+    text-align: center;
 
-    /* Tablette */
+    /*-- tablette --*/
     @include tablette {
-        padding: $padding-vh-d4 0; /* Padding ajusté pour tablette */
-    }
+        padding: 0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
+        margin-top: 5%;
 
+    }
+    
     /* Desktop */
     @include desktop {
-        padding: $padding-vw-d4 $padding-vw-base; /* Ajustement du padding pour desktop */
-        margin-bottom: $margin-vw-base; /* Marge en bas pour desktop */
-        font-weight: $font-weight-l-bold; /* Gras du texte pour desktop */
+        padding:0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
+        margin-top: 5%;
+        font-size: 2rem;
     }
 }
 
@@ -64,22 +55,10 @@
 /*----------------------------------- Texte ----------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
-    padding: $padding-vh-d2 $padding-vw-base; /* Padding haut/bas et gauche/droite */
-    margin-bottom: $margin-vh-base; /* Marge en bas du paragraphe */
+    padding: $padding-base $padding-base; /* Padding haut/bas et gauche/droite */
+    margin-bottom: $margin-base; /* Marge en bas du paragraphe */
     font-weight: $font-weight-l-bold; /* Gras du texte */
 
-
-    /* Tablette */
-    @include tablette {
-        padding: $padding-vh-d2 $padding-vw-base; /* Ajustement du padding pour tablette */
-        margin-bottom: $margin-vw-base; /* Ajustement de la marge pour tablette */
-    }
-
-    /* Desktop */
-    @include desktop {
-        padding: $padding-vh-d2 $padding-vw-base; /* Ajustement du padding pour desktop */
-        margin-bottom: $margin-vh-base; /* Marge en bas pour desktop */
-    }
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -91,23 +70,36 @@
     flex-direction: column; /* Alignement en colonne */
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
-    gap: 3vh; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-    margin: 4vh auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
-    width: 90%; /* Largeur de 90% du conteneur */
+    gap: $gap-x4; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
+    margin: $margin-x4 $margin-base; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+    padding-left: 5%;
 
-    /* Tablette */
+    /*-- Tablette --*/
     @include tablette {
-        gap: 1vw; /* Espacement réduit pour tablette */
-        justify-content: space-around; /* Espace autour des éléments pour tablette */
+        margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+        gap: 2%;
     }
 
     /* Desktop */
     @include desktop {
-        gap: 2vw; /* Espacement ajusté pour desktop */
-        justify-content: space-around; /* Espace autour des éléments pour desktop */
+        margin: 5% 0;
     }
 }
+.fonctionnement h2 {
+    margin: $margin-x4 0;
 
+
+    /*-- tablette --*/
+    @include tablette {
+        margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+    }
+
+    /* Desktop */
+    @include desktop {
+        font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
+        margin: 1% 0;
+    }
+}
 /*----------------------------------------------------------------------------------------------------------*/
 /*-------------------------------- Liste -------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
@@ -116,14 +108,14 @@ ol {
     display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
     flex-direction: column; /* Alignement en colonne */
     align-items: center; /* Centre les éléments sur l'axe vertical */
-    width: 95%; /* Largeur de 95% pour le conteneur */
+    width: 100%; /* Largeur de 95% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
 
 
     /* Desktop */
     @include desktop {
         flex-direction: row; /* Alignement en ligne pour desktop */
-        gap: 5vw; /* Espace entre les éléments de la liste pour desktop */
+        gap: 2rem; /* Espace entre les éléments de la liste pour desktop */
         justify-content: space-around; /* Espace autour des éléments pour desktop */
     }
 }
@@ -134,18 +126,25 @@ ol {
 
 ol li {
     display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-    margin: $margin-vh-base $margin-vh-d2; /* Marge autour des éléments */
+    margin: $margin-x3 $margin-base; /* Marge autour des éléments */
     align-items: center; /* Centre les éléments sur l'axe vertical */
     font-weight: $font-weight-bold; /* Gras du texte */
     position: relative; /* Position relative pour gérer des éléments internes */
     z-index: 1; /* Superposition sur l'axe Z */
-    width: 100%; /* Prend toute la largeur du conteneur */
+    width: 95%; /* Prend toute la largeur du conteneur */
     justify-content: space-around; /* Espace autour des éléments de la liste */
+    align-content: center;
 
+    /*-- Tablette --*/
+    @include tablette {
+        margin: $margin-base $margin-base; /* Ajustement des marges pour tablette */
+        gap: 2%;
+        justify-content: center;
+    }
 
     /* Desktop */
     @include desktop {
-        margin: $margin-vw-base $margin-vw-d2; /* Ajustement des marges pour desktop */
+        margin: $margin-base $margin-d2; /* Ajustement des marges pour desktop */
     }
 }
 
@@ -157,23 +156,31 @@ ol li {
     display: flex; /* Utilise flexbox pour aligner le texte */
     position: relative; /* Position relative pour gérer des éléments internes */
     z-index: 1; /* Superposition sur l'axe Z */
-    left: 2vh; /* Décalage du texte vers la droite */
-    border-radius: $border-radius-vh-base; /* Bord arrondi pour le conteneur du texte */
+    padding: 4% 10% ;
+    border-radius: $border-radius-base; /* Bord arrondi pour le conteneur du texte */
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
     width: 100%; /* Largeur du texte à 100% du conteneur */
-    height: 5vh; /* Hauteur du conteneur du texte */
     align-items: center; /* Centre le texte sur l'axe vertical */
-    margin-right: $margin-vh-d2; /* Marge à droite du texte */
-    font-size: 2vh; /* Taille de la police */
+    justify-content:space-around;
+    font-size: 1rem; /* Taille de la police */
+    padding-right: 8%;
+    align-content: center;
 
+    /*-- Tablette --*/
+    @include tablette {
+        padding: 2% 10%; /* Ajustement du padding pour tablette */
+        justify-content: flex-start;
+        gap: 10%;
+        
+    }
 
     /* Desktop */
     @include desktop {
         left: 1vw; /* Décalage du texte pour desktop */
-        border-radius: $border-radius-vh-base; /* Bord arrondi pour desktop */
+        border-radius: $border-radius-base; /* Bord arrondi pour desktop */
         box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
         height: 4vw; /* Hauteur du conteneur ajustée pour desktop */
-        font-size: 1.2vw; /* Taille de la police pour desktop */
+        font-size: 1rem; /* Taille de la police pour desktop */
     }
 }
 
@@ -184,24 +191,23 @@ ol li {
 ol li .puce_num {
     background-color: $button--search-primary-color; /* Couleur de fond de l'icône numérotée */
     border-radius: 50%; /* Forme arrondie */
-    height: 3vh; /* Hauteur de l'icône numérotée */
-    width: 3vh; /* Largeur de l'icône numérotée */
+    height: 4vh; /* Hauteur de l'icône numérotée */
+    width: 4vh; /* Largeur de l'icône numérotée */
     display: flex; /* Utilise flexbox pour centrer le numéro */
     position: absolute; /* Positionnement absolu à l'intérieur de la liste */
-    left: 0; /* Place l'icône sur le bord gauche */
+    left: -2%; /* Place l'icône sur le bord gauche */
     z-index: 2; /* Superposition de l'icône au-dessus du texte */
     justify-content: center; /* Centre le contenu de l'icône */
     align-items: center; /* Centre verticalement le contenu de l'icône */
     color: white; /* Couleur blanche pour le numéro */
-    font-size: 1.4vh; /* Taille de la police du numéro */
+    font-size: 1rem; /* Taille de la police du numéro */
     animation: pulse 1.5s ease-in-out 2; /* Animation de pulsation pour l'icône numérotée */
 
 
-    /* Desktop */
+    /*-- Desktop --*/
     @include desktop {
-        height: 1.5vw; /* Hauteur ajustée pour desktop */
-        width: 1.5vw; /* Largeur ajustée pour desktop */
-        font-size: 1vw; /* Taille de la police ajustée pour desktop */
+        height: 1.5rem;
+        width:1.5rem /* Décalage de l'icône numérotée pour desktop */
     }
 }
 
@@ -211,15 +217,19 @@ ol li .puce_num {
 
 i {
     color: grey; /* Couleur grise pour les icônes */
-    font-size: $font-size-vh-base; /* Taille de la police pour les icônes */
-    margin: 0 $margin-vh-base 0 $margin-vh-x2; /* Marges autour de l'icône */
+    font-size: $font-size-base; /* Taille de la police pour les icônes */
+    padding-bottom: 2%;
 
-    /* Landscape */
+    /*-- Tablette --*/
+    @include tablette {
+        font-size: $font-size-title;
+    }
+
 
     /* Desktop */
     @include desktop {
-        font-size: $font-size-vh-base; /* Taille de la police ajustée pour desktop */
-        margin: 0 $margin-vw-base 0 $margin-vw-base; /* Marges ajustées pour desktop */
+        font-size: $font-size-base; /* Taille de la police ajustée pour desktop */
+        margin: 0 $margin-base 0 $margin-base; /* Marges ajustées pour desktop */
     }
 }
 /*----------------------------------------------------------------------------------------------------------*/

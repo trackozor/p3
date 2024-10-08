@@ -28,25 +28,25 @@
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
   background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color); /* Dégradé de couleur */
-  padding: $padding-vh-base; /* Padding correspondant à 2% de la hauteur de l'écran */
+  padding: $padding-x2; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
-  box-shadow: $border-shadow-vh; /* Ajoute une ombre */
-  border-radius: $border-radius-vh-x2; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
+  box-shadow: $border-shadow; /* Ajoute une ombre */
+  border-radius: $border-radius-x2; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
 
 
 
   /* Tablette */
   @include tablette {
-    border-radius: $border-radius-vw-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
-    box-shadow: $border-shadow-vw; /* Ombre pour tablette */
-    padding: $padding-vw-base; /* Padding ajusté pour tablette */
+    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
+    box-shadow: $border-shadow; /* Ombre pour tablette */
+    padding: $padding-base; /* Padding ajusté pour tablette */
   }
 
   /* Desktop */
   @include desktop {
-    border-radius: $border-radius-vw-x2; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $border-shadow-vw; /* Ombre pour desktop */
-    padding: $padding-vw-d2 $padding-vh-x2; /* Padding ajusté pour desktop */
+    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $border-shadow; /* Ombre pour desktop */
+    padding: $padding-d2 $padding-x2; /* Padding ajusté pour desktop */
     margin-top: 2vw; /* Ajout d'une marge supérieure sur desktop */
   }
 
@@ -55,19 +55,19 @@
   /* Effet de survol */
   &:hover {
     background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%)); /* Effet de survol avec éclaircissement du dégradé */
-    box-shadow: $border-shadow-vh; /* Ombre inchangée */
+    box-shadow: $border-shadow; /* Ombre inchangée */
   }
 }
 
 /* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
-  font-size: $font-size-vh-base; /* Taille de police à 2% de la hauteur de l'écran */
+  font-size: $font-size-middle; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: $font-weight-l-bold; /* Style de police en gras (bold) */
 
   
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-middle; /* Ajustement de la taille de police pour desktop */
+    font-size: $font-size-middle; /* Ajustement de la taille de police pour desktop */
   }
 
 
@@ -80,29 +80,18 @@
 .badge {
   background-color: $button--new-primary-color; /* Couleur de fond vert clair */
   color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
-  font-size: $font-size-vh-middle; /* Taille de la police à 2% de la hauteur de l'écran */
-  padding: $padding-vh-d2 $padding-vh-base; /* Padding vertical et horizontal */
-  width: $object-size-vh-x3; /* Taille du badge à 6% de la hauteur de l'écran */
+  font-size: $font-size-middle; /* Taille de la police à 2% de la hauteur de l'écran */
+  padding: $padding-d2 $padding-base; /* Padding vertical et horizontal */
   font-weight: $font-weight-h-bold; /* Style de police très gras (900) */
   display: flex; /* Utilisation de flexbox pour l'alignement */
   justify-content: center; /* Centrage horizontal du texte */
+  
 
- 
-
-  /* Tablette */
+  /*-- Tablette --*/
   @include tablette {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour tablette */
-    padding: $padding-vw-d2 $padding-vw-base; /* Padding ajusté pour tablette */
-    width: $object-size-vw-x3; /* Largeur ajustée pour tablette */
+    font-size: 1rem;
+    padding: $padding-base; /* Padding ajusté pour tablette */
   }
-  /* Desktop */
-  @include desktop {
-    font-size: $font-size-vw-d2; /* Taille de la police ajustée pour desktop */
-    padding: $padding-vw-d4; /* Padding ajusté pour desktop */
-    width: $object-size-vw-x3; /* Largeur ajustée pour desktop */
-  }
-  
-  
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -112,7 +101,6 @@
 .icon-favorite {
   background-color: transparent; /* Fond transparent */
   color: grey; /* Couleur principale en gris */
-  cursor: url('/images/logo/like.png'), auto; /* Curseur personnalisé */
 }
 
 .icon-favorite .fa-full {
@@ -123,18 +111,16 @@
 
 /* Style des icônes */
 .fa-full, .fa-empty {
-  font-size: $font-size-vh-title; /* Taille de police pour les icônes */
-
-  
+  font-size: $font-size-title; /* Taille de police pour les icônes */
 
   /* Tablette */
   @include tablette {
-    font-size: $font-size-vw-title; /* Ajustement de la taille de police pour tablette */
+    font-size: 1.6rem; /* Ajustement de la taille de police pour tablette */
   }
 
   /* Desktop */
   @include desktop {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
+    font-size: $font-size-base; /* Ajustement de la taille de police pour desktop */
   }
 
 
@@ -181,19 +167,9 @@ input {
 .button--back {
   background-color: transparent; /* Fond transparent */
   color: black; /* Couleur du texte en noir */
-  font-size: $font-size-vh-base; /* Taille de la police */
+  font-size: $font-size-base; /* Taille de la police */
   padding: 0; /* Pas de padding */
   border: none; /* Pas de bordure */ 
-
-  /* Tablette */
-  @include tablette {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour tablette */
-  }
-
-  /* Desktop */
-  @include desktop {
-    font-size: $font-size-vw-base; /* Ajustement de la taille de police pour desktop */
-  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -218,5 +194,5 @@ input {
   padding: 2vh; /* Padding de l'icône */
   border-radius: 0 2vh 2vh 0; /* Bord arrondi */
   justify-content: center; /* Centrage du contenu */
-  font-size: 3vh; /* Taille de l'icône */
+  font-size: $font-size-middle; /* Taille de l'icône */
 }

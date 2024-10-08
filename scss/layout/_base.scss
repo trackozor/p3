@@ -20,63 +20,35 @@
   
 /* Typographie globale */
 body {
+
+  width: 100%;
   font-family: $font-primary;/* Style police par défaut */
-  font-size: $font-size-vh-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
+  font-size: $font-size-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
   background-color: white;/* Couleur de fond de base*/
   justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
   align-items: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
 
-    
 
-
-  /*- Tablette -*/
-  @include tablette {
-    font-size: $font-size-vh-base;/* Taille de police correspondant à 2% de la largeur d l'écran*/
-    justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
-    align-items: center;
-  }
-
-  /*- Desktop -*/
-  @include desktop {
-    font-size: $font-size-vw-middle; /* Taille de police correspondant à 2% de la largeur d l'écran*/ 
-    align-items: center;
-    justify-content: center;
-
-  }
 }
-  
 
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Titres ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-
-
 /*  Description cartes */
 h2 {
-    font-size:$font-size-vh-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
+    font-size:$font-size-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
     font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 */
- 
 
-    /*- Tablette -*/
+    /*-- tablette --*/
     @include tablette {
-      font-size: $font-size-vh-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
-      font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 */
+      font-size: 1.6rem;
     }
-    
-  
-
-    /*- Desktop -*/
-    @include desktop {
-      font-size: $font-size-vw-base; /* Adaptation de la taille de la police à 3% de la largeur de l'écran*/
-      font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 */
-    }
-
-  
 }
-
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------liens ---------------------------------------------------------------*/
@@ -85,7 +57,6 @@ a {
   text-decoration: none;  /* Supprime le soulignement par défaut*/
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
 }
-
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Images ---------------------------------------------------------------*/
