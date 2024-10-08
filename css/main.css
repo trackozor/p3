@@ -862,6 +862,13 @@ input {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 900; /* Gras du texte correspondant à une valeur de 900 */
   margin-top: 2%; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
+  /*-- Desktop --*/
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card h3 {
+    font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
+    margin-top: 2%; /* Ajuste la marge haute pour desktop */
+  }
 }
 
 /*-- Zone de texte dans la carte restaurant --*/
@@ -881,7 +888,7 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .card-title {
-    font-size: 0.5rem; /* Ajuste la taille du texte pour desktop */
+    font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
     gap: 1%; /* Espace pour desktop */
     margin: 1%; /* Marges pour desktop */
   }
@@ -933,11 +940,18 @@ input {
   right: 5%; /* Position droite du badge */
   top: 5%; /* Position haute du badge */
   /*-- Tablette --*/
+  /*-- Desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .badge {
     right: 3%; /* Position droite du badge pour tablette */
     top: 3%; /* Position haute du badge pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card .badge {
+    right: 4%; /* Position droite du badge pour desktop */
+    top: 8%; /* Position haute du badge pour desktop */
   }
 }
 
@@ -1067,11 +1081,16 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card {
-    padding: 0.5%; /* Padding vertical pour desktop */
+    padding: 4% 4% 0 20%; /* Padding vertical pour desktop */
     display: flex;
-    flex-direction: row-reverse;
-    margin-top: 4%; /**marge haute correspondant à 4 % de la largeur de l' écran */
-    gap: 4%; /* espace correspondant à 4% de la largeur de l'écran*/
+    flex-direction: row-reverse; /* Alignement horizontal des éléments */
+    justify-content: flex-start; /* Espace entre les éléments pour qu'ils ne se chevauchent pas */
+    align-items: center; /* Aligne les éléments verticalement */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne */
+    height: auto;
+    font-size: 0.8rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
   }
 }
 
@@ -1094,7 +1113,7 @@ input {
   .fa-handshake, .fa-utensils {
     margin-right: 1%; /* Padding horizontal pour desktop */
     margin-left: 0; /* Pas d'espace à gauche*/
-    font-size: 0.5rem; /* Taille de l'icône pour desktop */
+    font-size: 0.9rem; /* Taille de l'icône pour desktop */
   }
 }
 
@@ -1117,6 +1136,9 @@ input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card li {
     margin-top: 1%; /* Marge supérieur pour desktop */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
   }
 }
 
@@ -1124,7 +1146,13 @@ input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card ul {
     display: flex; /* Utilise flexbox pour aligner les éléments */
-    gap: 2%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran*/
+    justify-content: flex-end;
+    gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    align-items: center;
+    margin-left: 20vh;
   }
 }
 
@@ -1148,7 +1176,7 @@ input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card img {
     width: 10%; /* L'image occupe 30% de la largeur  */
-    margin: 0; /* Marge verticale pour desktop */
+    margin: 0 5%; /* Marge verticale pour desktop */
     padding-top: 1%; /* Padding inférieur pour desktop */
   }
 }

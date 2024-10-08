@@ -201,6 +201,11 @@
     font-weight: $font-weight-h-bold; /* Gras du texte correspondant à une valeur de 900 */
     margin-top: $margin-base; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
 
+    /*-- Desktop --*/
+    @include desktop {
+        font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
+        margin-top: $margin-base; /* Ajuste la marge haute pour desktop */
+    }
 }
 
 /*-- Zone de texte dans la carte restaurant --*/
@@ -220,7 +225,7 @@
 
     /* Desktop */   
     @include desktop {
-        font-size: $font-size-d2; /* Ajuste la taille du texte pour desktop */
+        font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
         gap: $gap-d2; /* Espace pour desktop */
         margin: $margin-d2; /* Marges pour desktop */
     }
@@ -274,6 +279,12 @@
     @include tablette {
         right: 3%; /* Position droite du badge pour tablette */
         top: 3%; /* Position haute du badge pour tablette */
+    }
+
+    /*-- Desktop --*/
+    @include desktop {
+        right: 4%; /* Position droite du badge pour desktop */
+        top: 8%; /* Position haute du badge pour desktop */
     }
 }
 
@@ -401,11 +412,16 @@
 
     /* Desktop */
     @include desktop {
-        padding: $padding-d4; /* Padding vertical pour desktop */
+        padding: 4% 4%  0 20%; /* Padding vertical pour desktop */
         display: flex;
-        flex-direction: row-reverse;
-        margin-top: $margin-x2;/**marge haute correspondant à 4 % de la largeur de l' écran */
-        gap: $gap-x2;/* espace correspondant à 4% de la largeur de l'écran*/
+        flex-direction: row-reverse; /* Alignement horizontal des éléments */
+        justify-content: flex-start; /* Espace entre les éléments pour qu'ils ne se chevauchent pas */
+        align-items: center; /* Aligne les éléments verticalement */
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        height: auto;
+        font-size: 0.8rem;
+        margin-top: 5%;
+        margin-bottom: 2%;
     }
 }
 
@@ -426,10 +442,9 @@
     @include desktop {
         margin-right: $margin-d2; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: $font-size-d2; /* Taille de l'icône pour desktop */
+        font-size: 0.9rem; /* Taille de l'icône pour desktop */
     }
 }
-
 /*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
     transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
@@ -440,6 +455,7 @@
 .footer-card li {
     margin-top: $margin-base; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
 
+
     /* tablette */
     @include tablette {
         margin-top: $margin-d2; /* Marge supérieur pour tablette */
@@ -448,17 +464,27 @@
     /* Desktop */
     @include desktop {
         margin-top: $margin-d2; /* Marge supérieur pour desktop */
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+
     }
-    
+
 }
 /*-- listes --*/
 .footer-card ul {
     @include desktop {
-        display: flex; /* Utilise flexbox pour aligner les éléments */
-        gap:$gap-base; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran*/
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: flex-end;
+    gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    align-items: center;
+    margin-left: 20vh;
     }
-}
 
+}
 /*-- logo dans le footer --*/
 .footer-card img {
     background-color: white; /* Fond blanc pour l'image */
@@ -466,7 +492,6 @@
     filter: invert(100%); /* Inversion des couleurs pour l'image */
     margin: $margin-x3 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
     padding-bottom: $padding-d2; /* Padding inférieur correspondant à 1% de la hauteur */
- 
     /* tablette */
     @include tablette {
         width: 30%; /* L'image occupe 30% de la largeur  */
@@ -477,7 +502,7 @@
     /* Desktop */
     @include desktop {
         width: 10%; /* L'image occupe 30% de la largeur  */
-        margin:0; /* Marge verticale pour desktop */
+        margin:0 5% ; /* Marge verticale pour desktop */
         padding-top: $padding-d2; /* Padding inférieur pour desktop */
     }
 }
