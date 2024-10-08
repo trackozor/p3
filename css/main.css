@@ -462,7 +462,6 @@ body {
 }
 @media (min-width: 1440px) {
   body {
-    max-width: 1024px;
     font-size: 1.2rem;
   }
 }
@@ -1401,6 +1400,8 @@ header {
   text-align: center; /* Aligne le texte au centre horizontalement */
   justify-content: center; /* Centre le contenu sur l'axe horizontal */
   align-items: center; /* Centre les éléments sur l'axe vertical */
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -1472,8 +1473,10 @@ header {
 }
 @media (min-width: 1440px) {
   .fonctionnement {
-    padding: 5%;
-    margin: 0;
+    padding: 2%;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
@@ -1497,7 +1500,7 @@ header {
 @media (min-width: 1440px) {
   .fonctionnement h2 {
     font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 0;
+    margin: 3% 4%;
   }
 }
 
@@ -1525,6 +1528,10 @@ ol {
     flex-direction: row; /* Alignement en ligne pour large desktop */
     gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
     justify-content: space-around; /* Espace autour des éléments pour large desktop */
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 90%;
+    margin-right: 6%;
   }
 }
 
@@ -1561,6 +1568,9 @@ ol li {
   ol li {
     margin: 2% 0.5%; /* Ajustement des marges pour large desktop */
     gap: 1%;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
@@ -1709,6 +1719,8 @@ i {
     justify-content: space-between;
     padding-top: 0;
     width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 
@@ -1797,12 +1809,13 @@ main {
   position: relative; /* Positionnement relatif pour gérer les éléments internes */
   z-index: 1; /* Superposition des éléments */
   height: auto; /* Hauteur automatique en fonction du contenu */
-  bottom: 2vh; /* Positionnement du bas du conteneur */
+  bottom: 3rem; /* Positionnement du bas du conteneur */
   justify-content: space-between; /* Espace entre les éléments internes */
   margin: 0 auto; /* Centrage horizontal */
   display: flex; /* Utilisation de flexbox pour aligner les éléments */
   flex-direction: column; /* Alignement vertical des éléments */
   width: 100%;
+  max-width: 1024px;
   /* Desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1817,13 +1830,14 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Images Menu Palette --------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/* Image principale pour "Palette du goût et note enchantée" */
+/* Image principale pour "Palette du goût */
 .menu-image {
-  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
-  object-position: 50% 65%; /* Positionnement de l'image à 75% en vertical */
+  object-position: 50% 90%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
   /* Desktop */
+  /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image {
@@ -1832,15 +1846,58 @@ main {
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
 }
+@media (min-width: 1440px) {
+  .menu-image {
+    height: 35vw; /* Hauteur de l'image ajustée pour large desktop */
+    width: 100%; /* Largeur à 100% pour large desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Images Menu Palette --------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Image principale pour "La note enchantée */
+.menu-image-alt3 {
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  object-position: 50% 70%; /* Positionnement de l'image à 75% en vertical */
+  object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
+  /*tablette*/
+  /* Desktop */
+  /*-- large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu-image-alt3 {
+    height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    width: 100%; /* Largeur à 100% pour tablette */
+    object-position: 50% 65%; /* Positionnement de l'image pour tablette */
+    object-fit: cover; /* Ajustement de l'image pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu-image-alt3 {
+    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+    width: 100%; /* Largeur à 100% pour desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .menu-image-alt3 {
+    height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    width: 100%; /* Largeur à 100% pour large desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
+  }
+}
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------- Images Menu Alt - Délice des Sens --------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image pour le menu alternatif "Au délice des sens" */
 .menu-image-alt {
-  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 32vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Largeur à 100% */
-  object-position: 50% 95%; /* Positionnement bas de l'image */
+  object-position: 50% 185%; /* Positionnement bas de l'image */
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
@@ -1866,12 +1923,13 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image pour le menu alternatif 2 "À la française" */
 .menu-image-alt2 {
-  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Largeur à 100% */
-  object-position: 50% 85%; /* Positionnement bas de l'image */
+  object-position: 50% 195%; /* Positionnement bas de l'image */
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
+  /*--large desktop*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu-image-alt2 {
@@ -1886,6 +1944,14 @@ main {
     height: 35vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 85%; /* Positionnement bas de l'image pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .menu-image-alt2 {
+    height: 30vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+    width: 150vw; /* Largeur à 100% pour large desktop */
+    object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
+    object-fit: cover; /* Ajustement de l'image pour large desktop */
   }
 }
 
@@ -1914,6 +1980,33 @@ main {
   font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 45%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
+}
+
+/* Titre la palette du gout ajustement personnalisé*/
+.menu .title2 {
+  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
+  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  gap: 33%; /* Padding à gauche du titre */
+  justify-content: center; /* Espacement entre les éléments */
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*--large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu .title2 {
+    gap: 60%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title2 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title2 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
 }
 
 .menu .icon-favorite {

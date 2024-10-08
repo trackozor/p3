@@ -26,6 +26,8 @@
     text-align: center; /* Aligne le texte au centre horizontalement */
     justify-content: center; /* Centre le contenu sur l'axe horizontal */
     align-items: center; /* Centre les éléments sur l'axe vertical */
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -79,6 +81,7 @@
     gap: $gap-x4; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
     margin: $margin-x4 $margin-base; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
     padding-left: 5%;
+    
 
     /*-- Tablette --*/
     @include tablette {
@@ -94,8 +97,10 @@
 
     /*-- large desktop --*/
     @include large-desktop {
-        padding: 5%;
-        margin:0;
+        padding: 2%;
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 80%;
     }
 }
 .fonctionnement h2 {
@@ -116,7 +121,7 @@
     /* Large desktop */
     @include large-desktop {
         font-size:1.5rem; /* Taille de police de 1.5rem pour large desktop */
-        margin:0;
+        margin:3% 4%
     }
 }
 /*----------------------------------------------------------------------------------------------------------*/
@@ -143,6 +148,10 @@ ol {
         flex-direction: row; /* Alignement en ligne pour large desktop */
         gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
         justify-content: space-around; /* Espace autour des éléments pour large desktop */
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 90%;
+        margin-right: 6%;
     }
 }
 
@@ -160,6 +169,7 @@ ol li {
     width: 95%; /* Prend toute la largeur du conteneur */
     justify-content: space-around; /* Espace autour des éléments de la liste */
     align-content: center;
+    
 
     /*-- Tablette --*/
     @include tablette {
@@ -177,6 +187,10 @@ ol li {
     @include large-desktop {
         margin: $margin-base $margin-d4; /* Ajustement des marges pour large desktop */
         gap:1%;
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 80%;
+
     }
 }
 

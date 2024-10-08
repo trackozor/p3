@@ -13,6 +13,8 @@
 main  {
     width: 100%;
 }
+
+
 .menu {
     background-color: #f9f9f9; /* Couleur de fond grise claire */
     border-radius: 3vh 3vh 0 0; /* Bord arrondi en haut */
@@ -20,13 +22,15 @@ main  {
     position: relative; /* Positionnement relatif pour gérer les éléments internes */
     z-index: 1; /* Superposition des éléments */
     height: auto; /* Hauteur automatique en fonction du contenu */
-    bottom: 2vh; /* Positionnement du bas du conteneur */
+    bottom: 3rem; /* Positionnement du bas du conteneur */
     justify-content: space-between; /* Espace entre les éléments internes */
     margin: 0 auto; /* Centrage horizontal */
     display: flex; /* Utilisation de flexbox pour aligner les éléments */
     flex-direction: column; /* Alignement vertical des éléments */
     width: 100%;
-    
+    max-width: 1024px;
+
+
     /* Desktop */
     @include desktop {
         width: 80%; /* Largeur à 80% pour desktop */
@@ -34,17 +38,20 @@ main  {
         padding-top: 4vw; /* Padding en haut ajusté pour desktop */
         bottom: 2vw; /* Positionnement du bas ajusté pour desktop */
     }
+
+
+
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Images Menu Palette --------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-/* Image principale pour "Palette du goût et note enchantée" */
+/* Image principale pour "Palette du goût */
 .menu-image {
-    height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
-    object-position: 50% 65%; /* Positionnement de l'image à 75% en vertical */
+    object-position: 50% 90%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
 
     /* Desktop */
@@ -53,17 +60,58 @@ main  {
         width: 100%; /* Largeur à 100% pour desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour desktop */
     }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        height: 35vw; /* Hauteur de l'image ajustée pour large desktop */
+        width: 100%; /* Largeur à 100% pour large desktop */
+        object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
+    }
+
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- Images Menu Palette --------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Image principale pour "La note enchantée */
+.menu-image-alt3 {
+    height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    width: 100%; /* Prend toute la largeur du conteneur */
+    object-position: 50% 70%; /* Positionnement de l'image à 75% en vertical */
+    object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
+
+    /*tablette*/
+    @include tablette {
+        height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+        width: 100%; /* Largeur à 100% pour tablette */
+        object-position: 50% 65%; /* Positionnement de l'image pour tablette */
+        object-fit: cover; /* Ajustement de l'image pour tablette */
+    }
+
+    /* Desktop */
+    @include desktop {
+        height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+        width: 100%; /* Largeur à 100% pour desktop */
+        object-position: 50% 60%; /* Positionnement de l'image pour desktop */
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        width: 100%; /* Largeur à 100% pour large desktop */
+        object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
+    }
+}
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------- Images Menu Alt - Délice des Sens --------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 /* Image pour le menu alternatif "Au délice des sens" */
 .menu-image-alt {
-    height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 32vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Largeur à 100% */
-    object-position: 50% 95%; /* Positionnement bas de l'image */
+    object-position: 50% 185%; /* Positionnement bas de l'image */
     object-fit: cover; /* L'image couvre tout le conteneur */
 
     /* Tablette */
@@ -88,9 +136,9 @@ main  {
 
 /* Image pour le menu alternatif 2 "À la française" */
 .menu-image-alt2 {
-    height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Largeur à 100% */
-    object-position: 50% 85%; /* Positionnement bas de l'image */
+    object-position: 50% 195%; /* Positionnement bas de l'image */
     object-fit: cover; /* L'image couvre tout le conteneur */
 
     
@@ -108,6 +156,14 @@ main  {
         width: 100%; /* Largeur à 100% pour desktop */
         object-position: 50% 85%; /* Positionnement bas de l'image pour desktop */
     } 
+
+    /*--large desktop*/
+    @include large-desktop {
+        height: 30vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+        width: 150vw; /* Largeur à 100% pour large desktop */
+        object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
+        object-fit: cover; /* Ajustement de l'image pour large desktop */
+    }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -134,6 +190,29 @@ main  {
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
     gap: 45%; /* Padding à gauche du titre */
     justify-content: center; /* Espacement entre les éléments */
+}
+/* Titre la palette du gout ajustement personnalisé*/
+.menu .title2 {
+    display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+    font-family: $font-title; /* Police de caractère du titre */
+    font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
+    gap: 33%; /* Padding à gauche du titre */
+    justify-content: center; /* Espacement entre les éléments */
+    
+    /*-- tablette --*/
+    @include tablette {
+        gap: 60%; /* Padding à gauche du titre */
+    }
+    
+    /*-- desktop --*/
+    @include desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
+
+    /*--large desktop --*/
+    @include large-desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
 }
 
 .menu .icon-favorite {
