@@ -128,7 +128,18 @@ main  {
         justify-content: center; /* Centrage du contenu pour desktop */
     }
 }
+.menu .title1 {
+    display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+    font-family: $font-title; /* Police de caractère du titre */
+    font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
+    gap: 45%; /* Padding à gauche du titre */
+    justify-content: center; /* Espacement entre les éléments */
+}
 
+.menu .icon-favorite {
+    position: relative;
+    right: 2%;
+}
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Sous-titres H3 dans le menu ------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/

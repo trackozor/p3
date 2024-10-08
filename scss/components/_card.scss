@@ -70,7 +70,7 @@
     
     /* Desktop */
     @include desktop {
-        height:$object-size-base; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+        height:40% /* Hauteur correspondant à 3 % de la largeur de l'écran */
     }
 }
 
@@ -80,11 +80,23 @@
     left:1%; /* Place l'icône à gauche, hors de la carte */
     top: 25%; /* Place l'icône à 35% du haut du conteneur */
 
+    /*-- tablette --*/
+    @include tablette {
+        left: -42%; /* Place l'icône à 5% de la largeur de l'écran */
+        top: 30%; /* Place l'icône à 35% du haut du conteneur */
+    }
     /* Desktop */
     @include desktop {
-        left:-7%; /* Ajuste la position de l'icône pour desktop */
-        top: 35%; /* Ajuste la position de l'icône pour desktop */
-        font-size: 1.5vw;
+        left:-77%; /* Ajuste la position de l'icône pour desktop */
+        top: 30%;
+        font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        left:-180%; /* Ajuste la position de l'icône pour desktop */
+        top: 35%;
+        font-size: 1.5rem;
     }
     
     /* Faire pointer la souris sur l'icône de la carte */
@@ -360,7 +372,7 @@
     border-radius: 2vh; /* Bord arrondis */
     display: flex; /* Utilise flexbox pour aligner les éléments */
     box-shadow: $border-shadow; /* Ombre portée */
-    margin: $margin-d2 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
+    margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Espace entre les éléments */
 
@@ -391,6 +403,13 @@
     font-weight: $font-weight-h-bold; /* Style gras pour le nom du plat */
     padding: $padding-base; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
 
+    /* tablette */
+    @include tablette {
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
+        padding: 2% ; /* Padding horizontal pour tablette */
+    }
+
+
 }
 
 /*-- Description du plat dans la carte menu --*/
@@ -403,15 +422,10 @@
     
     /* tablette */
     @include tablette {
-        font-size: $font-size-base; /* Taille du texte pour la description du plat pour tablette */
-        padding: 0 $padding-d2; /* Padding horizontal pour tablette */
+        font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
+        padding-left: 2%; /* Padding horizontal pour tablette */
     }
     
-    /* Desktop */
-    @include desktop {
-        font-size: $font-size-base; /* Taille du texte pour la description du plat pour desktop */
-        padding: 0 $padding-d2; /* Padding horizontal pour desktop */
-    }
 }
 
 /*-- Contenu du plat (nom et prix) --*/
@@ -430,7 +444,7 @@
     
     /* tablette */
     @include tablette {
-        font-size: $font-size-base; /* Taille du texte pour le prix pour tablette */
+        font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
         padding-right: $padding-d2; /* Padding horizontal pour tablette */
     }
     
@@ -443,9 +457,6 @@
 .title h2{
     margin-right: 10%;
 
-}
-.menu h3 {
-    padding-left: 1%;
 }
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/

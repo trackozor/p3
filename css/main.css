@@ -775,7 +775,7 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt img {
-    height: 2%; /* Hauteur correspondant à 3 % de la largeur de l'écran */
+    height: 40%;
   }
 }
 
@@ -784,14 +784,29 @@ input {
   position: absolute; /* Positionne l'icône de manière absolue dans la carte */
   left: 1%; /* Place l'icône à gauche, hors de la carte */
   top: 25%; /* Place l'icône à 35% du haut du conteneur */
+  /*-- tablette --*/
   /* Desktop */
+  /*-- large desktop --*/
   /* Faire pointer la souris sur l'icône de la carte */
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .card-logo-alt i {
+    left: -42%; /* Place l'icône à 5% de la largeur de l'écran */
+    top: 30%; /* Place l'icône à 35% du haut du conteneur */
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt i {
-    left: -7%; /* Ajuste la position de l'icône pour desktop */
-    top: 35%; /* Ajuste la position de l'icône pour desktop */
-    font-size: 1.5vw;
+    left: -77%; /* Ajuste la position de l'icône pour desktop */
+    top: 30%;
+    font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo-alt i {
+    left: -180%; /* Ajuste la position de l'icône pour desktop */
+    top: 35%;
+    font-size: 1.5rem;
   }
 }
 .card-logo-alt i:hover {
@@ -1066,7 +1081,7 @@ input {
   border-radius: 2vh; /* Bord arrondis */
   display: flex; /* Utilise flexbox pour aligner les éléments */
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre portée */
-  margin: 1% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
+  margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
   align-items: center; /* Centre verticalement les éléments */
   justify-content: space-between; /* Espace entre les éléments */
   /* Desktop*/
@@ -1099,6 +1114,13 @@ input {
   font-size: 0.9rem; /* Taille du texte pour le nom du plat */
   font-weight: 900; /* Style gras pour le nom du plat */
   padding: 2%; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+  /* tablette */
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .dish-name {
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
+    padding: 2%; /* Padding horizontal pour tablette */
+  }
 }
 
 /*-- Description du plat dans la carte menu --*/
@@ -1109,18 +1131,11 @@ input {
   padding-left: 2%;
   margin-bottom: 2%;
   /* tablette */
-  /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .dish-description {
-    font-size: 1rem; /* Taille du texte pour la description du plat pour tablette */
-    padding: 0 1%; /* Padding horizontal pour tablette */
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .dish-description {
-    font-size: 1rem; /* Taille du texte pour la description du plat pour desktop */
-    padding: 0 1%; /* Padding horizontal pour desktop */
+    font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
+    padding-left: 2%; /* Padding horizontal pour tablette */
   }
 }
 
@@ -1141,7 +1156,7 @@ input {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .dish-content .price {
-    font-size: 1rem; /* Taille du texte pour le prix pour tablette */
+    font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
     padding-right: 1%; /* Padding horizontal pour tablette */
   }
 }
@@ -1154,10 +1169,6 @@ input {
 
 .title h2 {
   margin-right: 10%;
-}
-
-.menu h3 {
-  padding-left: 1%;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -1895,6 +1906,19 @@ main {
     display: flex; /* Flexbox pour desktop également */
     justify-content: center; /* Centrage du contenu pour desktop */
   }
+}
+
+.menu .title1 {
+  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
+  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  gap: 45%; /* Padding à gauche du titre */
+  justify-content: center; /* Espacement entre les éléments */
+}
+
+.menu .icon-favorite {
+  position: relative;
+  right: 2%;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
