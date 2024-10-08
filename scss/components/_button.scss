@@ -133,7 +133,12 @@
 
   /* Desktop */
   @include desktop {
-    font-size: $font-size-base; /* Ajustement de la taille de police pour desktop */
+    font-size: 1.6rem; /* Ajustement de la taille de police pour desktop */
+  }
+
+  /* Large desktop */
+  @include large-desktop {
+    font-size: 1.6rem; /* Ajustement de la taille de police pour large desktop */
   }
 
 
@@ -189,23 +194,80 @@ input {
 /*-------------------------------------icône validation -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-.validation-icon {
-  height: 8vh; /* Hauteur de l'icône */
-  display: none; /* Masqué par défaut */
-  align-items: center; /* Alignement vertical */
-  position: relative;
-  padding: 0; 
-  margin: 0;
-  left: 5%; /* Décalage vers la gauche */
-  justify-content: center; /* Centrage horizontal */
+/* Masquer la case à cocher */
+.checkbox-hidden {
+    display: none;
 }
 
-/* Style de l'icône à l'intérieur */
-.validation-icon i {
-  color: white; /* Couleur du texte en blanc */
-  background-color: $button--new-primary-color; /* Couleur de fond verte */
-  padding: 2vh; /* Padding de l'icône */
-  border-radius: 0 2vh 2vh 0; /* Bord arrondi */
-  justify-content: center; /* Centrage du contenu */
-  font-size: $font-size-middle; /* Taille de l'icône */
+/* Icône à animer, initialement hors de l'écran */
+.icon-to-slide {
+    position: relative;
+    transform: translateX(180px); /* L'icône commence hors de la carte à droite */
+    transition: transform 0.5s ease-in-out; /* Animation fluide */
 }
+
+/* Lorsque la case est cochée, l'icône glisse à sa position finale */
+.checkbox-hidden:checked + label .icon-to-slide {
+    transform: translateX(0); /* L'icône glisse vers sa position finale */
+}
+
+/* Style pour rendre toute la carte cliquable */
+label.card-menu {
+    display: block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
+}
+
+/* Animation et style au survol de la carte */
+label.card-menu:hover {
+    background-color: #f9f9f9;
+}
+
+/* Icône de validation à l'intérieur */
+.validation-icon {
+    display: flex;
+    align-items: center; /* Alignement vertical de l'icône */
+    position: absolute;
+    right:-1%; /* Ajuster cette valeur selon ta mise en page */
+    top: 50%;
+    transform: translateY(-53%); /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style de l'icône à l'intérieur de .validation-icon */
+.validation-icon i {
+    color: white; /* Couleur de l'icône */
+    background-color: $button--new-primary-color; /* Utilisation de la variable Sass */
+    padding: 0.75rem; /* Padding de l'icône */
+    border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
+    font-size: 1.4rem; /* Taille de l'icône */
+    justify-content: center;
+
+    /* Media queries pour tablette */
+    @include tablette {
+        font-size: 2rem;
+        padding: 1.2rem; /* Ajustement de la taille et du padding pour tablette */
+    }
+
+    /* Media queries pour desktop */
+    @include desktop {
+        font-size: 2rem;
+        padding: 1.7rem; /* Ajustement de la taille et du padding pour desktop */
+    }
+
+    /* Media queries pour large desktop */
+    @include large-desktop {
+        font-size: 2rem;
+        padding: 2.1rem; /* Ajustement de la taille et du padding pour large desktop */
+    }
+}
+
+
+
+

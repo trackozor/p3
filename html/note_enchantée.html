@@ -43,14 +43,13 @@
         <main>
             <!-- Image principale du restaurant -->
             <img src="../images/restaurants/note_enchantée.jpg" alt="Assiette de plats variés au restaurant La Note Enchantée" class="menu-image-alt3">
-        
-            <!-- Section du menu -->
             <section class="menu">
-                <div class="title">
+                <!-- Titre du restaurant et bouton favoris -->
+                <div class="title1">
                     <h2>La Note Enchantée</h2>
                     <div class="icon-favorite">
-                        <!-- Checkbox pour ajouter aux favoris avec icônes -->
-                        <input type="checkbox" id="favorite-checkbox-enchantée" aria-label="Ajouter La note enchantée aux favoris">
+                        <!-- Bouton pour ajouter aux favoris avec icône -->
+                        <input type="checkbox" id="favorite-checkbox-enchantée" class="checkbox-hidden" aria-label="Ajouter La note enchantée aux favoris">
                         <label for="favorite-checkbox-enchantée" class="icon-favorite">
                             <i class="far fa-heart fa-empty" aria-hidden="true"></i>
                             <span class="sr-only">Favoris</span>
@@ -58,15 +57,16 @@
                             <span class="sr-only">Favoris</span>
                         </label>
                     </div>
-                </div>                
-
+                </div>
+            
                 <!-- Section des Entrées -->
                 <div class="entrées">
                     <h3>ENTRÉES</h3>
                     <ul>
                         <!-- Carte du plat 1 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-1" class="checkbox-hidden">
+                            <label for="validation-1" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Ravioles de foie gras</p>
                                     <div class="dish-content">
@@ -74,17 +74,17 @@
                                         <span class="price">25€</span>
                                     </div>
                                 </div>
-                                <!-- Icône de validation pour le plat -->
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du plat 2 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-2" class="checkbox-hidden">
+                            <label for="validation-2" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Caviar osciètre</p>
                                     <div class="dish-content">
@@ -93,15 +93,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du plat 3 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-3" class="checkbox-hidden">
+                            <label for="validation-3" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Homard et espuma de potiron</p>
                                     <div class="dish-content">
@@ -110,14 +111,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
+            
                         <!-- Carte du plat 4 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-4" class="checkbox-hidden">
+                            <label for="validation-4" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Foie gras de canard cuit entier</p>
                                     <div class="dish-content">
@@ -126,21 +129,22 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
-
+            
                 <!-- Section des Plats -->
                 <div class="plats">
                     <h3>PLATS</h3>
                     <ul>
                         <!-- Carte du plat 1 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-5" class="checkbox-hidden">
+                            <label for="validation-5" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Noix de coquilles Saint-Jacques</p>
                                     <div class="dish-content">
@@ -149,15 +153,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du plat 2 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-6" class="checkbox-hidden">
+                            <label for="validation-6" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Langoustine poêlée</p>
                                     <div class="dish-content">
@@ -166,15 +171,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du plat 3 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-7" class="checkbox-hidden">
+                            <label for="validation-7" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Mijoté de queue de boeuf</p>
                                     <div class="dish-content">
@@ -183,21 +189,22 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
-
+            
                 <!-- Section des Desserts -->
                 <div class="desserts">
                     <h3>DESSERTS</h3>
                     <ul>
                         <!-- Carte du dessert 1 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-8" class="checkbox-hidden">
+                            <label for="validation-8" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Macaron noisette et chocolat</p>
                                     <div class="dish-content">
@@ -206,15 +213,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du dessert 2 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-9" class="checkbox-hidden">
+                            <label for="validation-9" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Baba au rhum revisité</p>
                                     <div class="dish-content">
@@ -223,15 +231,16 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-
+            
                         <!-- Carte du dessert 3 -->
                         <li>
-                            <div class="card-menu">
+                            <input type="checkbox" id="validation-10" class="checkbox-hidden">
+                            <label for="validation-10" class="card-menu">
                                 <div class="menu-item">
                                     <p class="dish-name">Tarte au citron meringuée</p>
                                     <div class="dish-content">
@@ -240,17 +249,21 @@
                                     </div>
                                 </div>
                                 <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                                    <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
                                     <span class="sr-only">Validé</span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
-
-                <!-- Bouton Commander -->
-                <a class="button--primary"><span class="button--primary-txt">Commander</span></a>
+            
+                <!-- Bouton de commande -->
+                <a class="button--primary">
+                    <span class="button--primary-txt">Commander</span>
+                </a>
             </section>
+            
+            <!-- Section du menu -->
         </main>
 
         <!-- ********************************************************************************************************--> 

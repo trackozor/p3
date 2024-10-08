@@ -408,6 +408,18 @@
         font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
         padding: 2% ; /* Padding horizontal pour tablette */
     }
+    
+    /* Desktop */
+    @include desktop {
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
+        padding: 2% ; /* Padding horizontal pour desktop */
+    }
+
+    /*-- Large desktop --*/
+    @include large-desktop {
+        font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
+        padding: 2% ; /* Padding horizontal pour large desktop */
+    }
 
 
 }
@@ -419,11 +431,24 @@
     word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
     padding-left: 2%;
     margin-bottom: 2%;
+    position: relative;
     
     /* tablette */
     @include tablette {
         font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
         padding-left: 2%; /* Padding horizontal pour tablette */
+    }
+
+    /* Desktop */
+    @include desktop {
+        font-size: 0.9rem; /* Taille du texte pour la description du plat pour desktop */
+        padding-left: 2%; /* Padding horizontal pour desktop */
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
+        padding-left: 2%; /* Padding horizontal pour large desktop */
     }
     
 }
@@ -432,7 +457,7 @@
 .dish-content {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     width: 100%; /* Largeur du contenu du plat */
-    justify-content: space-between; /* Espace entre le nom du plat et le prix */;
+    position: relative;
 }
 
 /*-- Prix du plat dans la carte menu --*/
@@ -440,6 +465,7 @@
     font-size: 0.7rem; /* Taille du texte pour le prix */
     font-weight: $font-weight-h-bold; /* Style gras pour le prix */
     padding-right: $padding-d2; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+    position: relative;
 
     
     /* tablette */
@@ -450,14 +476,17 @@
     
     /* Desktop */
     @include desktop {
-        font-size: $font-size-base; /* Taille du texte pour le prix pour desktop */
+        font-size: 0.9rem; /* Taille du texte pour le prix pour desktop */
         padding-right: $padding-d2; /* Padding horizontal pour desktop */
     }
-}
-.title h2{
-    margin-right: 10%;
 
+    /* Large desktop */
+    @include large-desktop {
+        font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
+        padding-right: $padding-d2; /* Padding horizontal pour large desktop */
+    }
 }
+
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
@@ -480,8 +509,8 @@
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
         font-size: 0.8rem;
-        margin-top: 5%;
-        margin-bottom: 2%;
+        margin-top: 1rem;
+        margin-bottom: 1%;
         justify-content: flex-start;
         margin-left: 30%;
         padding-right: 0;
@@ -495,11 +524,10 @@
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
-        font-size: 0.8rem;
         margin-top: 1rem;
         margin-bottom: 0;
         justify-content: flex-start;
-        margin-left: 35%;
+        margin-left: 55%;
         padding:1rem 0;
     }   
 }
@@ -529,7 +557,7 @@
     @include large-desktop {
         margin-right: 0.6rem; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: 0.7rem; /* Taille de l'icône pour desktop */
+        font-size: 1rem; /* Taille de l'icône pour desktop */
     }
 }
 /*-- Icône poignée de mains dans le footer --*/
@@ -614,7 +642,7 @@
 
     /*-- large desktop --*/
     @include large-desktop {
-        width: 10%; /* L'image occupe 30% de la largeur  */
+        width: 12%; /* L'image occupe 30% de la largeur  */
         margin:0 5% ; /* Marge verticale pour desktop */
         padding-top: $padding-d2; /* Padding inférieur pour desktop */
     }

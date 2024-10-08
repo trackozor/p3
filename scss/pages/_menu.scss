@@ -128,6 +128,13 @@ main  {
         width: 100%; /* Largeur à 100% pour desktop */
         object-position: 50% 85%; /* Positionnement de l'image pour desktop */
     }
+    
+    /*--large desktop*/
+    @include large-desktop {
+        height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        width: 100%; /* Largeur à 100% pour large desktop */
+        object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
+    }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -170,27 +177,57 @@ main  {
 /*--------------------------------------- Titre Menu -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-/* Conteneur pour le titre du menu */
+/*-- Ajustement personnalisé du titre la note enchantée-- */
 .menu .title {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
-    gap: 20%; /* Padding à gauche du titre */
-    justify-content: center; /* Espacement entre les éléments */
+    gap: 30%; /* Padding à gauche du titre */
+    justify-content:center; /* Espacement entre les éléments */
     
-    /* Desktop */
+    /*-- tablette --*/
+    @include tablette {
+        gap: 60%; /* Padding à gauche du titre */
+    }
+    /*Desktop */
     @include desktop {
-        display: flex; /* Flexbox pour desktop également */
-        justify-content: center; /* Centrage du contenu pour desktop */
+        gap:5%;
+    }
+
+    /*-- Large Desktop --*/
+    @include large-desktop {
+        gap:2%
     }
 }
+
+
+/*------------------------------------------------------------------------------------------*/
+/*-- Ajustement titre a la francaise --*/
 .menu .title1 {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
     gap: 45%; /* Padding à gauche du titre */
     justify-content: center; /* Espacement entre les éléments */
+
+    /*-- tablette --*/
+    @include tablette {
+        gap: 67%; /* Padding à gauche du titre */
+    }
+    
+    /*-- desktop --*/
+    @include desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
+    
+    /*--large desktop --*/
+    @include large-desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
 }
+
+
+/*-------------------------------------------------------------------------------------------*/
 /* Titre la palette du gout ajustement personnalisé*/
 .menu .title2 {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
@@ -215,9 +252,30 @@ main  {
     }
 }
 
-.menu .icon-favorite {
-    position: relative;
-    right: 2%;
+
+/*---------------------------------------------------------------------------------------------------*/
+/*-- Ajustement titre le delices des sens*/
+.menu .title3 {
+    display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+    font-family: $font-title; /* Police de caractère du titre */
+    font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
+    gap: 33%; /* Padding à gauche du titre */
+    justify-content: center; /* Espacement entre les éléments */
+    
+    /*-- tablette --*/
+    @include tablette {
+        gap: 60%; /* Padding à gauche du titre */
+    }
+    
+    /*-- desktop --*/
+    @include desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
+
+    /*--large desktop --*/
+    @include large-desktop {
+        gap: 5%; /* Padding à gauche du titre */
+    }
 }
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Sous-titres H3 dans le menu ------------------------------------*/

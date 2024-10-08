@@ -45,198 +45,206 @@
             <!-- Image principale du restaurant -->
             <img src="../images/restaurants/française.jpg" alt="Assiette de plats variés au restaurant À la française" class="menu-image-alt2">
         
-            <!-- Section du menu -->
-            <section class="menu">
-                <!-- Titre du restaurant et bouton favoris -->
-                <div class="title1">
-                    <h2>À la française</h2>
-                    <div class="icon-favorite">
-                        <!-- Bouton pour ajouter aux favoris avec icône -->
-                        <input type="checkbox" id="favorite-checkbox-française" aria-label="Ajouter À la française aux favoris">
-                        <label for="favorite-checkbox-française" class="icon-favorite">
-                            <i class="far fa-heart fa-empty" aria-hidden="true"></i><span class="sr-only">Favoris</span>
-                            <i class="fas fa-heart fa-full" aria-hidden="true"></i><span class="sr-only">Favoris</span>
+        <!-- Section du menu -->
+        <section class="menu">
+            <!-- Titre du restaurant et bouton favoris -->
+            <div class="title1">
+                <h2>À la française</h2>
+                <div class="icon-favorite">
+                    <!-- Bouton pour ajouter aux favoris avec icône -->
+                    <input type="checkbox" id="favorite-checkbox-française" class="checkbox-hidden" aria-label="Ajouter À la française aux favoris">
+                    <label for="favorite-checkbox-française" class="icon-favorite">
+                        <i class="far fa-heart fa-empty" aria-hidden="true"></i>
+                        <span class="sr-only">Favoris</span>
+                        <i class="fas fa-heart fa-full" aria-hidden="true"></i>
+                        <span class="sr-only">Favoris</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Section des Entrées -->
+            <div class="entrées">
+                <h3>ENTRÉES</h3>
+                <ul>
+                    <!-- Carte du plat 1 -->
+                    <li>
+                        <input type="checkbox" id="validation-1" class="checkbox-hidden">
+                        <label for="validation-1" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Tartare de poulpe acidulé</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Aux zestes d'orange</p>
+                                    <span class="price">25€</span>
+                                </div>
+                            </div>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
                         </label>
-                    </div>
-                </div>                
+                    </li>
 
-                <!-- Section des Entrées -->
-                <div class="entrées">
-                    <h3>ENTRÉES</h3>
-                    <ul>
-                        <!-- Carte du plat 1 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Tartare de poulpe acidulé</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Aux zestes d'orange</p>
-                                        <span class="price">25€</span>
-                                    </div>
-                                </div>
-                                <!-- Icône de validation pour le plat -->
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du plat 2 -->
+                    <li>
+                        <input type="checkbox" id="validation-2" class="checkbox-hidden">
+                        <label for="validation-2" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Velouté de légumes d'antan</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Carotte, panais, topinambour</p>
+                                    <span class="price">35€</span>
                                 </div>
                             </div>
-                        </li>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
 
-                        <!-- Carte du plat 2 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Velouté de légumes d'antan</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Carotte, panais, topinambour</p>
-                                        <span class="price">35€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du plat 3 -->
+                    <li>
+                        <input type="checkbox" id="validation-3" class="checkbox-hidden">
+                        <label for="validation-3" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Soupe à l'oignon</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Revisitée</p>
+                                    <span class="price">20€</span>
                                 </div>
                             </div>
-                        </li>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
 
-                        <!-- Carte du plat 3 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Soupe à l'oignon</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Revisitée</p>
-                                        <span class="price">20€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+            <!-- Section des Plats -->
+            <div class="plats">
+                <h3>PLATS</h3>
+                <ul>
+                    <!-- Carte du plat 1 -->
+                    <li>
+                        <input type="checkbox" id="validation-4" class="checkbox-hidden">
+                        <label for="validation-4" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Coquilles Saint-Jacques</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Accompagnées d'une purée de panais</p>
+                                    <span class="price">40€</span>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
 
-                <!-- Section des Plats -->
-                <div class="plats">
-                    <h3>PLATS</h3>
-                    <ul>
-                        <!-- Carte du plat 1 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Coquilles Saint-Jacques</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Accompagnées d'une purée de panais</p>
-                                        <span class="price">40€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du plat 2 -->
+                    <li>
+                        <input type="checkbox" id="validation-5" class="checkbox-hidden">
+                        <label for="validation-5" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Magret de canard</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Et parmentier de pommes de terre</p>
+                                    <span class="price">35€</span>
                                 </div>
                             </div>
-                        </li>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
 
-                        <!-- Carte du plat 2 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Magret de canard</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Et parmentier de pommes de terre</p>
-                                        <span class="price">35€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du plat 3 -->
+                    <li>
+                        <input type="checkbox" id="validation-6" class="checkbox-hidden">
+                        <label for="validation-6" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Pigeonneau d'Ille-et-Vilaine</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Sur son lit de gnocchis aux légumes</p>
+                                    <span class="price">44€</span>
                                 </div>
                             </div>
-                        </li>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
 
-                        <!-- Carte du plat 3 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Pigeonneau d'Ille-et-Vilaine</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Sur son lit de gnocchis aux légumes</p>
-                                        <span class="price">44€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+            <!-- Section des Desserts -->
+            <div class="desserts">
+                <h3>DESSERTS</h3>
+                <ul>
+                    <!-- Carte du dessert 1 -->
+                    <li>
+                        <input type="checkbox" id="validation-7" class="checkbox-hidden">
+                        <label for="validation-7" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Pétales de violettes glacés</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Et purée de noisette</p>
+                                    <span class="price">18€</span>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
 
-                <!-- Section des Desserts -->
-                <div class="desserts">
-                    <h3>DESSERTS</h3>
-                    <ul>
-                        <!-- Carte du dessert 1 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Pétales de violettes glacés</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Et purée de noisette</p>
-                                        <span class="price">18€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du dessert 2 -->
+                    <li>
+                        <input type="checkbox" id="validation-8" class="checkbox-hidden">
+                        <label for="validation-8" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Fondant au chocolat</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Revisité</p>
+                                    <span class="price">22€</span>
                                 </div>
                             </div>
-                        </li>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
+                            </div>
+                        </label>
+                    </li>
 
-                        <!-- Carte du dessert 2 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Fondant au chocolat</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Revisité</p>
-                                        <span class="price">22€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
+                    <!-- Carte du dessert 3 -->
+                    <li>
+                        <input type="checkbox" id="validation-9" class="checkbox-hidden">
+                        <label for="validation-9" class="card-menu">
+                            <div class="menu-item">
+                                <p class="dish-name">Millefeuille croustillant</p>
+                                <div class="dish-content">
+                                    <p class="dish-description">Myrtille et pâte d'amande</p>
+                                    <span class="price">23€</span>
                                 </div>
                             </div>
-                        </li>
-
-                        <!-- Carte du dessert 3 -->
-                        <li>
-                            <div class="card-menu">
-                                <div class="menu-item">
-                                    <p class="dish-name">Millefeuille croustillant</p>
-                                    <div class="dish-content">
-                                        <p class="dish-description">Myrtille et pâte d'amande</p>
-                                        <span class="price">23€</span>
-                                    </div>
-                                </div>
-                                <div class="validation-icon">
-                                    <i class="far fa-check-circle" aria-hidden="true"></i>
-                                    <span class="sr-only">Validé</span>
-                                </div>
+                            <div class="validation-icon">
+                                <i class="far fa-check-circle icon-to-slide" aria-hidden="true"></i>
+                                <span class="sr-only">Validé</span>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
 
-                <!-- Bouton de commande -->
-                <a class="button--primary"><span class="button--primary-txt">Commander</span></a>
-            </section>
-        </main>
-
+            <!-- Bouton de commande -->
+            <a class="button--primary"><span class="button--primary-txt">Commander</span></a>
+        </section>
         <!-- ********************************************************************************************************--> 
         <!-- **************************         Footer        ******************************************************* -->
         <!-- *********************************************************************************************************-->

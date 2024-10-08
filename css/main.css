@@ -629,6 +629,7 @@ img {
   font-size: 1.2rem; /* Taille de police pour les icônes */
   /* Tablette */
   /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .fa-full, .fa-empty {
@@ -637,7 +638,12 @@ img {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fa-full, .fa-empty {
-    font-size: 1rem; /* Ajustement de la taille de police pour desktop */
+    font-size: 1.6rem; /* Ajustement de la taille de police pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .fa-full, .fa-empty {
+    font-size: 1.6rem; /* Ajustement de la taille de police pour large desktop */
   }
 }
 
@@ -685,25 +691,81 @@ input {
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------icône validation -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-.validation-icon {
-  height: 8vh; /* Hauteur de l'icône */
-  display: none; /* Masqué par défaut */
-  align-items: center; /* Alignement vertical */
-  position: relative;
-  padding: 0;
-  margin: 0;
-  left: 5%; /* Décalage vers la gauche */
-  justify-content: center; /* Centrage horizontal */
+/* Masquer la case à cocher */
+.checkbox-hidden {
+  display: none;
 }
 
-/* Style de l'icône à l'intérieur */
+/* Icône à animer, initialement hors de l'écran */
+.icon-to-slide {
+  position: relative;
+  transform: translateX(180px); /* L'icône commence hors de la carte à droite */
+  transition: transform 0.5s ease-in-out; /* Animation fluide */
+}
+
+/* Lorsque la case est cochée, l'icône glisse à sa position finale */
+.checkbox-hidden:checked + label .icon-to-slide {
+  transform: translateX(0); /* L'icône glisse vers sa position finale */
+}
+
+/* Style pour rendre toute la carte cliquable */
+label.card-menu {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
+}
+
+/* Animation et style au survol de la carte */
+label.card-menu:hover {
+  background-color: #f9f9f9;
+}
+
+/* Icône de validation à l'intérieur */
+.validation-icon {
+  display: flex;
+  align-items: center; /* Alignement vertical de l'icône */
+  position: absolute;
+  right: -1%; /* Ajuster cette valeur selon ta mise en page */
+  top: 50%;
+  transform: translateY(-53%); /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style de l'icône à l'intérieur de .validation-icon */
 .validation-icon i {
-  color: white; /* Couleur du texte en blanc */
-  background-color: #99E2D0; /* Couleur de fond verte */
-  padding: 2vh; /* Padding de l'icône */
-  border-radius: 0 2vh 2vh 0; /* Bord arrondi */
-  justify-content: center; /* Centrage du contenu */
-  font-size: 0.7rem; /* Taille de l'icône */
+  color: white; /* Couleur de l'icône */
+  background-color: #99E2D0; /* Utilisation de la variable Sass */
+  padding: 0.75rem; /* Padding de l'icône */
+  border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
+  font-size: 1.4rem; /* Taille de l'icône */
+  justify-content: center;
+  /* Media queries pour tablette */
+  /* Media queries pour desktop */
+  /* Media queries pour large desktop */
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .validation-icon i {
+    font-size: 2rem;
+    padding: 1.2rem; /* Ajustement de la taille et du padding pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .validation-icon i {
+    font-size: 2rem;
+    padding: 1.7rem; /* Ajustement de la taille et du padding pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .validation-icon i {
+    font-size: 2rem;
+    padding: 2.1rem; /* Ajustement de la taille et du padding pour large desktop */
+  }
 }
 
 /* Nom du fichier      : _card.scss                                                                       */
@@ -1114,11 +1176,25 @@ input {
   font-weight: 900; /* Style gras pour le nom du plat */
   padding: 2%; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
   /* tablette */
+  /* Desktop */
+  /*-- Large desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .dish-name {
     font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
     padding: 2%; /* Padding horizontal pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .dish-name {
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
+    padding: 2%; /* Padding horizontal pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .dish-name {
+    font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
+    padding: 2%; /* Padding horizontal pour large desktop */
   }
 }
 
@@ -1129,7 +1205,10 @@ input {
   word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
   padding-left: 2%;
   margin-bottom: 2%;
+  position: relative;
   /* tablette */
+  /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .dish-description {
@@ -1137,12 +1216,24 @@ input {
     padding-left: 2%; /* Padding horizontal pour tablette */
   }
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .dish-description {
+    font-size: 0.9rem; /* Taille du texte pour la description du plat pour desktop */
+    padding-left: 2%; /* Padding horizontal pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .dish-description {
+    font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
+    padding-left: 2%; /* Padding horizontal pour large desktop */
+  }
+}
 
 /*-- Contenu du plat (nom et prix) --*/
 .dish-content {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Largeur du contenu du plat */
-  justify-content: space-between; /* Espace entre le nom du plat et le prix */
+  position: relative;
 }
 
 /*-- Prix du plat dans la carte menu --*/
@@ -1150,8 +1241,10 @@ input {
   font-size: 0.7rem; /* Taille du texte pour le prix */
   font-weight: 900; /* Style gras pour le prix */
   padding-right: 1%; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+  position: relative;
   /* tablette */
   /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .dish-content .price {
@@ -1161,13 +1254,15 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-content .price {
-    font-size: 1rem; /* Taille du texte pour le prix pour desktop */
+    font-size: 0.9rem; /* Taille du texte pour le prix pour desktop */
     padding-right: 1%; /* Padding horizontal pour desktop */
   }
 }
-
-.title h2 {
-  margin-right: 10%;
+@media (min-width: 1440px) {
+  .dish-content .price {
+    font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
+    padding-right: 1%; /* Padding horizontal pour large desktop */
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -1194,8 +1289,8 @@ input {
     flex-wrap: nowrap; /* Empêche le retour à la ligne */
     height: auto;
     font-size: 0.8rem;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 1rem;
+    margin-bottom: 1%;
     justify-content: flex-start;
     margin-left: 30%;
     padding-right: 0;
@@ -1209,11 +1304,10 @@ input {
     align-items: center; /* Aligne les éléments verticalement */
     flex-wrap: nowrap; /* Empêche le retour à la ligne */
     height: auto;
-    font-size: 0.8rem;
     margin-top: 1rem;
     margin-bottom: 0;
     justify-content: flex-start;
-    margin-left: 35%;
+    margin-left: 55%;
     padding: 1rem 0;
   }
 }
@@ -1246,7 +1340,7 @@ input {
   .fa-handshake, .fa-utensils {
     margin-right: 0.6rem; /* Padding horizontal pour desktop */
     margin-left: 0; /* Pas d'espace à gauche*/
-    font-size: 0.7rem; /* Taille de l'icône pour desktop */
+    font-size: 1rem; /* Taille de l'icône pour desktop */
   }
 }
 
@@ -1340,7 +1434,7 @@ input {
 }
 @media (min-width: 1440px) {
   .footer-card img {
-    width: 10%; /* L'image occupe 30% de la largeur  */
+    width: 12%; /* L'image occupe 30% de la largeur  */
     margin: 0 5%; /* Marge verticale pour desktop */
     padding-top: 1%; /* Padding inférieur pour desktop */
   }
@@ -1901,6 +1995,7 @@ main {
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
+  /*--large desktop*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu-image-alt {
@@ -1915,6 +2010,13 @@ main {
     height: 35vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 85%; /* Positionnement de l'image pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .menu-image-alt {
+    height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    width: 100%; /* Largeur à 100% pour large desktop */
+    object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
   }
 }
 
@@ -1958,30 +2060,62 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Titre Menu -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/* Conteneur pour le titre du menu */
+/*-- Ajustement personnalisé du titre la note enchantée-- */
 .menu .title {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
   font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
-  gap: 20%; /* Padding à gauche du titre */
+  gap: 30%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
-  /* Desktop */
+  /*-- tablette --*/
+  /*Desktop */
+  /*-- Large Desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu .title {
+    gap: 60%; /* Padding à gauche du titre */
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu .title {
-    display: flex; /* Flexbox pour desktop également */
-    justify-content: center; /* Centrage du contenu pour desktop */
+    gap: 5%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title {
+    gap: 2%;
   }
 }
 
+/*------------------------------------------------------------------------------------------*/
+/*-- Ajustement titre a la francaise --*/
 .menu .title1 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
   font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 45%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*--large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu .title1 {
+    gap: 67%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title1 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title1 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
 }
 
+/*-------------------------------------------------------------------------------------------*/
 /* Titre la palette du gout ajustement personnalisé*/
 .menu .title2 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
@@ -2009,9 +2143,32 @@ main {
   }
 }
 
-.menu .icon-favorite {
-  position: relative;
-  right: 2%;
+/*---------------------------------------------------------------------------------------------------*/
+/*-- Ajustement titre le delices des sens*/
+.menu .title3 {
+  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
+  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  gap: 33%; /* Padding à gauche du titre */
+  justify-content: center; /* Espacement entre les éléments */
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*--large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu .title3 {
+    gap: 60%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title3 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title3 {
+    gap: 5%; /* Padding à gauche du titre */
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
