@@ -500,6 +500,9 @@
     font-weight: $font-weight-h-bold; /* Style gras pour le prix */
     padding-right: $padding-d2; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
     position: relative;
+    display: inline-block;
+    transition: transform 0.7s ease; /* Transition fluide lorsqu'il se déplace */
+    transform: translateX(0); /* Position normale au départ */
 
     
     /* tablette */
@@ -521,6 +524,20 @@
     }
 }
 
+/* Quand la case est cochée, le prix glisse vers la gauche */
+.checkbox-hidden:checked + label .price {
+    transform: translateX(-8vh); /* Glisse vers la gauche de 20px */
+
+    /* tablette */
+    @include tablette {
+        transform: translateX(-10vh); /* Glisse vers la gauche de 10px pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        transform: translateX(-15vh); /* Glisse vers la gauche de 20px pour desktop */
+    }
+}
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/

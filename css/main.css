@@ -1281,6 +1281,9 @@ label.card-menu:hover {
   font-weight: 900; /* Style gras pour le prix */
   padding-right: 1%; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
   position: relative;
+  display: inline-block;
+  transition: transform 0.7s ease; /* Transition fluide lorsqu'il se déplace */
+  transform: translateX(0); /* Position normale au départ */
   /* tablette */
   /* Desktop */
   /* Large desktop */
@@ -1301,6 +1304,23 @@ label.card-menu:hover {
   .dish-content .price {
     font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
     padding-right: 1%; /* Padding horizontal pour large desktop */
+  }
+}
+
+/* Quand la case est cochée, le prix glisse vers la gauche */
+.checkbox-hidden:checked + label .price {
+  transform: translateX(-8vh); /* Glisse vers la gauche de 20px */
+  /* tablette */
+  /* Desktop */
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .checkbox-hidden:checked + label .price {
+    transform: translateX(-10vh); /* Glisse vers la gauche de 10px pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .checkbox-hidden:checked + label .price {
+    transform: translateX(-15vh); /* Glisse vers la gauche de 20px pour desktop */
   }
 }
 
