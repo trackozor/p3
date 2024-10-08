@@ -375,13 +375,12 @@
     margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Espace entre les éléments */
-
-    /* Desktop*/
-    @include desktop {
-     /* Marges autour de la carte correspondant à 2% de la hauteur de l'écran */
-    }
+    opacity: 0; /* Initialement invisible */
+    animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 
 }
+
+
 
 /*-- Item du menu --*/
 .menu-item {
@@ -397,6 +396,41 @@
     }
 }
 
+/* Boucle de délais pour la section des Entrées */
+.entrées li:nth-child(1) .card-menu {
+    animation-delay: 0.5s;
+}
+.entrées li:nth-child(2) .card-menu {
+    animation-delay: 1s;
+}
+.entrées li:nth-child(3) .card-menu {
+    animation-delay: 1.5s;
+}
+.entrées li:nth-child(4) .card-menu {
+    animation-delay: 2s;
+}
+
+/* Boucle de délais pour la section des Plats */
+.plats li:nth-child(1) .card-menu {
+    animation-delay: 2.5s;
+}
+.plats li:nth-child(2) .card-menu {
+    animation-delay: 3s;
+}
+.plats li:nth-child(3) .card-menu {
+    animation-delay: 3.5s;
+}
+
+/* Boucle de délais pour la section des Desserts */
+.desserts li:nth-child(1) .card-menu {
+    animation-delay: 4s;
+}
+.desserts li:nth-child(2) .card-menu {
+    animation-delay: 4.5s;
+}
+.desserts li:nth-child(3) .card-menu {
+    animation-delay: 5s;
+}
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     font-size: 0.9rem; /* Taille du texte pour le nom du plat */
