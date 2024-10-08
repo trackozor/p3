@@ -461,12 +461,16 @@
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
     width: 100%;
-    font-size: 0.9rem; /* Taille du texte pour la description du plat */
-    word-spacing: -0.2vh; /* Réduit l'espacement entre les mots */
+    font-size: 0.9rem;
+    word-spacing: -0.2vh;
     padding-left: 2%;
     margin-bottom: 2%;
     position: relative;
-    
+    white-space: normal;  /* Le texte s'affiche normalement sur plusieurs lignes */
+    overflow: hidden;    /* Pas d'overflow caché */
+    text-overflow: ellipsis;  /* Pas d'ellipse par défaut */
+    transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
+
     /* tablette */
     @include tablette {
         font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
@@ -485,6 +489,13 @@
         padding-left: 2%; /* Padding horizontal pour large desktop */
     }
     
+}
+
+/* Quand le prix glisse (case cochée), la description est éclipsée */
+.checkbox-hidden:checked + label .dish-description {
+    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+    overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
+    text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
 }
 
 /*-- Contenu du plat (nom et prix) --*/
