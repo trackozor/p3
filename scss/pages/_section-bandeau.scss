@@ -46,8 +46,13 @@
     /* Desktop */
     @include desktop {
         padding:0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
-        margin-top: 5%;
         font-size: 2rem;
+        margin-top:2%
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        margin-top:2%;
     }
 }
 
@@ -82,7 +87,14 @@
 
     /* Desktop */
     @include desktop {
-        margin: 5% 0;
+        padding: 5%;
+        margin:0.5%
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        padding: 5%;
+        margin:2%;
     }
 }
 .fonctionnement h2 {
@@ -97,7 +109,7 @@
     /* Desktop */
     @include desktop {
         font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
-        margin: 1% 0;
+        margin:1% 0;
     }
 }
 /*----------------------------------------------------------------------------------------------------------*/

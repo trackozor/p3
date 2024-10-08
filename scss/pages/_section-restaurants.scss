@@ -26,8 +26,12 @@
 
     @include desktop {
         width:95%; 
-        margin: $margin-base 5%;
         
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        width: 95%;
     }
 
 }
@@ -41,6 +45,11 @@
 
     /* Desktop */
     @include desktop {
+    width: 40%;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
     width: 40%;
     }
 }

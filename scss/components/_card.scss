@@ -325,6 +325,10 @@
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Espace entre les éléments */
 
+    /* Desktop*/
+    @include desktop {
+     /* Marges autour de la carte correspondant à 2% de la hauteur de l'écran */
+    }
 
 }
 
@@ -412,7 +416,7 @@
 
     /* Desktop */
     @include desktop {
-        padding: 4% 4%  0 20%; /* Padding vertical pour desktop */
+         /* Padding vertical pour desktop */
         display: flex;
         flex-direction: row-reverse; /* Alignement horizontal des éléments */
         justify-content: flex-start; /* Espace entre les éléments pour qu'ils ne se chevauchent pas */

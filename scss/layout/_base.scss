@@ -31,7 +31,14 @@ body {
   flex-direction: column;
   margin:0 auto;
 
+  @include desktop{
+    max-width: 1024px;
+  }
 
+  @include large-desktop {
+    max-width: 1440px;
+    font-size: 1.5rem;
+  }
 }
 
 
@@ -47,6 +54,14 @@ h2 {
     /*-- tablette --*/
     @include tablette {
       font-size: 1.6rem;
+    }
+
+    /* Desktop */
+    @include desktop {
+      font-size: 1.6rem;
+    }
+    @include large-desktop {
+      font-size: 2rem;
     }
 }
 

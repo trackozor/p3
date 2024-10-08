@@ -455,6 +455,17 @@ body {
   flex-direction: column;
   margin: 0 auto;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    font-size: 1.5rem;
+  }
+}
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Titres ---------------------------------------------------------------*/
@@ -464,10 +475,21 @@ h2 {
   font-size: 1.2rem; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
   font-weight: 900; /* Accentuation caractère majeure soit valeur=900 */
   /*-- tablette --*/
+  /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   h2 {
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -550,7 +572,7 @@ img {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .button--primary-txt {
-    font-size: 0.7rem; /* Ajustement de la taille de police pour desktop */
+    font-size: 1rem; /* Ajustement de la taille de police pour desktop */
   }
 }
 
@@ -989,6 +1011,12 @@ input {
   margin: 1% 5%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
   align-items: center; /* Centre verticalement les éléments */
   justify-content: space-between; /* Espace entre les éléments */
+  /* Desktop*/
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-menu {
+    /* Marges autour de la carte correspondant à 2% de la hauteur de l'écran */
+  }
 }
 
 /*-- Item du menu --*/
@@ -1081,7 +1109,7 @@ input {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card {
-    padding: 4% 4% 0 20%; /* Padding vertical pour desktop */
+    /* Padding vertical pour desktop */
     display: flex;
     flex-direction: row-reverse; /* Alignement horizontal des éléments */
     justify-content: flex-start; /* Espace entre les éléments pour qu'ils ne se chevauchent pas */
@@ -1268,6 +1296,7 @@ header {
   text-align: center;
   /*-- tablette --*/
   /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .bandeau h2 {
@@ -1278,8 +1307,13 @@ header {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau h2 {
     padding: 0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
-    margin-top: 5%;
     font-size: 2rem;
+    margin-top: 2%;
+  }
+}
+@media (min-width: 1440px) {
+  .bandeau h2 {
+    margin-top: 2%;
   }
 }
 
@@ -1305,6 +1339,7 @@ header {
   padding-left: 5%;
   /*-- Tablette --*/
   /* Desktop */
+  /*-- large desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .fonctionnement {
@@ -1314,7 +1349,14 @@ header {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement {
-    margin: 5% 0;
+    padding: 5%;
+    margin: 0.5%;
+  }
+}
+@media (min-width: 1440px) {
+  .fonctionnement {
+    padding: 5%;
+    margin: 2%;
   }
 }
 
@@ -1499,11 +1541,16 @@ i {
 
 #section-restaurants h2 {
   margin: 2% 5%;
+  /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   #section-restaurants h2 {
     width: 95%;
-    margin: 2% 5%;
+  }
+}
+@media (min-width: 1440px) {
+  #section-restaurants h2 {
+    width: 95%;
   }
 }
 
@@ -1514,8 +1561,14 @@ i {
   animation: slideIn 0.6s ease-out forwards; /* Animation qui fait glisser et apparaître les cartes */
   width: 90%;
   /* Desktop */
+  /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
+  .card {
+    width: 40%;
+  }
+}
+@media (min-width: 1440px) {
   .card {
     width: 40%;
   }
