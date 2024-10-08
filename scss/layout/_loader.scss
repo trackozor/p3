@@ -18,7 +18,7 @@
     width: 100vw;
     height: 100vh; /* Assure que le loader couvre toute la hauteur de l'écran */
     background: black;
-    display: flex; /* Utiliser flexbox pour centrer les éléments */
+    display: $loader-active; /* Utiliser flexbox pour centrer les éléments */
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Centre verticalement */
@@ -101,6 +101,16 @@
 
     /*-- Tablette --*/
     @include tablette {
+        height: 7rem;
+    }
+
+    /*-- Desktop --*/
+    @include desktop {
+        height: 7rem;
+    }
+
+    /*-- Large Desktop --*/
+    @include large-desktop {
         height: 7rem;
     }
 }
