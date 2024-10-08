@@ -463,7 +463,7 @@ body {
 @media (min-width: 1440px) {
   body {
     max-width: 1024px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -803,12 +803,15 @@ input {
 /*---------------------------------------------------------------------------------------------------------*/
 /*-- Conteneur de la carte localisation --*/
 .card-location {
+  width: 100%; /* La carte prend toute la largeur du parent */
   display: flex; /* Utilise flexbox pour aligner les éléments */
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
   gap: 4%; /* Espace entre les éléments de la carte */
   background-color: #f9f9f9; /* Couleur de fond */
   padding: 2% 0; /* Espace intérieur de la carte */
+  border-top: 0.25rem solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
+  border-bottom: 0.25rem solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
   /* Tablette */
   /* Desktop */
   /*-- Large desktop --*/
@@ -829,6 +832,7 @@ input {
     padding: 0; /* Ajuste les marges intérieures pour desktop */
     display: flex;
     align-items: center;
+    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
   }
 }
 @media (min-width: 1440px) {
@@ -838,6 +842,7 @@ input {
     padding: 0; /* Ajuste les marges intérieures pour desktop */
     display: flex;
     align-items: center;
+    border: none;
   }
 }
 
@@ -867,7 +872,7 @@ input {
   .card-location i {
     font-size: 1.2rem;
     align-items: center;
-    padding-top: 2.2rem; /* Ajuste la taille de l'icône pour desktop */
+    padding-top: 1.6rem; /* Ajuste la taille de l'icône pour desktop */
   }
 }
 
@@ -1349,35 +1354,6 @@ header {
   }
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Carte pour la localisation --------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-.card-location {
-  width: 100%; /* La carte prend toute la largeur du parent */
-  border-top: 0.25rem solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
-  border-bottom: 0.25rem solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  /* Desktop */
-  /* -- Large desktop --*/
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-location {
-    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
-    align-items: center;
-    width: 100%;
-    padding: 4% 0;
-  }
-}
-@media (min-width: 1440px) {
-  .card-location {
-    border: none;
-    align-items: center;
-  }
-}
-
 /* Styles spécifique pages*/
 /*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _section-bandeau.scss                                                              */
@@ -1433,6 +1409,7 @@ header {
 @media (min-width: 1440px) {
   .bandeau h2 {
     margin-top: 2%;
+    font-size: 2.2rem;
   }
 }
 

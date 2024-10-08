@@ -25,33 +25,7 @@ header {
   }
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Carte pour la localisation --------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-.card-location {
-  width: 100%; /* La carte prend toute la largeur du parent */
-  border-top: $font-size-d4 solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
-  border-bottom: $font-size-d4 solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
-  display:flex;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
 
-  /* Desktop */
-  @include desktop {
-    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
-    align-items: center;
-    width:100%;
-    padding: 4% 0;
-  }
-  
-  /* -- Large desktop --*/
-  @include large-desktop {
-    border: none;
-    align-items: center;
-  
-  }
-}
 
 
 
