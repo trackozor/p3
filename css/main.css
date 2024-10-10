@@ -713,7 +713,7 @@ label.card-menu {
   display: block;
   cursor: pointer;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 1rem;
   margin-bottom: 10px;
   position: relative;
   overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
@@ -1246,9 +1246,6 @@ label.card-menu:hover {
   padding-left: 2%;
   margin-bottom: 2%;
   position: relative;
-  white-space: normal; /* Le texte s'affiche normalement sur plusieurs lignes */
-  overflow: hidden; /* Pas d'overflow caché */
-  text-overflow: ellipsis; /* Pas d'ellipse par défaut */
   transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
   /* tablette */
   /* Desktop */
@@ -1278,6 +1275,7 @@ label.card-menu:hover {
   white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
   overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
   text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
+  width: 70%;
 }
 
 /*-- Contenu du plat (nom et prix) --*/
@@ -1285,6 +1283,7 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Largeur du contenu du plat */
   position: relative;
+  justify-content: space-between;
 }
 
 /*-- Prix du plat dans la carte menu --*/
@@ -1321,7 +1320,7 @@ label.card-menu:hover {
 
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
-  transform: translateX(-9vh); /* Glisse vers la gauche de 9% de la  */
+  transform: translateX(-3rem); /* Glisse vers la gauche de 9% de la  */
   /* tablette */
   /* Desktop */
   /* Large desktop */

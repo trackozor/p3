@@ -466,9 +466,6 @@
     padding-left: 2%;
     margin-bottom: 2%;
     position: relative;
-    white-space: normal;  /* Le texte s'affiche normalement sur plusieurs lignes */
-    overflow: hidden;    /* Pas d'overflow caché */
-    text-overflow: ellipsis;  /* Pas d'ellipse par défaut */
     transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
 
     /* tablette */
@@ -496,6 +493,8 @@
     white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
     overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
     text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
+    width: 70%;
+
 }
 
 /*-- Contenu du plat (nom et prix) --*/
@@ -503,6 +502,7 @@
     display: flex; /* Utilise flexbox pour aligner les éléments */
     width: 100%; /* Largeur du contenu du plat */
     position: relative;
+    justify-content: space-between;
 }
 
 /*-- Prix du plat dans la carte menu --*/
@@ -537,7 +537,7 @@
 
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
-    transform: translateX(-9vh); /* Glisse vers la gauche de 9% de la  */
+    transform: translateX(-3rem); /* Glisse vers la gauche de 9% de la  */
 
     /* tablette */
     @include tablette {
