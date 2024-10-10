@@ -244,15 +244,15 @@ label.card-menu:hover {
 .validation-icon i {
     color: white; /* Couleur de l'icône */
     background-color: $button--new-primary-color; /* Utilisation de la variable Sass */
-    padding: 0.75rem; /* Padding de l'icône */
+    padding: 0.85rem; /* Padding de l'icône */
     border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
-    font-size: 1.4rem; /* Taille de l'icône */
+    font-size: 1.5rem; /* Taille de l'icône */
     justify-content: center;
 
     /* Media queries pour tablette */
     @include tablette {
         font-size: 2rem;
-        padding: 1.2rem; /* Ajustement de la taille et du padding pour tablette */
+        padding: 1.5rem; /* Ajustement de la taille et du padding pour tablette */
     }
 
     /* Media queries pour desktop */
@@ -264,7 +264,7 @@ label.card-menu:hover {
     /* Media queries pour large desktop */
     @include large-desktop {
         font-size: 2rem;
-        padding: 2.1rem; /* Ajustement de la taille et du padding pour large desktop */
+        padding: 2.2rem; /* Ajustement de la taille et du padding pour large desktop */
     }
 }
 
