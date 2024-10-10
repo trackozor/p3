@@ -248,11 +248,12 @@ label.card-menu:hover {
     border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
     font-size: 1.5rem; /* Taille de l'icône */
     justify-content: center;
+    align-items: center;
 
     /* Media queries pour tablette */
     @include tablette {
         font-size: 2rem;
-        padding: 1.5rem; /* Ajustement de la taille et du padding pour tablette */
+        padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
     }
 
     /* Media queries pour desktop */

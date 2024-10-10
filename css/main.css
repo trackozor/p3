@@ -745,6 +745,7 @@ label.card-menu:hover {
   border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
   font-size: 1.5rem; /* Taille de l'icône */
   justify-content: center;
+  align-items: center;
   /* Media queries pour tablette */
   /* Media queries pour desktop */
   /* Media queries pour large desktop */
@@ -752,7 +753,7 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .validation-icon i {
     font-size: 2rem;
-    padding: 1.5rem; /* Ajustement de la taille et du padding pour tablette */
+    padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1320,24 +1321,24 @@ label.card-menu:hover {
 
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
-  transform: translateX(-9vh); /* Glisse vers la gauche de 20px */
+  transform: translateX(-9vh); /* Glisse vers la gauche de 9% de la  */
   /* tablette */
   /* Desktop */
   /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-12vh); /* Glisse vers la gauche de 10px pour tablette */
+    transform: translateX(-5rem); /* Glisse vers la gauche de 10px pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-15vh); /* Glisse vers la gauche de 20px pour desktop */
+    transform: translateX(-5rem); /* Glisse vers la gauche de 20px pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-18vh); /* Glisse vers la gauche de 20px pour large desktop */
+    transform: translateX(-7rem); /* Glisse vers la gauche de 20px pour large desktop */
   }
 }
 
