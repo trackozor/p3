@@ -23,8 +23,6 @@
     align-items: center;/* Centre le contenu verticalement */
     background-color: white;/* Couleur de fond de la carte logo*/
     margin: $margin-d2 0; /* Définit les marges verticales de la carte */
-    justify-content: center;
-
 
 }
 
@@ -385,6 +383,7 @@
 /*-- Item du menu --*/
 .menu-item {
     width: 100%; /* L'élément du menu prend toute la largeur disponible */
+    overflow: hidden;
     /* tablette */
     @include tablette {
         width: 100%; /* Largeur de l'élément du menu pour tablette */
@@ -460,8 +459,8 @@
 
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
-    width: 100%;
-    font-size: 0.9rem;
+    width: 100%;/* prend toue la largeur disponible*/
+    font-size: 0.9rem;/*taille de  la police*/
     word-spacing: -0.2vh;
     padding-left: 2%;
     margin-bottom: 2%;

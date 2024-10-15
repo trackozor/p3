@@ -454,6 +454,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
@@ -791,7 +792,6 @@ label.card-menu:hover {
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /* Couleur de fond de la carte logo*/
   margin: 1% 0; /* Définit les marges verticales de la carte */
-  justify-content: center;
 }
 
 .card-logo img {
@@ -1153,6 +1153,7 @@ label.card-menu:hover {
 /*-- Item du menu --*/
 .menu-item {
   width: 100%; /* L'élément du menu prend toute la largeur disponible */
+  overflow: hidden;
   /* tablette */
   /* Desktop */
 }
@@ -1240,8 +1241,8 @@ label.card-menu:hover {
 
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
-  width: 100%;
-  font-size: 0.9rem;
+  width: 100%; /* prend toue la largeur disponible*/
+  font-size: 0.9rem; /*taille de  la police*/
   word-spacing: -0.2vh;
   padding-left: 2%;
   margin-bottom: 2%;
@@ -1865,6 +1866,7 @@ i {
   flex-direction: column;
   width: 100%;
   padding-top: 15%;
+  overflow-x: hidden;
   /*-- Tablette --*/
   /*-- large desktop --*/
 }

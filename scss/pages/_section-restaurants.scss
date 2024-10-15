@@ -5,6 +5,8 @@
     flex-direction: column;
     width: 100%;
     padding-top:15%;
+    overflow-x:hidden;
+ 
 
     /*-- Tablette --*/
     @include tablette {
