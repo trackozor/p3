@@ -1536,6 +1536,7 @@ header {
   align-items: center; /* Centre les éléments sur l'axe vertical */
   max-width: 1024px;
   margin: 0 auto;
+  background-color: #f9f9f9;
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
