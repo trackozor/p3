@@ -28,33 +28,33 @@
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
   background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color); /* Dégradé de couleur */
-  padding: $padding-x2; /* Padding correspondant à 2% de la hauteur de l'écran */
+  padding: $padding-large-pct; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
-  box-shadow: $border-shadow; /* Ajoute une ombre */
-  border-radius: $border-radius-x2; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
+  box-shadow: $shadow-medium; /* Ajoute une ombre */
+  border-radius: $border-radius-medium; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
 
 
 
   /* Tablette */
   @include tablette {
-    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la hauteur de l'écran */
-    box-shadow: $border-shadow; /* Ombre pour tablette */
+    border-radius: $border-radius-medium; /* Bord arrondis à 4% de la hauteur de l'écran */
+    box-shadow: $shadow-medium; /* Ombre pour tablette */
     padding: $padding-base; /* Padding ajusté pour tablette */
   }
 
   /* Desktop */
   @include desktop {
-    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $border-shadow; /* Ombre pour desktop */
-    padding: $padding-d2 $padding-x2; /* Padding ajusté pour desktop */
+    border-radius: $border-radius-medium; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $shadow-medium; /* Ombre pour desktop */
+    padding: $padding-small $padding-large; /* Padding ajusté pour desktop */
     margin-top: 2%; /* Ajout d'une marge supérieure sur desktop */
   }
 
   /* Large desktop*/
   @include large-desktop {
-    border-radius: $border-radius-x2; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $border-shadow; /* Ombre pour large desktop */
-    padding: $padding-base $padding-x2; /* Padding ajusté pour large desktop */
+    border-radius: $border-radius-large; /* Bord arrondis à 4% de la largeur de l'écran */
+    box-shadow: $shadow-medium; /* Ombre pour large desktop */
+    padding: $padding-base $padding-large; /* Padding ajusté pour large desktop */
     margin-top: 2%; /* Ajout d'une marge supérieure sur large desktop */
   }
 
@@ -63,14 +63,14 @@
   /* Effet de survol */
   &:hover {
     background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%)); /* Effet de survol avec éclaircissement du dégradé */
-    box-shadow: $border-shadow; /* Ombre inchangée */
+    box-shadow: $shadow-medium; /* Ombre inchangée */
   }
 }
 
 /* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
   font-size: 0.9rem; /* Taille de police à 2% de la hauteur de l'écran */
-  font-weight: $font-weight-l-bold; /* Style de police en gras (bold) */
+  font-weight: $font-weight-bold; /* Style de police en gras (bold) */
 
   
   /* Desktop */
@@ -94,8 +94,8 @@
   background-color: $button--new-primary-color; /* Couleur de fond vert clair */
   color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
   font-size: $font-size-middle; /* Taille de la police à 2% de la hauteur de l'écran */
-  padding: $padding-d2 $padding-base; /* Padding vertical et horizontal */
-  font-weight: $font-weight-h-bold; /* Style de police très gras (900) */
+  padding: $padding-base $padding-base; /* Padding vertical et horizontal */
+  font-weight: $font-weight-bold; /* Style de police très gras (900) */
   display: flex; /* Utilisation de flexbox pour l'alignement */
   justify-content: center; /* Centrage horizontal du texte */
   

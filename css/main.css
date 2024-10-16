@@ -1,10 +1,9 @@
-/* Error: Undefined variable.
+/* Error: Can't find stylesheet to import.
  *    ,
- * 53 |     font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 *∕
- *    |                  ^^^^^^^^^^^^^^^^^^^
+ * 36 | @import 'pages/accueil';
+ *    |         ^^^^^^^^^^^^^^^
  *    '
- *   scss\layout\_common.scss 53:18  @import
- *   scss\main.scss 24:9             root stylesheet */
+ *   scss\main.scss 36:9  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 53 \2502      font-weight: $font-weight-h-bold; /* Accentuation caract\e8 re majeure soit valeur=900 */\d\a    \2502                   ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\layout\\_common.scss 53:18  @import\a   scss\\main.scss 24:9             root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 36 \2502  @import 'pages/accueil';\d\a    \2502          ^^^^^^^^^^^^^^^\a    \2575 \a   scss\\main.scss 36:9  root stylesheet";
 }

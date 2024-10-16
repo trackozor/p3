@@ -50,7 +50,7 @@ body {
 /*  Description cartes */
 h2 {
     font-size:$font-size-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
-    font-weight: $font-weight-h-bold; /* Accentuation caractère majeure soit valeur=900 */
+    font-weight: $font-weight-bold; /* Accentuation caractère majeure soit valeur=900 */
 
     /*-- tablette --*/
     @include tablette {

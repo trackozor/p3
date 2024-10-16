@@ -24,7 +24,7 @@
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     align-items: center;/* Centre le contenu verticalement */
     background-color:white;
-    margin: $margin-d2 0; /* Définit les marges verticales de la carte */
+    margin: $margin-base 0; /* Définit les marges verticales de la carte */
     justify-content: center;
 
 }
@@ -66,7 +66,7 @@
 
     /* Desktop */   
     @include desktop {
-        height:$object-size-x2-5; /* Hauteur correspondant à 5% de la largeur de l'écran */
+        height:$object-size-medium; /* Hauteur correspondant à 5% de la largeur de l'écran */
     }
 }
 
@@ -122,7 +122,7 @@
     justify-content: center; /* Centre horizontalement */
     margin: 0 auto;
     align-items: center; /* Centre verticalement */
-    gap:$gap-x2;/* Espace entre les éléments de la carte */
+    gap:$gap-large;/* Espace entre les éléments de la carte */
     background-color:#EAEAEA; /* Couleur de fond */
     box-shadow: 0px 4px 4px 0px #00000040;
     padding: $padding-base 0 ; /* Espace intérieur de la carte */
@@ -209,7 +209,7 @@
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Aligne les éléments en colonne */
     border-radius: $border-radius-base; /* Bord arrondis pour la carte */
-    box-shadow: $border-shadow; /* Ombre portée */
+    box-shadow: $shadow-medium; /* Ombre portée */
     position: relative; /* Permet de positionner des éléments enfants */
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 10% auto; /* Marges et centrage horizontal */
@@ -256,8 +256,8 @@
 /*-- Titre de la carte restaurant --*/
 .card h3 {
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
-    font-weight: $font-weight-h-bold; /* Gras du texte correspondant à une valeur de 900 */
-    margin-top: $margin-x2; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
+    font-weight: $font-weight-bold; /* Gras du texte correspondant à une valeur de 900 */
+    margin-top: $margin-medium-vh; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
 
     /*-- Desktop --*/
     @include desktop {
@@ -268,7 +268,7 @@
 /*-- Zone de texte dans la carte restaurant --*/
 .card .card-title {
     font-size: 0.9rem; /* Taille du texte */
-    gap: $gap-d4; /* Espace entre les éléments */
+    gap: $gap-small; /* Espace entre les éléments */
     margin: $margin-base; /* Marges autour du texte */
 
 
@@ -276,14 +276,14 @@
     /* tablette */
     @include tablette {
         font-size: $font-size-base; /* Ajuste la taille du texte pour tablette */
-        gap: $gap-d2; /* Espace pour tablette */
+        gap: $gap-base; /* Espace pour tablette */
         margin: $margin-base; /* Marges pour tablette */
     }
 
     /* Desktop */   
     @include desktop {
         font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
-        gap: $gap-d2; /* Espace pour desktop */
+        gap: $gap-base; /* Espace pour desktop */
         margin: 2%; /* Marges pour desktop */
     }
 }
@@ -310,13 +310,13 @@
 
     /* tablette */
     @include tablette {
-        padding: $padding-d2 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+        padding: $padding-base 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
         margin-bottom: 1rem;
     }
     
     /* Desktop */
     @include desktop {
-        padding: $padding-d4 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
+        padding: $padding-small 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
         margin-bottom: 2%;
     }
 }
@@ -377,7 +377,7 @@
     background-color: white; /* Couleur de fond de la carte menu */
     border-radius: 2vh; /* Bord arrondis */
     display: flex; /* Utilise flexbox pour aligner les éléments */
-    box-shadow: $border-shadow; /* Ombre portée */
+    box-shadow: $shadow-medium; /* Ombre portée */
     margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Espace entre les éléments */
@@ -441,7 +441,7 @@
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     font-size: 0.9rem; /* Taille du texte pour le nom du plat */
-    font-weight: $font-weight-h-bold; /* Style gras pour le nom du plat */
+    font-weight: $font-weight-bold; /* Style gras pour le nom du plat */
     padding: $padding-base; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
 
     /* tablette */
@@ -515,8 +515,8 @@
 /*-- Prix du plat dans la carte menu --*/
 .dish-content .price {
     font-size: 0.7rem; /* Taille du texte pour le prix */
-    font-weight: $font-weight-h-bold; /* Style gras pour le prix */
-    padding-right: $padding-d2; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+    font-weight: $font-weight-bold; /* Style gras pour le prix */
+    padding-right: $padding-base; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
     position: relative;
     display: inline-block;
     transition: transform 0.6s ease; /* Transition fluide lorsqu'il se déplace */
@@ -526,19 +526,19 @@
     /* tablette */
     @include tablette {
         font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
-        padding-right: $padding-d2; /* Padding horizontal pour tablette */
+        padding-right: $padding-base; /* Padding horizontal pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         font-size: 0.9rem; /* Taille du texte pour le prix pour desktop */
-        padding-right: $padding-d2; /* Padding horizontal pour desktop */
+        padding-right: $padding-base; /* Padding horizontal pour desktop */
     }
 
     /* Large desktop */
     @include large-desktop {
         font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
-        padding-right: $padding-d2; /* Padding horizontal pour large desktop */
+        padding-right: $padding-base; /* Padding horizontal pour large desktop */
     }
 }
 
@@ -617,7 +617,7 @@
 
     /* tablette */
     @include tablette {
-        margin-right: $margin-d2; /* Padding horizontal pour tablette */
+        margin-right: $margin-base; /* Padding horizontal pour tablette */
         margin-left: 0; /* Pas d'espace à gauche */
         font-size: $font-size-middle; /* Taille de l'icône pour tablette */
     }
@@ -649,12 +649,12 @@
 
     /* tablette */
     @include tablette {
-        margin-top: $margin-d2; /* Marge supérieur pour tablette */
+        margin-top: $margin-base; /* Marge supérieur pour tablette */
     }
     
     /* Desktop */
     @include desktop {
-        margin-top: $margin-d2; /* Marge supérieur pour desktop */
+        margin-top: $margin-base; /* Marge supérieur pour desktop */
         display: flex;
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
@@ -701,27 +701,27 @@
     background-color: white; /* Fond blanc pour l'image */
     width: 30%; /* L'image occupe 30% de la largeur du footer */
     filter: invert(100%); /* Inversion des couleurs pour l'image */
-    margin: $margin-x3 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
-    padding-bottom: $padding-d2; /* Padding inférieur correspondant à 1% de la hauteur */
+    margin: $margin-large-vh 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+    padding-bottom: $padding-base; /* Padding inférieur correspondant à 1% de la hauteur */
 
     /* tablette */
     @include tablette {
         width: 30%; /* L'image occupe 30% de la largeur  */
-        margin: $margin-d4 0; /* Marge verticale pour tablette */
-        padding-bottom: $padding-d2; /* Padding inférieur pour tablette */
+        margin: $margin-small 0; /* Marge verticale pour tablette */
+        padding-bottom: $padding-base; /* Padding inférieur pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         width: 10%; /* L'image occupe 30% de la largeur  */
         margin:0 5% ; /* Marge verticale pour desktop */
-        padding-top: $padding-d2; /* Padding inférieur pour desktop */
+        padding-top: $padding-base; /* Padding inférieur pour desktop */
     }
 
     /*-- large desktop --*/
     @include large-desktop {
         width: 12%; /* L'image occupe 30% de la largeur  */
         margin:0 5% ; /* Marge verticale pour desktop */
-        padding-top: $padding-d2; /* Padding inférieur pour desktop */
+        padding-top: $padding-base; /* Padding inférieur pour desktop */
     }
 }
