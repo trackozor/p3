@@ -17,36 +17,31 @@
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Base ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-  
-/* Typographie globale */
 body {
-  width: 100%;
-  font-family: $font-primary;/* Style police par défaut */
-  font-size: $font-size-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
-  background-color: white;/* Couleur de fond de base*/
-  justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
-  align-items: center;
-  display: block;
-  margin:0 auto;
-  overflow-x: hidden;
+  font-family: $font-primary;  /* Police par défaut */
+  font-size: 1rem;  /* Taille de police relative */
+  background-color: white;  /* Couleur de fond */
+  margin: 0 auto;  /* Centrage du contenu */
+  overflow-x: hidden;  /* Empêche le débordement horizontal */
 
+  /* Pour les tablettes */
   @include tablette {
-    width: 100%;
-    justify-content: center;
-    margin: 0 auto;
+    font-size: 1.1rem;  /* Légèrement plus grand sur les tablettes */
+    max-width: 100%;
   }
 
-  @include desktop{
-    max-width: 1024px;
-    width: 100%;
+  /* Pour les desktops */
+  @include desktop {
+    font-size: 1.2rem;  /* Augmente la taille de la police sur les grands écrans */
+    max-width: 1024px;  /* Largeur maximale pour un écran desktop */
   }
 
+  /* Pour les très grands écrans */
   @include large-desktop {
-    font-size: 1.2rem;
-    width: 100%;
+    font-size: 1.2rem;  /* Taille de police plus grande pour les écrans larges */
+    max-width: 1400px;  /* Limite la largeur pour les très grands écrans */
   }
 }
-
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Titres ---------------------------------------------------------------*/

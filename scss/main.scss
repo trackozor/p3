@@ -13,34 +13,29 @@
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
 
-
-/* Variables globales (couleurs, tailles, etc.) */
+/* 1. Variables globales (couleurs, tailles, etc.) */
 @import 'util/variables';
 
-/* Mixins (ex: media queries, fonctions réutilisables) */
+/* 2. Mixins (ex: media queries, fonctions réutilisables) */
 @import 'util/mixins';
 
-/* Styles des animations */
-@import 'util/animation';
-
-/* Reset et base typographique */
+/* 3. Reset et base typographique */
 @import 'layout/reset';
-@import 'layout/base';
+@import 'layout/common';
 
-/* Styles des composants */
-@import'components/button';
-@import'components/card';
-
-/* Styles spécifiques au header */
+/* 4. Layout (header, footer, loader, etc.) */
 @import 'layout/header';
+@import 'layout/footer';
+@import 'layout/loader';
 
-/* Styles spécifique pages*/
+/* 5. Composants (boutons, cartes, etc.) */
+@import 'components/button';
+@import 'components/card';
+
+/* 6. Pages spécifiques */
 @import 'pages/section-bandeau';
 @import 'pages/section-restaurants';
 @import 'pages/menu';
 
-/* Style spécifique footer*/
-@import 'layout/footer';
-
-/* Style spécifique loader */
-@import 'layout/loader';
+/* 7. Styles des animations */
+@import 'util/animation';

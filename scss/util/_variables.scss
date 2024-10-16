@@ -48,34 +48,81 @@ $font-title: 'Shrikhand', sans-serif;
 /*------------------------------------------------------------------------------------------------------*/
 /* ----------------------------------------Espacements--------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
+/* Padding basé sur rem (valeur par défaut pour la plupart des éléments) */
+$padding-xsmall: 0.25rem; /* Très petit padding */
+$padding-small: 0.5rem;   /* Petit padding */
+$padding-base: 1rem;      /* Padding de base */
+$padding-medium: 1.5rem;  /* Padding moyen */
+$padding-large: 2rem;     /* Grand padding */
+$padding-xlarge: 3rem;    /* Très grand padding */
+$padding-xxlarge: 4rem;   /* Padding extrêmement grand */
 
-/* ----------------------------Portrait----------------------*/
-/* Espace intérieur */
-$padding-base: 2%; /* Espace intérieur  de base correspondant à 2% de la hauteur de l'écran */
-$padding-middle: 3%; /* Espace intérieur de base correspondant  à 3 % de la hauteur de l' écran */
-$padding-x2: 4%; /* Espace intérieur 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$padding-x3: 6%; /* Espace intérieur 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$padding-x4: 8%; /* Espace intérieur 4 fois supérieur soit 8 % de la hauteur de l'écran */
-$padding-d2: 1%; /* Espace intérieur 2 fois inférieur soit 1% de la hauteur de l'écran*/
-$padding-d4: 0.5%; /* Espace intérieur 4 fois inférieur soit 0.5 % de la hauteur de l'écran*/
+/* Padding basé sur la largeur de la fenêtre (vw) pour des layouts fluides */
+$padding-small-vw: 1vw;   /* Petit padding proportionnel à la largeur */
+$padding-medium-vw: 2vw;  /* Padding moyen proportionnel à la largeur */
+$padding-large-vw: 3vw;   /* Grand padding proportionnel à la largeur */
+$padding-xlarge-vw: 5vw;  /* Très grand padding proportionnel à la largeur */
 
-/* Marge */
-$margin-base: 2%; /* Marge de base correspondant à 2 % de la hauteur de l'écran*/
-$margin-middle: 3%; /* Marge de base correspondant  à 3 % de la hauteur de l' écran */
-$margin-x2: 4%; /* Marge 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$margin-x3: 6%; /*Marge 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$margin-x4: 8%; /*Marge 4 fois supérieur soit 8% de la hauteur de l'écran*/
-$margin-d2: 1%; /* Marge 2 fois inférieur soit 1 % de la hauteur de l'écran*/
-$margin-d4: 0.5%; /* Marge 4 fois inférieur soit 0.5 %de la hauteur de l'écran*/
+/* Padding basé sur la hauteur de la fenêtre (vh) pour des éléments verticaux */
+$padding-small-vh: 1vh;   /* Petit padding proportionnel à la hauteur */
+$padding-medium-vh: 2vh;  /* Padding moyen proportionnel à la hauteur */
+$padding-large-vh: 3vh;   /* Grand padding proportionnel à la hauteur */
+$padding-xlarge-vh: 5vh;  /* Très grand padding proportionnel à la hauteur */
 
-/* Espace */
-$gap-base: 2%; /* Espace de base correspondant à 2% de la hauteur de l'écran */
-$gap-middle: 3%; /* Espace de base correspondant  à 3 % de la hauteur de l' écran */
-$gap-x2: 4%; /* Espace 2 fois supérieur soit 4% de la hauteur de l'écran*/
-$gap-x3: 6%; /* Espace 3 fois supérieur soit 6% de la hauteur de l'écran*/
-$gap-x4: 8%; /* Espace 4 fois supérieur soit 8%  de la hauteur de l'écran*/
-$gap-d2: 1%; /* Espace 2 fois inférieur soit 1% de la hauteur de l'écran*/
-$gap-d4: 0.5%; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran */
+/* Padding basé sur des pourcentages (proportionnel à l’élément parent) */
+$padding-small-pct: 1%;   /* Petit padding en % */
+$padding-base-pct: 2%;    /* Padding de base en % */
+$padding-large-pct: 4%;   /* Grand padding en % */
+$padding-xlarge-pct: 6%;  /* Très grand padding en % */
+
+/* Marges basées sur rem */
+$margin-xsmall: 0.25rem;  /* Très petite marge */
+$margin-small: 0.5rem;    /* Petite marge */
+$margin-base: 1rem;       /* Marge de base */
+$margin-medium: 1.5rem;   /* Marge moyenne */
+$margin-large: 2rem;      /* Grande marge */
+$margin-xlarge: 3rem;     /* Très grande marge */
+$margin-xxlarge: 4rem;    /* Marge extrêmement grande */
+
+/* Marges basées sur la largeur de la fenêtre (vw) */
+$margin-small-vw: 1vw;    /* Petite marge proportionnelle à la largeur */
+$margin-medium-vw: 2vw;   /* Marge moyenne proportionnelle à la largeur */
+$margin-large-vw: 3vw;    /* Grande marge proportionnelle à la largeur */
+$margin-xlarge-vw: 5vw;   /* Très grande marge proportionnelle à la largeur */
+
+/* Marges basées sur la hauteur de la fenêtre (vh) */
+$margin-small-vh: 1vh;    /* Petite marge proportionnelle à la hauteur */
+$margin-medium-vh: 2vh;   /* Marge moyenne proportionnelle à la hauteur */
+$margin-large-vh: 3vh;    /* Grande marge proportionnelle à la hauteur */
+$margin-xlarge-vh: 5vh;   /* Très grande marge proportionnelle à la hauteur */
+
+/* Marges basées sur des pourcentages */
+$margin-small-pct: 1%;    /* Petite marge en % */
+$margin-base-pct: 2%;     /* Marge de base en % */
+$margin-large-pct: 4%;    /* Grande marge en % */
+$margin-xlarge-pct: 6%;   /* Très grande marge en % */
+
+
+/* Gaps basés sur rem */
+$gap-xsmall: 0.25rem;     /* Très petit gap */
+$gap-small: 0.5rem;       /* Petit gap */
+$gap-base: 1rem;          /* Gap de base */
+$gap-medium: 1.5rem;      /* Gap moyen */
+$gap-large: 2rem;         /* Grand gap */
+$gap-xlarge: 3rem;        /* Très grand gap */
+$gap-xxlarge: 4rem;       /* Gap extrêmement grand */
+
+/* Gaps basés sur la largeur de la fenêtre (vw) */
+$gap-small-vw: 1vw;       /* Petit gap proportionnel à la largeur */
+$gap-medium-vw: 2vw;      /* Gap moyen proportionnel à la largeur */
+$gap-large-vw: 3vw;       /* Grand gap proportionnel à la largeur */
+$gap-xlarge-vw: 5vw;      /* Très grand gap proportionnel à la largeur */
+
+/* Gaps basés sur des pourcentages */
+$gap-small-pct: 1%;       /* Petit gap en % */
+$gap-base-pct: 2%;        /* Gap de base en % */
+$gap-large-pct: 4%;       /* Grand gap en % */
+$gap-xlarge-pct: 6%;      /* Très grand gap en % */
 
 
 
@@ -83,7 +130,7 @@ $gap-d4: 0.5%; /* Espace 4 fois inférieur soit 0.5 % de la hauteur de l'écran 
 /* --------------------------------------- Taille des police---------------------------------------------------------*/ 
 /*-------------------------------------------------------------------------------------------------------------------*/
 
-/*-------------------- Portrait-----------------------------------*/
+
 $font-size-base: 1rem; /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
 $font-size-title: 1.2rem; /* Taille de police des titres soit 3% de la hauteur de l'écran*/
 $font-size-middle: 0.7rem; /* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
@@ -96,45 +143,104 @@ $font-size-x3: 3rem; /* Taille de police 3 fois supérieur soit 6 % de la hauteu
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
-
-$font-weight-bold: 700; /* Mise en evidence accentué*/
-$font-weight-h-bold: 900;/* Mise en evidence très marqué */
-$font-weight-l-bold: 100;/* Mie en evidence très légère = absence evidence*/
+/* Noms de variables plus explicites pour les poids de police */
+$font-weight-thin: 100;  /* Très léger */
+$font-weight-medium: 500;  /* Moyen, un peu plus marqué que régulier */
+$font-weight-semi-bold: 600; /* Semi-gras */
+$font-weight-bold: 700;  /* Gras (accentué) */
+$font-weight-extra-bold: 800; /* Très gras */
+$font-weight-black: 900;  /* Extrêmement gras */
 
 
 /*------------------------------------------------------------------------------------------------------*/
-/*----------------------------------------Arrondis------------------------------------------------------*/
+/*---------------------------- Arrondis des bordures (border-radius) -----------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
 
-/*--------------------- Portrait ----------------------------------------------*/
-$border-radius-base: 1rem;/* Arrondis de base dont le rayon de courbure correspond à 2 % de la hauteur de l'écran*/
-$border-radius-x2: 2rem; /* Arrondis de courbure 2 fois supérieur soit 4% de la hauteur de l’écran */
-$border-radius-d2: 0.5rem; /* Arrondis de courbure 2 fois inférieur soit 1 % de la hauteur de l'écran*/
+/* Arrondis légers */
+$border-radius-small: 0.25rem; /* Arrondis légers */
+$border-radius-base: 0.5rem;   /* Arrondis de base */
+$border-radius-medium: 1rem;   /* Arrondis moyens (par défaut) */
+$border-radius-large: 2rem;    /* Arrondis plus prononcés */
+$border-radius-xlarge: 3rem;   /* Arrondis très prononcés */
+$border-radius-full: 50%;      /* Arrondis complets pour des objets circulaires */
+
+/* Variations supplémentaires avec des pourcentages */
+$border-radius-small-percentage: 10%; /* Arrondi léger en pourcentage */
+$border-radius-medium-percentage: 20%; /* Arrondi moyen en pourcentage */
+$border-radius-large-percentage: 30%; /* Arrondi plus large en pourcentage */
+
+
+
 
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------------------------Ombres -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
-$border-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* ombre pour portrait*/
+/* Ombres légères */
+$shadow-small: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1); /* Ombre légère, subtile */
+$shadow-medium: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre moyenne pour la plupart des éléments */
+$shadow-large: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);   /* Ombre plus large pour des objets importants */
 
+/* Ombres directionnelles */
+$shadow-left: -0.5rem 0 0.8rem rgba(0, 0, 0, 0.2);  /* Ombre projetée vers la gauche */
+$shadow-right: 0.5rem 0 0.8rem rgba(0, 0, 0, 0.2);  /* Ombre projetée vers la droite */
+$shadow-bottom: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);  /* Ombre vers le bas */
+
+/* Ombres intenses pour des effets plus marqués */
+$shadow-intense-small: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4); /* Ombre petite mais intense */
+$shadow-intense-large: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);   /* Ombre intense, très marquée */
 
 /*--------------------------------------------------------------------------------------------------*/
 /*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
 /*--------------------------------------------------------------------------------------------------*/
 
-/*--------------------- Portrait ----------------------------------------------*/
-$object-size-base: 2%; /* Taille des objets correspondant à 2% de la hauteur de l'écran*/
-$object-size-middle: 3%; /* Taille des objets correspondant à 3% de la hauteur de l'écran*/
-$object-size-x2: 4%; /* Taille des objets correspondant à 4 % de la hauteur de l'écran */
-$object-size-x3: 6%; /* Taille des objets correspondant à 6 %  de la hauteur de l 'écran*/
-$object-size-x2-5: 5%; /* Taille des objets  correspondant à 5% de la hauteur de l'écran*/
-$object-size-x5: 10%; /* Taille des objets  correspondant à 10% de la hauteur de l'écran*/
-$object-size-x7-5: 15%; /*  Taille des objets correspondant à 15% de la hauteur de l'écran*/
-$object-size-x10: 20%;/* Taille de objets  correspondant à 20 % de la hauteur de l 'écran*/
-$object-size-x12-5: 25%; /* Taille des objets correspondant à 25 % de la hauteur de l'écran*/
-$object-size-x15: 30%; /* Taille des objets correspondant à 30 % de la hauteur de l'écran*/
-$object-size-x20: 40%; /* Taille des objects correspondant à 40 % de la hauteur de l'écran*/
-$object-size-x25: 50%; /* Taille des objects correspondant à 50 % de la hauteur de l'écran*/
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Taille des objets basée sur la largeur de la fenêtre (vw) ---------------*/
+/*------------------------------------------------------------------------------------------------------*/
+$object-size-xsmall: 1vw;   /* Très petit objet */
+$object-size-small: 2vw;    /* Petit objet */
+$object-size-medium: 3vw;   /* Taille moyenne */
+$object-size-large: 5vw;    /* Objet plus grand */
+$object-size-xlarge: 10vw;  /* Très grand objet */
+$object-size-xxlarge: 15vw; /* Objet extrêmement grand */
 
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Taille des objets basée sur la hauteur de la fenêtre (vh) ---------------*/
+/*------------------------------------------------------------------------------------------------------*/
+$object-size-small-h: 2vh;   /* Petit objet en fonction de la hauteur de l'écran */
+$object-size-medium-h: 5vh;  /* Taille moyenne basée sur la hauteur */
+$object-size-large-h: 10vh;  /* Grand objet basé sur la hauteur */
+$object-size-xlarge-h: 15vh; /* Très grand objet en fonction de la hauteur */
+$object-size-xxlarge-h: 20vh; /* Objet extrêmement grand basé sur la hauteur */
+
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Taille des objets basée sur la taille de texte (rem) --------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+$object-size-rem-xsmall: 0.5rem; /* Très petit objet basé sur la taille du texte */
+$object-size-rem-small: 1rem;   /* Petit objet */
+$object-size-rem-medium: 2rem;  /* Taille moyenne */
+$object-size-rem-large: 3rem;   /* Grand objet */
+$object-size-rem-xlarge: 5rem;  /* Très grand objet */
+$object-size-rem-xxlarge: 8rem; /* Objet extrêmement grand basé sur la taille de texte */
+
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Combinaison d'unités (vh, vw, rem) --------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+$object-size-combo-small: calc(1rem + 1vw);   /* Taille petite combinant rem et vw */
+$object-size-combo-medium: calc(2rem + 2vw);  /* Taille moyenne combinant rem et vw */
+$object-size-combo-large: calc(3rem + 4vw);   /* Taille grande combinant rem et vw */
+$object-size-combo-xlarge: calc(5rem + 5vw);  /* Taille très grande combinant rem et vw */
+
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------- Exemples spécifiques pour certains composants --------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+$button-size-small: $object-size-rem-small;    /* Taille des petits boutons */
+$button-size-large: $object-size-rem-large;    /* Taille des grands boutons */
+
+$icon-size-small: $object-size-small-h;        /* Taille des petites icônes */
+$icon-size-large: $object-size-large-h;        /* Taille des grandes icônes */
+
+$card-size-medium: $object-size-medium;        /* Taille des cartes de contenu */
+$card-size-large: $object-size-large;          /* Taille des grandes cartes */
 
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
