@@ -84,7 +84,7 @@
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
     gap: $gap-x2; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-    margin: $margin-x2 auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+    margin: $margin-x4 auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
 
     /*-- Tablette --*/
     @include tablette {
@@ -107,7 +107,7 @@
     }
 }
 .fonctionnement h2 {
-    margin: $margin-x2 0;
+    margin: $margin-x3 0;
     padding-left: 6%;
 
 
@@ -166,7 +166,7 @@ ol {
 
 ol li {
     display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-    margin: $margin-x3 $margin-base; /* Marge autour des éléments */
+    margin: $margin-x4 $margin-base; /* Marge autour des éléments */
     align-items: center; /* Centre les éléments sur l'axe vertical */
     font-weight: $font-weight-bold; /* Gras du texte */
     position: relative; /* Position relative pour gérer des éléments internes */
@@ -250,8 +250,8 @@ ol li {
 ol li .puce_num {
     background-color: $button--search-primary-color; /* Couleur de fond de l'icône numérotée */
     border-radius: 50%; /* Forme arrondie */
-    height: 4vh; /* Hauteur de l'icône numérotée */
-    width: 4vh; /* Largeur de l'icône numérotée */
+    height: 3vh; /* Hauteur de l'icône numérotée */
+    width: 3vh; /* Largeur de l'icône numérotée */
     display: flex; /* Utilise flexbox pour centrer le numéro */
     position: absolute; /* Positionnement absolu à l'intérieur de la liste */
     left: -2%; /* Place l'icône sur le bord gauche */

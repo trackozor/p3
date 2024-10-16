@@ -936,26 +936,26 @@ label.card-menu:hover {
   z-index: 1; /* Définit la position sur l'axe Z */
   margin: 10% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-  height: 30vh;
+  height: 25vh;
   /*-- Tablette --*/
   /*-- Desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
 /*-- Image dans la carte restaurant --*/
 .card img {
   width: 100%; /* Largeur de l'image à 100% du conteneur */
-  height: 23vh;
+  height: 19vh;
   border-radius: 1rem 1rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -966,12 +966,12 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card img {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card img {
-    height: 30vh;
+    height: 24vh;
   }
 }
 
@@ -979,13 +979,12 @@ label.card-menu:hover {
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 900; /* Gras du texte correspondant à une valeur de 900 */
-  margin-top: 2%; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
+  margin-top: 4%; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
   /*-- Desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card h3 {
     font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
-    margin-top: 4%; /* Ajuste la marge haute pour desktop */
   }
 }
 
@@ -1595,7 +1594,7 @@ header {
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
   gap: 4%; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-  margin: 4% auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+  margin: 8% auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/
@@ -1622,7 +1621,7 @@ header {
 }
 
 .fonctionnement h2 {
-  margin: 4% 0;
+  margin: 6% 0;
   padding-left: 6%;
   /*-- tablette --*/
   /* Desktop */
@@ -1683,7 +1682,7 @@ ol {
 /*----------------------------------------------------------------------------------------------------------*/
 ol li {
   display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-  margin: 6% 2%; /* Marge autour des éléments */
+  margin: 8% 2%; /* Marge autour des éléments */
   align-items: center; /* Centre les éléments sur l'axe vertical */
   font-weight: 700; /* Gras du texte */
   position: relative; /* Position relative pour gérer des éléments internes */
@@ -1768,8 +1767,8 @@ ol li {
 ol li .puce_num {
   background-color: #9356DC; /* Couleur de fond de l'icône numérotée */
   border-radius: 50%; /* Forme arrondie */
-  height: 4vh; /* Hauteur de l'icône numérotée */
-  width: 4vh; /* Largeur de l'icône numérotée */
+  height: 3vh; /* Hauteur de l'icône numérotée */
+  width: 3vh; /* Largeur de l'icône numérotée */
   display: flex; /* Utilise flexbox pour centrer le numéro */
   position: absolute; /* Positionnement absolu à l'intérieur de la liste */
   left: -2%; /* Place l'icône sur le bord gauche */

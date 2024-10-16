@@ -214,17 +214,17 @@
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 10% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-    height:30vh;
+    height:25vh;
 
     /*-- Tablette --*/
     @include tablette {
         width: 100%;
-        height: 60vh;
+        height: 50vh;
     }
 
     /*-- Desktop --*/
     @include desktop {
-        height: 40vh;
+        height: 30vh;
         
     }
 
@@ -234,7 +234,7 @@
 /*-- Image dans la carte restaurant --*/
 .card  img {
     width: 100%; /* Largeur de l'image à 100% du conteneur */
-    height:23vh;
+    height:19vh;
     border-radius: $border-radius-base $border-radius-base 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -243,12 +243,12 @@
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        height: 50vh;
+        height: 40vh;
     }
 
     /*-- Desktop --*/
     @include desktop {
-        height: 30vh;
+        height: 24vh;
     }
 
 }
@@ -257,12 +257,11 @@
 .card h3 {
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
     font-weight: $font-weight-h-bold; /* Gras du texte correspondant à une valeur de 900 */
-    margin-top: $margin-base; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
+    margin-top: $margin-x2; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
 
     /*-- Desktop --*/
     @include desktop {
         font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
-        margin-top: $margin-x2; /* Ajuste la marge haute pour desktop */
     }
 }
 
