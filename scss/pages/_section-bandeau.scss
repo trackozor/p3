@@ -132,8 +132,9 @@ ol {
     display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
     flex-direction: column; /* Alignement en colonne */
     align-items: center; /* Centre les éléments sur l'axe vertical */
-    width: 100%; /* Largeur de 95% pour le conteneur */
+    width: 90%; /* Largeur de 95% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
+    margin:0 auto;
 
 
     /* Desktop */

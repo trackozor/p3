@@ -19,26 +19,34 @@
 /*---------------------------------------------------------------------------------------------------------*/
 
 .card-logo {
+    width: 100%;
+    height: auto;
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     align-items: center;/* Centre le contenu verticalement */
     background-color: white;/* Couleur de fond de la carte logo*/
     margin: $margin-d2 0; /* Définit les marges verticales de la carte */
+    justify-content: center;
 
 }
 
 .card-logo img {
     display: flex;
     align-items: center;
+    margin: 0 auto;
     width:40%;
+
+    /*-- Tablette --*/
+    @include tablette {
+    width: 30%;
+    }
+
+    @include desktop {
+        width:20%;
+    }
     
     /*-- large desktop --*/
     @include large-desktop {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2rem;
-    margin-left:2rem;
+    width: 20%;
     }
 }
 
@@ -561,10 +569,13 @@
 .footer-card {
     padding: $padding-base; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    width:90%;
 
     /* tablette */
     @include tablette {
-        padding: $padding-base; /* Padding vertical pour tablette */
+        padding: $padding-base ; /* Padding vertical pour tablette */
     }
 
     /* Desktop */
@@ -594,7 +605,6 @@
         margin-bottom: 0;
         justify-content: flex-start;
         margin-left: 55%;
-        padding:1rem 0;
     }   
 }
 
@@ -686,12 +696,14 @@
 
 }
 /*-- logo dans le footer --*/
-.footer-card img {
+.footer-card   img {
+    display:block;
     background-color: white; /* Fond blanc pour l'image */
     width: 30%; /* L'image occupe 30% de la largeur du footer */
     filter: invert(100%); /* Inversion des couleurs pour l'image */
     margin: $margin-x3 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
     padding-bottom: $padding-d2; /* Padding inférieur correspondant à 1% de la hauteur */
+
     /* tablette */
     @include tablette {
         width: 30%; /* L'image occupe 30% de la largeur  */

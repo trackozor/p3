@@ -20,15 +20,13 @@
   
 /* Typographie globale */
 body {
-
-  width: 100%;
+  width: 95%;
   font-family: $font-primary;/* Style police par défaut */
   font-size: $font-size-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
   background-color: white;/* Couleur de fond de base*/
   justify-content: center;/* aligne horizontalement depuis la xe centrale les éléments*/
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin:0 auto;
   overflow-x: hidden;
 
@@ -56,14 +54,7 @@ h2 {
       font-size: 1.6rem;
     }
 
-    /* Desktop */
-    @include desktop {
-      font-size: 1.6rem;
-    }
-    @include large-desktop {
-      font-size: 1.6rem;
-    }
-}
+  }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------liens ---------------------------------------------------------------*/
