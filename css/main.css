@@ -398,7 +398,7 @@ table {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Typographie globale */
 body {
-  width: 95%;
+  width: 100%;
   font-family: "Roboto", sans-serif; /* Style police par défaut */
   font-size: 1rem; /* Taille de police de base correspondant à 2 % de la hauteur*/
   background-color: white; /* Couleur de fond de base*/
@@ -408,14 +408,23 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body {
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
     max-width: 1024px;
+    width: 100%;
   }
 }
 @media (min-width: 1440px) {
   body {
     font-size: 1.2rem;
+    width: 100%;
   }
 }
 
@@ -834,6 +843,7 @@ label.card-menu:hover {
   width: 100%; /* La carte prend toute la largeur du parent */
   display: flex; /* Utilise flexbox pour aligner les éléments */
   justify-content: center; /* Centre horizontalement */
+  margin: 0 auto;
   align-items: center; /* Centre verticalement */
   gap: 4%; /* Espace entre les éléments de la carte */
   background-color: #f9f9f9; /* Couleur de fond */
@@ -1298,11 +1308,11 @@ label.card-menu:hover {
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
-  padding: 2%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+  padding: 2% 0; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   /* tablette */
   /* Desktop */
   /*-- large desktop --*/
@@ -1344,7 +1354,7 @@ label.card-menu:hover {
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-  margin-right: 2%; /* Espace à droite des icônes */
+  margin-right: 2% 0; /* Espace à droite des icônes */
   margin-left: 0; /* Pas d'espace à gauche */
   color: white; /* Couleur blanche pour les icônes */
   font-size: 0.7rem;
@@ -1533,9 +1543,10 @@ header {
 /*------------------------------------ Titre ---------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
-  padding: 2% 10%;
+  padding: 2% 0;
   margin-top: 10%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   text-align: center;
+  justify-content: center;
   /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
@@ -1564,8 +1575,8 @@ header {
 /*----------------------------------- Texte ----------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
-  padding: 2% 2%; /* Padding haut/bas et gauche/droite */
-  margin-bottom: 2%; /* Marge en bas du paragraphe */
+  padding: 2% 0; /* Padding haut/bas et gauche/droite */
+  margin-bottom: 2% 0; /* Marge en bas du paragraphe */
   font-weight: 100; /* Gras du texte */
 }
 
@@ -1578,8 +1589,7 @@ header {
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
   gap: 8%; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-  margin: 8% 2%; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
-  padding-left: 5%;
+  margin: 8% auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/
@@ -1819,9 +1829,11 @@ i {
 #section-restaurants {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   padding-top: 15%;
   overflow-x: hidden;
+  justify-content: center;
+  margin: 0 auto;
   /*-- Tablette --*/
   /*-- large desktop --*/
 }
@@ -1867,7 +1879,7 @@ i {
 }
 
 .card {
-  margin: 2% 5%;
+  margin: 2% auto;
   opacity: 0; /* Les cartes commencent invisibles */
   transform: translateX(100%); /* Les cartes commencent hors de l'écran (à droite) */
   animation: slideIn 0.6s ease-out forwards; /* Animation qui fait glisser et apparaître les cartes */
@@ -2254,7 +2266,6 @@ footer {
   align-items: center; /* Aligne verticalement les éléments au centre du footer */
   background-color: black; /* Définit la couleur de fond du footer */
   color: white; /* Définit la couleur du texte et des icônes à blanc */
-  padding: 0 1%; /* Ajoute du padding horizontal, équivalent à 1% de la hauteur de l'écran */
   width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
   margin-top: 2vh;
   /*-- large desktop --*/

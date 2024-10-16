@@ -34,9 +34,10 @@
 /*------------------------------------ Titre ---------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
-    padding:2% 10%;
+    padding:2% 0;
     margin-top: 10%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
     text-align: center;
+    justify-content: center;
 
     /*-- tablette --*/
     @include tablette {
@@ -63,8 +64,8 @@
 /*----------------------------------- Texte ----------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
-    padding: $padding-base $padding-base; /* Padding haut/bas et gauche/droite */
-    margin-bottom: $margin-base; /* Marge en bas du paragraphe */
+    padding: $padding-base 0; /* Padding haut/bas et gauche/droite */
+    margin-bottom: $margin-base 0; /* Marge en bas du paragraphe */
     font-weight: $font-weight-l-bold; /* Gras du texte */
 
 }
@@ -79,9 +80,7 @@
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
     gap: $gap-x4; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-    margin: $margin-x4 $margin-base; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
-    padding-left: 5%;
-    
+    margin: $margin-x4 auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
 
     /*-- Tablette --*/
     @include tablette {

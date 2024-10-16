@@ -20,7 +20,7 @@
   
 /* Typographie globale */
 body {
-  width: 95%;
+  width: 100%;
   font-family: $font-primary;/* Style police par défaut */
   font-size: $font-size-base;  /* Taille de police de base correspondant à 2 % de la hauteur*/
   background-color: white;/* Couleur de fond de base*/
@@ -30,12 +30,20 @@ body {
   margin:0 auto;
   overflow-x: hidden;
 
+  @include tablette {
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
   @include desktop{
     max-width: 1024px;
+    width: 100%;
   }
 
   @include large-desktop {
     font-size: 1.2rem;
+    width: 100%;
   }
 }
 

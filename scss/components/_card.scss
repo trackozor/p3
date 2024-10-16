@@ -121,6 +121,7 @@
     width: 100%; /* La carte prend toute la largeur du parent */
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: center; /* Centre horizontalement */
+    margin: 0 auto;
     align-items: center; /* Centre verticalement */
     gap:$gap-x2;/* Espace entre les éléments de la carte */
     background-color:$primary-background-color; /* Couleur de fond */
@@ -567,11 +568,11 @@
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: $padding-base; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    padding: $padding-base 0; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
-    width:90%;
+    width:100%;
 
     /* tablette */
     @include tablette {
@@ -610,7 +611,7 @@
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-    margin-right: $margin-base; /* Espace à droite des icônes */
+    margin-right: $margin-base 0; /* Espace à droite des icônes */
     margin-left: 0; /* Pas d'espace à gauche */
     color: white; /* Couleur blanche pour les icônes */
     font-size: 0.7rem;
