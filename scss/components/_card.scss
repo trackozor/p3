@@ -32,8 +32,8 @@
 .card-logo img {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    width:40%;
+    margin: 2vh auto;
+    width:50%;
 
     /*-- Tablette --*/
     @include tablette {

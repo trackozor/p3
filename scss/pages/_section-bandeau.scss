@@ -34,6 +34,8 @@
 /*------------------------------------ Titre ---------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
+    width: 70%;
+    font-size: 1.3rem;
     padding:2% 0;
     margin-top: 10%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
     text-align: center;
@@ -59,13 +61,15 @@
         font-size: 2.2rem;
     }
 }
-
+.button--primary {
+    margin: 2vh 0;
+}
 /*----------------------------------------------------------------------------------------------------------*/
 /*----------------------------------- Texte ----------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
     padding: $padding-base 0; /* Padding haut/bas et gauche/droite */
-    margin-bottom: $margin-base 0; /* Marge en bas du paragraphe */
+    margin-bottom: 2vh 0; /* Marge en bas du paragraphe */
     font-weight: $font-weight-l-bold; /* Gras du texte */
 
 }
@@ -79,8 +83,8 @@
     flex-direction: column; /* Alignement en colonne */
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
-    gap: $gap-x4; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-    margin: $margin-x4 auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+    gap: $gap-x2; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
+    margin: $margin-x2 auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
 
     /*-- Tablette --*/
     @include tablette {
@@ -103,7 +107,8 @@
     }
 }
 .fonctionnement h2 {
-    margin: $margin-x4 0;
+    margin: $margin-x2 0;
+    padding-left: 6%;
 
 
     /*-- tablette --*/

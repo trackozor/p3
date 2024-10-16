@@ -525,7 +525,7 @@ img {
 
 /* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
-  font-size: 0.7rem; /* Taille de police à 2% de la hauteur de l'écran */
+  font-size: 0.9rem; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: 100; /* Style de police en gras (bold) */
   /* Desktop */
   /* large desktop */
@@ -750,8 +750,8 @@ label.card-menu:hover {
 .card-logo img {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  width: 40%;
+  margin: 2vh auto;
+  width: 50%;
   /*-- Tablette --*/
   /*-- large desktop --*/
 }
@@ -1543,6 +1543,8 @@ header {
 /*------------------------------------ Titre ---------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau h2 {
+  width: 70%;
+  font-size: 1.3rem;
   padding: 2% 0;
   margin-top: 10%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   text-align: center;
@@ -1571,12 +1573,16 @@ header {
   }
 }
 
+.button--primary {
+  margin: 2vh 0;
+}
+
 /*----------------------------------------------------------------------------------------------------------*/
 /*----------------------------------- Texte ----------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 .bandeau p {
   padding: 2% 0; /* Padding haut/bas et gauche/droite */
-  margin-bottom: 2% 0; /* Marge en bas du paragraphe */
+  margin-bottom: 2vh 0; /* Marge en bas du paragraphe */
   font-weight: 100; /* Gras du texte */
 }
 
@@ -1588,8 +1594,8 @@ header {
   flex-direction: column; /* Alignement en colonne */
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
-  gap: 8%; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
-  margin: 8% auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
+  gap: 4%; /* Ajoute un espace entre les éléments de 3% de la hauteur de l'écran */
+  margin: 4% auto; /* Marge verticale égale à 10% de la hauteur de l'écran, avec centrage horizontal */
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/
@@ -1616,7 +1622,8 @@ header {
 }
 
 .fonctionnement h2 {
-  margin: 8% 0;
+  margin: 4% 0;
+  padding-left: 6%;
   /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
