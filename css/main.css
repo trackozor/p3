@@ -1023,7 +1023,7 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .icon-favorite {
     left: 90%; /* Position horizontale de l'icône pour tablette */
-    bottom: 7%; /* Position verticale de l'icône pour tablette */
+    bottom: 8%; /* Position verticale de l'icône pour tablette */
   }
 }
 
@@ -1307,11 +1307,11 @@ label.card-menu:hover {
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
-  padding: 2% 0; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+  padding: 2% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   /* tablette */
   /* Desktop */
   /*-- large desktop --*/
@@ -1353,7 +1353,7 @@ label.card-menu:hover {
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-  margin-right: 2% 0; /* Espace à droite des icônes */
+  margin-right: 2%; /* Espace à droite des icônes */
   margin-left: 0; /* Pas d'espace à gauche */
   color: white; /* Couleur blanche pour les icônes */
   font-size: 0.7rem;

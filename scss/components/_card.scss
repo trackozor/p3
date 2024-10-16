@@ -299,7 +299,7 @@
     /* Tablette */
     @include tablette {
         left: 90%; /* Position horizontale de l'icône pour tablette */
-        bottom: 7%; /* Position verticale de l'icône pour tablette */
+        bottom: 8%; /* Position verticale de l'icône pour tablette */
     }
 }
 
@@ -567,11 +567,11 @@
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: $padding-base 0; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    padding: $padding-base 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width:95%;
 
     /* tablette */
     @include tablette {
@@ -610,7 +610,7 @@
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-    margin-right: $margin-base 0; /* Espace à droite des icônes */
+    margin-right: $margin-base ; /* Espace à droite des icônes */
     margin-left: 0; /* Pas d'espace à gauche */
     color: white; /* Couleur blanche pour les icônes */
     font-size: 0.7rem;
