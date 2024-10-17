@@ -31,7 +31,7 @@
   padding: $padding-large-pct; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
   box-shadow: $shadow-medium; /* Ajoute une ombre */
-  border-radius: $border-radius-medium; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
+  border-radius: $border-radius-large; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
 
 
 
@@ -63,14 +63,14 @@
   /* Effet de survol */
   &:hover {
     background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%)); /* Effet de survol avec éclaircissement du dégradé */
-    box-shadow: $shadow-medium; /* Ombre inchangée */
+    box-shadow: $shadow-medium; 
   }
 }
 
 /* ------------------------- Texte du bouton ---------------------------------------- */
 .button--primary-txt {
-  font-size: 0.9rem; /* Taille de police à 2% de la hauteur de l'écran */
-  font-weight: $font-weight-bold; /* Style de police en gras (bold) */
+  font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
+  font-weight: $font-weight-medium; /* Style de police en gras (bold) */
 
   
   /* Desktop */
@@ -94,7 +94,7 @@
   background-color: $button--new-primary-color; /* Couleur de fond vert clair */
   color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
   font-size: $font-size-middle; /* Taille de la police à 2% de la hauteur de l'écran */
-  padding: $padding-base $padding-base; /* Padding vertical et horizontal */
+  padding: $padding-small $padding-base; /* Padding vertical et horizontal */
   font-weight: $font-weight-bold; /* Style de police très gras (900) */
   display: flex; /* Utilisation de flexbox pour l'alignement */
   justify-content: center; /* Centrage horizontal du texte */
@@ -233,7 +233,7 @@ label.card-menu:hover {
     align-items: center; /* Alignement vertical de l'icône */
     position: absolute;
     right:-1%; /* Ajuster cette valeur selon ta mise en page */
-    top: 50%;
+    top:53%;
     transform: translateY(-53%); /* Centrage vertical */
     justify-content: center; /* Centrage horizontal */
     padding: 0;
@@ -244,7 +244,7 @@ label.card-menu:hover {
 .validation-icon i {
     color: white; /* Couleur de l'icône */
     background-color: $button--new-primary-color; /* Utilisation de la variable Sass */
-    padding: 0.85rem; /* Padding de l'icône */
+    padding: 1.4rem 1rem; /* Padding de l'icône */
     border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
     font-size: 1.5rem; /* Taille de l'icône */
     justify-content: center;

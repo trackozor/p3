@@ -209,9 +209,9 @@
     box-shadow: $shadow-medium; /* Ombre portée */
     position: relative; /* Permet de positionner des éléments enfants */
     z-index: 1; /* Définit la position sur l'axe Z */
-    margin: 15% auto; /* Marges et centrage horizontal */
+    margin: 20% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-    height:25vh;
+    height:23vh;
 
     /* Tablette */
     @include tablette {
@@ -231,7 +231,7 @@
 /* Image dans la carte restaurant */
 .card  img {
     width: 100%; /* Largeur de l'image à 100% du conteneur */
-    height:18vh;
+    height:18vh;;
     border-radius: $border-radius-base $border-radius-base 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -564,8 +564,8 @@
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: $padding-base 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
-    font-size: 0.8rem;
+    padding: $padding-medium-vh 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    font-size: $font-size-middle;
     display: flex;
     flex-direction: column;
     width:95%;
@@ -582,7 +582,7 @@
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
-        font-size: 0.8rem;
+        font-size: $font-size-middle;
         margin-top: 1rem;
         margin-bottom: 1%;
         justify-content: flex-start;
@@ -607,10 +607,9 @@
 
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
-    margin-right: $margin-base ; /* Espace à droite des icônes */
-    margin-left: 0; /* Pas d'espace à gauche */
+    margin-right: $margin-small; /* Espace à droite des icônes */
     color: white; /* Couleur blanche pour les icônes */
-    font-size: 0.7rem;
+    font-size: $font-size-middle;
 
     /* tablette */
     @include tablette {
@@ -641,7 +640,7 @@
 
 /*-- Liste dans le footer --*/
 .footer-card li {
-    margin-top: $margin-base; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+    margin-top: $margin-small; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
 
 
     /* tablette */
@@ -672,7 +671,7 @@
     @include desktop {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: flex-end;
-    gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    gap: $gap-base-pct; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
@@ -698,8 +697,8 @@
     background-color: white; /* Fond blanc pour l'image */
     width: 30%; /* L'image occupe 30% de la largeur du footer */
     filter: invert(100%); /* Inversion des couleurs pour l'image */
-    margin: $margin-large-vh 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
-    padding-bottom: $padding-base; /* Padding inférieur correspondant à 1% de la hauteur */
+    margin: $margin-small 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+    padding-bottom: $padding-xsmall; /* Padding inférieur correspondant à 1% de la hauteur */
 
     /* tablette */
     @include tablette {
