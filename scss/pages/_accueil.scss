@@ -184,14 +184,13 @@
     display: flex; /* Utilise flexbox pour aligner le texte */
     position: relative; /* Position relative pour gérer des éléments internes */
     z-index: 1; /* Superposition sur l'axe Z */
-    padding: 4% 10% ;
+    padding: 4% 8% 4% 10% ;
     border-radius: $border-radius-base; /* Bord arrondi pour le conteneur du texte */
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
     width: 100%; /* Largeur du texte à 100% du conteneur */
     align-items: center; /* Centre le texte sur l'axe vertical */
     justify-content:space-around;
     font-size: 1rem; /* Taille de la police */
-    padding-right: 8%;
 
 
     /* Tablette */
@@ -226,16 +225,16 @@
 .puce_num {
     background-color: $button--search-primary-color; /* Couleur de fond de l'icône numérotée */
     border-radius: 50%; /* Forme arrondie */
-    height: 3vh; /* Hauteur de l'icône numérotée */
-    width: 3vh; /* Largeur de l'icône numérotée */
+    height: 1.5rem; /* Hauteur de l'icône numérotée */
+    width: 1.5rem; /* Largeur de l'icône numérotée */
     display: flex; /* Utilise flexbox pour centrer le numéro */
     position: absolute; /* Positionnement absolu à l'intérieur de la liste */
-    left: -2%; /* Place l'icône sur le bord gauche */
+    left: -4%; /* Place l'icône sur le bord gauche */
     z-index: 2; /* Superposition de l'icône au-dessus du texte */
     justify-content: center; /* Centre le contenu de l'icône */
     align-items: center; /* Centre verticalement le contenu de l'icône */
     color: white; /* Couleur blanche pour le numéro */
-    font-size: 1rem; /* Taille de la police du numéro */
+    font-size: 0.8rem; /* Taille de la police du numéro */
 
 
     /*-- Desktop --*/
@@ -293,7 +292,7 @@ i {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top:15%;
+    padding-top:5vh;
     overflow-x:hidden;
     justify-content: center;
     margin:0 auto;
