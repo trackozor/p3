@@ -329,7 +329,7 @@ body {
 /*--------------------------------------------------------------------------------------------------------*/
 /*  Description cartes */
 h2 {
-  font-size: 1.2rem; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
+  font-size: 1.3rem; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
   font-weight: 700; /* Accentuation caractère majeure soit valeur=900 */
   /*-- tablette --*/
 }
@@ -673,7 +673,7 @@ footer {
 
 /* Style des icônes */
 .fa-full, .fa-empty {
-  font-size: 1.2rem; /* Taille de police pour les icônes */
+  font-size: 1.3rem; /* Taille de police pour les icônes */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1603,27 +1603,15 @@ label.card-menu:hover {
   align-items: center; /* Centre les éléments sur l'axe vertical */
   max-width: 1024px;
   height: 30vh;
-  margin: 0 auto;
   background-color: #f9f9f9;
 }
 
 /*  Titre */
 .bandeau h2 {
-  width: 70%;
   font-size: 1.3rem;
-  padding: 1% 0;
-  margin-top: 5%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
-  text-align: center;
-  justify-content: center;
-  /* tablette */
+  margin-top: 5vh; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   /* Desktop */
   /* Large desktop */
-}
-@media (min-width: 426px) and (max-width: 1023px) {
-  .bandeau h2 {
-    padding: 0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
-    margin-top: 5%;
-  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau h2 {
@@ -1711,7 +1699,7 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Centre les éléments sur l'axe vertical */
-  width: 90%; /* Largeur de 95% pour le conteneur */
+  width: 90%; /* Largeur de 90% pour le conteneur */
   justify-content: center; /* Centre les éléments horizontalement */
   margin: 0 auto;
   /* Desktop */
@@ -1739,14 +1727,13 @@ label.card-menu:hover {
 /* Liste : Lignes */
 .fonctionnement li {
   display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-  margin: 3rem 1rem; /* Marge autour des éléments */
+  margin: 1rem; /* Marge autour des éléments */
   align-items: center; /* Centre les éléments sur l'axe vertical */
   font-weight: 700; /* Gras du texte */
   position: relative; /* Position relative pour gérer des éléments internes */
   z-index: 1; /* Superposition sur l'axe Z */
   width: 95%; /* Prend toute la largeur du conteneur */
   justify-content: space-around; /* Espace autour des éléments de la liste */
-  align-content: center;
   background-color: #f9f9f9;
   /*-- Tablette --*/
   /* Desktop */
@@ -1754,7 +1741,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .fonctionnement li {
-    margin: 1rem 1rem; /* Ajustement des marges pour tablette */
+    margin: 1rem; /* Ajustement des marges pour tablette */
     gap: 2%;
     justify-content: center;
   }
@@ -1787,7 +1774,6 @@ label.card-menu:hover {
   justify-content: space-around;
   font-size: 1rem; /* Taille de la police */
   padding-right: 8%;
-  align-content: center;
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1861,7 +1847,7 @@ i {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   i {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2147,7 +2133,7 @@ main {
 .menu .title {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
-  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 30%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
   /*-- tablette --*/
@@ -2175,7 +2161,7 @@ main {
 .menu .title1 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
-  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 45%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
   /*-- tablette --*/
@@ -2203,7 +2189,7 @@ main {
 .menu .title2 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
-  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 33%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
   /*-- tablette --*/
@@ -2231,7 +2217,7 @@ main {
 .menu .title3 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
-  font-size: 1.2rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
   gap: 33%; /* Padding à gauche du titre */
   justify-content: center; /* Espacement entre les éléments */
   /*-- tablette --*/

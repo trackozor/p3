@@ -18,8 +18,6 @@
 
 
 /* Conteneur parent bandeau */
-
-
 .bandeau  {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Alignement des éléments en colonne */
@@ -28,27 +26,14 @@
     align-items: center; /* Centre les éléments sur l'axe vertical */
     max-width: 1024px;
     height: 30vh;
-    margin: 0 auto;
-    background-color: #f9f9f9
+    background-color: #f9f9f9;
 }
 
-
 /*  Titre */
-
 .bandeau h2 {
-    width: 70%;
-    font-size: 1.3rem;
-    padding:1% 0;
-    margin-top: 5%; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
-    text-align: center;
-    justify-content: center;
+    font-size: $font-size-title;
+    margin-top: $margin-xlarge-vh; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
 
-    /* tablette */
-    @include tablette {
-        padding: 0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
-        margin-top: 5%;
-
-    }
     
     /* Desktop */
     @include desktop {
@@ -68,12 +53,9 @@
 }
 
 /* Texte */
-
 .bandeau p {
     padding: $padding-base 0; /* Padding haut/bas et gauche/droite */
     margin-bottom: 2vh 0; /* Marge en bas du paragraphe */
-
-
 }
 
 
@@ -108,7 +90,7 @@
 /*  Titre */
 .fonctionnement h2 {
     margin: $margin-large 0;
-    padding-left: 6%;
+    padding-left: $padding-xlarge-pct;
 
 
     /*-- tablette --*/
@@ -135,7 +117,7 @@
     display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
     flex-direction: column; /* Alignement en colonne */
     align-items: center; /* Centre les éléments sur l'axe vertical */
-    width: 90%; /* Largeur de 95% pour le conteneur */
+    width: 90%; /* Largeur de 90% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
     margin:0 auto;
 
@@ -162,20 +144,19 @@
 /* Liste : Lignes */
 .fonctionnement li {
     display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-    margin: $margin-xlarge $margin-base; /* Marge autour des éléments */
+    margin: $margin-base ; /* Marge autour des éléments */
     align-items: center; /* Centre les éléments sur l'axe vertical */
     font-weight: $font-weight-bold; /* Gras du texte */
     position: relative; /* Position relative pour gérer des éléments internes */
     z-index: 1; /* Superposition sur l'axe Z */
     width: 95%; /* Prend toute la largeur du conteneur */
     justify-content: space-around; /* Espace autour des éléments de la liste */
-    align-content: center;
     background-color: #f9f9f9;
     
 
     /*-- Tablette --*/
     @include tablette {
-        margin: $margin-base $margin-base; /* Ajustement des marges pour tablette */
+        margin: $margin-base; /* Ajustement des marges pour tablette */
         gap: 2%;
         justify-content: center;
     }
@@ -211,7 +192,7 @@
     justify-content:space-around;
     font-size: 1rem; /* Taille de la police */
     padding-right: 8%;
-    align-content: center;
+
 
     /* Tablette */
     @include tablette {
