@@ -830,9 +830,7 @@ label.card-menu:hover {
 /* Révisions :                                                                                             */
 /* - [Date] : [Modifications apportées]                                                                    */
 /*--------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------Carte Logo-----------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------*/
+/* Carte Logo */
 .card-logo {
   width: 100%;
   height: auto;
@@ -867,11 +865,8 @@ label.card-menu:hover {
   }
 }
 
-/*---------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------Carte Logo alt-----------------------------------------------*/
-/*--------------------------------------------Avec fleche retour---------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/*-- Conteneur principal de la carte avec alternative et flèche retour --*/
+/*  Carte Logo alt */
+/* Conteneur principal de la carte avec alternative et flèche retour */
 .card-logo-alt {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
@@ -886,7 +881,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Image dans la carte alt --*/
+/* Image dans la carte alt */
 .card-logo-alt img {
   width: 40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
   /* Desktop */
@@ -897,14 +892,14 @@ label.card-menu:hover {
   }
 }
 
-/*-- Icône de flèche retour --*/
+/* Icône de flèche retour */
 .card-logo-alt i {
   position: absolute; /* Positionne l'icône de manière absolue dans la carte */
   left: 1%; /* Place l'icône à gauche, hors de la carte */
   top: 25%; /* Place l'icône à 35% du haut du conteneur */
   /*-- tablette --*/
   /* Desktop */
-  /*-- large desktop --*/
+  /* large desktop */
   /* Faire pointer la souris sur l'icône de la carte */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -931,10 +926,8 @@ label.card-menu:hover {
   cursor: pointer;
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------- Carte localisation avec icône et ville ---------------------------------*/
-/*---------------------------------------------------------------------------------------------------------*/
-/*-- Conteneur de la carte localisation --*/
+/* Carte localisation avec icône et ville */
+/* Conteneur de la carte localisation */
 .card-location {
   width: 100%; /* La carte prend toute la largeur du parent */
   display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -949,7 +942,7 @@ label.card-menu:hover {
   border-bottom: 0.25rem solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
   /* Tablette */
   /* Desktop */
-  /*-- Large desktop --*/
+  /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card-location {
@@ -981,7 +974,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Icône localisation dans la carte localisation --*/
+/* Icône localisation dans la carte localisation */
 .card-location i {
   font-size: 1rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
   color: black; /* Couleur de l'icône */
@@ -1011,7 +1004,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Adresse dans la carte localisation --*/
+/* Adresse dans la carte localisation */
 .carte-location address {
   font-size: 1rem; /* Taille du texte pour l'adresse */
   color: black; /* Couleur du texte */
@@ -1019,10 +1012,8 @@ label.card-menu:hover {
   align-items: center;
 }
 
-/*---------------------------------------------------------------------------------*/
-/*-------------------------------- Cartes restaurants -----------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*-- Conteneur parent de la carte restaurant --*/
+/* Cartes restaurants */
+/* Conteneur parent de la carte restaurant */
 .card {
   width: 95%;
   display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -1031,11 +1022,11 @@ label.card-menu:hover {
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre portée */
   position: relative; /* Permet de positionner des éléments enfants */
   z-index: 1; /* Définit la position sur l'axe Z */
-  margin: 10% auto; /* Marges et centrage horizontal */
+  margin: 15% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
   height: 25vh;
-  /*-- Tablette --*/
-  /*-- Desktop --*/
+  /* Tablette */
+  /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
@@ -1049,10 +1040,10 @@ label.card-menu:hover {
   }
 }
 
-/*-- Image dans la carte restaurant --*/
+/* Image dans la carte restaurant */
 .card img {
   width: 100%; /* Largeur de l'image à 100% du conteneur */
-  height: 19vh;
+  height: 18vh;
   border-radius: 0.5rem 0.5rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -1072,12 +1063,12 @@ label.card-menu:hover {
   }
 }
 
-/*-- Titre de la carte restaurant --*/
+/* Titre de la carte restaurant */
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 700; /* Gras du texte correspondant à une valeur de 900 */
   margin-top: 2vh; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
-  /*-- Desktop --*/
+  /* Desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card h3 {
@@ -1085,7 +1076,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Zone de texte dans la carte restaurant --*/
+/* Zone de texte dans la carte restaurant */
 .card .card-title {
   font-size: 0.9rem; /* Taille du texte */
   gap: 0.5rem; /* Espace entre les éléments */
@@ -1108,7 +1099,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Icône favorite dans la carte restaurant --*/
+/* Icône favorite dans la carte restaurant */
 .card .icon-favorite {
   display: block; /* Affiche l'icône favorite */
   position: absolute; /* Position absolue pour l'icône */
@@ -1124,7 +1115,7 @@ label.card-menu:hover {
   }
 }
 
-/*-- Texte dans la carte restaurant --*/
+/* Texte dans la carte restaurant */
 .card-txt {
   padding: 1rem 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
   margin-bottom: 2%;
