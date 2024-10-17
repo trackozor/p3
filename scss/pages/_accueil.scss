@@ -278,9 +278,9 @@ i {
         margin: 0 $margin-base 0 $margin-base; /* Marges ajustées pour large desktop */
     }
 }
-/*----------------------------------------------------------------------------------------------------------*/
+
 /*------------------------------------------- Icône Store --------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------------*/
+
 
 .fa-store {
     color: $button--search-primary-color; /* Couleur de l'icône store */
@@ -292,10 +292,11 @@ i {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top:5vh;
+    height:60%;
     overflow-x:hidden;
-    justify-content: center;
+    justify-content: space-around;
     margin:0 auto;
+    gap:5vh;
 
     /*-- Tablette --*/
     @include tablette {

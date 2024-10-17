@@ -23,7 +23,7 @@ footer {
     background-color: black; /* Définit la couleur de fond du footer */
     color: white; /* Définit la couleur du texte et des icônes à blanc */
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
-    margin-top:2vh;
+ 
     
     /*-- large desktop --*/
     @include large-desktop {

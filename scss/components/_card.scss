@@ -211,7 +211,7 @@
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 20% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-    height:23vh;
+    height:22vh;
 
     /* Tablette */
     @include tablette {
