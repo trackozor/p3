@@ -30,9 +30,9 @@
 }
 
 .card-logo img {
-    display: flex;
+    display: block;
     align-items: center;
-    margin: 2vh auto;
+    margin: 2% auto;
     width:50%;
 
     /*-- Tablette --*/
@@ -202,7 +202,7 @@
 
 /* Conteneur parent de la carte restaurant */
 .card {
-    width: 95%;
+    width: 100%;
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Aligne les éléments en colonne */
     border-radius: $border-radius-base; /* Bord arrondis pour la carte */
@@ -211,7 +211,8 @@
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 20% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-    height:22vh;
+    height:80%;
+    max-height: 25vh;
 
     /* Tablette */
     @include tablette {
@@ -230,8 +231,9 @@
 
 /* Image dans la carte restaurant */
 .card  img {
-    width: 100%; /* Largeur de l'image à 100% du conteneur */
-    height:18vh;;
+    width: 100%;
+    height: auto;
+    max-height:20vh;
     border-radius: $border-radius-base $border-radius-base 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -267,6 +269,7 @@
     font-size: 0.9rem; /* Taille du texte */
     gap: $gap-small; /* Espace entre les éléments */
     margin: $margin-base; /* Marges autour du texte */
+    max-height: 15vh;
 
 
 
@@ -608,6 +611,7 @@
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
     margin-right: $margin-small; /* Espace à droite des icônes */
+    margin-left: 0; /* Pas d'espace à gauche */
     color: white; /* Couleur blanche pour les icônes */
     font-size: $font-size-middle;
 
@@ -640,7 +644,7 @@
 
 /*-- Liste dans le footer --*/
 .footer-card li {
-    margin-top: $margin-small; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+    margin-top: $margin-xsmall; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
 
 
     /* tablette */

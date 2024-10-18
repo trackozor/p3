@@ -18,6 +18,8 @@
 /*-------------------------------------Base ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-primary;  /* Police par défaut */
   font-size: 1rem;  /* Taille de police relative */
   background-color: white;  /* Couleur de fond */

@@ -296,6 +296,8 @@ table {
 /*-------------------------------------Base ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif; /* Police par défaut */
   font-size: 1rem; /* Taille de police relative */
   background-color: white; /* Couleur de fond */
@@ -371,11 +373,9 @@ img {
 /*--------------------------------------------- Conteneur Principal --------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 header {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  flex-direction: column; /* Aligne les éléments verticalement en colonne */
-  align-items: center; /* Centre les éléments sur l'axe vertical */
+  display: block; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Le header prend toute la largeur disponible */
-  justify-content: center;
+  height: auto;
   /*-- large desktop --*/
 }
 @media (min-width: 1440px) {
@@ -841,9 +841,9 @@ label.card-menu:hover {
 }
 
 .card-logo img {
-  display: flex;
+  display: block;
   align-items: center;
-  margin: 2vh auto;
+  margin: 2% auto;
   width: 50%;
   /*-- Tablette --*/
   /*-- large desktop --*/
@@ -1014,7 +1014,7 @@ label.card-menu:hover {
 /* Cartes restaurants */
 /* Conteneur parent de la carte restaurant */
 .card {
-  width: 95%;
+  width: 100%;
   display: flex; /* Utilise flexbox pour aligner les éléments */
   flex-direction: column; /* Aligne les éléments en colonne */
   border-radius: 0.5rem; /* Bord arrondis pour la carte */
@@ -1023,7 +1023,8 @@ label.card-menu:hover {
   z-index: 1; /* Définit la position sur l'axe Z */
   margin: 20% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-  height: 22vh;
+  height: 80%;
+  max-height: 25vh;
   /* Tablette */
   /* Desktop */
 }
@@ -1041,8 +1042,9 @@ label.card-menu:hover {
 
 /* Image dans la carte restaurant */
 .card img {
-  width: 100%; /* Largeur de l'image à 100% du conteneur */
-  height: 18vh;
+  width: 100%;
+  height: auto;
+  max-height: 20vh;
   border-radius: 0.5rem 0.5rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -1080,6 +1082,7 @@ label.card-menu:hover {
   font-size: 0.9rem; /* Taille du texte */
   gap: 0.5rem; /* Espace entre les éléments */
   margin: 1rem; /* Marges autour du texte */
+  max-height: 15vh;
   /* tablette */
   /* Desktop */
 }
@@ -1441,6 +1444,7 @@ label.card-menu:hover {
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
   margin-right: 0.5rem; /* Espace à droite des icônes */
+  margin-left: 0; /* Pas d'espace à gauche */
   color: white; /* Couleur blanche pour les icônes */
   font-size: 0.7rem;
   /* tablette */
@@ -1476,7 +1480,7 @@ label.card-menu:hover {
 
 /*-- Liste dans le footer --*/
 .footer-card li {
-  margin-top: 0.5rem; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+  margin-top: 0.25rem; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
   /* tablette */
   /* Desktop */
   /*-- large desktop --*/
@@ -1584,21 +1588,22 @@ label.card-menu:hover {
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 /* Conteneur parent bandeau */
+/* Conteneur parent bandeau */
 .bandeau {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  flex-direction: column; /* Alignement des éléments en colonne */
-  text-align: center; /* Aligne le texte au centre horizontalement */
-  justify-content: center; /* Centre le contenu sur l'axe horizontal */
-  align-items: center; /* Centre les éléments sur l'axe vertical */
-  max-width: 1024px;
-  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: #f9f9f9;
+  margin: 0 auto;
 }
 
 /*  Titre */
 .bandeau h2 {
   font-size: 1.3rem;
-  margin-top: 5vh; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
+  margin-top: 1rem; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   /* Desktop */
   /* Large desktop */
 }
@@ -1617,19 +1622,19 @@ label.card-menu:hover {
 }
 
 .button--primary {
-  margin: 2vh 0;
+  margin: 2% 0;
 }
 
 /* Texte */
 .bandeau p {
   padding: 1rem 0; /* Padding haut/bas et gauche/droite */
-  margin-bottom: 2vh 0; /* Marge en bas du paragraphe */
+  margin-bottom: 2% 0; /* Marge en bas du paragraphe */
 }
 
 /* Conteneur parent liste  */
 .fonctionnement {
   display: flex; /* Utilise flexbox pour aligner les éléments */
-  flex-direction: column; /* Alignement en colonne */
+  flex-direction: column;
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
   /*-- Tablette --*/
@@ -1659,7 +1664,7 @@ label.card-menu:hover {
 
 /*  Titre */
 .fonctionnement h2 {
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding-left: 6%;
   /*-- tablette --*/
   /* Desktop */
@@ -1862,11 +1867,11 @@ i {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60%;
-  overflow-x: hidden;
+  overflow: hidden;
   justify-content: space-around;
   margin: 0 auto;
-  gap: 5vh;
+  gap: 2rem; /* Réduit l'espacement pour les petits écrans */
+  height: auto; /* Laisse la section s'adapter à la hauteur du contenu */
   /*-- Tablette --*/
   /*-- large desktop --*/
 }

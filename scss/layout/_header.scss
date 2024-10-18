@@ -13,11 +13,9 @@
 /*--------------------------------------------- Conteneur Principal --------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 header {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  flex-direction: column; /* Aligne les éléments verticalement en colonne */
-  align-items: center; /* Centre les éléments sur l'axe vertical */
+  display: block; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Le header prend toute la largeur disponible */
-  justify-content: center;
+  height: auto;
 
   /*-- large desktop --*/
   @include large-desktop {
