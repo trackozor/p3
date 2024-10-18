@@ -211,8 +211,8 @@
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 20% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-    height:80%;
-    max-height: 25vh;
+    height:auto;
+    max-height: 30vh;
 
     /* Tablette */
     @include tablette {
@@ -232,7 +232,7 @@
 /* Image dans la carte restaurant */
 .card  img {
     width: 100%;
-    height: auto;
+    height: 60%;
     max-height:20vh;
     border-radius: $border-radius-base $border-radius-base 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
@@ -256,7 +256,7 @@
 .card h3 {
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
     font-weight: $font-weight-bold; /* Gras du texte correspondant à une valeur de 900 */
-    margin-top: $margin-medium-vh; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
+
 
     /* Desktop */
     @include desktop {
@@ -266,10 +266,9 @@
 
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
-    font-size: 0.9rem; /* Taille du texte */
+    font-size: $font-size-base; /* Taille du texte */
     gap: $gap-small; /* Espace entre les éléments */
     margin: $margin-base; /* Marges autour du texte */
-    max-height: 15vh;
 
 
 
@@ -294,7 +293,7 @@
     position: absolute; /* Position absolue pour l'icône */
     z-index: 2; /* Au-dessus du contenu principal */
     left: 90%; /* Position horizontale de l'icône */
-    bottom: 10%; /* Position verticale de l'icône */
+    bottom: 15%; /* Position verticale de l'icône */
 
     /* Tablette */
     @include tablette {
@@ -305,8 +304,7 @@
 
 /* Texte dans la carte restaurant */
 .card-txt {
-    padding: $padding-base 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
-    margin-bottom: 2%;
+    padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
 
     /* tablette */
     @include tablette {

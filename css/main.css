@@ -1023,8 +1023,8 @@ label.card-menu:hover {
   z-index: 1; /* Définit la position sur l'axe Z */
   margin: 20% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
-  height: 80%;
-  max-height: 25vh;
+  height: auto;
+  max-height: 30vh;
   /* Tablette */
   /* Desktop */
 }
@@ -1043,7 +1043,7 @@ label.card-menu:hover {
 /* Image dans la carte restaurant */
 .card img {
   width: 100%;
-  height: auto;
+  height: 60%;
   max-height: 20vh;
   border-radius: 0.5rem 0.5rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
@@ -1068,7 +1068,6 @@ label.card-menu:hover {
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 700; /* Gras du texte correspondant à une valeur de 900 */
-  margin-top: 2vh; /* Marge haute correspondant à 2% de la hauteur de l'écran*/
   /* Desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1079,10 +1078,9 @@ label.card-menu:hover {
 
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
-  font-size: 0.9rem; /* Taille du texte */
+  font-size: 1rem; /* Taille du texte */
   gap: 0.5rem; /* Espace entre les éléments */
   margin: 1rem; /* Marges autour du texte */
-  max-height: 15vh;
   /* tablette */
   /* Desktop */
 }
@@ -1107,7 +1105,7 @@ label.card-menu:hover {
   position: absolute; /* Position absolue pour l'icône */
   z-index: 2; /* Au-dessus du contenu principal */
   left: 90%; /* Position horizontale de l'icône */
-  bottom: 10%; /* Position verticale de l'icône */
+  bottom: 15%; /* Position verticale de l'icône */
   /* Tablette */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -1119,8 +1117,7 @@ label.card-menu:hover {
 
 /* Texte dans la carte restaurant */
 .card-txt {
-  padding: 1rem 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
-  margin-bottom: 2%;
+  padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
   /* tablette */
   /* Desktop */
 }
