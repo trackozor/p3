@@ -16,11 +16,9 @@
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 
-/*-------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------- Couleurs ----------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
 
-/*------Principale -----*/
+/* Couleurs */
+
 $primary-color:#0a0909; /* noir */
 $secondary-color:#89C8FA; /* Bleu clair */
 $tertiary-color:#003A68; /*Bleu foncé*/
@@ -36,10 +34,8 @@ $button--search-secondary-color: #FF79DA;   /* Rose */
 $button--new-primary-color:#99E2D0;   /* Vert clair */
 $button--new-secondary-color:#008766; /* Vert foncé */
 
+/* Police */
 
-/*------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------Polices-----------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
 
 $font-primary: 'Roboto', sans-serif;
 $font-title: 'Shrikhand', sans-serif;
@@ -126,10 +122,7 @@ $gap-xlarge-pct: 6%;      /* Très grand gap en % */
 
 
 
-/*-------------------------------------------------------------------------------------------------------------------*/
 /* --------------------------------------- Taille des police---------------------------------------------------------*/ 
-/*-------------------------------------------------------------------------------------------------------------------*/
-
 
 $font-size-base: 1rem; /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
 $font-size-title: 1.3rem; /* Taille de police des titres soit 3% de la hauteur de l'écran*/
@@ -137,19 +130,11 @@ $font-size-middle: 0.7rem; /* Taille de polices générique correspondant à 1.5
 $font-size-d2: 0.5rem; /* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
 $font-size-d4: 0.25rem; /**/
 $font-size-x2: 2rem; /* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-$font-size-x3: 3rem; /* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
 
-
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Noms de variables plus explicites pour les poids de police */
-$font-weight-thin: 100;  /* Très léger */
-$font-weight-medium: 500;  /* Moyen, un peu plus marqué que régulier */
-$font-weight-semi-bold: 600; /* Semi-gras */
-$font-weight-bold: 700;  /* Gras (accentué) */
-$font-weight-extra-bold: 800; /* Très gras */
-$font-weight-black: 900;  /* Extrêmement gras */
+/*  Mise en évidence ( GRAS )*/
+$font-weight-medium: 500;  
+$font-weight-bold: 700;  
+$font-weight-black: 900; 
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -164,13 +149,6 @@ $border-radius-large: 2rem;    /* Arrondis plus prononcés */
 $border-radius-xlarge: 3rem;   /* Arrondis très prononcés */
 $border-radius-full: 50%;      /* Arrondis complets pour des objets circulaires */
 
-/* Variations supplémentaires avec des pourcentages */
-$border-radius-small-percentage: 10%; /* Arrondi léger en pourcentage */
-$border-radius-medium-percentage: 20%; /* Arrondi moyen en pourcentage */
-$border-radius-large-percentage: 30%; /* Arrondi plus large en pourcentage */
-
-
-
 
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------------------------Ombres -----------------------------------------------------*/
@@ -180,22 +158,9 @@ $shadow-small: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1); /* Ombre légère, subtile */
 $shadow-medium: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre moyenne pour la plupart des éléments */
 $shadow-large: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);   /* Ombre plus large pour des objets importants */
 
-/* Ombres directionnelles */
-$shadow-left: -0.5rem 0 0.8rem rgba(0, 0, 0, 0.2);  /* Ombre projetée vers la gauche */
-$shadow-right: 0.5rem 0 0.8rem rgba(0, 0, 0, 0.2);  /* Ombre projetée vers la droite */
-$shadow-bottom: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);  /* Ombre vers le bas */
 
-/* Ombres intenses pour des effets plus marqués */
-$shadow-intense-small: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4); /* Ombre petite mais intense */
-$shadow-intense-large: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);   /* Ombre intense, très marquée */
-
-/*--------------------------------------------------------------------------------------------------*/
-/*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------------*/
 /*---------------------------- Taille des objets basée sur la largeur de la fenêtre (vw) ---------------*/
-/*------------------------------------------------------------------------------------------------------*/
+
 $object-size-xsmall: 1vw;   /* Très petit objet */
 $object-size-small: 2vw;    /* Petit objet */
 $object-size-medium: 3vw;   /* Taille moyenne */
@@ -203,56 +168,15 @@ $object-size-large: 5vw;    /* Objet plus grand */
 $object-size-xlarge: 10vw;  /* Très grand objet */
 $object-size-xxlarge: 15vw; /* Objet extrêmement grand */
 
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Taille des objets basée sur la hauteur de la fenêtre (vh) ---------------*/
-/*------------------------------------------------------------------------------------------------------*/
-$object-size-small-h: 2vh;   /* Petit objet en fonction de la hauteur de l'écran */
-$object-size-medium-h: 5vh;  /* Taille moyenne basée sur la hauteur */
-$object-size-large-h: 10vh;  /* Grand objet basé sur la hauteur */
-$object-size-xlarge-h: 15vh; /* Très grand objet en fonction de la hauteur */
-$object-size-xxlarge-h: 20vh; /* Objet extrêmement grand basé sur la hauteur */
 
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Taille des objets basée sur la taille de texte (rem) --------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-$object-size-rem-xsmall: 0.5rem; /* Très petit objet basé sur la taille du texte */
-$object-size-rem-small: 1rem;   /* Petit objet */
-$object-size-rem-medium: 2rem;  /* Taille moyenne */
-$object-size-rem-large: 3rem;   /* Grand objet */
-$object-size-rem-xlarge: 5rem;  /* Très grand objet */
-$object-size-rem-xxlarge: 8rem; /* Objet extrêmement grand basé sur la taille de texte */
 
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Combinaison d'unités (vh, vw, rem) --------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-$object-size-combo-small: calc(1rem + 1vw);   /* Taille petite combinant rem et vw */
-$object-size-combo-medium: calc(2rem + 2vw);  /* Taille moyenne combinant rem et vw */
-$object-size-combo-large: calc(3rem + 4vw);   /* Taille grande combinant rem et vw */
-$object-size-combo-xlarge: calc(5rem + 5vw);  /* Taille très grande combinant rem et vw */
-
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Exemples spécifiques pour certains composants --------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-$button-size-small: $object-size-rem-small;    /* Taille des petits boutons */
-$button-size-large: $object-size-rem-large;    /* Taille des grands boutons */
-
-$icon-size-small: $object-size-small-h;        /* Taille des petites icônes */
-$icon-size-large: $object-size-large-h;        /* Taille des grandes icônes */
-
-$card-size-medium: $object-size-medium;        /* Taille des cartes de contenu */
-$card-size-large: $object-size-large;          /* Taille des grandes cartes */
-
-/*---------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
-/*---------------------------------------------------------------------------------------------------*/
+/* Affichage badge- dans les cartes  */
 
 $badge-palette: flex; /* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
 $badge-enchantee: flex; /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 $badge-delices: none; /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 $badge-francaise: none; /* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
 
-/*----------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage conditionnel du loader   -----------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
 
+/* Affichage conditionnel du loader   */
 $loader-active: none;/* Gère l'affichage du loader  block =affiché none = masqué */

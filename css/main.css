@@ -30,10 +30,7 @@
 /*  Révisions :                                                                                             */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/*-------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------- Couleurs ----------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/*------Principale -----*/
+/* Couleurs */
 /* noir */
 /* Bleu clair */
 /*Bleu foncé*/
@@ -45,9 +42,7 @@
 /* Bouton "Nouveau" */
 /* Vert clair */
 /* Vert foncé */
-/*------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------Polices-----------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
+/* Police */
 /*------------------------------------------------------------------------------------------------------*/
 /* ----------------------------------------Espacements--------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
@@ -115,26 +110,14 @@
 /* Gap de base en % */
 /* Grand gap en % */
 /* Très grand gap en % */
-/*-------------------------------------------------------------------------------------------------------------------*/
 /* --------------------------------------- Taille des police---------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------------*/
 /* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
 /* Taille de police des titres soit 3% de la hauteur de l'écran*/
 /* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
 /* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
 /**/
 /* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
-/* Taille de police 3 fois supérieur soit 6 % de la hauteur de l'écran*/
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------Mise en évidence ( GRAS )--------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Noms de variables plus explicites pour les poids de police */
-/* Très léger */
-/* Moyen, un peu plus marqué que régulier */
-/* Semi-gras */
-/* Gras (accentué) */
-/* Très gras */
-/* Extrêmement gras */
+/*  Mise en évidence ( GRAS )*/
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------- Arrondis des bordures (border-radius) -----------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
@@ -145,10 +128,6 @@
 /* Arrondis plus prononcés */
 /* Arrondis très prononcés */
 /* Arrondis complets pour des objets circulaires */
-/* Variations supplémentaires avec des pourcentages */
-/* Arrondi léger en pourcentage */
-/* Arrondi moyen en pourcentage */
-/* Arrondi plus large en pourcentage */
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------------------------Ombres -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
@@ -156,68 +135,19 @@
 /* Ombre légère, subtile */
 /* Ombre moyenne pour la plupart des éléments */
 /* Ombre plus large pour des objets importants */
-/* Ombres directionnelles */
-/* Ombre projetée vers la gauche */
-/* Ombre projetée vers la droite */
-/* Ombre vers le bas */
-/* Ombres intenses pour des effets plus marqués */
-/* Ombre petite mais intense */
-/* Ombre intense, très marquée */
-/*--------------------------------------------------------------------------------------------------*/
-/*-------------------------------------- Taille des objets (valeur générique)-----------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
 /*---------------------------- Taille des objets basée sur la largeur de la fenêtre (vw) ---------------*/
-/*------------------------------------------------------------------------------------------------------*/
 /* Très petit objet */
 /* Petit objet */
 /* Taille moyenne */
 /* Objet plus grand */
 /* Très grand objet */
 /* Objet extrêmement grand */
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Taille des objets basée sur la hauteur de la fenêtre (vh) ---------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Petit objet en fonction de la hauteur de l'écran */
-/* Taille moyenne basée sur la hauteur */
-/* Grand objet basé sur la hauteur */
-/* Très grand objet en fonction de la hauteur */
-/* Objet extrêmement grand basé sur la hauteur */
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Taille des objets basée sur la taille de texte (rem) --------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Très petit objet basé sur la taille du texte */
-/* Petit objet */
-/* Taille moyenne */
-/* Grand objet */
-/* Très grand objet */
-/* Objet extrêmement grand basé sur la taille de texte */
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Combinaison d'unités (vh, vw, rem) --------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Taille petite combinant rem et vw */
-/* Taille moyenne combinant rem et vw */
-/* Taille grande combinant rem et vw */
-/* Taille très grande combinant rem et vw */
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Exemples spécifiques pour certains composants --------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Taille des petits boutons */
-/* Taille des grands boutons */
-/* Taille des petites icônes */
-/* Taille des grandes icônes */
-/* Taille des cartes de contenu */
-/* Taille des grandes cartes */
-/*---------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage badge- dans les cartes-------------------------------------*/
-/*---------------------------------------------------------------------------------------------------*/
+/* Affichage badge- dans les cartes  */
 /* Gère l affichage du badge dans la carte:  flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
-/*----------------------------------------------------------------------------------------------------*/
-/*----------------------------- Affichage conditionnel du loader   -----------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
+/* Affichage conditionnel du loader   */
 /* Gère l'affichage du loader  block =affiché none = masqué */
 /* 2. Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
