@@ -708,7 +708,6 @@ label.card-menu:hover {
 /* Image dans la carte alt */
 .card-logo-alt img {
   width: 40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
-  /* Desktop */
   /* large desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1986,16 +1985,10 @@ main {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
   font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
-  gap: 30%; /* Padding à gauche du titre */
+  gap: 2%;
   justify-content: center; /* Espacement entre les éléments */
-  /*-- tablette --*/
   /*Desktop */
   /*-- Large Desktop --*/
-}
-@media (min-width: 426px) and (max-width: 1023px) {
-  .menu .title {
-    gap: 60%; /* Padding à gauche du titre */
-  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu .title {

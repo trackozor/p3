@@ -70,10 +70,10 @@
 /* Image dans la carte alt */
 .card-logo-alt img {
     width:40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
-    /* Desktop */
-   @include desktop {
+
+    @include desktop {
     width:20%
-   }
+    }
     /* large desktop */
     @include large-desktop {
         width:15%
