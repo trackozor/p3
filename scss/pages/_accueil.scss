@@ -28,10 +28,12 @@
     width: 100%;
     background-color: #f9f9f9;
     margin: 0 auto;
+    padding: 10% 0;
 }
 /*  Titre */
 .bandeau h2 {
-    font-size: $font-size-title;
+    width:70%;
+    font-size: 1.5rem;
     margin-top: 1rem; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
 
     
@@ -54,6 +56,7 @@
 
 /* Texte */
 .bandeau p {
+    width: 80%;
     padding: $padding-base 0; /* Padding haut/bas et gauche/droite */
     margin-bottom: 2% 0; /* Marge en bas du paragraphe */
 }
