@@ -335,6 +335,9 @@ i {
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 0;
+        width: 90%;
+        gap:1%;
+        padding:2% 0;
         
     }
 
@@ -347,6 +350,7 @@ i {
         width: 100%;
         max-width: 1024px;
         margin: 0 auto;
+        padding:2% 0;
     }
 }
 

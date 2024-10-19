@@ -509,12 +509,12 @@ footer {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fa-full, .fa-empty {
-    font-size: 1.6rem; /* Ajustement de la taille de police pour desktop */
+    font-size: 1.4rem; /* Ajustement de la taille de police pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .fa-full, .fa-empty {
-    font-size: 1.6rem; /* Ajustement de la taille de police pour large desktop */
+    font-size: 1.4rem; /* Ajustement de la taille de police pour large desktop */
   }
 }
 
@@ -709,10 +709,16 @@ label.card-menu:hover {
 .card-logo-alt img {
   width: 40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
   /* Desktop */
+  /* large desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt img {
-    height: 40%;
+    width: 20%;
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo-alt img {
+    width: 15%;
   }
 }
 
@@ -728,20 +734,19 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card-logo-alt i {
-    left: -42%; /* Place l'icône à 5% de la largeur de l'écran */
     top: 30%; /* Place l'icône à 35% du haut du conteneur */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt i {
-    left: -77%; /* Ajuste la position de l'icône pour desktop */
+    left: 0; /* Ajuste la position de l'icône pour desktop */
     top: 30%;
     font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card-logo-alt i {
-    left: -180%; /* Ajuste la position de l'icône pour desktop */
+    left: 0; /* Ajuste la position de l'icône pour desktop */
     top: 35%;
     font-size: 1.5rem;
   }
@@ -851,17 +856,11 @@ label.card-menu:hover {
   height: auto;
   max-height: 25%;
   /* Tablette */
-  /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
     width: 100%;
     max-height: 40vh;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card {
-    height: 30vh;
   }
 }
 
@@ -885,7 +884,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card img {
-    height: 24vh;
+    height: 30vh;
   }
 }
 
@@ -894,12 +893,6 @@ label.card-menu:hover {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 700; /* Gras du texte correspondant à une valeur de 900 */
   margin-bottom: 0.2rem;
-  /* Desktop */
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card h3 {
-    font-size: 0.8rem; /* Ajuste la taille du titre pour desktop */
-  }
 }
 
 /* Zone de texte dans la carte restaurant */
@@ -919,9 +912,8 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .card-title {
-    font-size: 0.8rem; /* Ajuste la taille du texte pour desktop */
+    font-size: 1rem; /* Ajuste la taille du texte pour desktop */
     gap: 1rem; /* Espace pour desktop */
-    margin: 2%; /* Marges pour desktop */
   }
 }
 
@@ -933,11 +925,24 @@ label.card-menu:hover {
   left: 90%; /* Position horizontale de l'icône */
   bottom: 10%; /* Position verticale de l'icône */
   /* Tablette */
+  /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .icon-favorite {
     left: 90%; /* Position horizontale de l'icône pour tablette */
     bottom: 8%; /* Position verticale de l'icône pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card .icon-favorite {
+    left: 88%; /* Position horizontale de l'icône pour desktop */
+    bottom: 20%; /* Position verticale de l'icône pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .card .icon-favorite {
+    left: 85%; /* Position horizontale de l'icône pour desktop */
+    bottom: 15%; /* Position verticale de l'icône pour desktop */
   }
 }
 
@@ -982,7 +987,7 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .badge {
     right: 4%; /* Position droite du badge pour desktop */
-    top: 8%; /* Position haute du badge pour desktop */
+    top: 10%; /* Position haute du badge pour desktop */
   }
 }
 
@@ -1738,6 +1743,9 @@ i {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 0;
+    width: 90%;
+    gap: 1%;
+    padding: 2% 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1749,6 +1757,7 @@ i {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+    padding: 2% 0;
   }
 }
 
