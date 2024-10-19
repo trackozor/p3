@@ -236,11 +236,18 @@
     color: white; /* Couleur blanche pour le numéro */
     font-size: 0.8rem; /* Taille de la police du numéro */
 
+    /* Tablette */
+    @include tablette {
+        left: -2%;
+        width: 1.8rem;
+        height:1.8rem;
+    }
 
     /*-- Desktop --*/
     @include desktop {
         height: 1.5rem;
         width:1.5rem /* Décalage de l'icône numérotée pour desktop */
+        
     }
     
     /* Large desktop */
@@ -295,8 +302,9 @@ i {
     overflow: hidden;
     justify-content: space-around;
     margin: 0 auto;
-    gap: 2rem; /* Réduit l'espacement pour les petits écrans */
+    gap: 5%; /* Réduit l'espacement pour les petits écrans */
     height: auto; /* Laisse la section s'adapter à la hauteur du contenu */
+    padding: 15% 0;
 
     /*-- Tablette --*/
     @include tablette {

@@ -205,7 +205,7 @@
     width: 100%;
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Aligne les éléments en colonne */
-    border-radius: $border-radius-base; /* Bord arrondis pour la carte */
+    border-radius: $border-radius-medium; /* Bord arrondis pour la carte */
     box-shadow: $shadow-medium; /* Ombre portée */
     position: relative; /* Permet de positionner des éléments enfants */
     z-index: 1; /* Définit la position sur l'axe Z */
@@ -217,7 +217,7 @@
     /* Tablette */
     @include tablette {
         width: 100%;
-        height: 50vh;
+        max-height: 30vh;
     }
 
     /* Desktop */
@@ -232,9 +232,9 @@
 /* Image dans la carte restaurant */
 .card  img {
     width: 100%;
-    height: 60%;
-    max-height:20vh;
-    border-radius: $border-radius-base $border-radius-base 0 0; /* Arrondis des coins supérieurs */
+    height: 70%;
+    max-height:22vh;
+    border-radius: $border-radius-medium $border-radius-medium 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
     overflow: hidden;
@@ -242,7 +242,7 @@
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        height: 40vh;
+        max-height: 24vh;
     }
 
     /*-- Desktop --*/
@@ -269,6 +269,7 @@
     font-size: $font-size-base; /* Taille du texte */
     gap: $gap-small; /* Espace entre les éléments */
     margin: $margin-base; /* Marges autour du texte */
+    
 
 
 
