@@ -45,18 +45,6 @@
   font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: $font-weight-medium; /* Style de police en gras (bold) */
 
-  
-  /* Desktop */
-  @include desktop {
-    font-size: $font-size-base; /* Ajustement de la taille de police pour desktop */
-  }
-
-  /* large desktop */
-  @include large-desktop {
-    font-size: 1.5rem /* Ajustement de la taille de police pour large desktop */
-  }
-
-
 }
 
 /*--------------------------------------------------------------------------------------------------------*/

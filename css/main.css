@@ -183,9 +183,10 @@ body {
   background-color: white; /* Couleur de fond */
   margin: 0 auto; /* Centrage du contenu */
   overflow-x: hidden; /* Empêche le débordement horizontal */
+  min-width: 300px;
+  max-width: 1440px;
   /* Pour les tablettes */
   /* Pour les desktops */
-  /* Pour les très grands écrans */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   body {
@@ -197,12 +198,6 @@ body {
   body {
     font-size: 1.2rem; /* Augmente la taille de la police sur les grands écrans */
     max-width: 1024px; /* Largeur maximale pour un écran desktop */
-  }
-}
-@media (min-width: 1440px) {
-  body {
-    font-size: 1.2rem; /* Taille de police plus grande pour les écrans larges */
-    max-width: 1400px; /* Limite la largeur pour les très grands écrans */
   }
 }
 
@@ -476,18 +471,6 @@ footer {
 .button--primary-txt {
   font-size: 1rem; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: 500; /* Style de police en gras (bold) */
-  /* Desktop */
-  /* large desktop */
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .button--primary-txt {
-    font-size: 1rem; /* Ajustement de la taille de police pour desktop */
-  }
-}
-@media (min-width: 1440px) {
-  .button--primary-txt {
-    font-size: 1.5rem;
-  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/

@@ -25,6 +25,8 @@ body {
   background-color: white;  /* Couleur de fond */
   margin: 0 auto;  /* Centrage du contenu */
   overflow-x: hidden;  /* Empêche le débordement horizontal */
+  min-width: 300px;
+  max-width:1440px;
 
   /* Pour les tablettes */
   @include tablette {
@@ -38,11 +40,6 @@ body {
     max-width: 1024px;  /* Largeur maximale pour un écran desktop */
   }
 
-  /* Pour les très grands écrans */
-  @include large-desktop {
-    font-size: 1.2rem;  /* Taille de police plus grande pour les écrans larges */
-    max-width: 1400px;  /* Limite la largeur pour les très grands écrans */
-  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
