@@ -251,12 +251,6 @@ header {
   display: block; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Le header prend toute la largeur disponible */
   height: auto;
-  /*-- large desktop --*/
-}
-@media (min-width: 1440px) {
-  header {
-    width: 100vw;
-  }
 }
 
 /*-------------------------------------------------------------------------------------------------------- */
@@ -282,12 +276,6 @@ footer {
   background-color: black; /* Définit la couleur de fond du footer */
   color: white; /* Définit la couleur du texte et des icônes à blanc */
   width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
-  /*-- large desktop --*/
-}
-@media (min-width: 1440px) {
-  footer {
-    width: 100vw;
-  }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -1446,6 +1434,11 @@ label.card-menu:hover {
     padding: 2% 0;
   }
 }
+@media (min-width: 1440px) {
+  .bandeau {
+    padding: 1% 0;
+  }
+}
 
 /*  Titre */
 .bandeau h2 {
@@ -1464,7 +1457,6 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .bandeau h2 {
-    margin-top: 2%;
     font-size: 2.2rem;
   }
 }
@@ -1507,7 +1499,6 @@ label.card-menu:hover {
     padding: 2%;
     max-width: 1024px;
     margin: 0 auto;
-    width: 80%;
   }
 }
 
@@ -1551,8 +1542,9 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement ol {
     flex-direction: row; /* Alignement en ligne pour desktop */
-    gap: 2rem; /* Espace entre les éléments de la liste pour desktop */
+    gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
     justify-content: space-around; /* Espace autour des éléments pour desktop */
+    max-width: 1024px;
   }
 }
 @media (min-width: 1440px) {
@@ -1591,7 +1583,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement li {
-    margin: 1rem 0.5rem; /* Ajustement des marges pour desktop */
+    width: 100%;
   }
 }
 @media (min-width: 1440px) {
@@ -1629,11 +1621,12 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .li-txt {
+    width: 100%;
+    gap: 1%;
     left: 1vw; /* Décalage du texte pour desktop */
     border-radius: 0.5rem; /* Bord arrondi pour desktop */
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
-    height: 4vw; /* Hauteur du conteneur ajustée pour desktop */
-    font-size: 1rem; /* Taille de la police pour desktop */
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1440px) {
@@ -1666,8 +1659,8 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .puce_num {
     left: -2%;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1703,7 +1696,7 @@ i {
 @media (min-width: 1024px) and (max-width: 1439px) {
   i {
     font-size: 1rem; /* Taille de la police ajustée pour desktop */
-    margin: 0 1rem 0 1rem; /* Marges ajustées pour desktop */
+    margin: 0 0.5rem 0 0.5rem; /* Marges ajustées pour desktop */
   }
 }
 @media (min-width: 1440px) {

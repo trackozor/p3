@@ -17,10 +17,7 @@ header {
   width: 100%; /* Le header prend toute la largeur disponible */
   height: auto;
 
-  /*-- large desktop --*/
-  @include large-desktop {
-    width: 100vw;
-  }
+
 }
 
 
