@@ -225,6 +225,9 @@
 
     
 }
+.card:hover {
+    box-shadow: 0px 10px 30px rgba(220, 3, 228, 0.9); /* Ombre plus prononcée au survol */
+}
 
 /* Image dans la carte restaurant */
 .card  img {
@@ -389,7 +392,9 @@
 
 }
 
-
+.card-menu:hover {
+    box-shadow: 0px 10px 30px rgba(197, 3, 110, 0.9); /* Ombre plus prononcée au survol */
+}
 
 /*-- Item du menu --*/
 .menu-item {
