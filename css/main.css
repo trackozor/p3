@@ -43,27 +43,16 @@
 /* Vert clair */
 /* Vert foncé */
 /* Police */
-/*------------------------------------------------------------------------------------------------------*/
-/* ----------------------------------------Espacements--------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Padding basé sur rem (valeur par défaut pour la plupart des éléments) */
+/* Espacements */
 /* Très petit padding */
 /* Petit padding */
 /* Padding de base */
 /* Padding moyen */
 /* Grand padding */
 /* Très grand padding */
-/* Padding extrêmement grand */
-/* Padding basé sur la largeur de la fenêtre (vw) pour des layouts fluides */
-/* Petit padding proportionnel à la largeur */
-/* Padding moyen proportionnel à la largeur */
-/* Grand padding proportionnel à la largeur */
-/* Très grand padding proportionnel à la largeur */
 /* Padding basé sur la hauteur de la fenêtre (vh) pour des éléments verticaux */
-/* Petit padding proportionnel à la hauteur */
 /* Padding moyen proportionnel à la hauteur */
 /* Grand padding proportionnel à la hauteur */
-/* Très grand padding proportionnel à la hauteur */
 /* Padding basé sur des pourcentages (proportionnel à l’élément parent) */
 /* Petit padding en % */
 /* Padding de base en % */
@@ -72,26 +61,8 @@
 /* Marges basées sur rem */
 /* Très petite marge */
 /* Petite marge */
-/* Marge de base */
-/* Marge moyenne */
-/* Grande marge */
-/* Très grande marge */
-/* Marge extrêmement grande */
-/* Marges basées sur la largeur de la fenêtre (vw) */
-/* Petite marge proportionnelle à la largeur */
-/* Marge moyenne proportionnelle à la largeur */
-/* Grande marge proportionnelle à la largeur */
-/* Très grande marge proportionnelle à la largeur */
-/* Marges basées sur la hauteur de la fenêtre (vh) */
-/* Petite marge proportionnelle à la hauteur */
-/* Marge moyenne proportionnelle à la hauteur */
-/* Grande marge proportionnelle à la hauteur */
-/* Très grande marge proportionnelle à la hauteur */
-/* Marges basées sur des pourcentages */
-/* Petite marge en % */
-/* Marge de base en % */
-/* Grande marge en % */
-/* Très grande marge en % */
+/* Marge de base 
+
 /* Gaps basés sur rem */
 /* Très petit gap */
 /* Petit gap */
@@ -110,32 +81,11 @@
 /* Gap de base en % */
 /* Grand gap en % */
 /* Très grand gap en % */
-/* --------------------------------------- Taille des police---------------------------------------------------------*/
-/* Taille de police de base correspondant à 2% de la hauteur de l'écran*/
-/* Taille de police des titres soit 3% de la hauteur de l'écran*/
-/* Taille de polices générique correspondant à 1.5% de la hauteur de l'écran*/
-/* Taille de police  2 fois inférieur soit 1% de la hauteur de l'écran*/
-/**/
-/* Taille de police 2 fois supérieur soit 4 % de la hauteur de l'écran*/
+/* Taille des police*/
 /*  Mise en évidence ( GRAS )*/
-/*------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Arrondis des bordures (border-radius) -----------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
-/* Arrondis légers */
-/* Arrondis légers */
-/* Arrondis de base */
-/* Arrondis moyens (par défaut) */
-/* Arrondis plus prononcés */
-/* Arrondis très prononcés */
-/* Arrondis complets pour des objets circulaires */
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------Ombres -----------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/* Ombres légères */
-/* Ombre légère, subtile */
-/* Ombre moyenne pour la plupart des éléments */
-/* Ombre plus large pour des objets importants */
-/*---------------------------- Taille des objets basée sur la largeur de la fenêtre (vw) ---------------*/
+/* Arrondis des bordures (border-radius) */
+/* Ombres */
+/* Taille des objets basée sur la largeur de la fenêtre (vw) */
 /* Très petit objet */
 /* Petit objet */
 /* Taille moyenne */
