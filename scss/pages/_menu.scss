@@ -167,7 +167,7 @@ main  {
     /*--large desktop*/
     @include large-desktop {
         height: 30vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
-        width: 150vw; /* Largeur à 100% pour large desktop */
+        width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
         object-fit: cover; /* Ajustement de l'image pour large desktop */
     }

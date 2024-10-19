@@ -607,6 +607,11 @@ label.card-menu:hover {
   padding: 0;
   margin: 0;
 }
+@media (min-width: 1440px) {
+  .validation-icon {
+    right: -2%; /* Centrage vertical */
+  }
+}
 
 /* Style de l'icône à l'intérieur de .validation-icon */
 .validation-icon i {
@@ -636,7 +641,7 @@ label.card-menu:hover {
 @media (min-width: 1440px) {
   .validation-icon i {
     font-size: 2rem;
-    padding: 2.2rem; /* Ajustement de la taille et du padding pour large desktop */
+    padding: 2.5rem; /* Ajustement de la taille et du padding pour large desktop */
   }
 }
 
@@ -1971,7 +1976,7 @@ main {
 @media (min-width: 1440px) {
   .menu-image-alt2 {
     height: 30vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
-    width: 150vw; /* Largeur à 100% pour large desktop */
+    width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
     object-fit: cover; /* Ajustement de l'image pour large desktop */
   }

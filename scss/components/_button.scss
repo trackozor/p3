@@ -199,6 +199,10 @@ label.card-menu:hover {
     justify-content: center; /* Centrage horizontal */
     padding: 0;
     margin: 0;
+
+    @include large-desktop{
+    right:-2%;/* Centrage vertical */
+    }
 }
 
 /* Style de l'icône à l'intérieur de .validation-icon */
@@ -226,7 +230,7 @@ label.card-menu:hover {
     /* Media queries pour large desktop */
     @include large-desktop {
         font-size: 2rem;
-        padding: 2.2rem; /* Ajustement de la taille et du padding pour large desktop */
+        padding: 2.5rem ; /* Ajustement de la taille et du padding pour large desktop */
     }
 }
 
