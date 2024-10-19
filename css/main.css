@@ -461,37 +461,11 @@ footer {
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
   background: linear-gradient(180deg, #FF79DA, #9356DC); /* Dégradé de couleur */
-  padding: 4%; /* Padding correspondant à 2% de la hauteur de l'écran */
+  padding: 1rem; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
   border-radius: 2rem; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
-  /* Tablette */
-  /* Desktop */
-  /* Large desktop*/
   /* Effet de survol */
-}
-@media (min-width: 426px) and (max-width: 1023px) {
-  .button--primary {
-    border-radius: 1rem; /* Bord arrondis à 4% de la hauteur de l'écran */
-    box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre pour tablette */
-    padding: 1rem; /* Padding ajusté pour tablette */
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .button--primary {
-    border-radius: 1rem; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre pour desktop */
-    padding: 0.5rem 2rem; /* Padding ajusté pour desktop */
-    margin-top: 2%; /* Ajout d'une marge supérieure sur desktop */
-  }
-}
-@media (min-width: 1440px) {
-  .button--primary {
-    border-radius: 2rem; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre pour large desktop */
-    padding: 1rem 2rem; /* Padding ajusté pour large desktop */
-    margin-top: 2%; /* Ajout d'une marge supérieure sur large desktop */
-  }
 }
 .button--primary:hover {
   background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /* Effet de survol avec éclaircissement du dégradé */
@@ -904,14 +878,14 @@ label.card-menu:hover {
   margin: 20% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
   height: auto;
-  max-height: 30vh;
+  max-height: 25%;
   /* Tablette */
   /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
     width: 100%;
-    max-height: 30vh;
+    max-height: 40vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -924,7 +898,7 @@ label.card-menu:hover {
 .card img {
   width: 100%;
   height: 70%;
-  max-height: 22vh;
+  max-height: 18vh;
   border-radius: 1rem 1rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -935,7 +909,7 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card img {
     width: 100%;
-    max-height: 24vh;
+    max-height: 30vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -948,6 +922,7 @@ label.card-menu:hover {
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
   font-weight: 700; /* Gras du texte correspondant à une valeur de 900 */
+  margin-bottom: 0.2rem;
   /* Desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -959,7 +934,7 @@ label.card-menu:hover {
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
   font-size: 1rem; /* Taille du texte */
-  gap: 0.5rem; /* Espace entre les éléments */
+  gap: 1rem; /* Espace entre les éléments */
   margin: 1rem; /* Marges autour du texte */
   /* tablette */
   /* Desktop */
@@ -985,7 +960,7 @@ label.card-menu:hover {
   position: absolute; /* Position absolue pour l'icône */
   z-index: 2; /* Au-dessus du contenu principal */
   left: 90%; /* Position horizontale de l'icône */
-  bottom: 15%; /* Position verticale de l'icône */
+  bottom: 10%; /* Position verticale de l'icône */
   /* Tablette */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -1476,11 +1451,22 @@ label.card-menu:hover {
   background-color: #f9f9f9;
   margin: 0 auto;
   padding: 10% 0;
+  /*Tablette*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .bandeau {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .bandeau {
+    padding: 2% 0;
+  }
 }
 
 /*  Titre */
 .bandeau h2 {
-  width: 70%;
+  width: 75%;
   font-size: 1.5rem;
   margin-top: 1rem; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   /* Desktop */
@@ -1490,7 +1476,7 @@ label.card-menu:hover {
   .bandeau h2 {
     padding: 0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
     font-size: 2rem;
-    margin-top: 2%;
+    margin: 0;
   }
 }
 @media (min-width: 1440px) {

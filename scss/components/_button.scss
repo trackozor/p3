@@ -28,37 +28,10 @@
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
   background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color); /* Dégradé de couleur */
-  padding: $padding-large-pct; /* Padding correspondant à 2% de la hauteur de l'écran */
+  padding: $padding-base; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
   box-shadow: $shadow-medium; /* Ajoute une ombre */
   border-radius: $border-radius-large; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
-
-
-
-  /* Tablette */
-  @include tablette {
-    border-radius: $border-radius-medium; /* Bord arrondis à 4% de la hauteur de l'écran */
-    box-shadow: $shadow-medium; /* Ombre pour tablette */
-    padding: $padding-base; /* Padding ajusté pour tablette */
-  }
-
-  /* Desktop */
-  @include desktop {
-    border-radius: $border-radius-medium; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $shadow-medium; /* Ombre pour desktop */
-    padding: $padding-small $padding-large; /* Padding ajusté pour desktop */
-    margin-top: 2%; /* Ajout d'une marge supérieure sur desktop */
-  }
-
-  /* Large desktop*/
-  @include large-desktop {
-    border-radius: $border-radius-large; /* Bord arrondis à 4% de la largeur de l'écran */
-    box-shadow: $shadow-medium; /* Ombre pour large desktop */
-    padding: $padding-base $padding-large; /* Padding ajusté pour large desktop */
-    margin-top: 2%; /* Ajout d'une marge supérieure sur large desktop */
-  }
-
-
 
   /* Effet de survol */
   &:hover {

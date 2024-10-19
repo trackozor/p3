@@ -212,12 +212,12 @@
     margin: 20% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
     height:auto;
-    max-height: 30vh;
+    max-height: 25%;
 
     /* Tablette */
     @include tablette {
         width: 100%;
-        max-height: 30vh;
+        max-height: 40vh;
     }
 
     /* Desktop */
@@ -233,7 +233,7 @@
 .card  img {
     width: 100%;
     height: 70%;
-    max-height:22vh;
+    max-height:18vh;
     border-radius: $border-radius-medium $border-radius-medium 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -242,7 +242,7 @@
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        max-height: 24vh;
+        max-height: 30vh;
     }
 
     /*-- Desktop --*/
@@ -256,6 +256,7 @@
 .card h3 {
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
     font-weight: $font-weight-bold; /* Gras du texte correspondant à une valeur de 900 */
+    margin-bottom: 0.2rem;
 
 
     /* Desktop */
@@ -267,8 +268,9 @@
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
     font-size: $font-size-base; /* Taille du texte */
-    gap: $gap-small; /* Espace entre les éléments */
-    margin: $margin-base; /* Marges autour du texte */
+    gap: $gap-base; /* Espace entre les éléments */
+    margin:$margin-base; /* Marges autour du texte */
+    
     
 
 
@@ -294,7 +296,7 @@
     position: absolute; /* Position absolue pour l'icône */
     z-index: 2; /* Au-dessus du contenu principal */
     left: 90%; /* Position horizontale de l'icône */
-    bottom: 15%; /* Position verticale de l'icône */
+    bottom: 10%; /* Position verticale de l'icône */
 
     /* Tablette */
     @include tablette {

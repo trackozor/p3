@@ -29,10 +29,19 @@
     background-color: #f9f9f9;
     margin: 0 auto;
     padding: 10% 0;
+
+    /*Tablette*/
+    @include tablette {
+    padding:5% 0;
+    }
+
+    @include desktop{
+        padding: 2% 0;
+    }
 }
 /*  Titre */
 .bandeau h2 {
-    width:70%;
+    width:75%;
     font-size: 1.5rem;
     margin-top: 1rem; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
 
@@ -41,7 +50,7 @@
     @include desktop {
         padding:0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
         font-size: 2rem;
-        margin-top:2%
+        margin:0;
     }
 
     /* Large desktop */
