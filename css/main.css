@@ -862,6 +862,12 @@ label.card-menu:hover {
   max-height: 25%;
   /* Tablette */
 }
+@media (max-width: 768px) and (orientation: landscape) {
+  .card {
+    width: 100%;
+    max-height: 50vw;
+  }
+}
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
     width: 100%;

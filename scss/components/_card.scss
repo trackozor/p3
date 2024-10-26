@@ -217,6 +217,11 @@
     height:auto;
     max-height: 25%;
 
+    @include mobile-landscape {
+        width: 100%;
+        max-height: 50vw;
+    }
+
     /* Tablette */
     @include tablette {
         width: 100%;
