@@ -488,7 +488,7 @@
     width: 100%;/* prend toue la largeur disponible*/
     font-size: 0.9rem;/*taille de  la police*/
     word-spacing: -0.2vh;
-    padding-left: 2%;
+    padding-left: $padding-base;
     margin-bottom: 2%;
     position: relative;
     transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
