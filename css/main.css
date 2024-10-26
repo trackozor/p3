@@ -865,8 +865,7 @@ label.card-menu:hover {
 @media (max-width: 768px) and (orientation: landscape) {
   .card {
     width: 100%;
-    max-height: 50vw;
-    height: auto;
+    max-height: 50vh;
   }
 }
 @media (min-width: 426px) and (max-width: 1023px) {
