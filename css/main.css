@@ -888,7 +888,7 @@ label.card-menu:hover {
 }
 @media (max-width: 768px) and (orientation: landscape) {
   .card img {
-    height: 20vw;
+    max-height: 20vw;
   }
 }
 @media (min-width: 426px) and (max-width: 1023px) {
