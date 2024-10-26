@@ -239,6 +239,11 @@
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
     overflow: hidden;
     
+    /**/
+    @include mobile-landscape {
+        height:20vw;
+    }
+
     /*-- tablette --*/
     @include tablette {
         width: 100%;

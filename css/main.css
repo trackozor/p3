@@ -102,6 +102,7 @@
 /* 2. Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
+/* Mixin pour gérer les écrans mobile en mode paysage */
 /* Mixin pour gérer les écrans desktop*/
 /* 3. Reset et base typographique */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -881,8 +882,14 @@ label.card-menu:hover {
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
   overflow: hidden;
+  /**/
   /*-- tablette --*/
   /*-- Desktop --*/
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .card img {
+    height: 20vw;
+  }
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card img {
