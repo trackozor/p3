@@ -347,17 +347,25 @@
     /*-- Tablette --*/
     @include tablette {
         right: 3%; /* Position droite du badge pour tablette */
-        top: 3%; /* Position haute du badge pour tablette */
+        top: 5%; /* Position haute du badge pour tablette */
     }
 
     /*-- Desktop --*/
     @include desktop {
         right: 4%; /* Position droite du badge pour desktop */
-        top: 10%; /* Position haute du badge pour desktop */
+        top: 6%; /* Position haute du badge pour desktop */
+    }
+    
+    /*-- Large desktop --*/
+    @include large-desktop {
+        right: 3%; /* Position droite du badge pour large desktop */
+        top: 6%; /* Position haute du badge pour large desktop */
     }
 }
 
+/*--------------------------------------------------------------*/
 /*------------ Affichage des différents badges ----------------*/
+/*-------------------------------------------------------------*/
 
 /* Palette Badge */
 #palette .badge {
@@ -588,7 +596,7 @@
 
     /* tablette */
     @include tablette {
-        padding: 0 5% ; /* Padding vertical pour tablette */
+        padding: 2% 5% ; /* Padding vertical pour tablette */
     }
 
     /* Desktop */
@@ -630,7 +638,7 @@
 
     /* tablette */
     @include tablette {
-        
+        margin-left: 0;
         font-size: $font-size-middle; /* Taille de l'icône pour tablette */
     }
     
@@ -661,7 +669,7 @@
 
     /* tablette */
     @include tablette {
-        margin-top: $margin-xsmall; /* Marge supérieur pour tablette */
+        margin:0; /* Marge supérieur pour tablette */
     }
     
     /* Desktop */
@@ -688,7 +696,7 @@
     @include desktop {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: flex-end;
-    gap: $gap-base-pct; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    gap: $gap-base; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
@@ -719,9 +727,9 @@
 
     /* tablette */
     @include tablette {
-        width: 20%; /* L'image occupe 30% de la largeur  */
-        margin: $margin-small 0; /* Marge verticale pour tablette */
-        padding-bottom: $padding-base; /* Padding inférieur pour tablette */
+        width: 25%; /* L'image occupe 30% de la largeur  */
+        margin:0; /* Marge verticale pour tablette */
+        padding-top: $padding-base; /* Padding inférieur pour tablette */
     }
     
     /* Desktop */

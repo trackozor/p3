@@ -992,21 +992,30 @@ label.card-menu:hover {
   top: 5%; /* Position haute du badge */
   /*-- Tablette --*/
   /*-- Desktop --*/
+  /*-- Large desktop --*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .badge {
     right: 3%; /* Position droite du badge pour tablette */
-    top: 3%; /* Position haute du badge pour tablette */
+    top: 5%; /* Position haute du badge pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .badge {
     right: 4%; /* Position droite du badge pour desktop */
-    top: 10%; /* Position haute du badge pour desktop */
+    top: 6%; /* Position haute du badge pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .card .badge {
+    right: 3%; /* Position droite du badge pour large desktop */
+    top: 6%; /* Position haute du badge pour large desktop */
   }
 }
 
+/*--------------------------------------------------------------*/
 /*------------ Affichage des différents badges ----------------*/
+/*-------------------------------------------------------------*/
 /* Palette Badge */
 #palette .badge {
   display: flex; /* Affiche le badge palette */
@@ -1255,7 +1264,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card {
-    padding: 0 5%; /* Padding vertical pour tablette */
+    padding: 2% 5%; /* Padding vertical pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1300,6 +1309,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .fa-handshake, .fa-utensils {
+    margin-left: 0;
     font-size: 0.7rem; /* Taille de l'icône pour tablette */
   }
 }
@@ -1332,7 +1342,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card li {
-    margin-top: 0.25rem; /* Marge supérieur pour tablette */
+    margin: 0; /* Marge supérieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1361,7 +1371,7 @@ label.card-menu:hover {
   .footer-card ul {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: flex-end;
-    gap: 2%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    gap: 1rem; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
@@ -1395,9 +1405,9 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card img {
-    width: 20%; /* L'image occupe 30% de la largeur  */
-    margin: 0.5rem 0; /* Marge verticale pour tablette */
-    padding-bottom: 1rem; /* Padding inférieur pour tablette */
+    width: 25%; /* L'image occupe 30% de la largeur  */
+    margin: 0; /* Marge verticale pour tablette */
+    padding-top: 1rem; /* Padding inférieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
