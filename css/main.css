@@ -1276,7 +1276,7 @@ label.card-menu:hover {
     height: auto;
     font-size: 0.7rem;
     margin-top: 1rem;
-    margin-bottom: 1%;
+    margin-bottom: 0;
     justify-content: flex-start;
     margin-left: 30%;
     padding-right: 0;
@@ -1342,7 +1342,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card li {
-    margin: 0; /* Marge supérieur pour tablette */
+    margin-top: 2%; /* Marge supérieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1366,6 +1366,13 @@ label.card-menu:hover {
 /*-- listes --*/
 .footer-card ul {
   /*-- large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .footer-card ul {
+    margin: 2% 0;
+    padding: 2% 0; /* Pas de marge supérieur pour tablette */
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card ul {
@@ -1391,6 +1398,13 @@ label.card-menu:hover {
   }
 }
 
+@media (min-width: 426px) and (max-width: 1023px) {
+  .footer-card li a {
+    padding: 2% 0;
+    margin: 1% 0;
+  }
+}
+
 /*-- logo dans le footer --*/
 .footer-card img {
   display: block;
@@ -1412,8 +1426,8 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card img {
-    width: 10%; /* L'image occupe 30% de la largeur  */
-    margin: 0 5%; /* Marge verticale pour desktop */
+    width: 15%; /* L'image occupe 30% de la largeur  */
+    margin: 0 7%; /* Marge verticale pour desktop */
     padding-top: 1rem; /* Padding inférieur pour desktop */
   }
 }
