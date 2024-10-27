@@ -193,10 +193,21 @@ main  {
 
     /*-- Large Desktop --*/
     @include large-desktop {
-        gap:2%
+        justify-content: center;
+        gap:5%
     }
 }
-
+.menu .title h2 {
+    @include tablette {
+        font-size: 1.6rem;
+    }
+    @include desktop {
+        font-size:1.8rem;
+    }
+    @include large-desktop {
+        font-size:1.7rem;
+    }
+}
 
 /*------------------------------------------------------------------------------------------*/
 /*-- Ajustement titre a la francaise --*/
@@ -254,22 +265,20 @@ main  {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
-    gap: 33%; /* Padding à gauche du titre */
-    justify-content: center; /* Espacement entre les éléments */
-    
-    /*-- tablette --*/
-    @include tablette {
-        gap: 6%; /* Padding à gauche du titre */
-    }
+    margin: 0 2%;
+    padding-bottom: 5%;
+    justify-content: space-between;
     
     /*-- desktop --*/
     @include desktop {
-        gap: 5%; /* Padding à gauche du titre */
+        gap: 5%;
+        justify-content: center;
     }
 
     /*--large desktop --*/
     @include large-desktop {
-        gap: 5%; /* Padding à gauche du titre */
+        justify-content: center;
+        gap: 5%;
     }
 }
 /*--------------------------------------------------------------------------------------------------------*/
