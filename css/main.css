@@ -1261,7 +1261,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card {
-    padding: 1rem; /* Padding vertical pour tablette */
+    padding: 0 5%; /* Padding vertical pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1340,7 +1340,7 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card li {
-    margin-top: 1rem; /* Marge supérieur pour tablette */
+    margin-top: 0.25rem; /* Marge supérieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1364,6 +1364,11 @@ label.card-menu:hover {
 /*-- listes --*/
 .footer-card ul {
   /*-- large desktop --*/
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .footer-card ul {
+    gap: 2%;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card ul {
@@ -1403,9 +1408,9 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .footer-card img {
-    width: 30%; /* L'image occupe 30% de la largeur  */
+    width: 20%; /* L'image occupe 30% de la largeur  */
     margin: 0.5rem 0; /* Marge verticale pour tablette */
-    padding-bottom: 1rem; /* Padding inférieur pour tablette */
+    padding-bottom: 0.5rem; /* Padding inférieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2016,6 +2021,11 @@ main {
   /*Desktop */
   /*-- Large Desktop --*/
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  .menu .title {
+    gap: 6%;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu .title {
     gap: 5%;
@@ -2041,7 +2051,7 @@ main {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu .title1 {
-    gap: 67%; /* Padding à gauche du titre */
+    gap: 6%; /* Padding à gauche du titre */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2069,7 +2079,7 @@ main {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu .title2 {
-    gap: 60%; /* Padding à gauche du titre */
+    gap: 6%; /* Padding à gauche du titre */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2097,7 +2107,7 @@ main {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu .title3 {
-    gap: 60%; /* Padding à gauche du titre */
+    gap: 6%; /* Padding à gauche du titre */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {

@@ -593,7 +593,7 @@
 
     /* tablette */
     @include tablette {
-        padding: $padding-base ; /* Padding vertical pour tablette */
+        padding: 0 5% ; /* Padding vertical pour tablette */
     }
 
     /* Desktop */
@@ -667,7 +667,7 @@
 
     /* tablette */
     @include tablette {
-        margin-top: $margin-base; /* Marge supérieur pour tablette */
+        margin-top: $margin-xsmall; /* Marge supérieur pour tablette */
     }
     
     /* Desktop */
@@ -690,6 +690,10 @@
 }
 /*-- listes --*/
 .footer-card ul {
+
+    @include tablette {
+        gap:2%
+    }
     @include desktop {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: flex-end;
@@ -724,9 +728,9 @@
 
     /* tablette */
     @include tablette {
-        width: 30%; /* L'image occupe 30% de la largeur  */
+        width: 20%; /* L'image occupe 30% de la largeur  */
         margin: $margin-small 0; /* Marge verticale pour tablette */
-        padding-bottom: $padding-base; /* Padding inférieur pour tablette */
+        padding-bottom: $padding-small; /* Padding inférieur pour tablette */
     }
     
     /* Desktop */

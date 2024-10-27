@@ -185,7 +185,9 @@ main  {
     gap:2%;
     justify-content:center; /* Espacement entre les éléments */
     
-
+    @include tablette{
+        gap:6%
+    }
     /*Desktop */
     @include desktop {
         gap:5%;
@@ -209,7 +211,7 @@ main  {
 
     /*-- tablette --*/
     @include tablette {
-        gap: 67%; /* Padding à gauche du titre */
+        gap: 6%; /* Padding à gauche du titre */
     }
     
     /*-- desktop --*/
@@ -235,7 +237,7 @@ main  {
     
     /*-- tablette --*/
     @include tablette {
-        gap: 60%; /* Padding à gauche du titre */
+        gap: 6%; /* Padding à gauche du titre */
     }
     
     /*-- desktop --*/
@@ -261,7 +263,7 @@ main  {
     
     /*-- tablette --*/
     @include tablette {
-        gap: 60%; /* Padding à gauche du titre */
+        gap: 6%; /* Padding à gauche du titre */
     }
     
     /*-- desktop --*/
