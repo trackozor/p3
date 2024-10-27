@@ -217,15 +217,10 @@
     height:auto;
     max-height: 25%;
 
-    @include mobile-landscape {
-        width: 100%;
-        max-height: 50vh;
-    }
-
     /* Tablette */
     @include tablette {
         width: 100%;
-        max-height: 40vh;
+        max-height: 50vh;
     }
 
     
@@ -252,7 +247,7 @@
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        max-height: 30vh;
+        max-height: 35vh;
     }
 
     /*-- Desktop --*/
@@ -282,9 +277,9 @@
 
     /* tablette */
     @include tablette {
-        font-size: $font-size-base; /* Ajuste la taille du texte pour tablette */
+        font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
         gap: $gap-base; /* Espace pour tablette */
-        margin: $margin-base; /* Marges pour tablette */
+        margin-top: $margin-base; /* Marges pour tablette */
     }
 
     /* Desktop */   
@@ -300,12 +295,12 @@
     position: absolute; /* Position absolue pour l'icône */
     z-index: 2; /* Au-dessus du contenu principal */
     left: 90%; /* Position horizontale de l'icône */
-    bottom: 10%; /* Position verticale de l'icône */
+    bottom:15%; /* Position verticale de l'icône */
 
     /* Tablette */
     @include tablette {
         left: 90%; /* Position horizontale de l'icône pour tablette */
-        bottom: 8%; /* Position verticale de l'icône pour tablette */
+        bottom: 15%; /* Position verticale de l'icône pour tablette */
     }
     
     /* Desktop */
@@ -635,8 +630,7 @@
 
     /* tablette */
     @include tablette {
-        margin-right: $margin-base; /* Padding horizontal pour tablette */
-        margin-left: 0; /* Pas d'espace à gauche */
+        
         font-size: $font-size-middle; /* Taille de l'icône pour tablette */
     }
     
@@ -691,9 +685,6 @@
 /*-- listes --*/
 .footer-card ul {
 
-    @include tablette {
-        gap:2%
-    }
     @include desktop {
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: flex-end;
@@ -730,7 +721,7 @@
     @include tablette {
         width: 20%; /* L'image occupe 30% de la largeur  */
         margin: $margin-small 0; /* Marge verticale pour tablette */
-        padding-bottom: $padding-small; /* Padding inférieur pour tablette */
+        padding-bottom: $padding-base; /* Padding inférieur pour tablette */
     }
     
     /* Desktop */

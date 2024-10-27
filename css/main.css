@@ -297,7 +297,7 @@ footer {
   width: 100vw;
   height: 100vh; /* Assure que le loader couvre toute la hauteur de l'écran */
   background: black;
-  display: flex; /* Utiliser flexbox pour centrer les éléments */
+  display: none; /* Utiliser flexbox pour centrer les éléments */
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Centre verticalement */
@@ -862,16 +862,10 @@ label.card-menu:hover {
   max-height: 25%;
   /* Tablette */
 }
-@media (max-width: 768px) and (orientation: landscape) {
-  .card {
-    width: 100%;
-    max-height: 50vh;
-  }
-}
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
     width: 100%;
-    max-height: 40vh;
+    max-height: 50vh;
   }
 }
 
@@ -900,7 +894,7 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card img {
     width: 100%;
-    max-height: 30vh;
+    max-height: 35vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -926,9 +920,9 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .card-title {
-    font-size: 1rem; /* Ajuste la taille du texte pour tablette */
+    font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
     gap: 1rem; /* Espace pour tablette */
-    margin: 1rem; /* Marges pour tablette */
+    margin-top: 1rem; /* Marges pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -944,14 +938,14 @@ label.card-menu:hover {
   position: absolute; /* Position absolue pour l'icône */
   z-index: 2; /* Au-dessus du contenu principal */
   left: 90%; /* Position horizontale de l'icône */
-  bottom: 10%; /* Position verticale de l'icône */
+  bottom: 15%; /* Position verticale de l'icône */
   /* Tablette */
   /* Desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .icon-favorite {
     left: 90%; /* Position horizontale de l'icône pour tablette */
-    bottom: 8%; /* Position verticale de l'icône pour tablette */
+    bottom: 15%; /* Position verticale de l'icône pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1306,8 +1300,6 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .fa-handshake, .fa-utensils {
-    margin-right: 1rem; /* Padding horizontal pour tablette */
-    margin-left: 0; /* Pas d'espace à gauche */
     font-size: 0.7rem; /* Taille de l'icône pour tablette */
   }
 }
@@ -1365,11 +1357,6 @@ label.card-menu:hover {
 .footer-card ul {
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
-  .footer-card ul {
-    gap: 2%;
-  }
-}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card ul {
     display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -1410,7 +1397,7 @@ label.card-menu:hover {
   .footer-card img {
     width: 20%; /* L'image occupe 30% de la largeur  */
     margin: 0.5rem 0; /* Marge verticale pour tablette */
-    padding-bottom: 0.5rem; /* Padding inférieur pour tablette */
+    padding-bottom: 1rem; /* Padding inférieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
