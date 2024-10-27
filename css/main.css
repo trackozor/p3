@@ -1148,7 +1148,7 @@ label.card-menu:hover {
   font-size: 0.9rem; /*taille de  la police*/
   word-spacing: -0.2vh;
   padding-left: 1rem;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   position: relative;
   transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
   /* tablette */
@@ -2016,18 +2016,14 @@ main {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
   font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
-  gap: 2%;
-  justify-content: center; /* Espacement entre les éléments */
+  margin: 0 2%;
+  justify-content: space-between; /* Espacement entre les éléments */
   /*Desktop */
   /*-- Large Desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
-  .menu .title {
-    gap: 6%;
-  }
-}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu .title {
+    justify-content: center;
     gap: 5%;
   }
 }

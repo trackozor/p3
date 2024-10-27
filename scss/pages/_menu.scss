@@ -182,14 +182,12 @@ main  {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
-    gap:2%;
-    justify-content:center; /* Espacement entre les éléments */
+    margin:0 2%;
+    justify-content:space-between; /* Espacement entre les éléments */
     
-    @include tablette{
-        gap:6%
-    }
     /*Desktop */
     @include desktop {
+        justify-content: center;
         gap:5%;
     }
 
@@ -248,6 +246,7 @@ main  {
     /*--large desktop --*/
     @include large-desktop {
         gap: 5%; /* Padding à gauche du titre */
+    
     }
 }
 
