@@ -650,25 +650,27 @@ label.card-menu:hover {
 /* Auteur              : Trackozor                                                                        */
 /* Date de création    : 25/09/24                                                                         */
 /* Dernière modification: 27/09/24                                                                        */
-/* Description         : Style pour de bases réutilisables pour les boutons                              */
+/* Description         : Style pour de bases réutilisables pour les cartes                               */
 /*                                                                                                       */
-/*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Version             : 1.0                                                                               */
 /* Framework utilisé   : SCSS                                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
 /* Révisions :                                                                                             */
-/* - [Date] : [Modifications apportées]                                                                    */
+/* - 27 octobre 2024: révision et commentaires                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-/* Carte Logo */
+/*-------------------------------------------------------------------------------*/
+/*--------------------------- Carte Logo --------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/** Conteneur parent */
 .card-logo {
-  width: 100%;
-  height: auto;
+  width: 100%; /* prend toute la largeur disponible*/
+  height: auto; /* Hauteur ajusté au contenu */
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Centre le contenu verticalement */
-  background-color: white;
+  background-color: white; /*Couleur de fond blanche */
   margin: 1rem 0; /* Définit les marges verticales de la carte */
-  justify-content: center;
+  justify-content: center; /* centre les éléments horizontalement */
 }
 
 .card-logo img {
@@ -686,7 +688,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo img {
-    width: 20%;
+    width: 25%;
   }
 }
 @media (min-width: 1440px) {
@@ -695,7 +697,9 @@ label.card-menu:hover {
   }
 }
 
-/*  Carte Logo alt */
+/*-------------------------------------------------------------------------*/
+/*-----------------------  Carte Logo alt ---------------------------------*/
+/*-------------------------------------------------------------------------*/
 /* Conteneur principal de la carte avec alternative et flèche retour */
 .card-logo-alt {
   display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -760,7 +764,9 @@ label.card-menu:hover {
   cursor: pointer;
 }
 
-/* Carte localisation avec icône et ville */
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------  Carte localisation avec icône et ville -------------------*/
+/*---------------------------------------------------------------------------------------*/
 /* Conteneur de la carte localisation */
 .card-location {
   width: 100%; /* La carte prend toute la largeur du parent */
