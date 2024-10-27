@@ -232,7 +232,17 @@ main  {
     }
 }
 
-
+.title1 h2 {
+    @include tablette {
+        font-size: 1.6rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+    @include large-desktop {
+        font-size: 1.7rem;
+    }
+}
 /*-------------------------------------------------------------------------------------------*/
 /* Titre la palette du gout ajustement personnalisé*/
 .menu .title2 {
@@ -257,7 +267,17 @@ main  {
     
     }
 }
-
+.title2 h2 {
+    @include tablette {
+        font-size: 1.6rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+    @include large-desktop {
+        font-size: 1.7rem;
+    }
+}
 
 /*---------------------------------------------------------------------------------------------------*/
 /*-- Ajustement titre le delices des sens*/
@@ -281,9 +301,18 @@ main  {
         gap: 5%;
     }
 }
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Sous-titres H3 dans le menu ------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+
+.title3 h2 {
+    @include tablette {
+        font-size: 1.6rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+    @include large-desktop {
+        font-size: 1.7rem;
+    }
+}
 
 /* Style des sous-titres h3 dans le menu */
 .menu h3 {
@@ -293,9 +322,9 @@ main  {
     padding-bottom: 1vh; /* Padding en bas du sous-titre */
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
+
 /*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+
 
 /* Style du conteneur pour les boutons principaux */
 .menu .button--primary {

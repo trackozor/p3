@@ -2075,6 +2075,22 @@ main {
   }
 }
 
+@media (min-width: 426px) and (max-width: 1023px) {
+  .title1 h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .title1 h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .title1 h2 {
+    font-size: 1.7rem;
+  }
+}
+
 /*-------------------------------------------------------------------------------------------*/
 /* Titre la palette du gout ajustement personnalisé*/
 .menu .title2 {
@@ -2097,6 +2113,22 @@ main {
   .menu .title2 {
     gap: 5%;
     justify-content: center;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 1023px) {
+  .title2 h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .title2 h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .title2 h2 {
+    font-size: 1.7rem;
   }
 }
 
@@ -2125,9 +2157,22 @@ main {
   }
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Sous-titres H3 dans le menu ------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+@media (min-width: 426px) and (max-width: 1023px) {
+  .title3 h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .title3 h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .title3 h2 {
+    font-size: 1.7rem;
+  }
+}
+
 /* Style des sous-titres h3 dans le menu */
 .menu h3 {
   margin: 3% 0 2% 2%; /* Marges autour du sous-titre */
@@ -2136,9 +2181,7 @@ main {
   padding-bottom: 1vh; /* Padding en bas du sous-titre */
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
 /* Style du conteneur pour les boutons principaux */
 .menu .button--primary {
   display: flex; /* Utilise flexbox pour aligner les boutons */
