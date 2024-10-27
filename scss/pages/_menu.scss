@@ -204,22 +204,20 @@ main  {
     display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
     font-family: $font-title; /* Police de caractère du titre */
     font-size: $font-size-title; /* Taille de la police adaptée à la hauteur de l'écran */
-    gap: 45%; /* Padding à gauche du titre */
-    justify-content: center; /* Espacement entre les éléments */
+    margin:0 2%; /* Padding à gauche du titre */
+    justify-content: space-between; /* Espacement entre les éléments */
+    padding-bottom: 5%;
 
-    /*-- tablette --*/
-    @include tablette {
-        gap: 6%; /* Padding à gauche du titre */
-    }
-    
     /*-- desktop --*/
     @include desktop {
-        gap: 5%; /* Padding à gauche du titre */
+        gap: 5%;
+        justify-content: center;
     }
     
     /*--large desktop --*/
     @include large-desktop {
         gap: 5%; /* Padding à gauche du titre */
+        justify-content: center;
     }
 }
 
