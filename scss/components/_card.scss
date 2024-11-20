@@ -59,7 +59,7 @@
     align-items: center;/* Aligne les éléments verticalement */
     justify-content: center;/* Centre les éléments horizontalement */
     position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
-    padding: 2% 0;
+    padding: 2% 0;/* espace intérieur haut et bas de 2%*/
 
     /* Desktop */   
     @include desktop {
@@ -72,11 +72,11 @@
     width:40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
 
     @include desktop {
-    width:20%
+    width:20%/* ajustement largeur pour desktop */
     }
     /* large desktop */
     @include large-desktop {
-        width:15%
+        width:15% /* Ajustement largeur pour écran large*/
     }
 }
 
@@ -224,7 +224,7 @@
 }
 
 .card:hover {
-    box-shadow: 0px 10px 30px rgba(220, 3, 228, 0.9); /* Ombre plus prononcée au survol */
+    box-shadow: 0px 10px 30px #9356dc; /* Ombre plus prononcée au survol */
 }
 
 /* Image dans la carte restaurant */
@@ -400,7 +400,7 @@
 }
 
 .card-menu:hover {
-    box-shadow: 0px 10px 30px rgba(197, 3, 110, 0.9); /* Ombre plus prononcée au survol */
+    box-shadow: 0px 10px 30px #FF79DA; /* Ombre plus prononcée au survol */
 }
 
 /*-- Item du menu --*/
@@ -455,9 +455,10 @@
 }
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
+    display: block;
     font-size: 0.9rem; /* Taille du texte pour le nom du plat */
     font-weight: $font-weight-bold; /* Style gras pour le nom du plat */
-    padding: $padding-base; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+    padding: 2% 4%; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
 
     /* tablette */
     @include tablette {
@@ -474,7 +475,7 @@
     /*-- Large desktop --*/
     @include large-desktop {
         font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
-        padding: 2% ; /* Padding horizontal pour large desktop */
+        padding: 2 ; /* Padding horizontal pour large desktop */
     }
 
 
@@ -485,7 +486,7 @@
     width: 100%;/* prend toue la largeur disponible*/
     font-size: 0.9rem;/*taille de  la police*/
     word-spacing: -0.2vh;
-    padding-left: $padding-base;
+    padding-left:  $padding-base;
     margin-bottom: 3%;
     position: relative;
     transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;

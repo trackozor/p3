@@ -707,7 +707,7 @@ label.card-menu:hover {
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
   position: relative; /* Permet de positionner des éléments enfants relativement au conteneur */
-  padding: 2% 0;
+  padding: 2% 0; /* espace intérieur haut et bas de 2%*/
   /* Desktop */
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -877,7 +877,7 @@ label.card-menu:hover {
 }
 
 .card:hover {
-  box-shadow: 0px 10px 30px rgba(220, 3, 228, 0.9); /* Ombre plus prononcée au survol */
+  box-shadow: 0px 10px 30px #9356dc; /* Ombre plus prononcée au survol */
 }
 
 /* Image dans la carte restaurant */
@@ -1060,7 +1060,7 @@ label.card-menu:hover {
 }
 
 .card-menu:hover {
-  box-shadow: 0px 10px 30px rgba(197, 3, 110, 0.9); /* Ombre plus prononcée au survol */
+  box-shadow: 0px 10px 30px #FF79DA; /* Ombre plus prononcée au survol */
 }
 
 /*-- Item du menu --*/
@@ -1126,9 +1126,10 @@ label.card-menu:hover {
 
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
+  display: block;
   font-size: 0.9rem; /* Taille du texte pour le nom du plat */
   font-weight: 700; /* Style gras pour le nom du plat */
-  padding: 1rem; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+  padding: 2% 4%; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
   /* tablette */
   /* Desktop */
   /*-- Large desktop --*/
@@ -1148,7 +1149,7 @@ label.card-menu:hover {
 @media (min-width: 1440px) {
   .dish-name {
     font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
-    padding: 2%; /* Padding horizontal pour large desktop */
+    padding: 2; /* Padding horizontal pour large desktop */
   }
 }
 
@@ -1577,7 +1578,7 @@ label.card-menu:hover {
 @media (min-width: 1440px) {
   .fonctionnement h2 {
     font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 3% 4%;
+    margin: 3% 0;
   }
 }
 
