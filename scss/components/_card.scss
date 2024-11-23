@@ -458,7 +458,7 @@
     display: block;
     font-size: 0.9rem; /* Taille du texte pour le nom du plat */
     font-weight: $font-weight-bold; /* Style gras pour le nom du plat */
-    padding: 2% 4%; /* Espace intérieur correspondant à 1% de la hauteur de l'écran  */
+    padding: 3% 5%; 
 
     /* tablette */
     @include tablette {
