@@ -2267,7 +2267,7 @@ main {
     transform: scale(1.2); /* L'élément grandit légèrement à la fin */
   }
 }
-/*----------------------------- Animation disparition d'un loader après 3 secondes -----------------------*/
+/*----------------------------- Animation disparition du loader  -----------------------*/
 @keyframes fadeOutLoader {
   0% {
     opacity: 1; /* Loader visible au début */
@@ -2281,23 +2281,14 @@ main {
   }
 }
 /*------------------------------------------ Animations et Keyframes -------------------------------------*/
-/* Rotation du logo */
-@keyframes logoSpin {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-}
-/* Rotation de l'horloge */
+/* Rotation du sablier */
 @keyframes rotateClock {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  } /* Rotation complète de l'horloge */
+  } /* Rotation complète du sablier*/
 }
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------- Animation barre de progression ------------------------------------*/
