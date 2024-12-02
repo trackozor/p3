@@ -537,7 +537,7 @@ footer {
 
 /* État après le clic */
 .icon-favorite:after .fa-full {
-  color: "Roboto", sans-serif; /* Change la couleur de l'icône pleine */
+  color: #9356DC; /* Change la couleur de l'icône pleine */
   display: flex; /* Affiche l'icône pleine */
 }
 .icon-favorite:after .fa-empty {
@@ -1523,7 +1523,7 @@ label.card-menu:hover {
 .bandeau p {
   width: 80%;
   padding: 1rem 0; /* Padding haut/bas et gauche/droite */
-  margin-bottom: 2% 0; /* Marge en bas du paragraphe */
+  margin-bottom: 2%;
 }
 
 /* Conteneur parent liste  */
@@ -2263,7 +2263,7 @@ main {
     transform: scale(1.1); /* Taille légèrement plus grande */
   }
   100% {
-    color: "Roboto", sans-serif; /* Couleur finale */
+    color: #9356DC; /* Couleur finale */
     transform: scale(1.2); /* L'élément grandit légèrement à la fin */
   }
 }

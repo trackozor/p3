@@ -49,7 +49,7 @@
         transform: scale(1.1); /* Taille légèrement plus grande */
     }
     100% {
-        color: $font-primary; /* Couleur finale */
+        color: $button--search-primary-color; /* Couleur finale */
         transform: scale(1.2); /* L'élément grandit légèrement à la fin */
     }
 }
