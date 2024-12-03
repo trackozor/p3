@@ -4,9 +4,9 @@
 
 Ohmyfood est un site web mobile-first conçu pour permettre aux utilisateurs de découvrir et de réserver des menus dans une sélection de restaurants de qualité. Ce projet se distingue par :
 
-Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
-Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
-Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
+    - Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
+    - Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
+    - Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
 
 ## Fonctionnalités principales
 
@@ -14,25 +14,39 @@ Voici les fonctionnalités principales offertes par Ohmyfood :
 
 Page d'accueil :
 
-Présentation des restaurants sous forme de cartes interactives.
-Bandeau principal contenant un appel à l’action.
-Section explicative décrivant le fonctionnement du service.
+    - Présentation des restaurants sous forme de cartes interactives.
+    - Bandeau principal contenant un appel à l’action.
+    - Section explicative décrivant le fonctionnement du service.
+
 Pages spécifiques aux restaurants :
 
-Présentation du restaurant (image, description, emplacement).
-Liste des menus avec descriptions et prix.
-Boutons pour réserver directement un menu.
+    - Présentation du restaurant (image, description, emplacement).
+    - Liste des menus avec descriptions et prix.
+    - Boutons pour réserver directement un menu.
+
 Animations CSS :
 
-Chargement interactif avec effets visuels.
-Transitions fluides pour améliorer l'expérience utilisateur.
+    - Chargement interactif avec effets visuels.
+    - Transitions fluides pour améliorer l'expérience utilisateur.
+
 Accessibilité :
 
 Balises ARIA pour les lecteurs d'écran.
 
 ## Prérequis
 
+Pour configurer et exécuter ce projet localement, assurez-vous que les éléments suivants sont installés :
+
+    - Node.js (version 14 ou supérieure)  : Nécessaire pour exécuter des scripts et compiler Sass.
+    - npm (ou yarn)  : Gestionnaire de paquets pour installer les dépendances. npm est inclus avec Node.js.
+    - Sass  : Préprocesseur CSS utilisé pour organiser et optimiser les styles. 
+    - Navigateur moderne : Un navigateur comme Chrome ou Firefox pour tester le rendu du site.
+
 ## Technologie utilisées
+
+    - HTML5 : Structuration des pages web.
+    - CSS3 / SCSS : Styles et animations avancées avec un préprocesseur Sass.
+    - Node.js et npm : Gestion des dépendances et compilation des fichiers SCSS en CSS.
 
 ## Installation
 

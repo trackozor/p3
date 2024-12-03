@@ -251,7 +251,8 @@ img {
 header {
   display: block; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Le header prend toute la largeur disponible */
-  max-height: 113px;
+  max-height: auto;
+  background-color: #FFFFFF;
 }
 
 /*-------------------------------------------------------------------------------------------------------- */
