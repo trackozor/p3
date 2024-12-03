@@ -50,11 +50,42 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
 
 ## Installation
 
+1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>.
+
+    - Téléchargez la version LTS recommandée.
+    - Installez Node.js en suivant les instructions pour votre système d'exploitation.
+    - Vérifiez l'installation :
+        node -v
+        npm -v
+
+2.Initialisez votre projet Node.js :
+    - Ouvrez un terminal ou une invite de commandes,
+    - accédez au dossier de votre projet,
+    - exécutez : npm init -y
+Cela crée un fichier package.json qui contient les informations de base sur votre projet.
+
+3.Ajoutez Sass comme dépendance de développement :
+    - Installez Sass localement dans le projet : npm install sass --save-dev
+Cette commande ajoute Sass à la section devDependencies de votre fichier package.json.
+
+4.Ajoutez un script pour compiler Sass :
+Dans votre fichier package.json:
+    - ajoutez une section scripts (ou modifiez-la si elle existe déjà) pour inclure Sass :
+
+            "scripts": {
+                "sass": "sass --watch scss:css"
+            }
+Cela configure un script qui surveille les fichiers SCSS dans le dossier scss et les compile en CSS dans le dossier css.
+
+5.Compilez les fichiers SCSS :
+Pour compiler et suivre les évolutions en temps réel : npm run sass
+
 ## Structure des fichiers
 
 Le projet est organisé de manière modulaire pour faciliter la maintenance et l'évolution :
 
 ```sh
+
 ohmyfood/
 ├── .vscode/                # Configuration pour Visual Studio Code (facultatif)
 │
