@@ -105,11 +105,7 @@
 
 }
 
-/* Animation au survol du bouton favori */
-.icon-favorite .fa-empty:hover {
-  animation: heartBeat 0.3s ease-in-out 3; /* Animation de battement de coeur */
-  color: $button--search-secondary-color; /* Changement de couleur au survol */
-}
+
 
 /* Action lors du clic (actif) */
 .icon-favorite:active {

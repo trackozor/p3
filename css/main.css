@@ -519,12 +519,6 @@ footer {
   }
 }
 
-/* Animation au survol du bouton favori */
-.icon-favorite .fa-empty:hover {
-  animation: heartBeat 0.3s ease-in-out 3; /* Animation de battement de coeur */
-  color: #FF79DA; /* Changement de couleur au survol */
-}
-
 /* Action lors du clic (actif) */
 .icon-favorite:active .fa-full {
   display: flex; /* Affiche l'icône pleine */
