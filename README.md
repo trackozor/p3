@@ -4,32 +4,36 @@
 
 Ohmyfood est un site web mobile-first conçu pour permettre aux utilisateurs de découvrir et de réserver des menus dans une sélection de restaurants de qualité. Ce projet se distingue par :
 
-    - **Accessibilité** : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
+    - Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
+
     - Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
+
     - Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
 
 ## Fonctionnalités principales
 
 Voici les fonctionnalités principales offertes par Ohmyfood :
 
-Page d'accueil :
+### Page d'accueil
 
     - Présentation des restaurants sous forme de cartes interactives.
+
     - Bandeau principal contenant un appel à l’action.
+
     - Section explicative décrivant le fonctionnement du service.
 
-Pages spécifiques aux restaurants :
+### Pages spécifiques aux restaurants
 
     - Présentation du restaurant (image, description, emplacement).
     - Liste des menus avec descriptions et prix.
     - Boutons pour réserver directement un menu.
 
-Animations CSS :
+### Animations CSS
 
     - Chargement interactif avec effets visuels.
     - Transitions fluides pour améliorer l'expérience utilisateur.
 
-Accessibilité :
+### Accessibilité
 
 Balises ARIA pour les lecteurs d'écran.
 
@@ -50,7 +54,7 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
 
 ## Installation
 
-1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>.
+### 1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>
 
     - Téléchargez la version LTS recommandée.
     - Installez Node.js en suivant les instructions pour votre système d'exploitation.
@@ -58,7 +62,7 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
         node -v
         npm -v
 
-2.Initialisez votre projet Node.js :
+### 2.Initialisez votre projet Node.js
 
     - Ouvrez un terminal ou une invite de commandes,
     - accédez au dossier de votre projet,
