@@ -59,17 +59,21 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
         npm -v
 
 2.Initialisez votre projet Node.js :
+
     - Ouvrez un terminal ou une invite de commandes,
     - accédez au dossier de votre projet,
     - exécutez : npm init -y
 Cela crée un fichier package.json qui contient les informations de base sur votre projet.
 
 3.Ajoutez Sass comme dépendance de développement :
+
     - Installez Sass localement dans le projet : npm install sass --save-dev
+
 Cette commande ajoute Sass à la section devDependencies de votre fichier package.json.
 
 4.Ajoutez un script pour compiler Sass :
-Dans votre fichier package.json:
+
+    Dans votre fichier package.json:
     - ajoutez une section scripts (ou modifiez-la si elle existe déjà) pour inclure Sass :
 
             "scripts": {
