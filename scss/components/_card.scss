@@ -117,6 +117,7 @@
 /* Conteneur de la carte localisation */
 .card-location {
     width: 100%; /* La carte prend toute la largeur du parent */
+    max-height:50px;
     display: flex; /* Utilise flexbox pour aligner les éléments */
     justify-content: center; /* Centre horizontalement */
     margin: 0 auto;
@@ -125,8 +126,7 @@
     background-color:#EAEAEA; /* Couleur de fond */
     box-shadow: 0px 4px 4px 0px #00000040;
     padding: $padding-base 0 ; /* Espace intérieur de la carte */
-    border-top: $font-size-d4 solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
-    border-bottom: $font-size-d4 solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
+    
     
     /* Tablette */
     @include tablette {
@@ -166,7 +166,7 @@
 /* Icône localisation dans la carte localisation */
 .card-location i {
     font-size: $font-size-base;/* Taille de l'icône en fonction de la hauteur de l'écran */
-    color: black;/* Couleur de l'icône */
+    color:#353535;/* Couleur de l'icône */
 
     /* Tablette */
     @include tablette {
@@ -224,7 +224,7 @@
 }
 
 .card:hover {
-    box-shadow: 0px 10px 30px #9356dc; /* Ombre plus prononcée au survol */
+    box-shadow: 0px 10px 30px ; /* Ombre plus prononcée au survol */
 }
 
 /* Image dans la carte restaurant */
@@ -294,18 +294,18 @@
     /* Tablette */
     @include tablette {
         left: 90%; /* Position horizontale de l'icône pour tablette */
-        bottom: 15%; /* Position verticale de l'icône pour tablette */
+        bottom: 12.5%; /* Position verticale de l'icône pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         left: 88%; /* Position horizontale de l'icône pour desktop */
-        bottom: 20%; /* Position verticale de l'icône pour desktop */
+        bottom: 15%; /* Position verticale de l'icône pour desktop */
     }
 
     @include large-desktop {
         left: 85%; /* Position horizontale de l'icône pour desktop */
-        bottom: 15%; /* Position verticale de l'icône pour desktop */
+        bottom: 12.5%; /* Position verticale de l'icône pour desktop */
     }
 }
 
@@ -400,7 +400,7 @@
 }
 
 .card-menu:hover {
-    box-shadow: 0px 10px 30px #FF79DA; /* Ombre plus prononcée au survol */
+    box-shadow: 0px 10px 30px ; /* Ombre plus prononcée au survol */
 }
 
 /*-- Item du menu --*/

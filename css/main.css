@@ -181,7 +181,7 @@ body {
   flex-direction: column;
   font-family: "Roboto", sans-serif; /* Police par défaut */
   font-size: 1rem; /* Taille de police relative */
-  background-color: white; /* Couleur de fond */
+  background-color: #F6F6F6; /* Couleur de fond */
   margin: 0 auto; /* Centrage du contenu */
   overflow-x: hidden; /* Empêche le débordement horizontal */
   min-width: 300px;
@@ -771,6 +771,7 @@ label.card-menu:hover {
 /* Conteneur de la carte localisation */
 .card-location {
   width: 100%; /* La carte prend toute la largeur du parent */
+  max-height: 50px;
   display: flex; /* Utilise flexbox pour aligner les éléments */
   justify-content: center; /* Centre horizontalement */
   margin: 0 auto;
@@ -779,8 +780,6 @@ label.card-menu:hover {
   background-color: #EAEAEA; /* Couleur de fond */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   padding: 1rem 0; /* Espace intérieur de la carte */
-  border-top: 0.25rem solid lightgrey; /* Bordure supérieure de 0.5% de la hauteur de l'écran en gris clair */
-  border-bottom: 0.25rem solid lightgrey; /* Bordure inférieure de 0.5% de la hauteur de l'écran en gris clair */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -818,7 +817,7 @@ label.card-menu:hover {
 /* Icône localisation dans la carte localisation */
 .card-location i {
   font-size: 1rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
-  color: black; /* Couleur de l'icône */
+  color: #353535; /* Couleur de l'icône */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -877,7 +876,7 @@ label.card-menu:hover {
 }
 
 .card:hover {
-  box-shadow: 0px 10px 30px #9356dc; /* Ombre plus prononcée au survol */
+  box-shadow: 0px 10px 30px; /* Ombre plus prononcée au survol */
 }
 
 /* Image dans la carte restaurant */
@@ -952,19 +951,19 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card .icon-favorite {
     left: 90%; /* Position horizontale de l'icône pour tablette */
-    bottom: 15%; /* Position verticale de l'icône pour tablette */
+    bottom: 12.5%; /* Position verticale de l'icône pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .icon-favorite {
     left: 88%; /* Position horizontale de l'icône pour desktop */
-    bottom: 20%; /* Position verticale de l'icône pour desktop */
+    bottom: 15%; /* Position verticale de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card .icon-favorite {
     left: 85%; /* Position horizontale de l'icône pour desktop */
-    bottom: 15%; /* Position verticale de l'icône pour desktop */
+    bottom: 12.5%; /* Position verticale de l'icône pour desktop */
   }
 }
 
@@ -1060,7 +1059,7 @@ label.card-menu:hover {
 }
 
 .card-menu:hover {
-  box-shadow: 0px 10px 30px #FF79DA; /* Ombre plus prononcée au survol */
+  box-shadow: 0px 10px 30px; /* Ombre plus prononcée au survol */
 }
 
 /*-- Item du menu --*/
@@ -1478,7 +1477,7 @@ label.card-menu:hover {
   width: 100%;
   background-color: #f9f9f9;
   margin: 0 auto;
-  padding: 10% 0;
+  padding: 5% 0;
   /*Tablette*/
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -1501,7 +1500,6 @@ label.card-menu:hover {
 .bandeau h2 {
   width: 75%;
   font-size: 1.5rem;
-  margin-top: 1rem; /* Ajoute un padding en haut et en bas de 0.5% de la hauteur de l'écran */
   /* Desktop */
   /* Large desktop */
 }
@@ -1525,7 +1523,7 @@ label.card-menu:hover {
 /* Texte */
 .bandeau p {
   width: 80%;
-  padding: 1rem 0; /* Padding haut/bas et gauche/droite */
+  padding: 2% 0; /* Padding haut/bas et gauche/droite */
   margin-bottom: 2%;
 }
 
