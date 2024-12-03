@@ -2,37 +2,76 @@
 
 ## Description
 
-Ohmyfood est un site web mobile-first qui permet aux utilisateurs de découvrir et de réserver des menus dans divers restaurants sélectionnés. Ce projet met l'accent sur l'accessibilité, le responsive design, et une expérience utilisateur optimale sur mobile.
+Ohmyfood est un site web mobile-first conçu pour permettre aux utilisateurs de découvrir et de réserver des menus dans une sélection de restaurants de qualité. Ce projet se distingue par :
 
-La page principale inclut :
+Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
+Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
+Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
 
-- Un header avec le logo du site et la localisation de l'utilisateur.
-- Un bandeau principal avec un appel à l'action pour explorer les restaurants.
-- Une section expliquant le fonctionnement du service en trois étapes.
-- Une présentation des restaurants avec des cartes contenant des images, des descriptions et des badges.
-- Un footer avec des liens vers des pages d'informations (mentions légales, contact, etc.).
+## Fonctionnalités principales
+
+Page d'accueil :
+
+Header avec logo et navigation.
+Bannière avec appel à l'action.
+Section explicative en trois étapes pour décrire le service.
+Présentation des restaurants sous forme de cartes interactives.
+Pages dédiées aux restaurants :
+
+Présentation détaillée de chaque restaurant.
+Menus disponibles avec images, descriptions, et prix.
+Option pour réserver directement.
+Footer :
+
+Liens utiles (mentions légales, contact).
+Informations générales sur le site.
+
 
 ## Structure des fichiers
 
 Le projet est organisé de manière modulaire pour faciliter la maintenance et l'évolution :
 
 ```sh
-/.
-├── .vscode/              # Configuration pour l'éditeur Visual Studio Code
+ohmyfood/
+├── .vscode/                # Configuration pour Visual Studio Code (facultatif)
+│
 ├── css/
-│   └── main.css          # Fichier CSS compilé à partir des fichiers SCSS
+│
+│   └── main.css            # Fichier CSS compilé depuis SCSS
+│
 ├── images/
-│   ├── logo/             # Images du logo du site
-│   └── restaurants/      # Images des restaurants
+│   ├── logo/               # Images du logo
+│   └── restaurants/        # Images des restaurants
+│
 ├── pages/
-│   ├── délice.html       # Détails du restaurant "Le Délice des Sens"
-│   ├── la_française.html # Détails du restaurant "À La Française"
-│   ├── note_enchantée.html # Détails du restaurant "La Note Enchantée"
-│   └── palette.html      # Détails du restaurant "La Palette du Goût"
-├── scss/                 # Fichiers source SCSS pour les styles
-│   ├── _base.scss        # Styles de base
-│   ├── _mixins.scss      # Mixins utilisés pour les media queries et autres
-│   ├── _variables.scss   # Variables globales (couleurs, tailles, etc.)
-│   └── main.scss         # Fichier SCSS principal qui importe les partiels
-├── index.html            # Page principale du site
-└── README.md             # Documentation du projet
+│   ├── délice.html         # Page dédiée au restaurant "Le Délice des Sens"
+│   ├── la_française.html   # Page dédiée au restaurant "À La Française"
+│   ├── note_enchantée.html # Page dédiée au restaurant "La Note Enchantée"
+│   └── palette.html        # Page dédiée au restaurant "La Palette du Goût"
+│
+├── scss/                   # Fichiers SCSS pour les styles
+│   ├── components/         # Boutons, cartes, etc.
+│   │   ├──  _button.scss   
+│   │   ├──  _card.scss 
+│   ├── layout/             # Header, footer, structures principales
+│   │   ├──  _common.css     
+│   │   ├──  _footer.scss
+│   │   ├──  _header.scss
+│   │   ├──  _loader.scss
+│   │   ├──  _reset.scss
+│   ├── pages/              # Styles spécifiques pour chaque page
+│   │   ├──  _accueil.scss
+│   │   ├──  _menu.scss
+│   ├── util/               # Variables, mixins, animations
+│   │   ├── _variables.scss # Couleurs, typographie, etc.
+│   │   ├── _mixins.scss    # Media queries, styles réutilisables
+│   │   └── _animations.scss # Animations CSS
+│   └── main.scss           # Point d'entrée SCSS
+│
+├── index.html              # Page principale
+│
+├── package.json            # Configuration pour npm
+│
+└── README.md               # Documentation du projet
+
+
