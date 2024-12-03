@@ -98,7 +98,7 @@
 /* Gère l affichage du badge dans la carte: flex= affiché, none= masqué*/
 /* Gère l affichage du badge dans la carte flex= affiché, none= masqué*/
 /* Affichage conditionnel du loader   */
-/* Gère l'affichage du loader  block =affiché none = masqué */
+/* Gère l'affichage du loader  flex =affiché none = masqué */
 /* 2. Mixins (ex: media queries, fonctions réutilisables) */
 /* _mixins.scss */
 /* Ce fichier contient des mixins pour gérer l'orientation portrait et paysage sur les appareils mobiles */
