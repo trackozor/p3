@@ -418,41 +418,22 @@
     }
 }
 
-/* Boucle de délais pour la section des Entrées */
-.entrées li:nth-child(1) .card-menu {
-    animation-delay: 0.5s;
-}
-.entrées li:nth-child(2) .card-menu {
-    animation-delay: 1s;
-}
-.entrées li:nth-child(3) .card-menu {
-    animation-delay: 1.5s;
-}
-.entrées li:nth-child(4) .card-menu {
-    animation-delay: 2s;
+// Liste des sections et délais de départ
+$sections: (
+    "entrées": 0.5s,
+    "plats": 2.5s,
+    "desserts": 4s
+);
+
+// Générer les règles pour chaque section
+@each $section, $start-delay in $sections {
+    @for $i from 1 through 4 {
+        .#{$section} li:nth-child(#{$i}) .card-menu {
+            animation-delay: #{$start-delay + (($i - 1) * 0.5s)};
+        }
+    }
 }
 
-/* Boucle de délais pour la section des Plats */
-.plats li:nth-child(1) .card-menu {
-    animation-delay: 2.5s;
-}
-.plats li:nth-child(2) .card-menu {
-    animation-delay: 3s;
-}
-.plats li:nth-child(3) .card-menu {
-    animation-delay: 3.5s;
-}
-
-/* Boucle de délais pour la section des Desserts */
-.desserts li:nth-child(1) .card-menu {
-    animation-delay: 4s;
-}
-.desserts li:nth-child(2) .card-menu {
-    animation-delay: 4.5s;
-}
-.desserts li:nth-child(3) .card-menu {
-    animation-delay: 5s;
-}
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     display: block;
@@ -725,9 +706,7 @@
 /*-- logo dans le footer --*/
 .footer-card   img {
     display:block;
-    background-color: white; /* Fond blanc pour l'image */
     width: 30%; /* L'image occupe 30% de la largeur du footer */
-    filter: invert(100%); /* Inversion des couleurs pour l'image */
     margin: $margin-small 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
     padding-bottom: $padding-xsmall; /* Padding inférieur correspondant à 1% de la hauteur */
 

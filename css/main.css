@@ -274,7 +274,7 @@ header {
 footer {
   display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
   align-items: center; /* Aligne verticalement les éléments au centre du footer */
-  background-color: black; /* Définit la couleur de fond du footer */
+  background-color: #353535; /* Définit la couleur de fond du footer */
   color: white; /* Définit la couleur du texte et des icônes à blanc */
   width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
 }
@@ -1081,7 +1081,6 @@ label.card-menu:hover {
   }
 }
 
-/* Boucle de délais pour la section des Entrées */
 .entrées li:nth-child(1) .card-menu {
   animation-delay: 0.5s;
 }
@@ -1098,7 +1097,6 @@ label.card-menu:hover {
   animation-delay: 2s;
 }
 
-/* Boucle de délais pour la section des Plats */
 .plats li:nth-child(1) .card-menu {
   animation-delay: 2.5s;
 }
@@ -1111,7 +1109,10 @@ label.card-menu:hover {
   animation-delay: 3.5s;
 }
 
-/* Boucle de délais pour la section des Desserts */
+.plats li:nth-child(4) .card-menu {
+  animation-delay: 4s;
+}
+
 .desserts li:nth-child(1) .card-menu {
   animation-delay: 4s;
 }
@@ -1122,6 +1123,10 @@ label.card-menu:hover {
 
 .desserts li:nth-child(3) .card-menu {
   animation-delay: 5s;
+}
+
+.desserts li:nth-child(4) .card-menu {
+  animation-delay: 5.5s;
 }
 
 /*-- Nom du plat dans la carte menu --*/
@@ -1416,9 +1421,7 @@ label.card-menu:hover {
 /*-- logo dans le footer --*/
 .footer-card img {
   display: block;
-  background-color: white; /* Fond blanc pour l'image */
   width: 30%; /* L'image occupe 30% de la largeur du footer */
-  filter: invert(100%); /* Inversion des couleurs pour l'image */
   margin: 0.5rem 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
   padding-bottom: 0.25rem; /* Padding inférieur correspondant à 1% de la hauteur */
   /* tablette */
