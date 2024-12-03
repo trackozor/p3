@@ -4,7 +4,7 @@
 
 Ohmyfood est un site web mobile-first conçu pour permettre aux utilisateurs de découvrir et de réserver des menus dans une sélection de restaurants de qualité. Ce projet se distingue par :
 
-    - Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
+    - **Accessibilité** : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
     - Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
     - Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
 
