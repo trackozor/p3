@@ -436,10 +436,9 @@ footer {
 /*  Révisions :                                                                                             */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------- explorer nos restaurants--------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/*---------------------------- Bouton principal avec dégradé ----------------------------- */
+/*----------------------------------------------------*/
+/*--- Bouton principal avec dégradé ----------------- */
+/*----------------------------------------------------*/
 .button--primary {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
@@ -456,15 +455,15 @@ footer {
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2);
 }
 
-/* ------------------------- Texte du bouton ---------------------------------------- */
+/*  Texte du bouton  */
 .button--primary-txt {
   font-size: 1rem; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: 500; /* Style de police en gras (bold) */
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------Badge Nouveau ------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------*/
+/*----------Badge Nouveau ------------*/
+/*-----------------------------------*/
 .badge {
   background-color: #99E2D0; /* Couleur de fond vert clair */
   color: #008766; /* Couleur du texte en vert foncé */
@@ -482,9 +481,9 @@ footer {
   }
 }
 
-/*---------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------Bouton Coeur -------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------*/
+/*--------------Bouton Coeur -----------*/
+/*-------------------------------------*/
 .icon-favorite {
   background-color: transparent; /* Fond transparent */
   color: grey; /* Couleur principale en gris */
@@ -522,7 +521,7 @@ footer {
 /* Action lors du clic (actif) */
 .icon-favorite:active .fa-full {
   display: flex; /* Affiche l'icône pleine */
-  animation: likeFill 1s ease-in-out forwards; /* Animation de remplissage */
+  animation: likeFill 1s ease-in forwards; /* Animation de remplissage */
   color: #FF79DA; /* Changement de couleur */
 }
 .icon-favorite:active .fa-empty {
@@ -543,9 +542,9 @@ input {
   display: none; /* Input masqué */
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------Flèche retour -----------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------*/
+/*---------Flèche retour ---------------------------*/
+/*-------------------------------------------------*/
 .button--back {
   background-color: transparent; /* Fond transparent */
   color: black; /* Couleur du texte en noir */
@@ -554,9 +553,9 @@ input {
   border: none; /* Pas de bordure */
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------icône validation -----------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------*/
+/*--------icône validation -----------------------------*/
+/*-----------------------------------------------------*/
 /* Masquer la case à cocher */
 .checkbox-hidden {
   display: none;
@@ -1052,10 +1051,6 @@ label.card-menu:hover {
   animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 }
 
-.card-menu:hover {
-  box-shadow: 0px 10px 30px; /* Ombre plus prononcée au survol */
-}
-
 /*-- Item du menu --*/
 .menu-item {
   width: 100%; /* L'élément du menu prend toute la largeur disponible */
@@ -1159,7 +1154,6 @@ label.card-menu:hover {
   padding-left: 1rem;
   margin-bottom: 3%;
   position: relative;
-  transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
   /* tablette */
   /* Desktop */
   /* Large desktop */
@@ -1413,7 +1407,7 @@ label.card-menu:hover {
 
 /*-- logo dans le footer --*/
 .footer-card img {
-  display: block;
+  display: flex;
   width: 30%; /* L'image occupe 30% de la largeur du footer */
   margin: 0.5rem 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
   padding-bottom: 0.25rem; /* Padding inférieur correspondant à 1% de la hauteur */
@@ -2250,11 +2244,11 @@ main {
     transform: scale(0.9); /* L'élément grandit légèrement */
   }
   50% {
-    color: #f5a4b8; /* Couleur pastel plus foncée */
+    color: #f598de; /* Couleur pastel plus foncée */
     transform: scale(1); /* Taille normale */
   }
   75% {
-    color: #f28aa1; /* Couleur presque finale */
+    color: #f28aed; /* Couleur presque finale */
     transform: scale(1.1); /* Taille légèrement plus grande */
   }
   100% {

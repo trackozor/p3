@@ -399,9 +399,7 @@
 
 }
 
-.card-menu:hover {
-    box-shadow: 0px 10px 30px ; /* Ombre plus prononcée au survol */
-}
+
 
 /*-- Item du menu --*/
 .menu-item {
@@ -470,7 +468,7 @@ $sections: (
     padding-left:  $padding-base;
     margin-bottom: 3%;
     position: relative;
-    transition: white-space 0.1s ease, overflow 0.1s ease, text-overflow 0.1s ease;
+
 
     /* tablette */
     @include tablette {
@@ -705,7 +703,7 @@ $sections: (
 }
 /*-- logo dans le footer --*/
 .footer-card   img {
-    display:block;
+    display:flex;
     width: 30%; /* L'image occupe 30% de la largeur du footer */
     margin: $margin-small 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
     padding-bottom: $padding-xsmall; /* Padding inférieur correspondant à 1% de la hauteur */
