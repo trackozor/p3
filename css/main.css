@@ -601,7 +601,7 @@ label.card-menu:hover {
   display: flex;
   align-items: center; /* Alignement vertical de l'icône */
   position: absolute;
-  right: -1%; /* Ajuster cette valeur selon ta mise en page */
+  right: -1%; /*  */
   top: 53%;
   transform: translateY(-53%); /* Centrage vertical */
   justify-content: center; /* Centrage horizontal */
