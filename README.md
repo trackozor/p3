@@ -54,7 +54,7 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
 
 ## Installation
 
-### 1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>
+1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>
 
     - Téléchargez la version LTS recommandée.
     - Installez Node.js en suivant les instructions pour votre système d'exploitation.
@@ -62,7 +62,7 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
         node -v
         npm -v
 
-### 2.Initialisez votre projet Node.js
+2.Initialisez votre projet Node.js
 
     - Ouvrez un terminal ou une invite de commandes,
     - accédez au dossier de votre projet,
