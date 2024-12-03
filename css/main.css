@@ -251,7 +251,7 @@ img {
 header {
   display: block; /* Utilise flexbox pour aligner les éléments */
   width: 100%; /* Le header prend toute la largeur disponible */
-  height: auto;
+  max-height: 113px;
 }
 
 /*-------------------------------------------------------------------------------------------------------- */
@@ -658,19 +658,19 @@ label.card-menu:hover {
 /* Conteneur principale de la carte */
 .card-logo {
   width: 100%; /* prend toute la largeur disponible*/
-  height: auto; /* Hauteur ajusté au contenu */
+  max-height: 113px; /* Hauteur ajusté au contenu */
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /*Couleur de fond blanche */
-  margin: 1rem 0; /* Définit les marges verticales de la carte */
+  margin: 5% 0 3% 0; /* Définit les marges verticales de la carte */
   justify-content: center; /* centre les éléments horizontalement */
 }
 
 /* images */
 .card-logo img {
   display: block; /* affiche l'element comme un bloc */
-  margin: 2% auto; /* Marge haute et basse de 2% et centrage horizontale*/
-  width: 50%; /* prend 50% de largeur du conteneur */
+  margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
+  width: 35%; /* prend 50% de largeur du conteneur */
   /*-- Tablette --*/
   /*-- desktop --*/
   /*-- large desktop --*/
@@ -1455,7 +1455,6 @@ label.card-menu:hover {
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 /* Conteneur parent bandeau */
-/* Conteneur parent bandeau */
 .bandeau {
   display: flex;
   flex-direction: column;
@@ -1463,7 +1462,7 @@ label.card-menu:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #f9f9f9;
+  background-color: #F6F6F6;
   margin: 0 auto;
   padding: 5% 0;
   /*Tablette*/
@@ -1488,6 +1487,7 @@ label.card-menu:hover {
 .bandeau h2 {
   width: 75%;
   font-size: 1.5rem;
+  margin: 1% 0;
   /* Desktop */
   /* Large desktop */
 }
@@ -1521,6 +1521,7 @@ label.card-menu:hover {
   flex-direction: column;
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
+  background-color: #FFFFFF;
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/

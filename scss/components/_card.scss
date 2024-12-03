@@ -19,19 +19,19 @@
 /* Conteneur principale de la carte */
 .card-logo {
     width: 100%;/* prend toute la largeur disponible*/
-    height: auto;/* Hauteur ajusté au contenu */
+    max-height: 113px;/* Hauteur ajusté au contenu */
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     align-items: center;/* Centre le contenu verticalement */
     background-color:white;/*Couleur de fond blanche */
-    margin: $margin-base 0; /* Définit les marges verticales de la carte */
+    margin: 5% 0 3% 0; /* Définit les marges verticales de la carte */
     justify-content: center;/* centre les éléments horizontalement */
 }
 
 /* images */
 .card-logo img {
     display: block;/* affiche l'element comme un bloc */
-    margin: 2% auto;/* Marge haute et basse de 2% et centrage horizontale*/
-    width:50%;/* prend 50% de largeur du conteneur */
+    margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
+    width:35%;/* prend 50% de largeur du conteneur */
 
     /*-- Tablette --*/
     @include tablette {
