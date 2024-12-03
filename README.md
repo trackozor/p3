@@ -10,22 +10,31 @@ Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des 
 
 ## Fonctionnalités principales
 
+Voici les fonctionnalités principales offertes par Ohmyfood :
+
 Page d'accueil :
 
-Header avec logo et navigation.
-Bannière avec appel à l'action.
-Section explicative en trois étapes pour décrire le service.
 Présentation des restaurants sous forme de cartes interactives.
-Pages dédiées aux restaurants :
+Bandeau principal contenant un appel à l’action.
+Section explicative décrivant le fonctionnement du service.
+Pages spécifiques aux restaurants :
 
-Présentation détaillée de chaque restaurant.
-Menus disponibles avec images, descriptions, et prix.
-Option pour réserver directement.
-Footer :
+Présentation du restaurant (image, description, emplacement).
+Liste des menus avec descriptions et prix.
+Boutons pour réserver directement un menu.
+Animations CSS :
 
-Liens utiles (mentions légales, contact).
-Informations générales sur le site.
+Chargement interactif avec effets visuels.
+Transitions fluides pour améliorer l'expérience utilisateur.
+Accessibilité :
 
+Balises ARIA pour les lecteurs d'écran.
+
+## Prérequis
+
+## Technologie utilisées
+
+## Installation
 
 ## Structure des fichiers
 
@@ -36,7 +45,6 @@ ohmyfood/
 ├── .vscode/                # Configuration pour Visual Studio Code (facultatif)
 │
 ├── css/
-│
 │   └── main.css            # Fichier CSS compilé depuis SCSS
 │
 ├── images/
