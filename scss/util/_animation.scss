@@ -16,44 +16,6 @@
 /*  Révisions :                                                                                             */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------- Animation battement de cœur (like) ------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-@keyframes heartBeat {
-    0%, 100% {
-        transform: scale(1); /* Taille normale au début et à la fin */
-    }
-    50% {
-        transform: scale(1.2); /* Grossissement temporaire au milieu */
-    }
-}
-
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------ Animation remplissage "like" avec changement de couleur -----------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-@keyframes likeFill {
-    0% {
-        color: white; /* Couleur initiale blanche */
-        transform: scale(0.8); /* Taille initiale réduite */
-    }
-    25% {
-        color: #f7efef; /* Dégradé vers une couleur pastel */
-        transform: scale(0.9); /* L'élément grandit légèrement */
-    }
-    50% {
-        color: #f598de; /* Couleur pastel plus foncée */
-        transform: scale(1); /* Taille normale */
-    }
-    75% {
-        color: #f28aed; /* Couleur presque finale */
-        transform: scale(1.1); /* Taille légèrement plus grande */
-    }
-    100% {
-        color: $button--search-primary-color; /* Couleur finale */
-        transform: scale(1.2); /* L'élément grandit légèrement à la fin */
-    }
-}
-
 
 
 
