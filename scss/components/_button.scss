@@ -26,7 +26,8 @@
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
-  background: linear-gradient(180deg, $button--search-secondary-color, $button--search-primary-color); /* Dégradé de couleur */
+  background: linear-gradient(to bottom, $button--search-secondary-color, $button--search-primary-color);
+
   padding: $padding-base; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
   box-shadow: $shadow-medium; /* Ajoute une ombre */
@@ -77,9 +78,8 @@
 
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
-  z-index: 3; /* Superposition au-dessus des autres éléments */
+  z-index: 30; /* Superposition au-dessus des autres éléments */
   position: relative;
-  color:$button--search-primary-color;
 }
 
 /* Style des icônes */
@@ -109,8 +109,10 @@
 /* Action lors du clic (actif) */
 .icon-favorite:active {
   .fa-full {
-    display: flex; /* Affiche l'icône pleine */
-    color: $button--search-primary-color; /* Changement de couleur */
+    display: flex;
+    background: linear-gradient(to top, $button--search-secondary-color, $button--search-primary-color); /* Changement de couleur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
   }
   .fa-empty {
     display: none; /* Cache l'icône vide */

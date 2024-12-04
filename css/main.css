@@ -30,10 +30,6 @@
 /*  Révisions :                                                                                             */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/* Couleurs */
-/* noir */
-/* Bleu clair */
-/*Bleu foncé*/
 /*------- fond-----*/
 /*Gris clair*/
 /*--------- Boutons-------- */
@@ -444,7 +440,7 @@ footer {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
   justify-content: center; /* Centre les éléments horizontalement */
-  background: linear-gradient(180deg, #FF79DA, #9356DC); /* Dégradé de couleur */
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
   padding: 1rem; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
@@ -492,9 +488,8 @@ footer {
 
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
-  z-index: 3; /* Superposition au-dessus des autres éléments */
+  z-index: 30; /* Superposition au-dessus des autres éléments */
   position: relative;
-  color: #9356DC;
 }
 
 /* Style des icônes */
@@ -522,8 +517,10 @@ footer {
 
 /* Action lors du clic (actif) */
 .icon-favorite:active .fa-full {
-  display: flex; /* Affiche l'icône pleine */
-  color: #9356DC; /* Changement de couleur */
+  display: flex;
+  background: linear-gradient(to top, #FF79DA, #9356DC); /* Changement de couleur */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
 }
 .icon-favorite:active .fa-empty {
   display: none; /* Cache l'icône vide */
@@ -837,7 +834,9 @@ label.card-menu:hover {
   align-items: center;
 }
 
-/* Cartes restaurants */
+/*-------------------------------------------------------------------------------------------*/
+/* -----------------------------Carte Restaurant--------------------------------------------- */
+/* ------------------------------------------------------------------------------------------*/
 /* Conteneur parent de la carte restaurant */
 .card {
   width: 100%;
@@ -1061,6 +1060,8 @@ label.card-menu:hover {
   }
 }
 
+/* Liste des sections et délais de départ */
+/* boucle */
 .entrées li:nth-child(1) .card-menu {
   animation-delay: 0.5s;
 }
@@ -2213,7 +2214,7 @@ main {
 /* Nom du fichier      : _animations.scss                                                              */
 /* Auteur              : Trackozor                                                                          */
 /* Date de création    : 25/09/24                                                                           */
-/* Dernière modification: 06/10/24                                                                          */
+/* Dernière modification: 07/12/24                                                                          */
 /* Description         : Styles pour les animations                                                            */
 /*                                                                                                          */
 /*                                                                                                          */
@@ -2222,45 +2223,9 @@ main {
 /*  Version             : 1.0                                                                               */
 /*  Framework utilisé   : SCSS                                                                              */
 /* -------------------------------------------------------------------------------------------------------  */
-/*  Révisions :                                                                                             */
+/*  Révisions : révision suite a non-conformité livrable                                                                                            */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
-/*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------- Animation battement de cœur (like) ------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-@keyframes heartBeat {
-  0%, 100% {
-    transform: scale(1); /* Taille normale au début et à la fin */
-  }
-  50% {
-    transform: scale(1.2); /* Grossissement temporaire au milieu */
-  }
-}
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------ Animation remplissage "like" avec changement de couleur -----------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-@keyframes likeFill {
-  0% {
-    color: white; /* Couleur initiale blanche */
-    transform: scale(0.8); /* Taille initiale réduite */
-  }
-  25% {
-    color: #f7efef; /* Dégradé vers une couleur pastel */
-    transform: scale(0.9); /* L'élément grandit légèrement */
-  }
-  50% {
-    color: #f598de; /* Couleur pastel plus foncée */
-    transform: scale(1); /* Taille normale */
-  }
-  75% {
-    color: #f28aed; /* Couleur presque finale */
-    transform: scale(1.1); /* Taille légèrement plus grande */
-  }
-  100% {
-    color: #9356DC; /* Couleur finale */
-    transform: scale(1.2); /* L'élément grandit légèrement à la fin */
-  }
-}
 /*----------------------------- Animation disparition du loader  -----------------------*/
 @keyframes fadeOutLoader {
   0% {
@@ -2274,8 +2239,7 @@ main {
     visibility: hidden; /* Devient complètement invisible */
   }
 }
-/*------------------------------------------ Animations et Keyframes -------------------------------------*/
-/* Rotation du sablier */
+/*------------------------- Rotation du sablier  ----------------*/
 @keyframes rotateClock {
   0% {
     transform: rotate(0deg);
@@ -2284,9 +2248,7 @@ main {
     transform: rotate(360deg);
   } /* Rotation complète du sablier*/
 }
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------------- Animation barre de progression ------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*------------------ Animation barre de progression ----------------*/
 @keyframes loadProgressBar {
   0% {
     width: 0%; /* Barre vide au départ */
@@ -2295,9 +2257,7 @@ main {
     width: 100%; /* Barre remplie à la fin de l'animation */
   }
 }
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------ Animation apparition progressive d'un message ---------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
+/*------- Animation apparition progressive d'un message -----------------*/
 @keyframes fadeInMessage {
   0% {
     opacity: 0; /* Le message est invisible au début */
@@ -2306,7 +2266,7 @@ main {
     opacity: 1; /* Le message devient complètement visible */
   }
 }
-/* Animation glissement de droite à gauche (ex: carte) */
+/*---------------- Animation glissement de droite à gauche ---------------*/
 @keyframes slideIn {
   from {
     opacity: 0; /* L'élément est invisible au départ */
