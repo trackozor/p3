@@ -17,6 +17,7 @@
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Base ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
+
 body {
   display: flex;
   flex-direction: column;
@@ -26,41 +27,21 @@ body {
   margin: 0 auto;  /* Centrage du contenu */
   overflow-x: hidden;  /* Empêche le débordement horizontal */
   min-width: 300px;
-
-
-  /* Pour les tablettes */
-  @include tablette {
-    font-size: 1.1rem;  /* Légèrement plus grand sur les tablettes */
-    max-width: 100%;
-  }
-
-  /* Pour les desktops */
-  @include desktop {
-    font-size: 1.2rem;  /* Augmente la taille de la police sur les grands écrans */
-    max-width: 1024px;  /* Largeur maximale pour un écran desktop */
-  }
-
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Titres ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
-/*  Description cartes */
 h2 {
     font-size:$font-size-title; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
     font-weight: $font-weight-bold; /* Accentuation caractère majeure soit valeur=900 */
-
-    /*-- tablette --*/
-    @include tablette {
-      font-size: 1.6rem;
-    }
-
-  }
+}
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------liens ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
+
 a {
   text-decoration: none;  /* Supprime le soulignement par défaut*/
   color: inherit; /* Utilise la couleur par défaut du texte (héritée du parent)*/
@@ -69,6 +50,7 @@ a {
 /*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------Images ---------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
+
 img {
   max-width: 100%; /* Rend l'image responsive, ne dépasse jamais la taille de son conteneur parent*/
   height: 100%; /* Conserve les proportions de l'image lorsqu'elle est redimensionnée*/

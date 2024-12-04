@@ -33,7 +33,7 @@
 
     /*Tablette*/
     @include tablette {
-    padding:5% 0;
+    padding:2% 0;
     }
 
     @include desktop{
@@ -51,6 +51,10 @@
     width:75%;
     font-size: 1.5rem;
     margin:2% 0 3% 0;
+
+    @include tablette {
+    font-size: 2rem;    
+    }
     
     /* Desktop */
     @include desktop {
@@ -155,7 +159,6 @@
         flex-direction: row; /* Alignement en ligne pour desktop */
         gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
         justify-content: space-around; /* Espace autour des éléments pour desktop */
-        max-width: 1024px;;
     }
 
     /* Large desktop */
@@ -163,7 +166,6 @@
         flex-direction: row; /* Alignement en ligne pour large desktop */
         gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
         justify-content: space-around; /* Espace autour des éléments pour large desktop */
-        max-width: 1024px;
         margin: 0 auto;
         width: 90%;
         margin-right: 6%;
@@ -382,20 +384,7 @@ i {
 
 }
 
-.card {
-    margin:2% auto; 
-    width: 90%;
 
-    /* Desktop */
-    @include desktop {
-    width: 40%;
-    }
-
-    /*-- large desktop --*/
-    @include large-desktop {
-    width: 40%;
-    }
-}
 
 /*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
 

@@ -29,6 +29,9 @@
     margin: 5% 0; /* Définit les marges verticales de la carte */
     justify-content: center;/* centre les éléments horizontalement */
 
+    @include tablette {
+        margin:3% 0;
+    }
     /* Desktop */
     @include desktop {
         margin:3% 0;
@@ -47,7 +50,9 @@
     margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
     width:50%;/* prend 50% de largeur du conteneur */
 
-
+    @include tablette {
+        width:30%
+    }
     /*-- desktop --*/
     @include desktop {
         width:20%;/* Ajustement largeur pour desktop*/
@@ -73,20 +78,34 @@
     align-items: center;/* Aligne les éléments verticalement */
     justify-content: center;/* Centre les éléments horizontalement */
     position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
-    padding: 2% 0;/* espace intérieur haut et bas de 2%*/
+    padding: 5% 0;/* espace intérieur haut et bas de 2%*/
+
+    /* Tablette */
+    @include tablette {
+        padding:3% 0;
+    }
 
     /* Desktop */   
     @include desktop {
-        height:$object-size-medium; /* Hauteur correspondant à 5% de la largeur de l'écran */
+        padding: 2% 0;;
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        padding: 2% 0;
     }
 }
 
 /* Image dans la carte alt */
 .card-logo-alt img {
-    width:40%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
+    width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
+
+    @include tablette {
+        width:30%;
+    }
 
     @include desktop {
-    width:20%/* ajustement largeur pour desktop */
+        width:20%/* ajustement largeur pour desktop */
     }
     /* large desktop */
     @include large-desktop {
@@ -97,23 +116,23 @@
 /* Icône de flèche retour */
 .card-logo-alt i {
     position: absolute; /* Positionne l'icône de manière absolue dans la carte */
-    left:1%; /* Place l'icône à gauche, hors de la carte */
-    top: 25%; /* Place l'icône à 35% du haut du conteneur */
+    left:5%; /* Place l'icône à gauche, hors de la carte */
+    top: 40%; /* Place l'icône à 35% du haut du conteneur */
 
     /*-- tablette --*/
     @include tablette {
-        top: 30%; /* Place l'icône à 35% du haut du conteneur */
+        top: 40%; /* Place l'icône à 35% du haut du conteneur */
     }
     /* Desktop */
     @include desktop {
-        left:0; /* Ajuste la position de l'icône pour desktop */
+        left:2%; /* Ajuste la position de l'icône pour desktop */
         top: 30%;
         font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
     }
 
     /* large desktop */
     @include large-desktop {
-        left:0; /* Ajuste la position de l'icône pour desktop */
+        left:2%; /* Ajuste la position de l'icône pour desktop */
         top: 35%;
         font-size: 1.5rem;
     }
@@ -232,46 +251,54 @@
     box-shadow: $shadow-medium; /* Ombre portée */
     position: relative; /* Permet de positionner des éléments enfants */
     z-index: 1; /* Définit la position sur l'axe Z */
-    margin: 20% auto; /* Marges et centrage horizontal */
+    margin: 2% auto; /* Marges et centrage horizontal */
     justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
     height:auto;
-    max-height: 25%;
+    max-height: 250px;
+
 
     /* Tablette */
     @include tablette {
         width: 100%;
-        max-height: 50vh;
-    }   
+        max-height: 350px;
+    }
+
+        /* Desktop */
+    @include desktop {
+    width: 40%;
+    max-height:350px;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+    width: 40%;
+    }
+
 }
 
-.card:hover {
-    box-shadow: 0px 10px 30px ; /* Ombre plus prononcée au survol */
-}
+
 
 /* Image dans la carte restaurant */
 .card  img {
     width: 100%;
-    height: 70%;
-    max-height:18vh;
+    height: 65%;
+    max-height:150px;
     border-radius: $border-radius-medium $border-radius-medium 0 0; /* Arrondis des coins supérieurs */
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
     overflow: hidden;
     
-    /**/
-    @include mobile-landscape {
-        max-height:20vw;
-    }
+    
 
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        max-height: 35vh;
+        max-height: 250px;
     }
 
     /*-- Desktop --*/
     @include desktop {
-        height: 30vh;
+        height: 300px;
     }
 
 }
@@ -414,7 +441,7 @@
 /*-- Conteneur de la carte menu --*/
 .card-menu {
     background-color: white; /* Couleur de fond de la carte menu */
-    border-radius: 2vh; /* Bord arrondis */
+    border-radius: 2%; /* Bord arrondis */
     display: flex; /* Utilise flexbox pour aligner les éléments */
     box-shadow: $shadow-medium; /* Ombre portée */
     margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
