@@ -111,15 +111,14 @@
   .fa-full {
     display: flex;
     background: linear-gradient(to top, $button--search-secondary-color, $button--search-primary-color); /* Changement de couleur */
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Standard */
+    background-clip: text;
     -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
   }
   .fa-empty {
     display: none; /* Cache l'icône vide */
   }
 }
-
-
 
 /* Cache l'input */
 input {

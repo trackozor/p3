@@ -26,24 +26,31 @@
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     align-items: center;/* Centre le contenu verticalement */
     background-color:white;/*Couleur de fond blanche */
-    margin: 5% 0 3% 0; /* Définit les marges verticales de la carte */
+    margin: 5% 0; /* Définit les marges verticales de la carte */
     justify-content: center;/* centre les éléments horizontalement */
+
+    /* Desktop */
+    @include desktop {
+        margin:3% 0;
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        margin:2% 0;
+        
+    }
 }
 
 /* images */
 .card-logo img {
     display: block;/* affiche l'element comme un bloc */
     margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
-    width:35%;/* prend 50% de largeur du conteneur */
+    width:50%;/* prend 50% de largeur du conteneur */
 
-    /*-- Tablette --*/
-    @include tablette {
-    width: 30%;/* ajustement largeur pour tablette*/
-    }
 
     /*-- desktop --*/
     @include desktop {
-        width:25%;/* Ajustement largeur pour desktop*/
+        width:20%;/* Ajustement largeur pour desktop*/
     }
     
     /*-- large desktop --*/
@@ -132,9 +139,9 @@
     justify-content: center; /* Centre horizontalement */
     margin: 0 auto;
     align-items: center; /* Centre verticalement */
-    gap:$gap-large;/* Espace entre les éléments de la carte */
+    gap:5%;/* Espace entre les éléments de la carte */
     background-color:#EAEAEA; /* Couleur de fond */
-    box-shadow: 0px 4px 4px 0px #00000040;
+    box-shadow: $shadow-medium;
     padding: $padding-base 0 ; /* Espace intérieur de la carte */
     
     
@@ -174,7 +181,7 @@
 
 /* Icône localisation dans la carte localisation */
 .card-location i {
-    font-size: $font-size-base;/* Taille de l'icône en fonction de la hauteur de l'écran */
+    font-size: 16px;/* Taille de l'icône en fonction de la hauteur de l'écran */
     color:#353535;/* Couleur de l'icône */
 
     /* Tablette */
@@ -201,8 +208,8 @@
 
 /* Adresse dans la carte localisation */
 .carte-location address {
-    font-size: $font-size-base; /* Taille du texte pour l'adresse */
-    color: black; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte pour l'adresse */
+    color:#353535 ; /* Couleur du texte */
     display: flex;
     align-items: center;
 }
@@ -582,7 +589,7 @@ $sections: (
     font-size: $font-size-middle;
     display: flex;
     flex-direction: column;
-    width:95%;
+    width:100%;
 
     /* tablette */
     @include tablette {

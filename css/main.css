@@ -81,6 +81,10 @@
 /*  Mise en évidence ( GRAS )*/
 /* Arrondis des bordures (border-radius) */
 /* Ombres */
+/* Ombres */
+/* Ombre légère avec 10% d'opacité */
+/* Ombre moyenne avec 20% d'opacité */
+/* Ombre plus grande avec 30% d'opacité */
 /* Taille des objets basée sur la largeur de la fenêtre (vw) */
 /* Très petit objet */
 /* Petit objet */
@@ -443,13 +447,13 @@ footer {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   padding: 1rem; /* Padding correspondant à 2% de la hauteur de l'écran */
   color: white; /* Couleur du texte en blanc */
-  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
   border-radius: 2rem; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
   /* Effet de survol */
 }
 .button--primary:hover {
   background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /* Effet de survol avec éclaircissement du dégradé */
-  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 /*  Texte du bouton  */
@@ -519,7 +523,8 @@ footer {
 .icon-favorite:active .fa-full {
   display: flex;
   background: linear-gradient(to top, #FF79DA, #9356DC); /* Changement de couleur */
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; /* Standard */
+  background-clip: text;
   -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
 }
 .icon-favorite:active .fa-empty {
@@ -651,27 +656,33 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /*Couleur de fond blanche */
-  margin: 5% 0 3% 0; /* Définit les marges verticales de la carte */
+  margin: 5% 0; /* Définit les marges verticales de la carte */
   justify-content: center; /* centre les éléments horizontalement */
+  /* Desktop */
+  /* Large desktop */
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo {
+    margin: 3% 0;
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo {
+    margin: 2% 0;
+  }
 }
 
 /* images */
 .card-logo img {
   display: block; /* affiche l'element comme un bloc */
   margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
-  width: 35%; /* prend 50% de largeur du conteneur */
-  /*-- Tablette --*/
+  width: 50%; /* prend 50% de largeur du conteneur */
   /*-- desktop --*/
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
-  .card-logo img {
-    width: 30%; /* ajustement largeur pour tablette*/
-  }
-}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo img {
-    width: 25%; /* Ajustement largeur pour desktop*/
+    width: 20%; /* Ajustement largeur pour desktop*/
   }
 }
 @media (min-width: 1440px) {
@@ -758,9 +769,9 @@ label.card-menu:hover {
   justify-content: center; /* Centre horizontalement */
   margin: 0 auto;
   align-items: center; /* Centre verticalement */
-  gap: 2rem; /* Espace entre les éléments de la carte */
+  gap: 5%; /* Espace entre les éléments de la carte */
   background-color: #EAEAEA; /* Couleur de fond */
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem 0; /* Espace intérieur de la carte */
   /* Tablette */
   /* Desktop */
@@ -798,7 +809,7 @@ label.card-menu:hover {
 
 /* Icône localisation dans la carte localisation */
 .card-location i {
-  font-size: 1rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
+  font-size: 16px; /* Taille de l'icône en fonction de la hauteur de l'écran */
   color: #353535; /* Couleur de l'icône */
   /* Tablette */
   /* Desktop */
@@ -828,8 +839,8 @@ label.card-menu:hover {
 
 /* Adresse dans la carte localisation */
 .carte-location address {
-  font-size: 1rem; /* Taille du texte pour l'adresse */
-  color: black; /* Couleur du texte */
+  font-size: 16px; /* Taille du texte pour l'adresse */
+  color: #353535; /* Couleur du texte */
   display: flex;
   align-items: center;
 }
@@ -843,7 +854,7 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   flex-direction: column; /* Aligne les éléments en colonne */
   border-radius: 1rem; /* Bord arrondis pour la carte */
-  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre portée */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Ombre portée */
   position: relative; /* Permet de positionner des éléments enfants */
   z-index: 1; /* Définit la position sur l'axe Z */
   margin: 20% auto; /* Marges et centrage horizontal */
@@ -1034,7 +1045,7 @@ label.card-menu:hover {
   background-color: white; /* Couleur de fond de la carte menu */
   border-radius: 2vh; /* Bord arrondis */
   display: flex; /* Utilise flexbox pour aligner les éléments */
-  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); /* Ombre portée */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Ombre portée */
   margin: 4% 2%; /* Marges autour de la carte correspondant à 1 % de la hauteur de l'écran */
   align-items: center; /* Centre verticalement les éléments */
   justify-content: space-between; /* Espace entre les éléments */
@@ -1250,7 +1261,7 @@ label.card-menu:hover {
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
   /* tablette */
   /* Desktop */
   /*-- large desktop --*/
