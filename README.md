@@ -1,97 +1,121 @@
-# Ohmyfood
 
-## Description
+# Ohmyfood 🍴
 
-Ohmyfood est un site web mobile-first conçu pour permettre aux utilisateurs de découvrir et de réserver des menus dans une sélection de restaurants de qualité. Ce projet se distingue par :
+Ohmyfood est une application web dédiée à ceux qui recherchent une expérience culinaire fluide et interactive. Réservez vos menus préférés dans les meilleurs restaurants en quelques clics grâce à notre interface conviviale et moderne.
 
-    - Accessibilité : Utilisation de balises HTML sémantiques pour améliorer l'expérience des lecteurs d'écran.
-
-    - Responsive design : Approche mobile-first pour une compatibilité sur smartphone, tablette et ordinateur.
-
-    - Animations CSS : Amélioration de l'interactivité et de l'esthétique avec des transitions fluides.
+## Aperçu visuel
 
 ## Fonctionnalités principales
 
-Voici les fonctionnalités principales offertes par Ohmyfood :
-
 ### Page d'accueil
 
-    - Présentation des restaurants sous forme de cartes interactives.
-
-    - Bandeau principal contenant un appel à l’action.
-
-    - Section explicative décrivant le fonctionnement du service.
+- **Cartes interactives** : Chaque restaurant est représenté par une carte dynamique qui s'anime au survol.
+- **Appel à l'action clair** : Réservez facilement grâce à des boutons intuitifs.
+- **Section explicative** : Découvrez comment utiliser Ohmyfood pour simplifier vos réservations.
 
 ### Pages spécifiques aux restaurants
 
-    - Présentation du restaurant (image, description, emplacement).
-    - Liste des menus avec descriptions et prix.
-    - Boutons pour réserver directement un menu.
+- **Présentation des restaurants** : Image, description et emplacement.
+- **Menus détaillés** : Visualisez les menus avec leurs descriptions et prix.
+- **Réservations rapides** : Boutons dédiés pour réserver en un clic.
 
 ### Animations CSS
 
-    - Chargement interactif avec effets visuels.
-    - Transitions fluides pour améliorer l'expérience utilisateur.
+- **Chargement interactif** avec effets visuels.
+- **Transitions fluides** pour améliorer l'expérience utilisateur.
 
 ### Accessibilité
 
-Balises ARIA pour les lecteurs d'écran.
+- **Balises ARIA** pour les lecteurs d'écran.
 
 ## Prérequis
 
 Pour configurer et exécuter ce projet localement, assurez-vous que les éléments suivants sont installés :
 
-    - Node.js (version 14 ou supérieure)  : Nécessaire pour exécuter des scripts et compiler Sass.
-    - npm (ou yarn)  : Gestionnaire de paquets pour installer les dépendances. npm est inclus avec Node.js.
-    - Sass  : Préprocesseur CSS utilisé pour organiser et optimiser les styles. 
-    - Navigateur moderne : Un navigateur comme Chrome ou Firefox pour tester le rendu du site.
+- **Node.js** (version 14 ou supérieure) : Nécessaire pour exécuter des scripts et compiler Sass.
+- **npm (ou yarn)** : Gestionnaire de paquets pour installer les dépendances. npm est inclus avec Node.js.
+- **Sass** : Préprocesseur CSS utilisé pour organiser et optimiser les styles.
+- **Navigateur moderne** : Un navigateur comme Chrome ou Firefox pour tester le rendu du site.
 
-## Technologie utilisées
+## Technologies utilisées
 
-    - HTML5 : Structuration des pages web.
-    - CSS3 / SCSS : Styles et animations avancées avec un préprocesseur Sass.
-    - Node.js et npm : Gestion des dépendances et compilation des fichiers SCSS en CSS.
+- **HTML5** : Structuration des pages web.
+- **CSS3 / SCSS** : Styles et animations avancées avec un préprocesseur Sass.
+- **Node.js et npm** : Gestion des dépendances et compilation des fichiers SCSS en CSS.
 
-## Installation
+## Installation rapide
 
-1.Téléchargez et installez Node.js : Rendez-vous sur <https://nodejs.org/>
+Clonez le projet :
 
-    - Téléchargez la version LTS recommandée.
-    - Installez Node.js en suivant les instructions pour votre système d'exploitation.
-    - Vérifiez l'installation :
-        node -v
-        npm -v
+```sh
+git clone https://github.com/username/ohmyfood.git
+cd ohmyfood
+```
 
-2.Initialisez votre projet Node.js
+Installez les dépendances :
 
-    - Ouvrez un terminal ou une invite de commandes,
-    - accédez au dossier de votre projet,
-    - exécutez :
-    
-    ```bash
-     npm init -y
+```sh
+npm install
+```
 
-Cela crée un fichier package.json qui contient les informations de base sur votre projet.
+Compilez les fichiers SCSS :
 
-3.Ajoutez Sass comme dépendance de développement :
+```sh
+npm run sass
+```
 
-    - Installez Sass localement dans le projet : npm install sass --save-dev
+Ouvrez le fichier `index.html` :
 
-Cette commande ajoute Sass à la section devDependencies de votre fichier package.json.
+- Utilisez votre navigateur ou un serveur local (comme VS Code Live Server).
 
-4.Ajoutez un script pour compiler Sass :
+## Installation pas à pas
 
-    Dans votre fichier package.json:
-    - ajoutez une section scripts (ou modifiez-la si elle existe déjà) pour inclure Sass :
-    ```bash
-            "scripts": {
-                "sass": "sass --watch scss:css"
-            }
+1. **Téléchargez et installez Node.js** :
+   - Rendez-vous sur [Node.js](https://nodejs.org).
+   - Téléchargez la version LTS recommandée.
+   - Installez Node.js en suivant les instructions pour votre système d'exploitation.
+   - Vérifiez l'installation :
 
-Cela configure un script qui surveille les fichiers SCSS dans le dossier scss et les compile en CSS dans le dossier css.
+   ```sh
+   node -v
+   npm -v
+   ```
 
-5.Compilez les fichiers SCSS :
-Pour compiler et suivre les évolutions en temps réel : npm run sass
+2. **Initialisez votre projet Node.js** :
+   - Ouvrez un terminal ou une invite de commandes, accédez au dossier de votre projet, puis exécutez :
+
+   ```sh
+   npm init -y
+   ```
+
+   Cela crée un fichier `package.json` qui contient les informations de base sur votre projet.
+
+3. **Ajoutez Sass comme dépendance de développement** :
+   - Installez Sass localement dans le projet :
+
+   ```sh
+   npm install sass --save-dev
+   ```
+
+   Cette commande ajoute Sass à la section `devDependencies` de votre fichier `package.json`.
+
+4. **Ajoutez un script pour compiler Sass** :
+   - Modifiez votre fichier `package.json` pour inclure ce script dans la section `scripts` :
+
+   ```json
+   "scripts": {
+       "sass": "sass --watch scss:css"
+   }
+   ```
+
+   Cela configure un script qui surveille les fichiers SCSS dans le dossier `scss` et les compile en CSS dans le dossier `css`.
+
+5. **Compilez les fichiers SCSS** :
+   - Pour compiler et suivre les évolutions en temps réel, exécutez :
+
+   ```sh
+   npm run sass
+   ```
 
 ## Structure des fichiers
 
@@ -117,17 +141,17 @@ ohmyfood/
 │
 ├── scss/                   # Fichiers SCSS pour les styles
 │   ├── components/         # Boutons, cartes, etc.
-│   │   ├──  _button.scss   
-│   │   ├──  _card.scss 
+│   │   ├── _button.scss   
+│   │   ├── _card.scss
 │   ├── layout/             # Header, footer, structures principales
-│   │   ├──  _common.css     
-│   │   ├──  _footer.scss
-│   │   ├──  _header.scss
-│   │   ├──  _loader.scss
-│   │   ├──  _reset.scss
+│   │   ├── _common.css     
+│   │   ├── _footer.scss
+│   │   ├── _header.scss
+│   │   ├── _loader.scss
+│   │   ├── _reset.scss
 │   ├── pages/              # Styles spécifiques pour chaque page
-│   │   ├──  _accueil.scss
-│   │   ├──  _menu.scss
+│   │   ├── _accueil.scss
+│   │   ├── _menu.scss
 │   ├── util/               # Variables, mixins, animations
 │   │   ├── _variables.scss # Couleurs, typographie, etc.
 │   │   ├── _mixins.scss    # Media queries, styles réutilisables
@@ -139,5 +163,13 @@ ohmyfood/
 ├── package.json            # Configuration pour npm
 │
 └── README.md               # Documentation du projet
+```
 
+## Améliorations apportées
 
+- Les indentations des blocs de code sont corrigées.
+- Ajout de séparation visuelle entre les étapes pour plus de lisibilité.
+- Uniformisation des titres et des listes.
+- Réorganisation pour éviter des confusions avec des doublons de sections.
+
+Ce format est prêt à être intégré et respecte les bonnes pratiques de Markdown. 😊
