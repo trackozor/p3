@@ -29,6 +29,7 @@
     background-color:#F6F6F6;
     margin: 0 auto;
     padding: 5% 0;
+    margin-bottom: 4%;
 
     /*Tablette*/
     @include tablette {
@@ -40,6 +41,7 @@
     }
 
     @include large-desktop {
+        width:100%;
         padding:1% 0;
     }
 }
@@ -47,12 +49,12 @@
 .bandeau h2 {
     width:75%;
     font-size: 1.5rem;
-    margin:1% 0;
+    margin:2% 0 3% 0;
     
     /* Desktop */
     @include desktop {
         padding:0.5% 0; /* Padding haut/bas correspondant à 0.5% de la largeur de l'écran */
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin:0;
     }
 
@@ -62,14 +64,22 @@
     }
 }
 .button--primary {
-    margin: 2% 0;
+    margin: 3% 0;
 }
 
 /* Texte */
 .bandeau p {
-    width: 80%;
+    width: 90%;
+    color: #353535;
+    font-size: 18px;
     padding: 2% 0; /* Padding haut/bas et gauche/droite */
-    margin-bottom: 2%  /* Marge en bas du paragraphe */
+    margin-bottom: 2%;  /* Marge en bas du paragraphe */
+    font-weight: 500;
+
+    @include desktop {
+        font-size: 16px;
+        margin:0;
+    }
 }
 
 
@@ -80,6 +90,7 @@
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
     background-color:#FFFFFF ;
+    padding:6% 0;
 
     /*-- Tablette --*/
     @include tablette {
@@ -95,8 +106,8 @@
 
     /*-- large desktop --*/
     @include large-desktop {
-        padding: 2%;
-        max-width: 1024px;
+        padding: 2% 0;
+        width:100%;
         margin: 0 auto;
 
     }
@@ -132,9 +143,9 @@
     display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
     flex-direction: column; /* Alignement en colonne */
     align-items: center; /* Centre les éléments sur l'axe vertical */
-    width: 90%; /* Largeur de 90% pour le conteneur */
+    width: 85%; /* Largeur de 90% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
-    margin:0 auto;
+    margin:1% auto;
 
 
     /* Desktop */

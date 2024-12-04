@@ -26,7 +26,7 @@ body {
   margin: 0 auto;  /* Centrage du contenu */
   overflow-x: hidden;  /* Empêche le débordement horizontal */
   min-width: 300px;
-  max-width:1440px;
+
 
   /* Pour les tablettes */
   @include tablette {

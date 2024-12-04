@@ -21,6 +21,7 @@
 /*--- Bouton principal avec dégradé ----------------- */
 /*----------------------------------------------------*/
 
+/* Conteneur */
 .button--primary {
   display: flex; /* Utilise flexbox pour aligner les éléments */
   align-items: center; /* Aligne les éléments verticalement */
@@ -41,7 +42,7 @@
 /*  Texte du bouton  */
 .button--primary-txt {
   font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
-  font-weight: $font-weight-medium; /* Style de police en gras (bold) */
+  font-weight: 500; /* Style de police en gras (bold) */
 
 }
 /*-------------------------------------*/
@@ -78,6 +79,7 @@
   display: none; /* Caché par défaut */
   z-index: 3; /* Superposition au-dessus des autres éléments */
   position: relative;
+  color:$button--search-primary-color;
 }
 
 /* Style des icônes */
@@ -108,24 +110,14 @@
 .icon-favorite:active {
   .fa-full {
     display: flex; /* Affiche l'icône pleine */
-    animation: likeFill 1s ease-in forwards; /* Animation de remplissage */
-    color: $button--search-secondary-color; /* Changement de couleur */
+    color: $button--search-primary-color; /* Changement de couleur */
   }
   .fa-empty {
     display: none; /* Cache l'icône vide */
   }
 }
 
-/* État après le clic */
-.icon-favorite:after {
-  .fa-full {
-    color:$button--search-primary-color; /* Change la couleur de l'icône pleine */
-    display: flex; /* Affiche l'icône pleine */
-  }
-  .fa-empty {
-    display: none; /* Cache l'icône vide */
-  }
-}
+
 
 /* Cache l'input */
 input {

@@ -66,7 +66,11 @@ Pour configurer et exécuter ce projet localement, assurez-vous que les élémen
 
     - Ouvrez un terminal ou une invite de commandes,
     - accédez au dossier de votre projet,
-    - exécutez : npm init -y
+    - exécutez :
+    
+    ```bash
+     npm init -y
+
 Cela crée un fichier package.json qui contient les informations de base sur votre projet.
 
 3.Ajoutez Sass comme dépendance de développement :
@@ -79,10 +83,11 @@ Cette commande ajoute Sass à la section devDependencies de votre fichier packag
 
     Dans votre fichier package.json:
     - ajoutez une section scripts (ou modifiez-la si elle existe déjà) pour inclure Sass :
-
+    ```bash
             "scripts": {
                 "sass": "sass --watch scss:css"
             }
+
 Cela configure un script qui surveille les fichiers SCSS dans le dossier scss et les compile en CSS dans le dossier css.
 
 5.Compilez les fichiers SCSS :
