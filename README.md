@@ -164,12 +164,3 @@ ohmyfood/
 │
 └── README.md               # Documentation du projet
 ```
-
-## Améliorations apportées
-
-- Les indentations des blocs de code sont corrigées.
-- Ajout de séparation visuelle entre les étapes pour plus de lisibilité.
-- Uniformisation des titres et des listes.
-- Réorganisation pour éviter des confusions avec des doublons de sections.
-
-Ce format est prêt à être intégré et respecte les bonnes pratiques de Markdown. 😊
