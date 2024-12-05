@@ -911,6 +911,15 @@ label.card-menu:hover {
   }
 }
 
+/* Ajustemement personnalisé des images ----------------------------------*/
+#francaise img {
+  object-position: center 98%;
+}
+
+#delice img {
+  object-position: center 90%;
+}
+
 /* Titre de la carte restaurant */
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
@@ -1744,9 +1753,8 @@ label.card-menu:hover {
   }
 }
 
-/*----------------------------------------------------------------------------------------------------------*/
-/*--------------------------------- Icône de la liste -------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/* Icône de la liste */
 i {
   color: grey; /* Couleur grise pour les icônes */
   font-size: 1rem; /* Taille de la police pour les icônes */
@@ -1773,12 +1781,16 @@ i {
   }
 }
 
-/*------------------------------------------- Icône Store --------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/* Icône Store  */
 .fa-store {
   color: #9356DC; /* Couleur de l'icône store */
 }
 
-/*----------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+/*                   SECTION RESTAURANT                               */
+/*--------------------------------------------------------------------*/
+/* Conteneur */
 #section-restaurants {
   background-color: #f9f9f9;
   display: flex;
@@ -1823,7 +1835,8 @@ i {
   }
 }
 
-/*---------------------------- Titre de la section restaurants ----------------------------------*/
+/*----------------------------------------------------------------*/
+/* Titre de la section restaurants */
 #section-restaurants h2 {
   margin: 1rem 5%;
   /*-- large desktop --*/
@@ -1837,15 +1850,6 @@ i {
   #section-restaurants h2 {
     width: 95%;
   }
-}
-
-/*---------------------------- Ajustemement personnalisé des images ----------------------------------*/
-#francaise img {
-  object-position: center 98%;
-}
-
-#delice img {
-  object-position: center 90%;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
