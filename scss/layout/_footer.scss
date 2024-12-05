@@ -23,4 +23,182 @@ footer {
     background-color:#353535 ; /* Définit la couleur de fond du footer */
     color: white; /* Définit la couleur du texte et des icônes à blanc */
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
+    padding-bottom: 2%;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/*----------------------------------------- Footer Carte----------------------------------------------*/
+/* ---------------------------------------------------------------------------------------------------*/
+
+/*-- Conteneur principal --*/
+.footer-card {
+    padding: $padding-medium-vh 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    font-size: $font-size-middle;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+
+    /* tablette */
+    @include tablette {
+        padding: 2% 5% ; /* Padding vertical pour tablette */
+    }
+
+    /* Desktop */
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse; /* Alignement horizontal des éléments */
+        align-items: center; /* Aligne les éléments verticalement */
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        height: auto;
+        font-size: $font-size-middle;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        justify-content: flex-start;
+        margin-left: 30%;
+        padding-right: 0;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: row-reverse; /* Alignement horizontal des éléments */
+        align-items: center; /* Aligne les éléments verticalement */
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        justify-content: flex-start;
+        margin-left: 55%;
+    }   
+}
+
+/*----------------------------------------------------------------*/
+/*-- Icônes dans le footer --*/
+.fa-handshake, .fa-utensils {
+    margin-right: $margin-small; /* Espace à droite des icônes */
+    margin-left: 0; /* Pas d'espace à gauche */
+    color: white; /* Couleur blanche pour les icônes */
+    font-size: 0.7rem;
+
+    /* tablette */
+    @include tablette {
+        margin-left: 0;
+        font-size: 1rem; /* Taille de l'icône pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        margin-right: 0.7rem; /* Padding horizontal pour desktop */
+        margin-left: 0; /* Pas d'espace à gauche*/
+        font-size: 0.9rem; /* Taille de l'icône pour desktop */
+    }
+    
+    /*-- large desktop --*/
+    @include large-desktop {
+        margin-right: 0.6rem; /* Padding horizontal pour desktop */
+        margin-left: 0; /* Pas d'espace à gauche*/
+        font-size: 1rem; /* Taille de l'icône pour desktop */
+    }
+}
+
+/*------------------------------------------------------------*/
+/*-- Icône poignée de mains dans le footer --*/
+.fa-handshake {
+    transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
+
+}
+
+/*------------------------------------------------------------*/
+/*-- Liste dans le footer --*/
+.footer-card li {
+    margin: 3% 0; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
+
+
+    /* tablette */
+    @include tablette {
+        margin-top:2%; /* Marge supérieur pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        margin-top: $margin-base; /* Marge supérieur pour desktop */
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+        justify-content: flex-end;
+    }        
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        margin-top: 0.2rem; /* Marge supérieur pour desktop */
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+    }             
+
+}
+
+/*------------------------------------------------------------*/
+/*-- listes --*/
+.footer-card ul {
+    @include tablette {
+        margin: 2% 0;
+        padding: 2% 0; /* Pas de marge supérieur pour tablette */
+        font-size: 1rem;
+    }
+
+    @include desktop {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: flex-end;
+    gap: $gap-base; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    align-items: center;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        display: flex; /* Utilise flexbox pour aligner les éléments */
+        justify-content: flex-end;
+        gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+        flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+        list-style: none; /* Retire les puces de la liste */
+        padding: 0;
+        align-items: center;
+        margin-left: 50%;
+    }
+
+}
+
+
+/*------------------------------------------------------------*/
+/*-- logo dans le footer --*/
+.footer-card   img {
+    display:flex;
+    width: 30%; /* L'image occupe 30% de la largeur du footer */
+    margin: $margin-small 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+    padding-bottom: $padding-xsmall; /* Padding inférieur correspondant à 1% de la hauteur */
+
+    /* tablette */
+    @include tablette {
+        width: 25%; /* L'image occupe 30% de la largeur  */
+        margin:0; /* Marge verticale pour tablette */
+        padding-top: $padding-base; /* Padding inférieur pour tablette */
+    }
+    
+    /* Desktop */
+    @include desktop {
+        width: 15%; /* L'image occupe 30% de la largeur  */
+        margin:0 7% ; /* Marge verticale pour desktop */
+        padding-top: $padding-base; /* Padding inférieur pour desktop */
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        width: 20%; /* L'image occupe 30% de la largeur  */
+        margin:2% 5% ; /* Marge verticale pour desktop */
+        padding-top:1.5%; /* Padding inférieur pour desktop */
+    }
 }
