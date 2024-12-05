@@ -887,6 +887,7 @@ label.card-menu:hover {
   }
 }
 
+/*----------------------------------------------------------------*/
 /* Image dans la carte restaurant */
 .card img {
   width: 100%;
@@ -911,7 +912,8 @@ label.card-menu:hover {
   }
 }
 
-/* Ajustemement personnalisé des images ----------------------------------*/
+/*----------------------------------------------------------------*/
+/* Ajustemement personnalisé des images  */
 #francaise img {
   object-position: center 98%;
 }
@@ -927,6 +929,7 @@ label.card-menu:hover {
   margin-bottom: 0.2rem;
 }
 
+/*----------------------------------------------------------------*/
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
   font-size: 1rem; /* Taille du texte */
@@ -948,6 +951,7 @@ label.card-menu:hover {
   }
 }
 
+/*------------------------------------------------------------------*/
 /* Icône favorite dans la carte restaurant */
 .card .icon-favorite {
   display: block; /* Affiche l'icône favorite */
@@ -977,6 +981,7 @@ label.card-menu:hover {
   }
 }
 
+/*----------------------------------------------------------------*/
 /* Texte dans la carte restaurant */
 .card-txt {
   padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
@@ -1054,6 +1059,7 @@ label.card-menu:hover {
   animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 }
 
+/*-------------------------------------------------------------*/
 /*-- Item du menu --*/
 .menu-item {
   width: 100%; /* L'élément du menu prend toute la largeur disponible */
@@ -1072,6 +1078,7 @@ label.card-menu:hover {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Liste des sections et délais de départ */
 /* boucle */
 .entrées li:nth-child(1) .card-menu {
@@ -1122,6 +1129,7 @@ label.card-menu:hover {
   animation-delay: 5.5s;
 }
 
+/*-------------------------------------------------------------*/
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
   display: block;
@@ -1151,6 +1159,7 @@ label.card-menu:hover {
   }
 }
 
+/*-------------------------------------------------------------*/
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
   width: 100%; /* prend toue la largeur disponible*/
@@ -1190,6 +1199,7 @@ label.card-menu:hover {
   width: 70%;
 }
 
+/*-------------------------------------------------------------*/
 /*-- Contenu du plat (nom et prix) --*/
 .dish-content {
   display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -1198,6 +1208,7 @@ label.card-menu:hover {
   justify-content: space-between;
 }
 
+/*------------------------------------------------------------*/
 /*-- Prix du plat dans la carte menu --*/
 .dish-content .price {
   font-size: 0.7rem; /* Taille du texte pour le prix */
@@ -1302,6 +1313,7 @@ label.card-menu:hover {
   }
 }
 
+/*----------------------------------------------------------------*/
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
   margin-right: 0.5rem; /* Espace à droite des icônes */
@@ -1333,11 +1345,13 @@ label.card-menu:hover {
   }
 }
 
+/*------------------------------------------------------------*/
 /*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
   transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
 }
 
+/*------------------------------------------------------------*/
 /*-- Liste dans le footer --*/
 .footer-card li {
   margin-top: 0.25rem; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
@@ -1368,6 +1382,7 @@ label.card-menu:hover {
   }
 }
 
+/*------------------------------------------------------------*/
 /*-- listes --*/
 .footer-card ul {
   /*-- large desktop --*/
@@ -1403,13 +1418,7 @@ label.card-menu:hover {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
-  .footer-card li a {
-    padding: 2% 0;
-    margin: 1% 0;
-  }
-}
-
+/*------------------------------------------------------------*/
 /*-- logo dans le footer --*/
 .footer-card img {
   display: flex;

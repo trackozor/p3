@@ -275,7 +275,7 @@
 }
 
 
-
+/*----------------------------------------------------------------*/
 /* Image dans la carte restaurant */
 .card  img {
     width: 100%;
@@ -301,8 +301,8 @@
 
 }
 
-/* Ajustemement personnalisé des images ----------------------------------*/
-
+/*----------------------------------------------------------------*/
+/* Ajustemement personnalisé des images  */
 #francaise img {
     object-position: center 98%;
 }
@@ -319,6 +319,7 @@
 }
 
 
+/*----------------------------------------------------------------*/
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
     font-size: $font-size-base; /* Taille du texte */
@@ -338,6 +339,7 @@
     }
 }
 
+/*------------------------------------------------------------------*/
 /* Icône favorite dans la carte restaurant */
 .card .icon-favorite {
     display: block; /* Affiche l'icône favorite */
@@ -364,6 +366,7 @@
     }
 }
 
+/*----------------------------------------------------------------*/
 /* Texte dans la carte restaurant */
 .card-txt {
     padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
@@ -447,6 +450,7 @@
     animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 }
 
+/*-------------------------------------------------------------*/
 /*-- Item du menu --*/
 .menu-item {
     width: 100%; /* L'élément du menu prend toute la largeur disponible */
@@ -462,6 +466,7 @@
     }
 }
 
+/*-------------------------------------------------------------*/
 /* Liste des sections et délais de départ */
 $sections: (
     "entrées": 0.5s,
@@ -478,6 +483,7 @@ $sections: (
     }
 }
 
+/*-------------------------------------------------------------*/
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     display: block;
@@ -506,6 +512,7 @@ $sections: (
 
 }
 
+/*-------------------------------------------------------------*/
 /*-- Description du plat dans la carte menu --*/
 .dish-description {
     width: 100%;/* prend toue la largeur disponible*/
@@ -545,6 +552,7 @@ $sections: (
 
 }
 
+/*-------------------------------------------------------------*/
 /*-- Contenu du plat (nom et prix) --*/
 .dish-content {
     display: flex; /* Utilise flexbox pour aligner les éléments */
@@ -553,6 +561,7 @@ $sections: (
     justify-content: space-between;
 }
 
+/*------------------------------------------------------------*/
 /*-- Prix du plat dans la carte menu --*/
 .dish-content .price {
     font-size: 0.7rem; /* Taille du texte pour le prix */
@@ -602,6 +611,8 @@ $sections: (
         transform: translateX(-7rem); /* Glisse vers la gauche de 20px pour large desktop */
     }
 }
+
+
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Footer Carte----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
@@ -649,6 +660,7 @@ $sections: (
     }   
 }
 
+/*----------------------------------------------------------------*/
 /*-- Icônes dans le footer --*/
 .fa-handshake, .fa-utensils {
     margin-right: $margin-small; /* Espace à droite des icônes */
@@ -676,12 +688,15 @@ $sections: (
         font-size: 1rem; /* Taille de l'icône pour desktop */
     }
 }
+
+/*------------------------------------------------------------*/
 /*-- Icône poignée de mains dans le footer --*/
 .fa-handshake {
     transform: scaleX(1) rotate(325deg); /* Rotation et transformation de l'icône */
 
 }
 
+/*------------------------------------------------------------*/
 /*-- Liste dans le footer --*/
 .footer-card li {
     margin-top: $margin-xsmall; /* Marge supérieur correspondant a 1% de la hauteur de l'écran*/
@@ -710,6 +725,8 @@ $sections: (
     }             
 
 }
+
+/*------------------------------------------------------------*/
 /*-- listes --*/
 .footer-card ul {
     @include tablette {
@@ -741,12 +758,9 @@ $sections: (
     }
 
 }
-.footer-card li a {
-    @include tablette{
-    padding:2% 0;
-    margin: 1% 0;
-    }
-}
+
+
+/*------------------------------------------------------------*/
 /*-- logo dans le footer --*/
 .footer-card   img {
     display:flex;
