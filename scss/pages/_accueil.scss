@@ -2,7 +2,7 @@
 /* Nom du fichier      : _section-bandeau.scss                                                              */
 /* Auteur              : Trackozor                                                                          */
 /* Date de création    : 25/09/24                                                                           */
-/* Dernière modification: 27/09/24                                                                          */
+/* Dernière modification: 07/12/24                                                                          */
 /* Description         : Styles pour la section bandeau et la liste de fonctionnement,                      */
 /*                       avec ajustements pour les différents breakpoints (mobile landscape, desktop)       */
 /*                       et gestion de l'affichage flex pour les étapes avec icônes.                        */
@@ -12,10 +12,13 @@
 /*  Version             : 1.0                                                                               */
 /*  Framework utilisé   : SCSS                                                                              */
 /* -------------------------------------------------------------------------------------------------------  */
-/*  Révisions :                                                                                             */
+/*  Révisions : organisation et restructuration fichier                                                     */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 
+/*--------------------------------------------------------------------*/
+/*                   SECTION Bandeau                                   */
+/*--------------------------------------------------------------------*/
 
 /* Conteneur parent bandeau */
 
@@ -33,27 +36,33 @@
 
     /*Tablette*/
     @include tablette {
-    padding:2% 0;
+        padding:2% 0;
     }
 
+    /* Desktop */
     @include desktop{
         padding: 2% 0;
     }
 
+    /* Large desktop */
     @include large-desktop {
         width:100%;
         padding:1% 0;
     }
 }
 
+
+/*--------------------------------------------------------------------*/
 /*  Titre */
+
 .bandeau h2 {
     width:75%;
     font-size: 1.5rem;
     margin:2% 0 3% 0;
 
+    /* tablette */
     @include tablette {
-    font-size: 2rem;    
+        font-size: 2rem;    
     }
     
     /* Desktop */
@@ -69,11 +78,9 @@
     }
 }
 
-.button--primary {
-    margin: 3% 0;
-}
-
+/*--------------------------------------------------------------------*/
 /* Texte */
+
 .bandeau p {
     width: 90%;
     color: #353535;
@@ -88,6 +95,9 @@
     }
 }
 
+/*--------------------------------------------------------------------*/
+/*                   SECTION FONCTIONNEMENT                           */
+/*--------------------------------------------------------------------*/
 
 /* Conteneur parent liste  */
 .fonctionnement {
@@ -119,6 +129,7 @@
     }
 }
 
+/*----------------------------------------------------------------*/
 /*  Titre */
 .fonctionnement h2 {
     margin: 1rem 0;
@@ -143,6 +154,7 @@
     }
 }
 
+/*----------------------------------------------------------------*/
 /*  Liste */
 
 .fonctionnement ol {
@@ -171,6 +183,7 @@
     }
 }
 
+/*-----------------------------------------------------------------*/
 /* Liste : Lignes */
 .fonctionnement li {
     display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
@@ -209,6 +222,7 @@
 }
 
 
+/*-----------------------------------------------------------------*/
 /* Texte */
 
 .li-txt {
@@ -252,7 +266,7 @@
     }
 }
 
-
+/*----------------------------------------------------------------*/
 /*puces*/
 
 .puce_num {
@@ -325,8 +339,9 @@ i {
 .fa-store {
     color: $button--search-primary-color; /* Couleur de l'icône store */
 }
-/*_section-restaurant.scss*/
 
+
+/*----------------------------------------------------------------*/
 #section-restaurants {
     background-color: #f9f9f9;
     display: flex;
@@ -368,6 +383,9 @@ i {
         padding:2% 0;
     }
 }
+
+
+/*---------------------------- Titre de la section restaurants ----------------------------------*/
 
 #section-restaurants h2 {
     margin:$margin-base 5%;

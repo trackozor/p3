@@ -248,7 +248,6 @@
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Aligne les éléments en colonne */
     border-radius: $border-radius-medium; /* Bord arrondis pour la carte */
-    box-shadow: $shadow-medium; /* Ombre portée */
     position: relative; /* Permet de positionner des éléments enfants */
     z-index: 1; /* Définit la position sur l'axe Z */
     margin: 2% auto; /* Marges et centrage horizontal */
@@ -307,8 +306,8 @@
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
     font-weight: $font-weight-bold; /* Gras du texte correspondant à une valeur de 900 */
     margin-bottom: 0.2rem;
-
 }
+
 
 /* Zone de texte dans la carte restaurant */
 .card .card-title {
@@ -320,7 +319,6 @@
     @include tablette {
         font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
         gap: $gap-base; /* Espace pour tablette */
-        margin-top: $margin-base; /* Marges pour tablette */
     }
 
     /* Desktop */   
@@ -335,19 +333,19 @@
     display: block; /* Affiche l'icône favorite */
     position: absolute; /* Position absolue pour l'icône */
     z-index: 2; /* Au-dessus du contenu principal */
-    left: 90%; /* Position horizontale de l'icône */
-    bottom:15%; /* Position verticale de l'icône */
+    left: 87%; /* Position horizontale de l'icône */
+    bottom:13%; /* Position verticale de l'icône */
 
     /* Tablette */
     @include tablette {
         left: 90%; /* Position horizontale de l'icône pour tablette */
-        bottom: 12.5%; /* Position verticale de l'icône pour tablette */
+        bottom: 10%; /* Position verticale de l'icône pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         left: 88%; /* Position horizontale de l'icône pour desktop */
-        bottom: 15%; /* Position verticale de l'icône pour desktop */
+        bottom: 12.5%; /* Position verticale de l'icône pour desktop */
     }
 
     @include large-desktop {
@@ -359,18 +357,7 @@
 /* Texte dans la carte restaurant */
 .card-txt {
     padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
-
-    /* tablette */
-    @include tablette {
-        padding: $padding-base 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
-        margin-bottom: 1rem;
-    }
     
-    /* Desktop */
-    @include desktop {
-        padding: $padding-small 0; /* espace intérieur haut/bas correspondant à 0.5% de la largeur de l'écran */
-        margin-bottom: 2%;
-    }
 }
 
 
