@@ -1262,7 +1262,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-item {
-    width: 100%; /* Largeur de l'élément du menu pour desktop */
+    width: 30%; /* Largeur de l'élément du menu pour desktop */
   }
 }
 
@@ -1889,8 +1889,8 @@ main {
 
 .menu {
   background-color: #f9f9f9; /* Couleur de fond grise claire */
-  border-radius: 3vh 3vh 0 0; /* Bord arrondi en haut */
-  padding-top: 4vh; /* Padding en haut de la carte menu */
+  border-radius: 1.5rem 1.5rem 0 0; /* Bord arrondi en haut */
+  padding-top: 10%; /* Padding en haut de la carte menu */
   position: relative; /* Positionnement relatif pour gérer les éléments internes */
   z-index: 1; /* Superposition des éléments */
   height: auto; /* Hauteur automatique en fonction du contenu */
@@ -1939,8 +1939,29 @@ main {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu ul {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* Style des sous-titres h3 dans le menu */
+.menu h3 {
+  margin: 3% 0 2% 2%; /* Marges autour du sous-titre */
+  border-bottom: #99E2D0 0.5vh solid; /* Bordure en bas du sous-titre */
+  width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
+  padding-bottom: 1vh; /* Padding en bas du sous-titre */
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu h3 {
+    width: 2%;
+    margin-left: 17%;
+  }
+}
+
 /*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Images Menu Palette --------------------------------------------*/
+/*--------------------------------------- Images Menu note enchantée --------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "La note enchantée */
 .menu-image-alt3 {
@@ -2016,9 +2037,9 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image pour le menu alternatif 2 "À la française" */
 .menu-image-alt2 {
-  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: auto; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Largeur à 100% */
-  object-position: 50% 195%; /* Positionnement bas de l'image */
+  object-position: 50% 115%; /* Positionnement bas de l'image */
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
@@ -2026,9 +2047,9 @@ main {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .menu-image-alt2 {
-    height: 40vw; /* Hauteur ajustée pour tablette */
+    height: 40vw;
     width: 100%; /* Largeur à 100% pour tablette */
-    object-position: 50% 85%; /* Positionnement bas de l'image pour tablette */
+    object-position: 55% 95%; /* Positionnement bas de l'image pour tablette */
     object-fit: cover; /* Ajustement de l'image pour tablette */
   }
 }
@@ -2041,7 +2062,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt2 {
-    height: 30vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+    height: 35vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
     object-fit: cover; /* Ajustement de l'image pour large desktop */
@@ -2211,14 +2232,6 @@ main {
   .title3 h2 {
     font-size: 1.7rem;
   }
-}
-
-/* Style des sous-titres h3 dans le menu */
-.menu h3 {
-  margin: 3% 0 2% 2%; /* Marges autour du sous-titre */
-  border-bottom: #99E2D0 0.5vh solid; /* Bordure en bas du sous-titre */
-  width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
-  padding-bottom: 1vh; /* Padding en bas du sous-titre */
 }
 
 /*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
