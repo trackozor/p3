@@ -244,7 +244,7 @@
 
 /* Conteneur parent de la carte restaurant */
 .card {
-    width: 100%;
+    width: 90%;
     display: flex; /* Utilise flexbox pour aligner les éléments */
     flex-direction: column; /* Aligne les éléments en colonne */
     border-radius: $border-radius-medium; /* Bord arrondis pour la carte */
@@ -259,19 +259,18 @@
 
     /* Tablette */
     @include tablette {
-        width: 100%;
         max-height: 350px;
     }
 
         /* Desktop */
     @include desktop {
-    width: 40%;
+    width: 45%;
     max-height:350px;
     }
 
     /*-- large desktop --*/
     @include large-desktop {
-    width: 40%;
+    width: 45%;
     }
 
 }

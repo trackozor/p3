@@ -856,7 +856,7 @@ label.card-menu:hover {
 /* ------------------------------------------------------------------------------------------*/
 /* Conteneur parent de la carte restaurant */
 .card {
-  width: 100%;
+  width: 90%;
   display: flex; /* Utilise flexbox pour aligner les éléments */
   flex-direction: column; /* Aligne les éléments en colonne */
   border-radius: 1rem; /* Bord arrondis pour la carte */
@@ -873,19 +873,18 @@ label.card-menu:hover {
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .card {
-    width: 100%;
     max-height: 350px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card {
-    width: 40%;
+    width: 45%;
     max-height: 350px;
   }
 }
 @media (min-width: 1440px) {
   .card {
-    width: 40%;
+    width: 45%;
   }
 }
 
@@ -1551,7 +1550,7 @@ label.card-menu:hover {
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
   background-color: #FFFFFF;
-  padding: 6% 0;
+  padding: 4% 0;
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/
@@ -1607,9 +1606,9 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour l'affichage des éléments de la liste */
   flex-direction: column; /* Alignement en colonne */
   align-items: center; /* Centre les éléments sur l'axe vertical */
-  width: 85%; /* Largeur de 90% pour le conteneur */
+  width: 90%; /* Largeur de 90% pour le conteneur */
   justify-content: center; /* Centre les éléments horizontalement */
-  margin: 1% auto;
+  margin: 2% auto;
   /* Desktop */
   /* Large desktop */
 }
@@ -1627,7 +1626,6 @@ label.card-menu:hover {
     justify-content: space-around; /* Espace autour des éléments pour large desktop */
     margin: 0 auto;
     width: 90%;
-    margin-right: 6%;
   }
 }
 
@@ -1641,7 +1639,8 @@ label.card-menu:hover {
   z-index: 1; /* Superposition sur l'axe Z */
   width: 95%; /* Prend toute la largeur du conteneur */
   justify-content: space-around; /* Espace autour des éléments de la liste */
-  background-color: #f9f9f9;
+  background-color: #f6f6f6;
+  border-radius: 1.25rem;
   /*-- Tablette --*/
   /* Desktop */
   /* Large desktop */
@@ -1673,8 +1672,8 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner le texte */
   position: relative; /* Position relative pour gérer des éléments internes */
   z-index: 1; /* Superposition sur l'axe Z */
-  padding: 4% 8% 4% 10%;
-  border-radius: 0.5rem; /* Bord arrondi pour le conteneur du texte */
+  padding: 8%;
+  border-radius: 1.25rem; /* Bord arrondi pour le conteneur du texte */
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
   width: 100%; /* Largeur du texte à 100% du conteneur */
   align-items: center; /* Centre le texte sur l'axe vertical */
@@ -1794,7 +1793,7 @@ i {
   margin: 0 auto;
   gap: 5%; /* Réduit l'espacement pour les petits écrans */
   height: auto; /* Laisse la section s'adapter à la hauteur du contenu */
-  padding: 15% 0;
+  padding: 6% 0;
   /*-- Tablette --*/
   /*-- large desktop --*/
 }
