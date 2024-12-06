@@ -115,7 +115,7 @@
     flex-direction:column;
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
-    background-color:#FFFFFF ;
+    background-color:#Ffffff ;
     padding:4% 0;
 
     /*-- Tablette --*/
@@ -204,7 +204,6 @@
     z-index: 1; /* Superposition sur l'axe Z */
     width: 95%; /* Prend toute la largeur du conteneur */
     justify-content: space-around; /* Espace autour des éléments de la liste */
-    background-color: #f6f6f6;
     border-radius: 1.25rem;
     
 
@@ -245,6 +244,7 @@
     width: 100%; /* Largeur du texte à 100% du conteneur */
     align-items: center; /* Centre le texte sur l'axe vertical */
     justify-content:space-around;
+    background-color: #f6f6f6;
     font-size: 1rem; /* Taille de la police */
 
 
@@ -318,9 +318,9 @@
 /*-------------------------------------------------------------------*/
 /* Icône de la liste */
 
-i {
-    color: grey; /* Couleur grise pour les icônes */
-    font-size: $font-size-base; /* Taille de la police pour les icônes */
+.fonctionnement i {
+    color: #7E7E7E; /* Couleur grise pour les icônes */
+    font-size: 1rem; /* Taille de la police pour les icônes */
     padding-bottom: 2%;
 
     /*-- Tablette --*/

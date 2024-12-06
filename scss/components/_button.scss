@@ -72,61 +72,75 @@
 
 
 /*---------------------------------------*/
-/*--------------Bouton Coeur -----------*/
-/*-------------------------------------*/
+/*-------------- Bouton Cœur -----------*/
+/*---------------------------------------*/
 
 .icon-favorite {
   background-color: transparent; /* Fond transparent */
-  color: grey; /* Couleur principale en gris */
+  color: black;
+  cursor: pointer; /* Indique que c'est un élément cliquable */
+  position: relative;
+  display: inline-block;
 }
 
+/* Icône pleine : initialement cachée */
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
   z-index: 30; /* Superposition au-dessus des autres éléments */
   position: relative;
+  font-size: $font-size-title; /* Taille de police définie */
+  transition: all 0.3s ease-in; /* Animation fluide pour l'apparition */
 }
 
-/* Style des icônes */
-.fa-full, .fa-empty {
-  font-size: $font-size-title; /* Taille de police pour les icônes */
+/* Icône vide : visible par défaut */
+.icon-favorite .fa-empty {
+  display: flex; /* Visible par défaut */
+  font-size: $font-size-title;
+  transition: all 0.3s ease-in; /* Animation fluide pour la disparition */
+}
+
+/* Input caché */
+input.favorite-checkbox {
+  display: none; /* Cache l'input */
+}
+
+/* Quand le checkbox est coché : persistance de l'état */
+input.favorite-checkbox:checked ~ .fa-full {
+  display: flex; /* Affiche l'icône pleine */
+  background: linear-gradient(
+    to top,
+    $button--search-secondary-color,
+    $button--search-primary-color
+  ); /* Dégradé pour l'icône pleine */
+  -webkit-background-clip: text; /* Clip le dégradé au texte */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+}
+
+input.favorite-checkbox:checked ~ .fa-empty {
+  display: none; /* Cache l'icône vide */
+}
+
+/* Styles Responsifs : ajustements des tailles */
+.fa-full,
+.fa-empty {
+  font-size: $font-size-title; /* Taille par défaut pour mobile */
 
   /* Tablette */
   @include tablette {
-    font-size: 1.6rem; /* Ajustement de la taille de police pour tablette */
+    font-size: 1.6rem; /* Ajustement pour tablette */
   }
 
   /* Desktop */
   @include desktop {
-    font-size: 1.4rem; /* Ajustement de la taille de police pour desktop */
+    font-size: 1.4rem; /* Ajustement pour desktop */
   }
 
   /* Large desktop */
   @include large-desktop {
-    font-size: 1.4rem; /* Ajustement de la taille de police pour large desktop */
-  }
-
-
-}
-
-/* Action lors du clic (actif) */
-.icon-favorite:active {
-  .fa-full {
-    display: flex;
-    background: linear-gradient(to top, $button--search-secondary-color, $button--search-primary-color); /* Changement de couleur */
-    -webkit-background-clip: text; /* Standard */
-    background-clip: text;
-    -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
-  }
-  .fa-empty {
-    display: none; /* Cache l'icône vide */
+    font-size: 1.4rem; /* Ajustement pour large desktop */
   }
 }
-
-/* Cache l'input */
-input {
-  display: none; /* Input masqué */
-}
-
 
 
 /*---------------------------------------------------*/

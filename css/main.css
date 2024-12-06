@@ -650,57 +650,75 @@ footer {
 }
 
 /*---------------------------------------*/
-/*--------------Bouton Coeur -----------*/
-/*-------------------------------------*/
+/*-------------- Bouton Cœur -----------*/
+/*---------------------------------------*/
 .icon-favorite {
   background-color: transparent; /* Fond transparent */
-  color: grey; /* Couleur principale en gris */
+  color: black;
+  cursor: pointer; /* Indique que c'est un élément cliquable */
+  position: relative;
+  display: inline-block;
 }
 
+/* Icône pleine : initialement cachée */
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
   z-index: 30; /* Superposition au-dessus des autres éléments */
   position: relative;
+  font-size: 1.3rem; /* Taille de police définie */
+  transition: all 0.3s ease-in; /* Animation fluide pour l'apparition */
 }
 
-/* Style des icônes */
-.fa-full, .fa-empty {
-  font-size: 1.3rem; /* Taille de police pour les icônes */
+/* Icône vide : visible par défaut */
+.icon-favorite .fa-empty {
+  display: flex; /* Visible par défaut */
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in; /* Animation fluide pour la disparition */
+}
+
+/* Input caché */
+input.favorite-checkbox {
+  display: none; /* Cache l'input */
+}
+
+/* Quand le checkbox est coché : persistance de l'état */
+input.favorite-checkbox:checked ~ .fa-full {
+  display: flex; /* Affiche l'icône pleine */
+  background: linear-gradient(to top, #FF79DA, #9356DC); /* Dégradé pour l'icône pleine */
+  -webkit-background-clip: text; /* Clip le dégradé au texte */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+}
+
+input.favorite-checkbox:checked ~ .fa-empty {
+  display: none; /* Cache l'icône vide */
+}
+
+/* Styles Responsifs : ajustements des tailles */
+.fa-full,
+.fa-empty {
+  font-size: 1.3rem; /* Taille par défaut pour mobile */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
-  .fa-full, .fa-empty {
-    font-size: 1.6rem; /* Ajustement de la taille de police pour tablette */
+  .fa-full,
+  .fa-empty {
+    font-size: 1.6rem; /* Ajustement pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .fa-full, .fa-empty {
-    font-size: 1.4rem; /* Ajustement de la taille de police pour desktop */
+  .fa-full,
+  .fa-empty {
+    font-size: 1.4rem; /* Ajustement pour desktop */
   }
 }
 @media (min-width: 1440px) {
-  .fa-full, .fa-empty {
-    font-size: 1.4rem; /* Ajustement de la taille de police pour large desktop */
+  .fa-full,
+  .fa-empty {
+    font-size: 1.4rem; /* Ajustement pour large desktop */
   }
-}
-
-/* Action lors du clic (actif) */
-.icon-favorite:active .fa-full {
-  display: flex;
-  background: linear-gradient(to top, #FF79DA, #9356DC); /* Changement de couleur */
-  -webkit-background-clip: text; /* Standard */
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* Affiche l'icône pleine */
-}
-.icon-favorite:active .fa-empty {
-  display: none; /* Cache l'icône vide */
-}
-
-/* Cache l'input */
-input {
-  display: none; /* Input masqué */
 }
 
 /*---------------------------------------------------*/
@@ -1104,10 +1122,6 @@ label.card-menu:hover {
 /* Ajustemement personnalisé des images  */
 #francaise img {
   object-position: center 98%;
-}
-
-#delice img {
-  object-position: center 90%;
 }
 
 /* Titre de la carte restaurant */
@@ -1569,7 +1583,7 @@ label.card-menu:hover {
   flex-direction: column;
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
-  background-color: #FFFFFF;
+  background-color: #Ffffff;
   padding: 4% 0;
   /*-- Tablette --*/
   /* Desktop */
@@ -1662,7 +1676,6 @@ label.card-menu:hover {
   z-index: 1; /* Superposition sur l'axe Z */
   width: 95%; /* Prend toute la largeur du conteneur */
   justify-content: space-around; /* Espace autour des éléments de la liste */
-  background-color: #f6f6f6;
   border-radius: 1.25rem;
   /*-- Tablette --*/
   /* Desktop */
@@ -1702,6 +1715,7 @@ label.card-menu:hover {
   width: 100%; /* Largeur du texte à 100% du conteneur */
   align-items: center; /* Centre le texte sur l'axe vertical */
   justify-content: space-around;
+  background-color: #f6f6f6;
   font-size: 1rem; /* Taille de la police */
   /* Tablette */
   /* Desktop */
@@ -1775,8 +1789,8 @@ label.card-menu:hover {
 
 /*-------------------------------------------------------------------*/
 /* Icône de la liste */
-i {
-  color: grey; /* Couleur grise pour les icônes */
+.fonctionnement i {
+  color: #7E7E7E; /* Couleur grise pour les icônes */
   font-size: 1rem; /* Taille de la police pour les icônes */
   padding-bottom: 2%;
   /*-- Tablette --*/
@@ -1784,18 +1798,18 @@ i {
   /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
-  i {
+  .fonctionnement i {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  i {
+  .fonctionnement i {
     font-size: 1rem; /* Taille de la police ajustée pour desktop */
     margin: 0 0.5rem 0 0.5rem; /* Marges ajustées pour desktop */
   }
 }
 @media (min-width: 1440px) {
-  i {
+  .fonctionnement i {
     font-size: 1rem; /* Taille de la police ajustée pour large desktop */
     margin: 0 1rem 0 1rem; /* Marges ajustées pour large desktop */
   }
@@ -1917,7 +1931,7 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 40vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 90%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -1926,14 +1940,14 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image {
-    height: 25vw; /* Hauteur de l'image ajustée pour desktop */
+    height: 27vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .menu-image {
-    height: 35vw; /* Hauteur de l'image ajustée pour large desktop */
+    height: 27vw; /* Hauteur de l'image ajustée pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
   }
@@ -1955,7 +1969,6 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu h3 {
-    width: 2%;
     margin-left: 17%;
   }
 }
@@ -1967,7 +1980,7 @@ main {
 .menu-image-alt3 {
   height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
-  object-position: 50% 70%; /* Positionnement de l'image à 75% en vertical */
+  object-position: 50% 80%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
   /*tablette*/
   /* Desktop */
@@ -2001,9 +2014,9 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image pour le menu alternatif "Au délice des sens" */
 .menu-image-alt {
-  height: 32vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Largeur à 100% */
-  object-position: 50% 185%; /* Positionnement bas de l'image */
+  object-position: 50% 5%; /* Positionnement bas de l'image */
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
