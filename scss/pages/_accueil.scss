@@ -245,7 +245,7 @@
     align-items: center; /* Centre le texte sur l'axe vertical */
     justify-content:space-around;
     background-color: #f6f6f6;
-    font-size: 1rem; /* Taille de la police */
+    font-size: 1.2rem; /* Taille de la police */
 
 
     /* Tablette */
@@ -320,7 +320,7 @@
 
 .fonctionnement i {
     color: #7E7E7E; /* Couleur grise pour les icônes */
-    font-size: 1rem; /* Taille de la police pour les icônes */
+    font-size: 1.4rem; /* Taille de la police pour les icônes */
     padding-bottom: 2%;
 
     /*-- Tablette --*/
@@ -345,7 +345,7 @@
 /*----------------------------------------------------------------*/
 /* Icône Store  */
 
-.fa-store {
+#etape-3 i {
     color: $button--search-primary-color; /* Couleur de l'icône store */
 }
 

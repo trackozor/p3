@@ -1071,7 +1071,7 @@ label.card-menu:hover {
   margin: 2% auto; /* Marges et centrage horizontal */
   justify-content: center; /* Centre verticalement les éléments à l'intérieur de la carte */
   height: auto;
-  max-height: 250px;
+  max-height: 260px;
   /* Tablette */
   /* Desktop */
   /*-- large desktop --*/
@@ -1098,7 +1098,7 @@ label.card-menu:hover {
 .card img {
   width: 100%;
   height: 65%;
-  max-height: 150px;
+  max-height: 180px;
   border-radius: 1rem 1rem 0 0; /* Arrondis des coins supérieurs */
   object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
   object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
@@ -1109,7 +1109,7 @@ label.card-menu:hover {
 @media (min-width: 426px) and (max-width: 1023px) {
   .card img {
     width: 100%;
-    max-height: 250px;
+    max-height: 280px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1716,7 +1716,7 @@ label.card-menu:hover {
   align-items: center; /* Centre le texte sur l'axe vertical */
   justify-content: space-around;
   background-color: #f6f6f6;
-  font-size: 1rem; /* Taille de la police */
+  font-size: 1.2rem; /* Taille de la police */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1791,7 +1791,7 @@ label.card-menu:hover {
 /* Icône de la liste */
 .fonctionnement i {
   color: #7E7E7E; /* Couleur grise pour les icônes */
-  font-size: 1rem; /* Taille de la police pour les icônes */
+  font-size: 1.4rem; /* Taille de la police pour les icônes */
   padding-bottom: 2%;
   /*-- Tablette --*/
   /* Desktop */
@@ -1817,7 +1817,7 @@ label.card-menu:hover {
 
 /*----------------------------------------------------------------*/
 /* Icône Store  */
-.fa-store {
+#etape-3 i {
   color: #9356DC; /* Couleur de l'icône store */
 }
 
