@@ -116,7 +116,7 @@
     position: relative; /* Position relative pour gérer les éléments internes */
     justify-content: center; /* Centre les éléments sur l'axe horizontal */
     background-color:#Ffffff ;
-    padding:4% 0;
+    padding:6% 0;
 
     /*-- Tablette --*/
     @include tablette {
@@ -144,6 +144,7 @@
 .fonctionnement h2 {
     margin: 1rem 0;
     padding-left: $padding-xlarge-pct;
+    font-size: 1.6rem;
 
 
     /*-- tablette --*/
@@ -396,6 +397,7 @@
 
 #section-restaurants h2 {
     margin:$margin-base 5%;
+    font-size: 1.6rem;
 
     @include desktop {
         width:95%; 

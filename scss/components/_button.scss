@@ -55,7 +55,7 @@
 .badge {
   background-color: $button--new-primary-color; /* Couleur de fond vert clair */
   color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
-  font-size: $font-size-middle; /* Taille de la police à 2% de la hauteur de l'écran */
+  font-size: 1rem; /* Taille de la police à 2% de la hauteur de l'écran */
   padding: $padding-small $padding-base; /* Padding vertical et horizontal */
   font-weight: $font-weight-bold; /* Style de police très gras (900) */
   display: flex; /* Utilisation de flexbox pour l'alignement */

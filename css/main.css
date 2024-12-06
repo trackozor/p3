@@ -634,7 +634,7 @@ footer {
 .badge {
   background-color: #99E2D0; /* Couleur de fond vert clair */
   color: #008766; /* Couleur du texte en vert foncé */
-  font-size: 0.7rem; /* Taille de la police à 2% de la hauteur de l'écran */
+  font-size: 1rem; /* Taille de la police à 2% de la hauteur de l'écran */
   padding: 0.5rem 1rem; /* Padding vertical et horizontal */
   font-weight: 700; /* Style de police très gras (900) */
   display: flex; /* Utilisation de flexbox pour l'alignement */
@@ -1585,7 +1585,7 @@ label.card-menu:hover {
   position: relative; /* Position relative pour gérer les éléments internes */
   justify-content: center; /* Centre les éléments sur l'axe horizontal */
   background-color: #Ffffff;
-  padding: 4% 0;
+  padding: 6% 0;
   /*-- Tablette --*/
   /* Desktop */
   /*-- large desktop --*/
@@ -1615,6 +1615,7 @@ label.card-menu:hover {
 .fonctionnement h2 {
   margin: 1rem 0;
   padding-left: 6%;
+  font-size: 1.6rem;
   /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
@@ -1867,6 +1868,7 @@ label.card-menu:hover {
 /* Titre de la section restaurants */
 #section-restaurants h2 {
   margin: 1rem 5%;
+  font-size: 1.6rem;
   /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
