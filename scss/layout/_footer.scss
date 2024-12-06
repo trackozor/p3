@@ -32,7 +32,7 @@ footer {
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: $padding-medium-vh 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    padding: 1% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
     font-size: $font-size-middle;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ footer {
 
     /* tablette */
     @include tablette {
-        padding: 2% 5% ; /* Padding vertical pour tablette */
+        padding: 0 5% ; /* Padding vertical pour tablette */
     }
 
     /* Desktop */
@@ -49,27 +49,22 @@ footer {
         flex-direction: row-reverse; /* Alignement horizontal des éléments */
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
-        height: auto;
-        font-size: $font-size-middle;
-        margin-top: 1rem;
-        margin-bottom: 0;
+        max-height: 20px;
+        font-size: $font-size-middle;;
         justify-content: flex-start;
-        margin-left: 30%;
-        padding-right: 0;
+        width:100%;
     }
 
     /*-- large desktop --*/
     @include large-desktop {
-        font-size: 1.1rem;
+        max-height: 50px;
         display: flex;
         flex-direction: row-reverse; /* Alignement horizontal des éléments */
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
-        margin-top: 1rem;
-        margin-bottom: 0;
+        padding: 0 5%;
         justify-content: flex-start;
-        margin-left: 55%;
     }   
 }
 
@@ -91,7 +86,7 @@ footer {
     @include desktop {
         margin-right: 0.7rem; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: 0.9rem; /* Taille de l'icône pour desktop */
+        font-size: 0.7rem; /* Taille de l'icône pour desktop */
     }
     
     /*-- large desktop --*/
@@ -122,7 +117,6 @@ footer {
     
     /* Desktop */
     @include desktop {
-        margin-top: $margin-base; /* Marge supérieur pour desktop */
         display: flex;
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
@@ -131,7 +125,7 @@ footer {
 
     /*-- large desktop --*/
     @include large-desktop {
-        margin-top: 0.2rem; /* Marge supérieur pour desktop */
+    
         display: flex;
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
@@ -155,19 +149,21 @@ footer {
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
-    align-items: center;
+    font-size: 0.7rem;
     }
 
     /*-- large desktop --*/
     @include large-desktop {
         display: flex; /* Utilise flexbox pour aligner les éléments */
+
         justify-content: flex-end;
         gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
         flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
         list-style: none; /* Retire les puces de la liste */
         padding: 0;
-        align-items: center;
-        margin-left: 50%;
+        margin-left: 70%;
+        font-size: 1rem;
+        padding-top: 2%;
     }
 
 }
@@ -191,14 +187,13 @@ footer {
     /* Desktop */
     @include desktop {
         width: 15%; /* L'image occupe 30% de la largeur  */
-        margin:0 7% ; /* Marge verticale pour desktop */
         padding-top: $padding-base; /* Padding inférieur pour desktop */
     }
 
     /*-- large desktop --*/
     @include large-desktop {
-        width: 20%; /* L'image occupe 30% de la largeur  */
-        margin:2% 5% ; /* Marge verticale pour desktop */
-        padding-top:1.5%; /* Padding inférieur pour desktop */
+        width: 10%; /* L'image occupe 30% de la largeur  */
+        padding:2%  ; /* Marge verticale pour desktop */
+        margin: 0;
     }
 }

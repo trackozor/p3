@@ -42,6 +42,7 @@
     /* Desktop */
     @include desktop {
         padding: 1% 0; /* Réduit encore le padding vertical à 1% sur les écrans desktop */
+        margin-bottom: 2%;
     }
 
     /* Large desktop */
@@ -49,6 +50,7 @@
         width: 100%; /* Maintient la largeur complète sur grand écran */
         max-height: 180px; /* Limite la hauteur maximale à 180px */
         padding: 1% 0; /* Padding vertical maintenu à 1% */
+        margin-bottom: 2%;
     }
 }
 
@@ -59,7 +61,7 @@
 .bandeau h2 {
     width: 75%; /* Définit une largeur de 75% pour le titre */
     font-size: 1.5rem; /* Taille de la police par défaut (petite pour les écrans mobiles) */
-    margin: 2% 0 3% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
+    margin: 2% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
 
     /* Tablette */
     @include tablette {
@@ -75,7 +77,7 @@
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 2.3rem; /* Taille de la police encore plus grande sur large desktop */
+        font-size: 3rem; /* Taille de la police encore plus grande sur large desktop */
         margin: 1% 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
     }
 }
@@ -96,6 +98,7 @@
     @include desktop {
         font-size: 1rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
         margin: 0; /* Supprime la marge en bas */
+        padding: 2% 0;;
     }
 
     /* Large desktop */
@@ -120,14 +123,14 @@
 
     /*-- Tablette --*/
     @include tablette {
-        margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+        margin: 2% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
         gap: 2%;
     }
 
     /* Desktop */
     @include desktop {
-        padding: 5%;
-        margin:0.5%
+        padding:2% 5%;
+        margin:0.5%;
     }
 
     /*-- large desktop --*/
@@ -143,7 +146,7 @@
 /*  Titre */
 .fonctionnement h2 {
     margin: 1rem 0;
-    padding-left: $padding-xlarge-pct;
+    padding-left: 5%;
     font-size: 1.6rem;
 
 
@@ -156,12 +159,14 @@
     @include desktop {
         font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
         margin:1% 0;
+        padding-left: 4%;
     }
 
     /* Large desktop */
     @include large-desktop {
         font-size:1.5rem; /* Taille de police de 1.5rem pour large desktop */
-        margin:3% 0 ;
+        margin:2% 0 ;
+        padding-left: 15%;;
     }
 }
 
@@ -175,6 +180,7 @@
     width: 90%; /* Largeur de 90% pour le conteneur */
     justify-content: center; /* Centre les éléments horizontalement */
     margin:2% auto;
+    padding-left: 2%;
 
 
     /* Desktop */
@@ -182,15 +188,18 @@
         flex-direction: row; /* Alignement en ligne pour desktop */
         gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
         justify-content: space-around; /* Espace autour des éléments pour desktop */
+        width:95%;
     }
 
     /* Large desktop */
     @include large-desktop {
         flex-direction: row; /* Alignement en ligne pour large desktop */
-        gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
+        gap: 1.5rem; /* Espace entre les éléments de la liste pour large desktop */
         justify-content: space-around; /* Espace autour des éléments pour large desktop */
         margin: 0 auto;
-        width: 90%;
+        width: 68%;
+        padding: 0;
+        padding-right: 2%;
     }
 }
 
@@ -364,7 +373,7 @@
 
     /*-- Tablette --*/
     @include tablette {
-        padding-top:10%;
+        padding-top:2%;
         width: 100%;
     }
 
@@ -373,7 +382,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 0;
-        width: 90%;
+        width: 87%;
         gap:1%;
         padding:2% 0;
         
@@ -401,12 +410,18 @@
 
     @include desktop {
         width:95%; 
+        margin:0;
+        padding-left: 2%;
+        font-size: 1.5rem;
         
     }
 
     /*-- large desktop --*/
     @include large-desktop {
         width: 95%;
+        font-size: 1.5rem;
+        margin: 0;
+        padding-left: 1%;
     }
 
 }

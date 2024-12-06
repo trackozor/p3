@@ -184,6 +184,7 @@ body {
   background-color: #F6F6F6; /* Couleur de fond */
   margin: 0 auto; /* Centrage du contenu */
   min-width: 300px;
+  max-width: 1440px;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -263,7 +264,7 @@ footer {
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
-  padding: 2vh 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+  padding: 1% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -272,9 +273,9 @@ footer {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .footer-card {
-    padding: 2% 5%; /* Padding vertical pour tablette */
+    padding: 0 5%; /* Padding vertical pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -283,27 +284,22 @@ footer {
     flex-direction: row-reverse; /* Alignement horizontal des éléments */
     align-items: center; /* Aligne les éléments verticalement */
     flex-wrap: nowrap; /* Empêche le retour à la ligne */
-    height: auto;
+    max-height: 20px;
     font-size: 0.7rem;
-    margin-top: 1rem;
-    margin-bottom: 0;
     justify-content: flex-start;
-    margin-left: 30%;
-    padding-right: 0;
+    width: 100%;
   }
 }
 @media (min-width: 1440px) {
   .footer-card {
-    font-size: 1.1rem;
+    max-height: 50px;
     display: flex;
     flex-direction: row-reverse; /* Alignement horizontal des éléments */
     align-items: center; /* Aligne les éléments verticalement */
     flex-wrap: nowrap; /* Empêche le retour à la ligne */
     height: auto;
-    margin-top: 1rem;
-    margin-bottom: 0;
+    padding: 0 5%;
     justify-content: flex-start;
-    margin-left: 55%;
   }
 }
 
@@ -318,7 +314,7 @@ footer {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fa-handshake, .fa-utensils {
     margin-left: 0;
     font-size: 1rem; /* Taille de l'icône pour tablette */
@@ -328,7 +324,7 @@ footer {
   .fa-handshake, .fa-utensils {
     margin-right: 0.7rem; /* Padding horizontal pour desktop */
     margin-left: 0; /* Pas d'espace à gauche*/
-    font-size: 0.9rem; /* Taille de l'icône pour desktop */
+    font-size: 0.7rem; /* Taille de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
@@ -353,14 +349,13 @@ footer {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .footer-card li {
     margin-top: 2%; /* Marge supérieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card li {
-    margin-top: 1rem; /* Marge supérieur pour desktop */
     display: flex;
     align-items: center;
     white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
@@ -369,7 +364,6 @@ footer {
 }
 @media (min-width: 1440px) {
   .footer-card li {
-    margin-top: 0.2rem; /* Marge supérieur pour desktop */
     display: flex;
     align-items: center;
     white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
@@ -381,7 +375,7 @@ footer {
 .footer-card ul {
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .footer-card ul {
     margin: 2% 0;
     padding: 2% 0; /* Pas de marge supérieur pour tablette */
@@ -396,7 +390,7 @@ footer {
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
-    align-items: center;
+    font-size: 0.7rem;
   }
 }
 @media (min-width: 1440px) {
@@ -407,8 +401,9 @@ footer {
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
-    align-items: center;
-    margin-left: 50%;
+    margin-left: 70%;
+    font-size: 1rem;
+    padding-top: 2%;
   }
 }
 
@@ -423,7 +418,7 @@ footer {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .footer-card img {
     width: 25%; /* L'image occupe 30% de la largeur  */
     margin: 0; /* Marge verticale pour tablette */
@@ -433,15 +428,14 @@ footer {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card img {
     width: 15%; /* L'image occupe 30% de la largeur  */
-    margin: 0 7%; /* Marge verticale pour desktop */
     padding-top: 1rem; /* Padding inférieur pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .footer-card img {
-    width: 20%; /* L'image occupe 30% de la largeur  */
-    margin: 2% 5%; /* Marge verticale pour desktop */
-    padding-top: 1.5%; /* Padding inférieur pour desktop */
+    width: 10%; /* L'image occupe 30% de la largeur  */
+    padding: 2%; /* Marge verticale pour desktop */
+    margin: 0;
   }
 }
 
@@ -489,7 +483,7 @@ footer {
   /*-- Desktop --*/
   /*-- Large Desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .loader-card {
     width: 60%;
     margin: 0;
@@ -550,7 +544,7 @@ footer {
   /*-- Desktop --*/
   /*-- Large Desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .progress-bar-container {
     height: 7rem;
   }
@@ -641,7 +635,7 @@ footer {
   justify-content: center; /* Centrage horizontal du texte */
   /*-- Tablette --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .badge {
     font-size: 1rem;
     padding: 1rem; /* Padding ajusté pour tablette */
@@ -701,7 +695,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fa-full,
   .fa-empty {
     font-size: 1.6rem; /* Ajustement pour tablette */
@@ -798,7 +792,7 @@ label.card-menu:hover {
   /* Media queries pour desktop */
   /* Media queries pour large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .validation-icon i {
     font-size: 2rem;
     padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
@@ -845,7 +839,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-logo {
     margin: 3% 0;
   }
@@ -869,7 +863,7 @@ label.card-menu:hover {
   /*-- desktop --*/
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-logo img {
     width: 30%;
   }
@@ -899,7 +893,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt {
     padding: 3% 0;
   }
@@ -920,7 +914,7 @@ label.card-menu:hover {
   width: 50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
   /* large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt img {
     width: 30%;
   }
@@ -946,7 +940,7 @@ label.card-menu:hover {
   /* large desktop */
   /* Faire pointer la souris sur l'icône de la carte */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt i {
     top: 40%; /* Place l'icône à 35% du haut du conteneur */
   }
@@ -990,69 +984,63 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-location {
     gap: 1rem; /* Ajuste l'espace entre les éléments pour tablette */
     width: 100%;
     padding: 1rem 0; /* Ajuste les marges intérieures pour tablette */
-    display: flex;
-    align-items: center;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-location {
-    gap: 0.5%; /* Ajuste l'espace entre les éléments pour desktop */
-    width: 100%;
-    padding: 0; /* Ajuste les marges intérieures pour desktop */
-    display: flex;
-    align-items: center;
-    border: none; /* Suppression des bordures sur les grands écrans (desktop) */
+    gap: 1rem;
+    max-height: 100px;
+    width: 100%; /* Ajuste les marges intérieures pour desktop */
+    box-shadow: none;
   }
 }
 @media (min-width: 1440px) {
   .card-location {
-    gap: 0.2rem; /* Ajuste l'espace entre les éléments pour desktop */
+    gap: 1rem;
     width: 100%;
-    padding: 0; /* Ajuste les marges intérieures pour desktop */
-    display: flex;
-    align-items: center;
-    border: none;
+    box-shadow: none;
   }
 }
 
 /* Icône localisation dans la carte localisation */
 .card-location i {
-  font-size: 16px; /* Taille de l'icône en fonction de la hauteur de l'écran */
+  font-size: 1.2rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
   color: #353535; /* Couleur de l'icône */
+  padding-bottom: 1%;
   /* Tablette */
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card-location i {
     font-size: 1rem; /* Ajuste la taille de l'icône pour tablette */
     align-items: center;
-    padding-top: 0.6rem;
+    padding-bottom: 0.5%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-location i {
     font-size: 1rem;
     align-items: center;
-    padding-top: 0.9rem; /* Ajuste la taille de l'icône pour desktop */
+    padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card-location i {
     font-size: 1.2rem;
     align-items: center;
-    padding-top: 1.6rem; /* Ajuste la taille de l'icône pour desktop */
+    padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
   }
 }
 
 /* Adresse dans la carte localisation */
 .carte-location address {
-  font-size: 16px; /* Taille du texte pour l'adresse */
+  font-size: 1.2rem; /* Taille du texte pour l'adresse */
   color: #353535; /* Couleur du texte */
   display: flex;
   align-items: center;
@@ -1077,7 +1065,7 @@ label.card-menu:hover {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card {
     max-height: 350px;
   }
@@ -1090,6 +1078,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .card {
+    max-height: 450px;
     width: 45%;
   }
 }
@@ -1106,8 +1095,9 @@ label.card-menu:hover {
   overflow: hidden;
   /*-- tablette --*/
   /*-- Desktop --*/
+  /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card img {
     width: 100%;
     max-height: 280px;
@@ -1116,6 +1106,11 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card img {
     height: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .card img {
+    height: 350px;
   }
 }
 
@@ -1141,7 +1136,7 @@ label.card-menu:hover {
   /* tablette */
   /* Desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card .card-title {
     font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
     gap: 1rem; /* Espace pour tablette */
@@ -1165,7 +1160,7 @@ label.card-menu:hover {
   /* Tablette */
   /* Desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card .icon-favorite {
     left: 90%; /* Position horizontale de l'icône pour tablette */
     bottom: 10%; /* Position verticale de l'icône pour tablette */
@@ -1174,7 +1169,7 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card .icon-favorite {
     left: 88%; /* Position horizontale de l'icône pour desktop */
-    bottom: 12.5%; /* Position verticale de l'icône pour desktop */
+    bottom: 13%; /* Position verticale de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
@@ -1204,7 +1199,7 @@ label.card-menu:hover {
   /*-- Desktop --*/
   /*-- Large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .card .badge {
     right: 3%; /* Position droite du badge pour tablette */
     top: 5%; /* Position haute du badge pour tablette */
@@ -1270,7 +1265,7 @@ label.card-menu:hover {
   /* tablette */
   /* Desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .menu-item {
     width: 100%; /* Largeur de l'élément du menu pour tablette */
   }
@@ -1343,7 +1338,7 @@ label.card-menu:hover {
   /* Desktop */
   /*-- Large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .dish-name {
     font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
     padding: 2%; /* Padding horizontal pour tablette */
@@ -1375,7 +1370,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .dish-description {
     font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
     padding-left: 2%; /* Padding horizontal pour tablette */
@@ -1425,7 +1420,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .dish-content .price {
     font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
     padding-right: 1rem; /* Padding horizontal pour tablette */
@@ -1451,7 +1446,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .checkbox-hidden:checked + label .price {
     transform: translateX(-5rem); /* Glisse vers la gauche de 10px pour tablette */
   }
@@ -1503,7 +1498,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .bandeau {
     padding: 2% 0; /* Réduit le padding vertical à 2% sur les écrans tablettes */
   }
@@ -1511,6 +1506,7 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau {
     padding: 1% 0; /* Réduit encore le padding vertical à 1% sur les écrans desktop */
+    margin-bottom: 2%;
   }
 }
 @media (min-width: 1440px) {
@@ -1518,6 +1514,7 @@ label.card-menu:hover {
     width: 100%; /* Maintient la largeur complète sur grand écran */
     max-height: 180px; /* Limite la hauteur maximale à 180px */
     padding: 1% 0; /* Padding vertical maintenu à 1% */
+    margin-bottom: 2%;
   }
 }
 
@@ -1526,12 +1523,12 @@ label.card-menu:hover {
 .bandeau h2 {
   width: 75%; /* Définit une largeur de 75% pour le titre */
   font-size: 1.5rem; /* Taille de la police par défaut (petite pour les écrans mobiles) */
-  margin: 2% 0 3% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
+  margin: 2% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .bandeau h2 {
     font-size: 2rem; /* Augmente la taille de la police à 2rem sur tablette */
   }
@@ -1545,7 +1542,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .bandeau h2 {
-    font-size: 2.3rem; /* Taille de la police encore plus grande sur large desktop */
+    font-size: 3rem; /* Taille de la police encore plus grande sur large desktop */
     margin: 1% 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
   }
 }
@@ -1566,6 +1563,7 @@ label.card-menu:hover {
   .bandeau p {
     font-size: 1rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
     margin: 0; /* Supprime la marge en bas */
+    padding: 2% 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1590,15 +1588,15 @@ label.card-menu:hover {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement {
-    margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+    margin: 2% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
     gap: 2%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement {
-    padding: 5%;
+    padding: 2% 5%;
     margin: 0.5%;
   }
 }
@@ -1614,13 +1612,13 @@ label.card-menu:hover {
 /*  Titre */
 .fonctionnement h2 {
   margin: 1rem 0;
-  padding-left: 6%;
+  padding-left: 5%;
   font-size: 1.6rem;
   /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement h2 {
     margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
   }
@@ -1629,12 +1627,14 @@ label.card-menu:hover {
   .fonctionnement h2 {
     font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
     margin: 1% 0;
+    padding-left: 4%;
   }
 }
 @media (min-width: 1440px) {
   .fonctionnement h2 {
     font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 3% 0;
+    margin: 2% 0;
+    padding-left: 15%;
   }
 }
 
@@ -1647,6 +1647,7 @@ label.card-menu:hover {
   width: 90%; /* Largeur de 90% pour le conteneur */
   justify-content: center; /* Centre les éléments horizontalement */
   margin: 2% auto;
+  padding-left: 2%;
   /* Desktop */
   /* Large desktop */
 }
@@ -1655,15 +1656,18 @@ label.card-menu:hover {
     flex-direction: row; /* Alignement en ligne pour desktop */
     gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
     justify-content: space-around; /* Espace autour des éléments pour desktop */
+    width: 95%;
   }
 }
 @media (min-width: 1440px) {
   .fonctionnement ol {
     flex-direction: row; /* Alignement en ligne pour large desktop */
-    gap: 2rem; /* Espace entre les éléments de la liste pour large desktop */
+    gap: 1.5rem; /* Espace entre les éléments de la liste pour large desktop */
     justify-content: space-around; /* Espace autour des éléments pour large desktop */
     margin: 0 auto;
-    width: 90%;
+    width: 68%;
+    padding: 0;
+    padding-right: 2%;
   }
 }
 
@@ -1683,7 +1687,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement li {
     margin: 1rem; /* Ajustement des marges pour tablette */
     gap: 2%;
@@ -1723,7 +1727,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .li-txt {
     padding: 2% 10%; /* Ajustement du padding pour tablette */
     justify-content: flex-start;
@@ -1767,7 +1771,7 @@ label.card-menu:hover {
   /* Tablette */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .puce_num {
     left: -2%;
     width: 1.8rem;
@@ -1792,7 +1796,7 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement i {
     font-size: 1.3rem;
   }
@@ -1834,9 +1838,9 @@ label.card-menu:hover {
   /*-- Tablette --*/
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   #section-restaurants {
-    padding-top: 10%;
+    padding-top: 2%;
     width: 100%;
   }
 }
@@ -1846,7 +1850,7 @@ label.card-menu:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 0;
-    width: 90%;
+    width: 87%;
     gap: 1%;
     padding: 2% 0;
   }
@@ -1874,11 +1878,17 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   #section-restaurants h2 {
     width: 95%;
+    margin: 0;
+    padding-left: 2%;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
   #section-restaurants h2 {
     width: 95%;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 1%;
   }
 }
 
@@ -1982,7 +1992,7 @@ main {
   /* Desktop */
   /*-- large desktop --*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt3 {
     height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
@@ -2018,7 +2028,7 @@ main {
   /* Desktop */
   /*--large desktop*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt {
     height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
@@ -2054,7 +2064,7 @@ main {
   /* Desktop */
   /*--large desktop*/
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt2 {
     height: 40vw;
     width: 100%; /* Largeur à 100% pour tablette */
@@ -2104,7 +2114,7 @@ main {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .menu .title h2 {
     font-size: 1.6rem;
   }
@@ -2145,7 +2155,7 @@ main {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .title1 h2 {
     font-size: 1.6rem;
   }
@@ -2186,7 +2196,7 @@ main {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
     font-size: 1.6rem;
   }
@@ -2227,7 +2237,7 @@ main {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .title3 h2 {
     font-size: 1.6rem;
   }

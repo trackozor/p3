@@ -173,30 +173,23 @@
         gap:$gap-base; /* Ajuste l'espace entre les éléments pour tablette */
         width: 100%;
         padding: $padding-base 0; /* Ajuste les marges intérieures pour tablette */
-        display: flex;
-        align-items: center;
     }
 
     /* Desktop */
     @include desktop {
-        gap:0.5%; /* Ajuste l'espace entre les éléments pour desktop */
-        width: 100%;
-        padding: 0; /* Ajuste les marges intérieures pour desktop */
-        display: flex;
-        align-items: center;
-        border: none; /* Suppression des bordures sur les grands écrans (desktop) */
+        gap: $gap-base;
+        max-height: 100px;        
+        width: 100%; /* Ajuste les marges intérieures pour desktop */
+        box-shadow: none;
         
     
     }
 
     /* Large desktop */
     @include large-desktop {
-        gap:0.2rem; /* Ajuste l'espace entre les éléments pour desktop */
+        gap: $gap-base;
         width: 100%;
-        padding: 0; /* Ajuste les marges intérieures pour desktop */
-        display: flex;
-        align-items: center;
-        border: none;
+        box-shadow: none;
         
     
     }
@@ -204,34 +197,35 @@
 
 /* Icône localisation dans la carte localisation */
 .card-location i {
-    font-size: 16px;/* Taille de l'icône en fonction de la hauteur de l'écran */
+    font-size: 1.2rem;/* Taille de l'icône en fonction de la hauteur de l'écran */
     color:#353535;/* Couleur de l'icône */
+    padding-bottom: 1%;
 
     /* Tablette */
     @include tablette {
         font-size: 1rem; /* Ajuste la taille de l'icône pour tablette */
         align-items: center;
-        padding-top: 0.6rem;
+        padding-bottom: 0.5%;
     }
     /* Desktop */
     @include desktop {
         font-size: 1rem;
         align-items: center;
-        padding-top: 0.9rem; /* Ajuste la taille de l'icône pour desktop */
+        padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
     }
     
     /* Large desktop */
     @include large-desktop {
         font-size: 1.2rem;
         align-items: center;
-        padding-top: 1.6rem; /* Ajuste la taille de l'icône pour desktop */
+        padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
     }
 }
 
 
 /* Adresse dans la carte localisation */
 .carte-location address {
-    font-size: 16px; /* Taille du texte pour l'adresse */
+    font-size: 1.2rem; /* Taille du texte pour l'adresse */
     color:#353535 ; /* Couleur du texte */
     display: flex;
     align-items: center;
@@ -273,6 +267,7 @@
 
     /*-- large desktop --*/
     @include large-desktop {
+    max-height: 450px;
     width: 45%;
     }
 
@@ -301,6 +296,11 @@
     /*-- Desktop --*/
     @include desktop {
         height: 300px;
+    }
+    
+    /*-- large desktop --*/
+    @include large-desktop {
+        height: 350px;
     }
 
 }
@@ -358,7 +358,7 @@
     /* Desktop */
     @include desktop {
         left: 88%; /* Position horizontale de l'icône pour desktop */
-        bottom: 12.5%; /* Position verticale de l'icône pour desktop */
+        bottom: 13%; /* Position verticale de l'icône pour desktop */
     }
 
     @include large-desktop {
