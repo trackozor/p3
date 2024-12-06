@@ -183,8 +183,9 @@ body {
   font-size: 1rem; /* Taille de police relative */
   background-color: #F6F6F6; /* Couleur de fond */
   margin: 0 auto; /* Centrage du contenu */
-  min-width: 300px;
+  min-width: 330px;
   max-width: 1440px;
+  max-height: 1024px;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -1431,7 +1432,9 @@ label.card-menu:hover {
 .dish-content .price {
   font-size: 0.7rem; /* Taille du texte pour le prix */
   font-weight: 700; /* Style gras pour le prix */
-  padding-right: 1rem; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+  padding: 1%;
+  padding-right: 5%; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+  margin-left: 5%;
   position: relative;
   display: inline-block;
   transition: transform 0.6s ease; /* Transition fluide lorsqu'il se déplace */
@@ -1461,7 +1464,8 @@ label.card-menu:hover {
 
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
-  transform: translateX(-3rem); /* Glisse vers la gauche de 9% de la  */
+  transform: translateX(-62%); /* Glisse vers la gauche de 9% de la  */
+  padding-left: 10%;
   /* tablette */
   /* Desktop */
   /* Large desktop */
@@ -1950,12 +1954,22 @@ main {
   max-width: 1024px;
   /* Desktop */
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu {
+    padding-top: 5%;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu {
     width: 70%; /* Largeur à 80% pour desktop */
     border-radius: 3vw 3vw 0 0; /* Bord arrondi adapté à la largeur de l'écran */
-    padding-top: 4vw; /* Padding en haut ajusté pour desktop */
+    padding-top: 3%; /* Padding en haut ajusté pour desktop */
     bottom: 2vw; /* Positionnement du bas ajusté pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .menu {
+    padding-top: 2.5%;
   }
 }
 
@@ -1995,21 +2009,21 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 40%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 27vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
-  object-position: 50% 90%; /* Positionnement de l'image à 75% en vertical */
+  object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
   /* Desktop */
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image {
-    height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    height: 35vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image {
-    height: 27vw; /* Hauteur de l'image ajustée pour desktop */
+    height: 10vh; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
@@ -2223,35 +2237,44 @@ main {
   justify-content: space-between;
   margin: 0 2%;
   padding-bottom: 5%;
+  /*-- tablette --*/
   /*-- desktop --*/
   /*--large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title2 {
+    padding-bottom: 1%;
+    margin: 0 2;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu .title2 {
     gap: 5%;
     justify-content: center;
+    padding-bottom: 2%;
   }
 }
 @media (min-width: 1440px) {
   .menu .title2 {
     gap: 5%;
     justify-content: center;
+    padding-bottom: 2%;
   }
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .title2 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
   .title2 h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 

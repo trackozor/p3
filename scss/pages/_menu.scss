@@ -30,14 +30,21 @@ main  {
     flex-direction: column; /* Alignement vertical des éléments */
     width: 100%;
     max-width: 1024px;
+    
+    @include tablette {
+        padding-top:5%;
+    }
 
 
     /* Desktop */
     @include desktop {
         width: 70%; /* Largeur à 80% pour desktop */
         border-radius: 3vw 3vw 0 0; /* Bord arrondi adapté à la largeur de l'écran */
-        padding-top: 4vw; /* Padding en haut ajusté pour desktop */
+        padding-top: 3%; /* Padding en haut ajusté pour desktop */
         bottom: 2vw; /* Positionnement du bas ajusté pour desktop */
+    }
+    @include large-desktop {
+        padding-top:2.5%;
     }
 
 }
@@ -75,18 +82,18 @@ main  {
 
 /* Image principale pour "Palette du goût */
 .menu-image {
-    height: 40%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 27vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
-    object-position: 50% 90%; /* Positionnement de l'image à 75% en vertical */
+    object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
     
     @include tablette {
-        height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+        height: 35vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     }
 
     /* Desktop */
     @include desktop {
-        height: 27vw; /* Hauteur de l'image ajustée pour desktop */
+        height: 10vh; /* Hauteur de l'image ajustée pour desktop */
         width: 100%; /* Largeur à 100% pour desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour desktop */
     }
@@ -285,29 +292,36 @@ main  {
     margin: 0 2%;
     padding-bottom:5%;
 
+    /*-- tablette --*/
+    @include tablette {
+        padding-bottom: 1%;
+        margin:0 2
+    }
     
     /*-- desktop --*/
     @include desktop {
         gap: 5%;
         justify-content: center;
+        padding-bottom: 2%;
     }
 
     /*--large desktop --*/
     @include large-desktop {
         gap: 5%;
         justify-content: center;
+        padding-bottom: 2%;
     
     }
 }
 .title2 h2 {
     @include tablette {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     @include desktop {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     @include large-desktop {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 

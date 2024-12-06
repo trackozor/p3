@@ -579,7 +579,9 @@ $sections: (
 .dish-content .price {
     font-size: 0.7rem; /* Taille du texte pour le prix */
     font-weight: $font-weight-bold; /* Style gras pour le prix */
-    padding-right: $padding-base; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+    padding:1% ;
+    padding-right:5%; /* Espace intérieur droite correspondant à 1% de la hauteur de l'écran*/
+    margin-left: 5%;
     position: relative;
     display: inline-block;
     transition: transform 0.6s ease; /* Transition fluide lorsqu'il se déplace */
@@ -607,7 +609,8 @@ $sections: (
 
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
-    transform: translateX(-3rem); /* Glisse vers la gauche de 9% de la  */
+    transform: translateX(-62%); /* Glisse vers la gauche de 9% de la  */
+    padding-left: 10%;
 
     /* tablette */
     @include tablette {
