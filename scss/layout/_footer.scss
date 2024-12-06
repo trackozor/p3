@@ -112,7 +112,7 @@ footer {
 
     /* tablette */
     @include tablette {
-        margin-top:2%; /* Marge supérieur pour tablette */
+        margin-top:0; /* Marge supérieur pour tablette */
     }
     
     /* Desktop */
@@ -174,14 +174,14 @@ footer {
 .footer-card   img {
     display:flex;
     width: 30%; /* L'image occupe 30% de la largeur du footer */
-    margin: $margin-small 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
-    padding-bottom: $padding-xsmall; /* Padding inférieur correspondant à 1% de la hauteur */
+    margin:0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+    padding-top: 2%;
 
     /* tablette */
     @include tablette {
         width: 25%; /* L'image occupe 30% de la largeur  */
         margin:0; /* Marge verticale pour tablette */
-        padding-top: $padding-base; /* Padding inférieur pour tablette */
+
     }
     
     /* Desktop */

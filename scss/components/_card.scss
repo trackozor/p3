@@ -39,7 +39,7 @@
     
     /* Large desktop */
     @include large-desktop {
-        margin:2% 0;
+        margin:1% 0;
         
     }
 }
@@ -55,12 +55,12 @@
     }
     /*-- desktop --*/
     @include desktop {
-        width:20%;/* Ajustement largeur pour desktop*/
+        width:17%;/* Ajustement largeur pour desktop*/
     }
     
     /*-- large desktop --*/
     @include large-desktop {
-    width: 20%;/* ajustement largeur pour écran large*/
+    width: 12%;/* ajustement largeur pour écran large*/
     }
 }
 
@@ -310,7 +310,9 @@
 #francaise img {
     object-position: center 98%;
 }
-
+#delice img{
+    object-position: center 98%;
+}
 
 /* Titre de la carte restaurant */
 .card h3 {

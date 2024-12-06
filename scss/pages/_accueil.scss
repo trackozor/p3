@@ -37,6 +37,7 @@
     /* Tablette */
     @include tablette {
         padding: 2% 0; /* Réduit le padding vertical à 2% sur les écrans tablettes */
+        margin-bottom: 2%;
     }
 
     /* Desktop */
@@ -66,6 +67,7 @@
     /* Tablette */
     @include tablette {
         font-size: 2rem; /* Augmente la taille de la police à 2rem sur tablette */
+        margin:1% 0;
     }
     
     /* Desktop */
@@ -77,8 +79,8 @@
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 3rem; /* Taille de la police encore plus grande sur large desktop */
-        margin: 1% 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
+        font-size: 2.5rem; /* Taille de la police encore plus grande sur large desktop */
+        margin: 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
     }
 }
 
@@ -98,13 +100,15 @@
     @include desktop {
         font-size: 1rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
         margin: 0; /* Supprime la marge en bas */
-        padding: 2% 0;;
+        padding: 2% 0;
+        font-weight: 100;
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 1.5rem; /* Augmente la taille de la police pour les grands écrans */
+        font-size: 1.2rem; /* Augmente la taille de la police pour les grands écrans */
         margin: 0; /* Supprime toujours la marge en bas */
+        font-weight: 300;
     }
 }
 
@@ -123,8 +127,7 @@
 
     /*-- Tablette --*/
     @include tablette {
-        margin: 2% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
-        gap: 2%;
+        padding:1% 0;
     }
 
     /* Desktop */
@@ -152,7 +155,7 @@
 
     /*-- tablette --*/
     @include tablette {
-        margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+        margin: 3% 0 0 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
     }
 
     /* Desktop */
@@ -165,7 +168,7 @@
     /* Large desktop */
     @include large-desktop {
         font-size:1.5rem; /* Taille de police de 1.5rem pour large desktop */
-        margin:2% 0 ;
+        margin:1% 0 ;
         padding-left: 15%;;
     }
 }
@@ -189,6 +192,7 @@
         gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
         justify-content: space-around; /* Espace autour des éléments pour desktop */
         width:95%;
+        margin:1% 0;
     }
 
     /* Large desktop */

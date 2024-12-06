@@ -351,7 +351,7 @@ footer {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .footer-card li {
-    margin-top: 2%; /* Marge supérieur pour tablette */
+    margin-top: 0; /* Marge supérieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -412,8 +412,8 @@ footer {
 .footer-card img {
   display: flex;
   width: 30%; /* L'image occupe 30% de la largeur du footer */
-  margin: 0.5rem 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
-  padding-bottom: 0.25rem; /* Padding inférieur correspondant à 1% de la hauteur */
+  margin: 0; /* Marges verticale correspondant à 1% de la hauteur de l'écran */
+  padding-top: 2%;
   /* tablette */
   /* Desktop */
   /*-- large desktop --*/
@@ -422,7 +422,6 @@ footer {
   .footer-card img {
     width: 25%; /* L'image occupe 30% de la largeur  */
     margin: 0; /* Marge verticale pour tablette */
-    padding-top: 1rem; /* Padding inférieur pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -851,7 +850,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .card-logo {
-    margin: 2% 0;
+    margin: 1% 0;
   }
 }
 
@@ -870,12 +869,12 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo img {
-    width: 20%; /* Ajustement largeur pour desktop*/
+    width: 17%; /* Ajustement largeur pour desktop*/
   }
 }
 @media (min-width: 1440px) {
   .card-logo img {
-    width: 20%; /* ajustement largeur pour écran large*/
+    width: 12%; /* ajustement largeur pour écran large*/
   }
 }
 
@@ -1117,6 +1116,10 @@ label.card-menu:hover {
 /*----------------------------------------------------------------*/
 /* Ajustemement personnalisé des images  */
 #francaise img {
+  object-position: center 98%;
+}
+
+#delice img {
   object-position: center 98%;
 }
 
@@ -1501,6 +1504,7 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .bandeau {
     padding: 2% 0; /* Réduit le padding vertical à 2% sur les écrans tablettes */
+    margin-bottom: 2%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1531,6 +1535,7 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .bandeau h2 {
     font-size: 2rem; /* Augmente la taille de la police à 2rem sur tablette */
+    margin: 1% 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1542,8 +1547,8 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .bandeau h2 {
-    font-size: 3rem; /* Taille de la police encore plus grande sur large desktop */
-    margin: 1% 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
+    font-size: 2.5rem; /* Taille de la police encore plus grande sur large desktop */
+    margin: 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
   }
 }
 
@@ -1564,12 +1569,14 @@ label.card-menu:hover {
     font-size: 1rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
     margin: 0; /* Supprime la marge en bas */
     padding: 2% 0;
+    font-weight: 100;
   }
 }
 @media (min-width: 1440px) {
   .bandeau p {
-    font-size: 1.5rem; /* Augmente la taille de la police pour les grands écrans */
+    font-size: 1.2rem; /* Augmente la taille de la police pour les grands écrans */
     margin: 0; /* Supprime toujours la marge en bas */
+    font-weight: 300;
   }
 }
 
@@ -1590,8 +1597,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement {
-    margin: 2% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
-    gap: 2%;
+    padding: 1% 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1620,7 +1626,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement h2 {
-    margin: 5% 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+    margin: 3% 0 0 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1633,7 +1639,7 @@ label.card-menu:hover {
 @media (min-width: 1440px) {
   .fonctionnement h2 {
     font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 2% 0;
+    margin: 1% 0;
     padding-left: 15%;
   }
 }
@@ -1657,6 +1663,7 @@ label.card-menu:hover {
     gap: 0.5rem; /* Espace entre les éléments de la liste pour desktop */
     justify-content: space-around; /* Espace autour des éléments pour desktop */
     width: 95%;
+    margin: 1% 0;
   }
 }
 @media (min-width: 1440px) {
