@@ -121,6 +121,7 @@ footer {
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
         justify-content: flex-end;
+        padding-top: 25px;
     }        
 
     /*-- large desktop --*/
@@ -129,6 +130,7 @@ footer {
         display: flex;
         align-items: center;
         white-space: nowrap; /* Empêche le retour à la ligne du contenu des listes */
+        margin:1% 0;
     }             
 
 }
@@ -137,8 +139,8 @@ footer {
 /*-- listes --*/
 .footer-card ul {
     @include tablette {
-        margin: 2% 0;
-        padding: 2% 0; /* Pas de marge supérieur pour tablette */
+        margin: 1% 0;
+        padding: 1% 0; /* Pas de marge supérieur pour tablette */
         font-size: 1rem;
     }
 
@@ -148,6 +150,7 @@ footer {
     gap: $gap-base; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
+    align-items: center;
     padding: 0;
     font-size: 0.7rem;
     }
@@ -181,19 +184,21 @@ footer {
     @include tablette {
         width: 25%; /* L'image occupe 30% de la largeur  */
         margin:0; /* Marge verticale pour tablette */
+        padding-bottom: 0;
 
     }
     
     /* Desktop */
     @include desktop {
-        width: 15%; /* L'image occupe 30% de la largeur  */
-        padding-top: $padding-base; /* Padding inférieur pour desktop */
+        width: 10%; /* L'image occupe 30% de la largeur  */
+        padding-top: 30px ;
+        margin-left:5% /* Padding inférieur pour desktop */
     }
 
     /*-- large desktop --*/
     @include large-desktop {
         width: 10%; /* L'image occupe 30% de la largeur  */
-        padding:2%  ; /* Marge verticale pour desktop */
-        margin: 0;
+        padding-top:32px; /* Marge verticale pour desktop */
+        margin-left: 5%;
     }
 }

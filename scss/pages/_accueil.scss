@@ -43,7 +43,7 @@
     /* Desktop */
     @include desktop {
         padding: 1% 0; /* Réduit encore le padding vertical à 1% sur les écrans desktop */
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     /* Large desktop */
@@ -51,7 +51,7 @@
         width: 100%; /* Maintient la largeur complète sur grand écran */
         max-height: 180px; /* Limite la hauteur maximale à 180px */
         padding: 1% 0; /* Padding vertical maintenu à 1% */
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 }
 
@@ -73,7 +73,7 @@
     /* Desktop */
     @include desktop {
         padding: 0.5% 0; /* Ajoute un padding vertical de 0.5% de la largeur de l'écran */
-        font-size: 2.2rem; /* Taille de police légèrement plus grande sur desktop */
+        font-size: 2rem; /* Taille de police légèrement plus grande sur desktop */
         margin: 0; /* Supprime tout espace extérieur autour du h2 */
     }
 
@@ -98,7 +98,8 @@
 
     /* Desktop */
     @include desktop {
-        font-size: 1rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
+        width: 60%;
+        font-size: 0.9rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
         margin: 0; /* Supprime la marge en bas */
         padding: 2% 0;
         font-weight: 100;
@@ -109,6 +110,7 @@
         font-size: 1.2rem; /* Augmente la taille de la police pour les grands écrans */
         margin: 0; /* Supprime toujours la marge en bas */
         font-weight: 300;
+        padding:1.5% 0;
     }
 }
 
@@ -162,7 +164,7 @@
     @include desktop {
         font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
         margin:1% 0;
-        padding-left: 4%;
+        padding-left: 2%;
     }
 
     /* Large desktop */

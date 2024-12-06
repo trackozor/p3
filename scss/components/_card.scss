@@ -309,9 +309,19 @@
 /* Ajustemement personnalisé des images  */
 #francaise img {
     object-position: center 98%;
+
 }
 #delice img{
-    object-position: center 98%;
+
+    @include tablette {
+        object-position: center 85%;
+    }
+    @include desktop {
+        object-position: center 84%;
+    }
+    @include large-desktop {
+        object-position: center 85%;
+    }
 }
 
 /* Titre de la carte restaurant */
