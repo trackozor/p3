@@ -101,15 +101,15 @@
     width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
 
     @include tablette {
-        width:30%;
+        width:25%;
     }
 
     @include desktop {
-        width:20%/* ajustement largeur pour desktop */
+        width:15%/* ajustement largeur pour desktop */
     }
     /* large desktop */
     @include large-desktop {
-        width:15% /* Ajustement largeur pour écran large*/
+        width:12% /* Ajustement largeur pour écran large*/
     }
 }
 
@@ -126,15 +126,15 @@
     /* Desktop */
     @include desktop {
         left:2%; /* Ajuste la position de l'icône pour desktop */
-        top: 30%;
-        font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
+        top: 40%;
+        font-size: 1.2rem; /* Ajuste la position de l'icône pour desktop */
     }
 
     /* large desktop */
     @include large-desktop {
         left:2%; /* Ajuste la position de l'icône pour desktop */
-        top: 35%;
-        font-size: 1.5rem;
+        top: 40%;
+        font-size: 1.2rem;
     }
     
     /* Faire pointer la souris sur l'icône de la carte */
@@ -189,7 +189,9 @@
     @include large-desktop {
         gap: $gap-base;
         width: 100%;
+        max-height: 20px;
         box-shadow: none;
+        padding: 0.8% 0;
         
     
     }
@@ -216,7 +218,7 @@
     
     /* Large desktop */
     @include large-desktop {
-        font-size: 1.2rem;
+        font-size: 1rem;
         align-items: center;
         padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
     }
@@ -229,6 +231,19 @@
     color:#353535 ; /* Couleur du texte */
     display: flex;
     align-items: center;
+
+    @include tablette {
+        font-size: 1rem; /* Ajuste la taille de l'adresse pour tablette */
+    }
+
+    @include desktop {
+        font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+    }
+
+    /* Large desktop */
+    @include large-desktop {
+        font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+    }
 }
 
 
@@ -461,6 +476,10 @@
     justify-content: space-between; /* Espace entre les éléments */
     opacity: 0; /* Initialement invisible */
     animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
+
+    @include tablette {
+        margin:2%;
+    }
 }
 
 /*-------------------------------------------------------------*/
@@ -506,8 +525,8 @@ $sections: (
 
     /* tablette */
     @include tablette {
-        font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
-        padding: 2% ; /* Padding horizontal pour tablette */
+        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour tablette */
+        padding: 1% 2%; /* Padding horizontal pour tablette */
     }
     
     /* Desktop */

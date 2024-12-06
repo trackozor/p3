@@ -921,17 +921,17 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt img {
-    width: 30%;
+    width: 25%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt img {
-    width: 20%;
+    width: 15%;
   }
 }
 @media (min-width: 1440px) {
   .card-logo-alt img {
-    width: 15%;
+    width: 12%;
   }
 }
 
@@ -953,15 +953,15 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt i {
     left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 30%;
-    font-size: 1.5rem; /* Ajuste la position de l'icône pour desktop */
+    top: 40%;
+    font-size: 1.2rem; /* Ajuste la position de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card-logo-alt i {
     left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 35%;
-    font-size: 1.5rem;
+    top: 40%;
+    font-size: 1.2rem;
   }
 }
 .card-logo-alt i:hover {
@@ -1008,7 +1008,9 @@ label.card-menu:hover {
   .card-location {
     gap: 1rem;
     width: 100%;
+    max-height: 20px;
     box-shadow: none;
+    padding: 0.8% 0;
   }
 }
 
@@ -1037,7 +1039,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .card-location i {
-    font-size: 1.2rem;
+    font-size: 1rem;
     align-items: center;
     padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
   }
@@ -1049,6 +1051,22 @@ label.card-menu:hover {
   color: #353535; /* Couleur du texte */
   display: flex;
   align-items: center;
+  /* Large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .carte-location address {
+    font-size: 1rem; /* Ajuste la taille de l'adresse pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .carte-location address {
+    font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .carte-location address {
+    font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+  }
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -1277,6 +1295,11 @@ label.card-menu:hover {
   opacity: 0; /* Initialement invisible */
   animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-menu {
+    margin: 2%;
+  }
+}
 
 /*-------------------------------------------------------------*/
 /*-- Item du menu --*/
@@ -1361,8 +1384,8 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-name {
-    font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
-    padding: 2%; /* Padding horizontal pour tablette */
+    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour tablette */
+    padding: 1% 2%; /* Padding horizontal pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1555,20 +1578,20 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .bandeau h2 {
-    font-size: 2rem; /* Augmente la taille de la police à 2rem sur tablette */
+    font-size: 1.5rem; /* Augmente la taille de la police à 2rem sur tablette */
     margin: 1% 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau h2 {
     padding: 0.5% 0; /* Ajoute un padding vertical de 0.5% de la largeur de l'écran */
-    font-size: 2rem; /* Taille de police légèrement plus grande sur desktop */
+    font-size: 1.8rem; /* Taille de police légèrement plus grande sur desktop */
     margin: 0; /* Supprime tout espace extérieur autour du h2 */
   }
 }
 @media (min-width: 1440px) {
   .bandeau h2 {
-    font-size: 2.5rem; /* Taille de la police encore plus grande sur large desktop */
+    font-size: 1.8rem; /* Taille de la police encore plus grande sur large desktop */
     margin: 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
   }
 }
@@ -1585,6 +1608,15 @@ label.card-menu:hover {
   /* Desktop */
   /* Large desktop */
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  .bandeau p {
+    width: 70%;
+    font-size: 1.1rem; /* Augmente la taille de la police à 1.1rem sur tablette */
+    margin: 0; /* Supprime la marge en bas */
+    padding: 1.5% 0;
+    font-weight: 100;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau p {
     width: 60%;
@@ -1596,10 +1628,10 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .bandeau p {
-    font-size: 1.2rem; /* Augmente la taille de la police pour les grands écrans */
+    font-size: 0.9rem; /* Augmente la taille de la police pour les grands écrans */
     margin: 0; /* Supprime toujours la marge en bas */
     font-weight: 300;
-    padding: 1.5% 0;
+    padding: 1% 0;
   }
 }
 
@@ -1631,7 +1663,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .fonctionnement {
-    padding: 2% 0;
+    padding: 0.9% 0;
     width: 100%;
     margin: 0 auto;
   }
@@ -1661,8 +1693,8 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .fonctionnement h2 {
-    font-size: 1.5rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 1% 0;
+    font-size: 1.3rem; /* Taille de police de 1.5rem pour large desktop */
+    margin: 0.7% 0;
     padding-left: 15%;
   }
 }
@@ -1727,11 +1759,12 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement li {
     width: 100%;
+    margin: 2%;
   }
 }
 @media (min-width: 1440px) {
   .fonctionnement li {
-    margin: 1rem 0.25rem; /* Ajustement des marges pour large desktop */
+    margin: 0.5%; /* Ajustement des marges pour large desktop */
     gap: 1%;
     max-width: 1024px;
     margin: 0 auto;
@@ -1779,7 +1812,8 @@ label.card-menu:hover {
     left: 1vw; /* Décalage du texte pour large desktop */
     border-radius: 0.5rem; /* Bord arrondi pour large desktop */
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour large desktop */
-    font-size: 1rem; /* Taille de la police pour large desktop */
+    font-size: 0.9rem; /* Taille de la police pour large desktop */
+    padding: 3%;
   }
 }
 
@@ -2009,7 +2043,7 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 27vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -2018,19 +2052,19 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image {
-    height: 35vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    height: 25vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image {
-    height: 10vh; /* Hauteur de l'image ajustée pour desktop */
+    height: 25vh; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .menu-image {
-    height: 27vw; /* Hauteur de l'image ajustée pour large desktop */
+    height: 20vw; /* Hauteur de l'image ajustée pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
   }

@@ -66,20 +66,20 @@
 
     /* Tablette */
     @include tablette {
-        font-size: 2rem; /* Augmente la taille de la police à 2rem sur tablette */
+        font-size: 1.5rem; /* Augmente la taille de la police à 2rem sur tablette */
         margin:1% 0;
     }
     
     /* Desktop */
     @include desktop {
         padding: 0.5% 0; /* Ajoute un padding vertical de 0.5% de la largeur de l'écran */
-        font-size: 2rem; /* Taille de police légèrement plus grande sur desktop */
+        font-size: 1.8rem; /* Taille de police légèrement plus grande sur desktop */
         margin: 0; /* Supprime tout espace extérieur autour du h2 */
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 2.5rem; /* Taille de la police encore plus grande sur large desktop */
+        font-size: 1.8rem; /* Taille de la police encore plus grande sur large desktop */
         margin: 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
     }
 }
@@ -96,6 +96,14 @@
     margin-bottom: 2%; /* Espacement extérieur uniquement en bas */
     font-weight: 500; /* Épaisseur intermédiaire pour le texte */
 
+    @include tablette {
+        width: 70%;
+        font-size: 1.1rem; /* Augmente la taille de la police à 1.1rem sur tablette */
+        margin: 0; /* Supprime la marge en bas */
+        padding: 1.5% 0;
+        font-weight: 100;
+    }
+
     /* Desktop */
     @include desktop {
         width: 60%;
@@ -107,10 +115,10 @@
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 1.2rem; /* Augmente la taille de la police pour les grands écrans */
+        font-size: 0.9rem; /* Augmente la taille de la police pour les grands écrans */
         margin: 0; /* Supprime toujours la marge en bas */
         font-weight: 300;
-        padding:1.5% 0;
+        padding:1% 0;
     }
 }
 
@@ -140,7 +148,7 @@
 
     /*-- large desktop --*/
     @include large-desktop {
-        padding: 2% 0;
+        padding: 0.9% 0;
         width:100%;
         margin: 0 auto;
 
@@ -169,8 +177,8 @@
 
     /* Large desktop */
     @include large-desktop {
-        font-size:1.5rem; /* Taille de police de 1.5rem pour large desktop */
-        margin:1% 0 ;
+        font-size:1.3rem; /* Taille de police de 1.5rem pour large desktop */
+        margin:0.7% 0 ;
         padding-left: 15%;;
     }
 }
@@ -233,11 +241,12 @@
     /* Desktop */
     @include desktop {
         width:100%;
+        margin:2%;
     }
 
     /* Large desktop */
     @include large-desktop {
-        margin: $margin-base $margin-xsmall; /* Ajustement des marges pour large desktop */
+        margin: 0.5% ; /* Ajustement des marges pour large desktop */
         gap:1%;
         max-width: 1024px;
         margin: 0 auto;
@@ -288,7 +297,8 @@
         left: 1vw; /* Décalage du texte pour large desktop */
         border-radius: $border-radius-base; /* Bord arrondi pour large desktop */
         box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre pour large desktop */
-        font-size: 1rem; /* Taille de la police pour large desktop */
+        font-size: 0.9rem; /* Taille de la police pour large desktop */
+        padding:3%;
     }
 }
 
