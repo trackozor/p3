@@ -282,8 +282,8 @@
 .puce_num {
     background-color: $button--search-primary-color; /* Couleur de fond de l'icône numérotée */
     border-radius: 50%; /* Forme arrondie */
-    height: 1.5rem; /* Hauteur de l'icône numérotée */
-    width: 1.5rem; /* Largeur de l'icône numérotée */
+    height: 1.8rem; /* Hauteur de l'icône numérotée */
+    width: 1.8rem; /* Largeur de l'icône numérotée */
     display: flex; /* Utilise flexbox pour centrer le numéro */
     position: absolute; /* Positionnement absolu à l'intérieur de la liste */
     left: -4%; /* Place l'icône sur le bord gauche */
@@ -296,21 +296,15 @@
     /* Tablette */
     @include tablette {
         left: -2%;
-        width: 1.5rem;
-        height:1.5rem;
+        width: 1.8rem;
+        height:1.8rem;
     }
 
-    /*-- Desktop --*/
-    @include desktop {
-        height: 1.5rem;
-        width:1.5rem /* Décalage de l'icône numérotée pour desktop */
-        
-    }
     
     /* Large desktop */
     @include large-desktop {
-        height: 1.5rem;
-        width: 1.5rem; /* Décalage de l'icône numérotée pour large desktop */
+        height: 1.8rem;
+        width: 1.8rem; /* Décalage de l'icône numérotée pour large desktop */
         left:2%
     }
 }
@@ -343,7 +337,7 @@
 }
 
 /*----------------------------------------------------------------*/
-/* Icône Store  */
+/* Icône personnalisé etape 3 */
 
 #etape-3 i {
     color: $button--search-primary-color; /* Couleur de l'icône store */

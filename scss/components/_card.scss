@@ -160,9 +160,13 @@
     align-items: center; /* Centre verticalement */
     gap:5%;/* Espace entre les éléments de la carte */
     background-color:#EAEAEA; /* Couleur de fond */
-    box-shadow: $shadow-medium;
     padding: $padding-base 0 ; /* Espace intérieur de la carte */
     
+     /* Bordure avec effet d'ombre */
+    border: 1px solid #EAEAEA; /* Bordure avec couleur de fond */
+    box-shadow: 
+        inset 0 -1px 2px rgba(0, 0, 0, 0.1), /* Ombre interne en bas */
+        inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Ombre interne en haut */
     
     /* Tablette */
     @include tablette {

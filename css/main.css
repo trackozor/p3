@@ -183,7 +183,6 @@ body {
   font-size: 1rem; /* Taille de police relative */
   background-color: #F6F6F6; /* Couleur de fond */
   margin: 0 auto; /* Centrage du contenu */
-  overflow-x: hidden; /* Empêche le débordement horizontal */
   min-width: 300px;
 }
 
@@ -983,8 +982,10 @@ label.card-menu:hover {
   align-items: center; /* Centre verticalement */
   gap: 5%; /* Espace entre les éléments de la carte */
   background-color: #EAEAEA; /* Couleur de fond */
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem 0; /* Espace intérieur de la carte */
+  /* Bordure avec effet d'ombre */
+  border: 1px solid #EAEAEA; /* Bordure avec couleur de fond */
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Ombre interne en haut */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1752,8 +1753,8 @@ label.card-menu:hover {
 .puce_num {
   background-color: #9356DC; /* Couleur de fond de l'icône numérotée */
   border-radius: 50%; /* Forme arrondie */
-  height: 1.5rem; /* Hauteur de l'icône numérotée */
-  width: 1.5rem; /* Largeur de l'icône numérotée */
+  height: 1.8rem; /* Hauteur de l'icône numérotée */
+  width: 1.8rem; /* Largeur de l'icône numérotée */
   display: flex; /* Utilise flexbox pour centrer le numéro */
   position: absolute; /* Positionnement absolu à l'intérieur de la liste */
   left: -4%; /* Place l'icône sur le bord gauche */
@@ -1763,26 +1764,19 @@ label.card-menu:hover {
   color: white; /* Couleur blanche pour le numéro */
   font-size: 0.8rem; /* Taille de la police du numéro */
   /* Tablette */
-  /*-- Desktop --*/
   /* Large desktop */
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   .puce_num {
     left: -2%;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .puce_num {
-    height: 1.5rem;
-    width: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 }
 @media (min-width: 1440px) {
   .puce_num {
-    height: 1.5rem;
-    width: 1.5rem; /* Décalage de l'icône numérotée pour large desktop */
+    height: 1.8rem;
+    width: 1.8rem; /* Décalage de l'icône numérotée pour large desktop */
     left: 2%;
   }
 }
@@ -1816,7 +1810,7 @@ label.card-menu:hover {
 }
 
 /*----------------------------------------------------------------*/
-/* Icône Store  */
+/* Icône personnalisé etape 3 */
 #etape-3 i {
   color: #9356DC; /* Couleur de l'icône store */
 }
