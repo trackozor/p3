@@ -21,63 +21,82 @@
 /*--- Bouton principal avec dégradé ----------------- */
 /*----------------------------------------------------*/
 
-/* Conteneur */
+/* Style principal pour le bouton primaire */
 .button--primary {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  align-items: center; /* Aligne les éléments verticalement */
-  justify-content: center; /* Centre les éléments horizontalement */
-  background: linear-gradient(to bottom, $button--search-secondary-color, $button--search-primary-color);
+  display: flex; /* Utilise Flexbox pour disposer les éléments enfants du bouton */
+  align-items: center; /* Aligne verticalement les éléments enfants au centre */
+  justify-content: center; /* Aligne horizontalement les éléments enfants au centre */
+  
+  /* Fond avec un dégradé vertical (de haut en bas) */
+  background: linear-gradient(
+    to bottom,
+    $button--search-secondary-color,
+    $button--search-primary-color
+  );
 
-  padding: $padding-base; /* Padding correspondant à 2% de la hauteur de l'écran */
-  color: white; /* Couleur du texte en blanc */
-  box-shadow: $shadow-medium; /* Ajoute une ombre */
-  border-radius: $border-radius-large; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
+  padding: $padding-base; /* Ajoute un espace intérieur (padding) proportionnel à la taille de l'écran */
+  color: white; /* Définit la couleur du texte en blanc */
+  box-shadow: $shadow-medium; /* Applique une ombre pour donner un effet de relief */
+  border-radius: $border-radius-large; /* Rend les coins arrondis avec une valeur de rayon spécifique */
 
-  /* Effet de survol */
+  /* Effets visuels au survol */
   &:hover {
-    background: linear-gradient(180deg, lighten($button--search-secondary-color, 2%), lighten($button--search-primary-color, 10%)); /* Effet de survol avec éclaircissement du dégradé */
-    box-shadow: $shadow-medium; 
+    /* Change légèrement le dégradé en l'éclaircissant au survol */
+    background: linear-gradient(
+      180deg, /* Dégradé inversé, de bas en haut */
+      lighten($button--search-secondary-color, 2%), /* Éclaircissement léger de la première couleur */
+      lighten($button--search-primary-color, 10%) /* Éclaircissement plus prononcé de la seconde couleur */
+    );
+
+    /* Maintient la même ombre pour un effet subtil */
+    box-shadow: $shadow-medium;
   }
 }
+
 
 
 /*-------------------------------------------------------------*/
-/*  Texte du bouton  */
+/* Style pour le texte à l'intérieur du bouton principal */
 .button--primary-txt {
-  font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
-  font-weight: 500; /* Style de police en gras (bold) */
+  font-size: $font-size-base; /* Définit la taille de la police par défaut (ex. 2% de la hauteur de l'écran) */
+  font-weight: 500; /* Applique une épaisseur intermédiaire (500) au texte */
 
+  /* Desktop */
   @include desktop {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Réduit la taille de la police pour les écrans de bureau */
   }
+
+  /*-- Large desktop --*/
   @include large-desktop {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Taille de police maintenue identique sur les très grands écrans */
   }
 }
+
 
 
 /*-------------------------------------*/
 /*----------Badge Nouveau ------------*/
 /*-----------------------------------*/
 
+/* Style pour le badge (étiquette ou indicateur visuel) */
 .badge {
-  background-color: $button--new-primary-color; /* Couleur de fond vert clair */
-  color: $button--new-secondary-color; /* Couleur du texte en vert foncé */
-  font-size: 1rem; /* Taille de la police à 2% de la hauteur de l'écran */
-  padding: $padding-small $padding-base; /* Padding vertical et horizontal */
-  font-weight: $font-weight-bold; /* Style de police très gras (900) */
-  display: flex; /* Utilisation de flexbox pour l'alignement */
-  justify-content: center; /* Centrage horizontal du texte */
-  
+  background-color: $button--new-primary-color; /* Définit un fond vert clair */
+  color: $button--new-secondary-color; /* Couleur du texte en vert foncé pour le contraste */
+  font-size: 1rem; /* Taille de la police initiale (par défaut pour mobile) */
+  padding: $padding-small $padding-base; /* Définit un espace intérieur vertical et horizontal */
+  font-weight: $font-weight-bold; /* Applique un style de texte en gras (bold) */
+  display: flex; /* Active Flexbox pour la gestion des éléments enfants (s'il y en a) */
+  justify-content: center; /* Centre le contenu horizontalement */
 
-  /*-- Tablette --*/
+  /*-- tablettes --*/
   @include tablette {
-    font-size: 1rem;
-    padding: $padding-base; /* Padding ajusté pour tablette */
+    font-size: 1rem; /* Conserve la taille de la police sur tablette */
+    padding: $padding-base; /* Augmente le padding pour un rendu plus espacé */
   }
 
+  /*-- large desktop --*/
   @include large-desktop {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Réduit légèrement la taille de la police pour les écrans très larges */
   }
 }
 
@@ -181,32 +200,31 @@ input.favorite-checkbox:checked ~ .fa-empty {
 }
 
 /*-------------------------------------------------------------*/
-/* Label*/
+/* Style pour les étiquettes des menus de cartes */
 label.card-menu {
-    display: block;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
-
+  display: block; /* Affiche l'élément comme un bloc pour occuper toute la largeur disponible */
+  cursor: pointer; /* Change le curseur en main pour indiquer que l'élément est cliquable */
+  border: 1px solid #ccc; /* Ajoute une bordure fine grise autour de la carte */
+  border-radius: 1rem; /* Arrondit les coins de la carte pour un rendu plus esthétique */
+  margin-bottom: 10px; /* Ajoute un espacement en bas de chaque carte */
+  position: relative; /* Permet un positionnement des éléments enfants par rapport à ce conteneur */
+  overflow: hidden; /* Empêche tout contenu ou icône dépassant les limites de la carte d'être visible */
 }
 
 
-/*-------------------------------------------------------------*/
-/* Conteneur icône de validation  */
-.validation-icon {
-    display: flex;
-    align-items: center; /* Alignement vertical de l'icône */
-    position: absolute;
-    right:-1%; /*  */
-    top:53%;
-    transform: translateY(-53%); /* Centrage vertical */
-    justify-content: center; /* Centrage horizontal */
-    padding: 0;
-    margin: 0;
 
+/*-------------------------------------------------------------*/
+/* Conteneur pour l'icône de validation */
+.validation-icon {
+  display: flex; /* Utilise Flexbox pour une mise en page flexible et l'alignement des éléments internes */
+  align-items: center; /* Aligne les éléments enfants verticalement au centre */
+  position: absolute; /* Positionnement absolu par rapport à l'élément parent contenant */
+  right: -1%; /* Décale l'icône légèrement vers la droite en dehors du conteneur parent */
+  top: 53%; /* Positionne l'icône légèrement au-dessus du centre vertical */
+  transform: translateY(-53%); /* Ajuste la position verticale pour un centrage plus précis */
+  justify-content: center; /* Centre les éléments horizontalement dans le conteneur */
+  padding: 0; /* Supprime les espaces internes */
+  margin: 0; /* Supprime les marges externes */
 }
 
 
@@ -214,8 +232,8 @@ label.card-menu {
 /* Icône à l'intérieur de .validation-icon */
 .validation-icon i {
     color: white; /* Couleur de l'icône */
-    background-color: $button--new-primary-color; /* Utilisation de la variable Sass */
-    padding: 1.4rem 1rem; /* Padding de l'icône */
+    background-color: $button--new-primary-color; 
+    padding: 1.4rem 1rem; 
     border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
     font-size: 1.5rem; /* Taille de l'icône */
     justify-content: center;

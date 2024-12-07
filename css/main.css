@@ -652,62 +652,69 @@ footer .logo-footer {
 /*----------------------------------------------------*/
 /*--- Bouton principal avec dégradé ----------------- */
 /*----------------------------------------------------*/
-/* Conteneur */
+/* Style principal pour le bouton primaire */
 .button--primary {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  align-items: center; /* Aligne les éléments verticalement */
-  justify-content: center; /* Centre les éléments horizontalement */
+  display: flex; /* Utilise Flexbox pour disposer les éléments enfants du bouton */
+  align-items: center; /* Aligne verticalement les éléments enfants au centre */
+  justify-content: center; /* Aligne horizontalement les éléments enfants au centre */
+  /* Fond avec un dégradé vertical (de haut en bas) */
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  padding: 1rem; /* Padding correspondant à 2% de la hauteur de l'écran */
-  color: white; /* Couleur du texte en blanc */
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
-  border-radius: 2rem; /* Bord arrondis avec un rayon de 2% de la hauteur de l'écran */
-  /* Effet de survol */
+  padding: 1rem; /* Ajoute un espace intérieur (padding) proportionnel à la taille de l'écran */
+  color: white; /* Définit la couleur du texte en blanc */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Applique une ombre pour donner un effet de relief */
+  border-radius: 2rem; /* Rend les coins arrondis avec une valeur de rayon spécifique */
+  /* Effets visuels au survol */
 }
 .button--primary:hover {
-  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75)); /* Effet de survol avec éclaircissement du dégradé */
+  /* Change légèrement le dégradé en l'éclaircissant au survol */
+  background: linear-gradient(180deg, rgb(255, 131.2, 220.8164179104), rgb(174, 128.25, 228.75));
+  /* Maintient la même ombre pour un effet subtil */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 /*-------------------------------------------------------------*/
-/*  Texte du bouton  */
+/* Style pour le texte à l'intérieur du bouton principal */
 .button--primary-txt {
-  font-size: 1rem; /* Taille de police à 2% de la hauteur de l'écran */
-  font-weight: 500; /* Style de police en gras (bold) */
+  font-size: 1rem; /* Définit la taille de la police par défaut (ex. 2% de la hauteur de l'écran) */
+  font-weight: 500; /* Applique une épaisseur intermédiaire (500) au texte */
+  /* Desktop */
+  /*-- Large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .button--primary-txt {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Réduit la taille de la police pour les écrans de bureau */
   }
 }
 @media (min-width: 1440px) {
   .button--primary-txt {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Taille de police maintenue identique sur les très grands écrans */
   }
 }
 
 /*-------------------------------------*/
 /*----------Badge Nouveau ------------*/
 /*-----------------------------------*/
+/* Style pour le badge (étiquette ou indicateur visuel) */
 .badge {
-  background-color: #99E2D0; /* Couleur de fond vert clair */
-  color: #008766; /* Couleur du texte en vert foncé */
-  font-size: 1rem; /* Taille de la police à 2% de la hauteur de l'écran */
-  padding: 0.5rem 1rem; /* Padding vertical et horizontal */
-  font-weight: 700; /* Style de police très gras (900) */
-  display: flex; /* Utilisation de flexbox pour l'alignement */
-  justify-content: center; /* Centrage horizontal du texte */
-  /*-- Tablette --*/
+  background-color: #99E2D0; /* Définit un fond vert clair */
+  color: #008766; /* Couleur du texte en vert foncé pour le contraste */
+  font-size: 1rem; /* Taille de la police initiale (par défaut pour mobile) */
+  padding: 0.5rem 1rem; /* Définit un espace intérieur vertical et horizontal */
+  font-weight: 700; /* Applique un style de texte en gras (bold) */
+  display: flex; /* Active Flexbox pour la gestion des éléments enfants (s'il y en a) */
+  justify-content: center; /* Centre le contenu horizontalement */
+  /*-- tablettes --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .badge {
-    font-size: 1rem;
-    padding: 1rem; /* Padding ajusté pour tablette */
+    font-size: 1rem; /* Conserve la taille de la police sur tablette */
+    padding: 1rem; /* Augmente le padding pour un rendu plus espacé */
   }
 }
 @media (min-width: 1440px) {
   .badge {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Réduit légèrement la taille de la police pour les écrans très larges */
   }
 }
 
@@ -809,37 +816,37 @@ input.favorite-checkbox:checked ~ .fa-empty {
 }
 
 /*-------------------------------------------------------------*/
-/* Label*/
+/* Style pour les étiquettes des menus de cartes */
 label.card-menu {
-  display: block;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 1rem;
-  margin-bottom: 10px;
-  position: relative;
-  overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
+  display: block; /* Affiche l'élément comme un bloc pour occuper toute la largeur disponible */
+  cursor: pointer; /* Change le curseur en main pour indiquer que l'élément est cliquable */
+  border: 1px solid #ccc; /* Ajoute une bordure fine grise autour de la carte */
+  border-radius: 1rem; /* Arrondit les coins de la carte pour un rendu plus esthétique */
+  margin-bottom: 10px; /* Ajoute un espacement en bas de chaque carte */
+  position: relative; /* Permet un positionnement des éléments enfants par rapport à ce conteneur */
+  overflow: hidden; /* Empêche tout contenu ou icône dépassant les limites de la carte d'être visible */
 }
 
 /*-------------------------------------------------------------*/
-/* Conteneur icône de validation  */
+/* Conteneur pour l'icône de validation */
 .validation-icon {
-  display: flex;
-  align-items: center; /* Alignement vertical de l'icône */
-  position: absolute;
-  right: -1%; /*  */
-  top: 53%;
-  transform: translateY(-53%); /* Centrage vertical */
-  justify-content: center; /* Centrage horizontal */
-  padding: 0;
-  margin: 0;
+  display: flex; /* Utilise Flexbox pour une mise en page flexible et l'alignement des éléments internes */
+  align-items: center; /* Aligne les éléments enfants verticalement au centre */
+  position: absolute; /* Positionnement absolu par rapport à l'élément parent contenant */
+  right: -1%; /* Décale l'icône légèrement vers la droite en dehors du conteneur parent */
+  top: 53%; /* Positionne l'icône légèrement au-dessus du centre vertical */
+  transform: translateY(-53%); /* Ajuste la position verticale pour un centrage plus précis */
+  justify-content: center; /* Centre les éléments horizontalement dans le conteneur */
+  padding: 0; /* Supprime les espaces internes */
+  margin: 0; /* Supprime les marges externes */
 }
 
 /*-------------------------------------------------------------*/
 /* Icône à l'intérieur de .validation-icon */
 .validation-icon i {
   color: white; /* Couleur de l'icône */
-  background-color: #99E2D0; /* Utilisation de la variable Sass */
-  padding: 1.4rem 1rem; /* Padding de l'icône */
+  background-color: #99E2D0;
+  padding: 1.4rem 1rem;
   border-radius: 0 2vh 2vh 0; /* Bords arrondis seulement à droite */
   font-size: 1.5rem; /* Taille de l'icône */
   justify-content: center;
