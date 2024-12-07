@@ -29,9 +29,11 @@
     margin: 4% 0; /* Définit les marges verticales de la carte */
     justify-content: center;/* centre les éléments horizontalement */
 
+    /*-- tablette --*/
     @include tablette {
         margin:2% 0;
     }
+
     /* Desktop */
     @include desktop {
         margin:1.5% 0;
@@ -52,6 +54,7 @@
     margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
     width:40%;/* prend 50% de largeur du conteneur */
 
+    /*-- tablette --*/
     @include tablette {
         width:20%
     }
@@ -104,13 +107,16 @@
 .card-logo-alt img {
     width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
 
+    /* tablette */
     @include tablette {
         width:20%;
     }
 
+    /* Desktop */
     @include desktop {
         width:15%/* ajustement largeur pour desktop */
     }
+
     /* large desktop */
     @include large-desktop {
         width:10% /* Ajustement largeur pour écran large*/
@@ -244,10 +250,12 @@
     display: flex;
     align-items: center;
 
+    /* Tablette */
     @include tablette {
         font-size: 1rem; /* Ajuste la taille de l'adresse pour tablette */
     }
 
+    /* Desktop */
     @include desktop {
         font-size: 0.7rem; /* Ajuste la taille de l'adresse pour desktop */
     }
@@ -286,17 +294,17 @@
         max-height: 350px;
     }
 
-        /* Desktop */
+    /*-- Desktop --*/
     @include desktop {
-    width: 45%;
-    max-height:350px;
+        width: 45%;
+        max-height:350px;
     }
 
     /*-- large desktop --*/
     @include large-desktop {
-    max-height: 250px;
-    width: 46%;
-    margin:0.5% 1%;
+        max-height: 250px;
+        width: 46%;
+        margin:0.5% 1%;
     }
 
 }
@@ -312,8 +320,6 @@
     object-fit: cover; /* L'image se découpe pour s'adapter au conteneur */
     object-position: center 60%; /* Position de l'image à l'intérieur du conteneur */
     overflow: hidden;
-    
-    
 
     /*-- tablette --*/
     @include tablette {
@@ -331,7 +337,6 @@
     @include large-desktop {
         height:70%;
         max-height: 160px;
-
     }
 
 }
@@ -341,12 +346,17 @@
 #francaise img {
     object-position: center 98%;
     
+    /* -- tablette --*/
     @include tablette {
         object-position: center 90%;
     }
+
+    /*-- Desktop --*/
     @include desktop {
         object-position: center 95%;
     }
+
+    /*-- large desktop --*/
     @include large-desktop {
         object-position: center 78%;
     }
@@ -354,12 +364,17 @@
 }
 #delice img{
 
+    /* -- tablette --*/
     @include tablette {
         object-position: center 85%;
     }
+
+    /*-- Desktop --*/
     @include desktop {
         object-position: center 84%;
     }
+
+    /*-- large desktop --*/
     @include large-desktop {
         object-position: center 75%;
     }
@@ -430,8 +445,6 @@
     padding: 0; /* espace intérieur haut/bas correspondant à 0.5% de la hauteur de l'écran */
     
 }
-
-
 
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------Badge--------------------------------------------- */
@@ -587,8 +600,6 @@ $sections: (
         font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
         padding:1% 2% ; /* Padding horizontal pour large desktop */
     }
-
-
 }
 
 

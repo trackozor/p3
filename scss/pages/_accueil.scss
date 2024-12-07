@@ -96,6 +96,7 @@
     margin-bottom: 4%; /* Espacement extérieur uniquement en bas */
     font-weight: 500; /* Épaisseur intermédiaire pour le texte */
 
+    /* Tablette */
     @include tablette {
         width: 70%;
         font-size: 1.1rem; /* Augmente la taille de la police à 1.1rem sur tablette */
@@ -122,6 +123,7 @@
         padding:1% 0;
     }
 }
+
 
 /*--------------------------------------------------------------------*/
 /*                   SECTION FONCTIONNEMENT                           */
@@ -153,9 +155,9 @@
         padding: 0.8% 0;
         width:100%;
         margin: 0 auto;
-
     }
 }
+
 
 /*----------------------------------------------------------------*/
 /*  Titre */
@@ -188,6 +190,7 @@
     }
 }
 
+
 /*----------------------------------------------------------------*/
 /*  Liste */
 
@@ -200,6 +203,7 @@
     margin:2% auto;
     padding-left: 2%;
 
+    /* Tablette */
     @include tablette {
         margin: 1% auto;
         ;
@@ -224,6 +228,7 @@
         padding-right: 2%;
     }
 }
+
 
 /*-----------------------------------------------------------------*/
 /* Liste : Lignes */
@@ -259,7 +264,6 @@
         max-width: 1024px;
         margin: 0 auto;
         width: 80%;
-
     }
 }
 
@@ -311,6 +315,7 @@
     }
 }
 
+
 /*----------------------------------------------------------------*/
 /*puces*/
 
@@ -335,11 +340,17 @@
         height:1.8rem;
     }
 
+    /* Desktop */
+    @include desktop {
+        left: -2%;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
     
     /* Large desktop */
     @include large-desktop {
-        height: 1.8rem;
-        width: 1.8rem; /* Décalage de l'icône numérotée pour large desktop */
+        height: 1.4rem;
+        width: 1.4rem; /* Décalage de l'icône numérotée pour large desktop */
         left:2%
     }
 }
@@ -354,7 +365,7 @@
 
     /*-- Tablette --*/
     @include tablette {
-        font-size: $font-size-title;
+        font-size: 1.4rem;
     }
 
 
@@ -402,6 +413,7 @@
         width: 100%;
     }
 
+    /* Desktop */
     @include desktop {
         flex-direction:row;
         flex-wrap: wrap;
@@ -435,6 +447,7 @@
     margin:15% 5%;
     font-size: 1.6rem;
 
+    /*-- Desktop --*/
     @include desktop {
         display:flex;
         width:95%; 

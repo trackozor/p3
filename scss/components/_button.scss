@@ -26,14 +26,12 @@
   display: flex; /* Utilise Flexbox pour disposer les éléments enfants du bouton */
   align-items: center; /* Aligne verticalement les éléments enfants au centre */
   justify-content: center; /* Aligne horizontalement les éléments enfants au centre */
-  
   /* Fond avec un dégradé vertical (de haut en bas) */
   background: linear-gradient(
     to bottom,
     $button--search-secondary-color,
     $button--search-primary-color
   );
-
   padding: $padding-base; /* Ajoute un espace intérieur (padding) proportionnel à la taille de l'écran */
   color: white; /* Définit la couleur du texte en blanc */
   box-shadow: $shadow-medium; /* Applique une ombre pour donner un effet de relief */

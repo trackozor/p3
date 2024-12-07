@@ -375,6 +375,8 @@ footer {
 /*------------------------------------------------------------*/
 /*-- listes --*/
 .footer-card ul {
+  /*-- tablette --*/
+  /*-- desktop --*/
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -443,6 +445,8 @@ footer {
 }
 
 * .footer-card1 ul {
+  /* tablette */
+  /* Desktop */
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -479,6 +483,7 @@ footer {
 }
 
 footer .logo-footer {
+  /*-- Desktop --*/
   /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -899,6 +904,7 @@ label.card-menu {
   background-color: white; /*Couleur de fond blanche */
   margin: 4% 0; /* Définit les marges verticales de la carte */
   justify-content: center; /* centre les éléments horizontalement */
+  /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
 }
@@ -924,6 +930,7 @@ label.card-menu {
   display: block; /* affiche l'element comme un bloc */
   margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
   width: 40%; /* prend 50% de largeur du conteneur */
+  /*-- tablette --*/
   /*-- desktop --*/
   /*-- large desktop --*/
 }
@@ -977,6 +984,8 @@ label.card-menu {
 /* Image dans la carte alt */
 .card-logo-alt img {
   width: 50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
+  /* tablette */
+  /* Desktop */
   /* large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -1117,6 +1126,8 @@ label.card-menu {
   color: #353535; /* Couleur du texte */
   display: flex;
   align-items: center;
+  /* Tablette */
+  /* Desktop */
   /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -1151,7 +1162,7 @@ label.card-menu {
   height: auto;
   max-height: 260px;
   /* Tablette */
-  /* Desktop */
+  /*-- Desktop --*/
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -1210,6 +1221,9 @@ label.card-menu {
 /* Ajustemement personnalisé des images  */
 #francaise img {
   object-position: center 98%;
+  /* -- tablette --*/
+  /*-- Desktop --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   #francaise img {
@@ -1227,6 +1241,11 @@ label.card-menu {
   }
 }
 
+#delice img {
+  /* -- tablette --*/
+  /*-- Desktop --*/
+  /*-- large desktop --*/
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   #delice img {
     object-position: center 85%;
@@ -1717,6 +1736,7 @@ label.card-menu {
   padding: 2% 0; /* Ajoute un padding vertical de 2%, aucun padding horizontal */
   margin-bottom: 4%; /* Espacement extérieur uniquement en bas */
   font-weight: 500; /* Épaisseur intermédiaire pour le texte */
+  /* Tablette */
   /* Desktop */
   /* Large desktop */
 }
@@ -1826,6 +1846,7 @@ label.card-menu {
   justify-content: center; /* Centre les éléments horizontalement */
   margin: 2% auto;
   padding-left: 2%;
+  /* Tablette */
   /* Desktop */
   /* Large desktop */
 }
@@ -1956,6 +1977,7 @@ label.card-menu {
   color: white; /* Couleur blanche pour le numéro */
   font-size: 0.8rem; /* Taille de la police du numéro */
   /* Tablette */
+  /* Desktop */
   /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -1965,10 +1987,17 @@ label.card-menu {
     height: 1.8rem;
   }
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .puce_num {
+    left: -2%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 @media (min-width: 1440px) {
   .puce_num {
-    height: 1.8rem;
-    width: 1.8rem; /* Décalage de l'icône numérotée pour large desktop */
+    height: 1.4rem;
+    width: 1.4rem; /* Décalage de l'icône numérotée pour large desktop */
     left: 2%;
   }
 }
@@ -1985,7 +2014,7 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement i {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2023,6 +2052,7 @@ label.card-menu {
   height: auto; /* Laisse la section s'adapter à la hauteur du contenu */
   padding-top: 20%;
   /*-- Tablette --*/
+  /* Desktop */
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -2062,6 +2092,7 @@ label.card-menu {
   display: none;
   margin: 15% 5%;
   font-size: 1.6rem;
+  /*-- Desktop --*/
   /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
