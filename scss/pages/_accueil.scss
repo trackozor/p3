@@ -117,6 +117,7 @@
     @include large-desktop {
         font-size: 0.9rem; /* Augmente la taille de la police pour les grands écrans */
         margin: 0; /* Supprime toujours la marge en bas */
+        margin-bottom: 0.5%;
         font-weight: 300;
         padding:1% 0;
     }
@@ -175,6 +176,7 @@
         font-size: 1.2rem; /* Taille de police de 1.5rem pour desktop */
         margin:0.5% 0;
         padding-left: 2%;
+        margin-bottom: 1%;
     }
 
     /* Large desktop */
@@ -182,6 +184,7 @@
         font-size:1.3rem; /* Taille de police de 1.5rem pour large desktop */
         margin:0.5% 0 ;
         padding-left: 15%;;
+        margin-bottom: 1.5%;
     }
 }
 

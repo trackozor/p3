@@ -260,7 +260,7 @@ footer {
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
-/*----------------------------------------- Footer Carte----------------------------------------------*/
+/*----------------------------------------- Footer Carte ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
@@ -391,7 +391,6 @@ footer {
     gap: 1rem; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
-    align-items: center;
     padding: 0;
     font-size: 0.9rem;
   }
@@ -431,15 +430,65 @@ footer {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .footer-card img {
     width: 10%; /* L'image occupe 30% de la largeur  */
-    padding-top: 30px;
+    padding-top: 27px;
     margin-left: 5%;
   }
 }
 @media (min-width: 1440px) {
   .footer-card img {
-    width: 10%; /* L'image occupe 30% de la largeur  */
-    padding-top: 32px; /* Marge verticale pour desktop */
+    width: 8%; /* L'image occupe 30% de la largeur  */
+    padding-top: 24px; /* Marge verticale pour desktop */
     margin-left: 5%;
+  }
+}
+
+* .footer-card1 ul {
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  * .footer-card1 ul {
+    margin: 1% 0;
+    padding: 1% 0; /* Pas de marge supérieur pour tablette */
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  * .footer-card1 ul {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: flex-end;
+    gap: 1rem; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    list-style: none; /* Retire les puces de la liste */
+    align-items: center;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  * .footer-card1 ul {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: flex-end;
+    gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin-left: 70%;
+    font-size: 0.9rem;
+    padding-top: 1.5%;
+  }
+}
+
+footer .logo-footer {
+  /*-- large desktop --*/
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  footer .logo-footer {
+    width: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  footer .logo-footer {
+    width: 30%;
   }
 }
 
@@ -620,6 +669,7 @@ footer {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+/*-------------------------------------------------------------*/
 /*  Texte du bouton  */
 .button--primary-txt {
   font-size: 1rem; /* Taille de police à 2% de la hauteur de l'écran */
@@ -672,6 +722,7 @@ footer {
   display: inline-block;
 }
 
+/*-------------------------------------------------------------*/
 /* Icône pleine : initialement cachée */
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
@@ -681,6 +732,7 @@ footer {
   transition: all 0.3s ease-in; /* Animation fluide pour l'apparition */
 }
 
+/*-------------------------------------------------------------*/
 /* Icône vide : visible par défaut */
 .icon-favorite .fa-empty {
   display: flex; /* Visible par défaut */
@@ -688,11 +740,13 @@ footer {
   transition: all 0.3s ease-in; /* Animation fluide pour la disparition */
 }
 
+/*-------------------------------------------------------------*/
 /* Input caché */
 input.favorite-checkbox {
   display: none; /* Cache l'input */
 }
 
+/*-------------------------------------------------------------*/
 /* Quand le checkbox est coché : persistance de l'état */
 input.favorite-checkbox:checked ~ .fa-full {
   display: flex; /* Affiche l'icône pleine */
@@ -706,6 +760,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
   display: none; /* Cache l'icône vide */
 }
 
+/*-------------------------------------------------------------*/
 /* Styles Responsifs : ajustements des tailles */
 .fa-full,
 .fa-empty {
@@ -717,7 +772,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
 @media (min-width: 767px) and (max-width: 1023px) {
   .fa-full,
   .fa-empty {
-    font-size: 1.6rem; /* Ajustement pour tablette */
+    font-size: 1.8rem; /* Ajustement pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -733,17 +788,6 @@ input.favorite-checkbox:checked ~ .fa-empty {
   }
 }
 
-/*---------------------------------------------------*/
-/*---------Flèche retour ---------------------------*/
-/*-------------------------------------------------*/
-.button--back {
-  background-color: transparent; /* Fond transparent */
-  color: #353535; /* Couleur du texte en noir */
-  font-size: 1rem; /* Taille de la police */
-  padding: 0; /* Pas de padding */
-  border: none; /* Pas de bordure */
-}
-
 /*-----------------------------------------------------*/
 /*--------icône validation -----------------------------*/
 /*-----------------------------------------------------*/
@@ -752,7 +796,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
   display: none;
 }
 
-/* Icône à animer, initialement hors de l'écran */
+/* Icône à animer */
 .icon-to-slide {
   position: relative;
   transform: translateX(180px); /* L'icône commence hors de la carte à droite */
@@ -764,7 +808,8 @@ input.favorite-checkbox:checked ~ .fa-empty {
   transform: translateX(0); /* L'icône glisse vers sa position finale */
 }
 
-/* Style pour rendre toute la carte cliquable */
+/*-------------------------------------------------------------*/
+/* Label*/
 label.card-menu {
   display: block;
   cursor: pointer;
@@ -775,7 +820,8 @@ label.card-menu {
   overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
 }
 
-/* Icône de validation à l'intérieur */
+/*-------------------------------------------------------------*/
+/* Conteneur icône de validation  */
 .validation-icon {
   display: flex;
   align-items: center; /* Alignement vertical de l'icône */
@@ -787,13 +833,9 @@ label.card-menu {
   padding: 0;
   margin: 0;
 }
-@media (min-width: 1440px) {
-  .validation-icon {
-    right: -2%; /* Centrage vertical */
-  }
-}
 
-/* Style de l'icône à l'intérieur de .validation-icon */
+/*-------------------------------------------------------------*/
+/* Icône à l'intérieur de .validation-icon */
 .validation-icon i {
   color: white; /* Couleur de l'icône */
   background-color: #99E2D0; /* Utilisation de la variable Sass */
@@ -802,9 +844,9 @@ label.card-menu {
   font-size: 1.5rem; /* Taille de l'icône */
   justify-content: center;
   align-items: center;
-  /* Media queries pour tablette */
-  /* Media queries pour desktop */
-  /* Media queries pour large desktop */
+  /*  tablette */
+  /* desktop */
+  /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .validation-icon i {
@@ -821,7 +863,7 @@ label.card-menu {
 @media (min-width: 1440px) {
   .validation-icon i {
     font-size: 1.4rem;
-    padding: 1.7rem; /* Ajustement de la taille et du padding pour large desktop */
+    padding: 1.4rem; /* Ajustement de la taille et du padding pour large desktop */
   }
 }
 
@@ -869,6 +911,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* images */
 .card-logo img {
   display: block; /* affiche l'element comme un bloc */
@@ -923,6 +966,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Image dans la carte alt */
 .card-logo-alt img {
   width: 50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
@@ -944,11 +988,13 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Icône de flèche retour */
 .card-logo-alt i {
   position: absolute; /* Positionne l'icône de manière absolue dans la carte */
   left: 5%; /* Place l'icône à gauche, hors de la carte */
-  top: 40%; /* Place l'icône à 35% du haut du conteneur */
+  top: 30%; /* Place l'icône à 35% du haut du conteneur */
+  font-size: 1.6rem;
   /*-- tablette --*/
   /* Desktop */
   /* large desktop */
@@ -956,21 +1002,22 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt i {
-    top: 40%; /* Place l'icône à 35% du haut du conteneur */
+    top: 30%; /* Place l'icône à 35% du haut du conteneur */
+    left: 2%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo-alt i {
     left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 40%;
-    font-size: 1.2rem; /* Ajuste la position de l'icône pour desktop */
+    top: 33%;
+    font-size: 1.4rem; /* Ajuste la position de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card-logo-alt i {
     left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 40%;
-    font-size: 1rem;
+    top: 45%;
+    font-size: 1.2rem;
   }
 }
 .card-logo-alt i:hover {
@@ -1024,6 +1071,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Icône localisation dans la carte localisation */
 .card-location i {
   font-size: 1.2rem; /* Taille de l'icône en fonction de la hauteur de l'écran */
@@ -1055,6 +1103,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Adresse dans la carte localisation */
 .carte-location address {
   font-size: 1.2rem; /* Taille du texte pour l'adresse */
@@ -1155,6 +1204,21 @@ label.card-menu {
 #francaise img {
   object-position: center 98%;
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  #francaise img {
+    object-position: center 90%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #francaise img {
+    object-position: center 95%;
+  }
+}
+@media (min-width: 1440px) {
+  #francaise img {
+    object-position: center 78%;
+  }
+}
 
 @media (min-width: 767px) and (max-width: 1023px) {
   #delice img {
@@ -1172,6 +1236,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Titre de la carte restaurant */
 .card h3 {
   font-family: "roboto-bold", sans-serif; /* Police du titre */
@@ -1401,7 +1466,7 @@ label.card-menu {
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
   display: block;
-  font-size: 0.9rem; /* Taille du texte pour le nom du plat */
+  font-size: 1rem; /* Taille du texte pour le nom du plat */
   font-weight: 700; /* Style gras pour le nom du plat */
   padding: 3% 5%;
   /* tablette */
@@ -1416,13 +1481,13 @@ label.card-menu {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-name {
-    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
     padding: 2%; /* Padding horizontal pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .dish-name {
-    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour large desktop */
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
     padding: 1% 2%; /* Padding horizontal pour large desktop */
   }
 }
@@ -1442,7 +1507,7 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-description {
-    font-size: 1rem; /* Taille du texte pour la description du plat pour tablette */
+    font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
     padding-left: 2%; /* Padding horizontal pour tablette */
     margin-bottom: 1%;
   }
@@ -1460,14 +1525,6 @@ label.card-menu {
     padding-left: 2%; /* Padding horizontal pour large desktop */
     margin-bottom: 1%;
   }
-}
-
-/* Quand le prix glisse (case cochée), la description est éclipsée */
-.checkbox-hidden:checked + label .dish-description {
-  white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
-  overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
-  text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
-  width: 70%;
 }
 
 /*-------------------------------------------------------------*/
@@ -1523,6 +1580,7 @@ label.card-menu {
   }
 }
 
+/*-------------------------------------------------------------*/
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
   transform: translateX(-62%); /* Glisse vers la gauche de 9% de la  */
@@ -1545,6 +1603,15 @@ label.card-menu {
   .checkbox-hidden:checked + label .price {
     transform: translateX(-3rem); /* Glisse vers la gauche de 20px pour large desktop */
   }
+}
+
+/*-------------------------------------------------------------*/
+/* Quand le prix glisse (case cochée), la description est éclipsée */
+.checkbox-hidden:checked + label .dish-description {
+  white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+  overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
+  text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
+  width: 70%;
 }
 
 /* 6. Pages spécifiques */
@@ -1668,6 +1735,7 @@ label.card-menu {
   .bandeau p {
     font-size: 0.9rem; /* Augmente la taille de la police pour les grands écrans */
     margin: 0; /* Supprime toujours la marge en bas */
+    margin-bottom: 0.5%;
     font-weight: 300;
     padding: 1% 0;
   }
@@ -1729,6 +1797,7 @@ label.card-menu {
     font-size: 1.2rem; /* Taille de police de 1.5rem pour desktop */
     margin: 0.5% 0;
     padding-left: 2%;
+    margin-bottom: 1%;
   }
 }
 @media (min-width: 1440px) {
@@ -1736,6 +1805,7 @@ label.card-menu {
     font-size: 1.3rem; /* Taille de police de 1.5rem pour large desktop */
     margin: 0.5% 0;
     padding-left: 15%;
+    margin-bottom: 1.5%;
   }
 }
 

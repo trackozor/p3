@@ -40,6 +40,8 @@
   }
 }
 
+
+/*-------------------------------------------------------------*/
 /*  Texte du bouton  */
 .button--primary-txt {
   font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
@@ -93,6 +95,7 @@
   display: inline-block;
 }
 
+/*-------------------------------------------------------------*/
 /* Icône pleine : initialement cachée */
 .icon-favorite .fa-full {
   display: none; /* Caché par défaut */
@@ -102,6 +105,7 @@
   transition: all 0.3s ease-in; /* Animation fluide pour l'apparition */
 }
 
+/*-------------------------------------------------------------*/
 /* Icône vide : visible par défaut */
 .icon-favorite .fa-empty {
   display: flex; /* Visible par défaut */
@@ -109,11 +113,13 @@
   transition: all 0.3s ease-in; /* Animation fluide pour la disparition */
 }
 
+/*-------------------------------------------------------------*/
 /* Input caché */
 input.favorite-checkbox {
   display: none; /* Cache l'input */
 }
 
+/*-------------------------------------------------------------*/
 /* Quand le checkbox est coché : persistance de l'état */
 input.favorite-checkbox:checked ~ .fa-full {
   display: flex; /* Affiche l'icône pleine */
@@ -131,6 +137,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
   display: none; /* Cache l'icône vide */
 }
 
+/*-------------------------------------------------------------*/
 /* Styles Responsifs : ajustements des tailles */
 .fa-full,
 .fa-empty {
@@ -138,7 +145,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
 
   /* Tablette */
   @include tablette {
-    font-size: 1.6rem; /* Ajustement pour tablette */
+    font-size: 1.8rem; /* Ajustement pour tablette */
   }
 
   /* Desktop */
@@ -152,21 +159,6 @@ input.favorite-checkbox:checked ~ .fa-empty {
   }
 }
 
-
-/*---------------------------------------------------*/
-/*---------Flèche retour ---------------------------*/
-/*-------------------------------------------------*/
-
-.button--back {
-  background-color: transparent; /* Fond transparent */
-  color:#353535; /* Couleur du texte en noir */
-  font-size: $font-size-base; /* Taille de la police */
-  padding: 0; /* Pas de padding */
-  border: none; /* Pas de bordure */ 
-}
-
-
-
 /*-----------------------------------------------------*/
 /*--------icône validation -----------------------------*/
 /*-----------------------------------------------------*/
@@ -176,7 +168,7 @@ input.favorite-checkbox:checked ~ .fa-empty {
     display: none;
 }
 
-/* Icône à animer, initialement hors de l'écran */
+/* Icône à animer */
 .icon-to-slide {
     position: relative;
     transform: translateX(180px); /* L'icône commence hors de la carte à droite */
@@ -188,7 +180,8 @@ input.favorite-checkbox:checked ~ .fa-empty {
     transform: translateX(0); /* L'icône glisse vers sa position finale */
 }
 
-/* Style pour rendre toute la carte cliquable */
+/*-------------------------------------------------------------*/
+/* Label*/
 label.card-menu {
     display: block;
     cursor: pointer;
@@ -201,8 +194,8 @@ label.card-menu {
 }
 
 
-
-/* Icône de validation à l'intérieur */
+/*-------------------------------------------------------------*/
+/* Conteneur icône de validation  */
 .validation-icon {
     display: flex;
     align-items: center; /* Alignement vertical de l'icône */
@@ -214,12 +207,11 @@ label.card-menu {
     padding: 0;
     margin: 0;
 
-    @include large-desktop{
-    right:-2%;/* Centrage vertical */
-    }
 }
 
-/* Style de l'icône à l'intérieur de .validation-icon */
+
+/*-------------------------------------------------------------*/
+/* Icône à l'intérieur de .validation-icon */
 .validation-icon i {
     color: white; /* Couleur de l'icône */
     background-color: $button--new-primary-color; /* Utilisation de la variable Sass */
@@ -229,22 +221,22 @@ label.card-menu {
     justify-content: center;
     align-items: center;
 
-    /* Media queries pour tablette */
+    /*  tablette */
     @include tablette {
         font-size: 2rem;
         padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
     }
 
-    /* Media queries pour desktop */
+    /* desktop */
     @include desktop {
         font-size: 1.6rem;
         padding: 1.6rem; /* Ajustement de la taille et du padding pour desktop */
     }
 
-    /* Media queries pour large desktop */
+    /* Large desktop */
     @include large-desktop {
         font-size: 1.4rem;
-        padding: 1.7rem ; /* Ajustement de la taille et du padding pour large desktop */
+        padding: 1.4rem ; /* Ajustement de la taille et du padding pour large desktop */
     }
 }
 

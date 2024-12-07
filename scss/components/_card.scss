@@ -44,6 +44,8 @@
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* images */
 .card-logo img {
     display: block;/* affiche l'element comme un bloc */
@@ -96,6 +98,8 @@
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* Image dans la carte alt */
 .card-logo-alt img {
     width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
@@ -113,28 +117,32 @@
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* Icône de flèche retour */
 .card-logo-alt i {
     position: absolute; /* Positionne l'icône de manière absolue dans la carte */
     left:5%; /* Place l'icône à gauche, hors de la carte */
-    top: 40%; /* Place l'icône à 35% du haut du conteneur */
+    top: 30%; /* Place l'icône à 35% du haut du conteneur */
+    font-size: 1.6rem;
 
     /*-- tablette --*/
     @include tablette {
-        top: 40%; /* Place l'icône à 35% du haut du conteneur */
+        top: 30%; /* Place l'icône à 35% du haut du conteneur */
+        left:2%
     }
     /* Desktop */
     @include desktop {
         left:2%; /* Ajuste la position de l'icône pour desktop */
-        top: 40%;
-        font-size: 1.2rem; /* Ajuste la position de l'icône pour desktop */
+        top: 33%;
+        font-size: 1.4rem; /* Ajuste la position de l'icône pour desktop */
     }
 
     /* large desktop */
     @include large-desktop {
         left:2%; /* Ajuste la position de l'icône pour desktop */
-        top: 40%;
-        font-size: 1rem;
+        top: 45%;
+        font-size: 1.2rem;
     }
     
     /* Faire pointer la souris sur l'icône de la carte */
@@ -198,6 +206,8 @@
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* Icône localisation dans la carte localisation */
 .card-location i {
     font-size: 1.2rem;/* Taille de l'icône en fonction de la hauteur de l'écran */
@@ -226,6 +236,7 @@
 }
 
 
+/*-------------------------------------------------------------*/
 /* Adresse dans la carte localisation */
 .carte-location address {
     font-size: 1.2rem; /* Taille du texte pour l'adresse */
@@ -329,6 +340,16 @@
 /* Ajustemement personnalisé des images  */
 #francaise img {
     object-position: center 98%;
+    
+    @include tablette {
+        object-position: center 90%;
+    }
+    @include desktop {
+        object-position: center 95%;
+    }
+    @include large-desktop {
+        object-position: center 78%;
+    }
 
 }
 #delice img{
@@ -344,6 +365,8 @@
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* Titre de la carte restaurant */
 .card h3 {
     font-family: 'roboto-bold', sans-serif; /* Police du titre */
@@ -372,6 +395,7 @@
     }
 }
 
+
 /*------------------------------------------------------------------*/
 /* Icône favorite dans la carte restaurant */
 .card .icon-favorite {
@@ -398,6 +422,7 @@
         bottom: 12.5%; /* Position verticale de l'icône pour desktop */
     }
 }
+
 
 /*----------------------------------------------------------------*/
 /* Texte dans la carte restaurant */
@@ -444,6 +469,7 @@
 /*------------ Affichage des différents badges ----------------*/
 /*-------------------------------------------------------------*/
 
+
 /* Palette Badge */
 #palette .badge {
     display: $badge-palette; /* Affiche le badge palette */
@@ -469,6 +495,7 @@
 /* ---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------- Carte menu ----------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------*/
+
 
 /*-- Conteneur de la carte menu --*/
 .card-menu {
@@ -498,11 +525,13 @@
     }
 }
 
+
 /*-------------------------------------------------------------*/
 /*-- Item du menu --*/
 .menu-item {
     width: 100%; /* L'élément du menu prend toute la largeur disponible */
     overflow: hidden;
+
     /* tablette */
     @include tablette {
         width: 100%; /* Largeur de l'élément du menu pour tablette */
@@ -513,6 +542,7 @@
         width: 30%; /* Largeur de l'élément du menu pour desktop */
     }
 }
+
 
 /*-------------------------------------------------------------*/
 /* Liste des sections et délais de départ */
@@ -531,11 +561,12 @@ $sections: (
     }
 }
 
+
 /*-------------------------------------------------------------*/
 /*-- Nom du plat dans la carte menu --*/
 .dish-name {
     display: block;
-    font-size: 0.9rem; /* Taille du texte pour le nom du plat */
+    font-size: 1rem; /* Taille du texte pour le nom du plat */
     font-weight: $font-weight-bold; /* Style gras pour le nom du plat */
     padding: 3% 5%; 
 
@@ -547,18 +578,19 @@ $sections: (
     
     /* Desktop */
     @include desktop {
-        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
         padding: 2% ; /* Padding horizontal pour desktop */
     }
 
     /*-- Large desktop --*/
     @include large-desktop {
-        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour large desktop */
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
         padding:1% 2% ; /* Padding horizontal pour large desktop */
     }
 
 
 }
+
 
 /*-------------------------------------------------------------*/
 /*-- Description du plat dans la carte menu --*/
@@ -573,7 +605,7 @@ $sections: (
 
     /* tablette */
     @include tablette {
-        font-size: 1rem; /* Taille du texte pour la description du plat pour tablette */
+        font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
         padding-left: 2%; /* Padding horizontal pour tablette */
         margin-bottom: 1%;
     }
@@ -594,14 +626,6 @@ $sections: (
     
 }
 
-/* Quand le prix glisse (case cochée), la description est éclipsée */
-.checkbox-hidden:checked + label .dish-description {
-    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
-    overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
-    text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
-    width: 70%;
-
-}
 
 /*-------------------------------------------------------------*/
 /*-- Contenu du plat (nom et prix) --*/
@@ -611,6 +635,7 @@ $sections: (
     position: relative;
     justify-content: space-between;
 }
+
 
 /*------------------------------------------------------------*/
 /*-- Prix du plat dans la carte menu --*/
@@ -655,6 +680,8 @@ $sections: (
     }
 }
 
+
+/*-------------------------------------------------------------*/
 /* Quand la case est cochée, le prix glisse vers la gauche */
 .checkbox-hidden:checked + label .price {
     transform: translateX(-62%); /* Glisse vers la gauche de 9% de la  */
@@ -677,3 +704,12 @@ $sections: (
 }
 
 
+/*-------------------------------------------------------------*/
+/* Quand le prix glisse (case cochée), la description est éclipsée */
+.checkbox-hidden:checked + label .dish-description {
+    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+    overflow: hidden; /* Cache le texte qui dépasse les limites du conteneur */
+    text-overflow: ellipsis; /* Ajoute '...' pour les textes trop longs */
+    width: 70%;
+
+}
