@@ -1312,10 +1312,23 @@ label.card-menu:hover {
   justify-content: space-between; /* Espace entre les éléments */
   opacity: 0; /* Initialement invisible */
   animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
+  /* tablette */
+  /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-menu {
     margin: 3%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-menu {
+    margin: 1%;
+  }
+}
+@media (min-width: 1440px) {
+  .card-menu {
+    margin: 1%;
   }
 }
 
@@ -1408,14 +1421,14 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-name {
-    font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
-    padding: 2%; /* Padding horizontal pour desktop */
+    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
+    padding: 1% 2%; /* Padding horizontal pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .dish-name {
-    font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
-    padding: 2%; /* Padding horizontal pour large desktop */
+    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour large desktop */
+    padding: 1% 2%; /* Padding horizontal pour large desktop */
   }
 }
 
@@ -1448,9 +1461,8 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .dish-description {
-    font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
+    font-size: 0.9rem; /* Taille du texte pour la description du plat pour large desktop */
     padding-left: 2%; /* Padding horizontal pour large desktop */
-    margin-bottom: 1%;
   }
 }
 
@@ -1501,8 +1513,9 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .dish-content .price {
-    font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
+    font-size: 0.9rem; /* Taille du texte pour le prix pour large desktop */
     padding-right: 1rem; /* Padding horizontal pour large desktop */
+    bottom: 5%;
   }
 }
 
@@ -2064,16 +2077,24 @@ main {
   border-bottom: #99E2D0 0.5vh solid; /* Bordure en bas du sous-titre */
   width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
   padding-bottom: 1vh; /* Padding en bas du sous-titre */
+  /* Tablette */
+  /* Desktop */
+  /* Large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu h3 {
+    margin: 2% 2%;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu h3 {
-    margin-left: 17%;
-    width: 5%;
+    margin: 1% 17%;
+    padding-bottom: 0.5%;
   }
 }
 @media (min-width: 1440px) {
   .menu h3 {
-    margin-left: 17%;
+    margin: 1% 15%;
     padding-bottom: 0.5%;
   }
 }
@@ -2083,7 +2104,7 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 20%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -2259,20 +2280,51 @@ main {
 }
 
 /*-------------------------------------------------------------------------------------------*/
-/* Titre la palette ajustement personnalisé*/
+/* Titre la palette ajustement personnalisé */
+.title2 h2 {
+  font-size: 2rem;
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .title2 h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
   .title2 h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Icône  */
+.menu .title2 .icon-favorite {
+  padding-right: 10%;
+  padding-top: 1%;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title2 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 1%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title2 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0.5%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title2 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0.5%;
   }
 }
 
@@ -2410,12 +2462,8 @@ main {
   display: flex; /* Utilise flexbox pour aligner les boutons */
   align-items: center; /* Centre verticalement les boutons */
   justify-content: center; /* Centre horizontalement les boutons */
-}
-
-/* Style des boutons principaux */
-.menu .button--primary {
   width: 20vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
-  margin: 2vh auto; /* Marge automatique pour centrer horizontalement et 2vh en haut/bas */
+  margin: 5% auto;
 }
 
 /* 7. Styles des animations */

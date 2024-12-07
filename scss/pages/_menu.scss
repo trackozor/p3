@@ -71,12 +71,20 @@ main  {
     width: 5vh; /* Largeur de la bordure en fonction de la hauteur de l'écran */
     padding-bottom: 1vh; /* Padding en bas du sous-titre */
 
-    @include desktop {
-        margin-left: 17%;
-        width:5%;
+    /* Tablette */
+    @include tablette {
+        margin:2% 2%;
     }
+    
+    /* Desktop */
+    @include desktop {
+        margin:1% 17%;
+        padding-bottom:0.5%
+    }
+    
+    /* Large desktop */
     @include large-desktop {
-        margin-left: 17%;
+        margin:1% 15%;
         padding-bottom:0.5%
     }
 }
@@ -88,7 +96,7 @@ main  {
 
 /* Image principale pour "Palette du goût */
 .menu-image {
-    height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 20%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
     object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -241,7 +249,7 @@ main  {
         margin:0 2%;
         padding-bottom:0;
     }
-    
+
     /*-- desktop --*/
     @include desktop {
         gap: 5%;
@@ -258,20 +266,48 @@ main  {
     }
 }
 
+
+
 /*-------------------------------------------------------------------------------------------*/
-/* Titre la palette ajustement personnalisé*/
+/* Titre la palette ajustement personnalisé */
 .title2 h2 {
+    font-size: 2rem;
+
     @include tablette {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     @include desktop {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     @include large-desktop {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
+/*-------------------------------------------------------------------------------------------*/
+/* Icône  */
+.menu .title2 .icon-favorite {
+    padding-right:10%;
+    padding-top:1%;
+
+    /*-- Tablette --*/
+    @include tablette {
+        padding-right:5%;
+        padding-top:1%;
+    }
+
+    /*-- desktop --*/
+    @include desktop {
+        padding-right: 5%;
+        padding-top: 0.5%;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        padding-right: 5%;
+        padding-top: 0.5%;
+    }
+}
 /*-------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre la note enchantee ajustement personnalisé  */
 .menu .title {
@@ -391,10 +427,6 @@ main  {
     display: flex; /* Utilise flexbox pour aligner les boutons */
     align-items: center; /* Centre verticalement les boutons */
     justify-content: center; /* Centre horizontalement les boutons */
-}
-
-/* Style des boutons principaux */
-.menu .button--primary {
     width: 20vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
-    margin: 2vh auto; /* Marge automatique pour centrer horizontalement et 2vh en haut/bas */
+    margin:5% auto;
 }

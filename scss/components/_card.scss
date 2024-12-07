@@ -482,8 +482,19 @@
     opacity: 0; /* Initialement invisible */
     animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 
+    /* tablette */
     @include tablette {
         margin:3%;
+    }
+
+    /* Desktop */
+    @include desktop {
+        margin: 1%;
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        margin: 1%;
     }
 }
 
@@ -536,14 +547,14 @@ $sections: (
     
     /* Desktop */
     @include desktop {
-        font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
-        padding: 2% ; /* Padding horizontal pour desktop */
+        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
+        padding: 1% 2% ; /* Padding horizontal pour desktop */
     }
 
     /*-- Large desktop --*/
     @include large-desktop {
-        font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
-        padding: 2% ; /* Padding horizontal pour large desktop */
+        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour large desktop */
+        padding:1% 2% ; /* Padding horizontal pour large desktop */
     }
 
 
@@ -576,9 +587,8 @@ $sections: (
     
     /* Large desktop */
     @include large-desktop {
-        font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
+        font-size: 0.9rem; /* Taille du texte pour la description du plat pour large desktop */
         padding-left: 2%; /* Padding horizontal pour large desktop */
-        margin-bottom: 1%;
     }
     
 }
@@ -629,8 +639,9 @@ $sections: (
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 1rem; /* Taille du texte pour le prix pour large desktop */
+        font-size: 0.9rem; /* Taille du texte pour le prix pour large desktop */
         padding-right: $padding-base; /* Padding horizontal pour large desktop */
+        bottom:5%;;
     }
 }
 
