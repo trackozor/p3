@@ -26,15 +26,15 @@
     display: flex; /* Utilise flexbox pour aligner les éléments*/
     align-items: center;/* Centre le contenu verticalement */
     background-color:white;/*Couleur de fond blanche */
-    margin: 5% 0; /* Définit les marges verticales de la carte */
+    margin: 4% 0; /* Définit les marges verticales de la carte */
     justify-content: center;/* centre les éléments horizontalement */
 
     @include tablette {
-        margin:3% 0;
+        margin:2% 0;
     }
     /* Desktop */
     @include desktop {
-        margin:3% 0;
+        margin:1.5% 0;
     }
     
     /* Large desktop */
@@ -48,19 +48,19 @@
 .card-logo img {
     display: block;/* affiche l'element comme un bloc */
     margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
-    width:50%;/* prend 50% de largeur du conteneur */
+    width:40%;/* prend 50% de largeur du conteneur */
 
     @include tablette {
-        width:30%
+        width:20%
     }
     /*-- desktop --*/
     @include desktop {
-        width:17%;/* Ajustement largeur pour desktop*/
+        width:15%;/* Ajustement largeur pour desktop*/
     }
     
     /*-- large desktop --*/
     @include large-desktop {
-    width: 12%;/* ajustement largeur pour écran large*/
+    width: 10%;/* ajustement largeur pour écran large*/
     }
 }
 
@@ -82,7 +82,7 @@
 
     /* Tablette */
     @include tablette {
-        padding:3% 0;
+        padding:2% 0;
     }
 
     /* Desktop */   
@@ -101,7 +101,7 @@
     width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
 
     @include tablette {
-        width:25%;
+        width:20%;
     }
 
     @include desktop {
@@ -109,7 +109,7 @@
     }
     /* large desktop */
     @include large-desktop {
-        width:12% /* Ajustement largeur pour écran large*/
+        width:10% /* Ajustement largeur pour écran large*/
     }
 }
 
@@ -134,7 +134,7 @@
     @include large-desktop {
         left:2%; /* Ajuste la position de l'icône pour desktop */
         top: 40%;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     /* Faire pointer la souris sur l'icône de la carte */
@@ -172,7 +172,7 @@
     @include tablette {
         gap:$gap-base; /* Ajuste l'espace entre les éléments pour tablette */
         width: 100%;
-        padding: $padding-base 0; /* Ajuste les marges intérieures pour tablette */
+        padding: 1% 0; /* Ajuste les marges intérieures pour tablette */
     }
 
     /* Desktop */
@@ -181,6 +181,7 @@
         max-height: 100px;        
         width: 100%; /* Ajuste les marges intérieures pour desktop */
         box-shadow: none;
+        padding:1% 0;
         
     
     }
@@ -211,14 +212,14 @@
     }
     /* Desktop */
     @include desktop {
-        font-size: 1rem;
+        font-size: 0.8rem;
         align-items: center;
         padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
     }
     
     /* Large desktop */
     @include large-desktop {
-        font-size: 1rem;
+        font-size: 0.7rem;
         align-items: center;
         padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
     }
@@ -237,12 +238,12 @@
     }
 
     @include desktop {
-        font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+        font-size: 0.7rem; /* Ajuste la taille de l'adresse pour desktop */
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+        font-size: 0.7rem; /* Ajuste la taille de l'adresse pour desktop */
     }
 }
 
@@ -282,8 +283,9 @@
 
     /*-- large desktop --*/
     @include large-desktop {
-    max-height: 450px;
-    width: 45%;
+    max-height: 250px;
+    width: 46%;
+    margin:0.5% 1%;
     }
 
 }
@@ -305,17 +307,20 @@
     /*-- tablette --*/
     @include tablette {
         width: 100%;
-        max-height: 280px;
+        max-height: 250px;
     }
 
     /*-- Desktop --*/
     @include desktop {
-        height: 300px;
+        height:70%;
+        max-height: 160px;
     }
     
     /*-- large desktop --*/
     @include large-desktop {
-        height: 350px;
+        height:70%;
+        max-height: 160px;
+
     }
 
 }
@@ -335,7 +340,7 @@
         object-position: center 84%;
     }
     @include large-desktop {
-        object-position: center 85%;
+        object-position: center 75%;
     }
 }
 
@@ -356,7 +361,7 @@
     
     /* tablette */
     @include tablette {
-        font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
+        font-size: 1rem; /* Ajuste la taille du texte pour tablette */
         gap: $gap-base; /* Espace pour tablette */
     }
 
@@ -478,7 +483,7 @@
     animation: slideIn 0.9s ease-out forwards; /* Applique l'animation */
 
     @include tablette {
-        margin:2%;
+        margin:3%;
     }
 }
 
@@ -525,7 +530,7 @@ $sections: (
 
     /* tablette */
     @include tablette {
-        font-size: 0.9rem; /* Taille du texte pour le nom du plat pour tablette */
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
         padding: 1% 2%; /* Padding horizontal pour tablette */
     }
     
@@ -537,7 +542,7 @@ $sections: (
 
     /*-- Large desktop --*/
     @include large-desktop {
-        font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
+        font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
         padding: 2% ; /* Padding horizontal pour large desktop */
     }
 
@@ -557,20 +562,23 @@ $sections: (
 
     /* tablette */
     @include tablette {
-        font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
+        font-size: 1rem; /* Taille du texte pour la description du plat pour tablette */
         padding-left: 2%; /* Padding horizontal pour tablette */
+        margin-bottom: 1%;
     }
 
     /* Desktop */
     @include desktop {
         font-size: 0.9rem; /* Taille du texte pour la description du plat pour desktop */
         padding-left: 2%; /* Padding horizontal pour desktop */
+        margin-bottom: 1%;
     }
     
     /* Large desktop */
     @include large-desktop {
         font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
         padding-left: 2%; /* Padding horizontal pour large desktop */
+        margin-bottom: 1%;
     }
     
 }

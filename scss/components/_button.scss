@@ -45,6 +45,12 @@
   font-size: $font-size-base; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: 500; /* Style de police en gras (bold) */
 
+  @include desktop {
+    font-size: 0.8rem;
+  }
+  @include large-desktop {
+    font-size: 0.8rem;
+  }
 }
 
 
@@ -66,6 +72,10 @@
   @include tablette {
     font-size: 1rem;
     padding: $padding-base; /* Padding ajusté pour tablette */
+  }
+
+  @include large-desktop {
+    font-size: 0.8rem;
   }
 }
 

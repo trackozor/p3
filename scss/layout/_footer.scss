@@ -23,7 +23,7 @@ footer {
     background-color:#353535 ; /* Définit la couleur de fond du footer */
     color: white; /* Définit la couleur du texte et des icônes à blanc */
     width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
-    padding-bottom: 2%;
+
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -32,7 +32,7 @@ footer {
 
 /*-- Conteneur principal --*/
 .footer-card {
-    padding: 1% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+    padding: 2% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
     font-size: $font-size-middle;
     display: flex;
     flex-direction: column;
@@ -57,13 +57,13 @@ footer {
 
     /*-- large desktop --*/
     @include large-desktop {
-        max-height: 50px;
+        max-height: 40px;
         display: flex;
         flex-direction: row-reverse; /* Alignement horizontal des éléments */
         align-items: center; /* Aligne les éléments verticalement */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
         height: auto;
-        padding: 0 5%;
+        padding: 1% 5%;
         justify-content: flex-start;
     }   
 }
@@ -93,7 +93,7 @@ footer {
     @include large-desktop {
         margin-right: 0.6rem; /* Padding horizontal pour desktop */
         margin-left: 0; /* Pas d'espace à gauche*/
-        font-size: 1rem; /* Taille de l'icône pour desktop */
+        font-size: 0.7rem; /* Taille de l'icône pour desktop */
     }
 }
 
@@ -152,7 +152,7 @@ footer {
     list-style: none; /* Retire les puces de la liste */
     align-items: center;
     padding: 0;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     }
 
     /*-- large desktop --*/
@@ -165,8 +165,8 @@ footer {
         list-style: none; /* Retire les puces de la liste */
         padding: 0;
         margin-left: 70%;
-        font-size: 1rem;
-        padding-top: 2%;
+        font-size: 0.9rem;
+        padding-top: 1.5%;
     }
 
 }

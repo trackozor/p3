@@ -257,7 +257,6 @@ footer {
   background-color: #353535; /* Définit la couleur de fond du footer */
   color: white; /* Définit la couleur du texte et des icônes à blanc */
   width: 100%; /* Le footer prend toute la largeur disponible de l'écran */
-  padding-bottom: 2%;
 }
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -265,7 +264,7 @@ footer {
 /* ---------------------------------------------------------------------------------------------------*/
 /*-- Conteneur principal --*/
 .footer-card {
-  padding: 1% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
+  padding: 2% 5%; /* Espace intérieur correspondant à 2% de la hauteur de l'écran*/
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -293,13 +292,13 @@ footer {
 }
 @media (min-width: 1440px) {
   .footer-card {
-    max-height: 50px;
+    max-height: 40px;
     display: flex;
     flex-direction: row-reverse; /* Alignement horizontal des éléments */
     align-items: center; /* Aligne les éléments verticalement */
     flex-wrap: nowrap; /* Empêche le retour à la ligne */
     height: auto;
-    padding: 0 5%;
+    padding: 1% 5%;
     justify-content: flex-start;
   }
 }
@@ -332,7 +331,7 @@ footer {
   .fa-handshake, .fa-utensils {
     margin-right: 0.6rem; /* Padding horizontal pour desktop */
     margin-left: 0; /* Pas d'espace à gauche*/
-    font-size: 1rem; /* Taille de l'icône pour desktop */
+    font-size: 0.7rem; /* Taille de l'icône pour desktop */
   }
 }
 
@@ -394,7 +393,7 @@ footer {
     list-style: none; /* Retire les puces de la liste */
     align-items: center;
     padding: 0;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1440px) {
@@ -406,8 +405,8 @@ footer {
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
     margin-left: 70%;
-    font-size: 1rem;
-    padding-top: 2%;
+    font-size: 0.9rem;
+    padding-top: 1.5%;
   }
 }
 
@@ -626,6 +625,16 @@ footer {
   font-size: 1rem; /* Taille de police à 2% de la hauteur de l'écran */
   font-weight: 500; /* Style de police en gras (bold) */
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .button--primary-txt {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .button--primary-txt {
+    font-size: 0.8rem;
+  }
+}
 
 /*-------------------------------------*/
 /*----------Badge Nouveau ------------*/
@@ -644,6 +653,11 @@ footer {
   .badge {
     font-size: 1rem;
     padding: 1rem; /* Padding ajusté pour tablette */
+  }
+}
+@media (min-width: 1440px) {
+  .badge {
+    font-size: 0.8rem;
   }
 }
 
@@ -839,19 +853,19 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner les éléments*/
   align-items: center; /* Centre le contenu verticalement */
   background-color: white; /*Couleur de fond blanche */
-  margin: 5% 0; /* Définit les marges verticales de la carte */
+  margin: 4% 0; /* Définit les marges verticales de la carte */
   justify-content: center; /* centre les éléments horizontalement */
   /* Desktop */
   /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo {
-    margin: 3% 0;
+    margin: 2% 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo {
-    margin: 3% 0;
+    margin: 1.5% 0;
   }
 }
 @media (min-width: 1440px) {
@@ -864,23 +878,23 @@ label.card-menu:hover {
 .card-logo img {
   display: block; /* affiche l'element comme un bloc */
   margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
-  width: 50%; /* prend 50% de largeur du conteneur */
+  width: 40%; /* prend 50% de largeur du conteneur */
   /*-- desktop --*/
   /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo img {
-    width: 30%;
+    width: 20%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-logo img {
-    width: 17%; /* Ajustement largeur pour desktop*/
+    width: 15%; /* Ajustement largeur pour desktop*/
   }
 }
 @media (min-width: 1440px) {
   .card-logo img {
-    width: 12%; /* ajustement largeur pour écran large*/
+    width: 10%; /* ajustement largeur pour écran large*/
   }
 }
 
@@ -900,7 +914,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt {
-    padding: 3% 0;
+    padding: 2% 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -921,7 +935,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-logo-alt img {
-    width: 25%;
+    width: 20%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -931,7 +945,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .card-logo-alt img {
-    width: 12%;
+    width: 10%;
   }
 }
 
@@ -961,7 +975,7 @@ label.card-menu:hover {
   .card-logo-alt i {
     left: 2%; /* Ajuste la position de l'icône pour desktop */
     top: 40%;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .card-logo-alt i:hover {
@@ -993,7 +1007,7 @@ label.card-menu:hover {
   .card-location {
     gap: 1rem; /* Ajuste l'espace entre les éléments pour tablette */
     width: 100%;
-    padding: 1rem 0; /* Ajuste les marges intérieures pour tablette */
+    padding: 1% 0; /* Ajuste les marges intérieures pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1002,6 +1016,7 @@ label.card-menu:hover {
     max-height: 100px;
     width: 100%; /* Ajuste les marges intérieures pour desktop */
     box-shadow: none;
+    padding: 1% 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1032,14 +1047,14 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card-location i {
-    font-size: 1rem;
+    font-size: 0.8rem;
     align-items: center;
     padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .card-location i {
-    font-size: 1rem;
+    font-size: 0.7rem;
     align-items: center;
     padding-bottom: 0.5%; /* Ajuste la taille de l'icône pour desktop */
   }
@@ -1060,12 +1075,12 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .carte-location address {
-    font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+    font-size: 0.7rem; /* Ajuste la taille de l'adresse pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .carte-location address {
-    font-size: 1rem; /* Ajuste la taille de l'adresse pour desktop */
+    font-size: 0.7rem; /* Ajuste la taille de l'adresse pour desktop */
   }
 }
 
@@ -1101,8 +1116,9 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .card {
-    max-height: 450px;
-    width: 45%;
+    max-height: 250px;
+    width: 46%;
+    margin: 0.5% 1%;
   }
 }
 
@@ -1123,17 +1139,19 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .card img {
     width: 100%;
-    max-height: 280px;
+    max-height: 250px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .card img {
-    height: 300px;
+    height: 70%;
+    max-height: 160px;
   }
 }
 @media (min-width: 1440px) {
   .card img {
-    height: 350px;
+    height: 70%;
+    max-height: 160px;
   }
 }
 
@@ -1155,7 +1173,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   #delice img {
-    object-position: center 85%;
+    object-position: center 75%;
   }
 }
 
@@ -1177,7 +1195,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card .card-title {
-    font-size: 1.3rem; /* Ajuste la taille du texte pour tablette */
+    font-size: 1rem; /* Ajuste la taille du texte pour tablette */
     gap: 1rem; /* Espace pour tablette */
   }
 }
@@ -1297,7 +1315,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .card-menu {
-    margin: 2%;
+    margin: 3%;
   }
 }
 
@@ -1384,7 +1402,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-name {
-    font-size: 0.9rem; /* Taille du texte pour le nom du plat pour tablette */
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
     padding: 1% 2%; /* Padding horizontal pour tablette */
   }
 }
@@ -1396,7 +1414,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .dish-name {
-    font-size: 1.2rem; /* Taille du texte pour le nom du plat pour large desktop */
+    font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
     padding: 2%; /* Padding horizontal pour large desktop */
   }
 }
@@ -1416,20 +1434,23 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-description {
-    font-size: 0.9rem; /* Taille du texte pour la description du plat pour tablette */
+    font-size: 1rem; /* Taille du texte pour la description du plat pour tablette */
     padding-left: 2%; /* Padding horizontal pour tablette */
+    margin-bottom: 1%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-description {
     font-size: 0.9rem; /* Taille du texte pour la description du plat pour desktop */
     padding-left: 2%; /* Padding horizontal pour desktop */
+    margin-bottom: 1%;
   }
 }
 @media (min-width: 1440px) {
   .dish-description {
     font-size: 1rem; /* Taille du texte pour la description du plat pour large desktop */
     padding-left: 2%; /* Padding horizontal pour large desktop */
+    margin-bottom: 1%;
   }
 }
 
@@ -1539,7 +1560,7 @@ label.card-menu:hover {
   width: 100%; /* Le bandeau prend toute la largeur disponible */
   background-color: #F6F6F6; /* Couleur de fond gris clair */
   margin: 0 auto; /* Centre horizontalement le bandeau avec des marges automatiques */
-  padding: 5% 0; /* Ajoute du padding vertical (haut et bas) de 5% */
+  padding: 10% 0; /* Ajoute du padding vertical (haut et bas) de 5% */
   margin-bottom: 4%; /* Ajoute un espacement en bas de 4% */
   /* Tablette */
   /* Desktop */
@@ -1547,7 +1568,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .bandeau {
-    padding: 2% 0; /* Réduit le padding vertical à 2% sur les écrans tablettes */
+    padding: 3% 0; /* Réduit le padding vertical à 2% sur les écrans tablettes */
     margin-bottom: 2%;
   }
 }
@@ -1585,14 +1606,14 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau h2 {
     padding: 0.5% 0; /* Ajoute un padding vertical de 0.5% de la largeur de l'écran */
-    font-size: 1.8rem; /* Taille de police légèrement plus grande sur desktop */
+    font-size: 1.6rem; /* Taille de police légèrement plus grande sur desktop */
     margin: 0; /* Supprime tout espace extérieur autour du h2 */
   }
 }
 @media (min-width: 1440px) {
   .bandeau h2 {
     font-size: 1.8rem; /* Taille de la police encore plus grande sur large desktop */
-    margin: 0; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
+    margin: 0.5%; /* Réintroduit un léger espacement vertical (1% en haut et en bas) */
   }
 }
 
@@ -1603,7 +1624,7 @@ label.card-menu:hover {
   color: #353535; /* Couleur du texte (gris foncé) */
   font-size: 18px; /* Taille de la police par défaut pour les petits écrans */
   padding: 2% 0; /* Ajoute un padding vertical de 2%, aucun padding horizontal */
-  margin-bottom: 2%; /* Espacement extérieur uniquement en bas */
+  margin-bottom: 4%; /* Espacement extérieur uniquement en bas */
   font-weight: 500; /* Épaisseur intermédiaire pour le texte */
   /* Desktop */
   /* Large desktop */
@@ -1612,17 +1633,17 @@ label.card-menu:hover {
   .bandeau p {
     width: 70%;
     font-size: 1.1rem; /* Augmente la taille de la police à 1.1rem sur tablette */
-    margin: 0; /* Supprime la marge en bas */
+    margin-bottom: 2%; /* Supprime la marge en bas */
     padding: 1.5% 0;
     font-weight: 100;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .bandeau p {
-    width: 60%;
-    font-size: 0.9rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
+    width: 40%;
+    font-size: 0.8rem; /* Réduit la taille de la police à 1rem sur les écrans desktop */
     margin: 0; /* Supprime la marge en bas */
-    padding: 2% 0;
+    padding: 1.6% 0;
     font-weight: 100;
   }
 }
@@ -1653,6 +1674,7 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement {
     padding: 1% 0;
+    margin-bottom: 5%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -1663,7 +1685,7 @@ label.card-menu:hover {
 }
 @media (min-width: 1440px) {
   .fonctionnement {
-    padding: 0.9% 0;
+    padding: 0.8% 0;
     width: 100%;
     margin: 0 auto;
   }
@@ -1681,20 +1703,21 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement h2 {
-    margin: 3% 0 0 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+    margin: 2% 0 0 0; /* Ajoute une marge en haut/bas de 0.5% de la largeur de l'écran */
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement h2 {
-    font-size: 1.5rem; /* Taille de police de 1.5rem pour desktop */
-    margin: 1% 0;
+    font-size: 1.2rem; /* Taille de police de 1.5rem pour desktop */
+    margin: 0.5% 0;
     padding-left: 2%;
   }
 }
 @media (min-width: 1440px) {
   .fonctionnement h2 {
     font-size: 1.3rem; /* Taille de police de 1.5rem pour large desktop */
-    margin: 0.7% 0;
+    margin: 0.5% 0;
     padding-left: 15%;
   }
 }
@@ -1711,6 +1734,11 @@ label.card-menu:hover {
   padding-left: 2%;
   /* Desktop */
   /* Large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .fonctionnement ol {
+    margin: 1% auto;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement ol {
@@ -1737,7 +1765,7 @@ label.card-menu:hover {
 /* Liste : Lignes */
 .fonctionnement li {
   display: flex; /* Utilise flexbox pour aligner les éléments de la liste */
-  margin: 1rem; /* Marge autour des éléments */
+  margin: 1%; /* Marge autour des éléments */
   align-items: center; /* Centre les éléments sur l'axe vertical */
   font-weight: 700; /* Gras du texte */
   position: relative; /* Position relative pour gérer des éléments internes */
@@ -1751,7 +1779,7 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement li {
-    margin: 1rem; /* Ajustement des marges pour tablette */
+    margin: 1.5%; /* Ajustement des marges pour tablette */
     gap: 2%;
     justify-content: center;
   }
@@ -1759,7 +1787,7 @@ label.card-menu:hover {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .fonctionnement li {
     width: 100%;
-    margin: 2%;
+    margin: 1%;
   }
 }
 @media (min-width: 1440px) {
@@ -1778,14 +1806,14 @@ label.card-menu:hover {
   display: flex; /* Utilise flexbox pour aligner le texte */
   position: relative; /* Position relative pour gérer des éléments internes */
   z-index: 1; /* Superposition sur l'axe Z */
-  padding: 8%;
+  padding: 4%;
   border-radius: 1.25rem; /* Bord arrondi pour le conteneur du texte */
   box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
   width: 100%; /* Largeur du texte à 100% du conteneur */
   align-items: center; /* Centre le texte sur l'axe vertical */
   justify-content: space-around;
   background-color: #f6f6f6;
-  font-size: 1.2rem; /* Taille de la police */
+  font-size: 1rem; /* Taille de la police */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1794,6 +1822,7 @@ label.card-menu:hover {
   .li-txt {
     padding: 2% 10%; /* Ajustement du padding pour tablette */
     justify-content: flex-start;
+    font-size: 1rem;
     gap: 10%;
   }
 }
@@ -1898,7 +1927,7 @@ label.card-menu:hover {
   margin: 0 auto;
   gap: 5%; /* Réduit l'espacement pour les petits écrans */
   height: auto; /* Laisse la section s'adapter à la hauteur du contenu */
-  padding: 6% 0;
+  padding-top: 20%;
   /*-- Tablette --*/
   /*-- large desktop --*/
 }
@@ -1916,7 +1945,7 @@ label.card-menu:hover {
     padding-top: 0;
     width: 87%;
     gap: 1%;
-    padding: 2% 0;
+    padding: 1% 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1928,30 +1957,34 @@ label.card-menu:hover {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 2% 0;
+    gap: 0.5%;
+    padding: 1% 0;
   }
 }
 
 /*----------------------------------------------------------------*/
 /* Titre de la section restaurants */
 #section-restaurants h2 {
-  margin: 1rem 5%;
+  display: none;
+  margin: 15% 5%;
   font-size: 1.6rem;
   /*-- large desktop --*/
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   #section-restaurants h2 {
+    display: flex;
     width: 95%;
     margin: 0;
     padding-left: 2%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1440px) {
   #section-restaurants h2 {
+    display: flex;
     width: 95%;
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 1.3rem;
+    margin: 1% 0;
     padding-left: 1%;
   }
 }
@@ -1972,6 +2005,7 @@ main {
   background-color: white;
 }
 
+/* Conteneur principale  */
 .menu {
   background-color: #f9f9f9; /* Couleur de fond grise claire */
   border-radius: 1.5rem 1.5rem 0 0; /* Bord arrondi en haut */
@@ -1986,7 +2020,9 @@ main {
   flex-direction: column; /* Alignement vertical des éléments */
   width: 100%;
   max-width: 1024px;
+  /* Tablette */
   /* Desktop */
+  /* Large desktop */
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu {
@@ -1998,7 +2034,6 @@ main {
     width: 70%; /* Largeur à 80% pour desktop */
     border-radius: 3vw 3vw 0 0; /* Bord arrondi adapté à la largeur de l'écran */
     padding-top: 3%; /* Padding en haut ajusté pour desktop */
-    bottom: 2vw; /* Positionnement du bas ajusté pour desktop */
   }
 }
 @media (min-width: 1440px) {
@@ -2007,6 +2042,8 @@ main {
   }
 }
 
+/*-------------------------------------------------------------------------------------------*/
+/* Style des listes dans le menu */
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu ul {
     width: 70%;
@@ -2020,6 +2057,7 @@ main {
   }
 }
 
+/*-------------------------------------------------------------------------------------------*/
 /* Style des sous-titres h3 dans le menu */
 .menu h3 {
   margin: 3% 0 2% 2%; /* Marges autour du sous-titre */
@@ -2030,11 +2068,13 @@ main {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu h3 {
     margin-left: 17%;
+    width: 5%;
   }
 }
 @media (min-width: 1440px) {
   .menu h3 {
     margin-left: 17%;
+    padding-bottom: 0.5%;
   }
 }
 
@@ -2043,7 +2083,7 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 25vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -2075,9 +2115,9 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "La note enchantée */
 .menu-image-alt3 {
-  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
-  object-position: 50% 80%; /* Positionnement de l'image à 75% en vertical */
+  object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
   /*tablette*/
   /* Desktop */
@@ -2085,60 +2125,26 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt3 {
-    height: 45vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
-    width: 100%; /* Largeur à 100% pour tablette */
-    object-position: 50% 65%; /* Positionnement de l'image pour tablette */
-    object-fit: cover; /* Ajustement de l'image pour tablette */
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .menu-image-alt3 {
-    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
-    width: 100%; /* Largeur à 100% pour desktop */
-    object-position: 50% 60%; /* Positionnement de l'image pour desktop */
-  }
-}
-@media (min-width: 1440px) {
-  .menu-image-alt3 {
-    height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
-    width: 100%; /* Largeur à 100% pour large desktop */
-    object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
-  }
-}
-
-/*--------------------------------------------------------------------------------------------------------*/
-/*------------------------------------- Images Menu Alt - Délice des Sens --------------------------------*/
-/*--------------------------------------------------------------------------------------------------------*/
-/* Image pour le menu alternatif "Au délice des sens" */
-.menu-image-alt {
-  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
-  width: 100%; /* Largeur à 100% */
-  object-position: 50% 5%; /* Positionnement bas de l'image */
-  object-fit: cover; /* L'image couvre tout le conteneur */
-  /* Tablette */
-  /* Desktop */
-  /*--large desktop*/
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .menu-image-alt {
     height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
-    object-position: 50% 85%; /* Positionnement de l'image pour tablette */
+    object-position: 50% 62%; /* Positionnement de l'image pour tablette */
     object-fit: cover; /* Ajustement de l'image pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .menu-image-alt {
-    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+  .menu-image-alt3 {
+    height: 28vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
-    object-position: 50% 85%; /* Positionnement de l'image pour desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour desktop */
+    object-fit: cover;
   }
 }
 @media (min-width: 1440px) {
-  .menu-image-alt {
-    height: 30vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+  .menu-image-alt3 {
+    height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
-    object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
+    object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
+    object-fit: cover;
   }
 }
 
@@ -2147,9 +2153,9 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image pour le menu alternatif 2 "À la française" */
 .menu-image-alt2 {
-  height: auto; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Largeur à 100% */
-  object-position: 50% 115%; /* Positionnement bas de l'image */
+  object-position: 50% 255%; /* Positionnement bas de l'image */
   object-fit: cover; /* L'image couvre tout le conteneur */
   /* Tablette */
   /* Desktop */
@@ -2165,24 +2171,113 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image-alt2 {
-    height: 35vw; /* Hauteur de l'image ajustée pour desktop */
+    height: 28vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
-    object-position: 50% 85%; /* Positionnement bas de l'image pour desktop */
+    object-position: 50% 70%; /* Positionnement bas de l'image pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .menu-image-alt2 {
-    height: 35vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+    height: 20vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
-    object-position: 50% 85%; /* Positionnement bas de l'image pour large desktop */
+    object-position: 50% 67%; /* Positionnement bas de l'image pour large desktop */
     object-fit: cover; /* Ajustement de l'image pour large desktop */
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------- Images Menu Alt - Délice des Sens --------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Image pour le menu alternatif "Au délice des sens" */
+.menu-image-alt {
+  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  width: 100%; /* Largeur à 100% */
+  object-position: 50% 255%; /* Positionnement bas de l'image */
+  object-fit: cover; /* L'image couvre tout le conteneur */
+  /* Tablette */
+  /* Desktop */
+  /*--large desktop*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu-image-alt {
+    height: 35vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    width: 100%; /* Largeur à 100% pour tablette */
+    object-position: 50% 85%; /* Positionnement de l'image pour tablette */
+    object-fit: cover; /* Ajustement de l'image pour tablette */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu-image-alt {
+    height: 25vw; /* Hauteur de l'image ajustée pour desktop */
+    width: 100%; /* Largeur à 100% pour desktop */
+    object-position: 50% 70%; /* Positionnement de l'image pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .menu-image-alt {
+    height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    width: 100%; /* Largeur à 100% pour large desktop */
+    object-position: 50% 70%; /* Positionnement bas de l'image pour large desktop */
   }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- Titre Menu -----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
-/*-- Ajustement personnalisé du titre la note enchantée-- */
+/*  Conteneur Titre la palette du gout ajustement personnalisé  */
+.menu .title2 {
+  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
+  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
+  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
+  justify-content: space-between;
+  margin: 0 2%;
+  padding-bottom: 5%;
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*--large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title2 {
+    padding-bottom: 1%;
+    margin: 0 2%;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title2 {
+    gap: 5%;
+    justify-content: center;
+    padding-bottom: 0.8%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title2 {
+    gap: 5%;
+    justify-content: center;
+    padding-bottom: 0.5%;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Titre la palette ajustement personnalisé*/
+@media (min-width: 767px) and (max-width: 1023px) {
+  .title2 h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .title2 h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .title2 h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*  Conteneur Titre la note enchantee ajustement personnalisé  */
 .menu .title {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
@@ -2205,6 +2300,8 @@ main {
   }
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/* Titre la note enchantee ajustement personnalisé*/
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu .title h2 {
     font-size: 1.6rem;
@@ -2222,7 +2319,7 @@ main {
 }
 
 /*------------------------------------------------------------------------------------------*/
-/*-- Ajustement titre a la francaise --*/
+/*  Conteneur Titre a la francaise ajustement personnalisé  */
 .menu .title1 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
@@ -2246,6 +2343,8 @@ main {
   }
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/* Titre la francaise ajustement personnalisé*/
 @media (min-width: 767px) and (max-width: 1023px) {
   .title1 h2 {
     font-size: 1.6rem;
@@ -2262,58 +2361,8 @@ main {
   }
 }
 
-/*-------------------------------------------------------------------------------------------*/
-/* Titre la palette du gout ajustement personnalisé*/
-.menu .title2 {
-  display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
-  font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
-  font-size: 1.3rem; /* Taille de la police adaptée à la hauteur de l'écran */
-  justify-content: space-between;
-  margin: 0 2%;
-  padding-bottom: 5%;
-  /*-- tablette --*/
-  /*-- desktop --*/
-  /*--large desktop --*/
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .menu .title2 {
-    padding-bottom: 1%;
-    margin: 0 2;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .menu .title2 {
-    gap: 5%;
-    justify-content: center;
-    padding-bottom: 2%;
-  }
-}
-@media (min-width: 1440px) {
-  .menu .title2 {
-    gap: 5%;
-    justify-content: center;
-    padding-bottom: 2%;
-  }
-}
-
-@media (min-width: 767px) and (max-width: 1023px) {
-  .title2 h2 {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .title2 h2 {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 1440px) {
-  .title2 h2 {
-    font-size: 1.5rem;
-  }
-}
-
 /*---------------------------------------------------------------------------------------------------*/
-/*-- Ajustement titre le delices des sens*/
+/*  Conteneur Titre le delice des sens ajustement personnalisé  */
 .menu .title3 {
   display: flex; /* Utilisation de flexbox pour l'alignement des éléments */
   font-family: "Shrikhand", sans-serif; /* Police de caractère du titre */
@@ -2337,6 +2386,8 @@ main {
   }
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/* Titre le delice des sens ajustement personnalisé */
 @media (min-width: 767px) and (max-width: 1023px) {
   .title3 h2 {
     font-size: 1.6rem;
