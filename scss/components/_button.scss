@@ -197,12 +197,10 @@ label.card-menu {
     margin-bottom: 10px;
     position: relative;
     overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
+
 }
 
-/* Animation et style au survol de la carte */
-label.card-menu:hover {
-    background-color: #f9f9f9;
-}
+
 
 /* Icône de validation à l'intérieur */
 .validation-icon {
@@ -239,14 +237,14 @@ label.card-menu:hover {
 
     /* Media queries pour desktop */
     @include desktop {
-        font-size: 2rem;
-        padding: 1.7rem; /* Ajustement de la taille et du padding pour desktop */
+        font-size: 1.6rem;
+        padding: 1.6rem; /* Ajustement de la taille et du padding pour desktop */
     }
 
     /* Media queries pour large desktop */
     @include large-desktop {
-        font-size: 2rem;
-        padding: 2.5rem ; /* Ajustement de la taille et du padding pour large desktop */
+        font-size: 1.4rem;
+        padding: 1.7rem ; /* Ajustement de la taille et du padding pour large desktop */
     }
 }
 

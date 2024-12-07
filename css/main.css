@@ -775,11 +775,6 @@ label.card-menu {
   overflow: hidden; /* Pour s'assurer que l'icône ne dépasse pas les limites de la carte */
 }
 
-/* Animation et style au survol de la carte */
-label.card-menu:hover {
-  background-color: #f9f9f9;
-}
-
 /* Icône de validation à l'intérieur */
 .validation-icon {
   display: flex;
@@ -819,14 +814,14 @@ label.card-menu:hover {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .validation-icon i {
-    font-size: 2rem;
-    padding: 1.7rem; /* Ajustement de la taille et du padding pour desktop */
+    font-size: 1.6rem;
+    padding: 1.6rem; /* Ajustement de la taille et du padding pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .validation-icon i {
-    font-size: 2rem;
-    padding: 2.5rem; /* Ajustement de la taille et du padding pour large desktop */
+    font-size: 1.4rem;
+    padding: 1.7rem; /* Ajustement de la taille et du padding pour large desktop */
   }
 }
 
@@ -1416,13 +1411,13 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-name {
     font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
-    padding: 1% 2%; /* Padding horizontal pour tablette */
+    padding: 1.5% 2%; /* Padding horizontal pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-name {
     font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
-    padding: 1% 2%; /* Padding horizontal pour desktop */
+    padding: 2%; /* Padding horizontal pour desktop */
   }
 }
 @media (min-width: 1440px) {
@@ -1463,6 +1458,7 @@ label.card-menu:hover {
   .dish-description {
     font-size: 0.9rem; /* Taille du texte pour la description du plat pour large desktop */
     padding-left: 2%; /* Padding horizontal pour large desktop */
+    margin-bottom: 1%;
   }
 }
 
@@ -1502,20 +1498,28 @@ label.card-menu:hover {
 @media (min-width: 767px) and (max-width: 1023px) {
   .dish-content .price {
     font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
-    padding-right: 1rem; /* Padding horizontal pour tablette */
+    padding-right: 2%;
+    position: absolute;
+    bottom: 12%;
+    right: 1%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .dish-content .price {
-    font-size: 0.9rem; /* Taille du texte pour le prix pour desktop */
-    padding-right: 1rem; /* Padding horizontal pour desktop */
+    font-size: 0.7rem; /* Taille du texte pour le prix pour tablette */
+    padding-right: 2%;
+    position: absolute;
+    bottom: 12%;
+    right: 1%;
   }
 }
 @media (min-width: 1440px) {
   .dish-content .price {
-    font-size: 0.9rem; /* Taille du texte pour le prix pour large desktop */
-    padding-right: 1rem; /* Padding horizontal pour large desktop */
-    bottom: 5%;
+    font-size: 0.7rem; /* Taille du texte pour le prix pour tablette */
+    padding-right: 2%;
+    position: absolute;
+    bottom: 12%;
+    right: 1%;
   }
 }
 
@@ -1529,17 +1533,17 @@ label.card-menu:hover {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-5rem); /* Glisse vers la gauche de 10px pour tablette */
+    transform: translateX(-4rem); /* Glisse vers la gauche de 10px pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-5rem); /* Glisse vers la gauche de 20px pour desktop */
+    transform: translateX(-4rem); /* Glisse vers la gauche de 20px pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .checkbox-hidden:checked + label .price {
-    transform: translateX(-7rem); /* Glisse vers la gauche de 20px pour large desktop */
+    transform: translateX(-3rem); /* Glisse vers la gauche de 20px pour large desktop */
   }
 }
 
@@ -2104,7 +2108,7 @@ main {
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "Palette du goût */
 .menu-image {
-  height: 20%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -2118,7 +2122,7 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu-image {
-    height: 25vh; /* Hauteur de l'image ajustée pour desktop */
+    height: 28vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
   }
@@ -2132,11 +2136,11 @@ main {
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Images Menu note enchantée --------------------------------------------*/
+/*-------------------------------- Images Menu note enchantée --------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 /* Image principale pour "La note enchantée */
 .menu-image-alt3 {
-  height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+  height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -2146,7 +2150,7 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt3 {
-    height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    height: 25vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     width: 100%; /* Largeur à 100% pour tablette */
     object-position: 50% 62%; /* Positionnement de l'image pour tablette */
     object-fit: cover; /* Ajustement de l'image pour tablette */
@@ -2162,7 +2166,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt3 {
-    height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
     object-fit: cover;
@@ -2279,10 +2283,10 @@ main {
   }
 }
 
-/*-------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Titre la palette ajustement personnalisé */
 .title2 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
@@ -2300,7 +2304,7 @@ main {
   }
 }
 
-/*-------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Icône  */
 .menu .title2 .icon-favorite {
   padding-right: 10%;
@@ -2312,7 +2316,7 @@ main {
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu .title2 .icon-favorite {
     padding-right: 5%;
-    padding-top: 1%;
+    padding-top: 0.5%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2324,10 +2328,11 @@ main {
 @media (min-width: 1440px) {
   .menu .title2 .icon-favorite {
     padding-right: 5%;
-    padding-top: 0.5%;
+    padding-top: 0.2%;
   }
 }
 
+/*-------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre la note enchantee ajustement personnalisé  */
 .menu .title {
@@ -2352,24 +2357,56 @@ main {
   }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/* Titre la note enchantee ajustement personnalisé*/
+/*-------------------------------------------------------------*/
+/* Titre la note enchantee ajustement personnalisé */
+.title h2 {
+  font-size: 1.6rem;
+}
 @media (min-width: 767px) and (max-width: 1023px) {
-  .menu .title h2 {
+  .title h2 {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .menu .title h2 {
-    font-size: 1.8rem;
+  .title h2 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
-  .menu .title h2 {
-    font-size: 1.7rem;
+  .title h2 {
+    font-size: 1.4rem;
   }
 }
 
+/*------------------------------------------------------------*/
+/* Icône  */
+.menu .title .icon-favorite {
+  padding-right: 8%;
+  padding-top: 1%;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre a la francaise ajustement personnalisé  */
 .menu .title1 {
@@ -2395,8 +2432,11 @@ main {
   }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
 /* Titre la francaise ajustement personnalisé*/
+.title1 h2 {
+  font-size: 1.6rem;
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   .title1 h2 {
     font-size: 1.6rem;
@@ -2404,12 +2444,40 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .title1 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
   .title1 h2 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/* Icône  */
+.menu .title1 .icon-favorite {
+  padding-right: 10%;
+  padding-top: 0.5%;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title1 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title1 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0.5%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title1 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
   }
 }
 
@@ -2438,8 +2506,11 @@ main {
   }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Titre le delice des sens ajustement personnalisé */
+.title3 h2 {
+  font-size: 1.6rem;
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   .title3 h2 {
     font-size: 1.6rem;
@@ -2447,22 +2518,52 @@ main {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .title3 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1440px) {
   .title3 h2 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 }
 
+/*---------------------------------------------------------------*/
+/* Icône  */
+.menu .title3 .icon-favorite {
+  padding-right: 5%;
+  padding-top: 1%;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .menu .title3 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0.5%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .title3 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0.5%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .title3 .icon-favorite {
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 /* Style du conteneur pour les boutons principaux */
 .menu .button--primary {
   display: flex; /* Utilise flexbox pour aligner les boutons */
   align-items: center; /* Centre verticalement les boutons */
   justify-content: center; /* Centre horizontalement les boutons */
-  width: 20vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
+  width: 15vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
   margin: 5% auto;
 }
 

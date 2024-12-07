@@ -75,7 +75,7 @@ main  {
     @include tablette {
         margin:2% 2%;
     }
-    
+
     /* Desktop */
     @include desktop {
         margin:1% 17%;
@@ -96,7 +96,7 @@ main  {
 
 /* Image principale pour "Palette du goût */
 .menu-image {
-    height: 20%; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
     object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
@@ -107,7 +107,7 @@ main  {
 
     /* Desktop */
     @include desktop {
-        height: 25vh; /* Hauteur de l'image ajustée pour desktop */
+        height: 28vw; /* Hauteur de l'image ajustée pour desktop */
         width: 100%; /* Largeur à 100% pour desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour desktop */
     }
@@ -122,19 +122,19 @@ main  {
 
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- Images Menu note enchantée --------------------------------------------*/
+/*-------------------------------- Images Menu note enchantée --------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 
 /* Image principale pour "La note enchantée */
 .menu-image-alt3 {
-    height: 20vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
+    height: 30vh; /* Hauteur de l'image à 25% de la hauteur de l'écran */
     width: 100%; /* Prend toute la largeur du conteneur */
     object-position: 50% 75%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
 
     /*tablette*/
     @include tablette {
-        height: 40vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+        height: 25vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
         width: 100%; /* Largeur à 100% pour tablette */
         object-position: 50% 62%; /* Positionnement de l'image pour tablette */
         object-fit: cover; /* Ajustement de l'image pour tablette */
@@ -150,7 +150,7 @@ main  {
 
     /*-- large desktop --*/
     @include large-desktop {
-        height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
         object-fit: cover;
@@ -268,10 +268,10 @@ main  {
 
 
 
-/*-------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Titre la palette ajustement personnalisé */
 .title2 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
 
     @include tablette {
         font-size: 2rem;
@@ -284,7 +284,7 @@ main  {
     }
 }
 
-/*-------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Icône  */
 .menu .title2 .icon-favorite {
     padding-right:10%;
@@ -293,7 +293,7 @@ main  {
     /*-- Tablette --*/
     @include tablette {
         padding-right:5%;
-        padding-top:1%;
+        padding-top: 0.5%;
     }
 
     /*-- desktop --*/
@@ -305,9 +305,11 @@ main  {
     /*-- large desktop --*/
     @include large-desktop {
         padding-right: 5%;
-        padding-top: 0.5%;
+        padding-top: 0.2%;
     }
 }
+
+/*-------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre la note enchantee ajustement personnalisé  */
 .menu .title {
@@ -330,20 +332,47 @@ main  {
     }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/* Titre la note enchantee ajustement personnalisé*/
-.menu .title h2 {
+/*-------------------------------------------------------------*/
+/* Titre la note enchantee ajustement personnalisé */
+.title h2 {
+    font-size: 1.6rem;
+
     @include tablette {
         font-size: 1.6rem;
     }
     @include desktop {
-        font-size:1.8rem;
+        font-size:1.5rem;
     }
     @include large-desktop {
-        font-size:1.7rem;
+        font-size:1.4rem;
+    }
+}
+/*------------------------------------------------------------*/
+/* Icône  */
+.menu .title .icon-favorite {
+    padding-right:8%;
+    padding-top:1%;
+
+    /*-- Tablette --*/
+    @include tablette {
+        padding-right:5%;
+        padding-top: 0;
+    }
+
+    /*-- desktop --*/
+    @include desktop {
+        padding-right: 5%;
+        padding-top: 0;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        padding-right: 5%;
+        padding-top: 0;
     }
 }
 
+/*-------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre a la francaise ajustement personnalisé  */
 .menu .title1 {
@@ -367,20 +396,45 @@ main  {
     }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
 /* Titre la francaise ajustement personnalisé*/
 .title1 h2 {
+    font-size: 1.6rem;
+
     @include tablette {
         font-size: 1.6rem;
     }
     @include desktop {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     @include large-desktop {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }
+/*-------------------------------------------------------------*/
+/* Icône  */
+.menu .title1 .icon-favorite {
+    padding-right:10%;
+    padding-top:0.5%;
 
+    /*-- Tablette --*/
+    @include tablette {
+        padding-right:5%;
+        padding-top:0;
+    }
+
+    /*-- desktop --*/
+    @include desktop {
+        padding-right: 5%;
+        padding-top: 0.5%;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        padding-right: 5%;
+        padding-top: 0;
+    }
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*  Conteneur Titre le delice des sens ajustement personnalisé  */
 .menu .title3 {
@@ -404,22 +458,50 @@ main  {
     }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 /* Titre le delice des sens ajustement personnalisé */
 .title3 h2 {
+    font-size: 1.6rem;
+
     @include tablette {
         font-size: 1.6rem;
     }
     @include desktop {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     @include large-desktop {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
+    }
+}
+/*---------------------------------------------------------------*/
+/* Icône  */
+.menu .title3 .icon-favorite {
+    padding-right:5%;
+    padding-top:1%;
+
+    /*-- Tablette --*/
+    @include tablette {
+        padding-right:5%;
+        padding-top:0.5%;
+    }
+
+    /*-- desktop --*/
+    @include desktop {
+        padding-right: 5%;
+        padding-top: 0.5%;
+    }
+
+    /*-- large desktop --*/
+    @include large-desktop {
+        padding-right: 5%;
+        padding-top: 0;
     }
 }
 
 
+/*--------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------- Boutons Commander dans le Menu ----------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
 
 /* Style du conteneur pour les boutons principaux */
@@ -427,6 +509,6 @@ main  {
     display: flex; /* Utilise flexbox pour aligner les boutons */
     align-items: center; /* Centre verticalement les boutons */
     justify-content: center; /* Centre horizontalement les boutons */
-    width: 20vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
+    width: 15vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
     margin:5% auto;
 }

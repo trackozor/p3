@@ -542,13 +542,13 @@ $sections: (
     /* tablette */
     @include tablette {
         font-size: 1rem; /* Taille du texte pour le nom du plat pour tablette */
-        padding: 1% 2%; /* Padding horizontal pour tablette */
+        padding: 1.5% 2%; /* Padding horizontal pour tablette */
     }
     
     /* Desktop */
     @include desktop {
         font-size: 0.9rem; /* Taille du texte pour le nom du plat pour desktop */
-        padding: 1% 2% ; /* Padding horizontal pour desktop */
+        padding: 2% ; /* Padding horizontal pour desktop */
     }
 
     /*-- Large desktop --*/
@@ -589,6 +589,7 @@ $sections: (
     @include large-desktop {
         font-size: 0.9rem; /* Taille du texte pour la description du plat pour large desktop */
         padding-left: 2%; /* Padding horizontal pour large desktop */
+        margin-bottom: 1%;
     }
     
 }
@@ -628,20 +629,29 @@ $sections: (
     /* tablette */
     @include tablette {
         font-size: 0.9rem; /* Taille du texte pour le prix pour tablette */
-        padding-right: $padding-base; /* Padding horizontal pour tablette */
+        padding-right:2%;
+        position : absolute;
+        bottom:12%; 
+        right:1%;
+        
     }
     
     /* Desktop */
     @include desktop {
-        font-size: 0.9rem; /* Taille du texte pour le prix pour desktop */
-        padding-right: $padding-base; /* Padding horizontal pour desktop */
+        font-size: 0.7rem; /* Taille du texte pour le prix pour tablette */
+        padding-right:2%;
+        position : absolute;
+        bottom:12%; 
+        right:1%;
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 0.9rem; /* Taille du texte pour le prix pour large desktop */
-        padding-right: $padding-base; /* Padding horizontal pour large desktop */
-        bottom:5%;;
+        font-size: 0.7rem; /* Taille du texte pour le prix pour tablette */
+        padding-right:2%;
+        position : absolute;
+        bottom:12%; 
+        right:1%;
     }
 }
 
@@ -652,17 +662,17 @@ $sections: (
 
     /* tablette */
     @include tablette {
-        transform: translateX(-5rem); /* Glisse vers la gauche de 10px pour tablette */
+        transform: translateX(-4rem); /* Glisse vers la gauche de 10px pour tablette */
     }
     
     /* Desktop */
     @include desktop {
-        transform: translateX(-5rem); /* Glisse vers la gauche de 20px pour desktop */
+        transform: translateX(-4rem); /* Glisse vers la gauche de 20px pour desktop */
     }
 
     /* Large desktop */
     @include large-desktop {
-        transform: translateX(-7rem); /* Glisse vers la gauche de 20px pour large desktop */
+        transform: translateX(-3rem); /* Glisse vers la gauche de 20px pour large desktop */
     }
 }
 
