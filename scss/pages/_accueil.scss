@@ -239,8 +239,7 @@
     font-weight: $font-weight-bold; /* Gras du texte */
     position: relative; /* Position relative pour gérer des éléments internes */
     z-index: 1; /* Superposition sur l'axe Z */
-    width: 95%; /* Prend toute la largeur du conteneur */
-    justify-content: space-around; /* Espace autour des éléments de la liste */
+    width: 90%; /* Prend toute la largeur du conteneur */ 
     border-radius: 1.25rem;
     
 
@@ -280,7 +279,6 @@
     box-shadow: 0 0.5vh 0.6vh rgba(0, 0, 0, 0.2); /* Ombre légère pour le conteneur */
     width: 100%; /* Largeur du texte à 100% du conteneur */
     align-items: center; /* Centre le texte sur l'axe vertical */
-    justify-content:space-around;
     background-color: #f6f6f6;
     font-size: 1rem; /* Taille de la police */
 
@@ -361,24 +359,25 @@
 .fonctionnement i {
     color: #7E7E7E; /* Couleur grise pour les icônes */
     font-size: 1.4rem; /* Taille de la police pour les icônes */
-    padding-bottom: 2%;
+    padding: 2% 10%;
 
     /*-- Tablette --*/
     @include tablette {
+        padding:2% 1%;
         font-size: 1.4rem;
     }
 
 
     /* Desktop */
     @include desktop {
-        font-size: $font-size-base; /* Taille de la police ajustée pour desktop */
-        margin: 0 $margin-small 0 $margin-small; /* Marges ajustées pour desktop */
+        font-size: 1.2rem;
+        padding:2% 5%;
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: $font-size-base; /* Taille de la police ajustée pour large desktop */
-        margin: 0 $margin-base 0 $margin-base; /* Marges ajustées pour large desktop */
+        font-size: 1.2rem;
+        padding: 2% 10%;
     }
 }
 

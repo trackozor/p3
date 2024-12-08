@@ -399,7 +399,7 @@
     
     /* tablette */
     @include tablette {
-        font-size: 1rem; /* Ajuste la taille du texte pour tablette */
+        font-size: 1.4rem; /* Ajuste la taille du texte pour tablette */
         gap: $gap-base; /* Espace pour tablette */
     }
 
@@ -428,12 +428,12 @@
     
     /* Desktop */
     @include desktop {
-        left: 88%; /* Position horizontale de l'icône pour desktop */
-        bottom: 13%; /* Position verticale de l'icône pour desktop */
+        left: 90%; /* Position horizontale de l'icône pour desktop */
+        bottom: 12%; /* Position verticale de l'icône pour desktop */
     }
 
     @include large-desktop {
-        left: 85%; /* Position horizontale de l'icône pour desktop */
+        left: 90%; /* Position horizontale de l'icône pour desktop */
         bottom: 12.5%; /* Position verticale de l'icône pour desktop */
     }
 }
@@ -592,13 +592,13 @@ $sections: (
     /* Desktop */
     @include desktop {
         font-size: 1rem; /* Taille du texte pour le nom du plat pour desktop */
-        padding: 2% ; /* Padding horizontal pour desktop */
+        padding: 1.5% 2% ; /* Padding horizontal pour desktop */
     }
 
     /*-- Large desktop --*/
     @include large-desktop {
         font-size: 1rem; /* Taille du texte pour le nom du plat pour large desktop */
-        padding:1% 2% ; /* Padding horizontal pour large desktop */
+        padding:1.5% 2% 1% 2% ; /* Padding horizontal pour large desktop */
     }
 }
 
