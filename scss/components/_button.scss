@@ -239,20 +239,20 @@ label.card-menu {
 
     /*  tablette */
     @include tablette {
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
     }
 
     /* desktop */
     @include desktop {
-        font-size: 1.6rem;
-        padding: 1.6rem; /* Ajustement de la taille et du padding pour desktop */
+        font-size: 1.4rem;
+        padding: 1.4rem; /* Ajustement de la taille et du padding pour desktop */
     }
 
     /* Large desktop */
     @include large-desktop {
-        font-size: 1.4rem;
-        padding: 1.4rem ; /* Ajustement de la taille et du padding pour large desktop */
+        font-size: 1.3rem;
+        padding: 1.3rem ; /* Ajustement de la taille et du padding pour large desktop */
     }
 }
 

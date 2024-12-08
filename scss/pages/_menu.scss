@@ -35,6 +35,7 @@ main  {
     /* Tablette */
     @include tablette {
         padding-top:5%;
+        width:80%
     }
 
     /* Desktop */
@@ -48,6 +49,7 @@ main  {
     @include large-desktop {
         padding-top:3%;
         border-radius: 2.5vw 2.5vw 0 0;
+        width:60%;
     }
 }
 
@@ -78,7 +80,7 @@ main  {
 
     /* Tablette */
     @include tablette {
-        margin:2% 2%;
+        margin:1.5% 2%;
     }
 
     /* Desktop */
@@ -120,7 +122,7 @@ main  {
 
     /*-- large desktop --*/
     @include large-desktop {
-        height: 25vw; /* Hauteur de l'image ajustée pour large desktop */
+        height: 22vw; /* Hauteur de l'image ajustée pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
     }
@@ -156,7 +158,7 @@ main  {
 
     /*-- large desktop --*/
     @include large-desktop {
-        height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
         object-fit: cover;
@@ -193,7 +195,7 @@ main  {
 
     /*--large desktop*/
     @include large-desktop {
-        height: 25vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+        height: 22vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
         object-fit: cover; /* Ajustement de l'image pour large desktop */
@@ -229,7 +231,7 @@ main  {
     
     /*--large desktop*/
     @include large-desktop {
-        height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
     }
@@ -281,7 +283,7 @@ main  {
 
     /*-- tablette --*/
     @include tablette {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     /*-- desktop --*/

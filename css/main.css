@@ -193,7 +193,6 @@ body {
 /*--------------------------------------------------------------------------------------------------------*/
 h2 {
   font-size: 1.3rem; /* Taille de police pour les titres correspondant à 3% de la hauteur de l'écran*/
-  font-weight: 700; /* Accentuation caractère majeure soit valeur=900 */
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -351,7 +350,7 @@ header {
 .card-logo-alt i {
   position: absolute; /* Positionne l'icône de manière absolue dans la carte */
   left: 5%; /* Place l'icône à gauche, hors de la carte */
-  top: 34%; /* Place l'icône à 35% du haut du conteneur */
+  top: 33%; /* Place l'icône à 35% du haut du conteneur */
   font-size: 1.6rem;
   /*-- tablette --*/
   /* Desktop */
@@ -632,7 +631,7 @@ footer {
   width: 100vw;
   height: 100vh; /* Assure que le loader couvre toute la hauteur de l'écran */
   background: black;
-  display: flex; /* Utiliser flexbox pour centrer les éléments */
+  display: none; /* Utiliser flexbox pour centrer les éléments */
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Centre verticalement */
@@ -979,20 +978,20 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .validation-icon i {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1.6rem; /* Ajustement de la taille et du padding pour tablette */
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .validation-icon i {
-    font-size: 1.6rem;
-    padding: 1.6rem; /* Ajustement de la taille et du padding pour desktop */
+    font-size: 1.4rem;
+    padding: 1.4rem; /* Ajustement de la taille et du padding pour desktop */
   }
 }
 @media (min-width: 1440px) {
   .validation-icon i {
-    font-size: 1.4rem;
-    padding: 1.4rem; /* Ajustement de la taille et du padding pour large desktop */
+    font-size: 1.3rem;
+    padding: 1.3rem; /* Ajustement de la taille et du padding pour large desktop */
   }
 }
 
@@ -2124,6 +2123,7 @@ main {
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu {
     padding-top: 5%;
+    width: 80%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2137,6 +2137,7 @@ main {
   .menu {
     padding-top: 3%;
     border-radius: 2.5vw 2.5vw 0 0;
+    width: 60%;
   }
 }
 
@@ -2172,7 +2173,7 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu h3 {
-    margin: 2% 2%;
+    margin: 1.5% 2%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2215,7 +2216,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image {
-    height: 25vw; /* Hauteur de l'image ajustée pour large desktop */
+    height: 22vw; /* Hauteur de l'image ajustée pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
   }
@@ -2252,7 +2253,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt3 {
-    height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
     object-fit: cover;
@@ -2289,7 +2290,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt2 {
-    height: 25vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+    height: 22vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
     object-fit: cover; /* Ajustement de l'image pour large desktop */
@@ -2326,7 +2327,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt {
-    height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
   }
@@ -2379,7 +2380,7 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
