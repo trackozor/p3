@@ -214,9 +214,11 @@ footer {
 .Menupage footer img {
     @include desktop {
         width: 100%;
+        padding-left: 25%;
     }
     
     @include large-desktop {
         width: 100%;
+        padding-left: 30%;
     }
 }

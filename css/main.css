@@ -604,11 +604,13 @@ footer {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .Menupage footer img {
     width: 100%;
+    padding-left: 25%;
   }
 }
 @media (min-width: 1440px) {
   .Menupage footer img {
     width: 100%;
+    padding-left: 30%;
   }
 }
 
