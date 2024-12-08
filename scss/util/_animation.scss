@@ -21,7 +21,7 @@
 
 /*----------------------------- Animation disparition du loader  -----------------------*/
 
-@keyframes fadeOutLoader {
+@keyframes fadeOut {
     0% {
         opacity: 1; /* Loader visible au début */
     }
@@ -56,7 +56,7 @@
 
 /*------- Animation apparition progressive d'un message -----------------*/
 
-@keyframes fadeInMessage {
+@keyframes fadeIn {
     0% {
         opacity: 0; /* Le message est invisible au début */
     }

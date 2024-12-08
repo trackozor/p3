@@ -20,6 +20,148 @@ header {
 
 
 }
+/*-------------------------------------------------------------------------------*/
+/*--------------------------- Carte Logo --------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+/* Conteneur principale de la carte */
+.card-logo {
+  width: 100%;/* prend toute la largeur disponible*/
+  max-height: 113px;/* Hauteur ajusté au contenu */
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  align-items: center;/* Centre le contenu verticalement */
+  background-color:white;/*Couleur de fond blanche */
+  margin: 4% 0; /* Définit les marges verticales de la carte */
+  justify-content: center;/* centre les éléments horizontalement */
+
+  /*-- tablette --*/
+  @include tablette {
+      margin:2% 0;
+  }
+
+  /* Desktop */
+  @include desktop {
+      margin:1.5% 0;
+  }
+  
+  /* Large desktop */
+  @include large-desktop {
+      margin:1% 0;
+      
+  }
+}
+
+
+/*-------------------------------------------------------------*/
+/* images */
+.card-logo img {
+  display: block;/* affiche l'element comme un bloc */
+  margin: 0 auto;/* Marge haute et basse de 2% et centrage horizontale*/
+  width:40%;/* prend 50% de largeur du conteneur */
+
+  /*-- tablette --*/
+  @include tablette {
+      width:20%
+  }
+  /*-- desktop --*/
+  @include desktop {
+      width:15%;/* Ajustement largeur pour desktop*/
+  }
+  
+  /*-- large desktop --*/
+  @include large-desktop {
+  width: 10%;/* ajustement largeur pour écran large*/
+  }
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/*-----------------------  Carte Logo alt ---------------------------------*/
+/*-------------------------------------------------------------------------*/
+
+/* Conteneur principal de la carte avec alternative et flèche retour */
+.card-logo-alt {
+  display:flex;/* Utilise flexbox pour aligner les éléments */
+  align-items: center;/* Aligne les éléments verticalement */
+  justify-content: center;/* Centre les éléments horizontalement */
+  position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
+  padding: 5% 0;/* espace intérieur haut et bas de 2%*/
+
+  /* Tablette */
+  @include tablette {
+      padding:2% 0;
+  }
+
+  /* Desktop */   
+  @include desktop {
+      padding: 2% 0;;
+  }
+  
+  /* Large desktop */
+  @include large-desktop {
+      padding: 2% 0;
+  }
+}
+
+
+/*-------------------------------------------------------------*/
+/* Image dans la carte alt */
+.card-logo-alt img {
+  width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
+
+  /* tablette */
+  @include tablette {
+      width:20%;
+  }
+
+  /* Desktop */
+  @include desktop {
+      width:15%/* ajustement largeur pour desktop */
+  }
+
+  /* large desktop */
+  @include large-desktop {
+      width:10% /* Ajustement largeur pour écran large*/
+  }
+}
+
+
+/*-------------------------------------------------------------*/
+/* Icône de flèche retour */
+.card-logo-alt i {
+  position: absolute; /* Positionne l'icône de manière absolue dans la carte */
+  left:5%; /* Place l'icône à gauche, hors de la carte */
+  top: 34%; /* Place l'icône à 35% du haut du conteneur */
+  font-size: 1.6rem;
+
+  /*-- tablette --*/
+  @include tablette {
+      top: 30%; /* Place l'icône à 35% du haut du conteneur */
+      left:2%
+  }
+  /* Desktop */
+  @include desktop {
+      left:2%; /* Ajuste la position de l'icône pour desktop */
+      top: 33%;
+      font-size: 1.4rem; /* Ajuste la position de l'icône pour desktop */
+  }
+
+  /* large desktop */
+  @include large-desktop {
+      left:2%; /* Ajuste la position de l'icône pour desktop */
+      top: 37%;
+      font-size: 1.2rem;
+  }
+  
+  /* Faire pointer la souris sur l'icône de la carte */
+  &:hover {
+      cursor: pointer;
+  }
+}
+
 
 
 

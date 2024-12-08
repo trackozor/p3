@@ -234,6 +234,154 @@ header {
   background-color: #FFFFFF;
 }
 
+/*-------------------------------------------------------------------------------*/
+/*--------------------------- Carte Logo --------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Conteneur principale de la carte */
+.card-logo {
+  width: 100%; /* prend toute la largeur disponible*/
+  max-height: 113px; /* Hauteur ajusté au contenu */
+  display: flex; /* Utilise flexbox pour aligner les éléments*/
+  align-items: center; /* Centre le contenu verticalement */
+  background-color: white; /*Couleur de fond blanche */
+  margin: 4% 0; /* Définit les marges verticales de la carte */
+  justify-content: center; /* centre les éléments horizontalement */
+  /*-- tablette --*/
+  /* Desktop */
+  /* Large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-logo {
+    margin: 2% 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo {
+    margin: 1.5% 0;
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo {
+    margin: 1% 0;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/* images */
+.card-logo img {
+  display: block; /* affiche l'element comme un bloc */
+  margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
+  width: 40%; /* prend 50% de largeur du conteneur */
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-logo img {
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo img {
+    width: 15%; /* Ajustement largeur pour desktop*/
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo img {
+    width: 10%; /* ajustement largeur pour écran large*/
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/*-----------------------  Carte Logo alt ---------------------------------*/
+/*-------------------------------------------------------------------------*/
+/* Conteneur principal de la carte avec alternative et flèche retour */
+.card-logo-alt {
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Aligne les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  position: relative; /* Permet de positionner des éléments enfants relativement au conteneur */
+  padding: 5% 0; /* espace intérieur haut et bas de 2%*/
+  /* Tablette */
+  /* Desktop */
+  /* Large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-logo-alt {
+    padding: 2% 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo-alt {
+    padding: 2% 0;
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo-alt {
+    padding: 2% 0;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/* Image dans la carte alt */
+.card-logo-alt img {
+  width: 50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
+  /* tablette */
+  /* Desktop */
+  /* large desktop */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-logo-alt img {
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo-alt img {
+    width: 15%;
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo-alt img {
+    width: 10%;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/* Icône de flèche retour */
+.card-logo-alt i {
+  position: absolute; /* Positionne l'icône de manière absolue dans la carte */
+  left: 5%; /* Place l'icône à gauche, hors de la carte */
+  top: 34%; /* Place l'icône à 35% du haut du conteneur */
+  font-size: 1.6rem;
+  /*-- tablette --*/
+  /* Desktop */
+  /* large desktop */
+  /* Faire pointer la souris sur l'icône de la carte */
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .card-logo-alt i {
+    top: 30%; /* Place l'icône à 35% du haut du conteneur */
+    left: 2%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-logo-alt i {
+    left: 2%; /* Ajuste la position de l'icône pour desktop */
+    top: 33%;
+    font-size: 1.4rem; /* Ajuste la position de l'icône pour desktop */
+  }
+}
+@media (min-width: 1440px) {
+  .card-logo-alt i {
+    left: 2%; /* Ajuste la position de l'icône pour desktop */
+    top: 37%;
+    font-size: 1.2rem;
+  }
+}
+.card-logo-alt i:hover {
+  cursor: pointer;
+}
+
 /*-------------------------------------------------------------------------------------------------------- */
 /* Nom du fichier      : _footer.scss                                                                      */
 /* Auteur              : Trackozor                                                                         */
@@ -406,7 +554,7 @@ footer {
     flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
     list-style: none; /* Retire les puces de la liste */
     padding: 0;
-    margin-left: 70%;
+    margin-left: 55%;
     font-size: 0.9rem;
     padding-top: 1.5%;
   }
@@ -445,56 +593,22 @@ footer {
   }
 }
 
-* .footer-card1 ul {
-  /* tablette */
-  /* Desktop */
-  /*-- large desktop --*/
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  * .footer-card1 ul {
-    margin: 1% 0;
-    padding: 1% 0; /* Pas de marge supérieur pour tablette */
-    font-size: 1rem;
-  }
-}
 @media (min-width: 1024px) and (max-width: 1439px) {
-  * .footer-card1 ul {
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    justify-content: flex-end;
-    gap: 1rem; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
-    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
-    list-style: none; /* Retire les puces de la liste */
-    align-items: center;
-    padding: 0;
-    font-size: 0.9rem;
-  }
-}
-@media (min-width: 1440px) {
-  * .footer-card1 ul {
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    justify-content: flex-end;
-    gap: 5%; /* Espace entre les éléments correspondant à 2% de la largeur de l'écran */
-    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
-    list-style: none; /* Retire les puces de la liste */
-    padding: 0;
-    margin-left: 70%;
-    font-size: 0.9rem;
-    padding-top: 1.5%;
+  .Menupage .footer-card {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 30%;
   }
 }
 
-footer .logo-footer {
-  /*-- Desktop --*/
-  /*-- large desktop --*/
-}
 @media (min-width: 1024px) and (max-width: 1439px) {
-  footer .logo-footer {
-    width: 30%;
+  .Menupage footer img {
+    width: 100%;
   }
 }
 @media (min-width: 1440px) {
-  footer .logo-footer {
-    width: 30%;
+  .Menupage footer img {
+    width: 100%;
   }
 }
 
@@ -516,12 +630,12 @@ footer .logo-footer {
   width: 100vw;
   height: 100vh; /* Assure que le loader couvre toute la hauteur de l'écran */
   background: black;
-  display: none; /* Utiliser flexbox pour centrer les éléments */
+  display: flex; /* Utiliser flexbox pour centrer les éléments */
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Centre verticalement */
   z-index: 9999; /* Z-index élevé pour que le loader soit au-dessus de tout */
-  animation: fadeOutLoader 5s ease-in-out forwards;
+  animation: fadeOut 5s ease-in-out forwards;
 }
 
 /* Carte contenant le logo, horloge, sablier et barre de progression */
@@ -588,7 +702,7 @@ footer .logo-footer {
   color: #860ee7;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fadeInMessage 2.5s ease-in-out forwards;
+  animation: fadeIn 2.5s ease-in-out forwards;
 }
 
 /* Conteneur de la barre de progression */
@@ -634,7 +748,7 @@ footer .logo-footer {
   transform: translateX(-50%);
   color: white;
   font-size: 1.6rem;
-  animation: fadeInMessage 4.5s ease-in-out forwards;
+  animation: fadeIn 4.5s ease-in-out forwards;
   height: 20px;
 }
 
@@ -893,154 +1007,6 @@ label.card-menu {
 /* Révisions :                                                                                             */
 /* - 27 octobre 2024: révision et commentaires                                                              */
 /*--------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------*/
-/*--------------------------- Carte Logo --------------------------------------*/
-/*----------------------------------------------------------------------------*/
-/* Conteneur principale de la carte */
-.card-logo {
-  width: 100%; /* prend toute la largeur disponible*/
-  max-height: 113px; /* Hauteur ajusté au contenu */
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  align-items: center; /* Centre le contenu verticalement */
-  background-color: white; /*Couleur de fond blanche */
-  margin: 4% 0; /* Définit les marges verticales de la carte */
-  justify-content: center; /* centre les éléments horizontalement */
-  /*-- tablette --*/
-  /* Desktop */
-  /* Large desktop */
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .card-logo {
-    margin: 2% 0;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-logo {
-    margin: 1.5% 0;
-  }
-}
-@media (min-width: 1440px) {
-  .card-logo {
-    margin: 1% 0;
-  }
-}
-
-/*-------------------------------------------------------------*/
-/* images */
-.card-logo img {
-  display: block; /* affiche l'element comme un bloc */
-  margin: 0 auto; /* Marge haute et basse de 2% et centrage horizontale*/
-  width: 40%; /* prend 50% de largeur du conteneur */
-  /*-- tablette --*/
-  /*-- desktop --*/
-  /*-- large desktop --*/
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .card-logo img {
-    width: 20%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-logo img {
-    width: 15%; /* Ajustement largeur pour desktop*/
-  }
-}
-@media (min-width: 1440px) {
-  .card-logo img {
-    width: 10%; /* ajustement largeur pour écran large*/
-  }
-}
-
-/*-------------------------------------------------------------------------*/
-/*-----------------------  Carte Logo alt ---------------------------------*/
-/*-------------------------------------------------------------------------*/
-/* Conteneur principal de la carte avec alternative et flèche retour */
-.card-logo-alt {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  align-items: center; /* Aligne les éléments verticalement */
-  justify-content: center; /* Centre les éléments horizontalement */
-  position: relative; /* Permet de positionner des éléments enfants relativement au conteneur */
-  padding: 5% 0; /* espace intérieur haut et bas de 2%*/
-  /* Tablette */
-  /* Desktop */
-  /* Large desktop */
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .card-logo-alt {
-    padding: 2% 0;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-logo-alt {
-    padding: 2% 0;
-  }
-}
-@media (min-width: 1440px) {
-  .card-logo-alt {
-    padding: 2% 0;
-  }
-}
-
-/*-------------------------------------------------------------*/
-/* Image dans la carte alt */
-.card-logo-alt img {
-  width: 50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */
-  /* tablette */
-  /* Desktop */
-  /* large desktop */
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .card-logo-alt img {
-    width: 20%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-logo-alt img {
-    width: 15%;
-  }
-}
-@media (min-width: 1440px) {
-  .card-logo-alt img {
-    width: 10%;
-  }
-}
-
-/*-------------------------------------------------------------*/
-/* Icône de flèche retour */
-.card-logo-alt i {
-  position: absolute; /* Positionne l'icône de manière absolue dans la carte */
-  left: 5%; /* Place l'icône à gauche, hors de la carte */
-  top: 30%; /* Place l'icône à 35% du haut du conteneur */
-  font-size: 1.6rem;
-  /*-- tablette --*/
-  /* Desktop */
-  /* large desktop */
-  /* Faire pointer la souris sur l'icône de la carte */
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .card-logo-alt i {
-    top: 30%; /* Place l'icône à 35% du haut du conteneur */
-    left: 2%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-logo-alt i {
-    left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 33%;
-    font-size: 1.4rem; /* Ajuste la position de l'icône pour desktop */
-  }
-}
-@media (min-width: 1440px) {
-  .card-logo-alt i {
-    left: 2%; /* Ajuste la position de l'icône pour desktop */
-    top: 45%;
-    font-size: 1.2rem;
-  }
-}
-.card-logo-alt i:hover {
-  cursor: pointer;
-}
-
 /*---------------------------------------------------------------------------------------*/
 /*--------------------------  Carte localisation avec icône et ville -------------------*/
 /*---------------------------------------------------------------------------------------*/
@@ -1658,6 +1624,10 @@ label.card-menu {
 /*  Révisions : organisation et restructuration fichier                                                     */
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
+.Homepage {
+  animation: fadeIn 0.1s ease-in;
+}
+
 /*--------------------------------------------------------------------*/
 /*                   SECTION Bandeau                                   */
 /*--------------------------------------------------------------------*/
@@ -1765,7 +1735,7 @@ label.card-menu {
     margin: 0; /* Supprime toujours la marge en bas */
     margin-bottom: 0.5%;
     font-weight: 300;
-    padding: 1% 0;
+    padding: 0.5% 0;
   }
 }
 
@@ -1798,7 +1768,7 @@ label.card-menu {
 }
 @media (min-width: 1440px) {
   .fonctionnement {
-    padding: 0.8% 0;
+    padding: 0.5% 0;
     width: 100%;
     margin: 0 auto;
   }
@@ -1833,7 +1803,7 @@ label.card-menu {
     font-size: 1.3rem; /* Taille de police de 1.5rem pour large desktop */
     margin: 0.5% 0;
     padding-left: 15%;
-    margin-bottom: 1.5%;
+    margin-bottom: 1%;
   }
 }
 
@@ -1894,7 +1864,7 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .fonctionnement li {
-    margin: 1.5%; /* Ajustement des marges pour tablette */
+    margin: 1%; /* Ajustement des marges pour tablette */
     gap: 2%;
     justify-content: center;
   }
@@ -1934,7 +1904,7 @@ label.card-menu {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .li-txt {
-    padding: 2% 10%; /* Ajustement du padding pour tablette */
+    padding: 1% 10%; /* Ajustement du padding pour tablette */
     justify-content: flex-start;
     font-size: 1rem;
     gap: 10%;
@@ -2163,7 +2133,8 @@ main {
 }
 @media (min-width: 1440px) {
   .menu {
-    padding-top: 2.5%;
+    padding-top: 3%;
+    border-radius: 2.5vw 2.5vw 0 0;
   }
 }
 
@@ -2242,7 +2213,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image {
-    height: 20vw; /* Hauteur de l'image ajustée pour large desktop */
+    height: 25vw; /* Hauteur de l'image ajustée pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
   }
@@ -2279,7 +2250,7 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt3 {
-    height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
     object-fit: cover;
@@ -2301,7 +2272,7 @@ main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image-alt2 {
-    height: 40vw;
+    height: 25vh;
     width: 100%; /* Largeur à 100% pour tablette */
     object-position: 55% 95%; /* Positionnement bas de l'image pour tablette */
     object-fit: cover; /* Ajustement de l'image pour tablette */
@@ -2316,9 +2287,9 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt2 {
-    height: 20vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+    height: 25vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
-    object-position: 50% 67%; /* Positionnement bas de l'image pour large desktop */
+    object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
     object-fit: cover; /* Ajustement de l'image pour large desktop */
   }
 }
@@ -2353,9 +2324,9 @@ main {
 }
 @media (min-width: 1440px) {
   .menu-image-alt {
-    height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+    height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
-    object-position: 50% 70%; /* Positionnement bas de l'image pour large desktop */
+    object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
   }
 }
 
@@ -2392,7 +2363,7 @@ main {
   .menu .title2 {
     gap: 5%;
     justify-content: center;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
   }
 }
 
@@ -2690,6 +2661,20 @@ main {
   justify-content: center; /* Centre horizontalement les boutons */
   width: 15vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
   margin: 5% auto;
+  /*-- desktop --*/
+  /*-- large desktop --*/
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .menu .button--primary {
+    width: 12vh;
+    margin: 3% auto 0 auto;
+  }
+}
+@media (min-width: 1440px) {
+  .menu .button--primary {
+    width: 15vh;
+    margin: 2% auto 0 auto;
+  }
 }
 
 /* 7. Styles des animations */
@@ -2710,7 +2695,7 @@ main {
 /*                                                                                                          */
 /* -------------------------------------------------------------------------------------------------------- */
 /*----------------------------- Animation disparition du loader  -----------------------*/
-@keyframes fadeOutLoader {
+@keyframes fadeOut {
   0% {
     opacity: 1; /* Loader visible au début */
   }
@@ -2741,7 +2726,7 @@ main {
   }
 }
 /*------- Animation apparition progressive d'un message -----------------*/
-@keyframes fadeInMessage {
+@keyframes fadeIn {
   0% {
     opacity: 0; /* Le message est invisible au début */
   }

@@ -15,6 +15,7 @@ main  {
     background-color: white;
 }
 
+
 /* Conteneur principale  */
 .menu {
     background-color: #f9f9f9; /* Couleur de fond grise claire */
@@ -45,7 +46,8 @@ main  {
 
     /* Large desktop */
     @include large-desktop {
-        padding-top:2.5%;
+        padding-top:3%;
+        border-radius: 2.5vw 2.5vw 0 0;
     }
 }
 
@@ -118,7 +120,7 @@ main  {
 
     /*-- large desktop --*/
     @include large-desktop {
-        height: 20vw; /* Hauteur de l'image ajustée pour large desktop */
+        height: 25vw; /* Hauteur de l'image ajustée pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
     }
@@ -154,7 +156,7 @@ main  {
 
     /*-- large desktop --*/
     @include large-desktop {
-        height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
         object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
         object-fit: cover;
@@ -176,7 +178,7 @@ main  {
     
     /* Tablette */
     @include tablette {
-        height:40vw;
+        height:25vh;
         width: 100%; /* Largeur à 100% pour tablette */
         object-position: 55% 95%; /* Positionnement bas de l'image pour tablette */
         object-fit: cover; /* Ajustement de l'image pour tablette */
@@ -191,9 +193,9 @@ main  {
 
     /*--large desktop*/
     @include large-desktop {
-        height: 20vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
+        height: 25vw; /* Hauteur de l'image adaptée à la largeur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
-        object-position: 50% 67%; /* Positionnement bas de l'image pour large desktop */
+        object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
         object-fit: cover; /* Ajustement de l'image pour large desktop */
     }
 }
@@ -227,9 +229,9 @@ main  {
     
     /*--large desktop*/
     @include large-desktop {
-        height: 20vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
+        height: 25vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
         width: 100%; /* Largeur à 100% pour large desktop */
-        object-position: 50% 70%; /* Positionnement bas de l'image pour large desktop */
+        object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
     }
 }
 
@@ -265,7 +267,7 @@ main  {
     @include large-desktop {
         gap: 5%;
         justify-content: center;
-        padding-bottom: 1%;
+        padding-bottom: 2%;
     
     }
 }
@@ -535,4 +537,21 @@ main  {
     justify-content: center; /* Centre horizontalement les boutons */
     width: 15vh; /* Largeur du bouton adaptée à la hauteur de l'écran */
     margin:5% auto;
+
+    @include tablette {
+
+    }
+    
+    /*-- desktop --*/
+    @include desktop {
+        width: 12vh;
+        margin: 3% auto 0 auto;
+    }
+    
+    /*-- large desktop --*/
+    @include large-desktop {
+        width: 15vh;
+        margin: 2% auto 0 auto;
+        
+    }
 }

@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center; /* Centre verticalement */
     z-index: 9999; /* Z-index élevé pour que le loader soit au-dessus de tout */
-    animation: fadeOutLoader 5s ease-in-out forwards;
+    animation: fadeOut 5s ease-in-out forwards;
 }
 
 /* Carte contenant le logo, horloge, sablier et barre de progression */
@@ -87,7 +87,7 @@
     color: #860ee7;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: fadeInMessage 2.5s ease-in-out forwards;
+    animation: fadeIn 2.5s ease-in-out forwards;
 }
 
 /* Conteneur de la barre de progression */
@@ -130,7 +130,7 @@
     transform: translateX(-50%);
     color: white;
     font-size: 1.6rem;
-    animation: fadeInMessage 4.5s ease-in-out forwards;
+    animation: fadeIn 4.5s ease-in-out forwards;
     height: 20px;
 }
 
