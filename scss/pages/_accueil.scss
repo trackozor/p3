@@ -67,6 +67,7 @@
     width: 75%; /* Définit une largeur de 75% pour le titre */
     font-size: 1.5rem; /* Taille de la police par défaut (petite pour les écrans mobiles) */
     margin: 2% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
+    font-weight: $font-weight-bold; /* Accentuation caractère majeure soit valeur=900 */
 
     /* Tablette */
     @include tablette {
@@ -169,6 +170,7 @@
     margin: 1rem 0;
     padding-left: 5%;
     font-size: 1.6rem;
+    font-weight: $font-weight-bold;
 
 
     /*-- tablette --*/
@@ -449,6 +451,7 @@
     display:none;
     margin:15% 5%;
     font-size: 1.6rem;
+    font-weight: $font-weight-bold;
 
     /*-- Desktop --*/
     @include desktop {

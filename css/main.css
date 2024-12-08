@@ -1675,6 +1675,7 @@ label.card-menu {
   width: 75%; /* Définit une largeur de 75% pour le titre */
   font-size: 1.5rem; /* Taille de la police par défaut (petite pour les écrans mobiles) */
   margin: 2% 0; /* Espacement extérieur : 2% en haut, 3% en bas, 0 sur les côtés */
+  font-weight: 700; /* Accentuation caractère majeure soit valeur=900 */
   /* Tablette */
   /* Desktop */
   /* Large desktop */
@@ -1781,6 +1782,7 @@ label.card-menu {
   margin: 1rem 0;
   padding-left: 5%;
   font-size: 1.6rem;
+  font-weight: 700;
   /*-- tablette --*/
   /* Desktop */
   /* Large desktop */
@@ -2063,6 +2065,7 @@ label.card-menu {
   display: none;
   margin: 15% 5%;
   font-size: 1.6rem;
+  font-weight: 700;
   /*-- Desktop --*/
   /*-- large desktop --*/
 }
@@ -2205,6 +2208,7 @@ main {
 @media (min-width: 767px) and (max-width: 1023px) {
   .menu-image {
     height: 25vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
+    object-fit: cover;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -2212,6 +2216,7 @@ main {
     height: 28vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour desktop */
+    object-fit: cover;
   }
 }
 @media (min-width: 1440px) {
@@ -2219,6 +2224,7 @@ main {
     height: 22vw; /* Hauteur de l'image ajustée pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 65%; /* Positionnement de l'image pour large desktop */
+    object-fit: cover;
   }
 }
 
@@ -2256,7 +2262,6 @@ main {
     height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 60%; /* Positionnement de l'image pour large desktop */
-    object-fit: cover;
   }
 }
 
@@ -2286,6 +2291,7 @@ main {
     height: 28vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 70%; /* Positionnement bas de l'image pour desktop */
+    object-fit: cover;
   }
 }
 @media (min-width: 1440px) {
@@ -2323,6 +2329,7 @@ main {
     height: 25vw; /* Hauteur de l'image ajustée pour desktop */
     width: 100%; /* Largeur à 100% pour desktop */
     object-position: 50% 70%; /* Positionnement de l'image pour desktop */
+    object-fit: cover;
   }
 }
 @media (min-width: 1440px) {
@@ -2330,6 +2337,7 @@ main {
     height: 22vw; /* Hauteur de l'image à 40% de la hauteur de l'écran pour large desktop */
     width: 100%; /* Largeur à 100% pour large desktop */
     object-position: 50% 80%; /* Positionnement bas de l'image pour large desktop */
+    object-fit: cover;
   }
 }
 
