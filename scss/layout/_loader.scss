@@ -76,8 +76,8 @@
     width: 40%;
     background-color: transparent;
     margin-bottom: 1rem;
-    animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards;
-    animation-delay: 0s, 1s;
+    border-radius: 25%;
+    animation: rotateClock 1.2s infinite linear;
 }
 
 /* Message dynamique affiché dans le loader */
@@ -87,7 +87,7 @@
     color: #860ee7;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: fadeInMessage 1.5s ease-in-out forwards;
+    animation: fadeInMessage 2.5s ease-in-out forwards;
 }
 
 /* Conteneur de la barre de progression */
@@ -130,7 +130,7 @@
     transform: translateX(-50%);
     color: white;
     font-size: 1.6rem;
-    animation: textAppear 1.5s ease-in-out forwards;
+    animation: fadeInMessage 4.5s ease-in-out forwards;
     height: 20px;
 }
 

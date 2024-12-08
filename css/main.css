@@ -515,7 +515,7 @@ footer .logo-footer {
   width: 100vw;
   height: 100vh; /* Assure que le loader couvre toute la hauteur de l'écran */
   background: black;
-  display: none; /* Utiliser flexbox pour centrer les éléments */
+  display: flex; /* Utiliser flexbox pour centrer les éléments */
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Centre verticalement */
@@ -576,8 +576,8 @@ footer .logo-footer {
   width: 40%;
   background-color: transparent;
   margin-bottom: 1rem;
-  animation: rotateClock 1s infinite linear, shrink 2s ease-in-out forwards;
-  animation-delay: 0s, 1s;
+  border-radius: 25%;
+  animation: rotateClock 1.2s infinite linear;
 }
 
 /* Message dynamique affiché dans le loader */
@@ -587,7 +587,7 @@ footer .logo-footer {
   color: #860ee7;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fadeInMessage 1.5s ease-in-out forwards;
+  animation: fadeInMessage 2.5s ease-in-out forwards;
 }
 
 /* Conteneur de la barre de progression */
@@ -633,7 +633,7 @@ footer .logo-footer {
   transform: translateX(-50%);
   color: white;
   font-size: 1.6rem;
-  animation: textAppear 1.5s ease-in-out forwards;
+  animation: fadeInMessage 4.5s ease-in-out forwards;
   height: 20px;
 }
 
@@ -2169,6 +2169,10 @@ main {
 
 /*-------------------------------------------------------------------------------------------*/
 /* Style des listes dans le menu */
+.menu ul {
+  /* Desktops */
+  /* Large desktop */
+}
 @media (min-width: 1024px) and (max-width: 1439px) {
   .menu ul {
     width: 70%;
@@ -2220,6 +2224,7 @@ main {
   width: 100%; /* Prend toute la largeur du conteneur */
   object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
   object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
+  /* Tablette */
   /* Desktop */
   /*-- large desktop --*/
 }
@@ -2395,6 +2400,9 @@ main {
 /* Titre la palette ajustement personnalisé */
 .title2 h2 {
   font-size: 1.6rem;
+  /*-- tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title2 h2 {
@@ -2469,6 +2477,9 @@ main {
 /* Titre la note enchantee ajustement personnalisé */
 .title h2 {
   font-size: 1.6rem;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title h2 {
@@ -2544,6 +2555,9 @@ main {
 /* Titre la francaise ajustement personnalisé*/
 .title1 h2 {
   font-size: 1.6rem;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title1 h2 {
@@ -2618,6 +2632,9 @@ main {
 /* Titre le delice des sens ajustement personnalisé */
 .title3 h2 {
   font-size: 1.6rem;
+  /*-- Tablette --*/
+  /*-- desktop --*/
+  /*-- large desktop --*/
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .title3 h2 {

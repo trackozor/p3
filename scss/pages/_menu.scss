@@ -52,11 +52,14 @@ main  {
 /*-------------------------------------------------------------------------------------------*/
 /* Style des listes dans le menu */
 .menu ul {
+
+    /* Desktops */
     @include desktop {
         width:70%;
         margin:0 auto;
     }
     
+    /* Large desktop */
     @include large-desktop {
         width:70%;
         margin:0 auto;
@@ -100,7 +103,8 @@ main  {
     width: 100%; /* Prend toute la largeur du conteneur */
     object-position: 50% 60%; /* Positionnement de l'image à 75% en vertical */
     object-fit: cover; /* Ajustement de l'image pour couvrir le conteneur */
-    
+
+    /* Tablette */
     @include tablette {
         height: 25vh; /* Hauteur de l'image adaptée à la largeur de l'écran pour tablette */
     }
@@ -273,12 +277,17 @@ main  {
 .title2 h2 {
     font-size: 1.6rem;
 
+    /*-- tablette --*/
     @include tablette {
         font-size: 2rem;
     }
+
+    /*-- desktop --*/
     @include desktop {
         font-size: 1.5rem;
     }
+    
+    /*-- large desktop --*/
     @include large-desktop {
         font-size: 1.5rem;
     }
@@ -337,12 +346,17 @@ main  {
 .title h2 {
     font-size: 1.6rem;
 
+    /*-- Tablette --*/
     @include tablette {
         font-size: 1.6rem;
     }
+
+    /*-- desktop --*/
     @include desktop {
         font-size:1.5rem;
     }
+
+    /*-- large desktop --*/
     @include large-desktop {
         font-size:1.4rem;
     }
@@ -401,12 +415,17 @@ main  {
 .title1 h2 {
     font-size: 1.6rem;
 
+    /*-- Tablette --*/
     @include tablette {
         font-size: 1.6rem;
     }
+
+    /*-- desktop --*/
     @include desktop {
         font-size: 1.5rem;
     }
+
+    /*-- large desktop --*/
     @include large-desktop {
         font-size: 1.4rem;
     }
@@ -463,12 +482,17 @@ main  {
 .title3 h2 {
     font-size: 1.6rem;
 
+    /*-- Tablette --*/
     @include tablette {
         font-size: 1.6rem;
     }
+
+    /*-- desktop --*/
     @include desktop {
         font-size: 1.5rem;
     }
+
+    /*-- large desktop --*/
     @include large-desktop {
         font-size: 1.4rem;
     }
