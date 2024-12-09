@@ -137,9 +137,24 @@ Ouvrez le fichier `index.html` :
 Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 
 1. Forkez le projet.
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/new-feature`).
-3. Commitez vos modifications (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`).
-4. Poussez sur votre branche (`git push origin feature/new-feature`).
+2. Créez une branche pour votre fonctionnalité
+
+   ```sh
+   git checkout -b feature/new-feature
+   ```
+
+3. Commitez vos modifications
+
+   ```sh
+   git commit -m 'Ajout d'une nouvelle fonctionnalité'`
+   ````
+
+4. Poussez sur votre branche
+
+   ```sh
+   git push origin feature/new-feature
+   ```
+
 5. Créez une Pull Request.
 
 ## Structure des fichiers
