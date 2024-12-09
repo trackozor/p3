@@ -1,7 +1,7 @@
 
 # Ohmyfood 🍴
 
-![npm version](https://img.shields.io/npm/v/npm.svg) ![license](https://img.shields.io/github/license/username/ohmyfood.svg)
+![npm version](https://img.shields.io/npm/v/npm.svg) ![repo](https://github/license/trackozor/p3.svg)
 
 Ohmyfood est une application web dédiée à ceux qui recherchent une expérience culinaire fluide et interactive. Réservez vos menus préférés dans les meilleurs restaurants en quelques clics grâce à notre interface conviviale et moderne.
 
