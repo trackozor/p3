@@ -137,25 +137,61 @@ Ouvrez le fichier `index.html` :
 Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 
 1. Forkez le projet.
-2. Créez une branche pour votre fonctionnalité
+
+   Cliquez sur le bouton "Fork" en haut à droite de la page GitHub du projet
+
+2. Clonez le dépôt forké sur votre machine locale :
+
+   ```sh
+   git clone <https://github.com/votre-utilisateur/ohmyfood.git>
+   cd ohmyfood
+   ```
+
+3. Créez une branche pour votre fonctionnalité
 
    ```sh
    git checkout -b feature/new-feature
    ```
 
-3. Commitez vos modifications
+4. Apportez vos modifications :
+
+   Assurez-vous que vos modifications respectent les conventions de codage et que tout fonctionne correctement.
+
+5. Testez votre code :
+
+   Vérifiez que tout est fonctionnel et qu'il n'y a pas d'erreurs.
+   Si possible, ajoutez des tests pour couvrir les nouveaux cas.
+
+6. Commitez vos changements avec un message clair et descriptif :
 
    ```sh
-   git commit -m "Ajout dune nouvelle fonctionnalité"
+   git commit -m "Ajout d une nouvelle fonctionnalité"
    ````
 
-4. Poussez sur votre branche
+7. Poussez votre branche
 
    ```sh
    git push origin feature/new-feature
    ```
 
-5. Créez une Pull Request.
+8. Créez une Pull Request.
+
+   Allez sur la page du dépôt original (<https://github.com/trackozor/p3>).
+   Cliquez sur "Compare & pull request".
+   Décrivez vos changements et expliquez pourquoi ils sont importants.
+
+9. Discussion et validation :
+
+   Attendez les retours des mainteneurs.
+   Répondez aux commentaires et effectuez des ajustements si nécessaire.
+
+## consigne importantes pour les contribions
+
+   N’introduisez pas de régressions : Assurez-vous que vos modifications n'affectent pas les fonctionnalités existantes.
+
+   Structurez bien vos commits : Un commit = une modification ou un groupe de changements cohérents.
+
+   Communiquez clairement : Expliquez bien vos changements dans vos Pull Requests.
 
 ## Structure des fichiers
 
