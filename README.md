@@ -177,7 +177,9 @@ Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 8. Créez une Pull Request.
 
    Allez sur la page du dépôt original (<https://github.com/trackozor/p3>).
+
    Cliquez sur "Compare & pull request".
+
    Décrivez vos changements et expliquez pourquoi ils sont importants.
 
 9. Discussion et validation :
