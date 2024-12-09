@@ -13,10 +13,9 @@
 /*--------------------------------------------- Conteneur Principal --------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
 header {
-  display: block; /* Utilise flexbox pour aligner les éléments */
-  width: 100%; /* Le header prend toute la largeur disponible */
-  max-height: auto;
-  background-color:#FFFFFF ;
+    display: block; /* Utilise flexbox pour aligner les éléments */
+    width: 100%; /* Le header prend toute la largeur disponible */
+    background-color:#FFFFFF ;
 
 
 }
@@ -26,29 +25,29 @@ header {
 
 /* Conteneur principale de la carte */
 .card-logo {
-  width: 100%;/* prend toute la largeur disponible*/
-  max-height: 113px;/* Hauteur ajusté au contenu */
-  display: flex; /* Utilise flexbox pour aligner les éléments*/
-  align-items: center;/* Centre le contenu verticalement */
-  background-color:white;/*Couleur de fond blanche */
-  margin: 4% 0; /* Définit les marges verticales de la carte */
-  justify-content: center;/* centre les éléments horizontalement */
+    width: 100%;/* prend toute la largeur disponible*/
+    max-height: 113px;/* Hauteur ajusté au contenu */
+    display: flex; /* Utilise flexbox pour aligner les éléments*/
+    align-items: center;/* Centre le contenu verticalement */
+    background-color:white;/*Couleur de fond blanche */
+    margin: 4% 0; /* Définit les marges verticales de la carte */
+    justify-content: center;/* centre les éléments horizontalement */
 
-  /*-- tablette --*/
-  @include tablette {
-      margin:2% 0;
-  }
+    /*-- tablette --*/
+    @include tablette {
+        margin:2% 0;
+    }
 
-  /* Desktop */
-  @include desktop {
-      margin:1.5% 0;
-  }
-  
-  /* Large desktop */
-  @include large-desktop {
-      margin:1% 0;
-      
-  }
+    /* Desktop */
+    @include desktop {
+        margin:1.5% 0;
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        margin:1% 0;
+        
+    }
 }
 
 
@@ -84,48 +83,48 @@ header {
 
 /* Conteneur principal de la carte avec alternative et flèche retour */
 .card-logo-alt {
-  display:flex;/* Utilise flexbox pour aligner les éléments */
-  align-items: center;/* Aligne les éléments verticalement */
-  justify-content: center;/* Centre les éléments horizontalement */
-  position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
-  padding: 5% 0;/* espace intérieur haut et bas de 2%*/
+    display:flex;/* Utilise flexbox pour aligner les éléments */
+    align-items: center;/* Aligne les éléments verticalement */
+    justify-content: center;/* Centre les éléments horizontalement */
+    position: relative;/* Permet de positionner des éléments enfants relativement au conteneur */
+    padding: 5% 0;/* espace intérieur haut et bas de 2%*/
 
-  /* Tablette */
-  @include tablette {
-      padding:2% 0;
-  }
+    /* Tablette */
+    @include tablette {
+        padding:2% 0;
+    }
 
-  /* Desktop */   
-  @include desktop {
-      padding: 2% 0;;
-  }
-  
-  /* Large desktop */
-  @include large-desktop {
-      padding: 2% 0;
-  }
+    /* Desktop */   
+    @include desktop {
+        padding: 2% 0;;
+    }
+    
+    /* Large desktop */
+    @include large-desktop {
+        padding: 2% 0;
+    }
 }
 
 
 /*-------------------------------------------------------------*/
 /* Image dans la carte alt */
 .card-logo-alt img {
-  width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
+    width:50%; /* Hauteur correspondant à 3 % de la hauteur de l'écran */  
 
-  /* tablette */
-  @include tablette {
-      width:20%;
-  }
+    /* tablette */
+    @include tablette {
+        width:20%;
+    }
 
-  /* Desktop */
-  @include desktop {
-      width:15%/* ajustement largeur pour desktop */
-  }
+    /* Desktop */
+    @include desktop {
+        width:15%/* ajustement largeur pour desktop */
+    }
 
-  /* large desktop */
-  @include large-desktop {
-      width:10% /* Ajustement largeur pour écran large*/
-  }
+    /* large desktop */
+    @include large-desktop {
+        width:10% /* Ajustement largeur pour écran large*/
+    }
 }
 
 

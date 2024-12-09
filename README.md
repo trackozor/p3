@@ -1,12 +1,24 @@
 
 # Ohmyfood 🍴
 
+![npm version](https://img.shields.io/npm/v/npm.svg) ![license](https://img.shields.io/github/license/username/ohmyfood.svg)
+
 Ohmyfood est une application web dédiée à ceux qui recherchent une expérience culinaire fluide et interactive. Réservez vos menus préférés dans les meilleurs restaurants en quelques clics grâce à notre interface conviviale et moderne.
+
+## Démonstration en ligne
+
+🌐 [Accéder à la démo](https://trackozor/.github.io/p3/)
 
 ## Aperçu visuel
 
-![Apercu Mobile first](images/Home-page-mobile.png)
-![Apercu Desktop](images/Home-page-desk.png)
+Cliquez sur les images pour voir en taille réelle.
+
+[![Aperçu Mobile first](images/Home-page-mobile.png)](images/Home-page-mobile.png)
+[![Aperçu Desktop](images/Home-page-desk.png)](images/Home-page-desk.png)
+
+## Licence
+
+Ce projet est sous licence [MIT](LICENSE).
 
 ## Fonctionnalités principales
 
@@ -119,6 +131,16 @@ Ouvrez le fichier `index.html` :
    ```sh
    npm run sass
    ```
+
+## Contributions
+
+Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
+
+1. Forkez le projet.
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/new-feature`).
+3. Commitez vos modifications (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`).
+4. Poussez sur votre branche (`git push origin feature/new-feature`).
+5. Créez une Pull Request.
 
 ## Structure des fichiers
 
