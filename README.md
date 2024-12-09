@@ -13,7 +13,7 @@ Ohmyfood est une application web dédiée à ceux qui recherchent une expérienc
 
 Cliquez sur les images pour voir en taille réelle.
 
-[![Aperçu Mobile first](images/Home-page-mobile-reduced.png)](images/Home-page-mobile.png)
+[![Aperçu Mobile first](images/Home-page-mobile.png)](images/Home-page-mobile.png)
 [![Aperçu Desktop](images/Home-page-desk-reduced.png)](images/Home-page-desk.png)
 
 ## Licence
