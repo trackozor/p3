@@ -146,7 +146,7 @@ Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 3. Commitez vos modifications
 
    ```sh
-   git commit -m 'Ajout d'une nouvelle fonctionnalité'`
+   git commit -m "Ajout dune nouvelle fonctionnalité"
    ````
 
 4. Poussez sur votre branche
