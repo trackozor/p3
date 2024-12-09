@@ -187,7 +187,7 @@ Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
    Attendez les retours des mainteneurs.
    Répondez aux commentaires et effectuez des ajustements si nécessaire.
 
-## consigne importantes pour les contribions
+## consignes importantes pour les contributions
 
    N’introduisez pas de régressions : Assurez-vous que vos modifications n'affectent pas les fonctionnalités existantes.
 
