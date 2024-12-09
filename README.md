@@ -7,7 +7,7 @@ Ohmyfood est une application web dédiée à ceux qui recherchent une expérienc
 
 ## Démonstration en ligne
 
-🌐 [Accéder à la démo](https://trackozor/.github.io/p3/)
+🌐 [Accéder à la démo](https://trackozor.github.io/p3/)
 
 ## Aperçu visuel
 
