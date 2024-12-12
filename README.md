@@ -211,7 +211,7 @@ ohmyfood/
 │   ├── logo/               # Images du logo
 │   └── restaurants/        # Images des restaurants
 │
-├── pages/
+├── html/
 │   ├── délice.html         # Page dédiée au restaurant "Le Délice des Sens"
 │   ├── la_française.html   # Page dédiée au restaurant "À La Française"
 │   ├── note_enchantée.html # Page dédiée au restaurant "La Note Enchantée"
